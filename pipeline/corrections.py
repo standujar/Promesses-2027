@@ -2246,6 +2246,12 @@ for cid,mid in (('retailleau','fin_maprimerenov'),('zemmour','anah')):
 VB('lisnard','cotisations',SC,FA,"Coût certain ; financement par des économies non identifiées","Par la loi de financement de la Sécurité sociale ; barème de la baisse au-delà de la CSG non publié ; "+FNP+".")
 D['asof']='8 novembre 2026'
 
+# --- review 44 : arrêts maladie de Mélenchon, auto-déclaration (08/11/2026) ; registre S234
+# Programme du 6/11 (« Mettre en sécurité sociale », chapitre 1) : « … l'auto-déclaration pour les arrêts de courte durée » (durée non publiée) :
+# ajoutée à la ligne non comptée des arrêts maladie (coût non publié) ; proposition en Vie quotidienne (santé, life.py, bloc review 44) et au quiz.
+t=C['melenchon']['claude_total']; a0="arrêts maladie payés à 100 % et fin des jours de carence"; assert t['missing'].count(a0)==1
+t['missing']=t['missing'].replace(a0,"arrêts maladie payés à 100 %, fin des jours de carence et auto-déclaration des arrêts de courte durée (durée non publiée)")
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:

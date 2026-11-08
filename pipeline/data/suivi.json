@@ -4000,6 +4000,21 @@
    "cree": "2026-11-08",
    "maj": "2026-11-08",
    "resolution": "Fait le 8/11 (bloc « review 43 ») : même règle que les 58 mesures revues (S223) ; sous_conditions → faisable, obstacle « Par la loi de financement de la Sécurité sociale ; barème de la baisse au-delà de la CSG non publié ; financement non précisé dans la mesure. » Fiche hors total : aucun total ni répartition des verdicts retenus ne change."
+  },
+  {
+   "id": "S234",
+   "type": "a_ajouter",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "life:sante",
+   "sujet": "Mélenchon : auto-déclaration des arrêts maladie de courte durée absente des données",
+   "detail": "Programme du 6/11/2026 (« Mettre en sécurité sociale », chapitre 1) : « Garantir le droit à l'arrêt maladie par l'indemnisation à 100 % du salaire, la suppression des jours de carence et l'auto-déclaration pour les arrêts de courte durée ». Durée non publiée (aucun « 3 jours » dans le texte). Même type que le jour de carence d'ordre public de Retailleau (santé).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Vie quotidienne santé (4e proposition, précise : changement de droit nommé, comme Retailleau), quiz melenchon.sante.4 (constat, cas et sources de l'Insee et de la DREES repris de retailleau.sante.1, lus dans l'autre sens ; aucune évaluation française de l'auto-déclaration), ligne non comptée des arrêts maladie complétée. Règle : même traitement que la proposition du même type de Retailleau."
   }
  ]
 }

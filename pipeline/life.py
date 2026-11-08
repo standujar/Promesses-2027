@@ -1167,6 +1167,15 @@ _so('attal', 'libertes', add=[ATT0511])
 CAP2810 = _s("Capital, D. Lisnard veut des professeurs contractuels (CNews, 27/10)", 'https://www.capital.fr/votre-carriere/ca-na-plus-aucun-sens-quils-soient-fonctionnaires-david-lisnard-veut-des-profs-contractuels-1531365')
 _so('lisnard', 'ecole', add=[CAP2810])
 
+# --- review 44 : arrêts maladie de Mélenchon (08/11/2026) ; registre S234
+# Programme du 6/11 (« Mettre en sécurité sociale », chapitre 1) : « Garantir le droit à l'arrêt maladie par l'indemnisation à 100 % du salaire,
+# la suppression des jours de carence et l'auto-déclaration pour les arrêts de courte durée » (durée non publiée). Changement de droit nommé :
+# précise (VFLIP), comme le jour de carence d'ordre public de Retailleau ; santé, 4e proposition (plafond de 5 non atteint).
+LV_SECU1 = _s("La France insoumise, « L'Avenir en commun » (6/11/2026), « Mettre en sécurité sociale », chapitre 1", LV41 + 'mettre-en-securite-sociale/chapitre1')
+_ps = _cur('melenchon', 'sante'); assert len(_ps) == 3 and _ps[2]['text'] == '« 100 % Sécu » : soins prescrits remboursés intégralement', [p['text'] for p in _ps]
+_put('melenchon', 'sante', _ps + [_p("Arrêts maladie payés à 100 %, sans jour de carence ; auto-déclaration pour les arrêts courts")])
+_so('melenchon', 'sante', add=[LV_SECU1])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.
