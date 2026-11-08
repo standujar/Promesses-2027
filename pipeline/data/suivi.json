@@ -3800,6 +3800,44 @@
    "cree": "2026-11-08",
    "maj": "2026-11-08",
    "resolution": "Nombre de mesures par case, colonne « Toutes » (répartition des verdicts des mesures retenues, même périmètre que les totaux), toucher une case ouvre les mesures du thème ; texte d'explication mis à jour ; contrôle ajouté dans tests/smoke.py. Même affichage pour les 8."
+  },
+  {
+   "id": "S223",
+   "type": "a_trancher",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": null,
+   "sujet": "Verdicts : « sous conditions » donné pour un paramètre non publié, un coût ou un rendement",
+   "detail": "La règle des verdicts classait « sous conditions » les mesures dont un paramètre clé n'était pas publié (non chiffrables, objectifs sans échéance), et plusieurs obstacles reposaient sur un coût, un rendement ou l'écart avec le chiffre du camp (niches de Mélenchon, héritages de Glucksmann, coût de transition des retraites par capitalisation…). Revue des 58 mesures retenues « sous conditions » des 8 candidats, puis des obstacles de tous les autres verdicts.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Décision du porteur du projet (8/11/2026), appliquée aux 8 : le verdict juge la voie juridique et pratique, jamais le coût, l'écart avec le chiffre du camp ni la précision du programme ; « sous conditions » = condition identifiée hors de la décision (accord de tiers : collectivités, partenaires sociaux, autre État ou institution ; contrats en cours ; obligation européenne ; capacités à bâtir ; rendement ou contenu d'une autre mesure ; risque de censure précis) ; un paramètre, un contenu ou une échéance non publiés sont dits dans l'obstacle et ne changent pas le verdict. Règle écrite dans CLAUDE.md et la méthode (corrections.py, bloc « review 42 »). Verdicts changés, sous_conditions → faisable (22) : le-pen.mesures-sectorielles, melenchon.retraites, melenchon.niches, melenchon.chomage, melenchon.culture, melenchon.aide_developpement, philippe.production, philippe.chomage, philippe.famille, philippe.heures_sup, glucksmann.heritages, glucksmann.leasing_social, lisnard.retraites, lisnard.allocation, lisnard.foncier, attal.retraites, attal.travail, attal.ia, retailleau.retraites, retailleau.travail, retailleau.chomage, zemmour.retraites. Règles communes appliquées : (a) assurance chômage (Mélenchon, Philippe, Attal, Retailleau) : convention des partenaires sociaux agréée par le Gouvernement, décret faute d'accord (code du travail, art. L. 5422-20 et suivants) ou loi : la décision reste publique, faisable pour les 4 ; (b) retraite par capitalisation créée par la loi (Lisnard, Retailleau, Zemmour, Attal) : faisable, « financement de la transition non précisé » dans l'obstacle ; Philippe reste sous conditions (réserves de l'Agirc-Arrco, régime géré par les partenaires sociaux : accord de tiers) ; (c) services civiques ou nationaux obligatoires (Mélenchon, Glucksmann, Attal, Philippe) : capacités d'accueil et d'encadrement à bâtir pour environ 800 000 jeunes par an, même obstacle, sous conditions pour les 4 ; (d) écoles des collectivités (cantine de Mélenchon, bâtiments d'Attal) : mise en œuvre par les collectivités, sous conditions pour les 2 ; (e) RSA versé par les départements : droit fixé par la loi, pas une condition (Retailleau faisable, Lisnard faisable, l'égalité des étrangers relevant de sa fiche « Aides après 5 ans ») ; Zemmour, RSA limité à 3 ans : reste sous conditions (droit à des moyens convenables d'existence, alinéa 11 du Préambule de 1946) ; (f) inchangés, condition hors de la décision : plans de postes (6 fiches, sorties et collectivités), prisons (4, capacités), fraude (3, moyens de contrôle), renouvelables (3, contrats signés), certificats d'économies d'énergie (2, directive 2023/1791), octroi de mer (Conseil de l'UE), impôt sur le revenu avant 30 ans (risque de censure documenté : Institut Montaigne), blocage des prix (décret limité à 6 mois, liberté d'entreprendre), « 100 % Sécu » (contrats des complémentaires), universités, hôpitaux, recherche, réservistes, ingénieurs (capacités), préférence européenne (compétence de l'UE), Le Pen « État » (collectivités), Zemmour aide au développement (engagements multilatéraux). Glucksmann, héritages : aucun risque de censure précis et documenté pour un seul seuil de taxation (à la différence du cumul ISF, Zucman et héritages de Mélenchon, avis du Conseil d'État) : faisable, « rendement dépendant des comportements » comme les autres impôts nouveaux. Obstacles nettoyés, verdict inchangé : Mélenchon annulation de la dette (effet net), SMIC de Mélenchon et Glucksmann (coût des allègements), Philippe jeunes parents, Retailleau plan IA et seuil « zéro cotisation » (chiffrage du camp non vérifié), aide médicale d'État des 4 (report de dépenses), prisons de Le Pen (montant du contre-budget). Totaux inchangés (realsum ne dépend que des « Exige une révision »)."
+  },
+  {
+   "id": "S224",
+   "type": "a_verifier",
+   "candidats": [
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": "retailleau.fin_maprimerenov, zemmour.anah, zemmour.ademe",
+   "sujet": "Fin de MaPrimeRénov' et de l'Anah : « objectifs européens de rénovation » cités, verdict « faisable »",
+   "detail": "Les fiches citent des objectifs européens de rénovation dans l'obstacle mais restent « faisable », alors que la fin des certificats d'économies d'énergie des mêmes candidats est « sous conditions » (objectif de l'article 8 de la directive (UE) 2023/1791 à atteindre par d'autres mesures). Vérifier sur les textes (directive (UE) 2024/1275, trajectoire de rénovation du parc résidentiel ; part de MaPrimeRénov' dans les économies notifiées au titre de l'article 8) si l'obligation européenne vise ces aides de la même façon ; si oui, même verdict que les certificats. « Dossiers engagés à payer » : décaissés avant 2030, sans effet sur la voie juridique (à la différence des contrats de soutien aux renouvelables, qui courent au-delà).",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
   }
  ]
 }

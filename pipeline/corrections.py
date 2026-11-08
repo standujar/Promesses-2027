@@ -2063,6 +2063,94 @@ t=C['attal']['claude_total']; assert 'réseaux sociaux' not in t['missing']
 t['missing']+=", prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11/2026 : assiette non publiée, aucune base officielle ni chiffrage indépendant, non compté)"
 D['asof']='8 novembre 2026'
 
+# --- review 42 : verdicts, voie juridique et pratique seulement (08/11/2026) ; registre S223
+# Décision du porteur du 8/11, la même pour les 8 : le verdict juge la voie juridique et pratique, jamais le coût, l'écart avec le chiffre du
+# camp, ni la précision du programme. « Sous conditions » = condition identifiée hors de la décision (accord de tiers : collectivités,
+# partenaires sociaux, autre État ou institution ; contrats en cours ; obligation européenne ; capacités à bâtir ; rendement ou contenu d'une
+# autre mesure ; risque de censure précis). Un paramètre, un contenu ou une échéance non publiés ne changent plus le verdict : l'obstacle le dit
+# (« … non publié ») et la mesure est non chiffrable ou comptée selon la règle des objectifs. Revue des 58 « sous conditions » retenues.
+# Règles communes écrites à cette occasion :
+#  - assurance chômage : règles fixées par une convention des partenaires sociaux agréée par le Gouvernement, ou par décret faute d'accord
+#    (code du travail, art. L. 5422-20 et suivants), ou par la loi : la décision reste au Gouvernement et au Parlement, « faisable » pour les 4 ;
+#  - retraite par capitalisation créée par la loi : « faisable », le coût de la transition n'étant pas une condition (Lisnard, Retailleau,
+#    Zemmour, Attal) ; Philippe garde « sous conditions » : la capitalisation est alimentée par les réserves de l'Agirc-Arrco, régime géré par
+#    les partenaires sociaux (accord de tiers) ;
+#  - services civiques ou nationaux obligatoires pour une classe d'âge : capacités d'accueil et d'encadrement à bâtir, même obstacle pour les 4 ;
+#  - écoles des collectivités (cantine, bâtiments) : mise en œuvre par les collectivités, « sous conditions » pour les 2 ;
+#  - RSA versé par les départements : le droit du RSA est fixé par la loi, les départements l'appliquent ; seul le droit à des moyens
+#    convenables d'existence (alinéa 11 du Préambule de 1946) garde « sous conditions » au RSA limité dans le temps de Zemmour ;
+#  - plans de postes, prisons, fraude (moyens de contrôle), renouvelables (contrats signés), certificats d'économies d'énergie (directive) :
+#    conditions hors de la décision, inchangés.
+# Obstacles nettoyés de toute raison de coût ou de chiffre du camp, verdict inchangé (voir S223).
+def _n(s): return s.replace('\xa0',' ').replace(' ',' ')
+def VB(cid,mid,old_v,new_v,old_ob,new_ob):
+    m=M(cid,mid); assert m['verdict']==old_v and _n(m['obstacle'])==_n(old_ob),(cid,mid,m['verdict'],m['obstacle'])
+    m['verdict']=new_v; m['obstacle']=new_ob
+SC,FA='sous_conditions','faisable'
+FNP="financement non précisé dans la mesure"
+# (1) seule raison = paramètre, contenu ou échéance non publiés, coût, financement ou rendement : « faisable »
+VB('le-pen','mesures-sectorielles',SC,FA,"Contenu non publié.","Par la loi de finances ; contenu non publié ; "+FNP+".")
+VB('melenchon','retraites',SC,FA,"Par la loi ; échéance du passage à 60 ans non publiée ; "+FNP+".","Par la loi ; échéance du passage à 60 ans non publiée ; "+FNP+".")
+VB('melenchon','niches',SC,FA,"Les trois niches pèsent ≈20 Md€ : 22 Md€ suppose de tout supprimer",
+   "Par les lois de finances et de financement de la Sécurité sociale ; niches visées au-delà du crédit d'impôt recherche et ampleur du rabot non publiées.")
+VB('melenchon','culture',SC,FA,"Par la loi de finances ; échéance non publiée.","Par la loi de finances ; échéance non publiée ; "+FNP+".")
+VB('melenchon','aide_developpement',SC,FA,"Par la loi de finances ; échéance non publiée.","Par la loi de finances ; échéance non publiée ; "+FNP+".")
+VB('philippe','production',SC,FA,"Aides supprimées non identifiées (liste non publiée) ; CVAE déjà supprimée d'ici 2030 par la loi.",
+   "Par les lois de finances et de financement de la Sécurité sociale ; liste des aides supprimées non publiée ; CVAE déjà supprimée d'ici 2030 par la loi.")
+VB('philippe','famille',SC,FA,"Seuils de dégressivité et aides remplacées non publiés.",
+   "Par la loi de financement de la Sécurité sociale ; seuils de dégressivité et aides remplacées non publiés.")
+VB('philippe','heures_sup',SC,FA,"Par la loi de financement de la Sécurité sociale ; heures concernées fixées par accord d'entreprise, volume non publié (mesure non chiffrable) ; recoupe l'exonération existante ; "+FNP+".",
+   "Par la loi de financement de la Sécurité sociale ; volume d'heures concerné non publié (durée du travail fixée par accord d'entreprise) ; recoupe l'exonération existante ; "+FNP+".")
+TREND="rendement dépendant des comportements (départs, optimisation)"
+VB('glucksmann','heritages',SC,FA,"Seuil >2 M€ seul insuffisant : exige une réforme d'assiette (Dutreil, assurance-vie)",
+   "Par les lois de finances et de financement de la Sécurité sociale ; taux et assiette de la taxe (pacte Dutreil, assurance-vie) non publiés ; "+TREND+".")
+VB('glucksmann','leasing_social',SC,FA,"Par la loi de finances ; financement et échéance non publiés.","Par la loi de finances ; échéance non publiée ; "+FNP+".")
+VB('lisnard','allocation',SC,FA,"Plafond non défini ; égalité devant la loi pour les étrangers",
+   "Par la loi ; plafond (part du SMIC) et aides fusionnées non publiés.")
+VB('lisnard','foncier',SC,FA,"Taux et rendement de la fiscalité foncière de remplacement non publiés ; droits de mutation perçus par les départements.",
+   "Par la loi de finances ; compensation des départements pour les droits de mutation ; taux et rendement de la fiscalité foncière de remplacement non publiés.")
+VB('attal','ia',SC,FA,"Part nouvelle des 100 Md€ publics non publiée (fonds européens et crédits existants cités).",
+   "Par la loi de finances ; part nouvelle des 100 Md€ publics non publiée (fonds européens et crédits existants cités) ; "+FNP+".")
+VB('retailleau','travail',SC,FA,"Par la loi ; RSA versé par les départements ; modalités du plafond à 70 % du SMIC non publiées.",
+   "Par la loi ; RSA versé par les départements (compensation de leurs charges) ; modalités du plafond à 70 % du SMIC non publiées.")
+# retraites : la capitalisation créée par la loi et son coût de transition ne sont pas des conditions hors de la décision
+TCAP="financement de la transition vers la capitalisation (double cotisation) non précisé dans la mesure"
+VB('lisnard','retraites',SC,FA,"Par la loi ; calendrier du recul et de la bascule vers la capitalisation non publié ; coût de la transition (double cotisation) non chiffré.",
+   "Par la loi ; calendrier du recul et de la bascule vers la capitalisation non publié ; "+TCAP+".")
+VB('retailleau','retraites',SC,FA,"Par la loi ; calendrier non publié ; coût de la transition vers la capitalisation non chiffré.","Par la loi ; calendrier non publié ; "+TCAP+".")
+VB('zemmour','retraites',SC,FA,"Par la loi ; âge retenu (64 ou 65 ans) non tranché ; coût de la transition vers la capitalisation non chiffré.",
+   "Par la loi ; âge retenu (64 ou 65 ans) non tranché ; "+TCAP+".")
+VB('attal','retraites',SC,FA,"Par la loi ; décotes, surcotes et durée de cotisation non publiées.","Par la loi ; décotes, surcotes, durée de cotisation et part de capitalisation non publiées.")
+VB('philippe','retraites',SC,SC,"Par la loi ; capitalisation alimentée par les excédents de l'Agirc-Arrco, régime géré par les partenaires sociaux ; exemptions non chiffrées.",
+   "Par la loi ; capitalisation alimentée par les réserves de l'Agirc-Arrco, régime complémentaire géré par les partenaires sociaux : accord de ceux-ci.")
+# assurance chômage : une seule règle pour les 4
+TCHO="Par décret : convention des partenaires sociaux agréée par le Gouvernement, ou décret faute d'accord (code du travail, art. L. 5422-20 et suivants) ; ou par la loi"
+VB('melenchon','chomage',SC,FA,"Convention d'assurance chômage et décret ; "+FNP+".",TCHO+" ; "+FNP+".")
+VB('philippe','chomage',SC,FA,"Convention d'assurance chômage et décret ; jours de carence : par la loi.",TCHO+" ; jours de carence : par la loi.")
+VB('attal','travail',SC,FA,"Convention d'assurance chômage et décret.",TCHO+" ; contingent d'heures supplémentaires : par la loi.")
+VB('retailleau','chomage',SC,FA,"Convention d'assurance chômage et décret ; risque de report des ruptures conventionnelles vers les licenciements.",TCHO+".")
+# (2) même type, même verdict et même formulation : services civiques ou nationaux obligatoires (capacités à bâtir)
+TSERV="Par la loi ; capacités d'accueil et d'encadrement à bâtir pour environ 800 000 jeunes par an"
+VB('melenchon','service_citoyen',SC,SC,"Capacités d'accueil pour environ 800 000 jeunes par an.",TSERV+".")
+VB('glucksmann','service_civique',SC,SC,"Capacités d'accueil pour environ 800 000 jeunes par an",TSERV+".")
+VB('attal','engagement_civique',SC,SC,"Forme et capacités d'accueil non publiées.",TSERV+" ; forme non publiée.")
+VB('philippe','service_national',SC,SC,"Durée, forme et calendrier non publiés.",TSERV+" ; durée, forme et calendrier non publiés.")
+# écoles des collectivités : mise en œuvre par elles (cantine de Mélenchon inchangée)
+VB('attal','batiments_scolaires',SC,SC,"Périmètre, part de l'État et part déjà prévue non publiés ; bâtiments des collectivités.",
+   "Par la loi de finances ; bâtiments scolaires des collectivités (communes, départements, régions) : travaux menés par elles ; périmètre, part de l'État et part déjà prévue non publiés.")
+# prisons : même obstacle pour toutes les fiches, sans chiffre du camp
+VB('le-pen','prisons',SC,SC,PRIS_OB+' 1,0 Md€ inscrit dès 2027 au contre-budget.',PRIS_OB)
+# (3) obstacles des autres verdicts : sans raison de coût ni de chiffre du camp (niveau inchangé)
+VB('melenchon','dette','bloque','bloque',"Chemin : modifier l'article 123 du traité européen, à l'unanimité des 27, ou sortir de l'euro. Même appliquée, l'effet net reste proche de zéro.",
+   "Chemin : modifier l'article 123 du traité européen, à l'unanimité des 27, ou sortir de l'euro.")
+for cid in ('melenchon','glucksmann'):
+    VB(cid,'smic',FA,FA,"Un décret suffit ; coût des allègements de cotisations et effet sur l'emploi peu qualifié ; "+FNP+".","Un décret suffit ; effet sur l'emploi peu qualifié ; "+FNP+".")
+VB('philippe','jeunes_parents',FA,FA,"Par la loi de finances ; "+FNP+" ; coût non vérifié indépendamment (impôt payé par les foyers ayant un enfant de moins de 3 ans non publié).","Par la loi de finances ; "+FNP+".")
+VB('retailleau','ia',FA,FA,"Par la loi de finances ; "+FNP+" ; économies attendues de l'IA non chiffrées indépendamment.","Par la loi de finances ; "+FNP+".")
+VB('retailleau','seuil_zero_cotisation',FA,FA,"Par la loi de financement de la Sécurité sociale ; autofinancement par des heures nouvelles non démontré.",
+   "Par la loi de financement de la Sécurité sociale ; "+FNP+" (le camp l'attend des heures nouvelles travaillées).")
+for cid in ('le-pen','retailleau','lisnard','zemmour'):
+    VB(cid,'ame',FA,FA,"Une loi suffit ; report de dépenses vers l'hôpital (soins urgents).","Une loi suffit.")
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
