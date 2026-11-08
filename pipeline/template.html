@@ -322,7 +322,10 @@ table.grid{border-collapse:collapse;width:100%;min-width:620px;font-size:.82rem}
 table.grid th,table.grid td{padding:9px 6px;border-bottom:1px solid var(--line);text-align:center}
 table.grid th:first-child,table.grid td:first-child{text-align:left;position:sticky;left:0;background:var(--surface);padding-left:12px}
 table.grid thead th{font:600 .66rem/1.2 var(--f-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-table.grid td button{border:0;background:none;padding:4px}
+table.grid td button{border:0;background:none;padding:4px;color:inherit;font:inherit}
+table.grid .gn{font:600 .68rem/1 var(--f-body);color:var(--muted);margin-left:3px}
+table.grid td.gall button{display:inline-flex;gap:6px;white-space:nowrap}
+table.grid td.gall span{display:inline-flex;align-items:center;gap:2px;font:600 .72rem/1 var(--f-body)}
 table.grid .dot{width:14px;height:14px}
 .empty{color:var(--line)}
 
@@ -418,7 +421,7 @@ footer.foot p button{min-height:0;display:inline;font-size:inherit}
 .stepper button{width:44px;height:44px}
 input[type=range]{height:44px}
 .check{min-height:44px}.check input{width:24px;height:24px}
-table.grid td button{min-width:44px;min-height:44px;display:inline-grid;place-items:center}
+table.grid td button{min-width:44px;min-height:44px;display:inline-grid;grid-auto-flow:column;align-items:center;justify-content:center}
 .themes,.lthemes{padding:3px}
 .vf,.ev-tag{font:600 .74rem/1.1 var(--f-body);text-transform:none;letter-spacing:0}
 .tag{font-size:.72rem;text-transform:none;letter-spacing:0}
@@ -490,7 +493,7 @@ table.grid td button{min-width:44px;min-height:44px;display:inline-grid;place-it
     </div>
     <div class="stack" style="gap:10px">
       <div><span class="eyebrow">Droit et faisabilité</span><h2>Qu'est-ce qui peut passer ?</h2></div>
-      <p class="muted small">Le verdict le plus contraignant de chaque candidat par thème, parmi les mesures retenues (comme pour les totaux : hors mesures non confirmées et doublons). Touchez un point pour ouvrir la mesure.</p>
+      <p class="muted small">Pour chaque candidat et chaque thème, le verdict le plus contraignant parmi les mesures retenues (comme pour les totaux : hors mesures non confirmées et doublons), et le nombre de mesures du thème ; la dernière colonne donne la répartition de tous ses verdicts. Touchez une case pour voir les mesures. Les propositions sans fiche chiffrée (Vie quotidienne, mesures non comptées) n'y figurent pas.</p>
       <div class="legend" id="legend-cmp"></div>
       <div class="grid-wrap"><table class="grid" id="grid"></table></div>
     </div>
@@ -683,18 +686,24 @@ function niceStep(r){const p=Math.pow(10,Math.floor(Math.log10(r)));const n=r/p;
 function grid(){
   const themes = Object.keys(TH).filter(t => D.candidates.some(c=>c.measures.some(m=>m.theme===t&&kept(m))));
   const order = {bloque:0,tres_difficile:1,sous_conditions:2,faisable:3};
-  let h = `<thead><tr><th>Candidat</th>${themes.map(t=>`<th>${esc(TH[t])}</th>`).join('')}</tr></thead><tbody>`;
+  const pl=(n,w)=>`${n} ${w}${n>1?'s':''}`;
+  let h = `<thead><tr><th>Candidat</th><th>Toutes</th>${themes.map(t=>`<th>${esc(TH[t])}</th>`).join('')}</tr></thead><tbody>`;
   D.candidates.forEach(c => {
-    h += `<tr><td><b>${esc(c.short)}</b></td>` + themes.map(t => {
+    const all = c.measures.filter(kept), cnt = Object.keys(V).map(k=>[k,all.filter(m=>m.verdict===k).length]).filter(([,n])=>n);
+    h += `<tr><td><b>${esc(c.short)}</b></td><td class="gall"><button data-c="${c.id}" data-all="1" aria-label="${esc(c.name)}, toutes les mesures retenues : ${cnt.map(([k,n])=>`${V[k].l} ${n}`).join(', ')}">${cnt.map(([k,n])=>`<span><i class="vdot" style="background:${V[k].c}" aria-hidden="true">${VS[k]}</i>${n}</span>`).join('')}</button></td>`;
+    h += themes.map(t => {
       const ms = c.measures.filter(m=>m.theme===t&&kept(m)).sort((a,b)=>order[a.verdict]-order[b.verdict]);
-      if(!ms.length) return `<td><span class="empty">·</span></td>`;
-      const m = ms[0];
-      return `<td><button data-c="${c.id}" data-m="${m.id}" aria-label="${esc(c.name)}, ${esc(m.title)} : ${V[m.verdict].l}" title="${esc(m.title)} : ${V[m.verdict].l}"><i class="vdot" style="background:${V[m.verdict].c}" aria-hidden="true">${VS[m.verdict]}</i></button></td>`;
-    }).join('') + `</tr>`;
+      if(!ms.length) return `<td><span class="empty" title="Aucune mesure chiffrée dans ce thème">·</span></td>`;
+      const m = ms[0], n = ms.length, lab = n>1 ? `${esc(c.name)}, ${esc(TH[t])} : ${pl(n,'mesure')}, la plus contraignante : ${esc(m.title)}, ${V[m.verdict].l}` : `${esc(c.name)}, ${esc(m.title)} : ${V[m.verdict].l}`;
+      return `<td><button data-c="${c.id}" data-m="${m.id}" data-t="${t}" data-n="${n}" aria-label="${lab}" title="${n>1?esc(TH[t])+' : '+pl(n,'mesure')+' ; la plus contraignante : '+esc(m.title):esc(m.title)} : ${V[m.verdict].l}"><i class="vdot" style="background:${V[m.verdict].c}" aria-hidden="true">${VS[m.verdict]}</i>${n>1?`<small class="gn" aria-hidden="true">${n}</small>`:''}</button></td>`;
+    }).join('')+`</tr>`;
   });
   document.getElementById('grid').innerHTML = h + '</tbody>';
-  document.getElementById('legend-cmp').innerHTML = Object.keys(V).map(k=>`<span><i class="vdot" style="background:${V[k].c}" aria-hidden="true">${VS[k]}</i>${V[k].l}</span>`).join('');
-  document.querySelectorAll('#grid td button').forEach(b => b.onclick = () => openMeasure(b.dataset.c, b.dataset.m));
+  document.getElementById('legend-cmp').innerHTML = Object.keys(V).map(k=>`<span><i class="vdot" style="background:${V[k].c}" aria-hidden="true">${VS[k]}</i>${V[k].l}</span>`).join('') + `<span>chiffre : nombre de mesures du thème</span>`;
+  document.querySelectorAll('#grid td button').forEach(b => b.onclick = () => {
+    if(b.dataset.m && b.dataset.n==='1') return openMeasure(b.dataset.c, b.dataset.m);
+    cur=b.dataset.c; theme=b.dataset.t||'all'; ftab='budget'; go('cand');
+  });
 }
 
 /* ---------- fiche candidat ---------- */

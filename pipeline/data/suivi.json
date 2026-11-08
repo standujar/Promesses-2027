@@ -3787,6 +3787,19 @@
    "cree": "2026-11-08",
    "maj": "2026-11-08",
    "resolution": null
+  },
+  {
+   "id": "S222",
+   "type": "a_verifier",
+   "candidats": [],
+   "mesure": null,
+   "sujet": "« Qu'est-ce qui peut passer ? » : une seule mesure visible par thème",
+   "detail": "Le tableau ne montrait que le verdict le plus contraignant de chaque thème, sans le nombre de mesures ni la répartition des verdicts ; une case vide ne dit pas si le candidat a des propositions sans fiche chiffrée (Vie quotidienne, non comptées). Les thèmes de la grille (social regroupe santé, école, logement) restent ceux des fiches.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Nombre de mesures par case, colonne « Toutes » (répartition des verdicts des mesures retenues, même périmètre que les totaux), toucher une case ouvre les mesures du thème ; texte d'explication mis à jour ; contrôle ajouté dans tests/smoke.py. Même affichage pour les 8."
   }
  ]
 }

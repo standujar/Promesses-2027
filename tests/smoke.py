@@ -345,11 +345,13 @@ with sync_playwright() as p:
     check(r == [True, 0, True, True, True, True], f'sources : aucune adresse franceinfo.fr étiquetée « agrégateur » ; agrégateurs signalés sur les données d\'entrée et en Vie quotidienne ; chaque thème a une source qui n\'est pas un site faible {r}')
     # « Qu'est-ce qui peut passer ? » et répartition des verdicts : mêmes mesures que les totaux (hors mesures non confirmées et doublons)
     r = pg.evaluate("""(()=>{ go('accueil'); const O={bloque:0,tres_difficile:1,sous_conditions:2,faisable:3};
-      const cells=[...document.querySelectorAll('#grid td button')].map(b=>{ const c=cand(b.dataset.c), m=c.measures.find(x=>x.id===b.dataset.m);
-        return kept(m) && c.measures.filter(x=>x.theme===m.theme&&kept(x)).every(x=>O[x.verdict]>=O[m.verdict]); });
+      const cells=[...document.querySelectorAll('#grid td button[data-m]')].map(b=>{ const c=cand(b.dataset.c), m=c.measures.find(x=>x.id===b.dataset.m);
+        return kept(m) && c.measures.filter(x=>x.theme===m.theme&&kept(x)).every(x=>O[x.verdict]>=O[m.verdict]) && +b.dataset.n===c.measures.filter(x=>x.theme===m.theme&&kept(x)).length; });
+      // colonne « Toutes » : répartition des verdicts égale aux mesures retenues de chaque candidat (8/11/2026)
+      const alls=D.candidates.map(c=>{ const b=document.querySelector(`#grid td button[data-all][data-c="${c.id}"]`); return !!b && [...b.querySelectorAll('span')].reduce((a,s)=>a+ +s.textContent.replace(/\\D/g,''),0)===c.measures.filter(kept).length; });
       const tally=D.candidates.map(c=>{ cur=c.id; go('cand'); return [...document.querySelectorAll('#fhead .legend span')].reduce((a,s)=>a+ +s.textContent.split('·').pop(),0)===c.measures.filter(kept).length; });
-      cur=D.candidates[0].id; go('accueil'); return [cells.length>0 && cells.every(Boolean), tally.every(Boolean), D.candidates.some(c=>c.measures.some(m=>!kept(m)))]; })()""")
-    check(r == [True, True, True], f'« Qu\'est-ce qui peut passer ? » et répartition des verdicts sans les mesures hors total {r}')
+      cur=D.candidates[0].id; go('accueil'); return [cells.length>0 && cells.every(Boolean), tally.every(Boolean), D.candidates.some(c=>c.measures.some(m=>!kept(m))), alls.every(Boolean)]; })()""")
+    check(r == [True, True, True, True], f'« Qu\'est-ce qui peut passer ? » (verdict le plus contraignant et nombre de mesures par thème, répartition de tous les verdicts) sans les mesures hors total {r}')
     # sondages : date de la moyenne affichée à côté des intentions de vote (accueil et fiche), masquée avec les sondages
     r = pg.evaluate("""(()=>{ go('accueil'); const a=document.getElementById('poll-note'); go('cand'); const b=document.querySelector('#fhead .pdate'); go('accueil');
       return blackout ? a.hidden && !b : (!a.hidden && a.textContent.includes(D.sondages.date) && !!b && b.textContent.includes(D.sondages.date)); })()""")
