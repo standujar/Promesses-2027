@@ -9900,5 +9900,67 @@
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
 ]
+},
+"melenchon.sante.4": {
+"constat": "Indemnités d'arrêt maladie : +66 % de 2014 à 2025, à 11,3 Md€ (Sécurité sociale, hors crise sanitaire).",
+"constat_s": [
+3
+],
+"pour": "Sans jour non payé, on ne repousse pas son arrêt : les arrêts longs augmentent moins.",
+"preuve_pour": "mitigé",
+"contre": "Sans jour non payé, les arrêts d'un ou deux jours sont nettement plus nombreux.",
+"preuve_contre": "solide",
+"cas_pour": [
+{
+"t": "Les absences d'une semaine à trois mois des agents de l'État ont augmenté de 25 % pendant le jour de carence de 2012-2013 (Insee, France, 2017).",
+"s": [
+1
+]
+},
+{
+"t": "Les salariés du privé sans jour de carence, payé par l'employeur ou en Alsace-Moselle, ne cumulent pas plus de jours d'arrêt par an (DREES ; Insee, France, 2015-2017).",
+"s": [
+2,
+1
+]
+}
+],
+"cas_contre": [
+{
+"t": "Les arrêts maladie des personnels de l'Éducation nationale ont baissé de 23 % en nombre et de 6 % en jours, sans effet mesuré sur la santé perçue (Insee, France, 2023).",
+"s": [
+0
+]
+},
+{
+"t": "Les absences de deux jours des agents de l'État ont baissé de plus de moitié pendant le jour de carence de 2012-2013 (Insee, France, 2017).",
+"s": [
+1
+]
+}
+],
+"etudes": "Les évaluations concordent : un jour de carence réduit nettement les arrêts courts mais allonge une partie des autres ; la baisse du total des jours d'absence est faible. L'auto-déclaration des arrêts courts n'a pas d'évaluation française.",
+"src": [
+{
+"l": "Insee, Document de travail n° 2023-06 (Hillion, Maugendre), L'effet du « jour de carence » sur les absences pour maladie ordinaire, la santé perçue et le recours aux soins",
+"a": 2023,
+"u": "https://www.insee.fr/fr/statistiques/6964865"
+},
+{
+"l": "Insee Analyses n° 36 (Cazenave-Lacroutz, Godzinski), Le jour de carence dans la fonction publique de l'État",
+"a": 2017,
+"u": "https://www.insee.fr/fr/statistiques/3181789"
+},
+{
+"l": "DREES (C. Pollak), L'effet du délai de carence sur le recours aux arrêts maladie des salariés du secteur privé (fiche de la Cour des comptes)",
+"a": 2015,
+"u": "https://www.ccomptes.fr/fr/plateformes-citoyennes/plateforme-evaluations-politique-publique/explorer-evaluations/leffet-du-0"
+},
+{
+"l": "Sécurité sociale, rapport d'évaluation (REPSS Maladie), fiche 2.13.1 « Dynamique des indemnités journalières »",
+"a": 2026,
+"u": "https://evaluation.securite-sociale.fr/home/maladie/2121-dynamique-des-indemnites-jo.html"
+}
+]
 }
 }
