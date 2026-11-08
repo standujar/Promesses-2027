@@ -12,7 +12,7 @@
   "Former plus de médecins": ["attal.sante.1", "lisnard.sante.1"],
   "Service ou engagement obligatoire des jeunes": ["glucksmann.service_civique", "attal.engagement_civique"],
   "Fusion des aides sociales": ["lisnard.allocation", "retailleau.travail"],
-  "Suppression de Parcoursup": ["melenchon.ecole.1", "glucksmann.ecole.3"],
+  "Suppression de Parcoursup": ["melenchon.ecole.1", "glucksmann.ecole.3", "lisnard.ecole.5"],
   "Moins d'élèves par classe": ["melenchon.ecole.2", "attal.ecole.1"],
   "Moins d'éolien et de solaire": ["le-pen.enr", "zemmour.enr", "retailleau.energie"],
   "Taxes sur l'énergie et les carburants en baisse": ["le-pen.tva", "le-pen.ticpe", "zemmour.accise"],

@@ -2252,6 +2252,314 @@ D['asof']='8 novembre 2026'
 t=C['melenchon']['claude_total']; a0="arrêts maladie payés à 100 % et fin des jours de carence"; assert t['missing'].count(a0)==1
 t['missing']=t['missing'].replace(a0,"arrêts maladie payés à 100 %, fin des jours de carence et auto-déclaration des arrêts de courte durée (durée non publiée)")
 
+# --- review 45 : manques des candidats, fiches et simulateur (08/11/2026) ; registre S235 et suivants
+# Relevé des manques du 8/11 (sources ouvertes et citations relues le 8/11), décisions du porteur appliquées avec les règles communes, la même
+# règle pour les 8 (chaque cas dit « même règle que … »). Valeurs officielles nouvelles ouvertes le 8/11 : Institut Montaigne (exonération des
+# hausses de salaire, 2022 et 2024 ; gratuité de l'éducation, 2022) ; Banque de France (projections du 15/09/2026 : inflation 1,9 % en 2027, 1,6 %
+# en 2028) ; Assemblée nationale (indemnités journalières de maternité et de paternité 2023) ; Insee (distribution des salaires du privé 2025,
+# Insee Première n° 2132 ; effectifs de la fonction publique par versant fin 2024) ; Conseil constitutionnel (décision n° 2012-653 DC).
+def _nb(s): return s.replace('\xa0',' ').replace(' ',' ')
+def MISS(cid,old,new):
+    t=C[cid]['claude_total']; assert _nb(t['missing']).count(old)==1,(cid,old); t['missing']=_nb(t['missing']).replace(old,new)
+def MISS_ADD(cid,txt): t=C[cid]['claude_total']; t['missing']=(t.get('missing','')+', '+txt).strip(', ')
+RNCB='https://back.deputes-rn.fr/wp-content/uploads/2026/10/GRN-CONTRE-BUDGET-2027-DOSSIER.pdf'
+RNCB_S="Groupe RN, contre-budget 2027 (annexe « Postes d'économies et de dépenses »)"
+# (1) Le Pen
+# (a) exonération de cotisations patronales des hausses de salaire de 10 % (salaires jusqu'à 3 SMIC) : paramètres redits en 2026 (porte-parole
+#     de campagne, 2/11 ; candidate, 5/11, AFP) ; dépense ou baisse de prélèvement = médiane des chiffrages indépendants : Institut Montaigne 2022
+#     (manque à gagner médian 10,5 Md€, 9 à 12, brut) ; le chiffrage de 2024 du même institut (12 Md€ nets en 2029, 15 bruts) est incohérent avec son
+#     propre tableau (4 Md€ en 2029) : en borne. Cotisations patronales : nettes de l'impôt sur les sociétés récupéré (règle commune, 20 %), comme
+#     les cotisations patronales de Retailleau. Montants de la source, non convertis (masse salariale de 2020 projetée par la source).
+MT22H='https://www.institutmontaigne.org/presidentielle-2022/marine-le-pen/exonerer-de-cotisations-patronales-les-hausses-de-10-des-salaires-inferieurs-a-3-smic/'
+MT24H='https://www.institutmontaigne.org/legislatives-2024/rassemblement-national/exonerer-les-entreprises-des-cotisations-patronales-sur-les-hausses-de-10-des-grilles-de-salaires-pour-tous-les-salaries-sous-3-smic/'
+AFP0511='https://marine-oceans.com/actualites/le-pen-refuse-dobliger-les-entreprises-a-augmenter-les-salaires-sinon-on-entre-dans-lurss/'
+hc,hl,hh=round(-10.5*0.8,1),-12.0,round(-9*0.8,1); assert (hc,hl,hh)==(-8.4,-12.0,-7.2)
+ADD('le-pen',{"id":"hausses_salaire","theme":"travail","title":"Hausses de salaire de 10 % sans cotisations patronales","proposal":"Exonérer de cotisations patronales les hausses de salaire de 10 % décidées par les entreprises, pour les salaires jusqu'à 3 fois le SMIC.",
+  "claimed":"Non chiffré par le camp en 2026","claimed_md":None,
+  "estimates":[{"source":"Institut Montaigne (2022)","year":2022,"value":"« Estimation médiane : manque à gagner de 10,5 Md€ » (9 à 12 Md€ en 2027 ; 6,8 à 9 Md€ nets d'un retour de 25 %)","low_md":-12,"high_md":-9,"url":MT22H},
+    {"source":"Institut Montaigne (2024)","year":2024,"value":"0,8 Md€ en 2025, 4,8 Md€ en 2027 et 12 Md€ en 2029 (15 Md€ bruts, retour d'impôt sur les sociétés de 20 %) ; le tableau de la même page donne 4 Md€ en 2029","low_md":-12,"high_md":-4,"url":MT24H},
+    {"source":"AFP, dépêche du 5/11/2026 reprise par Marine & Océans","year":2026,"value":"La candidate se dit « favorable à une incitation pour les entreprises qui augmentaient les salaires de 10% », « en les exonérant des charges afférentes »","low_md":None,"high_md":None,"url":AFP0511}],
+  "consensus":"isolé","verdict":"faisable","obstacle":"Par la loi de financement de la Sécurité sociale ; durée de l'exonération non publiée en 2026 ; financement non précisé dans la mesure.",
+  "claude":{"id":"hausses_salaire","central":hc,"low":hl,"high":hh,"method":"médiane",
+    "formula":"Seul chiffrage indépendant cohérent : Institut Montaigne (2022), manque à gagner médian de 10,5 Md€ par an (9 à 12) ; cotisations patronales déductibles du bénéfice : nettes de l'impôt sur les sociétés récupéré (règle commune, 20 %, même règle que les cotisations patronales de Retailleau) : 10,5 × 0,8 ≈ −8,4 Md€ ; borne basse : chiffrage de 2024 du même institut, 12 Md€ nets en 2029 (cinquième année du dispositif) ; borne haute : estimation basse de 2022 (9), nette à 20 % (−7,2)",
+    "inputs":[{"label":"Chiffrage de 2022","value":"« Estimation médiane : manque à gagner de 10,5 Md€ » ; basse 9, haute 12 (en 2027) ; dispositif de cinq ans ; salaires sous 3 SMIC estimés à 70 % de la masse salariale brute (450 Md€ en 2020)","source":"Institut Montaigne (2022)","url":MT22H},
+      {"label":"Chiffrage de 2024","value":"« Cette mesure est estimée à un coût de 800 millions d'euros en 2025 », 4,8 Md€ en 2027 et 12 Md€ en 2029 ; 10 % des entreprises intéressées chaque année ; « retour IS » de 20 % ; le tableau cumulé de la même page donne 4 Md€ en 2029 : retenu en borne seulement","source":"Institut Montaigne (2024)","url":MT24H},
+      {"label":"Proposition redite en 2026","value":"« favorable à une incitation pour les entreprises qui augmentaient les salaires de 10% », « en les exonérant des charges afférentes » (salon Euronaval, 5/11/2026) ; plafond de 3 SMIC redit par le porte-parole de campagne (BFMTV, 2/11/2026)","source":"AFP, dépêche du 5/11/2026 reprise par Marine & Océans","url":AFP0511}]+[IN_ISC],
+    "note":"Durée de l'exonération non publiée en 2026 (cinq ans dans le programme de 2022) : le chiffrage retient le régime de croisière, comme les sources. Montants de la source, en euros courants de son scénario, non convertis. La hausse de salaire reste décidée par l'employeur : le simulateur ne compte aucun gain garanti (note)."}})
+MISS('le-pen',"exonération des hausses de salaire jusqu'à 10 % (salaires jusqu'à 3 fois le SMIC, porte-parole de campagne, 2/11/2026), ","")
+C['le-pen']['sim']['salaire_note']="Hausses de salaire de 10 % exonérées de cotisations patronales (jusqu'à 3 SMIC) : hausse décidée par l'employeur, aucun gain garanti, non calculé ici."
+# (b) demi-part des veuves et veufs généralisée : ligne de 1,000 Md€ du contre-budget (budget publié ligne à ligne : toute ligne ≥ 1 Md€ non couverte
+#     par une fiche est ajoutée ; baisse d'impôt sans chiffrage indépendant = chiffre du camp ±50 %, même règle que les jeunes parents de Philippe)
+ADD('le-pen',{"id":"demi_part_veufs","theme":"fiscalite","title":"Demi-part des veuves et veufs généralisée","proposal":"Rendre à toutes les veuves et à tous les veufs la demi-part fiscale supplémentaire.",
+  "claimed":"1,0 Md€ (contre-budget 2027)","claimed_md":-1.0,
+  "estimates":[{"source":RNCB_S,"year":2026,"value":"« Généralisation de la demi-part pour les veuves et veufs 1,000 »","low_md":-1.0,"high_md":-1.0,"url":RNCB}],
+  "consensus":"isolé","verdict":"faisable","obstacle":"Par la loi de finances ; financement non précisé dans la mesure.",
+  "claude":{"id":"demi_part_veufs","central":-1.0,"low":-1.5,"high":-0.5,"method":"camp",
+    "formula":"Ligne de 1,0 Md€ du contre-budget, aucun chiffrage indépendant : chiffre du camp, fourchette ±50 % (règle des budgets publiés ligne à ligne, même règle que les jeunes parents de Philippe)",
+    "inputs":[{"label":"Ligne du contre-budget 2027","value":"« Généralisation de la demi-part pour les veuves et veufs 1,000 »","source":RNCB_S,"url":RNCB}],
+    "note":"Ligne d'au moins 1 Md€ d'un budget publié : ajoutée en fiche (elle était comptée à tort parmi les dépenses de moins de 1 Md€)."}})
+MISS('le-pen',", demi-part des veufs…",'…')
+# (c) MaPrimeRénov' remplacée par un prêt à taux zéro « 100 % Rénov' » : même règle et même valeur que les suppressions comptées chez Retailleau
+#     (fin de MaPrimeRénov') et Zemmour (Anah) : part publique de MaPrimeRénov' ; le prêt à taux zéro qui la remplace a des paramètres non publiés
+#     (coût non chiffrable, dit dans la note et le registre) ; même verdict (obligation européenne de rénovation, S224)
+mr=M('retailleau','fin_maprimerenov'); kr=mr['claude']; assert (kr['central'],kr['low'],kr['high'])==(2.0,1.2,2.1)
+ADD('le-pen',{"id":"maprimerenov","theme":"depense","title":"MaPrimeRénov' remplacée par un prêt à taux zéro","proposal":"Remplacer MaPrimeRénov' par un prêt à taux zéro « 100 % Rénov' ».",
+  "claimed":"+5,1 Md€ (contre-budget 2027)","claimed_md":5.1,
+  "estimates":[{"source":RNCB_S,"year":2026,"value":"« Remplacement de MaPrimeRenov par le 100 % Renov' 5,100 »","low_md":5.1,"high_md":5.1,"url":RNCB}],
+  "consensus":"isolé","verdict":"sous_conditions","obstacle":"Par la loi de finances ; "+TEPBD.replace("reste à atteindre par d'autres mesures","reste à atteindre, ici avec le prêt à taux zéro qui remplace l'aide"),
+  "claude":{"id":"maprimerenov","central":kr['central'],"low":kr['low'],"high":kr['high'],"method":"ascendant",
+    "formula":"Même règle et même valeur que la fin de MaPrimeRénov' de Retailleau et la suppression de l'Anah de Zemmour : part de MaPrimeRénov' payée par des fonds publics en 2026, dotation de l'État à l'Anah 1,45 Md€ + recettes des quotas carbone ≈ 0,6 ≈ +2,0 Md€ (la part financée par les certificats d'économies d'énergie, payée par les fournisseurs, est hors budget) ; bornes : dotation prévue au PLF 2027 seule (1,23) ; dotation 2026 et plafond des quotas carbone (2,05)",
+    "inputs":[{"label":"Ligne du contre-budget 2027","value":"« Remplacement de MaPrimeRenov par le 100 % Renov' 5,100 »","source":RNCB_S,"url":RNCB}]+[i for i in kr['inputs'] if i['label']!='Chiffre du camp'],
+    "note":"Le coût du prêt à taux zéro qui remplace l'aide n'est pas compté : montant, durée et conditions non publiés (même règle que les autres prêts à taux zéro, non comptés). Le chiffre du camp (5,1 Md€) n'est pas compté au-delà de la part publique de l'aide."}})
+MISS('le-pen',"prêt à taux zéro à la place de MaPrimeRénov', ","coût du prêt à taux zéro « 100 % Rénov' » qui remplace MaPrimeRénov' (montant et conditions non publiés), ")
+# (d) autres lignes ≥ 1 Md€ du contre-budget : économies et recettes sans chiffrage indépendant ni base officielle qui permette le calcul : « non
+#     comptées » avec le paramètre publié (règle des budgets publiés ligne à ligne) ; transferts entre administrations : sans effet sur le solde public
+#     (même règle que la fraction de TVA aux communes de Retailleau) ; « retour de TVA » : effet de bouclage, exclu par la méthode
+MISS_ADD('le-pen',"lignes du contre-budget 2027 sans chiffrage indépendant ni base officielle permettant le calcul (chiffres du camp pour 2027) : aides au logement plafonnées à 90 % du loyer 1,0 (répartition officielle des allocataires selon la part du loyer couverte non publiée), chèques apprentissage réservés aux étudiants avant la licence 1,6 (dispositif non défini par le document), gestion des bons du Trésor à taux fixe 4,2, logement social, dont la fin de l'exonération de taxe foncière des bailleurs sociaux, 3,2, subventions aux associations « ne relevant pas de l'intérêt général » de l'État 2,0 et des collectivités 2,0, coût de la dette 1,3, parc immobilier de l'État 1,0 ; sans effet sur le solde public : écrêtement puis rebudgétisation de la TVA transférée aux collectivités 3,4 et hausse de la cotisation employeur de la fonction publique territoriale 1,0 (transferts entre administrations, même règle que la fraction de TVA aux communes de Retailleau), « retour de TVA lié à la baisse des dépenses contraintes » 2,6 (effet de bouclage, exclu par la méthode) ; plus-values immobilières exonérées après quinze ans de détention (lettre de la candidate aux professionnels de l'immobilier, 21/09/2026 : coût non publié, répartition officielle des plus-values par durée de détention non ouverte)")
+# (e) simulateur : minimum vieillesse à 1 000 € (programme de 2022, non reconfirmé, absent du contre-budget 2027 ; même texte chez Lisnard) retiré ;
+#     plus-values immobilières, demi-part des veufs et AAH « au-dessus du seuil de pauvreté » (seuil non publié : 50 ou 60 % du revenu médian) : notes
+sp=C['le-pen']['sim']
+for k0 in ('minima_sociaux','retraites_actuels'):
+    a0=" minimum vieillesse à 1 000 €/mois (il est déjà de 1 043,59 € en 2026) ;" if k0=='minima_sociaux' else " Minimum vieillesse à 1 000 €/mois (il est déjà de 1 043,59 € en 2026)."
+    assert _nb(sp[k0]).count(a0)==1,(k0,sp[k0]); sp[k0]=_nb(sp[k0]).replace(a0,"")
+sp['retraites_actuels']+=" Demi-part fiscale des veuves et veufs généralisée (contre-budget 2027) : impôt en baisse pour les veufs imposables qui ne l'ont pas, non calculé ici."
+sp['aah_nc']="AAH « toujours au-dessus du seuil de pauvreté » (contre-budget 2027) : seuil retenu non publié (50 ou 60 % du revenu médian), non calculé ici."
+sp['logement']=(sp.get('logement') or [])+[{"when":["credit","proprio"],"t":"Plus-values immobilières exonérées après 15 ans de détention (aujourd'hui 22 ans pour l'impôt, 30 ans pour les prélèvements sociaux), hors résidence principale déjà exonérée (lettre de la candidate du 21/09/2026) : non calculé ici."}]
+sl=C['lisnard']['sim']; a0=" Minimum vieillesse annoncé à 1 000 €/mois (il est déjà de 1 043,59 € en 2026)."; assert _nb(sl['retraites_actuels']).count(a0)==1
+sl['retraites_actuels']=_nb(sl['retraites_actuels']).replace(a0,"")
+# (2) Mélenchon
+# (a) point d'indice : dégel inscrit dans la loi et salaires indexés sur l'inflation « dans la fonction publique » (programme du 6/11) : coût de
+#     l'indexation en 2030 par rapport au droit en vigueur (point non indexé), prévision d'inflation officielle la plus récente ouverte (Banque de
+#     France, 15/09/2026 : 1,9 % en 2027, 1,6 % en 2028 ; aucune prévision officielle ouverte pour 2029) : indexation de 2028 et 2029 sur l'inflation
+#     de l'année précédente, celle de 2030 non comptée ; même règle dans l'autre sens que les gels comptés (Attal, Lisnard). Compensation aux
+#     collectivités : transfert entre administrations, sans effet sur le solde.
+BDF0926='https://www.banque-france.fr/system/files/2026-09/Projections_macroeconomiques_Septembre_2026.pdf'
+m=M('melenchon','point_indice'); k=m['claude']; assert (k['central'],k['low'],k['high'])==(-24.0,-24.0,-17)
+ind=round(2.4*1.1*((1.019*1.016)-1)*100,1); ind_h=round(2.4*1.1*1.9,1); assert (ind,ind_h)==(9.3,5.0),(ind,ind_h)
+CIT_IND="Porter immédiatement le SMIC mensuel à 1 700 euros net et indexer les salaires sur l’inflation dans le privé comme dans la fonction publique"
+m.update(title="Point d'indice : +10 % puis indexé sur l'inflation",proposal="Revaloriser de 10 % le point d'indice des fonctionnaires des trois versants, inscrire son dégel dans la loi et indexer les salaires de la fonction publique sur l'inflation.")
+SET('melenchon','point_indice',round(-24.0-ind,1),round(-24.0-ind,1),round(-17-ind_h,1),k['formula'].replace("+10 % (publié, immédiat) ≈ −24,0 Md€ ; borne haute : chiffre du camp (17)",
+    f"+10 % (publié, immédiat) ≈ −24,0 Md€ ; indexation sur l'inflation ensuite (programme du 6/11/2026), par rapport au droit en vigueur (point non indexé) : 2,4 × 1,1 par point d'inflation cumulée, prévisions de la Banque de France (15/09/2026 : 1,9 % en 2027, 1,6 % en 2028) appliquées en 2028 et 2029, soit +3,5 % : ≈ −9,3 ; l'indexation de 2030 n'est pas comptée (pas de prévision officielle ouverte pour 2029) ; total ≈ −33,3 Md€ ; borne haute : chiffre du camp pour les +10 % (17) et une seule année d'indexation (1,9 % : −5,0), soit −22,0"))
+assert '−33,3' in k['formula']
+k['inputs']+=[LVIN("Indexation (programme du 6/11/2026)",CIT_IND,LV_ECO2),{"label":"Prévisions d'inflation (IPCH)","value":"« l'inflation totale atteindrait 2,3 % en 2026, avant de refluer sous la cible de 2 %, pour s'établir à 1,9 % en 2027, puis à 1,6 % en 2028 »","source":"Banque de France, projections macroéconomiques intermédiaires (15/09/2026)","url":BDF0926}]
+k['note']+=" Indexation : compensation aux collectivités territoriales = transfert entre administrations, sans effet sur le solde public ; même règle, dans l'autre sens, que les gels de pensions et de prestations comptés chez Attal et Lisnard."
+# (b) congé d'accueil de l'enfant, 20 semaines par parent, identique et obligatoire (à la place des congés de maternité, 16 semaines, et de
+#     paternité, 25 jours) : même méthode que le congé de naissance de Retailleau (dépense de la Sécurité sociale, indemnisation du droit en vigueur) ;
+#     aucun chiffre du camp : calcul ascendant sur les dépenses officielles (Assemblée nationale, rapporteur général de la commission des affaires
+#     sociales, 15/10/2025 : 3,2 Md€ d'indemnités de maternité et 0,7 Md€ de paternité et d'accueil du jeune enfant en 2023)
+LV_SECU3=LV+'mettre-en-securite-sociale/chapitre3'
+AN_IJ='https://questions.assemblee-nationale.fr/dyn/opendata/CRCANR5L17S2026PO420120N002.html'
+CIT_CONGE="Remplacer le congé paternité et le congé maternité actuels par un congé d’accueil de l’enfant, identique et obligatoire pour les deux parents, d’une durée de 20 semaines par parent"
+cm,cp=round(3.2*4/16,2),round(0.7*(140/25-1),2); cc=round(-(cm+cp),1); assert (cm,cp,cc)==(0.8,3.22,-4.0),(cm,cp,cc)
+ADD('melenchon',{"id":"conge_accueil","theme":"social","title":"Congé d'accueil de l'enfant : 20 semaines par parent","proposal":"Remplacer les congés de maternité (16 semaines) et de paternité (25 jours) par un congé d'accueil de l'enfant identique et obligatoire de 20 semaines pour chaque parent.",
+  "claimed":"Non chiffré","claimed_md":None,"estimates":[LVEST(CIT_CONGE,LV_SECU3)],"consensus":"isolé","verdict":"faisable","obstacle":"Par la loi de financement de la Sécurité sociale ; indemnisation non précisée (celle du droit en vigueur retenue) ; financement non précisé dans la mesure.",
+  "claude":{"id":"conge_accueil","central":cc,"low":cc,"high":cc,"method":"ascendant",
+    "formula":"Même méthode que le congé de naissance de Retailleau (dépense de la Sécurité sociale, indemnisation du droit en vigueur), sans chiffre du camp : calcul ascendant sur les dépenses de 2023 (Assemblée nationale) ; maternité, 16 → 20 semaines : 3,2 Md€ × 4/16 = 0,8 ; paternité, 25 jours → 20 semaines (140 jours) : 0,7 Md€ × (140/25 − 1) = 3,22 ; total ≈ −4,0 Md€ (montants de 2023, non projetés, comme les autres fiches)",
+    "inputs":[{"label":"Indemnités journalières de maternité et de paternité (2023)","value":"« 3,2 milliards d'euros d'indemnités journalières de maternité » ; « 700 millions d'euros d'indemnités journalières de paternité et d'accueil du jeune enfant »","source":"Assemblée nationale, commission des affaires sociales, compte rendu du 15/10/2025 (rapporteur général)","url":AN_IJ},
+      LVIN("Programme du 6/11/2026",CIT_CONGE,LV_SECU3)],
+    "note":"Hypothèses : même recours qu'aujourd'hui et même indemnité journalière moyenne ; un congé obligatoire pour les deux parents fait monter le recours des pères (sous-estimation), la maternité déjà plus longue à partir du 3e enfant (26 semaines) joue en sens contraire (surestimation). Congés des agents publics payés par leur employeur : non comptés à part. Aucun chiffrage indépendant publié."}})
+# (c) 500 000 places de crèche publiques gratuites : coût public de fonctionnement par place et participation des familles des crèches publiques
+#     sans source officielle ouverte le 8/11 (Cnaf, Cour des comptes) : non comptée (registre)
+MISS_ADD('melenchon',"service public de la petite enfance : 500 000 places d'accueil ouvertes progressivement et crèches publiques gratuites (programme du 6/11/2026 ; coût public de fonctionnement par place et participation des familles : pas de source officielle ouverte)")
+# (d) gratuité réelle de l'éducation publique (cantine, transport, périscolaire, manuels, fournitures), mesure du programme du 6/11 : remplace la fiche
+#     « cantine » (la dizaine de milliards du groupe LFI comprend la cantine). Règle des dépenses : médiane des chiffrages indépendants, sinon chiffre du
+#     camp ±50 % ; un chiffrage indépendant de la même mesure existe (Institut Montaigne 2022, déjà source de la fiche) : 7,2 Md€ (public), 8,7 avec le
+#     privé sous contrat ; le chiffre du camp (« une dizaine de milliards », groupe LFI, 1/09/2026) hors médiane, en borne basse. Verdict de la cantine
+#     (écoles des collectivités, S223).
+MT22G='https://www.institutmontaigne.org/presidentielle-2022/jean-luc-melenchon/assurer-la-gratuite-de-leducation-publique-et-du-materiel-scolaire/'
+LCP0109='https://lcp.fr/actualites/50-milliards-pour-renover-les-ecoles-salaires-en-hausse-de-20-le-plan-de-lfi-pour-l'
+m=M('melenchon','cantine'); k=m['claude']; assert (k['central'],k['low'],k['high'])==(-3.9,-4.65,-3.6) and m['verdict']=='sous_conditions'
+CIT_GRAT="Assurer la gratuité réelle de l’éducation publique, y compris de la cantine, du transport, des activités périscolaires, des manuels et des fournitures"
+m.update(title="Gratuité réelle de l'école",proposal="Gratuité de l'éducation publique : cantine, transport scolaire, activités périscolaires, manuels et fournitures.",
+         claimed="« Une dizaine de milliards » (groupe LFI, 1/09/2026, cantine comprise) ; cantine : 3,6 Md€ (note LFI du 14/10/2026)",claimed_md=-10.0,
+         obstacle="Par la loi de finances ; cantine, transport scolaire et périscolaire organisés par les collectivités (communes, départements, régions) : mise en œuvre avec elles ; financement non précisé dans la mesure.")
+m['estimates']+=[{"source":"Institut Montaigne (2022)","year":2022,"value":"Gratuité de l'éducation publique (cantine, transport, manuels, périscolaire, fournitures) : 7,2 Md€ (médiane), 8,7 avec le privé sous contrat ; chiffre de l'équipe de campagne de 2022 : 7,9","low_md":-8.7,"high_md":-6.9,"url":MT22G},
+                 {"source":"LCP (1/09/2026), plan d'urgence du groupe LFI pour l'éducation","year":2026,"value":"Gratuité des fournitures et des manuels pour tous, de la cantine, des transports et du périscolaire « prioritairement pour les familles les plus pauvres » : « une dizaine de milliards d'euros », « en cours de chiffrage »","low_md":-10.0,"high_md":-10.0,"url":LCP0109}]
+SET('melenchon','cantine',-7.2,-10.0,-6.9,"Règle des dépenses : médiane des chiffrages indépendants de la même mesure, Institut Montaigne (2022, programme de 2022 du candidat) : 7,2 Md€ pour l'enseignement public (fournitures 0,67 ; manuels 0,07 ; cantine 3,86 ; transport 0,33 ; périscolaire 2,24) ; borne haute : 6,9 (estimation du texte pour le seul public) ; chiffre du camp hors médiane, en borne basse : « une dizaine de milliards » (groupe LFI, 1/09/2026, cantine comprise) ; 8,7 avec le privé sous contrat",
+    method='médiane',note="Remplace la fiche « cantine » : la gratuité de la cantine (3,6 Md€ selon la note LFI du 14/10) est comprise dans la mesure du programme. Base 2022, non projetée. Écoles, transport scolaire et périscolaire des collectivités : mise en œuvre avec elles (même verdict que les bâtiments scolaires d'Attal).")
+k['inputs']=[{"label":"Gratuité de l'éducation publique, par poste (Md€ par an)","value":"Public : fournitures 0,67 ; manuels 0,07 ; cantine 3,86 ; transport 0,33 ; périscolaire 2,24 ; total 7,17 (8,67 avec le privé sous contrat) ; estimation médiane 7,2, haute 8,7","source":"Institut Montaigne (2022)","url":MT22G},
+             {"label":"Chiffre du camp","value":"« une dizaine de milliards d'euros » (plan d'urgence du groupe LFI, cantine comprise)","source":"LCP (1/09/2026)","url":LCP0109}]+[i for i in k['inputs'] if i['label']!="Gratuité de la cantine (public)"]
+MISS('melenchon',"plan d'urgence du groupe LFI pour l'éducation (1/09/2026) : fournitures et manuels gratuits pour tous, transports et périscolaire gratuits en priorité pour les plus modestes (« une dizaine de milliards » selon le groupe, cantine comprise, chiffrage en cours), AESH","plan d'urgence du groupe LFI pour l'éducation (1/09/2026) : AESH")
+# (e) « 100 % Sécu » : frais de gestion publiés par le plan santé (17 c€ par euro cotisé aux complémentaires, 2 c€ à la Sécurité sociale, « près de
+#     10 milliards ») : économie sur les primes payées par les ménages aux complémentaires, pas sur la dépense publique : non comptée sur le solde ;
+#     frais de gestion de l'Assurance maladie sur les prestations reprises : non ajoutés, comme les soins dentaires de Le Pen (même règle de transfert)
+k=M('melenchon','secu100')['claude']; a0="Le camp annonce un financement par les cotisations (transfert des primes des complémentaires) et une économie de frais de gestion : taux non publié, non compté (même règle que les autres financements sans paramètre)."
+assert k['note'].count(a0)==1
+k['note']=k['note'].replace(a0,"Le camp annonce un financement par les cotisations (transfert des primes des complémentaires ; taux non publié, non compté, même règle que les autres financements sans paramètre) et une économie de frais de gestion (« sur 1€ cotisé à la complémentaire, 17 centimes partent en frais de gestion », contre 2 centimes à la Sécurité sociale : « près de 10 milliards d'euros », plan santé) : elle porte sur les primes payées par les ménages aux complémentaires, pas sur la dépense publique, et n'est pas comptée sur le solde ; les frais de gestion de l'Assurance maladie sur les prestations reprises ne sont pas ajoutés, comme pour les soins dentaires de Le Pen.")
+k['inputs'].append({"label":"Frais de gestion (plan santé)","value":"« sur 1€ cotisé à la complémentaire, 17 centimes partent en frais de gestion et de concurrence […] sur 1€ cotisé à la Sécurité sociale, seuls 2 centimes sont consacrés aux frais de gestion » ; « économiser près de 10 milliards d'euros de frais de gestion »","source":"La France insoumise, plan santé (30/10/2026, modifié le 4/11)","url":PSANTE})
+# (f) non comptés, paramètre publié mais sans base officielle ouverte ou opération financière ; DGF : transfert entre administrations
+MISS_ADD('melenchon',"garantie d'emploi au SMIC revalorisé pour les chômeurs de longue durée volontaires (nombre de bénéficiaires et employeur non publiés), nationalisations et retours sur privatisations (autoroutes « en revenant sur les hausses de prix passées », aéroports, Française des jeux, ArcelorMittal France, Engie… : rachats = opérations financières ; baisse des péages et indemnités de fin de concession sans paramètre publié), dotation globale de fonctionnement des communes indexée sur l'inflation (transfert entre administrations, sans effet sur le solde public, même règle que la fraction de TVA aux communes de Retailleau), contrats d'études au SMIC dans toutes les formations paramédicales et garantie d'autonomie de 1 337 € pour les étudiants en médecine (plan santé : effectifs concernés et rémunérations déjà versées sans source officielle ouverte), niches nommées par le programme sans coût officiel isolé à ce jour (avantages fiscaux de l'épargne retraite par capitalisation, du mécénat culturel, des LBO, des meublés touristiques et du kérosène : à chiffrer sur les dépenses fiscales officielles), assurance chômage dès le premier jour de travail et indemnisation dès la fin du contrat, abrogation de la loi « France Travail » (coût non publié), permis de conduire gratuit dans le service citoyen (coût moyen officiel d'un permis non ouvert), Sécurité sociale funéraire, statut d'aidant familial rémunéré, maintien à domicile pris en charge par la Sécurité sociale, allocation de soutien familial déconjugalisée et revalorisée, pensions alimentaires défiscalisées, emploi jeune de cinq ans, titularisation des contractuels (montants non publiés), taxe d'habitation progressive (80 % des ménages exonérés), taxe foncière progressive, contribution audiovisuelle progressive et cotisation sociale universelle (barèmes non publiés)")
+# (g) simulateur : notes sans montant, même forme que les autres
+sm=C['melenchon']['sim']
+sm['tous']+=["Taxe d'habitation rétablie selon un barème progressif (revenus et valeur du logement), 80 % des ménages exonérés : barème non publié, non calculé ici.",
+             "Première tranche gratuite d'électricité, de chaleur, d'eau et de gaz, abonnement à l'eau supprimé : volumes gratuits non publiés, non calculé ici."]
+sm['logement']=(sm.get('logement') or [])+[{"when":["loc"],"t":"Loyers gelés, puis encadrés partout (à la baisse dans les grandes villes) : effet sur votre loyer non chiffré."}]
+sm['chomeurs']=_nb(sm['chomeurs']).rstrip('.')+" ; indemnisation dès le premier jour de travail et dès la fin du contrat (programme du 6/11/2026 : règles non publiées, non calculé ici)."
+# (3) Glucksmann
+# (a) « CSG progressive » : barème publié par le simulateur officiel de la campagne (paramètres du 4/11/2026, au 1/09/2027) : sur le salaire brut annuel,
+#     4,9 % jusqu'à 22 404 €, 6,25 % jusqu'à 35 847 €, 8,5 % jusqu'à 44 808 €, 9,2 % au-delà (taux marginaux), la part non déductible restant à 2,8 % :
+#     la baisse porte sur la CSG déductible (part imposable 1). Un barème publié par écrit prime sur des points donnés à l'oral (2/11) ; le gain plafonne
+#     au-delà du dernier seuil, pour tous les salaires au-dessus. Fiche « héritages » (qui porte la baisse de la CSG) : coût recalculé avec ce barème sur
+#     la distribution officielle des salaires du privé en 2025 (Insee Première n° 2132, figure 3 : effectifs en EQTP par tranche de 100 € de salaire net ;
+#     brut = net / (1 − 20,84 %), taux de cotisations du simulateur de la campagne) : 23,0 Md€ pour 18,5 millions d'EQTP (le camp annonçait 15 Md€).
+GSIM='https://monsalaire.glucks2027.fr/'; GSIM_S="Campagne de R. Glucksmann, simulateur « Mon salaire avec Glucksmann » (paramètres du 4/11/2026)"
+IP2132='https://www.insee.fr/fr/statistiques/9087193'
+FIG3=[(None,1300,787),(1300,1400,165),(1400,1500,738),(1500,1600,932),(1600,1700,1055),(1700,1800,1168),(1800,1900,1141),(1900,2000,1068),(2000,2100,986),(2100,2200,896),(2200,2300,808),(2300,2400,726),(2400,2500,653),(2500,2600,590),(2600,2700,534),(2700,2800,483),(2800,2900,436),(2900,3000,397),(3000,3100,367),(3100,3200,335),(3200,3300,301),(3300,3400,274),(3400,3500,250),(3500,3600,230),(3600,3700,212),(3700,3800,194),(3800,3900,178),(3900,4000,165),(4000,4100,152),(4100,4200,140),(4200,4300,129),(4300,4400,119),(4400,4500,110),(4500,4600,102),(4600,4700,95),(4700,4800,89),(4800,4900,81),(4900,5000,76),(5000,5100,71),(5100,5200,66),(5200,5300,61),(5300,5400,57),(5400,5500,53),(5500,5600,50),(5600,5700,47),(5700,5800,43),(5800,5900,40),(5900,6000,38),(6000,6100,36),(6100,6200,34),(6200,6300,32),(6300,6400,30),(6400,6500,28),(6500,6600,26),(6600,6700,25),(6700,6800,23),(6800,6900,22),(6900,7000,21),(7000,7100,20),(7100,7200,19),(7200,7300,18),(7300,7400,17),(7400,7500,16),(7500,7600,15),(7600,7700,14),(7700,7800,14),(7800,7900,13),(7900,8000,13),(8000,8100,12),(8100,8200,12),(8200,8300,11),(8300,8400,11),(8400,8500,10),(8500,8600,10),(8600,8700,9),(8700,8800,9),(8800,8900,9),(8900,9000,8),(9000,None,279)]
+GBAR={"tranches":[[22404,0.049],[35847,0.0625],[44808,0.085]],"taux":0.092,"cotis":0.2084}
+def _gcsg(B):
+    t,p=0,0
+    for s,r in GBAR['tranches']: t+=max(0,min(B,s)-p)*r; p=s
+    return B*GBAR['taux']-(t+max(0,B-p)*GBAR['taux'])
+assert round(_gcsg(1e9)/12,1)==118.6
+def _mid(a,b): return 1250 if a is None else 9500 if b is None else (a+b)/2  # au-delà de 2 956 € nets (dernier seuil), le gain est plafonné : le centre retenu n'y change rien
+gtot=sum(n*1e3*_gcsg(12*_mid(a,b)/(1-GBAR['cotis'])) for a,b,n in FIG3); geq=sum(n for *_,n in FIG3)
+gbas=gtot-787e3*_gcsg(12*1250/(1-GBAR['cotis']))
+assert geq==18504 and round(gtot/1e9,1)==23.0 and round(gbas/1e9,1)==22.4,(geq,gtot,gbas)
+gall=gtot/1e9*SQ['salaries']/(geq*1e3); assert round(gall,1)==33.6
+HC=round(11.4-gtot/1e9+0.11*gtot/1e9,1); HL=round(7-gall+0.11*gall,1); HH=round(19-gbas/1e9+0.171*gbas/1e9,1); assert (HC,HL,HH)==(-9.1,-22.9,0.4),(HC,HL,HH)
+m=M('glucksmann','heritages'); k=m['claude']; assert (k['central'],k['low'],k['high'])==(-2.4,-8.0,2.6)
+m['proposal']="Taxer davantage les héritages de plus de 2 M€ pour financer une « CSG progressive » sur les salaires (barème publié le 4/11/2026)."
+SET('glucksmann','heritages',HC,HL,HH,"Recette : médiane des chiffrages indépendants 7 ; 9 ; 13,8 ; 19 = 11,4 Md€ (le chiffre du camp n'entre pas dans la médiane). Baisse de la CSG au barème publié par la campagne (4/11/2026 ; sur le salaire brut annuel, 4,9 % jusqu'à 22 404 €, 6,25 % jusqu'à 35 847 €, 8,5 % jusqu'à 44 808 €, 9,2 % au-delà, au lieu de 9,2 %), appliqué à la distribution officielle des salaires du privé en 2025 (Insee : 18,5 millions d'EQTP par tranche de 100 € de salaire net, centre de chaque tranche, 1 250 € pour la tranche sous 1 300 €, gain plafonné pour les salaires au-delà du dernier seuil ; brut = net / (1 − 20,84 %), taux du simulateur de la campagne) : 23,0 Md€ par an, contre 15 annoncés ; moins l'impôt sur le revenu récupéré (règle commune des prélèvements déductibles du revenu imposable : 11,0 % de la part déductible ; la part non déductible restant à 2,8 % dans toutes les tranches, toute la baisse porte sur la CSG déductible) : 23,0 × 11,0 % = 2,5 → 11,4 − 23,0 + 2,5 ≈ −9,1 Md€ ; borne basse −22,9 (recette de 7 Md€ ; même gain moyen par poste appliqué aux 26,97 millions de salariés du privé et du public, Insee : 33,6 Md€, impôt récupéré à 11,0 %) ; borne haute +0,4 (recette de 19 Md€ ; sans la tranche sous 1 300 €, alternants et stagiaires en partie exonérés : 22,4 Md€ ; impôt récupéré au taux de 17,1 %)",
+    note="Barème publié par écrit le 4/11/2026 (simulateur de la campagne) : il remplace les deux points donnés le 2/11 (83 € au SMIC, 100 € au salaire médian). La baisse plafonne à environ 119 € par mois pour tous les salaires au-delà de 44 808 € bruts par an : 23,0 Md€ pour les seuls salariés du privé, au-delà des 15 Md€ annoncés, que la recette des héritages ne couvre pas. Agents publics : distribution de leurs salaires non ouverte, comptés seulement dans la borne basse. Financement publié par la campagne (même page) : taux marginaux plus élevés sur les héritages de plus de 2 M€, pacte Dutreil rendu dégressif, imposition des plus-values latentes transmises au décès ; taux non publiés. La taxe Zucman n'y figure pas (toujours hors total). Entrée en vigueur au 1/09/2027 : entière en 2030.")
+k['inputs']+=[{"label":"Barème de la « CSG progressive » (au 1/09/2027)","value":"tranches annuelles de salaire brut : jusqu'à 22 404 € : 4,9 % (2,1 % déductible) ; de 22 404 à 35 847 € : 6,25 % (3,45 %) ; de 35 847 à 44 808 € : 8,5 % (5,7 %) ; au-delà : 9,2 % (6,4 %) ; « La baisse de CSG plafonne autour de 119 € par mois »","source":GSIM_S,"url":GSIM},
+              {"label":"Financement (même page)","value":"taux marginaux plus élevés sur les héritages de plus de 2 M€ ; « Réforme du pacte Dutreil pour abolir son usage comme instrument d'optimisation fiscale et le rendre dégressif » ; « Imposition des plus-values latentes transmises par héritage, aujourd'hui effacées au décès »","source":GSIM_S,"url":GSIM},
+              {"label":"Distribution des salaires du privé (2025)","value":"18,5 millions d'EQTP ; salaire net médian 2 238 €, D1 1 519 €, D9 4 441 € ; effectifs par tranche de 100 € (figure 3)","source":"Insee Première n° 2132, « Les salaires dans le secteur privé en 2025 » (22/10/2026)","url":IP2132}]
+# (b) SMIC à 1 700 € net « CSG réformée comprise » (même page) : SMIC brut d'environ 2 040 € (2 039,7 € avec la formule de la campagne), +9,25 % au lieu
+#     de +15,0 % ; même calcul que la fiche et que Mélenchon (proportionnalité au chiffrage de l'Institut Montaigne, mêmes écarts relatifs pour les bornes)
+m=M('glucksmann','smic'); k=m['claude']; assert (k['central'],k['low'],k['high'])==(-21.6,-23.9,-19.4)
+sb=round((2039.7/1867.02-1)*100,2); sc=round(-19*sb/13.2,1); assert (sb,sc)==(9.25,-13.3),(sb,sc)
+m['proposal']="Porter le SMIC à 1 700 € net par mois au 1/09/2027, baisse de la CSG comprise (SMIC brut d'environ 2 040 €) ; conférence salariale."
+m['claimed']="Non chiffré par le camp ; SMIC brut d'environ 2 040 € (simulateur de la campagne, 4/11/2026)"
+SET('glucksmann','smic',sc,round(sc*23.9/21.6,1),round(sc*19.4/21.6,1),"Base SMIC juin 2026 : 1 867,02 € brut (1 477,93 € net) ; 1 700 € net « CSG réformée comprise » = 2 039,7 € brut (formule de la campagne), soit +9,25 % de salaire brut ; Montaigne ≈ 19 Md€ pour +13,2 % → 19 × 9,25/13,2 ≈ −13,3 Md€ (même calcul que Mélenchon, 1 700 € net sans baisse de CSG : +15,0 %) ; bornes dans les mêmes proportions que Mélenchon",
+    note="La part de la hausse du SMIC net qui vient de la baisse de la CSG est comptée dans la fiche « héritages » (barème de la CSG progressive) : elle n'est pas comptée deux fois. Entrée en vigueur au 1/09/2027 : entière en 2030.")
+k['inputs'].append({"label":"SMIC visé","value":"« Pour un emploi à temps plein non-cadre, cela correspond à un SMIC brut d'environ 2 040 € par mois […] La cible de 1 700 € comprend déjà le bénéfice de la CSG réformée : il ne faut pas l'y ajouter une seconde fois. »","source":GSIM_S,"url":GSIM})
+# (c) simulateur : barème appliqué (gain = CSG actuelle − CSG du barème sur le brut annuel), plafonné au-delà du dernier seuil ; part imposable 1 ;
+#     SMIC à 1 700 € « CSG comprise » : la hausse du SMIC et la baisse de la CSG ne s'additionnent pas (le plus grand des deux, même règle que le socle de Lisnard)
+sg=C['glucksmann']['sim']; assert sg['salaire_net']['points']==[[1477.93,83],[2238,100]]
+sg['salaire_net']={"bareme":GBAR,"public":"salariés","imposable":1,
+  "note":"« CSG progressive » au 1/09/2027 (barème publié par la campagne le 4/11/2026, sur le salaire brut annuel : 4,9 % jusqu'à 22 404 €, 6,25 % jusqu'à 35 847 €, 8,5 % jusqu'à 44 808 €, 9,2 % au-delà) ; salaire brut déduit du net avec le taux de cotisations du simulateur de la campagne (20,84 %) ; gain plafonné à environ 119 €/mois au-delà du dernier seuil (notre calcul)"}
+sg['smic_csg_comprise']="le SMIC à 1 700 € net comprend la baisse de la CSG (campagne, 4/11/2026)"
+# (4) Philippe : droits d'inscription des étudiants extra-européens « appliqués réellement » : montant non publié, « non comptée », comme Le Pen et
+#     Zemmour (Retailleau garde sa fiche existante ; écart au registre) ; plan munitions de 700 000 obus par an : aucun coût unitaire officiel ouvert,
+#     reste non compté avec le paramètre ; simulateur : note « retraités actuels » sans source remplacée par la phrase du site
+PHSUR='https://www.edouardphilippe.fr/priorites/pour-une-france-plus-sure'
+MISS('philippe',"défense hors réservistes et volontaires, ","défense hors réservistes et volontaires (dont un plan munitions pour passer de 100 000 à 700 000 obus par an : aucun coût unitaire officiel ouvert, objectif de production sans part de l'État publiée), ")
+MISS_ADD('philippe',"hausse des droits d'inscription des étudiants extra-européens « appliquée réellement » et preuve de ressources obligatoire (montant des droits non publié ; même lecture que Le Pen et Zemmour)")
+sph=C['philippe']['sim']; assert sph['retraites_actuels'].startswith("Économies sur les retraités")
+sph['retraites_actuels']="« Sans hausse des cotisations ni baisse générale des pensions » (site du candidat) : aucune mesure publiée sur les pensions en cours ; âge de départ porté progressivement à 65 ans."
+# (5) Lisnard
+# (a) « flat tax universelle à 25 % » (Le Figaro, 7/11) : taux écrit par le journal, absent de la citation de Nouvelle Énergie et d'un document du parti
+#     ouvert le 8/11 : reste « non comptée » avec le paramètre (registre) ; (b) « 2 à 3 Md€ dès la première année » : objectif de la baisse des prestations
+#     non contributives des étrangers (compte rendu du parti, 28/10), pas du gel des pensions ; (c) suspension des certificats d'économies d'énergie pendant
+#     six mois : demande au Gouvernement en place (règle S134), pas une proposition de programme ; (d) règle d'or sur le fonctionnement : même traitement
+#     que les quatre fiches « règle d'or » (S166) ; page de programme du parti, vers laquelle renvoie le site du candidat (S197) ; forme juridique non publiée :
+#     une règle d'équilibre peut être fixée par une loi organique (Conseil constitutionnel, 2012-653 DC) : « faisable » ; (e) France 2 privatisée : cession
+#     (opération financière), effet annuel non publié : non comptée, comme l'audiovisuel de Retailleau et de Zemmour
+MISS('lisnard',"revenus fonciers au régime du prélèvement forfaitaire unique (taux et niches supprimées en contrepartie non publiés), ","« flat tax universelle » sur tous les revenus du capital, revenus fonciers compris (taux de 25 % rapporté par Le Figaro le 7/11/2026, sans citation du candidat ni document du parti qui le donne ; niches supprimées en contrepartie non publiées), ")
+MISS_ADD('lisnard',"privatisation de France 2 et réorganisation de l'audiovisuel public (cession : opération financière ; effet annuel non publié, même lecture que l'audiovisuel de Retailleau et de Zemmour), projets d'énergies renouvelables ramenés au droit commun (effet sur les charges de service public de l'énergie non publié)")
+NE2810='https://www.unenouvelleenergie.fr/david-lisnard-sur-cnews-et-europe-1-je-ne-suis-pas-candidat-pour-un-poste-je-viens-pour-redresser-le-pays/'
+m=M('lisnard','gel_pensions'); assert _nb(m['claimed']).startswith("2 à 3 Md€ la première année avec d'autres prestations")
+m['claimed']="Non chiffré (« Ne pas revaloriser, à titre d'exemple, les pensions de retraite supérieures à 2 200 euros », compte rendu du parti, 28/10/2026)"
+m['claude']['inputs'].append({"label":"Compte rendu du 27/10/2026","value":"« Ne pas revaloriser, à titre d'exemple, les pensions de retraite supérieures à 2 200 euros » (sans montant)","source":"Nouvelle Énergie (28/10/2026)","url":NE2810})
+m=M('lisnard','aides5'); assert _nb(m['claimed'])=="8 Md€/an (discours de La Gagne, 29/08/2026)"
+m['claimed']="8 Md€/an (discours de La Gagne, 29/08/2026) ; « 2 à 3 milliards d'euros d'économies dès la première année » (27/10/2026)"
+m['estimates'].append({"source":"Nouvelle Énergie, compte rendu d'« Objectif Élysée 2027 » (28/10/2026)","year":2026,"value":"« Réduire les prestations non contributives versées à des ressortissants étrangers », « pour un objectif annoncé de 2 à 3 milliards d'euros d'économies dès la première année »","low_md":2,"high_md":3,"url":NE2810})
+NEDEST='https://www.unenouvelleenergie.fr/notre-programme/etre-maitre-de-notre-destin/'
+CC653='https://www.conseil-constitutionnel.fr/decision/2012/2012653DC.htm'
+ADD('lisnard',{"id":"regle_or","theme":"institutions","title":"Règle d'or sur le fonctionnement","proposal":"Règle institutionnelle de limitation des déficits publics, appliquée aux dépenses de fonctionnement de l'État mais pas à l'investissement.",
+  "claimed":"Non chiffré","claimed_md":None,
+  "estimates":[],
+  "consensus":"isolé","verdict":"faisable","obstacle":"Par une loi organique (forme juridique non publiée) : une règle d'équilibre des finances publiques peut être fixée par des dispositions organiques, sans révision de la Constitution (Conseil constitutionnel, décision n° 2012-653 DC).",
+  "claude":{"id":"regle_or","central":0,"low":0,"high":0,"method":"ascendant","formula":"Règle de procédure, sans effet direct sur le solde (même formule que les règles d'or de Le Pen, Philippe, Retailleau et Attal)",
+    "inputs":[{"label":"Règle proposée","value":"« une règle institutionnelle de limitation des déficits publics » ; elle « s'appliquerait aux dépenses de fonctionnement mais pas à l'investissement » (page de programme sans date, vers laquelle renvoie le site du candidat)","source":"Nouvelle Énergie, programme","url":NEDEST},
+      {"label":"Voie juridique","value":"le législateur organique peut encadrer les lois de finances et de financement de la Sécurité sociale pour donner effet à une règle d'équilibre ; dans ce cas, « l'autorisation de ratifier le traité ne devra pas être précédée d'une révision de la Constitution » (cons. 24 et 28)","source":"Conseil constitutionnel, décision n° 2012-653 DC du 9/08/2012","url":CC653}],
+    "note":"L'effet dépend des mesures prises pour la respecter. Les règles d'or de Le Pen, Philippe, Retailleau et Attal sont inscrites dans la Constitution par leurs auteurs (« Exige une révision ») ; celle-ci n'a pas de forme publiée.","nc":True}})
+# (6) Attal : 100 000 postes « dans l'État et les collectivités » (page de mesure du 3/07/2026) : proposition et borne basse corrigées (sorties des deux
+#     versants : ≈ 800 000 agents de l'État hors ministères épargnés + 2 039 400 agents territoriaux, Insee, fin 2024), valeur centrale inchangée ;
+#     borne basse plafonnée à la valeur centrale (règle commune des plans de postes)
+ATT100='https://attalpresident.fr/programme/mesures/cent-mille-postes-en-moins'
+INS_FP='https://www.insee.fr/fr/statistiques/2493501'
+m=M('attal','fonctionnaires'); k=m['claude']; assert (k['central'],k['low'],k['high'])==(2.2,0.7,3.1)
+vis=(800000+2039400)/5878200; lo=min(2.2,round(168000*vis*30.8e3/1e9,1)); assert round(vis,3)==0.483 and lo==2.2
+m['proposal']="Supprimer 100 000 postes dans l'État et les collectivités par départs volontaires avec prime et non-remplacements, hors Éducation nationale, Armées, Justice et Intérieur ; supprimer un échelon de collectivité."
+m['obstacle']="Non-remplacement de départs et départs volontaires indemnisés, sans licenciement possible : 100 000 postes sur ≈ 2,8 millions d'agents de l'État hors ministères épargnés et des collectivités ; "+COLL+"."
+SET('attal','fonctionnaires',2.2,lo,3.1,POST+" ; 100 000 postes × 70 % × 30,8 k€ ≈ +2,2 Md€. "+BPOST+", rapporté aux agents visés (≈ 800 000 agents de l'État hors ministères épargnés et 2 039 400 agents territoriaux, sur 5 878 200 : 48,3 %) : 168 000 × 48,3 % ≈ 81 200 postes × 30,8 k€ ≈ +2,5, plafonné à la valeur centrale : +2,2 ; haute, plan entièrement réalisé en 2030 : 100 000 × 30,8 k€ ≈ +3,1")
+k['inputs']+=[{"label":"Champ de la mesure","value":"« supprimer 100 000 postes dans l'État et les collectivités, sans aucun licenciement : la baisse passe par un plan de départs volontaires accompagné d'une prime de départ, combiné au non-remplacement d'une partie des fonctionnaires qui partent à la retraite »","source":"attalpresident.fr (3/07/2026)","url":ATT100},
+              {"label":"Effectifs par versant (31/12/2024)","value":"État 2 589,0 ; territoriale 2 039,4 ; hospitalière 1 249,9 ; ensemble 5 878,2 milliers","source":"Insee, effectifs de la fonction publique par versant (10/02/2026)","url":INS_FP}]
+MISS_ADD('attal',"pensions alimentaires reçues pour les enfants sorties du revenu imposable (coût non publié), 3 000 magistrats et greffiers de plus (règle des recrutements publics : 3 000 × 61,6 k€ × 70 % ≈ 0,13 Md€, sous 1 Md€), suppression d'un échelon de collectivité territoriale (échelon et économie non publiés ; comptée par le camp avec les 100 000 postes)")
+k=M('attal','ia')['claude']; a0="Indicatif : de −1,7 à −7,1 Md€ en 2030 (100 Md€ publics d'ici 2040 : montée en charge linéaire sur 14 ans ≈ −3,3, flux moyen −7,1)"; assert k['note'].startswith(a0)
+k['note']=k['note'].replace(a0,"Indicatif : de −1,7 à −10,0 Md€ en 2030 (100 Md€ publics d'ici 2040 selon l'AFP du 28/10/2026 : montée en charge linéaire sur 14 ans ≈ −3,3, flux moyen −7,1 ; « d'ici dix ans » selon la page de mesure du site, 19/06/2026 : ≈ −6,4 et −10,0)")
+k['inputs'].append({"label":"Horizon (page de mesure)","value":"« Deux cents milliards d'euros pour l'intelligence artificielle et l'innovation d'ici dix ans, à parts égales entre financement public et privé. »","source":"attalpresident.fr (19/06/2026)","url":"https://attalpresident.fr/programme/mesures/plan-france-2040"})
+# (7) Retailleau
+# (a) revenu familial : dispositifs supprimés nommés (allocations familiales, majoration pour âge, complément familial, quotient familial : 41 Md€
+#     selon le camp) ; doublement au 3e enfant ≈ 1,5 Md€ selon le camp ; fiche complétée, toujours non chiffrable (calcul sur les lignes officielles au
+#     registre) ; verdict inchangé (aides réservées)
+RF='https://www.avecretailleau.fr/projet/mesure/verser-240-euros-par-mois-par-enfant-mineur'
+m=M('retailleau','revenu_familial'); k=m['claude']
+m['proposal']="Revenu familial de 240 €/mois par enfant mineur dès le premier, doublé au troisième, versé par l'administration fiscale, à la place des allocations familiales, de leur majoration pour âge, du complément familial et du quotient familial ; 5 ans de résidence et de travail exigés des familles étrangères."
+m['claimed']="Coût 40,3 Md€ hors doublement au 3e enfant (≈ 1,5 Md€), dispositifs supprimés 41 Md€ (site du candidat)"
+REP('retailleau','revenu_familial','formula',"Non chiffrable : liste des 12 aides remplacées non publiée (seules les allocations familiales sont citées ; PAJE, ASF, APL et AEEH conservées)",
+    "Non chiffrable à ce jour : dispositifs supprimés nommés par le site (allocations familiales, majoration pour âge, complément familial, quotient familial : 41 Md€ selon le camp), sans coût officiel ouvert pour chacun le 8/11 (aides des moins de 3 ans, parents seuls, logement et handicap conservées)")
+a0="non vérifiable sans la liste des 12 aides remplacées."; assert k['note'].count(a0)==1
+k['note']=k['note'].replace(a0,"le site chiffre lui-même le doublement à environ 1,5 Md€, sans dire s'il vaut pour le seul 3e enfant ; dispositifs supprimés nommés (allocations familiales, majoration pour âge, complément familial, quotient familial), dont la somme officielle reste à établir.")
+k['inputs'].append({"label":"Dispositifs supprimés (site du candidat, 11/09/2026)","value":"« Les dispositifs supprimés, allocations familiales, majoration pour âge, complément familial et quotient familial, représentent 41 milliards d'euros, pour un coût du Revenu familial de 40,3 milliards hors bonification du troisième enfant. »","source":"avecretailleau.fr, mesure 07.01","url":RF})
+srt=C['retailleau']['sim']; srt['famille']=_nb(srt['famille']); assert srt['famille'].startswith("« Revenu familial » de 240 € par enfant dès le 1er enfant, qui remplace 12 aides familiales")
+srt['famille']=srt['famille'].replace("qui remplace 12 aides familiales","qui remplace les allocations familiales, leur majoration pour âge, le complément familial et le quotient familial (impôt sur le revenu)")
+# (b) RIA : barème publié (300 € sans activité, 550 € dès 15 heures de formation ou de recherche d'emploi, 550 € − 30 % du salaire en emploi, nul à
+#     1 833 €) : appliqué au profil « minima » (15 heures d'activité supposées, condition du programme) à la place de la baisse uniforme de 30 %
+RIA='https://www.avecretailleau.fr/projet/mesure/faire-gagner-plus-a-ceux-qui-reprennent-un-emploi'
+assert srt['baisse_minima']['pct']==30
+srt.pop('baisse_minima')
+srt['ria']={"sans":300,"activite":550,"taux":0.3,"fin":1833,
+  "note":"RSA, prime d'activité et ASS remplacés par le revenu d'incitation à l'activité (RIA) : 300 €/mois sans activité, 550 € dès 15 heures de formation ou de recherche d'emploi (retenu ici), quelle que soit la famille (site du candidat)",
+  "bas":"Revenu d'incitation à l'activité : en emploi, 550 € moins 30 % du salaire, nul à 1 833 € de revenus d'activité ; votre allocation actuelle est sous 550 € : le montant dépend de vos revenus d'activité, non calculé ici."}
+srt['minima_sociaux']="RSA, prime d'activité et ASS remplacés par le revenu d'incitation à l'activité : 300 € sans activité, 550 € avec 15 h de formation ou de recherche d'emploi, 550 € moins 30 % du salaire en emploi (nul à 1 833 €) ; total des aides non contributives plafonné à 70 % du SMIC net par adulte, hors handicap, dépendance et vieillesse."
+m=M('retailleau','travail'); m['claude'].setdefault('inputs',[]).append({"label":"Barème du revenu d'incitation à l'activité","value":"« Sans activité ni revenu : 300 euros par mois, complétés par 250 euros dès quinze heures de formation ou de recherche d'emploi. Dès la reprise d'un emploi, l'allocation devient un complément diminué de 30 % du salaire. […] L'allocation s'annule au-delà de 1 833 euros de revenus d'activité mensuels. »","source":"avecretailleau.fr, mesure 03.03 (11/09/2026)","url":RIA})
+# (c) plafond de 70 % du SMIC : handicap, dépendance et vieillesse exclus (site) : l'AAH n'est pas concernée ; coquille de l'exemple (1 865 €)
+PLAF70='https://www.avecretailleau.fr/projet/mesure/plafonner-les-aides-sociales-a-70-du-smic'
+srt['aah_nc']="Total des aides non contributives plafonné à 70 % du SMIC net « hors handicap, dépendance et vieillesse » (site du candidat) : l'AAH n'est pas concernée."
+srt['plafond_aides']['famille']=_nb(srt['plafond_aides']['famille']); a0="de 2 375 à 1 685 €"; assert srt['plafond_aides']['famille'].count(a0)==1; srt['plafond_aides']['famille']=srt['plafond_aides']['famille'].replace(a0,"de 2 375 à 1 865 €")
+# (d) intérêts d'emprunt : réduction d'impôt de 50 % (1 enfant mineur), 75 % (2), 100 % (3 et plus) des intérêts de la résidence principale, plafonnée à
+#     400 € + 400 € par enfant mineur : simulateur (plafond selon l'impôt du foyer, montant selon les intérêts : non ajouté au total) ; fiche : nombre de
+#     ménages accédants avec enfants et intérêts versés sans source officielle ouverte : « non comptée » avec le paramètre
+INT='https://www.avecretailleau.fr/projet/mesure/baisser-le-cout-du-credit-immobilier-des-familles'
+n0=len(srt['logement']); srt['logement']=[x for x in srt['logement'] if 'Intérêts d' not in x['t']]; assert len(srt['logement'])==n0-1
+srt['interets_emprunt']={"base":400,"par_enfant":400,"taux":{"1":50,"2":75,"3":100},"note":"Intérêts d'emprunt de la résidence principale : réduction d'impôt de 50 % (un enfant mineur), 75 % (deux) ou 100 % (trois et plus) des intérêts, plafonnée à 400 € plus 400 € par enfant mineur et par an (site du candidat)"}
+MISS('retailleau',"intérêts d'emprunt déductibles, ","réduction d'impôt sur les intérêts d'emprunt de la résidence principale (50 à 100 % des intérêts selon le nombre d'enfants, plafonnée à 400 € plus 400 € par enfant ; nombre de ménages accédants concernés et intérêts versés : pas de source officielle ouverte), ")
+# (e) gain de salaire : second point publié (1 560 € net → +42,50 €/mois), interpolation, au-delà au prorata (« dès le premier euro »)
+RET14='https://www.avecretailleau.fr/projet/mesure/donner-a-chaque-francais-un-capital-pour-sa-retraite'
+sn=srt['salaire_net']; assert sn['points']==[[2238,41.7]] and sn['au_dela_prorata']
+sn['points']=[[1560,42.5],[2238,41.7]]
+a0="soit 41,7 €/mois au salaire médian (2 238 € net, Insee ; 2 115 € selon le site) ; au prorata du salaire en dessous comme au-dessus"; assert sn['note'].count(a0)==1
+sn['note']=sn['note'].replace(a0,"soit 41,7 €/mois au salaire médian (2 238 € net, Insee ; 2 115 € selon le site) ; 42,50 €/mois à 1 560 € net (exemple du site, après 10 € versés sur le compte retraite du salarié) ; entre les deux, interpolation ; au prorata du salaire en dessous de 1 560 € comme au-dessus de 2 238 €")
+M('retailleau','menages')['claude']['inputs'].append({"label":"Second exemple publié","value":"« Son salaire net passe de 1 560 à 1 602,50 euros. Sur l'année, il gagne 630 euros, dont 510 euros de salaire net et 120 euros d'épargne retraite. »","source":"avecretailleau.fr, mesure 14.06 (15/10/2026)","url":RET14})
+# (f) pré-apprentissage obligatoire pour les décrocheurs : coût publié (≈ 2,2 Md€ au plus), sans chiffrage indépendant : chiffre du camp ±50 % (même règle
+#     que la demi-part des veufs de Le Pen) ; financement annoncé (recentrage des aides aux moins de 25 ans, 5 Md€) : économie sans chiffrage indépendant,
+#     non comptée ; capacités d'accueil (internats d'insertion) à bâtir : « sous conditions », comme les services obligatoires des jeunes
+PREAP='https://www.avecretailleau.fr/projet/mesure/ne-laisser-aucun-jeune-hors-radar'
+CIT_PREAP="Le revenu d'engagement coûte au plus 0,8 milliard d'euros, le sas de pré-apprentissage 0,6, la prime à l'embauche de 7 000 euros versée à la sortie du parcours 0,8 au maximum."
+ADD('retailleau',{"id":"pre_apprentissage","theme":"social","title":"Pré-apprentissage obligatoire des décrocheurs","proposal":"Pré-apprentissage obligatoire de 6 à 12 mois pour les jeunes décrocheurs, avec un revenu d'engagement et de formation de 500 € conditionné à l'assiduité, des internats d'insertion et une prime à l'embauche de 7 000 € à la sortie.",
+  "claimed":"2,2 Md€ au plus (0,8 + 0,6 + 0,8), financés par le recentrage des aides aux moins de 25 ans (5 Md€)","claimed_md":-2.2,
+  "estimates":[{"source":"avecretailleau.fr, mesure 04.08 (24/09/2026)","year":2026,"value":"« "+CIT_PREAP+" »","low_md":-2.2,"high_md":-2.2,"url":PREAP}],
+  "consensus":"isolé","verdict":"sous_conditions","obstacle":"Par la loi ; places de pré-apprentissage et internats d'insertion à bâtir pour les jeunes décrocheurs ; financement annoncé par d'autres économies (aides aux moins de 25 ans), non chiffré indépendamment.",
+  "claude":{"id":"pre_apprentissage","central":-2.2,"low":-3.3,"high":-1.1,"method":"camp",
+    "formula":"Coût publié par le camp : revenu d'engagement 0,8 + sas de pré-apprentissage 0,6 + prime à l'embauche 0,8 = 2,2 Md€ au plus ; aucun chiffrage indépendant : chiffre du camp, fourchette ±50 % (même règle que la demi-part des veufs de Le Pen)",
+    "inputs":[{"label":"Coût publié","value":"« "+CIT_PREAP+" »","source":"avecretailleau.fr, mesure 04.08 (24/09/2026)","url":PREAP}],
+    "note":"Financement annoncé : « le recentrage des aides versées aux moins de 25 ans, 5 milliards d'euros » : économie sans chiffrage indépendant ni paramètre suffisant, non comptée (liste des mesures non comptées)."}})
+MISS_ADD('retailleau',"recentrage des aides versées aux moins de 25 ans (5 Md€ selon le camp, financement du pré-apprentissage), apprentissage : fin des aides et des prises en charge dans le supérieur tertiaire (4 Md€ dont 2,6 réaffectés) et financement selon les résultats (2 à 3 Md€), capitalisation (cotisation de 1 % du salaire sous le plafond de la Sécurité sociale, 6 Md€ en 2032 selon le camp, gérée par les partenaires sociaux ; cotisation additionnelle de la fonction publique sur les primes doublée), épargne retraite (déduction portée à 50 000 € par an, crédit d'impôt de 30 % pour les non-imposables, rente défiscalisée à 25 %), lignes de moins de 1 Md€ du logement social (exonération d'impôt sur les sociétés des bailleurs sociaux supprimée, 350 M€ redistribués ; APL des étudiants étrangers hors UE non boursiers 200 M€ et des étudiants des familles aisées 200 à 300 M€), garde d'enfants (plafond du crédit d'impôt famille supprimé, exonération de l'aide de l'employeur portée à 7 000 € : 0,8 Md€ selon le camp, sous 1 Md€)")
+srt['jeunes']=_nb(srt['jeunes']).rstrip('.')+" ; pré-apprentissage obligatoire de 6 à 12 mois pour les décrocheurs, avec 500 € de revenu d'engagement conditionné à l'assiduité."
+k=M('retailleau','retraites')['claude']
+k['note']+=" Volet retraites du 14-15/10/2026 : carrières longues remplacées par une enveloppe confiée aux branches, taux plein dès 63 ans et plus de cotisations retraite ni chômage pour une carrière complète (43 ans) avant 63 ans, surcote de 5 % par année après 65 ans, écart avec l'ancien calcul plafonné à 3 % en 2028, 6 % en 2029 et 12 % en 2030 : sans chiffrage, la valeur commune s'applique."
+# (8) Zemmour : référendum sur l'immigration redemandé en 2026 (BFMTV, 3/09) : mention « non reconfirmé » retirée, voie selon la règle (même chemin que
+#     les référendums sur l'immigration de Le Pen et de Retailleau) ; verdict inchangé ; plan de 140 Md€ : lignes CESE et Ceser, presse, syndicats (S148)
+BFM0309='https://www.bfmtv.com/politique/video-en-visite-a-la-foire-agricole-de-chalons-en-champagne-eric-zemmour-president-du-parti-reconquete-souhaite-un-referendum-sur-l-immigration_VN-202609030636.html'
+m=M('zemmour','cedh'); assert m['proposal']=="Supprimer le regroupement familial ; référendum sur l'immigration (2022, non reconfirmé)." and m['verdict']=='bloque'
+m['proposal']="Supprimer le regroupement familial ; référendum sur l'immigration (redemandé en 2026)."
+m['obstacle']=m['obstacle'].rstrip('.')+" ; référendum sur l'immigration : hors du champ de l'article 11 en l'état, révision de la Constitution par l'article 89 (même chemin que Le Pen et Retailleau)."
+m['estimates'].append({"source":"BFMTV (3/09/2026)","year":2026,"value":"« En visite à la foire agricole de Châlons-en-Champagne, Éric Zemmour, Président du parti Reconquête, souhaite un référendum sur l'immigration »","low_md":None,"high_md":None,"url":BFM0309})
+MISS('zemmour',"associations 1 à 2), ","associations 1 à 2, presse 0,2, syndicats 0,1, CESE et Ceser 0,07), ")
+D['asof']='8 novembre 2026'
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:

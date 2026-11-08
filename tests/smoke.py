@@ -275,15 +275,17 @@ with sync_playwright() as p:
     cee = dict(r)
     check(cee['retailleau'] in (10, 11) and cee['zemmour'] in (10, 11) and all(v == 0 for c, v in cee.items() if c not in ('retailleau', 'zemmour')),
           f'simulateur : fin des certificats d\'économies d\'énergie ≈ 11 € pour 300 €/mois d\'essence chez Retailleau et Zemmour, même hypothèse, rien ailleurs {r}')
-    # montants publiés en quelques points du salaire (Glucksmann, baisse de CSG du 2/11/2026 : 83 € au SMIC, 100 € au salaire médian) :
-    # interpolation entre les points, rien au-delà du dernier (barème non publié), avec une note
+    # review 45 : barème publié (Glucksmann, « CSG progressive » du 4/11/2026, sur le salaire brut annuel) : il prime sur les points donnés à l'oral ;
+    # gain = CSG actuelle − CSG du barème (108,6 € au salaire médian ; plafonné à 118,6 € au-delà du dernier seuil, pour tous les salaires au-dessus) ;
+    # SMIC à 1 700 € « CSG comprise » : la hausse du SMIC et la baisse de la CSG ne s'additionnent pas (au SMIC : 222 € ; à 1 600 € : 100 € de SMIC,
+    # baisse de CSG de 85 € comprise ; à 1 690 € : 88 € de baisse de CSG, plus grande que les 10 € de SMIC)
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; openSim.clear(); openSim.add('glucksmann');
       const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); const t=document.querySelector('#simres .srow[data-c="glucksmann"]').innerText.replace(/\\s+/g,' ');
-        const row=[...document.querySelectorAll('#simres .srow[data-c="glucksmann"] .rw')].find(x=>/^Revenu net/.test(x.textContent.trim())); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/);
-        return [m?+m[1]:0, /montant non publié, pas de gain calculé/.test(t)]; };
-      const out=[f(SQ.smic_net), f(2238), f(1900), f(3000)]; presetVal=null; return out; })()""")
-    check(r[0] == [83, False] and r[1] == [100, False] and 83 < r[2][0] < 100 and r[3] == [0, True],
-          f'simulateur : baisse de CSG publiée en deux points (83 € au SMIC, 100 € au salaire médian, interpolation, rien au-delà avec une note) {r}')
+        const val=lab=>{ const row=[...document.querySelectorAll('#simres .srow[data-c="glucksmann"] .rw')].find(x=>x.querySelector('b').textContent===lab); const m=row&&row.querySelector('.v').textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/); return m?+m[1]:0; };
+        return [val('SMIC'), val('Revenu net'), /pas de gain calculé/.test(t)]; };
+      const out=[f(SQ.smic_net), f(1600), f(1690), f(2238), f(3000), f(6000)]; presetVal=null; return out; })()""")
+    check(r == [[222, 0, False], [100, 0, False], [0, 88, False], [0, 109, False], [0, 119, False], [0, 119, False]],
+          f'simulateur : barème de CSG publié (109 € au salaire médian, plafonné à 119 € au-delà du dernier seuil), SMIC « CSG comprise » sans addition des deux {r}')
     # même règle avec un seul point publié (Attal, « droit au brut » : 250 € nets au salaire médian) : au prorata en dessous, rien au-delà avec une note
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; openSim.clear(); openSim.add('attal');
       const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); const t=document.querySelector('#simres .srow[data-c="attal"]').innerText.replace(/\\s+/g,' ');
@@ -297,8 +299,9 @@ with sync_playwright() as p:
       const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); const t=document.querySelector('#simres .srow[data-c="retailleau"]').innerText.replace(/\\s+/g,' ');
         const row=[...document.querySelectorAll('#simres .srow[data-c="retailleau"] .rw')].find(x=>/^Revenu net/.test(x.textContent.trim())); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/);
         return [m?+m[1]:0, /pas de gain calculé/.test(t)]; };
-      const out=[f(2238), f(1119), f(4476)]; presetVal=null; return out; })()""")
-    check(r == [[42, False], [21, False], [83, False]], f'simulateur : gain publié en un point, au prorata en dessous et au-dessus quand le mécanisme vaut pour tous les salaires (Retailleau, 41,7 € au salaire médian) {r}')
+      const out=[f(2238), f(1248), f(1900), f(4476)]; presetVal=null; return out; })()""")
+    # review 45 : second point publié (42,50 € à 1 560 € net) : au prorata en dessous (1 248 € : 34 €), interpolation entre les points (1 900 € : 42 €)
+    check(r == [[42, False], [34, False], [42, False], [83, False]], f'simulateur : gain publié en deux points, au prorata en dessous, interpolation, au prorata au-dessus quand le mécanisme vaut pour tous les salaires (Retailleau : 42,50 € à 1 560 €, 41,7 € au salaire médian) {r}')
     # impôt sur le revenu sur les gains de salaire (3/11/2026) : même calcul pour tous, au barème du simulateur avec décote, sur la hausse du revenu imposable
     # (hausse de salaire × net imposable / net ; baisse de CSG ou de cotisations × part déductible) ; rien au SMIC pour une baisse de prélèvement seule
     # (Retailleau, Lisnard), une ligne pour la hausse du SMIC à 1 700 € (Glucksmann, Mélenchon) ; une ligne au salaire médian pour les baisses de prélèvement
@@ -310,12 +313,12 @@ with sync_playwright() as p:
           f'simulateur : impôt sur la hausse du revenu imposable, même calcul pour tous (au SMIC, hausse du SMIC ou gain de 132 € de Lisnard ; rien pour un gain de 28 € ; une ligne au salaire médian) {r}')
     # montants recalculés hors de l'app avec le même barème (personne seule) : Retailleau 14,1 (gain de 41,7 × 2 797 / 2 238 = 52,1 €/mois, review 41 ;
     # 12,5 avant) et Lisnard 24,7 €/mois au salaire moyen (2 797 €),
-    # Glucksmann 10,6 au salaire médian (2 238 €), Mélenchon 24,1 au SMIC (SMIC porté à 1 700 €)
+    # Glucksmann 15,6 au salaire médian (2 238 € ; barème de CSG du 4/11/2026, gain de 108,6 € entièrement imposable, review 45), Mélenchon 24,1 au SMIC (SMIC porté à 1 700 €)
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; g('s-year').value=1990; openSim.clear(); ['retailleau','lisnard','glucksmann','melenchon'].forEach(i=>openSim.add(i));
       const f=(id,v)=>{ presetVal=v; g('s-salary').value=v; sim(); const row=[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].find(x=>/hausse du salaire imposable/.test(x.textContent)); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/); return m?+m[1]:0; };
       const out=[f('retailleau',2797), f('lisnard',2797), f('glucksmann',2238), f('melenchon',SQ.smic_net), f('lisnard',SQ.smic_net)]; presetVal=null; return out; })()""")
     # Lisnard au salaire moyen : baisse de la CSG seule au-delà du salaire médian (91,6 €), 24,7 € d'impôt ; au SMIC : 200 × 1 477,93 / 2 238 = 132,1 €, 2,3 € d'impôt
-    check(len(r) == 5 and all(abs(a - b) <= 1 for a, b in zip(r, [14.1, 24.7, 10.6, 24.1, 2.3])), f'simulateur : impôt sur la hausse du salaire égal au calcul de référence (14,1 ; 24,7 ; 10,6 ; 24,1 ; 2,3 €/mois, à 1 € près) {r}')
+    check(len(r) == 5 and all(abs(a - b) <= 1 for a, b in zip(r, [14.1, 24.7, 15.6, 24.1, 2.3])), f'simulateur : impôt sur la hausse du salaire égal au calcul de référence (14,1 ; 24,7 ; 15,6 ; 24,1 ; 2,3 €/mois, à 1 € près) {r}')
     # part fiscale entière dès le 2e enfant (Le Pen) : gain avec 2 enfants, rien avec 1, pas de double compte avec l'exonération des moins de 30 ans
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); g('s-salary').value=3500; openSim.clear(); openSim.add('le-pen');
       const f=(k,y)=>{ S.kids=k; g('s-year').value=y; sim(); return [...document.querySelectorAll('#simres .srow[data-c="le-pen"] .rw')].filter(x=>/^Impôt/.test(x.textContent.trim())).length; };
@@ -388,6 +391,27 @@ with sync_playwright() as p:
     nt = [bool(re.search(p, txt(c))) for c, p in (('melenchon', '100 % Sécu.*non calculé ici'), ('melenchon', 'inférieurs à 150 000 € exonérés'), ('le-pen', 'Soins dentaires.*non calculé ici'),
           ('le-pen', 'proche aidant.*non calculé ici'), ('le-pen', 'ramenée de 31,4 % à 30 %'), ('zemmour', "Fin de MaPrimeRénov'"), ('attal', 'agents publics'), ('retailleau', 'agents publics'))]
     check(all(nt), f'simulateur : notes des mesures comptées non calculables (100 % Sécu, héritages, soins dentaires, aidants, flat tax, MaPrimeRénov\'), hypothèse « agents publics » écrite {nt}')
+    # --- review 45 (08/11/2026) : manques des candidats
+    # (1) revenu d'incitation à l'activité (Retailleau, barème publié) : 550 € avec 15 h d'activité, à la place de la baisse uniforme de 30 % ; une
+    # allocation actuelle plus basse dépend des revenus d'activité : une note sans montant
+    pg.evaluate(f"({PROF})({{st:'minima',sal:650}})"); ria = [row('retailleau', 'Minima sociaux')]
+    pg.evaluate(f"({PROF})({{st:'minima',sal:400}})"); ria += [row('retailleau', 'Minima sociaux'), 'votre allocation actuelle est sous 550 €' in txt('retailleau')]
+    check(ria == [[-100], [], True], f'simulateur : revenu d\'incitation à l\'activité de Retailleau (650 € → 550 € ; sous 550 €, une note) {ria}')
+    # (2) réduction d'impôt sur les intérêts d'emprunt (Retailleau) : plafond publié (400 € + 400 € par enfant), dans la limite de l'impôt, affiché « jusqu'à »
+    # et non ajouté au total ; sans impôt, une note
+    def credit(sal, kids):
+        pg.evaluate(f"({PROF})({{st:'prive',sal:{sal},kids:{kids}}})"); pg.evaluate("(()=>{ document.querySelector('#s-home [data-v=\"credit\"]').click(); })()")
+        w = pg.evaluate("(()=>{ const w=[...document.querySelectorAll('#simres .srow[data-c=\"retailleau\"] .rw')].find(x=>x.querySelector('b').textContent==='Crédit immobilier'); return w?w.querySelector('.v').textContent.replace(/\\s+/g,' '):null; })()")
+        return [w, 'sans effet si vous ne payez pas' in txt('retailleau')]
+    ce = [credit(4000, 2), credit(1500, 1)]; pg.evaluate("(()=>{ document.querySelector('#s-home [data-v=\"loc\"]').click(); })()")
+    check(ce == [["jusqu'à +100 €/mois", False], [None, True]], f'simulateur : intérêts d\'emprunt de Retailleau (1 200 € par an au plus avec 2 enfants, rien sans impôt) {ce}')
+    # (3) notes : AAH hors du plafond de 70 % du SMIC (Retailleau) ; minimum vieillesse à 1 000 € (2022, non reconfirmé) retiré chez Le Pen et Lisnard ;
+    # notes sans montant de Mélenchon (taxe d'habitation, première tranche gratuite, loyers gelés) et de Le Pen (plus-values, demi-part des veufs, AAH)
+    pg.evaluate(f"({PROF})({{st:'aah',sal:900}})"); n3 = ['hors handicap' in txt('retailleau'), 'seuil de pauvreté' in txt('le-pen')]
+    pg.evaluate(f"({PROF})({{st:'retraite',sal:1500,year:1955}})"); n3 += ['1 000 €/mois' not in txt('le-pen') and '1 000 €/mois' not in txt('lisnard'), 'veuves et veufs' in txt('le-pen')]
+    pg.evaluate("(()=>{ document.querySelector('#s-home [data-v=\"loc\"]').click(); })()"); pg.evaluate(f"({PROF})({{st:'prive',sal:1800}})")
+    n3 += [all(x in txt('melenchon') for x in ("Taxe d'habitation", 'Première tranche gratuite', 'Loyers gelés'))]
+    check(all(n3), f'simulateur : notes du 8/11 (AAH hors plafond, minimum vieillesse retiré, demi-part des veufs, notes de Mélenchon) {n3}')
     pg.evaluate(f"({PROF})({{st:'prive',sal:1800}})")
     check(not errs, f'aucune erreur JS {errs[:1]}')
     # sources faibles : nom d'hôte exact (aucune adresse franceinfo.fr étiquetée « agrégateur »), étiquette aussi sur les données d'entrée et en Vie quotidienne ;

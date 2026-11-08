@@ -1176,6 +1176,179 @@ _ps = _cur('melenchon', 'sante'); assert len(_ps) == 3 and _ps[2]['text'] == '«
 _put('melenchon', 'sante', _ps + [_p("Arrêts maladie payés à 100 %, sans jour de carence ; auto-déclaration pour les arrêts courts")])
 _so('melenchon', 'sante', add=[LV_SECU1])
 
+# --- review 45 : manques des candidats, Vie quotidienne (08/11/2026)
+# Audit des manques du 8/11 (chaque citation relue à la source ; pages ouvertes le 8/11). Même règle pour les 8 : au plus 5 propositions par
+# thème ; quand un thème dépasse 5 : 2026 d'abord, précises avant intentions, puis les plus récentes ; à égalité ou à date inconnue, l'ordre
+# affiché est gardé et la proposition nouvelle vient après (S106). Sous le plafond, une proposition nouvelle se place après les précises de
+# 2026 déjà affichées et avant les intentions et les propositions non reconfirmées, sans réordonner les autres. Test « précis » : un changement
+# de droit nommé, un chiffre, une échéance ou un niveau scolaire nommé est précis (VFLIP). Les lectures d'études (OVR, NIV) ne sont plus publiées :
+# une proposition ajoutée n'en demande pas, une proposition retirée ne retire pas de lecture.
+# Philippe (site de campagne, pages sans date, et questions-réponses de la réunion du 15/10) : 8 EPR supplémentaires (environnement, comme
+# les 7 autres) ; 3 jours de carence pour tous (santé, comme Retailleau et Mélenchon) ; réseaux sociaux interdits aux moins de 15 ans
+# (libertés, comme Attal) ; portable interdit jusqu'au lycée (école) ; suspension de l'enregistrement des demandes d'asile à Mayotte et en
+# Guyane (rayonnement). Protection de l'enfance (Inspection nationale de l'enfance, imprescriptibilité ; 15/10 au plus tard) : 6e d'un thème
+# plein de propositions plus récentes (22/10 à 29/10) ou à date inconnue, hors affichage (S106).
+EP_CONQ = _s("Site de campagne, « Pour une France plus conquérante »", 'https://www.edouardphilippe.fr/priorites/pour-une-france-plus-conquerante')
+EP_PROSP = _s("Site de campagne, « Pour une France plus prospère »", 'https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere')
+EP_QR = _s("Site de campagne, questions-réponses sur l'école (réunion du 15/10)", 'https://www.edouardphilippe.fr/questions-reponses/ecoles')
+_ps = _cur('philippe', 'environnement'); assert len(_ps) == 4, [p['text'] for p in _ps]
+_put('philippe', 'environnement', _ps + [_p("Lancer 8 EPR supplémentaires, en plus des 6 déjà prévus")])
+_so('philippe', 'environnement', add=[EP_CONQ])
+_ps = _cur('philippe', 'sante'); assert len(_ps) == 2 and not any(p['verifiable'] for p in _ps), [p['text'] for p in _ps]
+_put('philippe', 'sante', [_p("3 jours de carence pour tous les arrêts maladie, dans le privé comme dans le public")] + _ps)
+_so('philippe', 'sante', add=[EP_PROSP])
+_ps = _cur('philippe', 'libertes'); assert [p['verifiable'] for p in _ps] == [True, True, False, False], [p['text'] for p in _ps]
+_put('philippe', 'libertes', _ps[:2] + [_p("Interdire les réseaux sociaux aux moins de 15 ans : loi réécrite avec des parlementaires et des juristes, référendum si nécessaire")] + _ps[2:])
+_so('philippe', 'libertes', add=[EP_QR])
+_ps = _cur('philippe', 'ecole'); assert [p['verifiable'] for p in _ps] == [True, False, True, False], [p['text'] for p in _ps]
+_put('philippe', 'ecole', _ps[:3] + [_p("Téléphone portable interdit à l'école primaire, au collège et au lycée : confisqué s'il est sorti, rendu aux parents")] + _ps[3:])
+_so('philippe', 'ecole', add=[EP_QR])
+_ps = _cur('philippe', 'rayonnement'); assert len(_ps) == 2
+_put('philippe', 'rayonnement', _ps + [_p("Suspendre pour le quinquennat l'enregistrement des demandes d'asile à Mayotte et en Guyane")])
+_so('philippe', 'rayonnement', add=[SURE_EP])
+# Mélenchon : programme « L'Avenir en commun » (6/11), le plus récent des sources affichées. Sécurité : récépissé de contrôle d'identité ;
+# santé : cannabis légalisé sous monopole d'État ; école : scolarité obligatoire à 18 ans ; libertés : droit du sol intégral (même thème que
+# les propositions sur la nationalité et l'immigration des autres) ; Constituante et vote à 16 ans reconfirmés (même chapitre) ; indépendance
+# de la Kanaky-Nouvelle-Calédonie au 1/01/2028 (même chapitre que les propositions institutionnelles, libertés) : 6e à date égale, hors
+# affichage (S106). Économie : garantie d'emploi ; 35 heures et quota de contrats précaires ; la régularisation (intention du 17/07) sort.
+# Environnement : vols de nuit, glyphosate et néonicotinoïdes, moratoire sur les ZFE ; le plan de 200 Md€ (2022, non reconfirmé, absent du
+# programme : S212) sort.
+LV_SECU4 = _s("La France insoumise, « L'Avenir en commun » (6/11/2026), « Mettre en sécurité sociale », chapitre 4", LV41 + 'mettre-en-securite-sociale/chapitre4')
+LV_FUT1 = _s("La France insoumise, « L'Avenir en commun » (6/11/2026), « Le goût du futur », chapitre 1", LV41 + 'le-gout-du-futur-aux-nouvelles-frontieres-de-l-humanite/chapitre1')
+LV_FUT4 = _s("La France insoumise, « L'Avenir en commun » (6/11/2026), « Le goût du futur », chapitre 4", LV41 + 'le-gout-du-futur-aux-nouvelles-frontieres-de-l-humanite/chapitre4')
+_ps = _cur('melenchon', 'securite'); assert len(_ps) == 4
+_put('melenchon', 'securite', _ps + [_p("Récépissé de contrôle d'identité remis par la police et la gendarmerie")])
+_so('melenchon', 'securite', add=[LV_SECU4])
+_ps = _cur('melenchon', 'sante'); assert len(_ps) == 4
+_put('melenchon', 'sante', _ps + [_p("Légaliser le cannabis (usage médical et récréatif) sous monopole d'État de production et de vente")])
+_so('melenchon', 'sante', add=[LV_FUT4])
+_ps = _cur('melenchon', 'ecole'); assert len(_ps) == 3
+_put('melenchon', 'ecole', _ps + [_p("Scolarité obligatoire jusqu'à 18 ans")])
+_ps = _cur('melenchon', 'libertes'); assert len(_ps) == 4
+_put('melenchon', 'libertes', _ps + [_p("Droit du sol intégral pour tous les enfants nés en France, rétabli sur tout le territoire")])
+_so('melenchon', 'libertes', add=[LV_SECU4])
+_ps = _cur('melenchon', 'economie'); assert [p['verifiable'] for p in _ps] == [True, True, True, False] and _ps[3]['text'].startswith('Régulariser'), [p['text'] for p in _ps]
+_put('melenchon', 'economie', _ps[:3] + [_p("Garantie d'emploi : tout chômeur de longue durée volontaire peut être embauché au moins au SMIC dans un « secteur d'urgence »"),
+     _p("Rétablir les 35 heures (heures supplémentaires majorées de 25 % puis 50 %) ; contrats précaires limités à 10 % des emplois en PME, 5 % dans les grandes entreprises")])
+_so('melenchon', 'economie', add=[LV_SECU1])
+_ps = _cur('melenchon', 'environnement'); assert len(_ps) == 3 and _ps[2]['old'] and _ps[2]['text'].startswith('Plan de 200'), [p['text'] for p in _ps]
+_put('melenchon', 'environnement', _ps[:2] + [_p("Interdire les vols de nuit dans tous les aéroports, de 23 h à 6 h"),
+     _p("Interdire immédiatement le glyphosate et les néonicotinoïdes, et l'importation de produits qui en contiennent"),
+     _p("Moratoire sur les zones à faibles émissions (ZFE) dans leur conception actuelle")])
+_so('melenchon', 'environnement', add=[LV_FUT1])
+# Glucksmann : réforme du lycée de 2019 (plan de sortie de crise du 22/10 ; précise : réforme nommée), école ; 20 à 25 % de la PAC pour
+# rémunérer les services écologiques (France 3, 5/09, citation), environnement : le thème dépasse 5, « Plans régionaux d'investissement dans
+# les renouvelables » (2022, intention) sort ; ordre de la règle (2026 d'abord : « Garder le nucléaire » passe avant la loi climat de 2022).
+F3_0509 = _s("France 3 Grand Est, R. Glucksmann à la foire de Châlons : la PAC et les services écologiques (5/09)", 'https://france3-regions.franceinfo.fr/grand-est/marne/chalons-en-champagne/ce-sont-des-patriotes-de-pacotille-a-la-foire-de-chalons-raphael-glucksmann-en-campagne-contre-le-rn-3412121.html')
+_ps = _cur('glucksmann', 'ecole'); assert [p['verifiable'] for p in _ps] == [True, False, True, False], [p['text'] for p in _ps]
+_put('glucksmann', 'ecole', _ps[:3] + [_p("Revenir sur la réforme du lycée de 2019 (réforme Blanquer)")] + _ps[3:])
+_so('glucksmann', 'ecole', add=[GPLAN_S])
+_ps = {p['text']: p for p in _cur('glucksmann', 'environnement')}; assert len(_ps) == 5
+_put('glucksmann', 'environnement', [_ps["Leasing social : 1 million de voitures électriques à 100 €/mois"],
+     _ps["Encadrer les marges de raffinage et de distribution des carburants pour baisser de 20 centimes le prix à la pompe"],
+     _p("Consacrer 20 à 25 % de la nouvelle PAC à rémunérer les services écologiques des agriculteurs (haies, friches)"),
+     _ps["Garder le nucléaire, construire de nouvelles unités"], _ps["Loi climat : −90 % d'émissions en 2040"]])
+_so('glucksmann', 'environnement', add=[F3_0509])
+# Lisnard (Nouvelle Énergie : programme et pages qui citent le candidat) : provinces à la place des départements et des régions (libertés) ;
+# ZFE supprimées par la loi (environnement, comme la mesure du même type de Mélenchon) ; Sécurité sociale mise en concurrence (santé) ;
+# écart d'au moins 500 € entre travail et assistance (économie, avant l'intention). « Supprimer Parcoursup » : programme « Santé » de
+# Nouvelle Énergie (2026), source la plus récente sur ce point (S116 ne relevait pas de proposition de remplacement par l'orientation) :
+# précise, école, à la place de l'intention « Revenir sur le collège unique » (27/10), qui sort (S106). Expulsion des délinquants des HLM
+# (25/05) : 6e d'un thème plein de propositions plus récentes, hors affichage (S106). France 2 : « envisager la privatisation » (paraphrase du
+# parti, mai 2026) = intention, 6e du thème libertés, hors affichage (S106) ; même règle que la privatisation de l'audiovisuel public de Le Pen
+# (précise : ligne du contre-budget, affichée) ; Retailleau et Zemmour : lignes d'économies sur l'audiovisuel public, sans changement de statut
+# publié, rien en Vie quotidienne.
+NE_PROV = _s("Nouvelle Énergie, « Quel candidat veut remplacer les départements et les régions ? » (meeting de Saint-Raphaël, 3/07)", 'https://www.unenouvelleenergie.fr/questions/quel-candidat-veut-remplacer-les-departements-et-les-regions/')
+NE_ZFE = _s("Nouvelle Énergie, « Quel candidat veut supprimer les zones à faibles émissions ? » (publication du candidat, 21/05)", 'https://www.unenouvelleenergie.fr/questions/quel-candidat-veut-supprimer-les-zones-a-faibles-emissions-zfe/')
+NE_SECU = _s("Nouvelle Énergie, « David Lisnard veut-il supprimer la Sécurité sociale ? » (discours de La Gagne, 29/08)", 'https://www.unenouvelleenergie.fr/questions/david-lisnard-veut-il-supprimer-la-securite-sociale/')
+NE_SANTE = _s("Nouvelle Énergie, programme « Santé »", 'https://www.unenouvelleenergie.fr/notre-programme/sante/')
+NE_500 = _s("Nouvelle Énergie, « Quel candidat veut regrouper les aides sociales en une allocation unique ? » (meeting de Benfeld, 25/09)", 'https://www.unenouvelleenergie.fr/questions/quel-candidat-veut-regrouper-les-aides-sociales-en-une-allocation-unique/')
+_ps = _cur('lisnard', 'libertes'); assert len(_ps) == 4
+_put('lisnard', 'libertes', _ps + [_p("Créer des provinces à la place des départements et des régions")])
+_so('lisnard', 'libertes', add=[NE_PROV])
+_ps = _cur('lisnard', 'environnement'); assert len(_ps) == 3
+_put('lisnard', 'environnement', _ps + [_p("Supprimer les zones à faibles émissions (ZFE) par une loi")])
+_so('lisnard', 'environnement', add=[NE_ZFE])
+_ps = _cur('lisnard', 'sante'); assert len(_ps) == 3
+_put('lisnard', 'sante', _ps + [_p("Mettre la Sécurité sociale en concurrence, sur le modèle des Pays-Bas : panier de soins obligatoire, libre choix de l'organisme")])
+_so('lisnard', 'sante', add=[NE_SECU])
+_ps = _cur('lisnard', 'ecole'); assert len(_ps) == 5 and _ps[4]['text'] == 'Revenir sur le collège unique et repenser l\'orientation' and not _ps[4]['verifiable'], [p['text'] for p in _ps]
+_put('lisnard', 'ecole', _ps[:4] + [_p("Supprimer Parcoursup")])
+_so('lisnard', 'ecole', add=[NE_SANTE])
+_ps = _cur('lisnard', 'economie'); assert [p['verifiable'] for p in _ps] == [True, True, True, False], [p['text'] for p in _ps]
+_put('lisnard', 'economie', _ps[:3] + [_p("Garantir qu'un salarié à temps plein gagne au moins 500 € de plus que le revenu d'assistance le plus élevé")] + _ps[3:])
+_so('lisnard', 'economie', add=[NE_500])
+# Attal (site de campagne) : imprescriptibilité des crimes sur mineurs (sécurité ; même formulation que celle de Philippe, hors affichage
+# chez lui, S106) ; dépistage de l'addiction aux écrans (santé, page du 5/11) ; plan « Messmer II » et plan Eau (environnement : le thème
+# dépasse 5, l'intention « stabilité des prix de l'électricité » sort) ; droit à la climatisation (logement, intention) ; refus de l'accord
+# UE-Mercosur en l'état, clauses miroirs (rayonnement, même type que Lisnard). Familles monoparentales (28/08) : 6e d'un thème plein de
+# propositions plus récentes ou à date inconnue, hors affichage (S106).
+AT_IMPR = _s("attalpresident.fr, imprescriptibilité des crimes sexuels sur mineurs (12/06)", 'https://attalpresident.fr/programme/mesures/imprescriptibilite-crimes-sexuels-mineurs')
+AT_MESS = _s("attalpresident.fr, plan « Messmer II » (23/09)", 'https://attalpresident.fr/programme/mesures/plan-messmer-2')
+AT_EAU = _s("attalpresident.fr, réparer les 500 réseaux d'eau qui fuient le plus (10/08)", 'https://attalpresident.fr/programme/mesures/reparer-cinq-cents-reseaux-eau')
+AT_CLIM = _s("attalpresident.fr, droit à la climatisation (25/06)", 'https://attalpresident.fr/programme/mesures/droit-a-la-climatisation')
+AT_MERC = _s("attalpresident.fr, refuser le traité Mercosur (4/06)", 'https://attalpresident.fr/programme/mesures/refuser-mercosur')
+_ps = _cur('attal', 'securite'); assert len(_ps) == 4
+_put('attal', 'securite', _ps + [_p("Rendre imprescriptibles les crimes commis sur des mineurs, à commencer par les crimes sexuels")])
+_so('attal', 'securite', add=[AT_IMPR])
+_ps = _cur('attal', 'sante'); assert [p['verifiable'] for p in _ps] == [True, False, False, False], [p['text'] for p in _ps]
+_put('attal', 'sante', _ps[:1] + [_p("Dépister l'addiction aux écrans à l'entrée en sixième et en seconde ; applications en noir et blanc après 30 minutes d'utilisation")] + _ps[1:])
+_so('attal', 'sante', add=[ATT0511])
+_ps = _cur('attal', 'environnement'); assert [p['verifiable'] for p in _ps] == [True, True, True, False] and _ps[3]['text'].startswith('Garantir la stabilité'), [p['text'] for p in _ps]
+_put('attal', 'environnement', _ps[:3] + [_p("Plan « Messmer II » : énergies fossiles de près de 60 % à 40 % de la consommation en 2030, puis 30 % en 2035"),
+     _p("Réparer les 500 réseaux d'eau qui fuient le plus : 1 000 milliards de litres économisés par an d'ici 2035")])
+_so('attal', 'environnement', add=[AT_MESS, AT_EAU])
+_ps = _cur('attal', 'logement'); assert len(_ps) == 2
+_put('attal', 'logement', _ps + [_p("« Droit à la climatisation » : lever les blocages des copropriétés et alléger les contraintes des Architectes des Bâtiments de France", False)])
+_so('attal', 'logement', add=[AT_CLIM])
+_ps = _cur('attal', 'rayonnement'); assert len(_ps) == 2
+_put('attal', 'rayonnement', _ps + [_p("Refuser l'accord UE-Mercosur en l'état ; clauses miroirs dans tous les accords commerciaux")])
+_so('attal', 'rayonnement', add=[AT_MERC])
+# Retailleau (site de campagne, pages de septembre ; communiqué signé du 31/07) : principe de précaution remplacé par un principe de
+# responsabilité (environnement, 5e, comme Lisnard) ; centres de retour dans des pays tiers (rayonnement ; « Si les Français m'élisent ») ; la
+# suspension de la libre circulation avec l'Espagne, demandée au Gouvernement en place (outil existant du code Schengen), n'est pas une
+# proposition de programme (règle S134). Hors affichage (S106), thèmes pleins
+# de propositions plus récentes ou à date égale (ordre affiché gardé) : néonicotinoïdes (environnement, 6e) ; castration chimique obligatoire
+# (10/06, sécurité) ; squats, vente de pavillons HLM, Action Logement (logement) ; seuil de 50 salariés porté à 100 (économie) ; « pas d'IA
+# avant le lycée » (livret école de LR du 3/09, texte écrit : précise ; remplace « avant le collège », CNews 8/09), école.
+R_PREC = _s("avecretailleau.fr, mesure 01.11 « Supprimer le principe de précaution par référendum »", 'https://www.avecretailleau.fr/projet/mesure/suppression-du-principe-de-precaution-inscrit-dans-la')
+R_RET = _s("Les Républicains, communiqué de B. Retailleau sur l'immigration en Europe (31/07)", 'https://republicains.fr/wp-content/uploads/2026/08/CP_BR_31_07_26.pdf')
+_ps = _cur('retailleau', 'environnement'); assert len(_ps) == 4
+_put('retailleau', 'environnement', _ps + [_p("Supprimer le principe de précaution de la Charte de l'environnement, remplacé par un principe de responsabilité et d'innovation, par référendum")])
+_so('retailleau', 'environnement', add=[R_PREC])
+_ps = _cur('retailleau', 'rayonnement'); assert len(_ps) == 1
+_put('retailleau', 'rayonnement', _ps + [_p("Créer des centres de retour dans des pays tiers pour les étrangers en situation irrégulière, comme le permet le règlement européen sur le retour")])
+_so('retailleau', 'rayonnement', add=[R_RET])
+# Zemmour : voile et kippa interdits dans l'espace public (BFMTV, 17/09 ; libertés, comme les propositions sur le voile de Le Pen et Lisnard) ;
+# abrogation de la loi sur l'aide à mourir (franceinfo, 17/07 ; libertés : droit nommé, le droit à l'aide à mourir, comme les autres droits
+# du thème) ; école : CAP dès la 4e, plus d'heures de français et de maths (CNews, 13/10 ; intention), avant les propositions de 2022, dont
+# « Interdire toute propagande idéologique à l'école » (2022, intention) sort (S106) ; économie : « des robots à la place des immigrés »
+# (CNews, 18/09 ; intention), avant les propositions de 2022.
+BFM_Z1709 = _s("BFMTV, entretien d'É. Zemmour : voile et kippa dans l'espace public (17/09)", 'https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-immigration-voile-marine-le-pen-ce-qu-il-faut-retenir-de-l-interview-d-eric-zemmour-sur-bfmtv_AV-202609170966.html')
+FI_FDV = _s("franceinfo, les candidats hostiles à la loi sur la fin de vie (17/07)", 'https://www.franceinfo.fr/societe/euthanasie/presidentielle-2027-les-candidats-hostiles-a-la-loi-sur-la-fin-de-vie-vont-ils-promettre-de-l-abroger_8108582.html')
+CN_ROB = _s("CNews, « des robots à la place des immigrés » (18/09)", 'https://www.cnews.fr/france/2026-09-18/des-robots-la-place-des-immigres-la-proposition-choc-deric-zemmour-pour-reduire')
+_ps = _cur('zemmour', 'libertes'); assert len(_ps) == 2 and all(p['old'] for p in _ps)
+_put('zemmour', 'libertes', [_p("Interdire le voile et la kippa dans l'espace public"), _p("Abroger la loi sur l'aide à mourir de 2026")] + _ps)
+_so('zemmour', 'libertes', add=[BFM_Z1709, FI_FDV])
+_ps = _cur('zemmour', 'ecole'); assert [(p['verifiable'], p['old']) for p in _ps] == [(True, False), (True, False), (False, False), (True, True), (False, True)], [p['text'] for p in _ps]
+_put('zemmour', 'ecole', _ps[:3] + [_p("Plus d'heures de français et de mathématiques ; orientation vers le CAP dès la quatrième", False)] + _ps[3:4])
+_ps = _cur('zemmour', 'economie'); assert [p['old'] for p in _ps] == [False, True, True, True], [p['text'] for p in _ps]
+_put('zemmour', 'economie', _ps[:1] + [_p("Remplacer par des robots et l'IA des emplois occupés par des immigrés, aide aux personnes âgées comprise", False)] + _ps[1:])
+_so('zemmour', 'economie', add=[CN_ROB])
+# Le Pen : priorité d'accès au logement étudiant pour les jeunes Français (pétition du RN, septembre 2026), dans la proposition de priorité
+# nationale (même mesure) ; privatisation de l'audiovisuel public (contre-budget du groupe RN, 13/10 ; libertés, avant la proposition de 2022) ;
+# une rupture conventionnelle tous les 10 ans (contre-budget, 13/10 ; économie) : le thème dépasse 5, la règle d'or par référendum (tribune
+# du 1/10, la plus ancienne ; fiche « règle d'or » inchangée) sort (S106).
+RN_LOG = _s("Rassemblement national, pétition « Logement : avec Marine Le Pen, appliquons la priorité nationale » (septembre)", 'https://rassemblementnational.fr/petition/logement-avec-marine-le-pen-appliquons-la-priorite-nationale')
+_txt('le-pen', 'logement', 'Priorité nationale : HLM et APL réservés aux Français', "Priorité nationale : HLM et APL réservés aux Français ; priorité d'accès au logement étudiant pour les jeunes Français")
+_so('le-pen', 'logement', add=[RN_LOG])
+_ps = _cur('le-pen', 'libertes'); assert [p['old'] for p in _ps] == [False, False, False, True]
+_put('le-pen', 'libertes', _ps[:3] + [_p("Baisser la dotation de l'audiovisuel public, puis le privatiser, hors franceinfo, Arte et outre-mer notamment")] + _ps[3:])
+_so('le-pen', 'libertes', add=[CB_RN])
+_ps = _cur('le-pen', 'economie'); assert len(_ps) == 5 and _ps[3]['text'].startswith("Règle d'or"), [p['text'] for p in _ps]
+_put('le-pen', 'economie', _ps[:3] + _ps[4:] + [_p("Limiter à une rupture conventionnelle tous les 10 ans")])
+_so('le-pen', 'economie', add=[CB_RN])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.
