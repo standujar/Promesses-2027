@@ -36,7 +36,7 @@
    "name": "Marine Le Pen",
    "party": "RN",
    "poll": "36,0 %",
-   "summary": "Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite à 62 ans et la TVA à 5,5 % sur l'énergie. Notre chiffrage : −70,9 Md€ par an en 2030, soit −2 294 € par ménage. Principal obstacle : la priorité nationale et le référendum exigent une révision de la Constitution.",
+   "summary": "Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite à 62 ans et la TVA à 5,5 % sur l'énergie. Notre chiffrage : −70,9 Md€ par an en 2030, soit −2 294 € par ménage. Principal obstacle : la révision de la Constitution, pour la priorité nationale, le prêt réservé aux jeunes ménages français et la règle d'or.",
    "measures": [
     {
      "id": "retraites",
@@ -3144,6 +3144,10 @@
     "etrangers": "RSA, prime d'activité, AAH après 5 ans de travail ; allocations familiales réservées aux foyers avec un parent français ; APL réservées aux Français ; AME remplacée par une aide d'urgence. Exige une révision de la Constitution.",
     "patrimoine": [
      {
+      "seuil": 300000,
+      "effet": "Flat tax ramenée de 31,4 % à 30 % (hausse de la CSG sur l'épargne financière votée pour 2026 annulée)."
+     },
+     {
       "seuil": 1300000,
       "effet": "IFI supprimé, remplacé par un impôt sur la fortune financière (seuil inconnu)."
      }
@@ -3176,12 +3180,24 @@
        "proprio"
       ],
       "t": "MaPrimeRénov' remplacée par un prêt à taux zéro « 100 % rénov » : conditions non publiées, non calculé ici."
+     },
+     {
+      "when": [
+       "loc",
+       "credit",
+       "proprio",
+       "heberge"
+      ],
+      "t": "Prêt public à taux zéro pour les jeunes ménages français, effacé à la naissance du 3e enfant (si la révision de la Constitution passe) : montant et conditions non republiés, non calculé ici."
      }
     ],
     "tva_energie_cond": "si la baisse est répercutée ; pour le gaz et le carburant, au-delà de 2030, seulement si les 27 changent la directive",
     "ir_exempt_under": 30,
     "ir_exempt_max": 5912,
-    "tous": [],
+    "tous": [
+     "Soins dentaires remboursés à 100 % de la base de la Sécurité sociale : gain selon vos soins et votre mutuelle, non calculé ici.",
+     "Congé de proche aidant mieux indemnisé, et 300 €/mois pour l'aidant qui vit avec la personne aidée (amendement du groupe RN au budget de la Sécurité sociale pour 2026) : public non défini, non calculé ici."
+    ],
     "accise_carburant": {
      "essence": 0.0322,
      "gazole": 0.0633,
@@ -3193,14 +3209,14 @@
     }
    },
    "promise": "Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite à 62 ans et la TVA à 5,5 % sur l'énergie.",
-   "obstacle_main": "La priorité nationale et le référendum exigent une révision de la Constitution."
+   "obstacle_main": "La révision de la Constitution, pour la priorité nationale, le prêt réservé aux jeunes ménages français et la règle d'or."
   },
   {
    "id": "melenchon",
    "name": "Jean-Luc Mélenchon",
    "party": "LFI",
    "poll": "17,8 %",
-   "summary": "Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines. Notre chiffrage : −226,1 Md€ par an en 2030, soit −7 315 € par ménage. Principal obstacle : le rendement réel des nouveaux impôts, et les traités européens pour l'annulation de la dette.",
+   "summary": "Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines. Notre chiffrage : −226,1 Md€ par an en 2030, soit −7 315 € par ménage. Principal obstacle : la modification des traités européens à l'unanimité des 27, pour l'annulation de la dette, et la révision de la Constitution, pour la VIe République.",
    "measures": [
     {
      "id": "retraites",
@@ -6012,7 +6028,7 @@
       "inputs": [
        {
         "label": "Dépense d'AAH et montant maximal",
-        "value": "« Allocation aux adultes handicapés (AAH) (14 681 M€) » ; « Le montant mensuel maximum de l’AAH en vigueur depuis le 1er avril 2025 s’élève à 1033,32 €. » (non revalorisé en 2026)",
+        "value": "« Allocation aux adultes handicapés (AAH) (14 681 M€) » ; « Le montant mensuel maximum de l’AAH en vigueur depuis le 1er avril 2025 s’élève à 1033,32 €. » (1 041,59 € au maximum en 2026 selon service-public.gouv.fr, page vérifiée le 14/09/2026 ; chiffrage gardé sur le montant du même document que la dépense)",
         "source": "Projet annuel de performances 2026, Solidarité, insertion et égalité des chances, programme 157",
         "url": "https://www.assemblee-nationale.fr/dyn/dyn/contenu/visualisation/1088038/file/PAP2026_BG_Solidarite_insertion_egalite_chances_SE.pdf"
        },
@@ -6126,6 +6142,10 @@
     ],
     "heritage": [
      {
+      "seuil": 100000,
+      "effet": "Héritages inférieurs à 150 000 € exonérés de droits de succession (programme du 6/11/2026 ; coût non publié, hors de notre total)."
+     },
+     {
       "seuil": 2000000,
       "effet": "Droits de succession relevés sur les gros héritages."
      },
@@ -6154,18 +6174,41 @@
     },
     "famille": "Cantine scolaire gratuite (note LFI d'octobre 2026, 3,6 Md€) : gain selon vos frais de cantine, non calculé ici ; comptée dans notre total.",
     "tous": [
-     "Prix de l'alimentation et de l'énergie de base bloqués : produits et niveaux non publiés, effet sur vos dépenses non calculé ici (seul le carburant à 1,70 €/l l'est)."
+     "Prix de l'alimentation et de l'énergie de base bloqués : produits et niveaux non publiés, effet sur vos dépenses non calculé ici (seul le carburant à 1,70 €/l l'est).",
+     "« 100 % Sécu » : soins prescrits remboursés à 100 % et mutuelle remplacée par la Sécurité sociale, financée par une cotisation dont le taux n'est pas publié : gain ou perte selon votre mutuelle, non calculé ici ; franchises médicales et participations forfaitaires supprimées (jusqu'à 140 € par an et par personne, 70 € pour chacune depuis le 1/10/2026)."
+    ],
+    "service_jeunes": {
+     "note": "Service citoyen obligatoire de 9 mois avant 25 ans, rémunéré au SMIC du programme (1 700 € net par mois)",
+     "montant": 1700,
+     "mois": 9
+    },
+    "aah_max": 1700,
+    "aah_note": "AAH portée au niveau du SMIC du programme : 1 700 € net par mois au maximum",
+    "chomage_duree": {
+     "mois": 24,
+     "avant": 55,
+     "note": "baisse de 25 % de la durée décidée en 2023 annulée (18 mois ÷ 0,75)"
+    },
+    "carence_note": "Arrêts maladie payés à 100 % et fin des jours de carence (programme du 6/11/2026) : gain seulement en cas d'arrêt, coût non publié, non calculé ici.",
+    "logement": [
+     {
+      "when": [
+       "credit",
+       "proprio"
+      ],
+      "t": "Aides à l'isolation des logements et au remplacement des chaudières au fioul et au gaz (plan d'investissement publié) : montant par ménage non publié, non calculé ici."
+     }
     ]
    },
    "promise": "Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines.",
-   "obstacle_main": "Le rendement réel des nouveaux impôts, et les traités européens pour l'annulation de la dette."
+   "obstacle_main": "La modification des traités européens à l'unanimité des 27, pour l'annulation de la dette, et la révision de la Constitution, pour la VIe République."
   },
   {
    "id": "philippe",
    "name": "Édouard Philippe",
    "party": "Horizons",
    "poll": "12,3 %",
-   "summary": "Promet la retraite à 65 ans, un départ sur trois non remplacé dans la fonction publique, une allocation familiale dès le premier enfant et zéro impôt pour les jeunes parents. Notre chiffrage : −0,3 Md€ par an en 2030, soit −10 € par ménage. Principal obstacle : la révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or ; les paramètres de l'allocation familiale unique ne sont pas publiés.",
+   "summary": "Promet la retraite à 65 ans, un départ sur trois non remplacé dans la fonction publique, une allocation familiale dès le premier enfant et zéro impôt pour les jeunes parents. Notre chiffrage : −0,3 Md€ par an en 2030, soit −10 € par ménage. Principal obstacle : la révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or.",
    "measures": [
     {
      "id": "retraites",
@@ -6650,7 +6693,7 @@
         "url": "https://www.edouardphilippe.fr/priorites/pour-une-france-plus-prospere"
        }
       ],
-      "note": "Dans le privé, les 3 jours de carence existent déjà pour les indemnités de la Sécurité sociale ; le site ne dit pas que l'employeur ne pourra plus les couvrir (à la différence du jour « d'ordre public » de Retailleau) : aucun effet compté. Le simulateur applique trois jours de carence dans le public et le privé."
+      "note": "Dans le privé, les 3 jours de carence existent déjà pour les indemnités de la Sécurité sociale ; le site ne dit pas que l'employeur ne pourra plus les couvrir (à la différence du jour « d'ordre public » de Retailleau) : aucun effet compté. Le simulateur applique les trois jours de carence aux seuls agents publics : dans le privé, la mesure ne change pas le droit en vigueur (trois jours déjà)."
      },
      "quiz_text": "Limiter l'allocation chômage à 12 mois avant 50 ans",
      "quiz_concret": "Les chômeurs de moins de 50 ans sont indemnisés moins longtemps.",
@@ -7892,17 +7935,20 @@
       "kids": true,
       "t": "Prêt à taux zéro pour acheter plus grand à l'arrivée d'un enfant : montant et conditions non publiés, non calculé ici."
      }
-    ]
+    ],
+    "service_jeunes": {
+     "note": "Service national obligatoire : durée, forme et indemnité non publiées, non calculé ici."
+    }
    },
    "promise": "Promet la retraite à 65 ans, un départ sur trois non remplacé dans la fonction publique, une allocation familiale dès le premier enfant et zéro impôt pour les jeunes parents.",
-   "obstacle_main": "La révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or ; les paramètres de l'allocation familiale unique ne sont pas publiés."
+   "obstacle_main": "La révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or."
   },
   {
    "id": "glucksmann",
    "name": "Raphaël Glucksmann",
    "party": "PS-Place publique",
    "poll": "11,5 %",
-   "summary": "Promet le retour à 62 ans, un SMIC à 1 700 € net, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun. Notre chiffrage : −54,8 Md€ par an en 2030, soit −1 773 € par ménage. Principal obstacle : l'accord des autres pays européens, et le rendement de la taxe sur les héritages.",
+   "summary": "Promet le retour à 62 ans, un SMIC à 1 700 € net, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun. Notre chiffrage : −54,8 Md€ par an en 2030, soit −1 773 € par ménage. Principal obstacle : l'accord des autres pays européens, pour la défense européenne financée par emprunt commun et la saisie des avoirs russes.",
    "measures": [
     {
      "id": "zucman",
@@ -9322,7 +9368,12 @@
       "effet": "Hausse de la taxation des héritages au-delà de 2 M€ ; barème non publié."
      }
     ],
-    "service_jeunes": "Service obligatoire de 10 mois : indemnité supposée égale à celle du service civique actuel, soit ≈ 620 € par mois versés au jeune (504,98 € par l'État, 114,85 € par l'organisme d'accueil, barème 2026)",
+    "service_jeunes": {
+     "note": "Service obligatoire de 10 mois : indemnité supposée égale à celle du service civique actuel, soit ≈ 620 € par mois versés au jeune (504,98 € par l'État, 114,85 € par l'organisme d'accueil, barème 2026)",
+     "montant": 619.83,
+     "mois": 10,
+     "approx": true
+    },
     "tous": [
      "Chèque énergie : 500 € par an pour six millions de familles et 200 € pour dix millions d'autres ménages (plan du 22/10/2026) ; seuils de revenu non publiés, non calculé ici.",
      "Leasing social : une voiture électrique à environ 100 €/mois pour un million de ménages modestes (conditions non publiées), non calculé ici."
@@ -9331,14 +9382,14 @@
     "enseignants_note": "+10 % pour tous d'ici la fin du mandat, jusqu'à +25 % en milieu de carrière dans le primaire (montant minimal retenu)"
    },
    "promise": "Promet le retour à 62 ans, un SMIC à 1 700 € net, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun.",
-   "obstacle_main": "L'accord des autres pays européens, et le rendement de la taxe sur les héritages."
+   "obstacle_main": "L'accord des autres pays européens, pour la défense européenne financée par emprunt commun et la saisie des avoirs russes."
   },
   {
    "id": "lisnard",
    "name": "David Lisnard",
    "party": "Nouvelle Énergie",
    "poll": "8,0 %",
-   "summary": "Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations. Notre chiffrage : −41,4 Md€ par an en 2030, soit −1 340 € par ménage. Principal obstacle : l'identification des économies : une partie seulement l'est, et la baisse des cotisations en dépend.",
+   "summary": "Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations. Notre chiffrage : −41,4 Md€ par an en 2030, soit −1 340 € par ménage. Principal obstacle : la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats.",
    "measures": [
     {
      "id": "depense",
@@ -10166,8 +10217,8 @@
       }
      ],
      "consensus": "isolé",
-     "verdict": "sous_conditions",
-     "obstacle": "Coût certain ; financement par des économies non identifiées",
+     "verdict": "faisable",
+     "obstacle": "Par la loi de financement de la Sécurité sociale ; barème de la baisse au-delà de la CSG non publié ; financement non précisé dans la mesure.",
      "claude": {
       "id": "cotisations",
       "central": 0,
@@ -10207,7 +10258,7 @@
         "url": "https://www.capital.fr/votre-carriere/vous-gagnez-2-200-euros-net-david-lisnard-vous-promet-jusqua-400-euros-de-plus-par-mois-1531546"
        }
       ],
-      "note": "Non compté dans le total pour éviter un double compte (comme la fiche « Économies ») : chaque instrument publié est chiffré dans sa propre fiche. Le gain promis (250 à 400 € net par mois) suppose les 200 Md€ d'économies réalisés. Si le reste était paramétré, une baisse de cotisations salariales ou de CSG déductible serait comptée nette de l'impôt sur le revenu récupéré (règle commune des prélèvements déductibles du revenu imposable). Le 3/11/2026 (BFMTV), le candidat annonce « entre 200 et 400 euros par mois » nets de plus pour un salaire médian de 2 200 € net, « selon les modalités envisagées » : mécanisme non précisé, aucun gain calculé au simulateur (même règle que toute baisse non chiffrée).",
+      "note": "Non compté dans le total pour éviter un double compte (comme la fiche « Économies ») : chaque instrument publié est chiffré dans sa propre fiche. Le gain promis (250 à 400 € net par mois) suppose les 200 Md€ d'économies réalisés. Si le reste était paramétré, une baisse de cotisations salariales ou de CSG déductible serait comptée nette de l'impôt sur le revenu récupéré (règle commune des prélèvements déductibles du revenu imposable). Le 3/11/2026 (BFMTV), le candidat annonce « entre 200 et 400 euros par mois » nets de plus pour un salaire médian de 2 200 € net, « selon les modalités envisagées » : mécanisme non précisé. Au simulateur, même règle que le gain publié d'Attal : montant minimal de la fourchette, 200 €/mois au salaire médian, au prorata en dessous ; ce gain comprend ou remplace la baisse de la CSG, qui ne s'y ajoute pas (le plus grand des deux), et seule cette baisse de la CSG est calculée au-delà du salaire médian.",
       "exclude": true,
       "nc": true
      },
@@ -11460,14 +11511,24 @@
     },
     "smic_net": null,
     "salaire_net": {
-     "gain_mensuel": 91.6,
-     "ref": 2797,
-     "prorata": true,
-     "sans_plafond": true,
+     "points": [
+      [
+       2238,
+       200
+      ]
+     ],
+     "public": "salariés",
+     "imposable": 1,
      "independants": true,
-     "public": "actifs",
-     "note": "Baisse de la CSG sur les revenus d'activité de 9,2 % à 6,6 % : 2,6 points sur 98,25 % du salaire brut (brut ≈ net / 0,78), au prorata du revenu",
-     "imposable": 1
+     "note": "Baisse des cotisations : « entre 200 et 400 euros par mois » nets de plus au salaire médian (2 238 € net, Insee ; 2 200 € selon le candidat, BFMTV, 3/11/2026) : montant minimal retenu, 200 €/mois ; en dessous, au prorata du salaire (notre calcul)",
+     "au_dela": "Baisse des cotisations au-delà du salaire médian (2 238 € net) : montant non publié ; seule la baisse de la CSG, valable pour tous les revenus d'activité, est calculée",
+     "socle": {
+      "gain_mensuel": 91.6,
+      "ref": 2797,
+      "imposable": 1,
+      "court": "CSG ramenée de 9,2 % à 6,6 %",
+      "note": "Baisse de la CSG sur les revenus d'activité de 9,2 % à 6,6 % : 2,6 points sur 98,25 % du salaire brut (brut ≈ net / 0,78), au prorata du revenu"
+     }
     },
     "alloc_familiales": null,
     "tva_energie": null,
@@ -11475,7 +11536,7 @@
     "chomeurs": "Contrat de travail unique fusionnant CDI et CDD.",
     "minima_sociaux": "Allocation sociale unique plafonnée à un pourcentage du SMIC : baisse possible, non chiffrée ici car le plafond n'est pas publié.",
     "jeunes": "Âge limite de l'apprentissage abaissé.",
-    "retraites_actuels": "Pensions au-dessus de 2 200 € gelées (durée non publiée) ; abattement fiscal de 10 % sur les pensions supprimé : impôt en hausse pour les retraités imposables (non calculé ici). Minimum vieillesse annoncé à 1 000 €/mois (il est déjà de 1 043,59 € en 2026).",
+    "retraites_actuels": "Pensions au-dessus de 2 200 € gelées (durée non publiée) ; abattement fiscal de 10 % sur les pensions supprimé : impôt en hausse pour les retraités imposables (calculé ici). Minimum vieillesse annoncé à 1 000 €/mois (il est déjà de 1 043,59 € en 2026).",
     "independants": "Concernés par la baisse des cotisations ; pas d'autre mesure spécifique publiée.",
     "etrangers": "Prestations non contributives réservées aux résidents réguliers depuis au moins 5 ans ; AME remplacée par une aide d'urgence.",
     "patrimoine": [],
@@ -11495,27 +11556,27 @@
     "ir_reforme": {
      "ni": 1.0,
      "noCap": true,
-     "note": "Quotient familial sans plafond et CSG-CRDS déductibles de l'impôt sur le revenu (tribune du 16/04/2026)"
+     "note": "Quotient familial sans plafond et CSG-CRDS déductibles de l'impôt sur le revenu (tribune du 16/04/2026)",
+     "ni_pension": 1.003
     },
-    "tous": [
-     "Baisse des cotisations : « entre 200 et 400 euros par mois » nets de plus pour un salaire médian de 2 200 € net (BFMTV, 3/11/2026), 250 à 400 € selon d'autres interventions ; au-delà de la baisse de CSG, aucun paramètre publié : non calculé ici."
-    ],
+    "tous": [],
     "gel_pct": 1.8,
     "gel_min": 2200,
     "gel_status": [
      "retraite"
     ],
-    "gel_note": "Pensions au-dessus de 2 200 € par mois non revalorisées pendant un an (inflation prévue 1,8 % ; durée non publiée, seuil supposé en net)"
+    "gel_note": "Pensions au-dessus de 2 200 € par mois non revalorisées pendant un an (inflation prévue 1,8 % ; durée non publiée, seuil supposé en net)",
+    "abattement_pensions": "Abattement de 10 % sur les pensions supprimé : impôt sur le revenu en hausse"
    },
    "promise": "Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations.",
-   "obstacle_main": "L'identification des économies : une partie seulement l'est, et la baisse des cotisations en dépend."
+   "obstacle_main": "La révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats."
   },
   {
    "id": "attal",
    "name": "Gabriel Attal",
    "party": "Renaissance",
    "poll": "7,0 %",
-   "summary": "Promet la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037. Notre chiffrage : +7,0 Md€ par an en 2030, soit +226 € par ménage. Principal obstacle : des paramètres non publiés, en particulier pour les retraites.",
+   "summary": "Promet la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037. Notre chiffrage : +7,0 Md€ par an en 2030, soit +226 € par ménage. Principal obstacle : la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen.",
    "measures": [
     {
      "id": "retraites",
@@ -12770,7 +12831,7 @@
       ]
      ],
      "public": "salariés",
-     "note": "Baisse des cotisations salariales (« droit au brut ») dès 2027 : 250 €/mois nets de plus au salaire médian (2 238 € net, Insee ; 2 200 € selon le candidat) ; en dessous, au prorata du salaire (notre calcul)",
+     "note": "Baisse des cotisations salariales (« droit au brut ») dès 2027 : 250 €/mois nets de plus au salaire médian (2 238 € net, Insee ; 2 200 € selon le candidat) ; en dessous, au prorata du salaire (notre calcul) ; appliquée aussi aux agents publics et aux enseignants, le candidat parlant des salariés sans exclure le public (notre hypothèse)",
      "au_dela": "Baisse des cotisations salariales au-delà du salaire médian (2 238 € net) : montant non publié, pas de gain calculé",
      "imposable": 1
     },
@@ -12793,7 +12854,8 @@
      "retraite",
      "minima",
      "af",
-     "apl"
+     "apl",
+     "aah"
     ],
     "enseignants_eur": {
      "montant": 200,
@@ -12807,7 +12869,10 @@
     },
     "tous": [
      "Leasing social étendu aux voitures électriques d'occasion : paramètres non publiés, non calculé ici."
-    ]
+    ],
+    "service_jeunes": {
+     "note": "Un mois d'engagement civique obligatoire avant 25 ans : forme et indemnité non publiées, non calculé ici."
+    }
    },
    "claude_total": {
     "sum": 7.0,
@@ -12822,7 +12887,7 @@
    },
    "short": "Attal",
    "promise": "Promet la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.",
-   "obstacle_main": "Des paramètres non publiés, en particulier pour les retraites."
+   "obstacle_main": "La révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen."
   },
   {
    "id": "retailleau",
@@ -13889,8 +13954,8 @@
       }
      ],
      "consensus": "concordant",
-     "verdict": "faisable",
-     "obstacle": "Dossiers engagés à payer ; objectifs européens de rénovation",
+     "verdict": "sous_conditions",
+     "obstacle": "Par la loi de finances ; l'objectif de rénovation du parc résidentiel de l'article 9 de la directive (UE) 2024/1275 (consommation moyenne d'énergie primaire en baisse d'au moins 16 % entre 2020 et 2030), avec un financement approprié (article 17), reste à atteindre par d'autres mesures ; dossiers déjà engagés à payer.",
      "claude": {
       "id": "fin_maprimerenov",
       "central": 2.0,
@@ -13928,6 +13993,12 @@
         "value": "2 Md€ (suppression de MaPrimeRénov')",
         "source": "Capital (12/10/2026)",
         "url": "https://www.capital.fr/economie-politique/bruno-retailleau-devoile-son-plan-de-197-milliards-deuros-deconomies-dici-2032-1530922"
+       },
+       {
+        "label": "Obligation européenne",
+        "value": "« Les États membres veillent à ce que la consommation moyenne d’énergie primaire en kWh/(m2.an) pour l’ensemble du parc immobilier résidentiel: a) diminue d’au moins 16 % par rapport à 2020 d’ici à 2030 » (art. 9) ; « Les États membres prévoient un financement approprié, des mesures de soutien et d’autres instruments » (art. 17)",
+        "source": "Directive (UE) 2024/1275 sur la performance énergétique des bâtiments, Journal officiel de l'UE",
+        "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202401275"
        }
       ],
       "note": "Le chiffre du camp (2 Md€) coïncide avec la part publique annuelle : il se lit comme un montant annuel, pas comme un cumul (voir le point sur le plan de 197 Md€). Quotas carbone : plafond de 600 M€ affectés à l'Anah (projet de loi de finances pour 2027, article 42)."
@@ -15450,7 +15521,7 @@
      "au_dela_prorata": true,
      "public": "salariés",
      "imposable": 1,
-     "note": "Cotisations salariales en moins « dès le premier euro » (15 Md€) : « environ 500 euros nets par an au salaire médian » (site du candidat), soit 41,7 €/mois au salaire médian (2 238 € net, Insee ; 2 115 € selon le site) ; au prorata du salaire en dessous comme au-dessus, le mécanisme valant pour tous les salaires (notre calcul)"
+     "note": "Cotisations salariales en moins « dès le premier euro » (15 Md€) : « environ 500 euros nets par an au salaire médian » (site du candidat), soit 41,7 €/mois au salaire médian (2 238 € net, Insee ; 2 115 € selon le site) ; au prorata du salaire en dessous comme au-dessus, le mécanisme valant pour tous les salaires (notre calcul) ; appliquée aussi aux agents publics et aux enseignants, le candidat parlant des salariés sans exclure le public (notre hypothèse)"
     },
     "alloc_familiales": null,
     "tva_energie": null,
@@ -15515,7 +15586,8 @@
     "enseignants_eur": {
      "montant": 135,
      "note": "+135 € net par mois en début de carrière, ≈ +300 € au cœur de la carrière (montant minimal retenu)"
-    }
+    },
+    "aah_nc": "Total des aides non contributives plafonné à 70 % du SMIC net : application à l'AAH non publiée, non calculé ici."
    },
    "promise": "Promet 197 Md€ d'économies par an en 2032, 51 Md€ de baisses d'impôts, un âge minimal de 63 ans et un référendum sur l'immigration.",
    "obstacle_main": "La révision de la Constitution, pour le référendum sur l'immigration, les aides réservées après cinq ans, les peines planchers et la règle d'or."
@@ -15525,7 +15597,7 @@
    "name": "Éric Zemmour",
    "party": "Reconquête",
    "poll": "4,3 %",
-   "summary": "Promet l'expulsion des étrangers restés un an au chômage, des aides réservées aux Français, 800 000 postes publics en moins et la fin de l'aide publique au développement. Notre chiffrage : +19,6 Md€ par an en 2030, soit +634 € par ménage. Principal obstacle : plusieurs mesures exigent une révision de la Constitution.",
+   "summary": "Promet l'expulsion des étrangers restés un an au chômage, des aides réservées aux Français, 800 000 postes publics en moins et la fin de l'aide publique au développement. Notre chiffrage : +19,6 Md€ par an en 2030, soit +634 € par ménage. Principal obstacle : la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.",
    "measures": [
     {
      "id": "remigration",
@@ -16809,8 +16881,8 @@
       }
      ],
      "consensus": "isolé",
-     "verdict": "faisable",
-     "obstacle": "Dossiers engagés à payer ; objectifs européens de rénovation",
+     "verdict": "sous_conditions",
+     "obstacle": "Par la loi ; l'objectif de rénovation du parc résidentiel de l'article 9 de la directive (UE) 2024/1275 (consommation moyenne d'énergie primaire en baisse d'au moins 16 % entre 2020 et 2030), avec un financement approprié (article 17), reste à atteindre par d'autres mesures ; dossiers déjà engagés à payer.",
      "claude": {
       "id": "anah",
       "central": 2.0,
@@ -16824,6 +16896,12 @@
         "value": "4,38 puis 4,01 Md€",
         "source": "LCP",
         "url": "https://lcp.fr/actualites/maprimerenov-l-agence-nationale-de-l-habitat-acte-le-coup-de-rabot-de-351-millions-d"
+       },
+       {
+        "label": "Obligation européenne",
+        "value": "« Les États membres veillent à ce que la consommation moyenne d’énergie primaire en kWh/(m2.an) pour l’ensemble du parc immobilier résidentiel: a) diminue d’au moins 16 % par rapport à 2020 d’ici à 2030 » (art. 9) ; « Les États membres prévoient un financement approprié, des mesures de soutien et d’autres instruments » (art. 17)",
+        "source": "Directive (UE) 2024/1275 sur la performance énergétique des bâtiments, Journal officiel de l'UE",
+        "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202401275"
        }
       ],
       "note": "Dossiers engagés à payer. Part publique seulement, comme la fin de MaPrimeRénov' de Retailleau : le budget total de l'agence (4,01 Md€ après gel) comprend la part financée par les certificats d'économies d'énergie, hors budget."
@@ -17572,7 +17650,9 @@
      "minima": "hors",
      "apl": "hors"
     },
-    "tous": [],
+    "tous": [
+     "Fin de MaPrimeRénov' : plus d'aide de l'État pour isoler un logement ou changer de chauffage."
+    ],
     "accise_carburant": {
      "essence": 0.2301,
      "gazole": 0.2025,
@@ -17601,7 +17681,7 @@
    },
    "short": "Zemmour",
    "promise": "Promet l'expulsion des étrangers restés un an au chômage, des aides réservées aux Français, 800 000 postes publics en moins et la fin de l'aide publique au développement.",
-   "obstacle_main": "Plusieurs mesures exigent une révision de la Constitution."
+   "obstacle_main": "La révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial."
   }
  ],
  "method": [
@@ -17610,11 +17690,11 @@
   "<b>Objectifs en niveau.</b> Un objectif de dépense publié sous la forme d'un niveau à une date (en part du PIB ou en euros) est compté pour l'écart, en 2030, entre ce niveau et la trajectoire du droit en vigueur (loi de programmation militaire ou de la recherche ; à défaut, part du PIB constante) ; un objectif sans date ou fixé à la fin du mandat compte pour 70 % de cet écart. Le PIB de 2030 est celui du scénario du Gouvernement (projet de loi de finances 2027), ramené en euros de 2026. Quand la définition est ambiguë (dépense exécutée ou financée, périmètre), le milieu de la fourchette est retenu. La même règle vaut dans les deux sens : un niveau publié à la baisse (suppression comprise) compte comme une économie. Une prise de position au Parlement sur un texte déjà voté ne vaut pas programme, sauf si le candidat la reprend dans sa campagne.",
   "<b>Ce qui n'est pas compté.</b> Les mesures non reconfirmées en 2026, ou connues par une seule reprise de presse qui ne cite pas le candidat (marquées « À confirmer »), et les mesures dont un paramètre clé n'est pas publié (ampleur, taux, plafond) : elles sont « non chiffrables », avec une fourchette indicative dans la fiche. Une mesure qui exige une révision est comptée « si elle passe », chez tous les candidats. Pas d'effets macroéconomiques de bouclage ; effets de comportement seulement quand ils sont documentés. Un chiffrage qu'un candidat reprend comme le sien (d'un institut, d'une association ou d'un parti) compte comme chiffre de son camp, quel que soit son auteur. Le reprendre comme le sien, c'est publier ce chiffre comme son propre chiffre ; citer une étude comme une base parmi d'autres n'en fait pas un chiffre du camp. Une économie qui repose sur une baisse de flux ou un comportement supposés par une seule note n'est pas comptée, sauf si une évaluation ou une donnée officielle les établit. Un document d'un parti publié avant la désignation de son candidat (un projet de parti, par exemple) ne vaut programme que si le candidat le reprend ; un document officiel publié depuis (le contre-budget d'un groupe parlementaire, par exemple) compte. Une demande adressée au Gouvernement en place d'utiliser un outil qui existe déjà (état d'urgence, couvre-feux, drones, militaires en garde statique) n'est pas une proposition de programme. Le tableau « Qu'est-ce qui peut passer ? » et la répartition des verdicts d'un candidat portent sur les mêmes mesures que les totaux et le quiz : hors mesures non confirmées et doublons (les mesures non chiffrables y sont).",
   "<b>Fourchette probable.</b> Chaque mesure a une valeur basse et une valeur haute ; le total en tire une fourchette à 80 % par simulation (20 000 tirages, propres à chaque candidat).",
-  "<b>Verdicts.</b> Le verdict porte sur la voie juridique et pratique de la mesure, ni sur son coût ni sur l'écart entre le chiffre annoncé par le camp et notre chiffrage, que le chiffrage montre déjà, pour tous. Faisable : par décret ou par une loi ordinaire (lois de finances et de financement de la Sécurité sociale comprises), sans autre condition hors de cette décision ; une dépense ou une baisse d'impôt ou de cotisations non financée reste faisable, et l'obstacle le dit (« financement non précisé dans la mesure »). Sous conditions : la mesure dépend d'une condition identifiée hors de cette décision (accord de tiers : collectivités, partenaires sociaux, autre État ou institution ; contrats en cours ; obligation européenne à remplir par d'autres moyens ; capacités à bâtir : recrutements, places, constructions, moyens de contrôle ; rendement ou contenu d'une autre mesure ; risque de censure sur un point précis). Un paramètre, un contenu ou une échéance non publiés ne changent pas le verdict : l'obstacle les dit (« … non publié »), et la mesure est non chiffrable ou comptée selon la règle des objectifs. Assurance chômage : ses règles sont fixées par une convention des partenaires sociaux agréée par le Gouvernement, par décret faute d'accord, ou par la loi : la décision reste publique, la mesure est faisable. Très difficile : accord extérieur nécessaire, à l'unanimité des États de l'UE ou d'autres États, ou censure probable au vu de décisions ou d'avis sur des dispositifs proches. Exige une révision : impossible en l'état du droit sans réviser la Constitution ou les traités ; la fiche indique le chemin et qui doit dire oui. Une même situation juridique reçoit le même verdict chez tous les candidats ; une fiche qui réunit plusieurs mesures prend le verdict de la plus contraignante.",
-  "<b>Sources.</b> 370 sources distinctes pour les chiffrages des fiches, sans compter celles du quiz, des repères et du volet « Vie quotidienne ». L'année des chiffrages publiés est affichée ; « base 2022 » signale une estimation antérieure au programme 2027, « agrégateur » un site de synthèse à confirmer par une source primaire (repéré par son nom de domaine exact, et signalé partout où il est cité : estimations, données d'entrée, Vie quotidienne). Une source a une seule année, celle de sa publication, et un seul titre (son auteur et sa date), partout où elle est citée ; dans les repères « où en est la France », l'année indiquée est celle du chiffre (« données 2025 »).",
-  "<b>Résumés.</b> Même gabarit pour tous : ce que le candidat promet, notre chiffrage, le principal obstacle.",
-  "<b>Vie quotidienne.</b> Pour huit thèmes (sécurité, santé, école, environnement, logement, libertés, économie, rayonnement), on liste 1 à 5 propositions publiées par candidat. Une proposition est « vérifiable » (précise) si elle donne un chiffre, une échéance ou un moyen juridique précis, c'est-à-dire un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou accord nommé et ce qui y change) ; sinon c'est une « intention » (un objectif, une orientation, ou une création sans paramètre : plan, pôle, fonds). La même règle s'applique à tous. Chaque proposition affichée est attribuée au candidat par au moins une source qui parle pour lui : le candidat lui-même (discours, entretien, tribune, réseau officiel) ou son site de campagne ; un document officiel de son parti ou de son groupe publié après sa désignation, ou repris par lui ; une personne au rôle officiel dans sa campagne ; un média reconnu qui le cite ou rapporte précisément ses propos, datés, ou deux médias reconnus indépendants qui rapportent la même proposition ; pour une proposition de 2022, une analyse d'une institution reconnue ou d'un média reconnu qui décrit son programme officiel. Un agrégateur, un site non officiel, une seule reprise de presse sans citation ou une étude ne suffisent pas : sans autre source, la proposition n'est pas affichée (le contrôle est automatique, proposition par proposition), et une source qui parle pour le candidat remplace l'agrégateur ou le site non officiel qui portait la même proposition. Une proposition est de 2026 si une telle source la porte en 2026 (site de campagne, document du parti publié depuis la désignation, entretien) ; sinon elle est signalée « non reconfirmée », chez tous ; une page sans date ne reconfirme pas, sauf sur le site de campagne du candidat, ouvert pour cette élection, et quand une partie seulement d'une proposition est redite en 2026, les deux parties sont affichées séparément.Quand un thème compte plus de cinq propositions, on affiche, dans le même ordre pour tous : d'abord celles de 2026 (les non reconfirmées passent après), parmi elles les précises avant les intentions, puis les plus récentes ; à égalité ou à date inconnue, l'ordre déjà affiché est gardé (une page de programme mise à jour n'est pas une nouvelle annonce) ; une proposition remplacée par sa version précise n'est pas gardée en double, et une même proposition n'est affichée que dans un thème, le plus précis (l'énergie et le nucléaire dans « environnement »). Les propositions hors affichage restent notées dans le registre de suivi du projet (dépôt public). L'étiquette d'efficacité dit ce que montrent les évaluations sur ce type de mesure (prouvée, mitigée, non démontrée, pas d'étude), jamais si l'objectif est bon. Elle est calculée à partir des lectures affichées : chaque lecture d'étude, la même pour tous les candidats qui proposent ce type de mesure, a un niveau au regard de l'effet recherché (prouvé : les évaluations montrent cet effet ; mitigé : effet partiel, faible ou contrasté, obtenu avec un effet contraire notable, ou montré seulement pour une mesure voisine ; non démontré : pas d'effet, effet inverse, ou seulement un coût mesuré) ; une lecture qui constate l'absence d'évaluation compte « pas d'étude » ; une lecture qui ne donne qu'un fait (droit existant, situation de départ) n'a pas de niveau. Aucune lecture d'étude ni constat : « pas d'étude » ; toutes les lectures au même niveau : ce niveau ; sinon : « mitigée » (preuves partielles ou contrastées). Ainsi, une étiquette extrême, « prouvée » comme « non démontrée », ne tient pas sur une seule lecture quand une autre lecture du même thème constate l'absence d'évaluation. Les repères « où en est la France » sont les mêmes pour tous les candidats : pour chaque thème, 7 à 14 chiffres officiels (SSMSI, Insee, DREES, DEPP, Dares, COR, Ofpra, Ancols, Eurostat, OCDE, OTAN, RTE, SDES, Citepa, Banque de France, Cour des comptes, Sénat, etc. ; seul le classement de la liberté de la presse vient d'une ONG, RSF, et il est signalé comme tel), choisis parmi ceux que les bilans officiels mettent en avant, problèmes comme progrès, y compris les faits sensibles (violences sexuelles, part des étrangers parmi les mis en cause) avec leur définition exacte. Chacun donne le dernier chiffre publié, de préférence son évolution sur au moins cinq ans (jamais depuis une année choisie pour son creux ou son pic), et la précaution de lecture donnée par la source (par exemple : délinquance enregistrée, pas commise ; « mis en cause » n'est pas « condamné »). Quatre sont affichés, les autres se déplient. Une même étude est lue de la même façon pour tous les candidats qui proposent ce type de mesure ; le site de campagne d'un candidat n'est jamais utilisé comme source sur un autre.",
-  "<b>Simulateur.</b> Il applique à votre situation tout paramètre annoncé et confirmé, qu'il soit compté ou non dans notre total (si un paramètre clé manque, une note le dit), à terme, sans les mesures de financement : retraite comparée au droit actuel après la suspension de la réforme 2023 ; SMIC 1 477,93 € net (juin 2026) ; barème 2026 de l'impôt sur le revenu avec décote, sur le net imposable, pour une personne seule (parent isolé si elle a des enfants) ; allocations familiales 2026 avant modulation. Les pertes sont comptées comme les gains : aides réservées selon la nationalité ou la durée de séjour (même calcul pour les quatre candidats qui en proposent, chacun avec sa condition, « si la révision de la Constitution passe », et pour un ressortissant de l'UE « si le droit de l'UE change »), gel des prestations, baisse des minima ; le logement compte aussi (APL réservées selon la nationalité, relevées de 10 % ou gelées, à partir du montant que vous indiquez ; les mesures sans paramètre publié, comme la déduction des intérêts d'emprunt ou les prêts à taux zéro, sont signalées en note) ; les jours de carence et la durée du chômage sont affichés à part, car ils ne jouent qu'en cas d'arrêt ou de chômage long. Le report de l'âge de la retraite est exprimé en années, avec la durée de cotisation pour le taux plein quand elle est publiée. Un avantage déjà acquis aujourd'hui n'est pas compté comme un gain (heures sup : impôt et cotisations du salarié déjà exonérés). La fin des certificats d'économies d'énergie compte −7 c€ par litre de carburant, TTC (coût moyen officiel de 2022 à 2025), la même hypothèse pour tous les candidats qui la proposent. Une hausse publiée en fourchette (« jusqu'à ») compte pour son montant minimal, l'autre borne étant donnée en note (salaires des enseignants, la même règle pour tous les candidats qui en proposent) ; un gel ne s'applique qu'aux prestations que le programme nomme. Un gain publié pour quelques niveaux de salaire seulement (au SMIC et au salaire médian, par exemple) est appliqué entre ces niveaux par interpolation (notre calcul), au prorata du salaire en dessous du premier, et rien n'est calculé au-dessus du dernier tant que le barème n'est pas publié (une note le dit), sauf quand le mécanisme publié vaut pour tous les salaires (par exemple des cotisations en moins « dès le premier euro ») : le gain est alors au prorata du salaire au-dessus du dernier niveau aussi. Les gains de salaire (hausse du SMIC, du point d'indice ou des salaires des enseignants, baisse de la CSG ou des cotisations) sont comptés après l'impôt sur le revenu qu'ils font payer, avec le même barème pour tous, après la réforme de l'impôt du candidat s'il en propose une : le revenu imposable augmente de la hausse de salaire (rapportée au net imposable) ou de la part déductible du prélèvement baissé (entière pour des cotisations, 6,8 points sur 9,2 pour une baisse de CSG dont la part n'est pas précisée) ; l'impôt dû apparaît sur une ligne à part, et il est nul pour qui reste sous le seuil d'imposition. Ce sont des ordres de grandeur.",
+  "<b>Verdicts.</b> Le verdict porte sur la voie juridique et pratique de la mesure, ni sur son coût ni sur l'écart entre le chiffre annoncé par le camp et notre chiffrage, que le chiffrage montre déjà, pour tous. Faisable : par décret ou par une loi ordinaire (lois de finances et de financement de la Sécurité sociale comprises), sans autre condition hors de cette décision, avec la majorité à l'Assemblée que suppose tout programme ; « faisable » ne dit rien du coût (c'est le chiffrage) ni de l'effet de la mesure ; une dépense ou une baisse d'impôt ou de cotisations non financée reste faisable, et l'obstacle le dit (« financement non précisé dans la mesure »). Sous conditions : la mesure dépend d'une condition identifiée hors de cette décision (accord de tiers : collectivités, partenaires sociaux, autre État ou institution ; contrats en cours ; obligation européenne à remplir par d'autres moyens ; capacités à bâtir : recrutements, places, constructions, moyens de contrôle ; rendement ou contenu d'une autre mesure ; risque de censure sur un point précis). Un paramètre, un contenu ou une échéance non publiés ne changent pas le verdict : l'obstacle les dit (« … non publié »), et la mesure est non chiffrable ou comptée selon la règle des objectifs. Assurance chômage : ses règles sont fixées par une convention des partenaires sociaux agréée par le Gouvernement, par décret faute d'accord, ou par la loi : la décision reste publique, la mesure est faisable. Très difficile : accord extérieur nécessaire, à l'unanimité des États de l'UE ou d'autres États, ou censure probable au vu de décisions ou d'avis sur des dispositifs proches. Exige une révision : impossible en l'état du droit sans réviser la Constitution ou les traités ; la fiche indique le chemin et qui doit dire oui. Une même situation juridique reçoit le même verdict chez tous les candidats ; une fiche qui réunit plusieurs mesures prend le verdict de la plus contraignante.",
+  "<b>Sources.</b> 371 sources distinctes pour les chiffrages des fiches, sans compter celles du quiz, des repères et du volet « Vie quotidienne ». L'année des chiffrages publiés est affichée ; « base 2022 » signale une estimation antérieure au programme 2027, « agrégateur » un site de synthèse à confirmer par une source primaire (repéré par son nom de domaine exact, et signalé partout où il est cité : estimations, données d'entrée, Vie quotidienne). Une source a une seule année, celle de sa publication, et un seul titre (son auteur et sa date), partout où elle est citée ; dans les repères « où en est la France », l'année indiquée est celle du chiffre (« données 2025 »).",
+  "<b>Résumés.</b> Même gabarit pour tous : ce que le candidat promet, notre chiffrage, le principal obstacle. Celui-ci est la condition juridique ou pratique des mesures retenues qui ont le verdict le plus contraignant (« exige une révision » d'abord, puis « très difficile »), jamais un coût, un rendement ou un paramètre non publié.",
+  "<b>Vie quotidienne.</b> Pour huit thèmes (sécurité, santé, école, environnement, logement, libertés, économie, rayonnement), on liste 1 à 5 propositions publiées par candidat. Une proposition est « vérifiable » (précise) si elle donne un chiffre, une échéance ou un moyen juridique précis, c'est-à-dire un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou accord nommé et ce qui y change) ; sinon c'est une « intention » (un objectif, une orientation, ou une création sans paramètre : plan, pôle, fonds). La même règle s'applique à tous. Chaque proposition affichée est attribuée au candidat par au moins une source qui parle pour lui : le candidat lui-même (discours, entretien, tribune, réseau officiel) ou son site de campagne ; un document officiel de son parti ou de son groupe publié après sa désignation, ou repris par lui ; une personne au rôle officiel dans sa campagne ; un média reconnu qui le cite ou rapporte précisément ses propos, datés, ou deux médias reconnus indépendants qui rapportent la même proposition ; pour une proposition de 2022, une analyse d'une institution reconnue ou d'un média reconnu qui décrit son programme officiel. Un agrégateur, un site non officiel, une seule reprise de presse sans citation ou une étude ne suffisent pas : sans autre source, la proposition n'est pas affichée (le contrôle est automatique, proposition par proposition), et une source qui parle pour le candidat remplace l'agrégateur ou le site non officiel qui portait la même proposition. Une proposition est de 2026 si une telle source la porte en 2026 (site de campagne, document du parti publié depuis la désignation, entretien) ; sinon elle est signalée « non reconfirmée », chez tous ; une page sans date ne reconfirme pas, sauf sur le site de campagne du candidat, ouvert pour cette élection, et quand une partie seulement d'une proposition est redite en 2026, les deux parties sont affichées séparément. Quand un thème compte plus de cinq propositions, on affiche, dans le même ordre pour tous : d'abord celles de 2026 (les non reconfirmées passent après), parmi elles les précises avant les intentions, puis les plus récentes ; à égalité ou à date inconnue, l'ordre déjà affiché est gardé (une page de programme mise à jour n'est pas une nouvelle annonce) ; une proposition remplacée par sa version précise n'est pas gardée en double, et une même proposition n'est affichée que dans un thème, le plus précis (l'énergie et le nucléaire dans « environnement »). Les propositions hors affichage restent notées dans le registre de suivi du projet (dépôt public). Le site n'affiche pas d'avis d'études sur ces propositions : seules les sources qui les attribuent au candidat sont données. Les repères « où en est la France » sont les mêmes pour tous les candidats : pour chaque thème, 7 à 14 chiffres officiels (SSMSI, Insee, DREES, DEPP, Dares, COR, Ofpra, Ancols, Eurostat, OCDE, OTAN, RTE, SDES, Citepa, Banque de France, Cour des comptes, Sénat, etc. ; seul le classement de la liberté de la presse vient d'une ONG, RSF, et il est signalé comme tel), choisis parmi ceux que les bilans officiels mettent en avant, problèmes comme progrès, y compris les faits sensibles (violences sexuelles, part des étrangers parmi les mis en cause) avec leur définition exacte. Chacun donne le dernier chiffre publié, de préférence son évolution sur au moins cinq ans (jamais depuis une année choisie pour son creux ou son pic), et la précaution de lecture donnée par la source (par exemple : délinquance enregistrée, pas commise ; « mis en cause » n'est pas « condamné »). Quatre sont affichés, les autres se déplient. Le site de campagne d'un candidat n'est jamais utilisé comme source sur un autre.",
+  "<b>Simulateur.</b> Il applique à votre situation tout gain ou toute perte que le candidat a publiés et confirmés en 2026, qu'ils soient comptés ou non dans notre total, à terme, sans les mesures de financement ; aucun gain n'est compté pour une mesure non confirmée ou sans montant publié (si un paramètre clé manque, une note le dit, sans montant). Droit actuel : retraite comparée au droit actuel après la suspension de la réforme 2023 ; SMIC 1 477,93 € net (juin 2026) ; AAH 1 041,59 € par mois au maximum ; barème 2026 de l'impôt sur le revenu avec décote, sur le net imposable, pour une personne seule (parent isolé si elle a des enfants), le même pour les actifs et les retraités (pour une pension : abattement de 10 %, au moins 454 € par pensionné et au plus 4 439 € par foyer, et CSG au taux normal) ; allocations familiales 2026 avant modulation. Les pertes sont comptées comme les gains : aides réservées selon la nationalité ou la durée de séjour (même calcul pour les quatre candidats qui en proposent, chacun avec sa condition, « si la révision de la Constitution passe », et pour un ressortissant de l'UE « si le droit de l'UE change » ; l'AAH suit la condition des minima sociaux chez ces quatre candidats, leur mesure visant toutes les prestations non contributives ou nommant l'AAH), gel des prestations, baisse des minima ; le logement compte aussi (APL réservées selon la nationalité, relevées de 10 % ou gelées, à partir du montant que vous indiquez ; les mesures sans paramètre publié, comme la déduction des intérêts d'emprunt ou les prêts à taux zéro, sont signalées en note) ; les jours de carence et la durée du chômage sont affichés à part, dans les deux sens (une durée allongée comme une durée raccourcie), car ils ne jouent qu'en cas d'arrêt ou de chômage long ; un service obligatoire des jeunes est affiché à part pour les 17-25 ans, avec la rémunération publiée ou retenue dans la fiche, ou une note si elle n'est pas publiée. Le SMIC est un plancher : pour un agent public, le nouveau traitement est le plus élevé des deux, salaire relevé par le point d'indice ou nouveau SMIC, jamais leur somme. Une AAH relevée augmente d'autant l'allocation de tout allocataire (elle complète ses autres ressources jusqu'au montant maximal). Le report de l'âge de la retraite est exprimé en années, avec la durée de cotisation pour le taux plein quand elle est publiée. Un avantage déjà acquis aujourd'hui n'est pas compté comme un gain (heures sup : impôt et cotisations du salarié déjà exonérés). La fin des certificats d'économies d'énergie compte −7 c€ par litre de carburant, TTC (coût moyen officiel de 2022 à 2025), la même hypothèse pour tous les candidats qui la proposent. Une hausse publiée en fourchette (« jusqu'à ») compte pour son montant minimal, l'autre borne étant donnée en note (salaires des enseignants, la même règle pour tous les candidats qui en proposent) ; un gel ne s'applique qu'aux prestations que le programme nomme. Un gain publié pour quelques niveaux de salaire seulement (au SMIC et au salaire médian, par exemple) est appliqué entre ces niveaux par interpolation (notre calcul), au prorata du salaire en dessous du premier, et rien n'est calculé au-dessus du dernier tant que le barème n'est pas publié (une note le dit), sauf quand le mécanisme publié vaut pour tous les salaires (par exemple des cotisations en moins « dès le premier euro ») : le gain est alors au prorata du salaire au-dessus du dernier niveau aussi. Un gain publié qui comprend ou remplace une baisse déjà calculée (une baisse de la CSG, par exemple) ne s'y ajoute jamais : le plus grand des deux est retenu jusqu'au dernier niveau publié, la baisse déjà calculée seule au-delà. Une baisse de cotisations annoncée pour les « salariés », sans exclure le public, est appliquée aussi aux agents publics (hypothèse écrite dans la note, la même pour tous). Les gains de salaire (hausse du SMIC, du point d'indice ou des salaires des enseignants, baisse de la CSG ou des cotisations) sont comptés après l'impôt sur le revenu qu'ils font payer, avec le même barème pour tous, après la réforme de l'impôt du candidat s'il en propose une : le revenu imposable augmente de la hausse de salaire (rapportée au net imposable) ou de la part déductible du prélèvement baissé (entière pour des cotisations, 6,8 points sur 9,2 pour une baisse de CSG dont la part n'est pas précisée) ; l'impôt dû apparaît sur une ligne à part, et il est nul pour qui reste sous le seuil d'imposition. Pour un retraité, la même règle vaut pour une variation de la pension (un gel fait baisser un peu l'impôt), et la réforme de l'impôt du candidat qui vaut pour tous les contribuables est appliquée (part fiscale, quotient familial, fin de l'abattement de 10 % sur les pensions). Ce sont des ordres de grandeur.",
   "<b>Quiz.</b> 20 duels tirés au hasard entre deux candidats sur un même thème ; chaque candidat apparaît 5 fois et aucune paire ne se répète. Deux propositions de la même famille (même sens et même instrument : deux retours à 62 ans, deux plans de suppression de postes, deux hausses du salaire des enseignants…) ne s'affrontent jamais, et une famille ne revient qu'une fois par partie : sont de la même famille les propositions qui ont le même « Pour » et le même « Contre », et celles d'une liste publiée avec les données. Les duels portent sur les mesures des fiches (chiffrées ou non chiffrables) et sur les propositions précises et reconfirmées du volet « Vie quotidienne » (école, santé, logement, économie) ; un candidat sans proposition de ce type sur un thème n'y apparaît pas. À l'accueil, on peut choisir les thèmes qui comptent pour soi : ils reviennent plus souvent et comptent double dans le résultat. Chaque proposition est reformulée en langage courant. Dessous, un constat : la réalité française que la proposition veut traiter, avec le chiffre officiel (le dernier chiffre officiel et son évolution en %, même forme pour toutes ; les problèmes réels sont dits clairement, sans cause ni jugement) ; une mesure institutionnelle ou d'organisation (Constitution, référendum, organisation de l'État, des agences ou des établissements), ou une mesure dont aucune série officielle ne mesure ce qu'elle vise, n'a pas de constat, avec la même règle pour toutes. Puis « Pour » et « Contre » donnent en une ligne le meilleur argument réel de ceux qui la défendent et de ceux qui la critiquent : un fait que la proposition ne dit pas d'elle-même (ce qui s'est passé quand elle a été appliquée, un ordre de grandeur), jamais la proposition redite autrement ; avec la force des preuves de chacun (solides, mitigées, faibles, pas d'étude). Sous le duel, des cas réels sourcés (en France d'abord) et l'état des études. Même méthode pour toutes les mesures, sans fausse symétrie : on n'invente ni argument ni exemple pour équilibrer, et un exemple n'est retenu que s'il est pertinent, observé et de source reconnue ; on montre où penchent les faits et le lecteur juge ; les mesures du même type ont les mêmes cas et les mêmes niveaux de preuve. Le « Contre » tient compte du reste du programme : si une autre mesure du même candidat répond à la critique, elle est signalée. Pas de nom de candidat, pas de coût de la mesure, pas de faisabilité juridique, pas de jugement. Le résultat montre d'abord le ou les candidats les plus proches et ce qu'impliquent les propositions retenues (faisabilité, déficit ; « Les deux » compte la moyenne des deux effets), puis une pastille par proposition vue. La proximité est la part des propositions d'un candidat que vous avez retenues (choisie ou « Les deux ») ; une proposition d'un thème que vous marquez compte deux fois. Les égalités ne sont jamais départagées : les ex æquo sont signalés et affichés dans un ordre tiré au hasard. Suivent la tendance par thème, ce qui colle et ce qui colle moins chez les plus proches, et le détail des duels.",
   "<b>Sondages et contexte.</b> Intentions de vote au 1er tour : un seul institut dans la fenêtre (Ifop pour LCI, du 27 au 29/10), dernière vague de chacun dont le terrain s'est achevé dans les 15 jours précédant le 08/11/2026, 15e jour compris ; pour chaque institut, milieu de la fourchette des hypothèses où le candidat est testé, même poids pour chaque institut. L'ordre des candidats suit cette moyenne, et la date de la moyenne est affichée à côté des intentions de vote. Source : notices de la Commission des sondages ; sondages masqués la veille et le jour de chaque tour. PLF 2027, Insee, taux à 10 ans d'octobre 2026. Ménages : 30,9 millions (Insee). 1 point de PIB ≈ 30 Md€."
  ],
@@ -17700,7 +17780,12 @@
    "url_decote": "https://www.service-public.gouv.fr/particuliers/vosdroits/F34328",
    "net_imposable": 1.036,
    "plafond_demi_part": 1807,
-   "plafond_parent_isole": 4262
+   "plafond_parent_isole": 4262,
+   "net_imposable_pension": 1.035,
+   "abat_pension_min": 454,
+   "abat_pension_max": 4439,
+   "url_pensions": "https://www.service-public.gouv.fr/particuliers/vosdroits/F415",
+   "url_csg_pensions": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2971"
   },
   "salaire_moyen": 2797,
   "salaire_moyen_url": "https://www.insee.fr/fr/statistiques/9087193",
@@ -17715,7 +17800,9 @@
   "salaries_url": "https://www.insee.fr/fr/statistiques/8733039?sommaire=8733125",
   "prix_sp95": 1.94,
   "prix_gazole": 1.98,
-  "prix_carburant_url": "https://www.ecologie.gouv.fr/sites/default/files/documents/Prix%20HTT%20et%20TTC%20depuis%20janvier%202020_0.xlsx"
+  "prix_carburant_url": "https://www.ecologie.gouv.fr/sites/default/files/documents/Prix%20HTT%20et%20TTC%20depuis%20janvier%202020_0.xlsx",
+  "aah": 1041.59,
+  "aah_url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12242"
  },
  "base_url": "https://claude.ai/artifact/WJ9R1g2Hyxkmrs7YbwVRZB",
  "blackout": [
@@ -17727,7 +17814,15 @@
  "changelog": [
   {
    "date": "08/11/2026",
-   "text": "Faisabilité : le verdict juge seulement la voie juridique et pratique de la mesure, jamais son coût, l'écart avec le chiffre du camp ni la précision du programme. « Sous conditions » est réservé aux mesures qui dépendent d'une condition hors de la décision (accord des collectivités, des partenaires sociaux, d'un autre État ou d'une institution ; contrats en cours ; obligation européenne ; capacités à bâtir ; autre mesure ; risque de censure précis) ; un paramètre, un contenu ou une échéance non publiés sont dits dans l'obstacle sans changer le verdict. 22 mesures passent de « sous conditions » à « faisable » : Mélenchon 5 (retraites, niches fiscales, assurance chômage, culture, aide au développement), Philippe 4 (impôts de production, assurance chômage, allocation familiale, heures sup), Attal 3 (retraites, assurance chômage, plan IA), Lisnard 3 (retraites, allocation unique, fiscalité foncière), Retailleau 3 (retraites, aides plafonnées, assurance chômage), Glucksmann 2 (héritages, leasing social), Le Pen 1 (mesures sectorielles), Zemmour 1 (retraites). Une seule règle pour l'assurance chômage (convention agréée, décret faute d'accord ou loi : faisable) et pour la retraite par capitalisation créée par la loi (faisable ; Philippe reste sous conditions, sa capitalisation reposant sur les réserves de l'Agirc-Arrco, gérées par les partenaires sociaux) ; même obstacle pour les quatre services civiques ou nationaux obligatoires (capacités d'accueil). Obstacles relus pour tous les verdicts : plus aucun ne repose sur un coût ou un chiffre du camp (aide médicale d'État, SMIC, annulation de la dette, prisons, entre autres). Totaux inchangés."
+   "text": "Simulateur revu, même règle pour les 8 : un gain publié et confirmé compte, au montant minimal d'une fourchette, sans le financement ; aucun gain sans montant publié. Retailleau : la baisse des cotisations salariales suit le montant publié (41,7 €/mois au salaire médian), au prorata en dessous comme au-dessus. Lisnard : 200 €/mois au salaire médian (le bas de « 200 à 400 € »), au prorata en dessous, à la place de la baisse de la CSG et non en plus ; au-delà, la baisse de la CSG seule. Agent public au SMIC chez Mélenchon : 222 € au lieu de 340 €, le SMIC relevé et le point d'indice ne s'additionnent plus. Nouveau profil AAH : +658 €/mois chez Mélenchon (AAH à 1 700 €), perte selon la même condition que les minima pour les étrangers chez Le Pen, Retailleau, Lisnard et Zemmour, gel chez Attal. Impôt des retraités calculé comme celui des actifs : fin de l'abattement de 10 % chez Lisnard (−37 €/mois pour 2 300 € de pension), part fiscale de Le Pen. Durée du chômage allongée chez Mélenchon (24 mois) affichée comme les baisses de Philippe, Attal et Retailleau ; service citoyen de Mélenchon (1 700 € pendant 9 mois) affiché comme celui de Glucksmann. Notes ajoutées : « 100 % Sécu », planification et héritages de Mélenchon, soins dentaires, proches aidants, prêt aux jeunes ménages et flat tax de Le Pen, MaPrimeRénov' de Zemmour, engagement civique d'Attal, service national de Philippe."
+  },
+  {
+   "date": "08/11/2026",
+   "text": "Vie quotidienne : le bloc sur les études est retiré ; chaque proposition garde les sources qui l'attribuent au candidat, sans étiquette d'efficacité. La méthode est mise à jour."
+  },
+  {
+   "date": "08/11/2026",
+   "text": "Faisabilité : le verdict juge seulement la voie juridique et pratique de la mesure, jamais son coût, l'écart avec le chiffre du camp ni la précision du programme. « Sous conditions » est réservé aux mesures qui dépendent d'une condition hors de la décision (accord des collectivités, des partenaires sociaux, d'un autre État ou d'une institution ; contrats en cours ; obligation européenne ; capacités à bâtir ; autre mesure ; risque de censure précis) ; un paramètre, un contenu ou une échéance non publiés sont dits dans l'obstacle sans changer le verdict. 22 mesures passent de « sous conditions » à « faisable » : Mélenchon 5 (retraites, niches fiscales, assurance chômage, culture, aide au développement), Philippe 4 (impôts de production, assurance chômage, allocation familiale, heures sup), Attal 3 (retraites, assurance chômage, plan IA), Lisnard 3 (retraites, allocation unique, fiscalité foncière), Retailleau 3 (retraites, aides plafonnées, assurance chômage), Glucksmann 2 (héritages, leasing social), Le Pen 1 (mesures sectorielles), Zemmour 1 (retraites). Une seule règle pour l'assurance chômage (convention agréée, décret faute d'accord ou loi : faisable) et pour la retraite par capitalisation créée par la loi (faisable ; Philippe reste sous conditions, sa capitalisation reposant sur les réserves de l'Agirc-Arrco, gérées par les partenaires sociaux) ; même obstacle pour les quatre services civiques ou nationaux obligatoires (capacités d'accueil). Obstacles relus pour tous les verdicts : plus aucun ne repose sur un coût ou un chiffre du camp (aide médicale d'État, SMIC, annulation de la dette, prisons, entre autres). Fin de MaPrimeRénov' (Retailleau) et suppression de l'Anah (Zemmour) : « sous conditions », comme la fin des certificats d'économies d'énergie des mêmes candidats, la directive européenne de 2024 sur les bâtiments imposant un objectif de rénovation du parc de logements d'ici 2030. Résumés : le principal obstacle est, pour les 8, la condition juridique ou pratique des mesures au verdict le plus contraignant (Mélenchon, Glucksmann, Attal, Lisnard, Philippe, Le Pen et Zemmour réécrits ; Retailleau inchangé). Totaux inchangés. « Faisable » est défini en clair : possible par décret ou par une loi ordinaire, avec une majorité à l'Assemblée ; cela ne dit rien du coût, qui est dans le chiffrage."
   },
   {
    "date": "08/11/2026",
@@ -17736,10 +17831,6 @@
   {
    "date": "08/11/2026",
    "text": "Veille du 3 au 8/11, même règle pour les 8 ; aucun autre total ne change. Le Pen : la TVA à 5,5 % sur l'électricité, adoptée en première lecture du budget 2027, est signalée dans la fiche (rien de définitif). Attal : chiffre annoncé pour la réforme de l'assurance chômage (5 Md€) affiché. Retailleau : exonération présentée « à partir de la 36e heure » ; délit de pillage et suppression du juge d'application des peines ; 1 000 établissements publics « innovants » d'ici 2032. Lisnard : délit de pillage ; capitalisation obligatoire signalée. Attal : réseaux sociaux interdits aux moins de 15 ans et couvre-feu numérique. Zemmour : « un an » de chômage confirmé (BFMTV, 17/09)."
-  },
-  {
-   "date": "08/11/2026",
-   "text": "Simulateur : la baisse des cotisations salariales de Retailleau suit le montant publié par le candidat (environ 500 € nets par an au salaire médian, soit 41,7 €/mois), au prorata du salaire en dessous comme au-dessus, le mécanisme (« dès le premier euro ») valant pour tous les salaires ; avant, 46,4 €/mois au salaire moyen. Lisnard : la promesse de 200 à 400 € par mois au salaire médian (BFMTV, 3/11) est citée, sans gain calculé, la baisse des cotisations n'étant pas chiffrée."
   },
   {
    "date": "08/11/2026",
