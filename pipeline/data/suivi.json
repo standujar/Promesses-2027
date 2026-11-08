@@ -1,5 +1,5 @@
 {
- "derniere_revue": "2026-11-03",
+ "derniere_revue": "2026-11-08",
  "points": [
   {
    "id": "S001",
@@ -11,10 +11,10 @@
    "sujet": "Programme « L'avenir en commun » 2027",
    "detail": "Publication annoncée le 6 novembre 2026, convention le 7 : revoir toutes les mesures LFI (chiffres, mesures ajoutées ou abandonnées). Veille du 29/10 : dates confirmées par le site officiel (28/10) : livre-programme en librairie le 6 novembre, meeting de présentation le samedi 7 novembre à 15 h au Bourget. Plan thématique « Enseignement supérieur et recherche » publié le 26/10 (fiche « recherche », non chiffrable, voir S085). Revue du 29/10 : plan d'urgence du groupe LFI pour l'éducation (1/09) : +20 % pour les enseignants contre +10 % pour tous les fonctionnaires dans la note du 14/10 (la note prévaut, fiche point d'indice) ; gratuité scolaire et AESH titularisés en « non compté » (S099). Veille du 29/10 : à vérifier dans le programme du 6/11, avec la même règle que pour les autres : la baisse de 5 Md€ de la contribution française à l'UE « comme levier de négociation » (LCP 24/10, sans citation ; la proposition est affichée comme intention, sans le montant) ; une éventuelle régularisation des travailleurs sans papiers (même thème que Glucksmann). « Discours sur la paix » annoncé le 11/11 (site officiel). Revue du 31/10 : aucune pré-annonce de mesure ou de chiffre depuis le 29/10 (melenchon2027.fr : réunions publiques, pages « programme » et « espace presse » inchangées depuis le 28/10 ; lafranceinsoumise.fr : appels à manifester des 30 et 31/10). À vérifier le 6/11 : la propriété comme « droit d'usage » (melenchon.fr, 29/10 : texte « intégré au cadre d'ensemble de notre programme », sans mesure ni chiffre) et l'indexation automatique des salaires du privé sur l'inflation (proposition de loi des députés LFI de septembre, rappelée par Public Sénat le 30/10 ; sans coût public direct). Revue du 1/11 : aucune fuite officielle du programme (melenchon2027.fr, lafranceinsoumise.fr, melenchon.fr ; compte X : manifestation du 31/10, critique des chaînes d'information le 1/11) ; deux pages non officielles qui résument un « programme Mélenchon » (sous-domaines workers.dev et netlify) écartées. Régularisation : la synthèse des contributions du site (17/07/2026) la dit déjà au programme pour les travailleurs, étudiants et parents d'enfants scolarisés : affichée comme intention (S204) ; à revoir le 6/11 (nombre, critères). Revue du 2/11 : aucune fuite officielle du programme (sites de campagne et compte X). M. Aubry (députée européenne LFI, sans rôle de campagne établi) parle de « 10 milliards d'euros » pour l'éducation (Sud Radio, 2/11) : à vérifier dans le livre du 6/11, rien à changer avant (une personne sans rôle officiel dans la campagne ne parle pas pour le candidat). Blocage des prix de l'essence : déjà en fiche « prix ». Revue du 3/11 : aucune fuite officielle ; LFI confirme le 2/11 (lafranceinsoumise.fr, 19 h 27) la sortie en librairie le vendredi 6/11 (5e édition, 1 069 mesures) et le meeting du Bourget le samedi 7/11, consacré au programme. Le 3/11, le candidat évoque la détention provisoire et les bracelets électroniques en une phrase (« Peut-être faudrait-il s'interroger… », compte X) : intention sans paramètre, à revoir dans le thème justice du livre. Au 6/11, relever aussi le taux et l'assiette de la taxe sur les transactions financières (fiche ramenée à +2,5 le 3/11, S176).",
    "echeance": "2026-11-06",
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-10-27",
-   "maj": "2026-11-03",
-   "resolution": null
+   "maj": "2026-11-08",
+   "resolution": "Programme « L'Avenir en commun » publié le 6/11/2026 (melenchon2027.fr/programme/livre/, domaine officiel du candidat ; lafranceinsoumise.fr annonce la sortie le 2/11 et renvoie vers ce site) et intégré le 8/11 (corrections.py, bloc « review 41 » ; life.py, même bloc) : aide au développement comptée (−4,5) ; plan santé (−14,7, règle commune des recrutements publics, S217) ; « 100 % Sécu » (−35,8), service citoyen (−12,8), AAH au SMIC (−9,5), plan contre le racisme (−1,0) ; planification = plans d'investissement de l'État publiés (−13,2) ; mesures sans coût publié listées « non comptées » ; notes et sources du programme ajoutées aux fiches reconfirmées (SMIC, violences, cantine, chômage, dette, Constituante, culture, taxe sur les transactions financières, fraude, point d'indice, retraites, fiscalité, niches, jeunes). Total de −147,6 à −226,1 Md€. Taxe sur les transactions financières : ni taux ni assiette dans le programme (« Instaurer une taxe réelle sur les transactions financières »), fiche inchangée (+2,5). Détention provisoire et bracelets (3/11) : aucune ligne dans le texte en ligne. Contribution à l'UE comme levier : inchangée. Chiffrage complet du camp annoncé « au début de l'année 2027 » (Public Sénat, 6/11) ; mesures absentes du texte en ligne : S212."
   },
   {
    "id": "S002",
@@ -24,11 +24,11 @@
    ],
    "mesure": "retraites",
    "sujet": "Détail de la réforme des retraites du RN",
-   "detail": "Annoncé pour le 17 novembre 2026 : paramètres (âge, annuités, capitalisation) et chiffrage du camp ; appliquer la valeur commune du retour à 62 ans. Veille du 29/10 : rien de nouveau ; la date du 17/11 n'a pas pu être revérifiée à une source ouverte (seule mention : le JDD, bloqué), aucune source ne la dément. Veille du 29/10 : date du 17/11 vérifiée (Europe 1, Objectif Élysée 2027, 15/10 : « Marine Le Pen compte proposer une nouvelle réforme des retraites le 17 novembre prochain » ; 60 ans et 40 annuités avant 20 ans, sinon progressivement 62 ans et 42 annuités) ; source ajoutée à la fiche, chiffrage inchangé. Revue du 31/10 : rien de publié du 29 au 31/10 (communiqués du RN des 27, 28 et 30/10, pétitions du site, Europe 1 du 15/10 qui redit la date du 17/11) ; valeur commune du retour à 62 ans à appliquer le 17/11. Revue du 1/11 : rien de publié du 31/10 au 1/11 (communiqués du RN, pétitions, discours, deputes-rn.fr, compte X de la candidate). Source de la date : franceinfo (14/10/2026, 23 h 48), citation de la candidate (« Nous la présenterons de manière chiffrée »), ajoutée à la fiche à côté d'Europe 1 (15/10) ; aucun agrégateur n'est cité pour cette date. Revue du 2/11 : rien de publié (communiqués, pétitions, discours, deputes-rn.fr, compte X de la candidate). Les seuls chiffres trouvés en ligne (« 9 milliards » pour la mesure d'âge, « 15 à 20 milliards » d'économies) viennent d'un site non officiel : non retenus. Revue du 3/11 : rien de publié du 2/11 au soir au 3/11 (10 h 30) (communiqués, deputes-rn.fr, compte X de la candidate, qui redit la baisse de la TVA sur l'énergie et demande l'usage des stocks stratégiques de carburants, outil existant : S134). J. Bardella, sans rôle de campagne (S074), est invité de TF1 le 3/11, de RTL le 4/11 et de CNews le 6/11, et son livre sort le 4/11 : ses propos ne comptent que s'ils sont repris par la candidate ou un porte-parole.",
+   "detail": "Annoncé pour le 17 novembre 2026 : paramètres (âge, annuités, capitalisation) et chiffrage du camp ; appliquer la valeur commune du retour à 62 ans. Veille du 29/10 : rien de nouveau ; la date du 17/11 n'a pas pu être revérifiée à une source ouverte (seule mention : le JDD, bloqué), aucune source ne la dément. Veille du 29/10 : date du 17/11 vérifiée (Europe 1, Objectif Élysée 2027, 15/10 : « Marine Le Pen compte proposer une nouvelle réforme des retraites le 17 novembre prochain » ; 60 ans et 40 annuités avant 20 ans, sinon progressivement 62 ans et 42 annuités) ; source ajoutée à la fiche, chiffrage inchangé. Revue du 31/10 : rien de publié du 29 au 31/10 (communiqués du RN des 27, 28 et 30/10, pétitions du site, Europe 1 du 15/10 qui redit la date du 17/11) ; valeur commune du retour à 62 ans à appliquer le 17/11. Revue du 1/11 : rien de publié du 31/10 au 1/11 (communiqués du RN, pétitions, discours, deputes-rn.fr, compte X de la candidate). Source de la date : franceinfo (14/10/2026, 23 h 48), citation de la candidate (« Nous la présenterons de manière chiffrée »), ajoutée à la fiche à côté d'Europe 1 (15/10) ; aucun agrégateur n'est cité pour cette date. Revue du 2/11 : rien de publié (communiqués, pétitions, discours, deputes-rn.fr, compte X de la candidate). Les seuls chiffres trouvés en ligne (« 9 milliards » pour la mesure d'âge, « 15 à 20 milliards » d'économies) viennent d'un site non officiel : non retenus. Revue du 3/11 : rien de publié du 2/11 au soir au 3/11 (10 h 30) (communiqués, deputes-rn.fr, compte X de la candidate, qui redit la baisse de la TVA sur l'énergie et demande l'usage des stocks stratégiques de carburants, outil existant : S134). J. Bardella, sans rôle de campagne (S074), est invité de TF1 le 3/11, de RTL le 4/11 et de CNews le 6/11, et son livre sort le 4/11 : ses propos ne comptent que s'ils sont repris par la candidate ou un porte-parole. Revue du 8/11 : rien de publié du 3 au 8/11. Source ouverte pour la date du 17/11 : franceinfo, 14/10/2026, conférence de presse de Bruxelles (« Nous la présenterons de manière chiffrée » ; « maintenir un âge légal entre 60 et 62 ans en fonction de l'âge d'entrée sur le marché du travail ») : https://www.franceinfo.fr/elections/presidentielle/marine-le-pen-presentera-de-maniere-extremement-precise-sa-reforme-des-retraites-le-17-novembre_8237821.html ; les « 40 à 42 annuités » et « 15 à 20 milliards » sont des mots de l'article, pas des citations. Le 5/11 (Euronaval, AFP), la candidate redit l'exonération des hausses de salaire de 10 %, sans plafond ni durée nouveaux.",
    "echeance": "2026-11-17",
    "statut": "ouvert",
    "cree": "2026-10-27",
-   "maj": "2026-11-03",
+   "maj": "2026-11-08",
    "resolution": null
   },
   {
@@ -52,11 +52,11 @@
    "candidats": [],
    "mesure": null,
    "sujet": "Sondages",
-   "detail": "Dernier sondage pris en compte : Ipsos-BVA des 21-22/10/2026. Mettre à jour `poll` avec institut et date à chaque nouvelle vague nationale. 29/10 : Zemmour affiché à 4-4,5 % (au lieu de 3-4,5 %), comme la notice Ipsos BVA de référence (21-22/10) ; les sept autres correspondaient déjà. 29/10 : remplacé par la moyenne des instituts (S044), données dans data/sondages.json ; à chaque nouvelle vague, mettre à jour ce fichier (date, vagues retenues, scores vérifiés sur la notice). 31/10 : mise à jour au 31/10/2026. Notices d'octobre de la Commission des sondages relues : aucune nouvelle vague nationale d'intentions de vote au 1er tour depuis le 29/10 (notices 10340 Odoxa, 10342 Elabe, 10343 Ipsos BVA, 10344 Odoxa, 10345 Toluna Harris Interactive : autres sujets). Règle, un seul libellé (méthode, data/sondages.json, CLAUDE.md, DEVELOPPER.md) : dernière vague de chaque institut dont le terrain s'est achevé dans les 15 jours, 15e jour compris. YouGov (terrain 12-15/10, 16 jours) sort ; Elabe (14-16/10, 15e jour) reste ; 6 instituts, scores inchangés (vérifiés sur les notices le 29/10). Moyennes : Le Pen 33,8 ; Mélenchon 17,2 ; Philippe 14,3 ; Glucksmann 13,9 ; Attal 7,8 ; Retailleau 7,3 ; Lisnard 6,7 ; Zemmour 4,0 ; ordre inchangé. Prochaines vagues attendues (Ifop-Fiducial, Elabe, OpinionWay) : non publiées au 31/10. Revue du 1/11 : aucune nouvelle vague publiée du 31/10 au 1/11 (Commission des sondages : notices 10340 Odoxa, popularité, et 10345 Toluna Harris Interactive, baromètre de confiance, sans intention de vote). Moyenne datée du 1/11 : Elabe (terrain du 14 au 16/10, notice 10324) sort, son terrain s'étant achevé 16 jours avant ; 5 instituts, scores inchangés. Moyennes : Le Pen 34,1 ; Mélenchon 17,5 ; Philippe 14,2 ; Glucksmann 13,6 ; Attal 7,9 ; Retailleau 7,2 ; Lisnard 6,9 ; Zemmour 4,2 ; ordre inchangé. Revue du 2/11 : aucune nouvelle vague d'intentions de vote publiée du 1/11 au 2/11 (Commission des sondages : notices 10346 CSA, autodéfense des commerçants, et 10341 Toluna Harris Interactive, niche LFI, sans intention de vote). Moyenne datée du 2/11 : mêmes 5 instituts (terrains achevés du 19 au 22/10), scores et ordre inchangés ; « exclus » mis à jour (Elabe achevé 17 jours avant, YouGov 18 jours). Ifop-Fiducial (terrain achevé le 19/10) reste jusqu'au 3/11 (15e jour compris) et sort le 4/11 sans nouvelle vague. Revue du 3/11 : aucune nouvelle vague d'intentions de vote (Commission des sondages relue vers 10 h 20 : dernière notice 10346, CSA, sans intention de vote ; dernière notice d'intentions de vote 10339, Cluster17, 26/10). Moyenne datée du 3/11 : mêmes 5 instituts, Ifop-Fiducial (terrain achevé le 19/10) au 15e jour, compris ; scores et ordre inchangés ; « exclus » mis à jour (Elabe 18 jours, YouGov 19 jours avant le 3/11). À faire le 4/11 sans nouvelle vague : retirer Ifop-Fiducial (notice 10327) des instituts et l'ajouter aux exclus (terrain du 17 au 19/10, achevé 16 jours avant) ; moyenne à 4 instituts recalculée le 3/11 (milieux des fourchettes, même arrondi) : Le Pen 33,6 ; Mélenchon 17,5 ; Philippe 14,3 ; Glucksmann 13,4 ; Attal 7,7 ; Retailleau 7,4 ; Lisnard 7,0 ; Zemmour 4,4 ; ordre inchangé.",
+   "detail": "Dernier sondage pris en compte : Ipsos-BVA des 21-22/10/2026. Mettre à jour `poll` avec institut et date à chaque nouvelle vague nationale. 29/10 : Zemmour affiché à 4-4,5 % (au lieu de 3-4,5 %), comme la notice Ipsos BVA de référence (21-22/10) ; les sept autres correspondaient déjà. 29/10 : remplacé par la moyenne des instituts (S044), données dans data/sondages.json ; à chaque nouvelle vague, mettre à jour ce fichier (date, vagues retenues, scores vérifiés sur la notice). 31/10 : mise à jour au 31/10/2026. Notices d'octobre de la Commission des sondages relues : aucune nouvelle vague nationale d'intentions de vote au 1er tour depuis le 29/10 (notices 10340 Odoxa, 10342 Elabe, 10343 Ipsos BVA, 10344 Odoxa, 10345 Toluna Harris Interactive : autres sujets). Règle, un seul libellé (méthode, data/sondages.json, CLAUDE.md, DEVELOPPER.md) : dernière vague de chaque institut dont le terrain s'est achevé dans les 15 jours, 15e jour compris. YouGov (terrain 12-15/10, 16 jours) sort ; Elabe (14-16/10, 15e jour) reste ; 6 instituts, scores inchangés (vérifiés sur les notices le 29/10). Moyennes : Le Pen 33,8 ; Mélenchon 17,2 ; Philippe 14,3 ; Glucksmann 13,9 ; Attal 7,8 ; Retailleau 7,3 ; Lisnard 6,7 ; Zemmour 4,0 ; ordre inchangé. Prochaines vagues attendues (Ifop-Fiducial, Elabe, OpinionWay) : non publiées au 31/10. Revue du 1/11 : aucune nouvelle vague publiée du 31/10 au 1/11 (Commission des sondages : notices 10340 Odoxa, popularité, et 10345 Toluna Harris Interactive, baromètre de confiance, sans intention de vote). Moyenne datée du 1/11 : Elabe (terrain du 14 au 16/10, notice 10324) sort, son terrain s'étant achevé 16 jours avant ; 5 instituts, scores inchangés. Moyennes : Le Pen 34,1 ; Mélenchon 17,5 ; Philippe 14,2 ; Glucksmann 13,6 ; Attal 7,9 ; Retailleau 7,2 ; Lisnard 6,9 ; Zemmour 4,2 ; ordre inchangé. Revue du 2/11 : aucune nouvelle vague d'intentions de vote publiée du 1/11 au 2/11 (Commission des sondages : notices 10346 CSA, autodéfense des commerçants, et 10341 Toluna Harris Interactive, niche LFI, sans intention de vote). Moyenne datée du 2/11 : mêmes 5 instituts (terrains achevés du 19 au 22/10), scores et ordre inchangés ; « exclus » mis à jour (Elabe achevé 17 jours avant, YouGov 18 jours). Ifop-Fiducial (terrain achevé le 19/10) reste jusqu'au 3/11 (15e jour compris) et sort le 4/11 sans nouvelle vague. Revue du 3/11 : aucune nouvelle vague d'intentions de vote (Commission des sondages relue vers 10 h 20 : dernière notice 10346, CSA, sans intention de vote ; dernière notice d'intentions de vote 10339, Cluster17, 26/10). Moyenne datée du 3/11 : mêmes 5 instituts, Ifop-Fiducial (terrain achevé le 19/10) au 15e jour, compris ; scores et ordre inchangés ; « exclus » mis à jour (Elabe 18 jours, YouGov 19 jours avant le 3/11). À faire le 4/11 sans nouvelle vague : retirer Ifop-Fiducial (notice 10327) des instituts et l'ajouter aux exclus (terrain du 17 au 19/10, achevé 16 jours avant) ; moyenne à 4 instituts recalculée le 3/11 (milieux des fourchettes, même arrondi) : Le Pen 33,6 ; Mélenchon 17,5 ; Philippe 14,3 ; Glucksmann 13,4 ; Attal 7,7 ; Retailleau 7,4 ; Lisnard 7,0 ; Zemmour 4,4 ; ordre inchangé. Revue du 8/11 : une seule vague dans la fenêtre au 8/11 : Ifop pour LCI (terrain du 27 au 29/10, notice 10351, scores revérifiés sur la notice le 8/11 : Le Pen 35-37, Mélenchon 17,5-18, Glucksmann 10-13, Philippe 9,5-15, Attal 5-9, Retailleau 4-7, Lisnard 7-9, Zemmour 4-4,5) ; les cinq vagues du 3/11 sortent (terrains achevés au plus tard le 22/10). Moyenne : Le Pen 36,0 ; Mélenchon 17,8 ; Philippe 12,3 ; Glucksmann 11,5 ; Lisnard 8,0 ; Attal 7,0 ; Retailleau 5,5 ; Zemmour 4,3 ; Lisnard passe 5e (ordre et CLAUDE.md mis à jour). Toluna Harris Interactive (3-5/11) : S211.",
    "echeance": null,
    "statut": "ouvert",
    "cree": "2026-10-27",
-   "maj": "2026-11-03",
+   "maj": "2026-11-08",
    "resolution": null
   },
   {
@@ -67,11 +67,11 @@
    ],
    "mesure": "zucman",
    "sujet": "Impôt plancher sur les ultra-riches : reprise en 2027 ?",
-   "detail": "Défendu en 2025 ; reprise dans le programme 2027 non confirmée, donc hors total. Revue du 28/10 : toujours rien. Au débat de la primaire du 4/10, c'est O. Faure qui défend la taxe Zucman ; R. Glucksmann parle de « taxation des plus hauts patrimoines » sans taux ni seuil ; son site ne publie pas de programme. Les sites qui l'affirment sont non officiels (écartés). Revue du 31/10 : absent du plan de sortie de crise du 22/10 (10 propositions, seule une « taxation des superprofits » pour les chèques énergie) et de la présentation de Public Sénat du 30/10 (taxation des « méga-héritages », seuil de 2 M€ selon le porte-parole S. Houlié) ; glucks2027.fr ne publie pas de programme. Toujours hors total.",
+   "detail": "Défendu en 2025 ; reprise dans le programme 2027 non confirmée, donc hors total. Revue du 28/10 : toujours rien. Au débat de la primaire du 4/10, c'est O. Faure qui défend la taxe Zucman ; R. Glucksmann parle de « taxation des plus hauts patrimoines » sans taux ni seuil ; son site ne publie pas de programme. Les sites qui l'affirment sont non officiels (écartés). Revue du 31/10 : absent du plan de sortie de crise du 22/10 (10 propositions, seule une « taxation des superprofits » pour les chèques énergie) et de la présentation de Public Sénat du 30/10 (taxation des « méga-héritages », seuil de 2 M€ selon le porte-parole S. Houlié) ; glucks2027.fr ne publie pas de programme. Toujours hors total. Revue du 8/11 : aucune reconfirmation trouvée du 3 au 8/11 (seuls des sites non officiels en parlent) : toujours hors total.",
    "echeance": null,
    "statut": "ouvert",
    "cree": "2026-10-27",
-   "maj": "2026-10-31",
+   "maj": "2026-11-08",
    "resolution": null
   },
   {
@@ -172,11 +172,11 @@
    ],
    "mesure": "ukraine",
    "sujet": "Montant de la hausse de l'aide à l'Ukraine non publié",
-   "detail": "Mesure hors total (fourchette indicative en note) tant que le paramètre n'est pas publié par le camp. 27/10 : saisie des avoirs russes proposée de nouveau (LCP, 9/10/2026) ; montant toujours non publié. Revue du 31/10 : aucun montant publié ; le plan du 22/10 ne parle pas de l'Ukraine. Seul repère : saisie des avoirs russes gelés (déjà connue, LCP 9/10).",
+   "detail": "Mesure hors total (fourchette indicative en note) tant que le paramètre n'est pas publié par le camp. 27/10 : saisie des avoirs russes proposée de nouveau (LCP, 9/10/2026) ; montant toujours non publié. Revue du 31/10 : aucun montant publié ; le plan du 22/10 ne parle pas de l'Ukraine. Seul repère : saisie des avoirs russes gelés (déjà connue, LCP 9/10). Revue du 8/11 : aucun montant publié du 3 au 8/11 ; toujours non chiffrable.",
    "echeance": null,
    "statut": "ouvert",
    "cree": "2026-10-27",
-   "maj": "2026-10-31",
+   "maj": "2026-11-08",
    "resolution": null
   },
   {
@@ -545,10 +545,10 @@
    "sujet": "Programme de 1 069 mesures annoncé le 6/11",
    "detail": "Recoupe le point sur « L'avenir en commun » ; budget rectificatif du 14/10 (106,4 Md€ de recettes, 81,7 Md€ de dépenses) à rapprocher de nos totaux. 27/10 : lignes de la note du 14/10 intégrées (coûts au montant annoncé ou à la médiane indépendante, recettes avec chiffrage indépendant : transactions financières, fraude ; les autres listées « non comptées »). Reste le programme du 6/11. Veille du 29/10 : dates confirmées (livre le 6/11, meeting au Bourget le 7/11). Revue du 31/10 : rien de nouveau ; programme attendu le 6/11, convention le 7/11. Revue du 1/11 : rien de nouveau ; livre-programme attendu le 6/11, meeting au Bourget le 7/11 (15 h), toujours annoncés par le site et le message épinglé du compte X du candidat. Revue du 2/11 : rien de nouveau (page d'accueil de melenchon2027.fr modifiée le 2/11 pour l'agenda seulement ; meeting du Bourget le 7/11) ; rien à intégrer avant le 6/11. Revue du 3/11 : rien de nouveau ; sortie le 6/11 (5e édition, 1 069 mesures) et meeting du Bourget le 7/11, consacré au programme (lafranceinsoumise.fr, 2/11) ; rien à intégrer avant le 6/11.",
    "echeance": "2026-11-06",
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-10-27",
-   "maj": "2026-11-03",
-   "resolution": null
+   "maj": "2026-11-08",
+   "resolution": "Programme publié le 6/11 (1 069 mesures selon LFI, dont 238 nouvelles et 118 modifiées ou précisées ; texte en ligne lu en entier par chapitre le 8/11). Intégration détaillée : S001 (résolution). Rapprochement avec la note du 14/10 : les montants de la note restent les chiffres du camp des fiches qui en viennent (hôpitaux, planification, logement d'urgence, cantine, violences, coupes, allocations) ; le programme ne publie aucun nouveau montant hors plans d'investissement (BTP-logement 12 Md€/an et automobile 1,4 Md€/an de l'État, publiés en septembre et octobre et comptés le 8/11) et plan contre le racisme (1 Md€). Points restants : S212 (livre papier), S213 à S216."
   },
   {
    "id": "S038",
@@ -874,11 +874,11 @@
    ],
    "mesure": null,
    "sujet": "Quiz : revoir les « Contre » et leurs compléments à chaque programme publié",
-   "detail": "Le « Contre » d'une proposition tient compte du reste du programme : une mesure du même candidat qui répond à la critique est signalée (complément). Notre base peut être incomplète tant que des programmes ne sont pas publiés (LFI 6/11, RN 17/11, Zemmour) : à chaque publication, relire les « Contre » du candidat et ajouter les compléments nouveaux. On n'écrit jamais « aucune réponse prévue » : l'absence dans notre base n'est pas une preuve d'absence dans le programme.",
+   "detail": "Le « Contre » d'une proposition tient compte du reste du programme : une mesure du même candidat qui répond à la critique est signalée (complément). Notre base peut être incomplète tant que des programmes ne sont pas publiés (LFI 6/11, RN 17/11, Zemmour) : à chaque publication, relire les « Contre » du candidat et ajouter les compléments nouveaux. On n'écrit jamais « aucune réponse prévue » : l'absence dans notre base n'est pas une preuve d'absence dans le programme. Revue du 8/11 : Mélenchon (programme du 6/11) : « Contre » de ses propositions relus ; le plan pluriannuel de recrutement de soignants et de médecins (fiche « hopitaux ») devient le complément de la réouverture des urgences et maternités (sante.2, au lieu des seuls médecins salariés) ; pour les effectifs par classe, la priorité nouvelle (maternelles et REP) est dans la proposition elle-même ; aucun autre complément (point d'indice, niches, cantine, jeunes, SMIC : aucune mesure nouvelle ne répond à la critique principale). Restent le RN (17/11) et Zemmour (programme non publié).",
    "echeance": "2026-11-18",
    "statut": "ouvert",
    "cree": "2026-10-27",
-   "maj": "2026-10-27",
+   "maj": "2026-11-08",
    "resolution": null
   },
   {
@@ -1626,11 +1626,11 @@
    ],
    "mesure": null,
    "sujet": "Vie quotidienne : propositions hors affichage (plafond de 5 par thème, doublons)",
-   "detail": "Règle (méthode, décisions du porteur du 29/10) : au plus 5 propositions par thème ; au-delà, d'abord celles de 2026, puis les précises, puis les plus récentes ; à égalité ou à date inconnue, l'ordre affiché est gardé (une page de programme mise à jour n'est pas une nouvelle annonce) ; une proposition remplacée par sa version précise n'est pas gardée en double. Le plafond, d'abord fixé à 3, est passé à 5 le 29/10 : toutes les propositions retirées un temps ont été remises, sauf les doublons. Restent hors affichage : (1) doublons remplacés par leur version précise : Attal, sécurité, « Adapter le cadre constitutionnel contre la délinquance des mineurs » (intention du 2/08, remplacée par « Comparution immédiate dès 16 ans et fin de l'excuse de minorité automatique pour les mineurs récidivistes », 19/10) ; Lisnard, sécurité, « Lever l'excuse de minorité pour les crimes de sang » (site non officiel, remplacée par la version du programme : majorité pénale à 16 ans, excuse de minorité de 50 % à 20 %, établissements fermés, 27/10). (2) Au-delà de 5 : Retailleau, libertés, délit d'atteinte aux principes de la République, avis conforme du préfet pour un lieu de culte et motifs nouveaux de dissolution (proposition de loi contre l'entrisme adoptée par le Sénat, Public Sénat, 5/05/2026) : 6e, la moins récente des propositions précises de 2026 du thème. À chaque revue : une proposition redite reprend sa place selon la règle. 29/10 (soir) : Zemmour, sécurité : « Expulser les délinquants étrangers purgeant leur peine hors prison (bracelet, TIG) » (17/09) sort de l'affichage à l'entrée des 100 000 places (25/10). 29/10 (veille du 15 au 29/10) : Lisnard, sécurité : « Perpétuité réelle et fin du non-cumul des peines pour crimes graves » (programme, discours d'été) sort à l'entrée de « Rétablir les peines planchers pour les récidivistes » (23/10), la moins récente des six ; Retailleau, libertés : « Cour disciplinaire de la magistrature à la place du CSM, avec des citoyens tirés au sort » (6/06) sort à l'entrée de la laïcité dans la Constitution (programme constitutionnel présenté le 3/09, Public Sénat ; page mise à jour le 22/09) ; Attal, sécurité : « militaires et réservistes pour la garde statique des bâtiments publics » retiré (demande au Gouvernement en place d'utiliser un outil existant, liste de « mesures immédiates » du 19/10 : règle S134). Philippe : trois propositions de sécurité du 27/10 non affichées (une seule reprise sans citation : S136). 31/10 : Philippe, sécurité : « Supprimer le juge d'application des peines » (la moins récente) sort à l'entrée de l'interdiction de paraître et du pointage et de la reconnaissance faciale (S136) ; Glucksmann, sécurité : « Laisser les maires décider de l'armement municipal et des caméras » (non reconfirmée, intention) sort à l'entrée de trois propositions précises du plan du 22/10 (armes mutilantes et maintien de l'ordre, retrait des contenus par les plateformes, responsabilité de l'État pour les dégâts), sa lecture « vidéosurveillance » aussi ; Attal, sécurité : « Bloquer temporairement et de façon ciblée certains réseaux sociaux pendant les émeutes » retiré (règle S134 : demande d'utiliser un outil que le camp présente lui-même comme existant, S135), lecture « coupures de réseaux » retirée. 31/10 (une source qui parle pour le candidat, S193 ; décisions du porteur du 31/10) : retirées faute de source qui parle pour le candidat : Le Pen, « Refuser les instruments européens de défense : FED, EDIP, SAFE » (seule source : une analyse d'un centre de réflexion, qui en fait une déduction ; l'amendement n° 589 de 14 députés RN, rejeté le 6/05/2026, est antérieur à sa candidature, elle ne l'a pas signé et il ne nomme pas le FED) ; Mélenchon, « Scolarité obligatoire jusqu'à 18 ans » (source de 2017 seulement : ni les fiches de l'Institut Montaigne sur le programme de 2022 ni la profession de foi de 2022 ne la portent ; le livre-programme de 2025 qui la contenait ne répond plus, renvoi vers l'accueil : à revoir avec le programme du 6/11) ; Attal, « Intégrer le logement intermédiaire dans les quotas SRU des communes » et « Simplifier le ZAN pour faciliter la construction » (une seule reprise sans citation, Batirama, 2/10, Grand oral de Batimat du 28/09 ; Investies se présente comme un blog, pas un média reconnu ; rien sur son site, dont le compte rendu du 29/09) ; Retailleau, « Suppression du juge d'application des peines » (Public Sénat seul, 20/06, sans citation), « Réduire la contribution française au budget de l'UE par la négociation » et « Intégrer les dépenses de défense dans le calcul de cette contribution » (Business AM seul, 14/10, article payant, sans citation) ; Lisnard, « TVA unique à 25 % en douze ans pour baisser les charges » (lisnard.cards seul ; son programme dit la question de la TVA « pas tranchée », sa tribune du 16/04 parle de simplifier les taux) ; Zemmour, « Vendre une partie du parc HLM, « France de propriétaires » », « Orienter 20 % du Livret A vers l'investissement stratégique » (en 2022 : un « livret innovation ») et « 40 000 soldats professionnels supplémentaires » (agrégateurs seuls), « Supprimer la directive européenne sur la performance énergétique des bâtiments », « Sortir de la CEDH » et « Liberté d'expression non négociable, contre la loi Avia » (seulement dans le programme des européennes de 2024 de Reconquête, document de parti antérieur à la désignation, règle S133 ; rien dans le programme de 2022, fiches de l'Institut Montaigne, ni dans une source de 2026 ; le thème « logement » de Zemmour n'a plus de proposition). Au-delà de 5 : Le Pen, sécurité, « Présomption de légitime défense pour les forces de l'ordre » (2022), 6e après la séparation des peines minimales (pétition du RN d'octobre 2026) et des remises de peine (2022), à égalité de date et de précision avec ces dernières, l'ordre affiché étant gardé. Aucune proposition ne revient à leur place. 1/11 : Glucksmann, économie : « Régulariser les travailleurs sans papiers des secteurs qui manquent de main-d'œuvre » (intention du 30/08) remplacée par sa version précise (environ 300 000, 28/10), non gardée en double. Propositions ajoutées sans que rien ne sorte : Le Pen, économie (5), environnement (4), santé (4) ; Mélenchon, économie (4) ; Philippe, économie (5) ; Retailleau, logement (5) ; Lisnard, économie (4) ; Zemmour, logement (1), libertés (2), économie (4). Le Pen, environnement : ordre refait selon la règle (loi Hulot, PPE 2026, puis les deux propositions de 2022). Zemmour : le programme de 2022 (p. 26) ne porte pas le « 20 % du Livret A » (fonds souverain alimenté par « une partie des fonds du Livret A ») : rien à rétablir ; autres propositions de logement de la p. 44 : point S203. Revue du 2/11 : Glucksmann, économie : « Rémunérer au moins 1 000 € par mois tout stage de plus de deux mois » (2026, précise : message du candidat du 15/10 cité par CNews, plan du 22/10) entre 4e ; « « Buy European Act » : préférence européenne dans les marchés publics » (non reconfirmé, intention) devient 6e et sort de l'affichage (la fiche « industrie » le garde). Glucksmann, libertés : l'inéligibilité des personnes condamnées pour injure raciale, incitation à la haine raciale ou antisémitisme entre en tête (3 → 4 propositions), rien ne sort.",
+   "detail": "Règle (méthode, décisions du porteur du 29/10) : au plus 5 propositions par thème ; au-delà, d'abord celles de 2026, puis les précises, puis les plus récentes ; à égalité ou à date inconnue, l'ordre affiché est gardé (une page de programme mise à jour n'est pas une nouvelle annonce) ; une proposition remplacée par sa version précise n'est pas gardée en double. Le plafond, d'abord fixé à 3, est passé à 5 le 29/10 : toutes les propositions retirées un temps ont été remises, sauf les doublons. Restent hors affichage : (1) doublons remplacés par leur version précise : Attal, sécurité, « Adapter le cadre constitutionnel contre la délinquance des mineurs » (intention du 2/08, remplacée par « Comparution immédiate dès 16 ans et fin de l'excuse de minorité automatique pour les mineurs récidivistes », 19/10) ; Lisnard, sécurité, « Lever l'excuse de minorité pour les crimes de sang » (site non officiel, remplacée par la version du programme : majorité pénale à 16 ans, excuse de minorité de 50 % à 20 %, établissements fermés, 27/10). (2) Au-delà de 5 : Retailleau, libertés, délit d'atteinte aux principes de la République, avis conforme du préfet pour un lieu de culte et motifs nouveaux de dissolution (proposition de loi contre l'entrisme adoptée par le Sénat, Public Sénat, 5/05/2026) : 6e, la moins récente des propositions précises de 2026 du thème. À chaque revue : une proposition redite reprend sa place selon la règle. 29/10 (soir) : Zemmour, sécurité : « Expulser les délinquants étrangers purgeant leur peine hors prison (bracelet, TIG) » (17/09) sort de l'affichage à l'entrée des 100 000 places (25/10). 29/10 (veille du 15 au 29/10) : Lisnard, sécurité : « Perpétuité réelle et fin du non-cumul des peines pour crimes graves » (programme, discours d'été) sort à l'entrée de « Rétablir les peines planchers pour les récidivistes » (23/10), la moins récente des six ; Retailleau, libertés : « Cour disciplinaire de la magistrature à la place du CSM, avec des citoyens tirés au sort » (6/06) sort à l'entrée de la laïcité dans la Constitution (programme constitutionnel présenté le 3/09, Public Sénat ; page mise à jour le 22/09) ; Attal, sécurité : « militaires et réservistes pour la garde statique des bâtiments publics » retiré (demande au Gouvernement en place d'utiliser un outil existant, liste de « mesures immédiates » du 19/10 : règle S134). Philippe : trois propositions de sécurité du 27/10 non affichées (une seule reprise sans citation : S136). 31/10 : Philippe, sécurité : « Supprimer le juge d'application des peines » (la moins récente) sort à l'entrée de l'interdiction de paraître et du pointage et de la reconnaissance faciale (S136) ; Glucksmann, sécurité : « Laisser les maires décider de l'armement municipal et des caméras » (non reconfirmée, intention) sort à l'entrée de trois propositions précises du plan du 22/10 (armes mutilantes et maintien de l'ordre, retrait des contenus par les plateformes, responsabilité de l'État pour les dégâts), sa lecture « vidéosurveillance » aussi ; Attal, sécurité : « Bloquer temporairement et de façon ciblée certains réseaux sociaux pendant les émeutes » retiré (règle S134 : demande d'utiliser un outil que le camp présente lui-même comme existant, S135), lecture « coupures de réseaux » retirée. 31/10 (une source qui parle pour le candidat, S193 ; décisions du porteur du 31/10) : retirées faute de source qui parle pour le candidat : Le Pen, « Refuser les instruments européens de défense : FED, EDIP, SAFE » (seule source : une analyse d'un centre de réflexion, qui en fait une déduction ; l'amendement n° 589 de 14 députés RN, rejeté le 6/05/2026, est antérieur à sa candidature, elle ne l'a pas signé et il ne nomme pas le FED) ; Mélenchon, « Scolarité obligatoire jusqu'à 18 ans » (source de 2017 seulement : ni les fiches de l'Institut Montaigne sur le programme de 2022 ni la profession de foi de 2022 ne la portent ; le livre-programme de 2025 qui la contenait ne répond plus, renvoi vers l'accueil : à revoir avec le programme du 6/11) ; Attal, « Intégrer le logement intermédiaire dans les quotas SRU des communes » et « Simplifier le ZAN pour faciliter la construction » (une seule reprise sans citation, Batirama, 2/10, Grand oral de Batimat du 28/09 ; Investies se présente comme un blog, pas un média reconnu ; rien sur son site, dont le compte rendu du 29/09) ; Retailleau, « Suppression du juge d'application des peines » (Public Sénat seul, 20/06, sans citation), « Réduire la contribution française au budget de l'UE par la négociation » et « Intégrer les dépenses de défense dans le calcul de cette contribution » (Business AM seul, 14/10, article payant, sans citation) ; Lisnard, « TVA unique à 25 % en douze ans pour baisser les charges » (lisnard.cards seul ; son programme dit la question de la TVA « pas tranchée », sa tribune du 16/04 parle de simplifier les taux) ; Zemmour, « Vendre une partie du parc HLM, « France de propriétaires » », « Orienter 20 % du Livret A vers l'investissement stratégique » (en 2022 : un « livret innovation ») et « 40 000 soldats professionnels supplémentaires » (agrégateurs seuls), « Supprimer la directive européenne sur la performance énergétique des bâtiments », « Sortir de la CEDH » et « Liberté d'expression non négociable, contre la loi Avia » (seulement dans le programme des européennes de 2024 de Reconquête, document de parti antérieur à la désignation, règle S133 ; rien dans le programme de 2022, fiches de l'Institut Montaigne, ni dans une source de 2026 ; le thème « logement » de Zemmour n'a plus de proposition). Au-delà de 5 : Le Pen, sécurité, « Présomption de légitime défense pour les forces de l'ordre » (2022), 6e après la séparation des peines minimales (pétition du RN d'octobre 2026) et des remises de peine (2022), à égalité de date et de précision avec ces dernières, l'ordre affiché étant gardé. Aucune proposition ne revient à leur place. 1/11 : Glucksmann, économie : « Régulariser les travailleurs sans papiers des secteurs qui manquent de main-d'œuvre » (intention du 30/08) remplacée par sa version précise (environ 300 000, 28/10), non gardée en double. Propositions ajoutées sans que rien ne sorte : Le Pen, économie (5), environnement (4), santé (4) ; Mélenchon, économie (4) ; Philippe, économie (5) ; Retailleau, logement (5) ; Lisnard, économie (4) ; Zemmour, logement (1), libertés (2), économie (4). Le Pen, environnement : ordre refait selon la règle (loi Hulot, PPE 2026, puis les deux propositions de 2022). Zemmour : le programme de 2022 (p. 26) ne porte pas le « 20 % du Livret A » (fonds souverain alimenté par « une partie des fonds du Livret A ») : rien à rétablir ; autres propositions de logement de la p. 44 : point S203. Revue du 2/11 : Glucksmann, économie : « Rémunérer au moins 1 000 € par mois tout stage de plus de deux mois » (2026, précise : message du candidat du 15/10 cité par CNews, plan du 22/10) entre 4e ; « « Buy European Act » : préférence européenne dans les marchés publics » (non reconfirmé, intention) devient 6e et sort de l'affichage (la fiche « industrie » le garde). Glucksmann, libertés : l'inéligibilité des personnes condamnées pour injure raciale, incitation à la haine raciale ou antisémitisme entre en tête (3 → 4 propositions), rien ne sort. Revue du 8/11 : (1) Délit de pillage, même traitement pour les deux candidats qui le proposent : Retailleau (France Info, 5/11, cité par Le Parisien) et Lisnard (site de son parti, 4/11), en tête (2026, précise, les plus récentes). Retailleau, sécurité : suppression du juge d'application des peines (BFMTV, 3/11, citation du candidat dans le titre) entre aussi ; « Peines minimales obligatoires pour agressions de policiers, gendarmes et pompiers » (Europe 1, la plus ancienne, à égalité de date avec la majorité pénale et après elle dans l'ordre affiché) devient 6e et sort de l'affichage, avec la lecture des peines planchers (plus aucune proposition de ce type dans le thème ; la fiche « sécurité » garde la mesure). Lisnard, sécurité : « Construire 20 000 places de prison » (3/07, la plus ancienne) devient 6e et sort, avec la lecture des places de prison (la fiche « prisons » garde la mesure). (2) Retailleau : primauté de la Constitution sur le droit de l'UE (site, mesure mise à jour le 22/09 ; précise) et « pas d'IA avant le collège » (CNews, 8/09 ; intention : aucun texte ni instrument) : 6es de leur thème (libertés : page mise à jour, date non plus récente que les autres ; école : intention après cinq précises), hors affichage. (3) Attal, libertés : réseaux sociaux interdits aux moins de 15 ans et couvre-feu numérique (site de campagne, 5/11) en tête (3 → 4), rien ne sort.",
    "echeance": null,
    "statut": "ouvert",
    "cree": "2026-10-29",
-   "maj": "2026-11-02",
+   "maj": "2026-11-08",
    "resolution": null
   },
   {
@@ -2188,11 +2188,11 @@
    ],
    "mesure": null,
    "sujet": "Lois de finances 2027 et textes en discussion : situation de départ à revoir à leur vote",
-   "detail": "(1) Projet de loi de finances 2027, art. 3 (plafond de l'abattement de 10 % des retraités) : supprimé par l'Assemblée en première lecture le 15/10 (116 voix contre 30) ; le Sénat peut le rétablir (fiche de Lisnard, S089). (2) Postes d'enseignants : le Gouvernement a annoncé le 26/10 renoncer aux 836 suppressions du second degré ; amendement adopté en commission selon la presse (non vérifié) ; si la loi votée annule tout ou partie des 1 588 suppressions nettes, la ligne « non compté » d'Attal et de Glucksmann change (S118). (3) Sous-indexation des pensions du budget de la Sécurité sociale 2027 (S081, point 5 ; Lisnard, gel au-dessus de 2 200 € ; Attal, année blanche). (4) AESH fonctionnaires : proposition de loi LFI adoptée en première lecture par l'Assemblée le 29/10 (titre de LCP, article non ouvert) ; si elle devient loi, la ligne « non compté » de Mélenchon est sans objet. Une première lecture ne change rien ; une loi votée change la situation de départ pour tous. Revue du 31/10 : (1) projet de loi de finances 2027 : première partie toujours en discussion à l'Assemblée le 30/10, aucun vote sur l'ensemble ; article 3 toujours supprimé (Sénat pas encore saisi) ; (2) postes d'enseignants : seconde partie pas encore en séance ; l'amendement « adopté en commission selon la presse » non retrouvé ; (3) projet de loi de financement de la Sécurité sociale 2027 rejeté en première lecture par l'Assemblée le 23/10 (deuxième partie repoussée, 1 voix pour, 115 contre ; l'ensemble est rejeté) : revalorisation des pensions non votée, texte initial transmis au Sénat ; (4) proposition de loi AESH adoptée en première lecture le 29/10 (166 voix contre 16), transmise au Sénat. Rien de voté définitivement : situation de départ inchangée pour toutes les fiches. Revue du 2/11 : (1) vote solennel de la première partie du PLF 2027 à l'Assemblée le mardi 3/11, vote sur l'ensemble le 17/11 ; (2) vérifié au compte rendu n° 9 de la commission des affaires culturelles (21/10, séance de 21 h) : l'amendement II-AC394, qui annule les 1 588 suppressions de postes d'enseignants, a été adopté en commission saisie pour avis ; il doit être redéposé et voté en séance (mission « Enseignement scolaire » le jeudi 12/11) ; (3) PLFSS 2027 au Sénat, « considéré comme rejeté par l'Assemblée nationale » (texte n° 138) : discussion générale le 9/11, scrutin solennel le 18/11 ; (4) proposition de loi AESH : rien de nouveau au Sénat. Rien de voté définitivement : situation de départ inchangée ; échéances 3/11, 12/11, 17/11, 18/11. Revue du 3/11 : vote solennel de la 1re partie du PLF 2027 reporté (758 amendements restants le 2/11 à minuit, LCP 3/11, 0 h 03) ; suite de la discussion le 3/11 à 21 h 30 (page de séance de l'Assemblée), fin espérée vers le 4/11 au soir ; nouvelle date du vote à suivre (Conférence des présidents) ; rien de voté. Amendements adoptés le 2/11, provisoires : TVA à 5,5 % sur l'électricité des consommateurs finals, TVA à 5,5 % sur des produits de première nécessité fixés par décret, hausse de TVA sur la télévision payante supprimée. Si la 1re partie est rejetée, le Sénat examine le texte initial du Gouvernement, sans ces amendements, et l'amendement II-AC394 (1 588 postes d'enseignants) ne serait pas voté en séance à l'Assemblée. Si une TVA à 5,5 % sur l'électricité ou sur des produits de première nécessité entrait dans la loi votée, la situation de départ des fiches « tva » et « tva-produits-essentiels » de Le Pen changerait (même règle pour toute fiche TVA de même type) : Le Pen ajoutée aux candidats du point. Une première lecture ne change rien : situation de départ inchangée.",
+   "detail": "(1) Projet de loi de finances 2027, art. 3 (plafond de l'abattement de 10 % des retraités) : supprimé par l'Assemblée en première lecture le 15/10 (116 voix contre 30) ; le Sénat peut le rétablir (fiche de Lisnard, S089). (2) Postes d'enseignants : le Gouvernement a annoncé le 26/10 renoncer aux 836 suppressions du second degré ; amendement adopté en commission selon la presse (non vérifié) ; si la loi votée annule tout ou partie des 1 588 suppressions nettes, la ligne « non compté » d'Attal et de Glucksmann change (S118). (3) Sous-indexation des pensions du budget de la Sécurité sociale 2027 (S081, point 5 ; Lisnard, gel au-dessus de 2 200 € ; Attal, année blanche). (4) AESH fonctionnaires : proposition de loi LFI adoptée en première lecture par l'Assemblée le 29/10 (titre de LCP, article non ouvert) ; si elle devient loi, la ligne « non compté » de Mélenchon est sans objet. Une première lecture ne change rien ; une loi votée change la situation de départ pour tous. Revue du 31/10 : (1) projet de loi de finances 2027 : première partie toujours en discussion à l'Assemblée le 30/10, aucun vote sur l'ensemble ; article 3 toujours supprimé (Sénat pas encore saisi) ; (2) postes d'enseignants : seconde partie pas encore en séance ; l'amendement « adopté en commission selon la presse » non retrouvé ; (3) projet de loi de financement de la Sécurité sociale 2027 rejeté en première lecture par l'Assemblée le 23/10 (deuxième partie repoussée, 1 voix pour, 115 contre ; l'ensemble est rejeté) : revalorisation des pensions non votée, texte initial transmis au Sénat ; (4) proposition de loi AESH adoptée en première lecture le 29/10 (166 voix contre 16), transmise au Sénat. Rien de voté définitivement : situation de départ inchangée pour toutes les fiches. Revue du 2/11 : (1) vote solennel de la première partie du PLF 2027 à l'Assemblée le mardi 3/11, vote sur l'ensemble le 17/11 ; (2) vérifié au compte rendu n° 9 de la commission des affaires culturelles (21/10, séance de 21 h) : l'amendement II-AC394, qui annule les 1 588 suppressions de postes d'enseignants, a été adopté en commission saisie pour avis ; il doit être redéposé et voté en séance (mission « Enseignement scolaire » le jeudi 12/11) ; (3) PLFSS 2027 au Sénat, « considéré comme rejeté par l'Assemblée nationale » (texte n° 138) : discussion générale le 9/11, scrutin solennel le 18/11 ; (4) proposition de loi AESH : rien de nouveau au Sénat. Rien de voté définitivement : situation de départ inchangée ; échéances 3/11, 12/11, 17/11, 18/11. Revue du 3/11 : vote solennel de la 1re partie du PLF 2027 reporté (758 amendements restants le 2/11 à minuit, LCP 3/11, 0 h 03) ; suite de la discussion le 3/11 à 21 h 30 (page de séance de l'Assemblée), fin espérée vers le 4/11 au soir ; nouvelle date du vote à suivre (Conférence des présidents) ; rien de voté. Amendements adoptés le 2/11, provisoires : TVA à 5,5 % sur l'électricité des consommateurs finals, TVA à 5,5 % sur des produits de première nécessité fixés par décret, hausse de TVA sur la télévision payante supprimée. Si la 1re partie est rejetée, le Sénat examine le texte initial du Gouvernement, sans ces amendements, et l'amendement II-AC394 (1 588 postes d'enseignants) ne serait pas voté en séance à l'Assemblée. Si une TVA à 5,5 % sur l'électricité ou sur des produits de première nécessité entrait dans la loi votée, la situation de départ des fiches « tva » et « tva-produits-essentiels » de Le Pen changerait (même règle pour toute fiche TVA de même type) : Le Pen ajoutée aux candidats du point. Une première lecture ne change rien : situation de départ inchangée. Revue du 8/11 : PLF 2027, 1re lecture (Assemblée, séance du 2/11) : TVA à 5,5 % sur l'abonnement et la consommation d'électricité adoptée (amendements identiques n° 3692 du RN et n° 3959 de N. Sansu, 43 voix contre 13) ; amendement n° 635 de Mme Le Pen (toutes les énergies) rejeté (28 contre 40) ; coût cité en séance pour l'électricité : 5 à 5,5 Md€ (N. Sansu). Signalé dans la fiche « tva » de Le Pen (note) ; rien de définitif : situation de départ à revoir au vote final. Source : https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-lundi-02-novembre-2026",
    "echeance": "2026-12-31",
    "statut": "ouvert",
    "cree": "2026-10-29",
-   "maj": "2026-11-03",
+   "maj": "2026-11-08",
    "resolution": null
   },
   {
@@ -2614,11 +2614,11 @@
    ],
    "mesure": "life:securite",
    "sujet": "Philippe : policiers municipaux officiers de police judiciaire, connu par une seule reprise",
-   "detail": "Capital (29/10), d'après l'entretien au Point du 27/10 (abonnés, 403) : « élargir les prérogatives des policiers municipaux, en leur permettant notamment d'accéder à la qualité d'officier de police judiciaire ». Le Journal du Net (22/10) rapporte seulement qu'il a écrit au Premier ministre pour inscrire à l'Assemblée « le texte prévoyant l'extension des pouvoirs des policiers municipaux », sans la qualité d'OPJ. Règle (décision du porteur, 29/10) : une proposition connue par une seule reprise sans citation reste hors affichage ; à ajouter si une citation directe ou une seconde source la confirme (le thème sécurité est à 5 propositions : la règle d'ordre dira laquelle sort).",
+   "detail": "Capital (29/10), d'après l'entretien au Point du 27/10 (abonnés, 403) : « élargir les prérogatives des policiers municipaux, en leur permettant notamment d'accéder à la qualité d'officier de police judiciaire ». Le Journal du Net (22/10) rapporte seulement qu'il a écrit au Premier ministre pour inscrire à l'Assemblée « le texte prévoyant l'extension des pouvoirs des policiers municipaux », sans la qualité d'OPJ. Règle (décision du porteur, 29/10) : une proposition connue par une seule reprise sans citation reste hors affichage ; à ajouter si une citation directe ou une seconde source la confirme (le thème sécurité est à 5 propositions : la règle d'ordre dira laquelle sort). Revue du 8/11 : pas de seconde source ni de citation directe (franceinfo, 21/10 : « Je pense qu'il faut leur donner plus de pouvoir », sans la qualité d'OPJ ; JDN, 22/10, idem) : toujours hors affichage.",
    "echeance": null,
    "statut": "ouvert",
    "cree": "2026-10-31",
-   "maj": "2026-10-31",
+   "maj": "2026-11-08",
    "resolution": null
   },
   {
@@ -3391,11 +3391,11 @@
    ],
    "mesure": null,
    "sujet": "Glucksmann : « 100 jours de la révolution écologique » annoncés pour la première quinzaine de novembre",
-   "detail": "franceinfo (29/10/2026, 5 h 44) : « Le candidat mise aussi sur la présentation de ses \"100 jours de la révolution écologique\", prévue la première quinzaine de novembre. » Date non confirmée par une source officielle au 1/11 (glucks2027.fr, place-publique.eu, comptes Bluesky et X lisibles sans connexion). À la publication : revoir les fiches leasing social, chèque énergie et nucléaire, et le thème « environnement » de la Vie quotidienne (deux propositions non reconfirmées sur cinq). Revue du 2/11 : rien de publié ni de date (Face-à-Face BFMTV-RMC du 2/11 sans mot sur l'écologie ; X, Bluesky, glucks2027.fr, place-publique.eu) ; franceinfo (29/10) reste la seule source de la « première quinzaine de novembre ». Revue du 3/11 : aucune date publiée (glucks2027.fr, plan du site de Place publique, Bluesky, X) ; franceinfo (29/10) reste la seule source de la « première quinzaine de novembre ».",
-   "echeance": "2026-11-15",
+   "detail": "franceinfo (29/10/2026, 5 h 44) : « Le candidat mise aussi sur la présentation de ses \"100 jours de la révolution écologique\", prévue la première quinzaine de novembre. » Date non confirmée par une source officielle au 1/11 (glucks2027.fr, place-publique.eu, comptes Bluesky et X lisibles sans connexion). À la publication : revoir les fiches leasing social, chèque énergie et nucléaire, et le thème « environnement » de la Vie quotidienne (deux propositions non reconfirmées sur cinq). Revue du 2/11 : rien de publié ni de date (Face-à-Face BFMTV-RMC du 2/11 sans mot sur l'écologie ; X, Bluesky, glucks2027.fr, place-publique.eu) ; franceinfo (29/10) reste la seule source de la « première quinzaine de novembre ». Revue du 3/11 : aucune date publiée (glucks2027.fr, plan du site de Place publique, Bluesky, X) ; franceinfo (29/10) reste la seule source de la « première quinzaine de novembre ». Revue du 8/11 : rien de publié au 8/11 (glucks2027.fr sans page programme ; franceinfo, LCP, Public Sénat, Europe 1). Lancement le 6/11 d'un direct hebdomadaire « Au QG » (LCP), sans mesure. Prochaine date officielle : meeting du dimanche 6 décembre (Paris Event Center).",
+   "echeance": "2026-12-06",
    "statut": "ouvert",
    "cree": "2026-11-01",
-   "maj": "2026-11-03",
+   "maj": "2026-11-08",
    "resolution": null
   },
   {
@@ -3423,11 +3423,11 @@
    ],
    "mesure": "life:economie",
    "sujet": "Régularisation des travailleurs sans papiers : proposition de loi n° 3253 en séance le 19/11",
-   "detail": "Dossier de l'Assemblée nationale (17e législature) : proposition de loi « visant à régulariser les travailleurs sans-papiers » (P. Christophle et le groupe socialiste, n° 3253, déposée le 6/10/2026, renvoyée à la commission des lois), discussion en séance publique le jeudi 19/11/2026 (niche du groupe). Article unique : carte de séjour « salarié » de plein droit après six mois d'activité, consécutifs ou non, sur les vingt-quatre derniers mois ; exposé des motifs : « environ 300 000 travailleurs sans-papiers ». Texte antérieur à la désignation du candidat, qui ne l'a pas signé : pas une source à lui seul (S133). Après le 19/11 : sort du texte, et reprise ou non dans le programme du candidat (RTL, 28/10 : « avant même une éventuelle intégration au programme présidentiel »). Revue du 2/11 : examen en commission des lois prévu le lundi 9/11 à 16 h (réunion prévisionnelle, rapporteur P. Christophle ; agenda de la commission des lois de l'Assemblée, consulté le 2/11) ; séance publique toujours le 19/11. Rien à changer dans les données (texte antérieur à la désignation, S133). Revue du 3/11 : pas de fait nouveau relevé ; échéances : commission des lois le lundi 9/11 (16 h), séance publique le 19/11. Rien à changer (texte antérieur à la désignation, S133).",
+   "detail": "Dossier de l'Assemblée nationale (17e législature) : proposition de loi « visant à régulariser les travailleurs sans-papiers » (P. Christophle et le groupe socialiste, n° 3253, déposée le 6/10/2026, renvoyée à la commission des lois), discussion en séance publique le jeudi 19/11/2026 (niche du groupe). Article unique : carte de séjour « salarié » de plein droit après six mois d'activité, consécutifs ou non, sur les vingt-quatre derniers mois ; exposé des motifs : « environ 300 000 travailleurs sans-papiers ». Texte antérieur à la désignation du candidat, qui ne l'a pas signé : pas une source à lui seul (S133). Après le 19/11 : sort du texte, et reprise ou non dans le programme du candidat (RTL, 28/10 : « avant même une éventuelle intégration au programme présidentiel »). Revue du 2/11 : examen en commission des lois prévu le lundi 9/11 à 16 h (réunion prévisionnelle, rapporteur P. Christophle ; agenda de la commission des lois de l'Assemblée, consulté le 2/11) ; séance publique toujours le 19/11. Rien à changer dans les données (texte antérieur à la désignation, S133). Revue du 3/11 : pas de fait nouveau relevé ; échéances : commission des lois le lundi 9/11 (16 h), séance publique le 19/11. Rien à changer (texte antérieur à la désignation, S133). Revue du 8/11 : séance publique du jeudi 19/11 confirmée sur le dossier de l'Assemblée (12 amendements déposés) ; examen en commission des lois le lundi 9/11 (16 h) selon l'agenda (non revu sur une page ouverte). Aucune déclaration du candidat sur ce texte. Rien à changer (S133).",
    "echeance": "2026-11-19",
    "statut": "ouvert",
    "cree": "2026-11-01",
-   "maj": "2026-11-03",
+   "maj": "2026-11-08",
    "resolution": null
   },
   {
@@ -3530,10 +3530,10 @@
    "sujet": "Zemmour : « six mois » de chômage avant le renvoi des étrangers, contre « un an » dans la fiche (une seule source, Boulevard Voltaire)",
    "detail": "Boulevard Voltaire (2/11/2026, 18 h 30 UTC) rapporte le discours du candidat du 31/10 au colloque de Polémia (diffusé par Radio Courtoisie) : un « ministère de la remigration » dont les objectifs seraient l'expulsion des délinquants, criminels et fichés S, « L'étranger au chômage depuis six mois même en situation régulière rentrera dans son pays », la fin du regroupement familial et du droit du sol, la suppression de l'AME, les aides sociales réservées aux Français, mesures soumises « par référendum ». Non vérifié à la source : enregistrement d'origine (direct YouTube de Radio Courtoisie) inaccessible depuis l'environnement, aucun autre média ne cite le passage, aucun message du candidat du 31/10 visible sans connexion ; Boulevard Voltaire est un site d'opinion, hors de weak_domains. Rien de changé (décision du porteur du 3/11). Si une source qui parle pour le candidat confirme « six mois » : (1) fiche « remigration » (« après un an de chômage », +1,0 Md€ sur les chômeurs étrangers de plus d'un an ; « un an » présent depuis la base du 27/10, sans source de 2026 trouvée) : nouveau calcul ascendant sur les chômeurs étrangers de plus de six mois, même méthode, ou médiane si un chiffrage indépendant à jour existe (Institut Montaigne 2022, version à six mois : +1,8 Md€, 0,9 à 2,4) ; (2) fiche « cedh » : regroupement familial et référendum deviendraient des propositions de 2026 ; (3) quiz « zemmour.remigration » et résumé (« restés un an au chômage ») à mettre au même paramètre.",
    "echeance": null,
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-03",
-   "maj": "2026-11-03",
-   "resolution": null
+   "maj": "2026-11-08",
+   "resolution": "Le candidat fixe la limite à « un an de chômage » (BFMTV, Face à BFM, 17/09/2026 : « Le président de Reconquête fixe la limite à \"un an de chômage\" et ce \"même si la personne est là depuis vingt ans\" ») : source de 2026 qui parle pour lui, conforme à la fiche « remigration » (un an), ajoutée à ses estimations le 8/11. Le « six mois » de Boulevard Voltaire (une seule source, sans citation directe) n'est pas retenu ; fiches « remigration », « cedh », quiz et résumé inchangés."
   },
   {
    "id": "S208",
@@ -3584,6 +3584,208 @@
    "statut": "ouvert",
    "cree": "2026-11-03",
    "maj": "2026-11-03",
+   "resolution": null
+  },
+  {
+   "id": "S211",
+   "type": "a_verifier",
+   "candidats": [],
+   "mesure": null,
+   "sujet": "Sondages : vague 9 de Toluna Harris Interactive pour M6 et RTL (terrain du 3 au 5/11), notice de la Commission des sondages pas encore publiée",
+   "detail": "Rapport de l'institut (daté du 9/11, en ligne le 8/11) : https://tolunacorporate.com/wp-content/uploads/2026/11/Rapport-Toluna-Barometre-Presidentielle-2027-Vague-9-M6-RTL-9-novembre-2026.pdf ; 2 101 inscrits, en ligne ; fourchettes lues sur le rapport (récapitulatif p. 12, 5 hypothèses) : Le Pen 34-36, Mélenchon 18-19, Glucksmann 11-13, Philippe 11-14, Retailleau 5-10, Attal 6-10, Lisnard 9-9, Zemmour 3-4. La règle prend les scores de la notice : à ajouter à sondages.json dès sa mise en ligne (dernière notice listée le 8/11 : 10358 du 5/11), chaque score revérifié. Avec cette vague, l'ordre resterait le même (Le Pen, Mélenchon, Philippe, Glucksmann, Lisnard, Attal, Retailleau, Zemmour).",
+   "echeance": "2026-11-12",
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S212",
+   "type": "a_verifier",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": [
+    "prix",
+    "coupes-2026",
+    "af-apl",
+    "life:environnement",
+    "life:economie",
+    "universites"
+   ],
+   "sujet": "Mélenchon : mesures de la note du 14/10 ou de 2022 absentes du programme en ligne (livre papier de 1 069 mesures à consulter)",
+   "detail": "Absents du texte en ligne du 6/11 (melenchon2027.fr/programme/livre/, cherchés le 8/11) : prix cible du carburant à 1,70 €/l (seul le blocage des prix « alimentation, énergie, carburant » y est) ; retour sur les coupes depuis 2026 ; allocations familiales +10 % et indexation des pensions et prestations (APL +10 % y est) ; 250 000 places à l'université (plan ESR du 26/10 seulement) ; plan de 200 Md€ d'investissements (Vie quotidienne, environnement) ; suppression des exonérations de cotisations au-delà de 2 SMIC (le livre dit seulement « Revenir sur la non-compensation des exonérations de cotisations »). Ces mesures restent publiées par le camp en 2026 (note du 14/10, plans) : fiches et propositions inchangées. Un relais non vérifié parle de 795 mesures en ligne contre 1 069 dans le livre papier : vérifier dans le livre (212 p.) et retirer ce qui en serait absent, avec la même règle que pour les autres candidats.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S213",
+   "type": "non_chiffrable",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "jeunes",
+   "sujet": "Mélenchon : garantie d'autonomie étendue à « chaque personne » (revenu au seuil de pauvreté, 1 337 €), population et mécanisme non publiés",
+   "detail": "Programme du 6/11 : « le revenu mensuel de chaque personne atteindra le seuil de pauvreté (1 337 euros pour une personne seule) » (mettre-en-securite-sociale/chapitre1) ; pour les jeunes : « jeunes détachés du foyer fiscal parental » (chapitre 2). La fiche « jeunes » (−15,5) reste sur les jeunes ; la version pour tous est listée « non comptée » (paramètre clé non publié : qui, quelles ressources prises en compte, articulation avec le RSA et la prime d'activité). À chiffrer si le camp publie le mécanisme ou le coût (chiffrage complet annoncé début 2027).",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S214",
+   "type": "non_chiffrable",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": [
+    "retraites",
+    "fiscalite",
+    "secu100"
+   ],
+   "sujet": "Mélenchon : mesures du programme sans coût publié ni chiffrage officiel ouvert (décote, arrêts maladie, héritages sous 150 000 €, pension minimale au SMIC)",
+   "detail": "Listées « non comptées » le 8/11, faute de chiffrage officiel ou indépendant ouvert : (1) suppression de la décote des pensions (chercher un chiffrage du COR ou de la DREES : coût de la décote, effectifs et montants) ; (2) arrêts maladie indemnisés à 100 % du salaire et suppression des jours de carence (chercher les montants officiels : indemnités journalières, coût des jours de carence pour l'Assurance maladie, Cour des comptes ou DSS) ; (3) exonération de droits de succession des héritages inférieurs à 150 000 € (chercher la répartition des droits par tranche, DGFiP ou Conseil des prélèvements obligatoires) ; (4) pension minimale au niveau du SMIC pour une carrière complète (non chiffrée depuis le 27/10 : il manque la répartition des pensions concernées ; même lecture que l'AAH, chiffrée sur sa dépense officielle). Même règle pour tous : comptées dès qu'une base officielle et le paramètre publié permettent un calcul ascendant.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S215",
+   "type": "a_ajouter",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": null,
+   "sujet": "Mélenchon : 10 000 places d'EHPAD publics par an pendant cinq ans, coût public de fonctionnement par place sans source officielle ouverte",
+   "detail": "Programme du 6/11 (mettre-en-securite-sociale/chapitre2) : « Créer 10 000 places par an en établissement d’hébergement pour personnes âgées dépendantes (EHPAD) publics pendant cinq ans ». Calcul ascendant prévu : places en 2030 (35 000 à 70 % du plan, règle des objectifs) × coût public annuel d'une place (forfaits soins et dépendance) ; aucune valeur officielle ouverte le 8/11 (sites de la DREES et de la CNSA ; seules des sources commerciales ou anciennes, CNSA 2016). Listée « non comptée » ; à compter si le montant dépasse 1 Md€ (sinon ligne non comptée avec le montant). Recoupe le plan de 300 000 recrutements du médico-social (fiche « hopitaux ») : vérifier le double compte des emplois.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S216",
+   "type": "a_verifier",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "aah",
+   "sujet": "AAH au niveau du SMIC : borne avec le nombre d'allocataires (DREES)",
+   "detail": "Fiche chiffrée le 8/11 en proportion de la dépense officielle (PAP 2026, programme 157 : 14 681 M€ au montant maximal de 1 033,32 €) : −9,5 Md€ au SMIC de 1 700 €, −6,3 au SMIC actuel. La hausse proportionnelle sous-estime le coût (allocation différentielle : même hausse en euros pour les allocataires à taux réduit ; entrées nouvelles). Relever le nombre d'allocataires (DREES, « Données mensuelles sur les prestations de solidarité », série AAH_beneficiaires : API ouverte le 8/11 mais réponses coupées) pour une borne basse : allocataires × (1 700 − 1 033,32) × 12.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S217",
+   "type": "a_trancher",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": [
+    "hopitaux"
+   ],
+   "sujet": "Règle commune des plans de recrutement publics (postes créés)",
+   "detail": "Le plan santé de LFI (30/10, modifié le 4/11) chiffre un objectif en postes (100 000 à l'hôpital, 300 000 dans le médico-social et les EHPAD), sans coût ni date ; aucune règle écrite pour des postes créés (seule la règle des suppressions existait).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Tranché le 8/11 (décision du porteur, règles communes) : poste créé = 61,6 k€ en coût complet (362,1 Md€ / 5,88 M d'agents, même valeur que les suppressions), sans la moitié rendue aux agents (propre aux suppressions) ; 70 % du plan en 2030 s'il est étalé sur le mandat ou sans date (règle des objectifs) ; bornes : plan entier en 2030 et chiffre du camp ; médico-social et EHPAD : part publique de leur financement, 79,2 % (DREES, comptes de la santé, édition 2026, soins de longue durée 2025 : 55,363 Md€ des administrations publiques sur 69,919 ; https://data.drees.solidarites-sante.gouv.fr/explore/dataset/cns_financement/). Appliquée chez les 8 : Mélenchon, plan santé −14,7 (au lieu de −3,0) ; 10 000 enseignants (0,4 en 2030), annulation des 1 588 suppressions de postes d'enseignants (Glucksmann, Attal : 0,1), 1 000 médecins salariés de Zemmour (2022 : 0,06) : sous 1 Md€, listés « non comptés » avec le montant ; 40 000 recrutements de chercheurs (LFI) compris dans l'objectif de R&D publique de la fiche « recherche » ; aucun autre plan de recrutement chiffré en postes chez Le Pen, Philippe, Lisnard ou Retailleau. Règle écrite dans la méthode et CLAUDE.md."
+  },
+  {
+   "id": "S218",
+   "type": "a_trancher",
+   "candidats": [
+    "melenchon",
+    "le-pen"
+   ],
+   "mesure": [
+    "secu100",
+    "planification",
+    "service_citoyen",
+    "aah",
+    "plan_racisme",
+    "aide_developpement"
+   ],
+   "sujet": "Mélenchon, programme du 6/11 : chiffrage des mesures nouvelles avec les règles communes",
+   "detail": "Mesures nouvelles ou reconfirmées du programme du 6/11 à chiffrer avec les règles existantes.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Tranché le 8/11 (décision du porteur) : (1) « 100 % Sécu » : même règle que les soins dentaires de Le Pen (part reprise aux complémentaires = dépense publique, financement non précisé) ; organismes complémentaires dans la CSBM 2025, 33,464 Md€ (DREES, édition 2026, euros de 2025 non projetés) + franchises et participations forfaitaires 2,3 Md€ (régime général 2025, Cour des comptes, synthèse du rapport Sécurité sociale 2026, p. 19) = −35,8 ; borne basse −36,7 (rendement des franchises accru d'au plus 40 % par les plafonds relevés de 50 à 70 € au 1/10/2026, décret n° 2026-858) ; borne haute : même valeur (la DREES ne sépare pas les soins prescrits) ; sous conditions (contrats des complémentaires). (2) Service citoyen : même calcul que Glucksmann et Attal (790 000 × 9 mois × (1 700 + 100) € = −12,8 ; SMIC net actuel −11,2 ; + 5 Md€ d'accueil −17,8). (3) AAH au SMIC : dépense du PAP 2026 × (1 700 / 1 033,32 − 1) = −9,5 (SMIC actuel −6,3 ; S216). (4) Planification : règle des budgets publiés ligne à ligne, colonnes « État » des deux plans d'investissement publiés (BTP-logement 12,01 + automobile 1,37), moins la part de l'hébergement d'urgence comptée dans « logement-urgence » (3,1 × 10 000/200 000 = 0,16) = −13,2 ; bornes −13,4 et −10 (note du 14/10) ; pôle public bancaire non compté. (5) Plan contre le racisme : 1 Md€ (une enveloppe vaut son montant). (6) Aide au développement : reconfirmée, comptée (−4,5) ; Glucksmann reste hors total. (7) Retraites : valeur inchangée (le programme ne donne pas de calendrier pour 60 ans ; la note du 14/10 fonde la moitié en 2030)."
+  },
+  {
+   "id": "S219",
+   "type": "a_trancher",
+   "candidats": [
+    "retailleau",
+    "attal",
+    "glucksmann",
+    "lisnard"
+   ],
+   "mesure": null,
+   "sujet": "Simulateur : gain publié en un point quand le mécanisme vaut pour tous les salaires (au-delà du point)",
+   "detail": "Retailleau publie un seul montant (« environ 500 euros nets par an au salaire médian », site, mesure mise à jour le 24/09/2026), pour une baisse de cotisations salariales « dès la première heure travaillée » ; le simulateur le répartissait au prorata des salaires (46,4 €/mois au salaire moyen).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Tranché le 8/11 (décision du porteur) : même forme qu'Attal et Glucksmann (salaire_net.points : 41,7 €/mois au salaire médian de 2 238 €, Insee ; 2 115 € selon le site) ; au-delà du point, au prorata (au_dela_prorata), car le mécanisme publié vaut pour tous les salaires ; Glucksmann et Attal gardent « rien au-delà » (barème non publié, mécanisme non précisé au-dessus du salaire médian). Lisnard : aucun gain nouveau (promesse de 200 à 400 € par mois au salaire médian, BFMTV 3/11, mécanisme non chiffré). Règle écrite dans la méthode, CLAUDE.md, DEVELOPPER.md ; contrôle ajouté à tests/smoke.py."
+  },
+  {
+   "id": "S220",
+   "type": "a_ajouter",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": [
+    "secu100",
+    "service_citoyen",
+    "aah",
+    "plan_racisme"
+   ],
+   "sujet": "Quiz : fiches ajoutées le 8/11 sans texte de quiz",
+   "detail": "« 100 % Sécu », service citoyen, AAH au SMIC et plan contre le racisme n'ont pas d'entrée dans data/quiz_plain.json ni de « Pour » / « Contre » dans data/quiz_effets.json : hors du quiz. À ajouter avec la même méthode (constat officiel, meilleur argument de chaque côté, cas sourcés), en reprenant les mêmes cas pour les mesures du même type (service civique de Glucksmann et Attal, soins dentaires de Le Pen).",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S221",
+   "type": "a_verifier",
+   "candidats": [
+    "attal",
+    "retailleau",
+    "lisnard",
+    "le-pen"
+   ],
+   "mesure": null,
+   "sujet": "Veille du 3 au 8/11 : pistes relevées non intégrées",
+   "detail": "(1) Attal : prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11, reprise de la tribune de 2025) : assiette non publiée, aucune base officielle ni chiffrage indépendant : listé « non compté » ; à compter si une base officielle des revenus concernés est publiée (même règle que les autres taxes). (2) Retailleau, retraites : « à 65 ans pour tout le monde avec l'annulation de la décote » (BFMTV, direct du 3/11, paraphrase du média) : ne dit pas si le départ à 63 ans demeure, aucun changement retenu. (3) Retailleau, logement social réservé « aux gens qui bossent et qui ne sont pas délinquants » (BFMTV, 3/11) : l'exclusion des délinquants n'est pas sur le site ; à revoir si elle y entre. (4) Lisnard, capitalisation obligatoire d'environ 40 % des cotisations (Capital, 6/11, paraphrase du média) : note de la fiche « retraites ». (5) Le Pen, 5/11 (Euronaval, AFP) : exonération des hausses de salaire de 10 % redite, sans paramètre nouveau.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
    "resolution": null
   }
  ]

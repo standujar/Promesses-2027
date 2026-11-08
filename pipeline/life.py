@@ -1105,6 +1105,68 @@ for _o in OVR.values():
 assert _n == 5, _n
 DD_S[1] = DEPP_E18
 
+# --- review 41 : revue du 8/11 (08/11/2026) ; registre S106, S159, S211 et suivants
+# Décisions du porteur du 8/11 ; chaque citation relue à la source (veille vérifiée du 8/11). Même règle d'ordre pour les 8 (2026 d'abord,
+# précises avant intentions, puis les plus récentes ; à égalité ou à date inconnue, ordre affiché gardé ; 5 au plus, S106) et même attribution.
+# (1) Mélenchon, programme « L'Avenir en commun » publié le 6/11/2026 (melenchon2027.fr, livre en ligne) : école, la proposition sur les
+# effectifs suit le texte du programme (priorité aux maternelles et aux REP, et non plus au secondaire public : note du 14/10) ; environnement,
+# −65 % d'émissions « d'ici 2033 » (et non 2030) et nucléaire (pas de prolongation au-delà de 60 ans, arrêt de l'EPR2), reconfirmés ; sécurité
+# (BAC, régulation carcérale) et libertés (proportionnelle, RIC, 49.3) reconfirmées : plus marquées « non reconfirmées ». Plan de 200 Md€ et
+# fin des exonérations au-delà de 2 SMIC : absents du texte en ligne, inchangés (registre).
+# (2) Délit de pillage, même traitement pour les deux candidats qui le proposent (sécurité, précise : délit nommé) : Retailleau (France Info,
+# 5/11, cité par Le Parisien) et Lisnard (site de son parti, 4/11). Retailleau : suppression du juge d'application des peines (BFMTV, 3/11,
+# citation du candidat dans le titre ; même proposition que Philippe, Attal et Zemmour). Les plus récentes entrent en tête ; la 6e sort (S106) :
+# Retailleau, « Peines minimales obligatoires… » (Europe 1, la plus ancienne avec la proposition voisine, dernière à égalité ; la lecture des
+# peines planchers sort avec elle, plus aucune proposition de ce type n'étant affichée ; la fiche « sécurité » la garde) ; Lisnard, « Construire
+# 20 000 places de prison » (3/07, la plus ancienne ; lecture des places de prison retirée ; la fiche « prisons » la garde).
+# (3) Retailleau : « 1 000 établissements publics innovants d'ici 2032 » (site, mis à jour le 24/09) remplace le libellé « libres » ;
+# primauté de la Constitution sur le droit de l'UE (site, 22/09 ; précise) et « pas d'IA avant le collège » (CNews, 8/09 ; intention, aucun texte
+# ni instrument) : 6es de leur thème (date de page ou d'annonce non plus récente que les autres ; intention après les précises), hors affichage (S106).
+# (4) Attal : réseaux sociaux interdits aux moins de 15 ans et couvre-feu numérique de 22 h à 8 h pour les 15-18 ans (site de campagne, 5/11 ;
+# précise : âges et horaires nommés), libertés (3 → 4). Lisnard : enseignants recrutés comme contractuels (déjà affichés) : Capital (28/10) ajouté.
+MEDIAS += ('leparisien.fr',)
+LV41 = 'https://melenchon2027.fr/programme/livre/'
+LV_FUT2 = _s("La France insoumise, « L'Avenir en commun » (6/11/2026), « Le goût du futur », chapitre 2", LV41 + 'le-gout-du-futur-aux-nouvelles-frontieres-de-l-humanite/chapitre2')
+LV_BIF1 = _s("La France insoumise, « L'Avenir en commun » (6/11/2026), « Pour une bifurcation écologique et sociale », chapitre 1", LV41 + 'pour-une-bifurcation-ecologique-et-sociale/chapitre1')
+LV_BIF3 = _s("La France insoumise, « L'Avenir en commun » (6/11/2026), « Pour une bifurcation écologique et sociale », chapitre 3", LV41 + 'pour-une-bifurcation-ecologique-et-sociale/chapitre3')
+LV_6R1 = _s("La France insoumise, « L'Avenir en commun » (6/11/2026), « Fonder la 6e République », chapitre 1", LV41 + 'fonder-la-6e-republique/chapitre1')
+LV_6R2 = _s("La France insoumise, « L'Avenir en commun » (6/11/2026), « Fonder la 6e République », chapitre 2", LV41 + 'fonder-la-6e-republique/chapitre2')
+_txt('melenchon', 'ecole', 'Se rapprocher en un mandat de 19 élèves par classe (moyenne européenne), priorité au secondaire public',
+     "Réduire partout les effectifs sous la moyenne européenne de 19 élèves par classe, priorité aux maternelles et aux réseaux d'éducation prioritaire (REP)")
+_so('melenchon', 'ecole', add=[LV_FUT2])
+_txt('melenchon', 'environnement', "−65 % d'émissions en 2030, bilan public annuel", "−65 % d'émissions de gaz à effet de serre d'ici 2033, bilan public annuel incluant les émissions importées", o=False)
+_txt('melenchon', 'environnement', 'Sortir du nucléaire : abandon des EPR, démantèlement planifié', "Fermeture progressive des centrales nucléaires sans prolongation au-delà de 60 ans, arrêt du programme EPR2", o=False)
+_so('melenchon', 'environnement', add=[LV_BIF1, LV_BIF3])
+for _t in ('Démanteler les BAC', 'Mécanisme contraignant de régulation carcérale contre la surpopulation'): _txt('melenchon', 'securite', _t, o=False)
+_so('melenchon', 'securite', add=[LV_6R2], drop=['institutmontaigne.org/presidentielle-2022/jean-luc-melenchon', 'assemblee-nationale.fr/dyn/15/amendements/3973/AN/23.pdf'])
+for _t in ("Proportionnelle à l'Assemblée et RIC", 'Abolir le 49.3'): _txt('melenchon', 'libertes', _t, o=False)
+_so('melenchon', 'libertes', add=[LV_6R1], drop=['institutmontaigne.org/presidentielle-2022/jean-luc-melenchon'])
+# (2) délit de pillage, juge d'application des peines
+LP0511 = _s("Le Parisien, délit de pillage proposé par B. Retailleau sur France Info (5/11)", 'https://www.leparisien.fr/politique/commerces-attaques-lors-de-manifestations-bruno-retailleau-propose-de-creer-un-delit-de-pillage-05-11-2026-EGLXAHMB3FEQLNGY7Z6A6W67A4.php')
+BFM0311J = _s("BFMTV, « Vous Président » : B. Retailleau veut « supprimer le juge d'application des peines » (3/11)", 'https://www.bfmtv.com/politique/elections/presidentielle/video-bruno-retailleau-candidat-lr-pour-la-presidentielle-veut-supprimer-le-juge-d-application-des-peines_VN-202611030997.html')
+NE0411P = _s("Nouvelle Énergie, compte rendu de l'entretien de D. Lisnard sur BFMTV (4/11)", 'https://www.unenouvelleenergie.fr/toc-toc-on-arrive-david-lisnard-annonce-plus-de-100-000-adherents-a-nouvelle-energie-sur-bfmtv/')
+_ps = _cur('retailleau', 'securite'); assert [p['text'] for p in _ps][3] == 'Peines minimales obligatoires pour agressions de policiers, gendarmes et pompiers' and len(_ps) == 4
+_put('retailleau', 'securite', [_p("Créer un « délit de pillage » pour les pillages collectifs lors de manifestations"), _p("Supprimer le juge d'application des peines")] + _ps[:3])
+_rep('retailleau', 'securite', " " + PP, "")
+_so('retailleau', 'securite', add=[LP0511, BFM0311J], drop=['ipp.eu/wp-content/uploads/2024/03/Note_IPP_105'])
+_ps = _cur('lisnard', 'securite'); assert [p['text'] for p in _ps][4] == 'Construire 20 000 places de prison' or [p['text'] for p in _ps][4] == 'Construire 20 000 places de prison', [p['text'] for p in _ps]
+_put('lisnard', 'securite', [_p("Créer un délit spécifique de pillage")] + _ps[:4])
+_e = _evc('lisnard', 'securite'); assert _e.count(" " + PLACES) == 1, _e
+_ev('lisnard', 'securite', _e.replace(" " + PLACES, ""), drop=['senat.fr/rap/r23-037'])
+_so('lisnard', 'securite', add=[NE0411P])
+# (3) Retailleau, école : libellé du site
+RET1000 = _s("Site de Bruno Retailleau, « 1 000 établissements publics innovants d'ici 2032 » (mise à jour du 24/09)", 'https://www.avecretailleau.fr/projet/mesure/reconstruire-la-formation-et-le-recrutement-des-maitres')
+_txt('retailleau', 'ecole', 'Créer 1 000 établissements publics « libres » autonomes' if 'Créer 1 000 établissements publics « libres » autonomes' in [p['text'] for p in _cur('retailleau', 'ecole')] else 'Créer 1 000 établissements publics « libres » autonomes',
+     "Créer 1 000 établissements publics « innovants » et autonomes d'ici 2032")
+_so('retailleau', 'ecole', add=[RET1000])
+# (4) Attal, libertés ; Lisnard, école
+ATT0511 = _s("attalpresident.fr, harcèlement scolaire : réseaux sociaux et couvre-feu numérique (5/11)", 'https://attalpresident.fr/actualites/harcelement-scolaire-gabriel-attal-parole-huit-jeunes-victimes-engagement')
+_ps = _cur('attal', 'libertes'); assert len(_ps) == 3
+_put('attal', 'libertes', [_p("Interdire les réseaux sociaux aux moins de 15 ans ; couvre-feu numérique de 22 h à 8 h pour les 15-18 ans")] + _ps)
+_so('attal', 'libertes', add=[ATT0511])
+CAP2810 = _s("Capital, D. Lisnard veut des professeurs contractuels (CNews, 27/10)", 'https://www.capital.fr/votre-carriere/ca-na-plus-aucun-sens-quils-soient-fonctionnaires-david-lisnard-veut-des-profs-contractuels-1531365')
+_so('lisnard', 'ecole', add=[CAP2810])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.

@@ -1861,6 +1861,208 @@ t=C['le-pen']['claude_total']; a0="exonération des hausses de salaire jusqu'à 
 t['missing']=t['missing'].replace(a0,"exonération des hausses de salaire jusqu'à 10 % (salaires jusqu'à 3 fois le SMIC, porte-parole de campagne, 2/11/2026), ")
 D['asof']='3 novembre 2026'
 
+# --- review 41 : revue du 8/11 (08/11/2026) ; registre S001, S037, S207 (résolus), S002, S005, S012, S059, S106, S138, S159, S200, S202, S211 et suivants
+# Décisions du porteur du 8/11, même règle pour les 8 ; chaque source ouverte le 8/11 (veille vérifiée ou ouverture directe).
+# (1) Mélenchon : programme « L'Avenir en commun » publié le 6/11/2026 (texte en ligne sur melenchon2027.fr, domaine officiel du candidat).
+#  (a) aide au développement à 0,7 % du RNB reconfirmée : la fiche entre dans le total (valeur inchangée) ; Glucksmann (même objectif, document de
+#      2025 non repris) reste hors total.
+#  (b) Règle commune nouvelle, « recrutements publics » : 61,6 k€ par poste (coût complet, même valeur que les suppressions), sans la moitié rendue
+#      aux agents (qui ne vaut que pour les suppressions), 70 % du plan en 2030 si le plan est étalé sur le mandat ou sans date ; emplois du
+#      médico-social : part publique de leur financement (DREES, comptes de la santé, édition 2026 : soins de longue durée 2025, 55,363 Md€ financés
+#      par les administrations publiques sur 69,919, soit 79,2 %). Plan santé du 30/10 (modifié le 4/11) : 100 000 postes à l'hôpital, 300 000 dans
+#      le médico-social et les EHPAD, 2 500 psychologues : −14,7 (bornes : plan entier en 2030, −20,9 ; enveloppe de 3 Md€ du camp, −3,0).
+#      Même règle chez les 8 : 10 000 enseignants de LFI (0,4 Md€ en 2030) ; annulation des 1 588 suppressions de postes d'enseignants (Glucksmann,
+#      Attal : 0,1) ; 1 000 médecins salariés de Zemmour (programme de 2022 : 0,06) ; tous sous 1 Md€ : listés « non comptés » avec le montant.
+#  (c) « 100 % Sécu » : même règle que les soins dentaires de Le Pen (part des complémentaires reprise par l'Assurance maladie = dépense publique,
+#      financement non précisé) : complémentaires dans la consommation de soins et de biens médicaux 2025, 33,464 Md€ (DREES, édition 2026), plus la
+#      fin des franchises et participations forfaitaires (2,3 Md€ en 2025 pour le régime général, Cour des comptes, mai 2026) : −35,8.
+#  (d) service citoyen de 9 mois au SMIC du programme : même calcul que Glucksmann et Attal : −12,8 ; AAH au SMIC du programme : calcul ascendant
+#      sur la dépense d'AAH du PLF 2026 (14 681 M€ au montant maximal de 1 033,32 €) : −9,5 ; plans d'investissement publiés (BTP-logement 12,0 et
+#      automobile 1,4 Md€ par an de l'État, ligne à ligne) : planification −13,2 (hébergement d'urgence retiré, compté dans la fiche du même nom) ;
+#      plan d'un milliard contre le racisme : −1,0 (une enveloppe vaut son montant).
+#  (e) Non comptés (coût non publié ou pas de source officielle ouverte) : suppression de la décote, arrêts maladie à 100 % et fin des jours de
+#      carence, 35 h et 6e semaine de congés (fonction publique), cannabis légalisé, crédit d'impôt par enfant et fin du quotient conjugal, garantie
+#      d'autonomie pour tous, 10 000 places d'EHPAD publics par an (coût public par place sans source officielle ouverte), exonération des
+#      héritages sous 150 000 €.
+# (2) Simulateur : Retailleau, gain publié en un point (≈ 500 € nets par an au salaire médian, site du candidat) : même forme que Glucksmann et
+#     Attal (points) ; au-delà du point, au prorata, car le mécanisme publié (cotisations salariales en moins « dès le premier euro ») vaut pour
+#     tous les salaires (au_dela_prorata) ; Lisnard : aucun gain nouveau (baisse des cotisations non chiffrée), note.
+# (3) Veille des autres candidats : notes et sources (Le Pen, TVA sur l'électricité en 1re lecture ; Attal, chiffre du camp de l'assurance chômage ;
+#     Retailleau, 36e heure ; Lisnard, capitalisation ; Zemmour, « un an » de chômage, S207).
+LV='https://melenchon2027.fr/programme/livre/'
+LV_SECU1=LV+'mettre-en-securite-sociale/chapitre1'; LV_SECU2=LV+'mettre-en-securite-sociale/chapitre2'; LV_SECU3=LV+'mettre-en-securite-sociale/chapitre3'; LV_SECU4=LV+'mettre-en-securite-sociale/chapitre4'
+LV_ECO2=LV+'une-economie-au-service-des-besoins/chapitre2'; LV_ECO3=LV+'une-economie-au-service-des-besoins/chapitre3'
+LV_FUT2=LV+'le-gout-du-futur-aux-nouvelles-frontieres-de-l-humanite/chapitre2'; LV_FUT3=LV+'le-gout-du-futur-aux-nouvelles-frontieres-de-l-humanite/chapitre3'
+LV_6R1=LV+'fonder-la-6e-republique/chapitre1'; LV_6R3=LV+'fonder-la-6e-republique/chapitre3'; LV_MONDE3=LV+'un-monde-ordonne/chapitre3'
+LV_BIF2=LV+'pour-une-bifurcation-ecologique-et-sociale/chapitre2'
+PSANTE='https://melenchon2027.fr/programme/plans-thematiques/sante/'
+PBTP='https://melenchon2027.fr/programme/plans-investissement/btp-logement/'; PAUTO='https://melenchon2027.fr/programme/plans-investissement/automobile/'
+SRC_LV="La France insoumise, « L'Avenir en commun », programme publié le 6/11/2026"
+def LVIN(label,cit,url): return {"label":label,"value":"« "+cit+" »","source":SRC_LV,"url":url}
+def LVEST(cit,url,lo=None,hi=None): return {"source":SRC_LV,"year":2026,"value":"« "+cit+" »","low_md":lo,"high_md":hi,"url":url}
+# (1a) aide au développement
+m=M('melenchon','aide_developpement'); k=m['claude']; assert m.get('a_confirmer') and k['formula'].startswith("Indicatif, hors total : ") and (k['central'],k['low'],k['high'])==(-4.5,-6.3,-4.5)
+m.pop('a_confirmer'); k['formula']=k['formula'][len("Indicatif, hors total : "):]
+CIT_APD="Consacrer 0,7 % du revenu national brut à une aide publique au développement débarrassée du carcan néolibéral"
+m['estimates'].append(LVEST(CIT_APD,LV_MONDE3)); k['inputs'].append(LVIN("Objectif reconfirmé (programme du 6/11/2026)",CIT_APD,LV_MONDE3))
+a0="Non reconfirmé en 2026 : hors total, comme Glucksmann (même objectif, Acte I 2025). À revoir avec le programme du 6/11. "; assert k['note'].startswith(a0)
+k['note']="Reconfirmé dans le programme publié le 6/11/2026 : compté. Glucksmann (même objectif, Acte I 2025, non repris en 2026) reste hors total. "+k['note'][len(a0):]
+assert not M('glucksmann','aide_developpement').get('claude',{}).get('nc') and M('glucksmann','aide_developpement').get('a_confirmer')
+# retraites : valeur inchangée ; source du programme ; décote
+m=M('melenchon','retraites'); k=m['claude']
+CIT_RET="Abroger la réforme Macron passant l’âge de départ à la retraite à 64 ans, puis abaisser l’âge de départ jusqu’à restaurer le droit à la retraite à 60 ans à taux plein pour 40 annuités de cotisations"
+k['inputs'].append(LVIN("Programme du 6/11/2026",CIT_RET,LV_SECU1))
+k['note']+=" Le programme du 6/11/2026 (« jusqu'à restaurer le droit à la retraite à 60 ans à taux plein pour 40 annuités ») ne donne pas de calendrier : la note du 14/10 (60 ans « dans la suite du mandat ») reste la précision qui fonde la moitié du surcoût en 2030. Suppression de la décote, ajoutée au programme : coût non publié, non comptée."
+# (1b) hôpitaux et médico-social : règle commune des recrutements publics
+REC="Règle commune des recrutements publics : 61,6 k€ par poste en coût complet (362,1 Md€ / 5,88 M d'agents, même valeur que les suppressions), sans la moitié rendue aux agents, qui ne vaut que pour les suppressions ; 70 % du plan en 2030 quand il est étalé sur le mandat ou sans date"
+CNS='https://data.drees.solidarites-sante.gouv.fr/explore/dataset/cns_financement/'
+APU,SLD=55.363,69.919; PUB=APU/SLD; assert round(PUB,3)==0.792
+hop,ms,psy=100000*61.6e3/1e9,300000*61.6e3*PUB/1e9,2500*61.6e3/1e9
+c0=round(-(hop+ms+psy)*0.7,1); l0=round(-(hop+ms+psy),1); assert (c0,l0)==(-14.7,-20.9),(c0,l0)
+m=M('melenchon','hopitaux'); k=m['claude']; assert (k['central'],k['low'],k['high'])==(-3.0,-3.0,-3.0)
+CIT_HOP="Engager un plan de recrutement pluriannuel pour avoir 100 000 soignant·es et médecins supplémentaires à l’hôpital, 300 000 dans le secteur médico-social et les EHPAD"
+CIT_PSY="créer 2 500 postes de psychologues dans les centres médico-psychologiques"
+m.update(title="Plan santé : 400 000 recrutements",proposal="Plan de recrutement pluriannuel : 100 000 soignants et médecins de plus à l'hôpital, 300 000 dans le médico-social et les EHPAD ; 2 500 psychologues dans les centres médico-psychologiques, au moins 360 lits de pédopsychiatrie ; ratios minimaux de soignants par patient ; hausse de 3 Md€ du budget des hôpitaux en 2027.",
+         claimed="3 Md€ en 2027 (note LFI du 14/10/2026) ; plan de 400 000 postes sans coût publié",verdict='sous_conditions',
+         obstacle="Par la loi de financement de la Sécurité sociale ; soignants et médecins à former en nombre (capacités de formation) ; financement non précisé dans la mesure.")
+m['estimates'].append({"source":"La France insoumise, plan santé (30/10/2026, modifié le 4/11)","year":2026,"value":"« "+CIT_HOP+" »","low_md":None,"high_md":None,"url":PSANTE})
+SET('melenchon','hopitaux',c0,l0,-3.0,REC+" ; hôpital : 100 000 × 61,6 k€ = 6,16 Md€ ; médico-social et EHPAD : 300 000 × 61,6 k€ × 79,2 % (part des administrations publiques dans le financement des soins de longue durée, DREES 2025 : 55,4 sur 69,9 Md€) = 14,63 ; 2 500 psychologues : 0,15 ; plan pluriannuel sans date → 70 % en 2030 : (6,16 + 14,63 + 0,15) × 0,7 ≈ −14,7 Md€ ; borne basse : plan entier en 2030 (−20,9, même règle que les plans de postes) ; borne haute : enveloppe de 3 Md€ de la note du 14/10 (première marche du plan, non ajoutée)",
+    method='ascendant',note="Les 10 000 soignants et les 3 Md€ de la note du 14/10 sont la première marche du plan : ils ne s'ajoutent pas. Les 360 lits de pédopsychiatrie sont tenus par des soignants compris dans les 100 000 postes de l'hôpital : pas de coût à part. Coût complet d'un poste public appliqué au médico-social (même valeur pour tous) ; la part publique retenue est celle des soins de longue durée (soins et dépendance, hors hébergement payé par les résidents). Enveloppe d'urgence et ratios minimaux : sans montant publié.")
+k['inputs']=[IN_POST,{"label":"Financement des soins de longue durée (2025)","value":"Tous financeurs 69,919 Md€ ; administrations publiques 55,363 (Sécurité sociale 37,718, autres administrations centrales et locales 17,646) ; ménages 14,271 ; organismes complémentaires 0,285",
+    "source":"DREES, Les comptes de la santé, répartition par financeur (édition 2026, 1/10/2026)","url":CNS},
+    {"label":"Plan santé du candidat","value":"« "+CIT_HOP+" » ; « "+CIT_PSY+" »","source":"La France insoumise, plan santé (30/10/2026, modifié le 4/11)","url":PSANTE}]+k['inputs']
+# (1c) 100 % Sécu
+CIT_100="Instaurer le « 100 % Sécu » en remboursant à 100 % les soins de santé prescrits et en intégrant les assurances maladie complémentaires dans la Sécurité sociale"
+CIT_FR="Supprimer les franchises médicales et les participations forfaitaires sur les soins"
+CC_RALFSS='https://www.ccomptes.fr/sites/default/files/2026-05/20260527-synthese-RALFSS-2026.pdf'
+OC,FR=33.464,2.3; assert round(-(OC+FR),1)==-35.8 and round(-(OC+FR*1.4),1)==-36.7
+ADD('melenchon',{"id":"secu100","theme":"social","title":"« 100 % Sécu »","proposal":"Rembourser à 100 % les soins prescrits en intégrant les complémentaires santé dans la Sécurité sociale ; fin des dépassements d'honoraires en secteur conventionné ; supprimer les franchises médicales et les participations forfaitaires.",
+  "claimed":"Non chiffré (financement annoncé par les cotisations, transfert des primes des complémentaires)","claimed_md":None,
+  "estimates":[LVEST(CIT_100,LV_SECU1),{"source":"La France insoumise, plan santé (30/10/2026, modifié le 4/11)","year":2026,"value":"« "+CIT_FR+" »","low_md":None,"high_md":None,"url":PSANTE}],
+  "consensus":"isolé","verdict":"sous_conditions","obstacle":"Par la loi de financement de la Sécurité sociale ; reprise des contrats en cours des complémentaires santé ; financement non précisé dans la mesure (taux de cotisation non publié).",
+  "claude":{"id":"secu100","central":round(-(OC+FR),1),"low":round(-(OC+FR*1.4),1),"high":round(-(OC+FR),1),"method":"ascendant",
+    "formula":"Même règle que les soins dentaires de Le Pen : la part reprise aux complémentaires santé par l'Assurance maladie est une dépense publique. Complémentaires dans la consommation de soins et de biens médicaux en 2025 : 33,464 Md€ (DREES, édition 2026 ; euros de 2025, non projetés, comme les autres fiches) + fin des franchises et participations forfaitaires : 2,3 Md€ (régime général, 2025, Cour des comptes) ≈ −35,8 Md€ ; borne basse : rendement des franchises accru au plus de 40 % par le relèvement de leurs plafonds de 50 à 70 € au 1/10/2026 (2,3 × 1,4 = 3,2) → −36,7 ; borne haute : même valeur (la DREES ne sépare pas les soins non prescrits)",
+    "inputs":[{"label":"Consommation de soins et de biens médicaux (2025)","value":"256,452 Md€, dont Sécurité sociale 201,638, organismes complémentaires 33,464, ménages 19,691","source":"DREES, Les comptes de la santé, répartition par financeur (édition 2026, 1/10/2026)","url":CNS},
+      {"label":"Franchises et participations forfaitaires","value":"« Le rendement est ainsi passé de 1,5 Md€ en 2023 à 2,3 Md€ en 2025 pour le régime général. » (p. 19)","source":"Cour des comptes, La sécurité sociale 2026, synthèse (27/05/2026)","url":CC_RALFSS},
+      {"label":"Plafonds annuels relevés","value":"franchises et participations forfaitaires : de 50 à 70 € chacun au 1/10/2026 (décret n° 2026-858 du 11/09/2026)","source":"Service-public.gouv.fr (16/09/2026)","url":"https://www.service-public.gouv.fr/particuliers/actualites/A17166"},
+      LVIN("Programme du 6/11/2026",CIT_100,LV_SECU1)],
+    "note":"Le camp annonce un financement par les cotisations (transfert des primes des complémentaires) et une économie de frais de gestion : taux non publié, non compté (même règle que les autres financements sans paramètre). Fin des dépassements d'honoraires en secteur conventionné : comprise dans la part des complémentaires et des ménages, non chiffrée à part. La part des ménages (19,7 Md€ en 2025) n'est pas comptée : la DREES ne sépare pas les soins prescrits des autres. Arrêts maladie payés à 100 % et fin des jours de carence : coût non publié, non comptés."}})
+# (1d) service citoyen, AAH, planification, plan contre le racisme
+CIT_SC="Nous proposons à la place un service citoyen obligatoire avant l’âge de 25 ans, rémunéré au SMIC revalorisé pendant neuf mois"
+gs=M('glucksmann','service_civique')['claude']; assert (gs['central'],gs['low'],gs['high'])==(-4.8,-9.8,-4)
+sc,sh=round(-790000*9*(1700+100)/1e9,1),round(-790000*9*(SQ['smic_net']+100)/1e9,1); assert (sc,sh)==(-12.8,-11.2),(sc,sh)
+ADD('melenchon',{"id":"service_citoyen","theme":"social","title":"Service citoyen de 9 mois au SMIC","proposal":"Service citoyen obligatoire de neuf mois avant 25 ans, rémunéré au SMIC revalorisé (1 700 € net) ; service militaire volontaire abrogé.",
+  "claimed":"Non chiffré","claimed_md":None,"estimates":[LVEST(CIT_SC,LV_FUT2)],"consensus":"isolé","verdict":"sous_conditions","obstacle":"Capacités d'accueil pour environ 800 000 jeunes par an.",
+  "claude":{"id":"service_citoyen","central":sc,"low":round(sc-5,1),"high":sh,"method":"ascendant",
+    "formula":"Même calcul que le service de Glucksmann et l'engagement civique d'Attal : 790 000 jeunes × 9 mois × (1 700 € de rémunération nette, SMIC du programme, + 100 € de tutorat) ≈ −12,8 Md€ ; cotisations versées par l'État à la Sécurité sociale neutres pour le solde public ; borne haute : SMIC net actuel (1 477,93 €) → −11,2 ; borne basse : + 5 Md€ d'accueil collectif (haut de la fourchette du SNU généralisé, Cour des comptes), comme pour Glucksmann → −17,8",
+    "inputs":[LVIN("Programme du 6/11/2026",CIT_SC,LV_FUT2)]+[i for i in gs['inputs'] if 'Taille' in i['label'] or 'SNU' in i['label'] or 'tutorat' in i['label']],
+    "note":"Logistique d'accueil de 800 000 jeunes en sus. Abrogation du service militaire volontaire : économie non chiffrée (petit montant)."}})
+PAP26_SOL="https://www.assemblee-nationale.fr/dyn/dyn/contenu/visualisation/1088038/file/PAP2026_BG_Solidarite_insertion_egalite_chances_SE.pdf"
+CIT_AAH="Assurer l’autonomie financière des personnes en situation de handicap en revalorisant l’allocation aux adultes handicapés (AAH) à hauteur du SMIC"
+AAH,AMAX=14.681,1033.32; ac,ah=round(-AAH*(1700/AMAX-1),1),round(-AAH*(SQ['smic_net']/AMAX-1),1); assert (ac,ah)==(-9.5,-6.3),(ac,ah)
+ADD('melenchon',{"id":"aah","theme":"social","title":"AAH au niveau du SMIC","proposal":"Porter l'allocation aux adultes handicapés (AAH) au niveau du SMIC revalorisé (1 700 € net).",
+  "claimed":"Non chiffré","claimed_md":None,"estimates":[LVEST(CIT_AAH,LV_SECU2)],"consensus":"isolé","verdict":"faisable","obstacle":"Par décret et la loi de finances ; financement non précisé dans la mesure.",
+  "claude":{"id":"aah","central":ac,"low":ac,"high":ah,"method":"ascendant",
+    "formula":"Dépense d'AAH (projet de loi de finances pour 2026) : 14 681 M€ au montant maximal de 1 033,32 € ; porté à 1 700 € (SMIC net du programme), +64,5 % : 14,681 × 0,645 ≈ −9,5 Md€ ; borne haute au SMIC net actuel (1 477,93 €, +43,0 %) : −6,3",
+    "inputs":[{"label":"Dépense d'AAH et montant maximal","value":"« Allocation aux adultes handicapés (AAH) (14 681 M€) » ; « Le montant mensuel maximum de l’AAH en vigueur depuis le 1er avril 2025 s’élève à 1033,32 €. » (non revalorisé en 2026)","source":"Projet annuel de performances 2026, Solidarité, insertion et égalité des chances, programme 157","url":PAP26_SOL},
+      LVIN("Programme du 6/11/2026",CIT_AAH,LV_SECU2)],
+    "note":"Hausse proportionnelle de la dépense : sous-estimation probable (l'allocation différentielle augmente du même montant pour les allocataires à taux réduit, et de nouveaux allocataires entrent sous le plafond relevé) ; nombre d'allocataires et ressources non pris en compte faute de source officielle ouverte. Même lecture que la pension minimale au niveau du SMIC, non chiffrée : la répartition des pensions concernées n'est pas publiée."}})
+m=M('melenchon','planification'); k=m['claude']; assert (k['central'],k['low'],k['high'])==(-10.0,-10.0,-10.0)
+BTP=[("Nouveaux logements publics",3.1),("Rénovation des logements sociaux",0.25),("Isolation des logements",5.3),("Plan confort d'été",0.5),("Rénovation des bâtiments publics, associatifs et tertiaires privés",1.0),("Sortie des chaudières fioul et diminution des chaudières à gaz",1.0),("Formation de professionnels",0.06),("Réduction des déchets et réemploi",0.2),("Rénovation et entretien du patrimoine",0.6)]
+AUTO=[("Nouvelles lignes de production",100),("Service public de la location abordable",300),("Aides à l'achat de véhicules électriques et locaux",200),("Fonds pour la sous-traitance et les équipementiers",200),("Filière des batteries",500),("Réparation, recyclage, réemploi",50),("R&D et déploiement de minibus autonomes",20)]
+sb,sa=sum(v for _,v in BTP),sum(v for _,v in AUTO)/1e3; urg=3.1*10000/200000; assert (round(sb,2),round(sa,2),round(urg,3))==(12.01,1.37,0.155)
+pc,pl=round(-(sb+sa-urg),1),round(-(sb+sa),1); assert (pc,pl)==(-13.2,-13.4)
+m.update(title="Planification écologique : plans d'investissement",proposal="Plans d'investissement de l'État publiés ligne à ligne : BTP et logement (12 Md€ par an : 200 000 logements publics, 700 000 isolations, chaudières, bâtiments publics) et automobile (1,4 Md€ par an) ; le reste par un pôle public bancaire.",
+         claimed="12 Md€ par an (BTP et logement) + 1,4 Md€ par an (automobile) de l'État ; 10 Md€ en 2027 (note LFI du 14/10/2026)",claimed_md=-13.4)
+m['estimates']+=[{"source":"La France insoumise, plan d'investissement BTP et logement (24/09/2026, modifié le 10/10)","year":2026,"value":"« Total par an d’investissements supplémentaires de l’état 12 milliards d’euros »","low_md":-12,"high_md":-12,"url":PBTP},
+                 {"source":"La France insoumise, plan d'investissement automobile (10/10/2026, modifié le 16/10)","year":2026,"value":"« Au total, l’effort s’élèvera à 1,4 milliard d’euros de dépenses de l’État »","low_md":-1.4,"high_md":-1.4,"url":PAUTO}]
+SET('melenchon','planification',pc,pl,-10.0,"Règle des budgets publiés ligne à ligne (une enveloppe vaut son montant), année pleine en 2030 : colonne « État » des plans d'investissement publiés, BTP et logement 12,01 Md€ par an + automobile 1,37 Md€ par an = 13,38 ; moins la part de l'hébergement d'urgence, comptée dans la fiche « Logements d'urgence » (10 000 logements d'hébergement d'urgence par an sur 200 000 logements publics : 3,1 × 5 % ≈ 0,16) ≈ −13,2 Md€ ; borne basse : sans ce retrait (−13,4) ; borne haute : enveloppe de 10 Md€ de la note du 14/10 pour 2027",
+    method='ascendant',note="Investissements du pôle public bancaire et des autres acteurs (hors administrations publiques) non comptés. Le plan d'urgence climat de la note du 14/10 (bâtiments publics, équipements anti-incendie, SDIS, adaptation agricole) n'a pas de montant par ligne : les parties absentes des plans d'investissement ne sont pas ajoutées. Seuls deux plans d'investissement sont publiés au 8/11/2026 (page « Les plans d'investissement productif »).")
+k['inputs']=[{"label":"Plan BTP et logement, colonne « État » (Md€ par an)","value":" ; ".join(f"{a} {str(v).replace('.',',')}" for a,v in BTP)+" ; total 12","source":"La France insoumise, plan d'investissement BTP et logement (24/09/2026, modifié le 10/10)","url":PBTP},
+             {"label":"Plan automobile, colonne « État » (M€ par an)","value":" ; ".join(f"{a} {v}" for a,v in AUTO)+" ; total 1,4 Md€","source":"La France insoumise, plan d'investissement automobile (10/10/2026, modifié le 16/10)","url":PAUTO},
+             {"label":"Hébergement d'urgence dans le plan BTP","value":"« Nous prévoirons des logements adaptés aux séniors (40 000 par an), aux jeunes étudiant·es et jeunes actifs (30 000 par an) et des logements destinés à l’hébergement d’urgence (10 000 par an). »","source":"La France insoumise, plan d'investissement BTP et logement","url":PBTP}]+k['inputs']
+CIT_RAC="Mettre en œuvre un plan d’action pour analyser, prévenir et lutter contre l’islamophobie, l’antisémitisme et toutes les formes de racisme et y allouer le milliard de budget nécessaire"
+ADD('melenchon',{"id":"plan_racisme","theme":"social","title":"Plan d'un milliard contre le racisme","proposal":"Plan d'action contre l'islamophobie, l'antisémitisme et toutes les formes de racisme, doté d'un milliard d'euros.",
+  "claimed":"1 Md€","claimed_md":-1.0,"estimates":[LVEST(CIT_RAC,LV_SECU4,-1.0,-1.0)],"consensus":"isolé","verdict":"faisable","obstacle":"Par la loi de finances ; financement non précisé dans la mesure.",
+  "claude":{"id":"plan_racisme","central":-1.0,"low":-1.0,"high":-1.0,"method":"enveloppe (camp)","formula":"Enveloppe annoncée : 1 Md€ (une enveloppe vaut son montant), supposée annuelle",
+    "inputs":[LVIN("Programme du 6/11/2026",CIT_RAC,LV_SECU4)],"note":"Rythme annuel non précisé dans le programme : compté comme une dépense annuelle, comme les autres enveloppes."}})
+# (1e) notes, sources et mesures non comptées
+m=M('melenchon','fiscalite'); k=m['claude']
+k['inputs'].append(LVIN("Programme du 6/11/2026","Introduire une garantie d’impôt de 2 % sur le patrimoine des centimillionaires, dite « taxe Zucman », et rétablir une exit tax renforcée pour lutter contre l’évasion fiscale […] Exonérer de droits de succession les héritages inférieurs à 150 000 euros",LV_ECO2))
+k['note']+=". Programme du 6/11/2026 : exonération des héritages inférieurs à 150 000 € (coût non publié, non comptée) et « exit tax renforcée » (paramètres non publiés)"
+m=M('melenchon','niches'); k=m['claude']
+m['proposal']="Supprimer le crédit d'impôt recherche au profit de dotations récurrentes aux universités et instituts de recherche ; passer au crible les autres niches fiscales (pacte Dutreil et crédit d'impôt emploi à domicile cités en octobre 2026)."
+k['inputs'].append(LVIN("Programme du 6/11/2026","Supprimer le crédit impôt recherche au profit de dotations récurrentes à hauteur des besoins des universités et instituts de recherche",LV_FUT2))
+k['note']+=" Programme du 6/11/2026 : le crédit d'impôt recherche est supprimé « au profit de dotations récurrentes » (effet net non publié) ; le pacte Dutreil et le crédit d'impôt emploi à domicile n'y sont pas cités : reste non chiffrable."
+m=M('melenchon','jeunes'); k=m['claude']
+k['inputs'].append(LVIN("Programme du 6/11/2026","Financer l’autonomie des jeunes détachés du foyer fiscal parental grâce à la garantie d’autonomie qui les portera au-dessus du seuil de pauvreté (1 337 euros pour une personne seule)",LV_SECU2))
+k['note']=(k.get('note') or '')+". Programme du 6/11/2026 : la garantie d'autonomie vise aussi « chaque personne » (revenu porté au seuil de pauvreté, 1 337 € pour une personne seule) ; population et mécanisme non publiés : non comptée au-delà des jeunes"
+m=M('melenchon','point_indice'); k=m['claude']
+k['inputs'].append(LVIN("Programme du 6/11/2026","Revaloriser la valeur du point d’indice des fonctionnaires de 10 %, inscrire son dégel dans la loi et compenser intégralement cette augmentation pour les collectivités territoriales",LV_ECO2))
+a0=" ; à revoir avec le programme du 6/11."; assert k['note'].endswith(a0)
+k['note']=k['note'][:-len(a0)]+". Programme du 6/11/2026 : +10 % reconfirmé ; le chapitre sur l'éducation ajoute « Rattraper le gel du point d’indice depuis 2010 », sans paramètre : non compté au-delà de 10 %."
+for mid,cit,u in [('smic',"Porter immédiatement le SMIC mensuel à 1 700 euros net",LV_ECO2),('vss',"allouer les 3 milliards de budget demandés par les associations",LV_SECU3),
+                  ('cantine',"Assurer la gratuité réelle de l’éducation publique, y compris de la cantine, du transport, des activités périscolaires, des manuels et des fournitures",LV_FUT2),
+                  ('chomage',"Annuler les réformes Macron sur l’éligibilité et les méthodes de calcul du montant et de la durée de l’allocation",LV_SECU1),
+                  ('dette',"Exiger de l’Union européenne (UE) que la BCE soulage les États membres en annulant ou en transformant en dettes perpétuelles à taux nul la part de dette des États qu’elle possède",LV_ECO3),
+                  ('constituante',"Convoquer un référendum (article 11) pour engager le processus constituant et décider des modalités de composition de l’Assemblée constituante",LV_6R1),
+                  ('culture',"Porter la dépense publique consacrée à l’art, à la culture et à la création à 1 % du produit intérieur brut (PIB) par an",LV_FUT3),
+                  ('ttf',"Instaurer une taxe réelle sur les transactions financières",LV_ECO3),
+                  ('fraude',"Faire de la lutte contre la fraude et l’évasion fiscales une priorité en renforçant massivement les moyens humains et financiers du contrôle fiscal",LV_ECO2)]:
+    M('melenchon',mid)['claude'].setdefault('inputs',[]).append(LVIN("Programme du 6/11/2026 (reconfirmation)",cit,u))
+k=M('melenchon','culture')['claude']; a0=" À revoir avec le programme du 6/11."; assert k['note'].endswith(a0); k['note']=k['note'][:-len(a0)]+" Programme du 6/11/2026 : 1 % du PIB reconfirmé, sans échéance."
+t=C['melenchon']['claude_total']; a0="10 000 enseignants (0,5 Md€)"; assert t['missing'].count(a0)==1
+t['missing']=t['missing'].replace(a0,"10 000 enseignants (règle des recrutements publics : 10 000 × 61,6 k€ = 0,62 Md€, 70 % en 2030 : 0,4 Md€, sous 1 Md€)")
+t['missing']+=(", programme du 6/11/2026, coût non publié : suppression de la décote des pensions, arrêts maladie payés à 100 % et fin des jours de carence, 35 heures et sixième semaine de congés payés"
+  " (effet sur la fonction publique), cannabis légalisé sous monopole d'État (recette sans taux publié), crédit d'impôt par enfant et fin du quotient conjugal (paramètres non publiés),"
+  " garantie d'autonomie pour chaque personne (paramètre clé non publié : population et mécanisme), exonération de droits de succession des héritages inférieurs à 150 000 €,"
+  " 10 000 places d'EHPAD publics par an pendant cinq ans (coût public de fonctionnement par place : pas de source officielle ouverte)")
+C['melenchon']['sim']['fonctionnaires']="Hausse du point d'indice de 10 % ; plan de recrutement de 100 000 soignants et médecins à l'hôpital et de 300 000 dans le médico-social et les EHPAD (sans date) ; 10 000 enseignants."
+# même règle des recrutements chez les autres candidats (montants sous 1 Md€ : listés)
+for cid in ('glucksmann','attal'):
+    t=C[cid]['claude_total']; assert t['missing'].count(S118L)==1
+    t['missing']=t['missing'].replace(S118L,"annulation des 1 588 suppressions nettes de postes d'enseignants du projet de budget 2027 (règle des recrutements publics : 1 588 × 61,6 k€ ≈ 0,1 Md€, sous 1 Md€)")
+t=C['zemmour']['claude_total']; assert 'médecins salariés' not in t['missing']
+t['missing']+=", 1 000 médecins salariés par l'État dans les déserts médicaux (programme de 2022, non reconfirmé ; règle des recrutements publics : 1 000 × 61,6 k€ ≈ 0,06 Md€)"
+# (2) simulateur : Retailleau, un point publié, au prorata au-delà (mécanisme valable pour tous les salaires)
+sr=C['retailleau']['sim']; assert sr['salaire_net']['gain_mensuel']==46.4 and sr['salaire_net']['prorata']
+RET500='https://www.avecretailleau.fr/projet/mesure/rendre-30-milliards-d-euros-aux-salaries-et-aux-entreprises'
+sr['salaire_net']={"points":[[2238,round(500/12,1)]],"au_dela_prorata":True,"public":"salariés","imposable":1,
+ "note":"Cotisations salariales en moins « dès le premier euro » (15 Md€) : « environ 500 euros nets par an au salaire médian » (site du candidat), soit 41,7 €/mois au salaire médian (2 238 € net, Insee ; 2 115 € selon le site) ; au prorata du salaire en dessous comme au-dessus, le mécanisme valant pour tous les salaires (notre calcul)"}
+k=M('retailleau','menages')['claude']
+k['inputs'].append({"label":"Gain annoncé","value":"« La moitié revient directement aux salariés, soit environ 500 euros nets par an au salaire médian »","source":"Site de Bruno Retailleau, « Rendre 30 milliards d'euros aux salariés et aux entreprises » (mise à jour du 24/09/2026)","url":RET500})
+# Lisnard : promesse du 3/11, sans gain calculé (baisse des cotisations non chiffrée)
+CAP0411='https://www.capital.fr/votre-carriere/vous-gagnez-2-200-euros-net-david-lisnard-vous-promet-jusqua-400-euros-de-plus-par-mois-1531546'
+NE0411='https://www.unenouvelleenergie.fr/toc-toc-on-arrive-david-lisnard-annonce-plus-de-100-000-adherents-a-nouvelle-energie-sur-bfmtv/'
+sl=C['lisnard']['sim']; a0="Baisse des cotisations : 250 à 400 € net par mois promis selon les interventions ; au-delà de la baisse de CSG, aucun paramètre publié : non calculé ici."; assert sl['tous'].count(a0)==1
+sl['tous']=[x.replace(a0,"Baisse des cotisations : « entre 200 et 400 euros par mois » nets de plus pour un salaire médian de 2 200 € net (BFMTV, 3/11/2026), 250 à 400 € selon d'autres interventions ; au-delà de la baisse de CSG, aucun paramètre publié : non calculé ici.") for x in sl['tous']]
+k=M('lisnard','cotisations')['claude']
+k['inputs'].append({"label":"Gain promis (3/11/2026)","value":"« de gagner net par mois en plus entre 200 et 400 euros par mois » pour un salaire médian de 2 200 € net ; « On va rendre immédiatement 60 % des économies aux Français. »","source":"Capital (4/11/2026), d'après BFMTV ; Nouvelle Énergie (4/11/2026)","url":CAP0411})
+k['note']=(k.get('note') or '')+" Le 3/11/2026 (BFMTV), le candidat annonce « entre 200 et 400 euros par mois » nets de plus pour un salaire médian de 2 200 € net, « selon les modalités envisagées » : mécanisme non précisé, aucun gain calculé au simulateur (même règle que toute baisse non chiffrée)."
+# (3) veille des autres candidats
+AN0211='https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-lundi-02-novembre-2026'
+k=M('le-pen','tva')['claude']
+k['note']+=" Projet de loi de finances pour 2027, 1re lecture (Assemblée, 2/11/2026) : TVA à 5,5 % sur l'abonnement et la consommation d'électricité adoptée (amendements n° 3692 et 3959, 43 voix contre 13) ; l'amendement n° 635 de la candidate (toutes les énergies) rejeté (28 contre 40). Rien n'est voté définitivement : situation de départ inchangée jusqu'au vote de la loi (registre)."
+k['inputs'].append({"label":"Projet de loi de finances pour 2027, 1re lecture","value":"« Les amendements identiques n os 3692 et 3959 sont adoptés. » (TVA à 5,5 % sur l'électricité) ; « L'amendement n o 635 n'est pas adopté. » (toutes les énergies)","source":"Assemblée nationale, compte rendu de la 1re séance du 2/11/2026","url":AN0211})
+m=M('attal','travail'); k=m['claude']; assert m['claimed']=="+100 000 emplois" and m['claimed_md'] is None
+ATT5='https://attalpresident.fr/programme/mesures/reforme-assurance-chomage-cinq-milliards'
+m['claimed']="5 Md€ d'économies et au moins 100 000 emplois (page de mesure du 3/07/2026)"; m['claimed_md']=5
+a0="Le chiffre du gouvernement de mai 2024 (3,6), repris par le candidat dans la PPL n° 1791, est le chiffre du camp : hors médiane."; assert k['formula'].count(a0)==1
+k['formula']=k['formula'].replace(a0,"Chiffres du camp, hors médiane : le chiffre du gouvernement de mai 2024 (3,6), repris par le candidat dans la PPL n° 1791, et les 5 Md€ d'économies de sa page de mesure (3/07/2026).")
+m['estimates'].append({"source":"attalpresident.fr, « Réformer l'assurance chômage et réaliser cinq milliards d'économies » (3/07/2026)","year":2026,"value":"« dégager 5 milliards d'euros d'économies » ; « créer au moins 100 000 emplois »","low_md":5,"high_md":5,"url":ATT5})
+BFM0311='https://www.bfmtv.com/economie/emploi/30-minutes-de-travail-en-plus-par-jour-pour-gagner-un-13e-voire-un-14e-mois-la-promesse-de-bruno-retailleau-qui-veut-enterrer-la-semaine-de-35-heures-s-il-est-elu-president_AV-202611031003.html'
+k=M('retailleau','seuil_zero_cotisation')['claude']
+k['note']+=" Le 3/11/2026 (BFMTV), le candidat présente l'exonération « à partir de la 36e heure de travail hebdomadaire » ; son site fixe le seuil à 1 623 heures par an (temps de travail annualisé) : paramètre du site retenu."
+k.setdefault('inputs',[]).append({"label":"Seuil présenté le 3/11/2026","value":"« à partir de la 36e heure de travail hebdomadaire », « qu'il n'y [ait] plus de cotisations sociales ni pour le salarié, ni pour l'employeur »","source":"BFMTV (3/11/2026)","url":BFM0311})
+k=M('lisnard','retraites')['claude']
+k['note']+=" Capitalisation obligatoire : environ 40 % des cotisations transférées vers des comptes individuels selon Capital (6/11/2026, paraphrase du média, sans citation du candidat) : coût de transition non chiffré."
+BFM1709='https://www.bfmtv.com/politique/reconquete/eric-zemmour-appelle-a-renvoyer-tous-les-chomeurs-etrangers-de-longue-duree-a-partir-d-un-an-de-chomage_AN-202609170915.html'
+m=M('zemmour','remigration'); assert not any(e['url']==BFM1709 for e in m['estimates'])
+m['estimates'].append({"source":"BFMTV, Face à BFM (17/09/2026)","year":2026,"value":"Le candidat « fixe la limite à \"un an de chômage\" et ce \"même si la personne est là depuis vingt ans\" »","low_md":None,"high_md":None,"url":BFM1709})
+t=C['attal']['claude_total']; assert 'réseaux sociaux' not in t['missing']
+t['missing']+=", prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11/2026 : assiette non publiée, aucune base officielle ni chiffrage indépendant, non compté)"
+D['asof']='8 novembre 2026'
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:

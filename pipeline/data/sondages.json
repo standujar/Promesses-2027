@@ -1,17 +1,9 @@
 {
 "_regle": "Intentions de vote au 1er tour. Dernière vague de chaque institut dont le terrain s'est achevé dans les 15 jours précédant la date ci-dessous, 15e jour compris ; pour chaque institut, fourchette [plus bas, plus haut] des scores publiés dans les hypothèses où le candidat est testé, et on retient le milieu ; le chiffre affiché est la moyenne de ces milieux entre instituts (même poids pour chacun). L'ordre des candidats suit cette moyenne. Source : notices de la Commission des sondages.",
-"date": "03/11/2026",
+"date": "08/11/2026",
 "instituts": [
-{"institut": "Cluster17", "pour": "Politico", "terrain": "19-22/10/2026", "notice": "10339", "url": "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10339-pres-iv-cluster17-politico-26-octobre.pdf",
- "scores": {"le-pen": [30.5, 33], "melenchon": [18.5, 19.5], "glucksmann": [13, 14], "philippe": [16, 17], "retailleau": [7, 10], "attal": [12, 12], "lisnard": [8, 8], "zemmour": [3.5, 4]}},
-{"institut": "Ifop-Fiducial", "pour": "LCI, Le Figaro et Sud Radio", "terrain": "17-19/10/2026", "notice": "10327", "url": "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10327-pres-barometre-election-v7-ifop-20-octobre.pdf",
- "scores": {"le-pen": [34, 38], "melenchon": [15, 20], "glucksmann": [12, 16], "philippe": [12, 16], "retailleau": [5, 7.5], "attal": [4, 13], "lisnard": [5.5, 7], "zemmour": [3, 3.5]}},
-{"institut": "Ipsos BVA", "pour": "Le Parisien", "terrain": "21-22/10/2026", "notice": "10338", "url": "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10338-pres-iv-ipsos-bva-le-parisien-24-octobre.pdf",
- "scores": {"le-pen": [32, 33.5], "melenchon": [17, 17], "glucksmann": [13, 15.5], "philippe": [13, 15], "retailleau": [5.5, 11.5], "attal": [4, 9.5], "lisnard": [6.5, 6.5], "zemmour": [4, 4.5]}},
-{"institut": "OpinionWay", "pour": "CNews", "terrain": "21-22/10/2026", "notice": "10333", "url": "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10333-pres-iv-opinionway-cnews-22-octobre.pdf",
- "scores": {"le-pen": [36, 36], "melenchon": [16, 16], "glucksmann": [13, 13], "philippe": [12, 12], "retailleau": [6, 6], "attal": [4, 4], "lisnard": [6, 6], "zemmour": [4, 4]}},
-{"institut": "Toluna Harris Interactive", "pour": "M6 et RTL", "terrain": "19-21/10/2026", "notice": "10332", "url": "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10332-pres-iv-toluna-harris-interactive-23-octobre.pdf",
- "scores": {"le-pen": [33, 35], "melenchon": [17, 19], "glucksmann": [12, 14], "philippe": [13, 16], "retailleau": [4, 9], "attal": [5, 11], "lisnard": [7, 8], "zemmour": [5, 6]}}
+{"institut": "Ifop", "pour": "LCI", "terrain": "27-29/10/2026", "notice": "10351", "url": "https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10351-pres-iv-ifop-lci-3-novembre.pdf",
+ "scores": {"le-pen": [35, 37], "melenchon": [17.5, 18], "glucksmann": [10, 13], "philippe": [9.5, 15], "retailleau": [4, 7], "attal": [5, 9], "lisnard": [7, 9], "zemmour": [4, 4.5]}}
 ],
-"exclus": "Elabe pour BFMTV et La Tribune Dimanche (terrain du 14 au 16/10, achevé 18 jours avant le 3/11) ; YouGov pour Le HuffPost (terrain du 12 au 15/10, achevé 19 jours avant le 3/11) ; Odoxa (terrain du 24/09 au 07/10, achevé plus de 15 jours avant) ; vagues antérieures d'OpinionWay (13-14/10), Toluna Harris Interactive (notice du 12/10) et Cluster17 pour Le Point (14-15/10, « focus droite et centre »), remplacées par la vague suivante du même institut."
+"exclus": "Cluster17 pour Politico (terrain du 19 au 22/10), Ipsos BVA pour Le Parisien (21-22/10) et OpinionWay pour CNews (21-22/10) : terrains achevés le 22/10, 17 jours avant le 8/11 ; Elabe pour BFMTV et La Tribune Dimanche (14-16/10), YouGov pour Le HuffPost (12-15/10) et Odoxa (24/09-07/10) : plus de 15 jours ; vague précédente d'Ifop-Fiducial (17-19/10) remplacée par la vague suivante du même institut ; Toluna Harris Interactive pour M6 et RTL (vague du 3 au 5/11) : notice de la Commission des sondages pas encore publiée au 8/11, la vague précédente (19-21/10) étant hors délai."
 }

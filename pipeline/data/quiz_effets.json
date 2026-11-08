@@ -5711,8 +5711,9 @@
 ]
 },
 "melenchon.sante.2": {
-"complement": "Le même programme prévoit aussi de recruter des médecins salariés publics, sans en préciser le nombre.",
+"complement": "Le même programme prévoit aussi un plan pluriannuel de recrutement de soignants et de médecins à l'hôpital.",
 "complement_ref": [
+"melenchon.hopitaux",
 "melenchon.sante.1"
 ],
 "constat": "En 20 ans, plus de 40 % des maternités sans néonatologie ont fermé ; 6,4 % des mères à plus de 30 min (2021).",
