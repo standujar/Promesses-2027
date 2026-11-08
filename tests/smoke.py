@@ -236,7 +236,8 @@ with sync_playwright() as p:
     # pas de saut brutal quand le salaire augmente de 100 € (effets de seuil), impôt des jeunes parents plafonné.
     # Seul saut voulu : au-delà du dernier montant publié d'un gain donné en quelques points du salaire (salaire_net.points), plus rien n'est
     # calculé (une note le dit) ; au pas qui franchit ce point, la baisse est contrôlée à part : elle ne dépasse pas le montant publié en ce point
-    last = pg.evaluate("D.candidates.map(c=>{ const p=((c.sim||{}).salaire_net||{}).points; return p?p[p.length-1]:null; })")
+    # (un gain publié au prorata au-delà du dernier point, au_dela_prorata, n'a pas de saut : contrôlé avec les autres)
+    last = pg.evaluate("D.candidates.map(c=>{ const s=(c.sim||{}).salaire_net||{}, p=s.points; return p&&!s.au_dela_prorata?p[p.length-1]:null; })")
     jumps, cliffs = 0, []
     for st in ('prive', 'public', 'enseignant'):
         prev = None
@@ -290,6 +291,14 @@ with sync_playwright() as p:
         return [m?+m[1]:0, /montant non publié, pas de gain calculé/.test(t)]; };
       const out=[f(2238), f(1119), f(3000)]; presetVal=null; return out; })()""")
     check(r == [[250, False], [125, False], [0, True]], f'simulateur : gain publié en un seul point (Attal, 250 € au salaire médian, au prorata en dessous, rien au-delà avec une note) {r}')
+    # un seul point publié, mécanisme valable pour tous les salaires (Retailleau, cotisations salariales en moins « dès le premier euro » : ≈ 500 € nets
+    # par an au salaire médian, soit 41,7 €/mois) : au prorata en dessous comme au-dessus du point, sans note « pas de gain calculé » (review 41)
+    r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; openSim.clear(); openSim.add('retailleau');
+      const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); const t=document.querySelector('#simres .srow[data-c="retailleau"]').innerText.replace(/\\s+/g,' ');
+        const row=[...document.querySelectorAll('#simres .srow[data-c="retailleau"] .rw')].find(x=>/^Revenu net/.test(x.textContent.trim())); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/);
+        return [m?+m[1]:0, /pas de gain calculé/.test(t)]; };
+      const out=[f(2238), f(1119), f(4476)]; presetVal=null; return out; })()""")
+    check(r == [[42, False], [21, False], [83, False]], f'simulateur : gain publié en un point, au prorata en dessous et au-dessus quand le mécanisme vaut pour tous les salaires (Retailleau, 41,7 € au salaire médian) {r}')
     # impôt sur le revenu sur les gains de salaire (3/11/2026) : même calcul pour tous, au barème du simulateur avec décote, sur la hausse du revenu imposable
     # (hausse de salaire × net imposable / net ; baisse de CSG ou de cotisations × part déductible) ; rien au SMIC pour une baisse de prélèvement seule
     # (Retailleau, Lisnard), une ligne pour la hausse du SMIC à 1 700 € (Glucksmann, Mélenchon) ; une ligne au salaire médian pour les baisses de prélèvement
@@ -298,12 +307,13 @@ with sync_playwright() as p:
       const out=[f(SQ.smic_net), f(2238)]; presetVal=null; return out; })()""")
     check(r[0] == [False, False, True, True] and r[1] == [True, True, True, False],
           f'simulateur : impôt sur la hausse du revenu imposable, même calcul pour tous (au SMIC, seulement avec la hausse du SMIC ; une ligne au salaire médian) {r}')
-    # montants recalculés hors de l'app avec le même barème (personne seule) : Retailleau 12,5 et Lisnard 24,7 €/mois au salaire moyen (2 797 €),
+    # montants recalculés hors de l'app avec le même barème (personne seule) : Retailleau 14,1 (gain de 41,7 × 2 797 / 2 238 = 52,1 €/mois, review 41 ;
+    # 12,5 avant) et Lisnard 24,7 €/mois au salaire moyen (2 797 €),
     # Glucksmann 10,6 au salaire médian (2 238 €), Mélenchon 24,1 au SMIC (SMIC porté à 1 700 €)
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; g('s-year').value=1990; openSim.clear(); ['retailleau','lisnard','glucksmann','melenchon'].forEach(i=>openSim.add(i));
       const f=(id,v)=>{ presetVal=v; g('s-salary').value=v; sim(); const row=[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].find(x=>/hausse du salaire imposable/.test(x.textContent)); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/); return m?+m[1]:0; };
       const out=[f('retailleau',2797), f('lisnard',2797), f('glucksmann',2238), f('melenchon',SQ.smic_net)]; presetVal=null; return out; })()""")
-    check(all(abs(a - b) <= 1 for a, b in zip(r, [12.5, 24.7, 10.6, 24.1])), f'simulateur : impôt sur la hausse du salaire égal au calcul de référence (12,5 ; 24,7 ; 10,6 ; 24,1 €/mois, à 1 € près) {r}')
+    check(all(abs(a - b) <= 1 for a, b in zip(r, [14.1, 24.7, 10.6, 24.1])), f'simulateur : impôt sur la hausse du salaire égal au calcul de référence (14,1 ; 24,7 ; 10,6 ; 24,1 €/mois, à 1 € près) {r}')
     # part fiscale entière dès le 2e enfant (Le Pen) : gain avec 2 enfants, rien avec 1, pas de double compte avec l'exonération des moins de 30 ans
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); g('s-salary').value=3500; openSim.clear(); openSim.add('le-pen');
       const f=(k,y)=>{ S.kids=k; g('s-year').value=y; sim(); return [...document.querySelectorAll('#simres .srow[data-c="le-pen"] .rw')].filter(x=>/^Impôt/.test(x.textContent.trim())).length; };
