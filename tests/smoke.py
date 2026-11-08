@@ -357,7 +357,8 @@ with sync_playwright() as p:
       return blackout ? a.hidden && !b : (!a.hidden && a.textContent.includes(D.sondages.date) && !!b && b.textContent.includes(D.sondages.date)); })()""")
     check(r, 'sondages : date de la moyenne affichée avec les intentions de vote')
     # Vie quotidienne : chaque thème avec des propositions a son étiquette d'efficacité (calculée à partir des lectures)
-    check(pg.evaluate("Object.values(D.life).flat().every(x=>!x.proposals.length||!!EVL[x.evidence_level])"), "Vie quotidienne : une étiquette d'efficacité par thème avec propositions")
+    # bloc « études » retiré le 8/11/2026 : ni texte d'étude ni étiquette d'efficacité publiés ; chaque thème avec propositions garde ses sources
+    check(pg.evaluate("Object.values(D.life).flat().every(x=>!('evidence' in x)&&!('evidence_level' in x)&&(!x.proposals.length||x.sources.length>0)) && !document.querySelector('.ev-tag')"), "Vie quotidienne : pas de bloc « études », des sources pour chaque thème avec propositions")
     # typographie : un nombre et son unité ne sont jamais coupés (résumé de Glucksmann à 360 px : le montant du SMIC, « 1 700 € », sur une ligne)
     pg.set_viewport_size({'width': 360, 'height': 800})
     r = pg.evaluate("""(()=>{ cur='glucksmann'; go('cand'); const p=document.querySelector('#fhead p'), n=[...p.childNodes].find(x=>x.nodeType===3&&/\\d\\u202f\\d{3}\\u00a0€/.test(x.textContent));

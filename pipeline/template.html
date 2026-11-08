@@ -779,8 +779,6 @@ const prop=p=>typeof p==='string'?{text:p,verifiable:null}:p;
 const vtag=p=>p.old?'<span class="vf o">2022, non reconfirmée</span>':(p.verifiable===true?'<span class="vf y">Précis</span>':p.verifiable===false?'<span class="vf n">Intention</span>':'');
 const pst=p=>p.old?'old':p.verifiable?'v':'i';
 const dotsOf=pp=>`<span class="dots" aria-label="${pp.filter(p=>pst(p)==='v').length} engagements précis sur ${pp.length}">${pp.map(p=>`<i class="d-${pst(p)}"></i>`).join('')}</span>`;
-const EVL={prouvee:'Études : effet prouvé',mitigee:'Études : effet mitigé',non_demontree:'Études : effet non démontré',pas_d_etude:'Pas d\'étude'};
-const evTag=x=>x&&x.evidence_level&&EVL[x.evidence_level]?`<span class="ev-tag ev-${x.evidence_level}">${EVL[x.evidence_level]}</span>`:'';
 const plist=ps=>`<ul>${ps.map(prop).map(p=>`<li>${vtag(p)}${esc(p.text)}</li>`).join('')}</ul>`;
 function vcount(cid){ let n=0,v=0,o=0; ((D.life||{})[cid]||[]).forEach(x=>(x.proposals||[]).map(prop).forEach(p=>{n++; if(p.old) o++; else if(p.verifiable) v++;})); return {n,v,o}; }
 // repères officiels d'un thème (mêmes pour tous les candidats) : vie quotidienne et filtres par thème des fiches
@@ -797,7 +795,7 @@ function lifeCard(x){ if(!x) return '';
   return `<div class="lc"><div class="lh"><span class="ic">${svgI(ic)}</span><h3>${esc(lab)}</h3></div>
     ${x.proposals&&x.proposals.length?plist(x.proposals):'<p class="muted small">Pas de proposition publiée sur ce thème.</p>'}
     ${x.indicator?`<p class="ind"><b>Effet annoncé :</b> ${esc(x.indicator)}</p>`:''}
-    ${x.proposals&&x.proposals.length?`<details class="evd"><summary>${evTag(x)||'Études'} · sources</summary><div><p class="ev">${esc(x.evidence)}</p><div class="srcs">${(x.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}${s.year?' ('+esc(s.year)+')':''}</a>`).join('')}</div></div></details>`:''}</div>`; }
+    ${x.proposals&&x.proposals.length&&(x.sources||[]).length?`<details class="evd"><summary>Sources</summary><div><div class="srcs">${(x.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}${s.year?' ('+esc(s.year)+')':''}</a>`).join('')}</div></div></details>`:''}</div>`; }
 function lifeFiche(c){ document.getElementById('ftab').hidden=!D.life; if(!D.life){ ftab='budget'; } const vc=vcount(c.id); document.getElementById('f-vie').innerHTML = (vc.n?`<p class="vscore"><b>${vc.v} engagements précis</b> (chiffre, date ou moyen) sur ${vc.n} propositions${vc.o?`, dont ${vc.o} de 2022 non reconfirmées`:''}. Même test pour tous les candidats.</p>`:'') + ((D.life_themes||Object.keys(LT)).map(th=>lifeCard(lifeOf(c.id,th))).join('') || '<p class="muted">Données en cours de collecte.</p>'); }
 function lifeHome(){
   if(!D.life){ document.getElementById('life-home').hidden=true; return; }
@@ -807,7 +805,7 @@ function lifeHome(){
     const pp=ps.map(prop);
     return `<div class="lrow" data-c="${c.id}"><button class="lsum" aria-expanded="false" ${pp.length?'':'disabled'}><span class="l1"><span class="nm">${esc(c.short)}</span>${dotsOf(pp)}</span>
       ${pp.length?`<span class="one">${esc(pp.map(p=>p.text).join(' · '))}</span>`:'<span class="ev">Pas de proposition publiée sur ce thème.</span>'}</button>
-      ${pp.length?`<div class="more">${plist(pp)}${x.evidence?`<span class="ev">${evTag(x)} ${esc(x.evidence)}</span>`:''}<button class="tofiche">Voir la fiche →</button></div>`:''}</div>`; }).join('');
+      ${pp.length?`<div class="more">${plist(pp)}<button class="tofiche">Voir la fiche →</button></div>`:''}</div>`; }).join('');
   document.querySelectorAll('#lcmp .lrow').forEach(r=>{ const b=r.querySelector('.lsum'); b.onclick=()=>{ r.dataset.open=r.dataset.open==='1'?'0':'1'; b.setAttribute('aria-expanded',r.dataset.open==='1'); };
     const f=r.querySelector('.tofiche'); if(f) f.onclick=()=>{ cur=r.dataset.c; ftab='vie'; go('cand'); }; });
 }
