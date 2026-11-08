@@ -1340,6 +1340,14 @@ def merge(D):
     ids = [c['id'] for c in D['candidates']]
     themes = [t for t in THEMES if any(t in v for v in life.values())]
     D['life_themes'] = themes
-    D['life'] = {cid: [life.get(cid, {}).get(t) or {'theme': t, 'proposals': [], 'indicator': None, 'evidence': 'Pas de proposition publiée sur ce thème.', 'sources': [], 'evidence_level': None} for t in themes] for cid in ids}
+    # Bloc « études » retiré de l'affichage (décision du porteur du projet, 8/11/2026 : textes trop longs, exemples étrangers peu comparables) :
+    # les lectures d'études (OVR, NIV) restent contrôlées ici pour garder l'historique, mais le site ne publie que les propositions et les
+    # sources qui parlent pour le candidat (life-attribution.json), sans texte ni étiquette d'efficacité. Même règle pour les 8.
+    for cid, v in life.items():
+        for th, t in v.items():
+            att = {u for us in A.get(cid, {}).get(th, {}).values() for u in us}
+            t['sources'] = [x for x in t['sources'] if x['url'] in att]
+            t.pop('evidence', None); t.pop('evidence_level', None)
+    D['life'] = {cid: [life.get(cid, {}).get(t) or {'theme': t, 'proposals': [], 'indicator': None, 'sources': []} for t in themes] for cid in ids}
     b = J('baseline.json'); b.update(D.get('baseline', {})); D['baseline'] = b
     return D

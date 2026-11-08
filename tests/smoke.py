@@ -185,7 +185,7 @@ with sync_playwright() as p:
         pg.evaluate("quizImp.clear()")
 
     pg.evaluate("go('moi')"); worst = 0
-    for st in ('prive', 'public', 'enseignant', 'independant', 'chomage', 'minima', 'etudiant', 'retraite'):
+    for st in ('prive', 'public', 'enseignant', 'independant', 'chomage', 'minima', 'aah', 'etudiant', 'retraite'):
         pg.evaluate(f"document.querySelector('#s-status [data-v=\"{st}\"]').click()")
         for sal in (0, 800, 1478, 2733, 5000):
             for kids in (0, 2, 4):
@@ -305,15 +305,17 @@ with sync_playwright() as p:
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; g('s-year').value=1990; const ids=['retailleau','lisnard','glucksmann','melenchon']; openSim.clear(); ids.forEach(i=>openSim.add(i));
       const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); return ids.map(id=>[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].some(x=>/hausse du salaire imposable/.test(x.textContent))); };
       const out=[f(SQ.smic_net), f(2238)]; presetVal=null; return out; })()""")
-    check(r[0] == [False, False, True, True] and r[1] == [True, True, True, False],
-          f'simulateur : impôt sur la hausse du revenu imposable, même calcul pour tous (au SMIC, seulement avec la hausse du SMIC ; une ligne au salaire médian) {r}')
+    # review 43 : Lisnard, gain publié de 200 € au salaire médian (montant minimal de la fourchette), soit 132 € au SMIC au prorata : imposable au SMIC
+    check(r[0] == [False, True, True, True] and r[1] == [True, True, True, False],
+          f'simulateur : impôt sur la hausse du revenu imposable, même calcul pour tous (au SMIC, hausse du SMIC ou gain de 132 € de Lisnard ; rien pour un gain de 28 € ; une ligne au salaire médian) {r}')
     # montants recalculés hors de l'app avec le même barème (personne seule) : Retailleau 14,1 (gain de 41,7 × 2 797 / 2 238 = 52,1 €/mois, review 41 ;
     # 12,5 avant) et Lisnard 24,7 €/mois au salaire moyen (2 797 €),
     # Glucksmann 10,6 au salaire médian (2 238 €), Mélenchon 24,1 au SMIC (SMIC porté à 1 700 €)
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; g('s-year').value=1990; openSim.clear(); ['retailleau','lisnard','glucksmann','melenchon'].forEach(i=>openSim.add(i));
       const f=(id,v)=>{ presetVal=v; g('s-salary').value=v; sim(); const row=[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].find(x=>/hausse du salaire imposable/.test(x.textContent)); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/); return m?+m[1]:0; };
-      const out=[f('retailleau',2797), f('lisnard',2797), f('glucksmann',2238), f('melenchon',SQ.smic_net)]; presetVal=null; return out; })()""")
-    check(all(abs(a - b) <= 1 for a, b in zip(r, [14.1, 24.7, 10.6, 24.1])), f'simulateur : impôt sur la hausse du salaire égal au calcul de référence (14,1 ; 24,7 ; 10,6 ; 24,1 €/mois, à 1 € près) {r}')
+      const out=[f('retailleau',2797), f('lisnard',2797), f('glucksmann',2238), f('melenchon',SQ.smic_net), f('lisnard',SQ.smic_net)]; presetVal=null; return out; })()""")
+    # Lisnard au salaire moyen : baisse de la CSG seule au-delà du salaire médian (91,6 €), 24,7 € d'impôt ; au SMIC : 200 × 1 477,93 / 2 238 = 132,1 €, 2,3 € d'impôt
+    check(len(r) == 5 and all(abs(a - b) <= 1 for a, b in zip(r, [14.1, 24.7, 10.6, 24.1, 2.3])), f'simulateur : impôt sur la hausse du salaire égal au calcul de référence (14,1 ; 24,7 ; 10,6 ; 24,1 ; 2,3 €/mois, à 1 € près) {r}')
     # part fiscale entière dès le 2e enfant (Le Pen) : gain avec 2 enfants, rien avec 1, pas de double compte avec l'exonération des moins de 30 ans
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); g('s-salary').value=3500; openSim.clear(); openSim.add('le-pen');
       const f=(k,y)=>{ S.kids=k; g('s-year').value=y; sim(); return [...document.querySelectorAll('#simres .srow[data-c="le-pen"] .rw')].filter(x=>/^Impôt/.test(x.textContent.trim())).length; };
@@ -332,6 +334,61 @@ with sync_playwright() as p:
       const t=id=>document.querySelector(`#simres .srow[data-c="${id}"]`).innerText, out=[/revalorisées en 2028/.test(t('lisnard')), /Non revalorisées en 2028/.test(t('attal')), /APL non revalorisées en 2028/.test(t('attal'))];
       g('s-apl').value=0; S.kids=0; sim(); return out; })()""")
     check(r == [False, True, True], f'simulateur : aucune ligne « Non revalorisées en 2028 » chez Lisnard (gel des seules pensions), allocations et APL gelées chez Attal {r}')
+    # --- review 43 (08/11/2026) : audit du simulateur
+    ROW = """(id,lab)=>{ const rs=[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].filter(x=>x.querySelector('b').textContent===lab);
+      return rs.map(x=>{ const m=x.querySelector('.v').textContent.replace(/\\s+/g,' ').match(/([+−-]?)\\s*([0-9 ]+) €/); return m?(m[1]==='−'||m[1]==='-'?-1:1)*+m[2].replace(/\\s/g,''):null; }); }"""
+    PROF = """(p)=>{ const g=id=>document.getElementById(id); document.querySelector(`#s-status [data-v="${p.st}"]`).click(); document.querySelector(`#s-nat [data-v="${p.nat||'fr'}"]`).click();
+      S.kids=p.kids||0; S.wealth=p.w||0; S.inh=p.inh||0; g('s-year').value=p.year||1990; g('s-res').checked=!!p.lt5; g('s-work').checked=false; presetVal=p.sal; g('s-salary').value=p.sal;
+      openSim.clear(); D.candidates.forEach(c=>openSim.add(c.id)); sim(); presetVal=null; return 1; }"""
+    def row(c, lab): return pg.evaluate(f"(a)=>({ROW})(a[0],a[1])", [c, lab])
+    def txt(c): return pg.evaluate(f"document.querySelector('#simres .srow[data-c=\"{c}\"]').innerText.replace(/\\s+/g,' ')")
+    # (1) SMIC et point d'indice : le traitement d'un agent public est le plus élevé des deux, pas leur somme (Mélenchon, agent public au SMIC :
+    # 1 700 − 1 477,93 = 222 € avant impôt, la hausse du point de 118 € comprise) ; au-dessus, la seule hausse du point (2 200 € : 176 €)
+    pg.evaluate(f"({PROF})({{st:'public',sal:SQ.smic_net}})"); a = [row('melenchon', 'SMIC'), row('melenchon', "Point d'indice")]
+    pg.evaluate(f"({PROF})({{st:'public',sal:2200}})"); b2 = [row('melenchon', 'SMIC'), row('melenchon', "Point d'indice")]
+    check(a == [[222], []] and b2 == [[], [176]], f"simulateur : agent public, SMIC relevé et point d'indice non additionnés (222 € au SMIC, 176 € à 2 200 €) {a} {b2}")
+    # (3) Lisnard, même règle qu'Attal : 200 € au salaire médian (montant minimal de « 200 à 400 € »), au prorata en dessous ; au-delà, la seule baisse
+    # de la CSG (91,6 € au salaire moyen, au prorata), avec une note ; jamais les deux additionnés ; indépendants : la baisse de la CSG seule
+    out = []
+    for sal in (2238, 1119, 3000):
+        pg.evaluate(f"({PROF})({{st:'prive',sal:{sal}}})"); out.append([row('lisnard', 'Revenu net'), 'seule la baisse de la CSG' in txt('lisnard')])
+    pg.evaluate(f"({PROF})({{st:'independant',sal:2797}})"); out.append([row('lisnard', 'Revenu net'), 'seule la baisse de la CSG' in txt('lisnard')])
+    check(out == [[[200], False], [[100], False], [[98], True], [[92], False]],
+          f'simulateur : Lisnard, gain publié de 200 € au salaire médian, au prorata en dessous, baisse de la CSG seule au-delà avec une note, pas d\'addition des deux {out}')
+    # (4) services obligatoires : même ligne pour les 17-25 ans, rémunération lue dans les données (Mélenchon 1 700 € pendant 9 mois, Glucksmann ≈ 620 €
+    # pendant 10 mois) ; une note sans montant quand l'indemnité n'est pas publiée (Attal, Philippe) ; chaque candidat qui a une fiche de service retenue a l'un ou l'autre
+    pg.evaluate(f"({PROF})({{st:'etudiant',sal:400,year:2006}})")
+    sv = pg.evaluate("""D.candidates.filter(c=>c.measures.some(m=>/^service|engagement_civique/.test(m.id)&&kept(m))).map(c=>{ const r=document.querySelector(`#simres .srow[data-c="${c.id}"]`);
+      const w=[...r.querySelectorAll('.rw')].find(x=>x.querySelector('b').textContent==='Service obligatoire'); return [c.id, w?w.querySelector('.v').textContent.replace(/\\s+/g,' '):(/(engagement civique|Service national) obligatoire[^.]*non calculé ici/.test(r.innerText)?'note':null)]; })""")
+    sv = dict(sv)
+    check(sv == {'melenchon': '1 700 €/mois pendant 9 mois', 'philippe': 'note', 'glucksmann': '≈ 620 €/mois pendant 10 mois', 'attal': 'note'},
+          f'simulateur : service obligatoire des jeunes, même ligne et rémunération lue dans les données de chaque candidat, note sans montant publié {sv}')
+    # (5) AAH : Mélenchon 1 700 € au maximum, soit +658,41 € pour tout allocataire (allocation différentielle) ; aides réservées : même condition que les
+    # minima (Le Pen, étranger avec moins de 5 ans : AAH perdue « si la révision passe ») ; gel d'Attal (toutes les prestations) ; montant actuel = fiche du droit actuel
+    pg.evaluate(f"({PROF})({{st:'aah',sal:SQ.aah}})"); a = [row('melenchon', 'AAH'), row('attal', 'Revalorisation'), row('le-pen', 'AAH')]
+    pg.evaluate(f"({PROF})({{st:'aah',sal:800}})"); a.append(row('melenchon', 'AAH'))
+    pg.evaluate(f"({PROF})({{st:'aah',sal:800,nat:'hors',lt5:true}})"); a += [row('le-pen', 'AAH'), row('zemmour', 'AAH'), row('lisnard', 'AAH'), row('retailleau', 'AAH')]
+    check(a == [[658], [-19], [], [658], [-800], [-800], [-800], [-800]] and pg.evaluate("SQ.aah===1041.59"),
+          f'simulateur : AAH (Mélenchon +658 € pour tout allocataire, gel d\'Attal, perte selon la même condition que les minima chez les 4 candidats concernés) {a}')
+    # (6) impôt des retraités, même barème que les actifs avec l'abattement de 10 % des pensions : fin de l'abattement chez Lisnard pour un retraité
+    # imposable (2 300 € : −36,9 €/mois, calcul de référence), rien sous le seuil (1 200 €) ; part fiscale de Le Pen dès le 2e enfant aussi pour un retraité
+    pg.evaluate(f"({PROF})({{st:'retraite',sal:2300,year:1955}})"); ab = [x for x in pg.evaluate("[...document.querySelectorAll('#simres .srow[data-c=\"lisnard\"] .rw')].filter(x=>/Abattement de 10/.test(x.textContent)).map(x=>x.querySelector('.v').textContent)")]
+    base23 = pg.evaluate("document.getElementById('sim-base').textContent")
+    pg.evaluate(f"({PROF})({{st:'retraite',sal:1200,year:1955}})"); ab12 = [row('lisnard', 'Impôt'), 'sans effet pour vous' in txt('lisnard')]
+    pg.evaluate(f"({PROF})({{st:'retraite',sal:3500,year:1955,kids:2}})"); lp = row('le-pen', 'Impôt')
+    check(ab == ['−37 €/mois'] and ab12 == [[], True] and len(lp) == 1 and lp[0] > 0 and 'impôt sur le revenu estimé 1' in base23.replace(' ', ' '),
+          f'simulateur : impôt des retraités (fin de l\'abattement chez Lisnard à 2 300 €, rien sous le seuil, part fiscale de Le Pen, impôt actuel affiché) {ab} {ab12} {lp}')
+    # (7) gains symétriques des pertes : durée du chômage allongée (Mélenchon, 2023 annulée : 24 mois) comme les baisses (Philippe : 12 mois), même ligne ;
+    # fin des jours de carence (non comptée) : une note sans montant
+    pg.evaluate(f"({PROF})({{st:'chomage',sal:1100}})"); ch = [pg.evaluate(f"(()=>{{ const w=[...document.querySelectorAll('#simres .srow[data-c=\"{c}\"] .rw')].find(x=>x.querySelector('b').textContent==='Durée du chômage'); return w?w.querySelector('.v').textContent.replace(/\\s+/g,' '):null; }})()") for c in ('melenchon', 'philippe')]
+    pg.evaluate(f"({PROF})({{st:'public',sal:2200}})"); car = 'fin des jours de carence' in txt('melenchon') and not any(row('melenchon', 'Arrêt maladie'))
+    check(ch == ['jusqu\'à +6 600 €', 'jusqu\'à −6 600 €'] and car, f'simulateur : durée du chômage dans les deux sens, même ligne ; carence de Mélenchon en note {ch} {car}')
+    # (8) notes sans montant pour les mesures comptées non calculables, même forme pour tous ; (10) hypothèse « agents publics » écrite (Attal, Retailleau)
+    pg.evaluate(f"({PROF})({{st:'public',sal:2200,w:300000,inh:100000}})")
+    nt = [bool(re.search(p, txt(c))) for c, p in (('melenchon', '100 % Sécu.*non calculé ici'), ('melenchon', 'inférieurs à 150 000 € exonérés'), ('le-pen', 'Soins dentaires.*non calculé ici'),
+          ('le-pen', 'proche aidant.*non calculé ici'), ('le-pen', 'ramenée de 31,4 % à 30 %'), ('zemmour', "Fin de MaPrimeRénov'"), ('attal', 'agents publics'), ('retailleau', 'agents publics'))]
+    check(all(nt), f'simulateur : notes des mesures comptées non calculables (100 % Sécu, héritages, soins dentaires, aidants, flat tax, MaPrimeRénov\'), hypothèse « agents publics » écrite {nt}')
+    pg.evaluate(f"({PROF})({{st:'prive',sal:1800}})")
     check(not errs, f'aucune erreur JS {errs[:1]}')
     # sources faibles : nom d'hôte exact (aucune adresse franceinfo.fr étiquetée « agrégateur »), étiquette aussi sur les données d'entrée et en Vie quotidienne ;
     # depuis le 31/10, la Vie quotidienne ne cite plus d'agrégateur quand une source qui parle pour le candidat existe (il peut n'en rester aucun) : tout agrégateur
@@ -345,17 +402,20 @@ with sync_playwright() as p:
     check(r == [True, 0, True, True, True, True], f'sources : aucune adresse franceinfo.fr étiquetée « agrégateur » ; agrégateurs signalés sur les données d\'entrée et en Vie quotidienne ; chaque thème a une source qui n\'est pas un site faible {r}')
     # « Qu'est-ce qui peut passer ? » et répartition des verdicts : mêmes mesures que les totaux (hors mesures non confirmées et doublons)
     r = pg.evaluate("""(()=>{ go('accueil'); const O={bloque:0,tres_difficile:1,sous_conditions:2,faisable:3};
-      const cells=[...document.querySelectorAll('#grid td button')].map(b=>{ const c=cand(b.dataset.c), m=c.measures.find(x=>x.id===b.dataset.m);
-        return kept(m) && c.measures.filter(x=>x.theme===m.theme&&kept(x)).every(x=>O[x.verdict]>=O[m.verdict]); });
+      const cells=[...document.querySelectorAll('#grid td button[data-m]')].map(b=>{ const c=cand(b.dataset.c), m=c.measures.find(x=>x.id===b.dataset.m);
+        return kept(m) && c.measures.filter(x=>x.theme===m.theme&&kept(x)).every(x=>O[x.verdict]>=O[m.verdict]) && +b.dataset.n===c.measures.filter(x=>x.theme===m.theme&&kept(x)).length; });
+      // colonne « Toutes » : répartition des verdicts égale aux mesures retenues de chaque candidat (8/11/2026)
+      const alls=D.candidates.map(c=>{ const b=document.querySelector(`#grid td button[data-all][data-c="${c.id}"]`); return !!b && [...b.querySelectorAll('span')].reduce((a,s)=>a+ +s.textContent.replace(/\\D/g,''),0)===c.measures.filter(kept).length; });
       const tally=D.candidates.map(c=>{ cur=c.id; go('cand'); return [...document.querySelectorAll('#fhead .legend span')].reduce((a,s)=>a+ +s.textContent.split('·').pop(),0)===c.measures.filter(kept).length; });
-      cur=D.candidates[0].id; go('accueil'); return [cells.length>0 && cells.every(Boolean), tally.every(Boolean), D.candidates.some(c=>c.measures.some(m=>!kept(m)))]; })()""")
-    check(r == [True, True, True], f'« Qu\'est-ce qui peut passer ? » et répartition des verdicts sans les mesures hors total {r}')
+      cur=D.candidates[0].id; go('accueil'); return [cells.length>0 && cells.every(Boolean), tally.every(Boolean), D.candidates.some(c=>c.measures.some(m=>!kept(m))), alls.every(Boolean)]; })()""")
+    check(r == [True, True, True, True], f'« Qu\'est-ce qui peut passer ? » (verdict le plus contraignant et nombre de mesures par thème, répartition de tous les verdicts) sans les mesures hors total {r}')
     # sondages : date de la moyenne affichée à côté des intentions de vote (accueil et fiche), masquée avec les sondages
     r = pg.evaluate("""(()=>{ go('accueil'); const a=document.getElementById('poll-note'); go('cand'); const b=document.querySelector('#fhead .pdate'); go('accueil');
       return blackout ? a.hidden && !b : (!a.hidden && a.textContent.includes(D.sondages.date) && !!b && b.textContent.includes(D.sondages.date)); })()""")
     check(r, 'sondages : date de la moyenne affichée avec les intentions de vote')
     # Vie quotidienne : chaque thème avec des propositions a son étiquette d'efficacité (calculée à partir des lectures)
-    check(pg.evaluate("Object.values(D.life).flat().every(x=>!x.proposals.length||!!EVL[x.evidence_level])"), "Vie quotidienne : une étiquette d'efficacité par thème avec propositions")
+    # bloc « études » retiré le 8/11/2026 : ni texte d'étude ni étiquette d'efficacité publiés ; chaque thème avec propositions garde ses sources
+    check(pg.evaluate("Object.values(D.life).flat().every(x=>!('evidence' in x)&&!('evidence_level' in x)&&(!x.proposals.length||x.sources.length>0)) && !document.querySelector('.ev-tag')"), "Vie quotidienne : pas de bloc « études », des sources pour chaque thème avec propositions")
     # typographie : un nombre et son unité ne sont jamais coupés (résumé de Glucksmann à 360 px : le montant du SMIC, « 1 700 € », sur une ligne)
     pg.set_viewport_size({'width': 360, 'height': 800})
     r = pg.evaluate("""(()=>{ cur='glucksmann'; go('cand'); const p=document.querySelector('#fhead p'), n=[...p.childNodes].find(x=>x.nodeType===3&&/\\d\\u202f\\d{3}\\u00a0€/.test(x.textContent));

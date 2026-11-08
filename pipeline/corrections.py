@@ -136,7 +136,6 @@ k=M('lisnard','cotisations')['claude']; k['formula']=k['formula'].replace('.',',
 ORD=['le-pen','melenchon','glucksmann','philippe','retailleau','attal','lisnard','zemmour']
 D['candidates'].sort(key=lambda c:ORD.index(c['id']))
 # --- simulateur : cohérence avec le chiffrage
-sl=C['lisnard']['sim']['salaire_net']; sl.update(promised_md=120, measure='cotisations', note="Baisse des cotisations : +400 €/mois promis à terme pour un salaire moyen (2 733 €), au prorata du revenu")
 sr=C['retailleau']['sim']; sr['alloc_familiales']=None
 sr['famille']="« Revenu familial » de 240 € par enfant dès le 1er enfant, qui remplace 12 aides familiales : le gain ou la perte dépend des aides que vous touchez aujourd'hui ; non chiffré ici."
 sr.pop('minima_cut',None)  # « −30 % » sans source : remplacé par le plafond publié (review 5)
@@ -2063,6 +2062,190 @@ t=C['attal']['claude_total']; assert 'réseaux sociaux' not in t['missing']
 t['missing']+=", prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11/2026 : assiette non publiée, aucune base officielle ni chiffrage indépendant, non compté)"
 D['asof']='8 novembre 2026'
 
+# --- review 42 : verdicts, voie juridique et pratique seulement (08/11/2026) ; registre S223
+# Décision du porteur du 8/11, la même pour les 8 : le verdict juge la voie juridique et pratique, jamais le coût, l'écart avec le chiffre du
+# camp, ni la précision du programme. « Sous conditions » = condition identifiée hors de la décision (accord de tiers : collectivités,
+# partenaires sociaux, autre État ou institution ; contrats en cours ; obligation européenne ; capacités à bâtir ; rendement ou contenu d'une
+# autre mesure ; risque de censure précis). Un paramètre, un contenu ou une échéance non publiés ne changent plus le verdict : l'obstacle le dit
+# (« … non publié ») et la mesure est non chiffrable ou comptée selon la règle des objectifs. Revue des 58 « sous conditions » retenues.
+# Règles communes écrites à cette occasion :
+#  - assurance chômage : règles fixées par une convention des partenaires sociaux agréée par le Gouvernement, ou par décret faute d'accord
+#    (code du travail, art. L. 5422-20 et suivants), ou par la loi : la décision reste au Gouvernement et au Parlement, « faisable » pour les 4 ;
+#  - retraite par capitalisation créée par la loi : « faisable », le coût de la transition n'étant pas une condition (Lisnard, Retailleau,
+#    Zemmour, Attal) ; Philippe garde « sous conditions » : la capitalisation est alimentée par les réserves de l'Agirc-Arrco, régime géré par
+#    les partenaires sociaux (accord de tiers) ;
+#  - services civiques ou nationaux obligatoires pour une classe d'âge : capacités d'accueil et d'encadrement à bâtir, même obstacle pour les 4 ;
+#  - écoles des collectivités (cantine, bâtiments) : mise en œuvre par les collectivités, « sous conditions » pour les 2 ;
+#  - RSA versé par les départements : le droit du RSA est fixé par la loi, les départements l'appliquent ; seul le droit à des moyens
+#    convenables d'existence (alinéa 11 du Préambule de 1946) garde « sous conditions » au RSA limité dans le temps de Zemmour ;
+#  - plans de postes, prisons, fraude (moyens de contrôle), renouvelables (contrats signés), certificats d'économies d'énergie (directive) :
+#    conditions hors de la décision, inchangés.
+# Obstacles nettoyés de toute raison de coût ou de chiffre du camp, verdict inchangé (voir S223).
+def _n(s): return s.replace('\xa0',' ').replace(' ',' ')
+def VB(cid,mid,old_v,new_v,old_ob,new_ob):
+    m=M(cid,mid); assert m['verdict']==old_v and _n(m['obstacle'])==_n(old_ob),(cid,mid,m['verdict'],m['obstacle'])
+    m['verdict']=new_v; m['obstacle']=new_ob
+SC,FA='sous_conditions','faisable'
+FNP="financement non précisé dans la mesure"
+# (1) seule raison = paramètre, contenu ou échéance non publiés, coût, financement ou rendement : « faisable »
+VB('le-pen','mesures-sectorielles',SC,FA,"Contenu non publié.","Par la loi de finances ; contenu non publié ; "+FNP+".")
+VB('melenchon','retraites',SC,FA,"Par la loi ; échéance du passage à 60 ans non publiée ; "+FNP+".","Par la loi ; échéance du passage à 60 ans non publiée ; "+FNP+".")
+VB('melenchon','niches',SC,FA,"Les trois niches pèsent ≈20 Md€ : 22 Md€ suppose de tout supprimer",
+   "Par les lois de finances et de financement de la Sécurité sociale ; niches visées au-delà du crédit d'impôt recherche et ampleur du rabot non publiées.")
+VB('melenchon','culture',SC,FA,"Par la loi de finances ; échéance non publiée.","Par la loi de finances ; échéance non publiée ; "+FNP+".")
+VB('melenchon','aide_developpement',SC,FA,"Par la loi de finances ; échéance non publiée.","Par la loi de finances ; échéance non publiée ; "+FNP+".")
+VB('philippe','production',SC,FA,"Aides supprimées non identifiées (liste non publiée) ; CVAE déjà supprimée d'ici 2030 par la loi.",
+   "Par les lois de finances et de financement de la Sécurité sociale ; liste des aides supprimées non publiée ; CVAE déjà supprimée d'ici 2030 par la loi.")
+VB('philippe','famille',SC,FA,"Seuils de dégressivité et aides remplacées non publiés.",
+   "Par la loi de financement de la Sécurité sociale ; seuils de dégressivité et aides remplacées non publiés.")
+VB('philippe','heures_sup',SC,FA,"Par la loi de financement de la Sécurité sociale ; heures concernées fixées par accord d'entreprise, volume non publié (mesure non chiffrable) ; recoupe l'exonération existante ; "+FNP+".",
+   "Par la loi de financement de la Sécurité sociale ; volume d'heures concerné non publié (durée du travail fixée par accord d'entreprise) ; recoupe l'exonération existante ; "+FNP+".")
+TREND="rendement dépendant des comportements (départs, optimisation)"
+VB('glucksmann','heritages',SC,FA,"Seuil >2 M€ seul insuffisant : exige une réforme d'assiette (Dutreil, assurance-vie)",
+   "Par les lois de finances et de financement de la Sécurité sociale ; taux et assiette de la taxe (pacte Dutreil, assurance-vie) non publiés ; "+TREND+".")
+VB('glucksmann','leasing_social',SC,FA,"Par la loi de finances ; financement et échéance non publiés.","Par la loi de finances ; échéance non publiée ; "+FNP+".")
+VB('lisnard','allocation',SC,FA,"Plafond non défini ; égalité devant la loi pour les étrangers",
+   "Par la loi ; plafond (part du SMIC) et aides fusionnées non publiés.")
+VB('lisnard','foncier',SC,FA,"Taux et rendement de la fiscalité foncière de remplacement non publiés ; droits de mutation perçus par les départements.",
+   "Par la loi de finances ; compensation des départements pour les droits de mutation ; taux et rendement de la fiscalité foncière de remplacement non publiés.")
+VB('attal','ia',SC,FA,"Part nouvelle des 100 Md€ publics non publiée (fonds européens et crédits existants cités).",
+   "Par la loi de finances ; part nouvelle des 100 Md€ publics non publiée (fonds européens et crédits existants cités) ; "+FNP+".")
+VB('retailleau','travail',SC,FA,"Par la loi ; RSA versé par les départements ; modalités du plafond à 70 % du SMIC non publiées.",
+   "Par la loi ; RSA versé par les départements (compensation de leurs charges) ; modalités du plafond à 70 % du SMIC non publiées.")
+# retraites : la capitalisation créée par la loi et son coût de transition ne sont pas des conditions hors de la décision
+TCAP="financement de la transition vers la capitalisation (double cotisation) non précisé dans la mesure"
+VB('lisnard','retraites',SC,FA,"Par la loi ; calendrier du recul et de la bascule vers la capitalisation non publié ; coût de la transition (double cotisation) non chiffré.",
+   "Par la loi ; calendrier du recul et de la bascule vers la capitalisation non publié ; "+TCAP+".")
+VB('retailleau','retraites',SC,FA,"Par la loi ; calendrier non publié ; coût de la transition vers la capitalisation non chiffré.","Par la loi ; calendrier non publié ; "+TCAP+".")
+VB('zemmour','retraites',SC,FA,"Par la loi ; âge retenu (64 ou 65 ans) non tranché ; coût de la transition vers la capitalisation non chiffré.",
+   "Par la loi ; âge retenu (64 ou 65 ans) non tranché ; "+TCAP+".")
+VB('attal','retraites',SC,FA,"Par la loi ; décotes, surcotes et durée de cotisation non publiées.","Par la loi ; décotes, surcotes, durée de cotisation et part de capitalisation non publiées.")
+VB('philippe','retraites',SC,SC,"Par la loi ; capitalisation alimentée par les excédents de l'Agirc-Arrco, régime géré par les partenaires sociaux ; exemptions non chiffrées.",
+   "Par la loi ; capitalisation alimentée par les réserves de l'Agirc-Arrco, régime complémentaire géré par les partenaires sociaux : accord de ceux-ci.")
+# assurance chômage : une seule règle pour les 4
+TCHO="Par décret : convention des partenaires sociaux agréée par le Gouvernement, ou décret faute d'accord (code du travail, art. L. 5422-20 et suivants) ; ou par la loi"
+VB('melenchon','chomage',SC,FA,"Convention d'assurance chômage et décret ; "+FNP+".",TCHO+" ; "+FNP+".")
+VB('philippe','chomage',SC,FA,"Convention d'assurance chômage et décret ; jours de carence : par la loi.",TCHO+" ; jours de carence : par la loi.")
+VB('attal','travail',SC,FA,"Convention d'assurance chômage et décret.",TCHO+" ; contingent d'heures supplémentaires : par la loi.")
+VB('retailleau','chomage',SC,FA,"Convention d'assurance chômage et décret ; risque de report des ruptures conventionnelles vers les licenciements.",TCHO+".")
+# (2) même type, même verdict et même formulation : services civiques ou nationaux obligatoires (capacités à bâtir)
+TSERV="Par la loi ; capacités d'accueil et d'encadrement à bâtir pour environ 800 000 jeunes par an"
+VB('melenchon','service_citoyen',SC,SC,"Capacités d'accueil pour environ 800 000 jeunes par an.",TSERV+".")
+VB('glucksmann','service_civique',SC,SC,"Capacités d'accueil pour environ 800 000 jeunes par an",TSERV+".")
+VB('attal','engagement_civique',SC,SC,"Forme et capacités d'accueil non publiées.",TSERV+" ; forme non publiée.")
+VB('philippe','service_national',SC,SC,"Durée, forme et calendrier non publiés.",TSERV+" ; durée, forme et calendrier non publiés.")
+# écoles des collectivités : mise en œuvre par elles (cantine de Mélenchon inchangée)
+VB('attal','batiments_scolaires',SC,SC,"Périmètre, part de l'État et part déjà prévue non publiés ; bâtiments des collectivités.",
+   "Par la loi de finances ; bâtiments scolaires des collectivités (communes, départements, régions) : travaux menés par elles ; périmètre, part de l'État et part déjà prévue non publiés.")
+# prisons : même obstacle pour toutes les fiches, sans chiffre du camp
+VB('le-pen','prisons',SC,SC,PRIS_OB+' 1,0 Md€ inscrit dès 2027 au contre-budget.',PRIS_OB)
+# (3) obstacles des autres verdicts : sans raison de coût ni de chiffre du camp (niveau inchangé)
+VB('melenchon','dette','bloque','bloque',"Chemin : modifier l'article 123 du traité européen, à l'unanimité des 27, ou sortir de l'euro. Même appliquée, l'effet net reste proche de zéro.",
+   "Chemin : modifier l'article 123 du traité européen, à l'unanimité des 27, ou sortir de l'euro.")
+for cid in ('melenchon','glucksmann'):
+    VB(cid,'smic',FA,FA,"Un décret suffit ; coût des allègements de cotisations et effet sur l'emploi peu qualifié ; "+FNP+".","Un décret suffit ; effet sur l'emploi peu qualifié ; "+FNP+".")
+VB('philippe','jeunes_parents',FA,FA,"Par la loi de finances ; "+FNP+" ; coût non vérifié indépendamment (impôt payé par les foyers ayant un enfant de moins de 3 ans non publié).","Par la loi de finances ; "+FNP+".")
+VB('retailleau','ia',FA,FA,"Par la loi de finances ; "+FNP+" ; économies attendues de l'IA non chiffrées indépendamment.","Par la loi de finances ; "+FNP+".")
+VB('retailleau','seuil_zero_cotisation',FA,FA,"Par la loi de financement de la Sécurité sociale ; autofinancement par des heures nouvelles non démontré.",
+   "Par la loi de financement de la Sécurité sociale ; "+FNP+" (le camp l'attend des heures nouvelles travaillées).")
+for cid in ('le-pen','retailleau','lisnard','zemmour'):
+    VB(cid,'ame',FA,FA,"Une loi suffit ; report de dépenses vers l'hôpital (soins urgents).","Une loi suffit.")
+# --- review 43 : simulateur, trous et asymétries (08/11/2026) ; registre S224, S225 et suivants
+# Décisions du porteur du 8/11 (audit du simulateur), la même règle pour les 8 ; valeurs officielles ouvertes le 8/11.
+# (0) Règle unique du simulateur (méthode, CLAUDE.md, DEVELOPPER.md) : un gain publié par le candidat et confirmé en 2026 compte, qu'il soit
+#     compté ou non dans le total, au montant minimal d'une fourchette, sans les mesures de financement ; aucun gain pour une mesure non confirmée
+#     ou sans montant publié. Branche « part financée » (promised_md) retirée du simulateur : plus aucun candidat ne l'utilisait.
+SP_AAH='https://www.service-public.gouv.fr/particuliers/vosdroits/F12242'
+SP_PENS='https://www.service-public.gouv.fr/particuliers/vosdroits/F415'
+SP_CSG='https://www.service-public.gouv.fr/particuliers/vosdroits/F2971'
+# (1) droit actuel : AAH au montant maximal (1 041,59 €, service-public.gouv.fr, page vérifiée le 14/09/2026) ; impôt des pensions : abattement de
+#     10 %, au moins 454 € par pensionné et au plus 4 439 € par foyer (revenus 2025, F415, vérifiée le 15/04/2026) ; net imposable d'une pension au
+#     taux normal de CSG (8,3 %, dont 5,9 déductibles ; CRDS 0,5 % ; Casa 0,3 % ; F2971, vérifiée le 1/06/2026) : (1 − 5,9 %) / (1 − 9,1 %) ≈ 1,035
+SQ['aah']=1041.59; SQ['aah_url']=SP_AAH
+SQ['ir'].update(net_imposable_pension=round((1-0.059)/(1-0.091),3),abat_pension_min=454,abat_pension_max=4439,url_pensions=SP_PENS,url_csg_pensions=SP_CSG)
+assert SQ['ir']['net_imposable_pension']==1.035
+k=M('melenchon','aah')['claude']; a0="(non revalorisé en 2026)"; i0=[i for i in k['inputs'] if a0 in i['value']]; assert len(i0)==1
+i0[0]['value']=i0[0]['value'].replace(a0,"(1 041,59 € au maximum en 2026 selon service-public.gouv.fr, page vérifiée le 14/09/2026 ; chiffrage gardé sur le montant du même document que la dépense)")
+# (2) SMIC et point d'indice : le traitement d'un agent public est le plus élevé des deux (salaire relevé par le point, nouveau SMIC), pas leur somme
+#     (pipeline/template.html) ; seul Mélenchon propose les deux.
+assert [c0['id'] for c0 in D['candidates'] if c0['sim'].get('smic_net') and c0['sim'].get('point_indice_pct')]==['melenchon']
+# (3) Lisnard, même règle qu'Attal : point publié « entre 200 et 400 euros par mois » nets au salaire médian (BFMTV, 3/11 ; Capital, 4/11) →
+#     montant minimal, 200 € à 2 238 € (Insee ; 2 200 € selon le candidat), au prorata en dessous. Ce gain comprend ou remplace la baisse de la CSG
+#     (le candidat ne détaille pas) : jamais additionnés, le plus grand des deux jusqu'au salaire médian ; au-delà, la seule baisse de la CSG (comptée,
+#     valable pour tous les revenus d'activité) au prorata, avec une note. Part imposable : 1 (CSG et CRDS déductibles chez Lisnard, cotisations).
+sl=C['lisnard']['sim']; s0=sl['salaire_net']; assert s0['gain_mensuel']==91.6 and s0['prorata'] and s0['imposable']==1 and s0['independants']
+sl['salaire_net']={"points":[[2238,200]],"public":"salariés","imposable":1,"independants":True,
+ "note":"Baisse des cotisations : « entre 200 et 400 euros par mois » nets de plus au salaire médian (2 238 € net, Insee ; 2 200 € selon le candidat, BFMTV, 3/11/2026) : montant minimal retenu, 200 €/mois ; en dessous, au prorata du salaire (notre calcul)",
+ "au_dela":"Baisse des cotisations au-delà du salaire médian (2 238 € net) : montant non publié ; seule la baisse de la CSG, valable pour tous les revenus d'activité, est calculée",
+ "socle":{"gain_mensuel":s0['gain_mensuel'],"ref":s0['ref'],"imposable":1,"court":"CSG ramenée de 9,2 % à 6,6 %","note":s0['note']}}
+a0="Baisse des cotisations : « entre 200 et 400 euros par mois » nets de plus pour un salaire médian de 2 200 € net (BFMTV, 3/11/2026), 250 à 400 € selon d'autres interventions ; au-delà de la baisse de CSG, aucun paramètre publié : non calculé ici."
+assert sl['tous'].count(a0)==1; sl['tous']=[x for x in sl['tous'] if x!=a0]
+k=M('lisnard','cotisations')['claude']; a0="mécanisme non précisé, aucun gain calculé au simulateur (même règle que toute baisse non chiffrée)."; assert k['note'].count(a0)==1
+k['note']=k['note'].replace(a0,"mécanisme non précisé. Au simulateur, même règle que le gain publié d'Attal : montant minimal de la fourchette, 200 €/mois au salaire médian, au prorata en dessous ; ce gain comprend ou remplace la baisse de la CSG, qui ne s'y ajoute pas (le plus grand des deux), et seule cette baisse de la CSG est calculée au-delà du salaire médian.")
+# (4) services obligatoires des jeunes : même ligne pour les 17-25 ans, rémunération lue dans les données de chaque candidat ; sans montant publié, une note
+sg=C['glucksmann']['sim']; t0=sg['service_jeunes']; assert t0.startswith("Service obligatoire de 10 mois")
+sg['service_jeunes']={"note":t0,"montant":round(504.98+114.85,2),"mois":10,"approx":True}
+C['melenchon']['sim']['service_jeunes']={"note":"Service citoyen obligatoire de 9 mois avant 25 ans, rémunéré au SMIC du programme (1 700 € net par mois)","montant":1700,"mois":9}
+C['attal']['sim']['service_jeunes']={"note":"Un mois d'engagement civique obligatoire avant 25 ans : forme et indemnité non publiées, non calculé ici."}
+C['philippe']['sim']['service_jeunes']={"note":"Service national obligatoire : durée, forme et indemnité non publiées, non calculé ici."}
+# (5) AAH : profil ajouté. Mélenchon : AAH portée à 1 700 € (allocation différentielle : même hausse pour tout allocataire). Aides réservées : l'AAH
+#     suit la condition des minima chez les 4 candidats concernés, leur mesure visant toutes les prestations non contributives (Lisnard, Zemmour,
+#     Retailleau : « prestations sociales » après cinq ans) ou nommant l'AAH (Le Pen ; étude chiffrée de l'Institut Montaigne 2024, reprise pour
+#     Retailleau : RSA, prime d'activité, AAH, aides au logement). Gel d'Attal : « toutes les prestations sociales », l'AAH comprise, comme les
+#     minima, les allocations familiales et les APL. Plafond des aides de Retailleau : application à l'AAH non publiée, une note.
+C['melenchon']['sim'].update(aah_max=1700,aah_note="AAH portée au niveau du SMIC du programme : 1 700 € net par mois au maximum")
+sa=C['attal']['sim']; assert 'aah' not in sa['gel_status']; sa['gel_status'].append('aah')
+C['retailleau']['sim']['aah_nc']="Total des aides non contributives plafonné à 70 % du SMIC net : application à l'AAH non publiée, non calculé ici."
+# (6) impôt des retraités calculé comme celui des actifs (même barème, décote, abattement de 10 % sur les pensions) ; Lisnard : fin de l'abattement ;
+#     réformes de l'impôt qui valent pour tous les contribuables (Le Pen : part entière dès le 2e enfant ; Lisnard : quotient sans plafond, CSG et
+#     CRDS déductibles, net imposable d'une pension au taux normal (1 − 8,3 % − 0,5 %) / (1 − 9,1 %) ≈ 1,003) ; gel des pensions compté net d'impôt.
+sl['ir_reforme']['ni_pension']=round((1-0.083-0.005)/(1-0.091),3); assert sl['ir_reforme']['ni_pension']==1.003
+sl['abattement_pensions']="Abattement de 10 % sur les pensions supprimé : impôt sur le revenu en hausse"
+a0="impôt en hausse pour les retraités imposables (non calculé ici)"; assert sl['retraites_actuels'].count(a0)==1
+sl['retraites_actuels']=sl['retraites_actuels'].replace(a0,"impôt en hausse pour les retraités imposables (calculé ici)")
+# (7) gains symétriques des pertes. Mélenchon, assurance chômage (fiche comptée) : la baisse de 25 % de la durée décidée en 2023 est annulée,
+#     18 mois ÷ 0,75 = 24 mois avant 55 ans, même ligne que les baisses de durée de Philippe, Attal et Retailleau. Fin des jours de carence et
+#     arrêts payés à 100 % : non comptés (coût non publié), une note sans montant.
+C['melenchon']['sim']['chomage_duree']={"mois":round(18/0.75),"avant":55,"note":"baisse de 25 % de la durée décidée en 2023 annulée (18 mois ÷ 0,75)"}
+C['melenchon']['sim']['carence_note']="Arrêts maladie payés à 100 % et fin des jours de carence (programme du 6/11/2026) : gain seulement en cas d'arrêt, coût non publié, non calculé ici."
+# (8) notes sans montant, même forme pour tous, pour les mesures comptées que le simulateur ne sait pas calculer
+SP_FR='https://www.service-public.gouv.fr/particuliers/actualites/A17166'
+sm=C['melenchon']['sim']
+sm['tous'].append("« 100 % Sécu » : soins prescrits remboursés à 100 % et mutuelle remplacée par la Sécurité sociale, financée par une cotisation dont le taux n'est pas publié : gain ou perte selon votre mutuelle, non calculé ici ; franchises médicales et participations forfaitaires supprimées (jusqu'à 140 € par an et par personne, 70 € pour chacune depuis le 1/10/2026).")
+sm['logement']=(sm.get('logement') or [])+[{"when":["credit","proprio"],"t":"Aides à l'isolation des logements et au remplacement des chaudières au fioul et au gaz (plan d'investissement publié) : montant par ménage non publié, non calculé ici."}]
+assert all(h['seuil']>=2000000 for h in sm['heritage'])
+sm['heritage']=[{"seuil":100000,"effet":"Héritages inférieurs à 150 000 € exonérés de droits de succession (programme du 6/11/2026 ; coût non publié, hors de notre total)."}]+sm['heritage']
+sp=C['le-pen']['sim']
+sp['tous']=(sp.get('tous') or [])+["Soins dentaires remboursés à 100 % de la base de la Sécurité sociale : gain selon vos soins et votre mutuelle, non calculé ici.",
+  "Congé de proche aidant mieux indemnisé, et 300 €/mois pour l'aidant qui vit avec la personne aidée (amendement du groupe RN au budget de la Sécurité sociale pour 2026) : public non défini, non calculé ici."]
+sp['logement']=(sp.get('logement') or [])+[{"when":["loc","credit","proprio","heberge"],"t":"Prêt public à taux zéro pour les jeunes ménages français, effacé à la naissance du 3e enfant (si la révision de la Constitution passe) : montant et conditions non republiés, non calculé ici."}]
+assert not any('Flat tax' in p['effet'] for p in sp['patrimoine'])
+sp['patrimoine']=[{"seuil":300000,"effet":"Flat tax ramenée de 31,4 % à 30 % (hausse de la CSG sur l'épargne financière votée pour 2026 annulée)."}]+sp['patrimoine']
+sz=C['zemmour']['sim']; MPR_N="Fin de MaPrimeRénov' : plus d'aide de l'État pour isoler un logement ou changer de chauffage."
+assert MPR_N in C['retailleau']['sim']['tous'] and MPR_N not in sz['tous']; sz['tous'].append(MPR_N)
+# (9) Philippe : la note de la fiche disait que le simulateur applique la carence « dans le public et le privé » ; le site vise les deux, mais
+#     dans le privé le droit en vigueur compte déjà trois jours : rien ne change, le texte est aligné sur le calcul (public seulement).
+k=M('philippe','chomage')['claude']; a0="Le simulateur applique trois jours de carence dans le public et le privé."; assert k['note'].count(a0)==1
+k['note']=k['note'].replace(a0,"Le simulateur applique les trois jours de carence aux seuls agents publics : dans le privé, la mesure ne change pas le droit en vigueur (trois jours déjà).")
+# (10) baisses de cotisations salariales d'Attal et de Retailleau : les sources parlent des « salariés » (« tous les salariés » chez Retailleau)
+#      sans exclure le public : appliquées aux agents publics et aux enseignants, hypothèse écrite dans la note, la même pour les deux.
+for cid in ('attal','retailleau'):
+    sn=C[cid]['sim']['salaire_net']; assert 'agents publics' not in sn['note']
+    sn['note']+=" ; appliquée aussi aux agents publics et aux enseignants, le candidat parlant des salariés sans exclure le public (notre hypothèse)"
+# (12) S224 : fin de MaPrimeRénov' (Retailleau) et de l'Anah (Zemmour) : même règle que la fin des certificats d'économies d'énergie des mêmes
+#      candidats. Obligation européenne précise : directive (UE) 2024/1275, article 9 (consommation moyenne d'énergie primaire du parc résidentiel
+#      en baisse d'au moins 16 % entre 2020 et 2030) et article 17 (financement approprié de la rénovation) : « sous conditions », même formulation.
+EPBD='https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202401275'
+TEPBD="l'objectif de rénovation du parc résidentiel de l'article 9 de la directive (UE) 2024/1275 (consommation moyenne d'énergie primaire en baisse d'au moins 16 % entre 2020 et 2030), avec un financement approprié (article 17), reste à atteindre par d'autres mesures ; dossiers déjà engagés à payer."
+VB('retailleau','fin_maprimerenov',FA,SC,"Dossiers engagés à payer ; objectifs européens de rénovation","Par la loi de finances ; "+TEPBD)
+VB('zemmour','anah',FA,SC,"Dossiers engagés à payer ; objectifs européens de rénovation","Par la loi ; "+TEPBD)
+for cid,mid in (('retailleau','fin_maprimerenov'),('zemmour','anah')):
+    M(cid,mid)['claude'].setdefault('inputs',[]).append({"label":"Obligation européenne","value":"« Les États membres veillent à ce que la consommation moyenne d’énergie primaire en kWh/(m2.an) pour l’ensemble du parc immobilier résidentiel: a) diminue d’au moins 16 % par rapport à 2020 d’ici à 2030 » (art. 9) ; « Les États membres prévoient un financement approprié, des mesures de soutien et d’autres instruments » (art. 17)","source":"Directive (UE) 2024/1275 sur la performance énergétique des bâtiments, Journal officiel de l'UE","url":EPBD})
+# (13) S233 : fiche « Baisse des cotisations » de Lisnard (hors total, doublon des fiches CSG, hors de la revue des mesures retenues) : obstacle fondé sur
+#      le coût ; même règle des verdicts que les autres (S223) : voie juridique seulement, financement dit dans l'obstacle
+VB('lisnard','cotisations',SC,FA,"Coût certain ; financement par des économies non identifiées","Par la loi de financement de la Sécurité sociale ; barème de la baisse au-delà de la CSG non publié ; "+FNP+".")
+D['asof']='8 novembre 2026'
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
@@ -2108,14 +2291,17 @@ for c0 in D['candidates']:
       confirm=[m['title'] for m in c0['measures'] if m.get('a_confirmer')])
     for kk in ('p50','r10','r50','r90'): t.pop(kk,None)
 # --- résumés gabarit
-P={'le-pen':("Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite à 62 ans et la TVA à 5,5 % sur l'énergie.","la priorité nationale et le référendum exigent une révision de la Constitution."),
-'melenchon':("Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines.","le rendement réel des nouveaux impôts, et les traités européens pour l'annulation de la dette."),
-'philippe':("Promet la retraite à 65 ans, un départ sur trois non remplacé dans la fonction publique, une allocation familiale dès le premier enfant et zéro impôt pour les jeunes parents.","la révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or ; les paramètres de l'allocation familiale unique ne sont pas publiés."),
-'glucksmann':("Promet le retour à 62 ans, un SMIC à 1 700 € net, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun.","l'accord des autres pays européens, et le rendement de la taxe sur les héritages."),
+# Principal obstacle (review 43, 08/11/2026 ; registre S226) : pour les 8, la condition juridique ou pratique des mesures retenues au verdict le plus
+# contraignant (« exige une révision » d'abord, puis « très difficile »), même forme « condition, pour mesures » ; jamais un rendement, un coût, un
+# paramètre non publié ou l'identification d'économies. Contrôle à la fin de ce bloc.
+P={'le-pen':("Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite à 62 ans et la TVA à 5,5 % sur l'énergie.","la révision de la Constitution, pour la priorité nationale, le prêt réservé aux jeunes ménages français et la règle d'or."),
+'melenchon':("Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines.","la modification des traités européens à l'unanimité des 27, pour l'annulation de la dette, et la révision de la Constitution, pour la VIe République."),
+'philippe':("Promet la retraite à 65 ans, un départ sur trois non remplacé dans la fonction publique, une allocation familiale dès le premier enfant et zéro impôt pour les jeunes parents.","la révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or."),
+'glucksmann':("Promet le retour à 62 ans, un SMIC à 1 700 € net, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun.","l'accord des autres pays européens, pour la défense européenne financée par emprunt commun et la saisie des avoirs russes."),
 'retailleau':("Promet 197 Md€ d'économies par an en 2032, 51 Md€ de baisses d'impôts, un âge minimal de 63 ans et un référendum sur l'immigration.","la révision de la Constitution, pour le référendum sur l'immigration, les aides réservées après cinq ans, les peines planchers et la règle d'or."),
-'attal':("Promet la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.","des paramètres non publiés, en particulier pour les retraites."),
-'lisnard':("Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations.","l'identification des économies : une partie seulement l'est, et la baisse des cotisations en dépend."),
-'zemmour':("Promet l'expulsion des étrangers restés un an au chômage, des aides réservées aux Français, 800 000 postes publics en moins et la fin de l'aide publique au développement.","plusieurs mesures exigent une révision de la Constitution.")}
+'attal':("Promet la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.","la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen."),
+'lisnard':("Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations.","la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats."),
+'zemmour':("Promet l'expulsion des étrangers restés un an au chômage, des aides réservées aux Français, 800 000 postes publics en moins et la fin de l'aide publique au développement.","la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.")}
 MEN=D['statu_quo']['menages']
 def fr(x): return (('+' if x>0 else '−' if x<0 else '')+f"{abs(x):.1f}".replace('.',','))
 for c0 in D['candidates']:
@@ -2123,6 +2309,11 @@ for c0 in D['candidates']:
     hs=f"{abs(hh):,}".replace(',',' ')
     c0['promise']=P[c0['id']][0]; c0['obstacle_main']=P[c0['id']][1][0].upper()+P[c0['id']][1][1:]
     c0['summary']=f"{P[c0['id']][0]} Notre chiffrage : {fr(t['sum'])} Md€ par an en 2030, soit {('+' if hh>0 else '−')}{hs} € par ménage. Principal obstacle : {P[c0['id']][1]}"
+VO={'bloque':0,'tres_difficile':1,'sous_conditions':2,'faisable':3}
+for c0 in D['candidates']:
+    ob=P[c0['id']][1]; assert not re.search(r"rendement|coût|paramètre|économies|\bpubli",ob), c0['id']
+    v=min((m['verdict'] for m in c0['measures'] if not m.get('a_confirmer') and not (m.get('claude') or {}).get('exclude')), key=VO.get)
+    assert ob.startswith({'bloque':("la révision de la Constitution","la modification des traités"),'tres_difficile':("l'accord",)}[v]), (c0['id'],v)
 json.dump(D,open('promesses-2027-data.json','w'),ensure_ascii=False,indent=1)
 for c0 in D['candidates']:
     t=c0['claude_total']; print(c0['id'],t['sum'],t['p10'],t['p90'],'n',t['n'],'conf',t['confirm'])

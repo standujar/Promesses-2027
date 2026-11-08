@@ -3748,7 +3748,7 @@
    "statut": "resolu",
    "cree": "2026-11-08",
    "maj": "2026-11-08",
-   "resolution": "Tranché le 8/11 (décision du porteur) : même forme qu'Attal et Glucksmann (salaire_net.points : 41,7 €/mois au salaire médian de 2 238 €, Insee ; 2 115 € selon le site) ; au-delà du point, au prorata (au_dela_prorata), car le mécanisme publié vaut pour tous les salaires ; Glucksmann et Attal gardent « rien au-delà » (barème non publié, mécanisme non précisé au-dessus du salaire médian). Lisnard : aucun gain nouveau (promesse de 200 à 400 € par mois au salaire médian, BFMTV 3/11, mécanisme non chiffré). Règle écrite dans la méthode, CLAUDE.md, DEVELOPPER.md ; contrôle ajouté à tests/smoke.py."
+   "resolution": "Tranché le 8/11 (décision du porteur) : même forme qu'Attal et Glucksmann (salaire_net.points : 41,7 €/mois au salaire médian de 2 238 €, Insee ; 2 115 € selon le site) ; au-delà du point, au prorata (au_dela_prorata), car le mécanisme publié vaut pour tous les salaires ; Glucksmann et Attal gardent « rien au-delà » (barème non publié, mécanisme non précisé au-dessus du salaire médian). Lisnard : aucun gain nouveau (promesse de 200 à 400 € par mois au salaire médian, BFMTV 3/11, mécanisme non chiffré). Règle écrite dans la méthode, CLAUDE.md, DEVELOPPER.md ; contrôle ajouté à tests/smoke.py. Revu le 8/11 (S225, décision du porteur) : Lisnard reçoit la même règle qu'Attal (point publié [2 238 €, 200 €], montant minimal de « 200 à 400 € »), sans addition avec sa baisse de la CSG."
   },
   {
    "id": "S220",
@@ -3787,6 +3787,219 @@
    "cree": "2026-11-08",
    "maj": "2026-11-08",
    "resolution": null
+  },
+  {
+   "id": "S222",
+   "type": "a_verifier",
+   "candidats": [],
+   "mesure": null,
+   "sujet": "« Qu'est-ce qui peut passer ? » : une seule mesure visible par thème",
+   "detail": "Le tableau ne montrait que le verdict le plus contraignant de chaque thème, sans le nombre de mesures ni la répartition des verdicts ; une case vide ne dit pas si le candidat a des propositions sans fiche chiffrée (Vie quotidienne, non comptées). Les thèmes de la grille (social regroupe santé, école, logement) restent ceux des fiches.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Nombre de mesures par case, colonne « Toutes » (répartition des verdicts des mesures retenues, même périmètre que les totaux), toucher une case ouvre les mesures du thème ; texte d'explication mis à jour ; contrôle ajouté dans tests/smoke.py. Même affichage pour les 8."
+  },
+  {
+   "id": "S223",
+   "type": "a_trancher",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": null,
+   "sujet": "Verdicts : « sous conditions » donné pour un paramètre non publié, un coût ou un rendement",
+   "detail": "La règle des verdicts classait « sous conditions » les mesures dont un paramètre clé n'était pas publié (non chiffrables, objectifs sans échéance), et plusieurs obstacles reposaient sur un coût, un rendement ou l'écart avec le chiffre du camp (niches de Mélenchon, héritages de Glucksmann, coût de transition des retraites par capitalisation…). Revue des 58 mesures retenues « sous conditions » des 8 candidats, puis des obstacles de tous les autres verdicts.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Décision du porteur du projet (8/11/2026), appliquée aux 8 : le verdict juge la voie juridique et pratique, jamais le coût, l'écart avec le chiffre du camp ni la précision du programme ; « sous conditions » = condition identifiée hors de la décision (accord de tiers : collectivités, partenaires sociaux, autre État ou institution ; contrats en cours ; obligation européenne ; capacités à bâtir ; rendement ou contenu d'une autre mesure ; risque de censure précis) ; un paramètre, un contenu ou une échéance non publiés sont dits dans l'obstacle et ne changent pas le verdict. Règle écrite dans CLAUDE.md et la méthode (corrections.py, bloc « review 42 »). Verdicts changés, sous_conditions → faisable (22) : le-pen.mesures-sectorielles, melenchon.retraites, melenchon.niches, melenchon.chomage, melenchon.culture, melenchon.aide_developpement, philippe.production, philippe.chomage, philippe.famille, philippe.heures_sup, glucksmann.heritages, glucksmann.leasing_social, lisnard.retraites, lisnard.allocation, lisnard.foncier, attal.retraites, attal.travail, attal.ia, retailleau.retraites, retailleau.travail, retailleau.chomage, zemmour.retraites. Règles communes appliquées : (a) assurance chômage (Mélenchon, Philippe, Attal, Retailleau) : convention des partenaires sociaux agréée par le Gouvernement, décret faute d'accord (code du travail, art. L. 5422-20 et suivants) ou loi : la décision reste publique, faisable pour les 4 ; (b) retraite par capitalisation créée par la loi (Lisnard, Retailleau, Zemmour, Attal) : faisable, « financement de la transition non précisé » dans l'obstacle ; Philippe reste sous conditions (réserves de l'Agirc-Arrco, régime géré par les partenaires sociaux : accord de tiers) ; (c) services civiques ou nationaux obligatoires (Mélenchon, Glucksmann, Attal, Philippe) : capacités d'accueil et d'encadrement à bâtir pour environ 800 000 jeunes par an, même obstacle, sous conditions pour les 4 ; (d) écoles des collectivités (cantine de Mélenchon, bâtiments d'Attal) : mise en œuvre par les collectivités, sous conditions pour les 2 ; (e) RSA versé par les départements : droit fixé par la loi, pas une condition (Retailleau faisable, Lisnard faisable, l'égalité des étrangers relevant de sa fiche « Aides après 5 ans ») ; Zemmour, RSA limité à 3 ans : reste sous conditions (droit à des moyens convenables d'existence, alinéa 11 du Préambule de 1946) ; (f) inchangés, condition hors de la décision : plans de postes (6 fiches, sorties et collectivités), prisons (4, capacités), fraude (3, moyens de contrôle), renouvelables (3, contrats signés), certificats d'économies d'énergie (2, directive 2023/1791), octroi de mer (Conseil de l'UE), impôt sur le revenu avant 30 ans (risque de censure documenté : Institut Montaigne), blocage des prix (décret limité à 6 mois, liberté d'entreprendre), « 100 % Sécu » (contrats des complémentaires), universités, hôpitaux, recherche, réservistes, ingénieurs (capacités), préférence européenne (compétence de l'UE), Le Pen « État » (collectivités), Zemmour aide au développement (engagements multilatéraux). Glucksmann, héritages : aucun risque de censure précis et documenté pour un seul seuil de taxation (à la différence du cumul ISF, Zucman et héritages de Mélenchon, avis du Conseil d'État) : faisable, « rendement dépendant des comportements » comme les autres impôts nouveaux. Obstacles nettoyés, verdict inchangé : Mélenchon annulation de la dette (effet net), SMIC de Mélenchon et Glucksmann (coût des allègements), Philippe jeunes parents, Retailleau plan IA et seuil « zéro cotisation » (chiffrage du camp non vérifié), aide médicale d'État des 4 (report de dépenses), prisons de Le Pen (montant du contre-budget). Totaux inchangés (realsum ne dépend que des « Exige une révision »)."
+  },
+  {
+   "id": "S224",
+   "type": "a_verifier",
+   "candidats": [
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": "retailleau.fin_maprimerenov, zemmour.anah, zemmour.ademe",
+   "sujet": "Fin de MaPrimeRénov' et de l'Anah : « objectifs européens de rénovation » cités, verdict « faisable »",
+   "detail": "Les fiches citent des objectifs européens de rénovation dans l'obstacle mais restent « faisable », alors que la fin des certificats d'économies d'énergie des mêmes candidats est « sous conditions » (objectif de l'article 8 de la directive (UE) 2023/1791 à atteindre par d'autres mesures). Vérifier sur les textes (directive (UE) 2024/1275, trajectoire de rénovation du parc résidentiel ; part de MaPrimeRénov' dans les économies notifiées au titre de l'article 8) si l'obligation européenne vise ces aides de la même façon ; si oui, même verdict que les certificats. « Dossiers engagés à payer » : décaissés avant 2030, sans effet sur la voie juridique (à la différence des contrats de soutien aux renouvelables, qui courent au-delà).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Tranché le 8/11 (bloc « review 43 » de corrections.py), même règle que la fin des certificats d'économies d'énergie des mêmes candidats : une obligation européenne précise et sourcée s'impose à la suppression. Directive (UE) 2024/1275, article 9, paragraphe 2 (consommation moyenne d'énergie primaire du parc résidentiel en baisse d'au moins 16 % entre 2020 et 2030, 20 à 22 % d'ici 2035) et article 17 (financement approprié de la rénovation), texte ouvert sur EUR-Lex et cité en entrée des deux fiches. retailleau.fin_maprimerenov et zemmour.anah : faisable → sous_conditions, obstacle « l'objectif de rénovation du parc résidentiel de l'article 9 de la directive (UE) 2024/1275 […], avec un financement approprié (article 17), reste à atteindre par d'autres mesures ; dossiers déjà engagés à payer », même forme que les certificats. zemmour.ademe inchangée (faisable) : sa fiche ne cite pas d'objectif européen et l'Ademe ne porte pas MaPrimeRénov' ; les aides déjà accordées à payer ne sont pas une condition sur la voie juridique. Totaux inchangés (seul le verdict « bloque » sort du total réel)."
+  },
+  {
+   "id": "S225",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": null,
+   "sujet": "Simulateur : trous et asymétries relevés par l'audit du 8/11",
+   "detail": "Audit du simulateur (8/11) : (1) SMIC et point d'indice additionnés pour un agent public (Mélenchon : +340 € au lieu de +222 € au SMIC) ; (2) règle « mesure non financée » écrite différemment dans CLAUDE.md et la méthode, branche « part financée » morte dans le code ; (3) gain publié d'Attal appliqué, promesse de Lisnard de même nature en note ; (4) service citoyen de Mélenchon absent, valeur de Glucksmann écrite en dur ; (5) pas de profil AAH ; (6) impôt des retraités jamais calculé (fin de l'abattement de 10 % de Lisnard) ; (7) gains de Mélenchon (durée du chômage, fin des jours de carence) non affichés alors que les pertes équivalentes le sont ; (8) mesures comptées sans note (100 % Sécu, planification, héritages de Mélenchon ; soins dentaires, prêt aux jeunes ménages, proches aidants, flat tax de Le Pen ; Anah de Zemmour ; engagement civique d'Attal) ; (9) note de Philippe sur la carence contraire au calcul ; (10) baisses de cotisations d'Attal et de Retailleau appliquées aux agents publics sans hypothèse écrite.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Fait le 8/11 (décisions du porteur, bloc « review 43 » de corrections.py, pipeline/template.html, méthode, CLAUDE.md, DEVELOPPER.md), même règle pour les 8 : (1) traitement d'un agent public = max(salaire × (1 + hausse du point sur 80 % du net), nouveau SMIC), une seule ligne ; seul Mélenchon a les deux (agent à 1 477,93 € : 222 € avant impôt, 198 après). (2) Règle unique : un gain publié et confirmé en 2026 compte, compté ou non dans le total, au montant minimal d'une fourchette, sans le financement ; aucun gain pour une mesure non confirmée ou sans montant publié ; promised_md retirée du code et de corrections.py, affichage inchangé. (3) Lisnard : points [[2 238, 200]] (BFMTV 3/11, Capital 4/11 : « entre 200 et 400 euros par mois » au salaire médian de 2 200 €), au prorata en dessous ; ce gain comprend ou remplace la baisse de la CSG (salaire_net.socle) : le plus grand des deux jusqu'au salaire médian, la CSG seule au-delà avec une note, indépendants : CSG seule ; part imposable 1 ; note de la fiche « cotisations » mise à jour. Exemple : 2 238 € → 200 € (CSG seule : 73 €) ; 3 000 € → 98 €. (4) service_jeunes lu dans les données : Mélenchon 1 700 € × 9 mois, Glucksmann ≈ 620 € × 10 mois (504,98 + 114,85, barème 2026) ; Attal, Philippe : note sans montant. (5) Profil « AAH (handicap) » : montant maximal 1 041,59 € (service-public.gouv.fr F12242, vérifiée le 14/09/2026) ; Mélenchon 1 700 € → +658,41 € pour tout allocataire (allocation différentielle) ; perte selon la condition des minima chez Le Pen, Retailleau, Lisnard et Zemmour (mesure visant toutes les prestations non contributives ou nommant l'AAH ; étude Institut Montaigne 2024 : RSA, prime d'activité, AAH, aides au logement) ; gel d'Attal (« toutes les prestations sociales ») ; plafond de Retailleau : note. (6) Impôt des retraités : même barème et décote, abattement de 10 % au moins 454 € et au plus 4 439 € (service-public.gouv.fr F415, revenus 2025), net imposable au taux normal de CSG (1 − 5,9 %) / (1 − 9,1 %) ≈ 1,035 (F2971) ; Lisnard : fin de l'abattement (2 300 € de pension, personne seule : −36,9 €/mois ; rien sous le seuil), CSG et CRDS déductibles (≈ 1,003) ; Le Pen : part entière dès le 2e enfant ; gel des pensions compté net d'impôt. (7) Mélenchon : durée du chômage 24 mois avant 55 ans (18 ÷ 0,75, réforme de 2023 annulée), « jusqu'à +6 600 € » à 1 100 €, même ligne que Philippe (−6 600 €) ; fin des jours de carence non comptée : note. (8) Notes ajoutées, même forme (« … non calculé ici ») ; franchises : jusqu'à 140 € par an et par personne, 70 € chacune depuis le 1/10/2026 (service-public.gouv.fr A17166). (9) Philippe : note alignée (carence aux seuls agents publics ; dans le privé, trois jours déjà). (10) Attal et Retailleau : les sources parlent des « salariés » (« tous les salariés » chez Retailleau), sans exclure le public : appliqué aux agents publics, hypothèse écrite dans la note. Contrôles ajoutés dans tests/smoke.py ; le contrôle de l'impôt au SMIC attend désormais une ligne chez Lisnard (gain de 132 € au SMIC, 2,3 €/mois d'impôt, valeur de référence ajoutée)."
+  },
+  {
+   "id": "S226",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": null,
+   "sujet": "Résumés : principal obstacle fondé sur un rendement, un paramètre non publié ou des économies à identifier",
+   "detail": "Après la règle des verdicts du 8/11 (S223), le principal obstacle de plusieurs résumés reposait encore sur un rendement (Mélenchon, Glucksmann), des paramètres non publiés (Attal, Philippe) ou l'identification des économies (Lisnard).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Règle appliquée aux 8 (bloc « résumés gabarit » de corrections.py, contrôle automatique) : condition juridique ou pratique des mesures retenues au verdict le plus contraignant, forme « condition, pour mesures ». Le Pen (révision : priorité nationale, prêt aux jeunes ménages français, règle d'or) ; Mélenchon (traités à l'unanimité des 27 : dette ; révision : VIe République) ; Philippe (révision : regroupement familial, règle d'or) ; Glucksmann (accord européen : défense par emprunt commun, avoirs russes) ; Lisnard (révision : référendum élargi, aides après cinq ans, asile dans les consulats) ; Attal (révision : règle d'or, quotas, États-Unis d'Europe avec un traité) ; Zemmour (révision : aides réservées, regroupement familial) ; Retailleau inchangé."
+  },
+  {
+   "id": "S227",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": null,
+   "sujet": "Méthode : bloc « études » de la Vie quotidienne retiré de l'affichage",
+   "detail": "Décision du porteur (8/11, commit e34d419) : life.py ne publie plus les lectures d'études ni l'étiquette d'efficacité ; la méthode, CLAUDE.md et DEVELOPPER.md les décrivaient encore.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Méthode (paragraphe « Vie quotidienne ») : description de l'étiquette d'efficacité et phrase « Une même étude est lue de la même façon… » retirées ; une phrase dit que le site n'affiche pas d'avis d'études sur ces propositions ; « le site de campagne d'un candidat n'est jamais utilisé comme source sur un autre » gardé. CLAUDE.md et DEVELOPPER.md : OVR et NIV contrôlés mais plus publiés. Historique du 8/11."
+  },
+  {
+   "id": "S228",
+   "type": "a_ajouter",
+   "candidats": [
+    "le-pen",
+    "lisnard",
+    "philippe",
+    "zemmour"
+   ],
+   "mesure": null,
+   "sujet": "Simulateur : profil « en couple » (quotient familial, jeunes parents)",
+   "detail": "L'impôt est calculé pour une personne seule ou un parent isolé. Les mesures sur le quotient familial (Le Pen, part entière dès le 2e enfant ; Lisnard, quotient sans plafond ; Zemmour, quotient doublé, non reconfirmé) et l'impôt des jeunes parents de Philippe visent surtout les couples avec enfants : gain sous-estimé ou nul pour eux. À ajouter : profil « en couple » (deux parts, revenu du conjoint), même barème pour tous.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S229",
+   "type": "a_ajouter",
+   "candidats": [
+    "retailleau"
+   ],
+   "mesure": "retailleau.etudiants_etrangers",
+   "sujet": "Simulateur : étudiant étranger hors UE (droits d'inscription différenciés)",
+   "detail": "Fiche comptée : droits différenciés pour tous les étudiants hors UE (écarts de 2 724 € en licence et 3 695 € en master selon la formule de la fiche). Profil étudiant + nationalité hors UE possible, rien n'est affiché. À ajouter : ligne « jusqu'à » ou note pour un étudiant hors UE aujourd'hui exonéré, même forme que les autres pertes.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S230",
+   "type": "a_ajouter",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "melenchon.cantine",
+   "sujet": "Simulateur : frais de cantine (cantine gratuite)",
+   "detail": "Fiche comptée (cantine scolaire gratuite) ; le simulateur ne connaît pas les frais de cantine du ménage : note seulement. À ajouter : curseur « cantine par mois » visible avec des enfants, gain = frais saisis chez tout candidat qui propose la gratuité.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S231",
+   "type": "a_ajouter",
+   "candidats": [
+    "zemmour",
+    "melenchon",
+    "le-pen",
+    "lisnard"
+   ],
+   "mesure": "zemmour.aides",
+   "sujet": "Simulateur : minimum vieillesse (ASPA)",
+   "detail": "Un retraité au minimum vieillesse n'est pas représentable : Zemmour réserve l'ASPA aux Français (fiche « aides », comptée si la révision passe) ; Mélenchon (seuil de pauvreté), Le Pen et Lisnard (1 000 €, déjà dépassé) en texte. À ajouter : case « je touche le minimum vieillesse », perte selon la même condition que les minima, montant 2026 de service-public.gouv.fr.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": null
+  },
+  {
+   "id": "S232",
+   "type": "a_verifier",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "melenchon.aah",
+   "sujet": "AAH : la fiche retient 1 033,32 €, le montant maximal en vigueur est de 1 041,59 €",
+   "detail": "La fiche « AAH au niveau du SMIC » chiffre la hausse sur la dépense du projet de loi de finances pour 2026 (14 681 M€) et le montant cité par le même document (1 033,32 €, en vigueur depuis le 1/04/2025), avec la mention « non revalorisé en 2026 », inexacte : service-public.gouv.fr (F12242, vérifiée le 14/09/2026) donne 1 041,59 €. Mention corrigée le 8/11 ; le simulateur utilise 1 041,59 €. Reste à trancher par la règle commune : rebaser la fiche sur le montant de 2026 (14,681 × (1 700 / 1 041,59 − 1) ≈ −9,3 au lieu de −9,5) ou garder le montant du même document que la dépense, qui intègre une revalorisation prévue.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Chiffrage gardé (−9,5 Md€) : la dépense (14 681 M€) et le montant de référence (1 033,32 €) viennent du même document (PLF 2026) ; règle appliquée : un calcul ascendant prend sa base et son paramètre dans la même source, pour ne pas mêler une dépense d'une année et le montant d'une autre. Le simulateur, qui montre le droit en vigueur, prend le montant actuel (1 041,59 €, service-public.gouv.fr). Mention « non revalorisé en 2026 » corrigée dans la fiche."
+  },
+  {
+   "id": "S233",
+   "type": "a_verifier",
+   "candidats": [
+    "lisnard"
+   ],
+   "mesure": "lisnard.cotisations",
+   "sujet": "Lisnard, fiche « Baisse des cotisations » (hors total, doublon) : obstacle fondé sur le coût",
+   "detail": "Obstacle « Coût certain ; financement par des économies non identifiées », verdict sous_conditions : contraire à la règle des verdicts du 8/11 (S223 : ni coût ni financement). Fiche exclue du total (doublon des fiches CSG), donc absente de la revue des 58 mesures retenues ; à aligner sur la règle (voie : loi de financement de la Sécurité sociale ; « financement non précisé dans la mesure »).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-08",
+   "maj": "2026-11-08",
+   "resolution": "Fait le 8/11 (bloc « review 43 ») : même règle que les 58 mesures revues (S223) ; sous_conditions → faisable, obstacle « Par la loi de financement de la Sécurité sociale ; barème de la baisse au-delà de la CSG non publié ; financement non précisé dans la mesure. » Fiche hors total : aucun total ni répartition des verdicts retenus ne change."
   }
  ]
 }
