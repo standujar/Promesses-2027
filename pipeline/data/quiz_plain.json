@@ -216,8 +216,8 @@
 "Les entreprises rentables paient moins d'impôts."
 ],
 "zemmour.remigration": [
-"Expulser les étrangers restés un an au chômage, ainsi que les délinquants et sans-papiers",
-"Un étranger en règle sans emploi depuis un an devrait quitter la France."
+"Expulser les étrangers restés plus de six mois au chômage, ainsi que les délinquants et sans-papiers",
+"Un étranger en règle sans emploi depuis plus de six mois devrait quitter la France."
 ],
 "zemmour.aides": [
 "Réserver les aides sociales non contributives aux citoyens français",
@@ -232,8 +232,8 @@
 "Vous partiriez au même âge ou un an plus tard."
 ],
 "zemmour.csg": [
-"Baisser la CSG, un prélèvement sur les salaires, pour les revenus modestes",
-"Votre salaire net augmente un peu si vous gagnez moins de 2 000 €."
+"Supprimer la CSG prélevée sur les salaires et les revenus des indépendants",
+"Votre revenu net du travail augmente nettement ; la Sécurité sociale perd cette recette."
 ],
 "zemmour.succession": [
 "Supprimer les impôts sur l'héritage",
@@ -422,8 +422,8 @@
 "Le litre d'essence, de gazole et de fioul coûte quelques centimes de moins."
 ],
 "zemmour.accise": [
-"Baisser d'un tiers la taxe sur les carburants",
-"Le litre d'essence ou de gazole coûte environ 25 centimes de moins."
+"Baisser fortement les taxes sur les carburants",
+"Le litre d'essence ou de gazole coûte environ 40 centimes de moins."
 ],
 "le-pen.successions": [
 "Ne plus taxer l'héritage d'un logement jusqu'à 300 000 €",
@@ -502,8 +502,8 @@
 "Fin des aides de l'État pour isoler, changer de chauffage ou adapter son logement."
 ],
 "glucksmann.cheque_energie": [
-"Tripler le chèque énergie et l'ouvrir aux classes moyennes",
-"Une aide plus forte pour payer l'électricité, le gaz ou le fioul, versée à plus de ménages."
+"Verser un chèque énergie exceptionnel plus élevé, ouvert aux classes moyennes",
+"Une aide versée une fois pour payer l'électricité, le gaz ou le fioul, à plus de ménages."
 ],
 "le-pen.recherche": [
 "Augmenter l'argent public consacré à la recherche",

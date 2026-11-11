@@ -2810,7 +2810,7 @@
 ]
 },
 "philippe.chomage": {
-"constat": "Le taux de chômage est de 8,3 % au 2e trimestre 2026, contre 7,1 % début 2023 et 8,4 % mi-2019 (Insee).",
+"constat": "Le taux de chômage est de 8,2 % au 3e trimestre 2026, contre 7,1 % début 2023 et 8,4 % mi-2019 (Insee).",
 "constat_s": [
 2
 ],
@@ -4250,6 +4250,119 @@
 "l": "Insee Première n° 2094, L'emploi dans la fonction publique en 2024",
 "a": 2026,
 "u": "https://www.insee.fr/fr/statistiques/8732435"
+}
+]
+},
+"zemmour.csg": {
+"constat": "Le salaire net au salaire moyen a augmenté de 15 % de 2019 à 2025, moins que les prix (+19 %) (Eurostat).",
+"constat_s": [
+2,
+3
+],
+"pour": "Lors de la dernière baisse de ce type, en 2018, le net moyen a crû de 2,2 %, contre 1,7 % pour le brut.",
+"preuve_pour": "solide",
+"contre": "Lors de la baisse de 2018, les 10 % les plus modestes n'ont gagné que 19 € par an, contre 60 à 90 € au-dessus.",
+"preuve_contre": "solide",
+"cas_pour": [
+{
+"t": "En 2018, la suppression de cotisations des salariés a fait croître le salaire net moyen du privé de 2,2 %, contre 1,7 % pour le brut (Insee, France, 2020).",
+"s": [
+0,
+1
+]
+}
+],
+"cas_contre": [
+{
+"t": "La bascule de 2018 (cotisations des salariés supprimées, CSG relevée) a rapporté 19 € par an de niveau de vie aux 10 % les plus modestes, 60 à 90 € aux 2e à 9e déciles (Insee, France, 2019).",
+"s": [
+1
+]
+}
+],
+"etudes": "Les données concordent : la baisse des cotisations des salariés de 2018 a augmenté le net moyen ; le gain est allé aux revenus d'activité, très peu aux 10 % les plus modestes.",
+"src": [
+{
+"l": "Insee Première n° 1828, « En 2018, le salaire net moyen dans le secteur privé augmente de 0,4 % en euros constants »",
+"a": 2020,
+"u": "https://www.insee.fr/fr/statistiques/4990766"
+},
+{
+"l": "Insee, France portrait social 2019, dossier sur les mesures socio-fiscales de 2018 (Biotteau et al.)",
+"a": 2019,
+"u": "https://www.insee.fr/fr/statistiques/4238451"
+},
+{
+"l": "Eurostat, gains nets annuels, célibataire sans enfant au salaire moyen, France (earn_nt_net)",
+"a": 2026,
+"u": "https://ec.europa.eu/eurostat/databrowser/view/earn_nt_net/default/table"
+},
+{
+"l": "Eurostat, indice des prix à la consommation harmonisé, France, moyennes annuelles (prc_hicp_aind)",
+"a": 2026,
+"u": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_aind/default/table"
+}
+]
+},
+"zemmour.succession": {
+"constat": "La part du patrimoine hérité est passée de 35 % du patrimoine total au début des années 1970 à 60 % (CAE).",
+"constat_s": [
+0
+],
+"pour": "Les héritages aisés, sans être très gros, paient la moitié du taux des plus gros, pour 24 fois moins reçu.",
+"preuve_pour": "solide",
+"contre": "La moitié des héritiers reçoit moins de 70 000 € dans sa vie, sous l'abattement de 100 000 € par parent.",
+"preuve_contre": "solide",
+"cas_pour": [
+{
+"t": "Au seuil des 10 % d'héritiers les mieux dotés, le taux effectif de droits est environ moitié de celui du 0,1 % le plus riche, pour un héritage 24 fois plus petit (CAE, France, 2021).",
+"s": [
+0
+]
+},
+{
+"t": "Les successions hors ligne directe font moins de 10 % du capital transmis mais plus de 50 % des droits, taxées fortement même petites (CAE, France, 2021).",
+"s": [
+0
+]
+},
+{
+"t": "Les entreprises transmises sans l'exonération Dutreil sont plus souvent dissoutes : 10 % au bout de 9 ans, contre 6 % avec (IPP, France, 2025).",
+"s": [
+2
+]
+}
+],
+"cas_contre": [
+{
+"t": "Au sein d'une génération, la moitié des héritiers reçoit moins de 70 000 € sur toute sa vie, moins de 10 % plus de 500 000 €, le 1 % le mieux doté plus de 4,2 millions (CAE, France, 2021).",
+"s": [
+0
+]
+},
+{
+"t": "Les entreprises transmises avec l'exonération Dutreil n'investissent pas plus et ne se développent pas plus à l'étranger que les autres (IPP, France, 2025).",
+"s": [
+2
+]
+}
+],
+"etudes": "Les données concordent : héritages très concentrés, droits nuls sous l'abattement, poids relatif plus lourd juste sous les plus gros ; effets des droits sur l'épargne jugés faibles (CAE). Exonérer les entreprises familiales réduit les dissolutions sans accroître l'investissement (IPP, 2025).",
+"src": [
+{
+"l": "CAE, note n° 69, « Repenser l'héritage » (Dherbécourt, Fack, Landais, Stantcheva)",
+"a": 2021,
+"u": "https://cae-eco.fr/static/pdf/cae-note069.pdf"
+},
+{
+"l": "Service-public.gouv.fr, Droits de succession : évaluation de la succession et calcul des droits (abattement de 100 000 € par enfant et par parent)",
+"a": 2026,
+"u": "https://www.service-public.gouv.fr/particuliers/vosdroits/F14198"
+},
+{
+"l": "IPP, rapport n° 62, « L'impact économique des transmissions d'entreprises réalisées avec un pacte Dutreil » (pour la Cour des comptes)",
+"a": 2025,
+"u": "https://www.ipp.eu/wp-content/uploads/2025/11/Dutreil_CourDesComptes-6_compressed.pdf"
 }
 ]
 },
@@ -6914,7 +7027,7 @@
 ]
 },
 "retailleau.cotisations": {
-"constat": "Le taux de chômage est de 8,3 % au 2e trimestre 2026, contre 7,1 % début 2023 et 8,4 % mi-2019 (Insee).",
+"constat": "Le taux de chômage est de 8,2 % au 3e trimestre 2026, contre 7,1 % début 2023 et 8,4 % mi-2019 (Insee).",
 "constat_s": [
 1
 ],
@@ -7794,7 +7907,7 @@
 ]
 },
 "melenchon.chomage": {
-"constat": "Le taux de chômage est de 8,3 % au 2e trimestre 2026, contre 7,1 % début 2023 et 8,4 % mi-2019 (Insee).",
+"constat": "Le taux de chômage est de 8,2 % au 3e trimestre 2026, contre 7,1 % début 2023 et 8,4 % mi-2019 (Insee).",
 "constat_s": [
 2
 ],
@@ -8090,7 +8203,7 @@
 ]
 },
 "retailleau.chomage": {
-"constat": "Le taux de chômage est de 8,3 % au 2e trimestre 2026, contre 7,1 % début 2023 et 8,4 % mi-2019 (Insee).",
+"constat": "Le taux de chômage est de 8,2 % au 3e trimestre 2026, contre 7,1 % début 2023 et 8,4 % mi-2019 (Insee).",
 "constat_s": [
 2
 ],

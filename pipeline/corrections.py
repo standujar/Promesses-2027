@@ -2560,6 +2560,189 @@ m['estimates'].append({"source":"BFMTV (3/09/2026)","year":2026,"value":"« En v
 MISS('zemmour',"associations 1 à 2), ","associations 1 à 2, presse 0,2, syndicats 0,1, CESE et Ceser 0,07), ")
 D['asof']='8 novembre 2026'
 
+# --- review 46 : revue du 11/11 (11/11/2026) ; registre S003, S006, S007, S074, S207, S211 (résolus ou mis à jour), S005, S063, S118, S138, S202, S205, S208, S251, S274 et suivants
+# Décisions du 11/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 8 au 11/11, chaque source ouverte le 11/11).
+# (1) Zemmour, candidat déclaré au 20 h de TF1 le 10/11. Son site de campagne (ericzemmour.fr, « Nos priorités pour les Français ») porte
+#     « 10 % de hausse de revenus pour tous les actifs avec la suppression de la CSG, 40 centimes de baisse de taxes sur les carburants, la fin
+#     des droits de succession et de l'impôt sur la fortune ». Page sans date ; règle de reconfirmation (une page sans date du site de campagne,
+#     ouvert pour cette élection, reconfirme) ; de plus son contenu diffère du programme de 2022 (CSG baissée jusqu'à 2 000 € net, pas supprimée) :
+#     elle est de 2026. CSG et successions quittent « à confirmer » et entrent dans le total ; impôts de production et quotient familial, absents
+#     de la page, restent « à confirmer ». Fin de l'IFI : fiche, même base que les droits de succession (Voies et moyens, recettes exécutées en
+#     2024), baisse d'impôt sans calendrier entière en 2030. Carburants : le paramètre le plus récent (40 c, lus par litre et TVA comprise,
+#     l'unité n'étant pas écrite) remplace la baisse d'un tiers, même base de calcul que la fiche et que la TICPE de Le Pen. Chômeurs étrangers :
+#     « les chômeurs étrangers de plus de six mois » (citation du JT de TF1 du 10/11 dans la dépêche de l'AFP), source la plus récente, à la place
+#     d'« un an » (BFMTV, 17/09) : chiffrage indépendant de cette version (Institut Montaigne, six mois : +1,8 Md€, 0,9 à 2,4) ; l'Insee ne publie
+#     pas de série des chômeurs étrangers par ancienneté du chômage (registre).
+# (2) Glucksmann, livret « Révolution écologique, les premiers 100 jours » (glucks2027.fr, 9/11/2026, lu en entier) : 200 Md€ d'argent public sur
+#     le quinquennat, règle des montants cumulés sur cinq ans (flux 2030 = 3,5/15), parts qui ont leur propre fiche retirées ; dépense sans
+#     chiffrage indépendant = chiffre du camp ±50 %. Sécurité civile : 1 Md€ (une enveloppe vaut son montant, supposée annuelle, même règle que le
+#     plan d'un milliard de Mélenchon). Chèque énergie « exceptionnel » : versement ponctuel, aucun effet en 2030. Contribution exceptionnelle
+#     (5 % des patrimoines de plus de 100 M€, une seule année) : recette ponctuelle, non comptée en 2030. Leasing social : « 1 million de voitures
+#     électriques sur 5 ans » : l'échéance supposée est désormais publiée (coût unitaire toujours non publié : chiffre du camp).
+# (3) Mélenchon, « état d'urgence sociale » : notes ; voie juridique inchangée (l'âge légal est fixé par la loi). (4) Le Pen et Lisnard : première
+#     partie du PLF 2027 rejetée par l'Assemblée le 4/11 (scrutin n° 9759), le Sénat examine le projet initial : notes. (5) Simulateur : même
+#     paramètre que les fiches (CSG et carburants de Zemmour ; chèque énergie et leasing de Glucksmann).
+PRIO = 'https://www.ericzemmour.fr/priorites'; PRIO_S = "Site de campagne d'Éric Zemmour, « Nos priorités pour les Français »"
+CIT_PRIO = "10 % de hausse de revenus pour tous les actifs avec la suppression de la CSG, 40 centimes de baisse de taxes sur les carburants, la fin des droits de succession et de l’impôt sur la fortune."
+def PRIO_E(val, lo=None, hi=None): return {"source": PRIO_S, "year": 2026, "value": val, "low_md": lo, "high_md": hi, "url": PRIO}
+PRIO_IN = {"label": "Priorité n° 4 du site de campagne (« Dépenser moins pour taxer moins »), page sans date lue le 11/11/2026, après la déclaration de candidature du 10/11", "value": "« " + CIT_PRIO + " »", "source": PRIO_S, "url": PRIO}
+REPRISE = "Reprise par le candidat sur son site de campagne (page « Nos priorités pour les Français », sans date, lue le 11/11/2026, après sa déclaration de candidature du 10/11 ; contenu différent de son programme de 2022) : comptée."
+# (1a) CSG : reprise par le candidat, comptée ; chiffrage inchangé (−101,4)
+m = M('zemmour', 'csg'); k = m['claude']; assert m.get('a_confirmer') and (k['central'], k['low'], k['high']) == (-101.4, -110.4, -76.4)
+m.pop('a_confirmer')
+m.update(proposal="Supprimer la CSG sur les revenus d'activité (9,2 %) des salariés, des fonctionnaires et des indépendants : « 10 % de hausse de revenus pour tous les actifs » (site du candidat) ; proposée aussi par Sarah Knafo (livre, 2026). En 2022, le candidat proposait 9,2 % → 2,5 % jusqu'à 2 000 € net.",
+         claimed="Non chiffré par le candidat ; 87,5 Md€ de recettes sociales selon le livre de S. Knafo (Le Diplomate), financés par le plan de 140 Md€ d'économies selon elle", claimed_md=None)
+m['estimates'].append(PRIO_E("« 10 % de hausse de revenus pour tous les actifs avec la suppression de la CSG »"))
+k['inputs'].append(PRIO_IN)
+a0 = "Hors total : proposée en 2026 par Sarah Knafo, non reprise par le candidat."; assert k['note'].startswith(a0)
+k['note'] = REPRISE + " Assiette : les revenus d'activité (« tous les actifs »), comme le plan de S. Knafo (« CSG d'activité »)." + k['note'][len(a0):]
+# (1b) droits de succession : repris, comptés ; base inchangée (16,0 Md€ exécutés en 2024)
+m = M('zemmour', 'succession'); k = m['claude']; assert m.get('a_confirmer') and (k['central'], k['low'], k['high']) == (-16.0, -20.9, -16.0)
+m.pop('a_confirmer')
+m['proposal'] = "Abolir les droits de succession (« la fin des droits de succession », site du candidat) ; proposée aussi par Sarah Knafo (livre, 2026) ; en 2022, abattements de 200 000 € et exonération des entreprises familiales."
+m['estimates'].append(PRIO_E("« la fin des droits de succession »"))
+k['inputs'].append(PRIO_IN)
+a0 = "Hors total : non reprise par le candidat. "; a1 = " Reprise par le candidat recherchée (registre)."; assert k['note'].startswith(a0) and k['note'].endswith(a1)
+k['note'] = REPRISE + " " + k['note'][len(a0):-len(a1)] + " Donations (4,9 Md€) : non visées par la page, en borne basse seulement."
+# (1c) fin de l'impôt sur la fortune (IFI) : même base que les droits de succession (recettes exécutées en 2024, Voies et moyens)
+VM26 = 'https://www.assemblee-nationale.fr/dyn/contenu/visualisation/1087930/file/PLF%202026%20-%20V%26M%20TI%20-%20Evaluations%20des%20recettes.pdf'
+IFI24, IFI26 = 2739, 3095; assert (round(-IFI24 / 1e3, 1), round(-IFI26 / 1e3, 1)) == (-2.7, -3.1)
+IN_IFI = {"label": "Impôt sur la fortune immobilière (ligne 1406)", "value": "« Les recettes se sont élevées à 2 739 M€ en 2024 » ; prévision révisée 2025 : 2 965 M€ ; « En 2026, la prévision est attendue à 3 095 M€ »",
+          "source": "Évaluation des voies et moyens, tome I, PLF 2026 (p. 23)", "url": VM26}
+ADD('zemmour', {"id": "ifi", "theme": "fiscalite", "title": "Fin de l'impôt sur la fortune immobilière", "proposal": "Supprimer « l'impôt sur la fortune » (depuis 2018, l'impôt sur la fortune immobilière, IFI).",
+  "claimed": "Non chiffré", "claimed_md": None, "estimates": [PRIO_E("« la fin des droits de succession et de l’impôt sur la fortune »")],
+  "consensus": "isolé", "verdict": "faisable", "obstacle": "Par la loi de finances ; financement non précisé dans la mesure.",
+  "claude": {"id": "ifi", "central": round(-IFI24 / 1e3, 1), "low": round(-IFI26 / 1e3, 1), "high": round(-IFI24 / 1e3, 1), "method": "ascendant",
+    "formula": "Même base que les droits de succession (recettes exécutées en 2024, Voies et moyens) : IFI 2 739 M€ en 2024 ≈ −2,7 Md€ (baisse d'impôt sans calendrier : entière en 2030) ; borne basse : prévision pour 2026 (3 095 M€) → −3,1",
+    "inputs": [IN_IFI, PRIO_IN],
+    "note": "Le site écrit « l'impôt sur la fortune » : le seul impôt sur la fortune en vigueur depuis 2018 est l'IFI. Base 2024 non projetée en 2030, comme les droits de succession. Impôt des ménages : pas d'impôt sur les sociétés récupéré. Lisnard (IFI remplacé par une fiscalité foncière) : même base, fiche non chiffrable faute de rendement publié du remplacement."}})
+k = M('lisnard', 'foncier')['claude']; a0 = "(IFI 2,2 + DMTO des départements ≈ 13 en 2025)"; assert k['note'].count(a0) == 1 and "environ −15 Md€" in k['note']
+k['note'] = k['note'].replace("environ −15 Md€", "environ −16 Md€").replace(a0, "(IFI 2,7, recettes exécutées en 2024, Voies et moyens, même base que la fin de l'IFI de Zemmour, + DMTO des départements ≈ 13 en 2025)")
+k['inputs'].append(IN_IFI)
+# (1d) carburants : 40 c par litre, TVA comprise (« taxes »), à la place de la baisse d'un tiers ; même base que la fiche et que la TICPE de Le Pen
+m = M('zemmour', 'accise'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-8.6, -11.2, -7.6)
+CUT = 40 / 1.2  # c€ (= €/hl) d'accise hors TVA ; sous les tarifs 2026 du gazole (60,75) et des essences (67,02 à 69,02) : pas de plafonnement
+assert CUT < 60.75 < 67.02
+gz, pl, ac, es = 23.6 * CUT / 100, 7.57 * (45.19 - (60.75 - CUT)) / 100, 0.8 * (39.19 - (60.75 - CUT)) / 100, 15.6 * CUT / 100
+tot = gz + pl + ac + es; cal = tot * 0.948; tva, isr = cal * 0.63 * 0.2, cal * 0.37 * 0.2
+ac_c, ac_h, ac_l = round(-(cal + tva - isr), 1), round(-(cal - isr), 1), round(-(tot + tot * 0.63 * 0.2 - tot * 0.37 * 0.175), 1)
+assert (round(gz, 2), round(pl, 2), round(ac, 2), round(es, 2), round(tot, 2), round(cal, 2), round(tva, 2), round(isr, 2)) == (7.87, 1.35, 0.09, 5.2, 14.51, 13.75, 1.73, 1.02)
+assert (ac_c, ac_h, ac_l) == (-14.5, -12.7, -15.4), (ac_c, ac_h, ac_l)
+m.update(title="Taxes sur les carburants −40 c/l", proposal="Baisser de 40 centimes les taxes sur les carburants (site du candidat ; lu par litre, TVA comprise), financé selon le candidat par des économies ; en mai 2026, baisse d'un tiers de l'accise.",
+         claimed="Non chiffré pour 40 centimes ; 12 Md€/an pour la baisse d'un tiers (combienjegagne.fr, mai 2026)", claimed_md=None)
+m['estimates'].append(PRIO_E("« 40 centimes de baisse de taxes sur les carburants »"))
+SET('zemmour', 'accise', ac_c, ac_l, ac_h,
+    "Paramètre le plus récent publié par le candidat (site de campagne, 2026) : 40 c€ par litre de « taxes », lus TVA comprise, soit 33,3 c€ d'accise hors TVA (40 / 1,2), sous le tarif 2026 du gazole (60,75 €/hl) et des essences (67,02 à 69,02) : pas de plafonnement. Même base que la fiche précédente et que la TICPE de Le Pen : volumes 2025 (gazole 32 Mm³, dont 7,6 Mm³ remboursés aux poids lourds et 0,8 Mm³ aux autocars ; essences 15,6 Mm³). Gazole non remboursé 23,6 Mm³ × 33,33 €/hl = 7,87 ; poids lourds : le tarif national (27,42) passe sous leur tarif net (45,19), perte 17,77 €/hl × 7,57 Mm³ = 1,35 ; autocars : tarif net 39,19, perte 11,77 €/hl × 0,8 Mm³ = 0,09 ; essences 15,6 Mm³ × 33,33 €/hl = 5,20 ; total 14,51 aux tarifs normaux. Calage sur les recettes 2025 publiées (CPO 27,2 / 28,7 aux tarifs normaux = 0,948 ; tarifs réduits E85, B100, Corse, taxis) : 13,75 ; + TVA sur la part qui n'est pas payée par les entreprises (63 %), à 20 % : 1,73 ; moins l'impôt sur les sociétés récupéré sur la part payée par les entreprises (37 %, SDES ; 20 %, règle commune) : 1,02 → ≈ −14,5. Borne haute : accise seule, nette de l'impôt sur les sociétés (−12,7) ; borne basse : sans calage, impôt sur les sociétés au taux de 17,5 % (−15,4)")
+k['inputs'].insert(0, PRIO_IN)
+for i in k['inputs']:
+    if i['label'] == 'Coût annoncé' and 'combienjegagne' in i['url']: i['label'] = "Coût annoncé (baisse d'un tiers, mai 2026)"
+k['note'] = ("Le site du candidat (2026) écrit « 40 centimes de baisse de taxes sur les carburants », à la place de la baisse d'un tiers de l'accise (Europe 1, 19/05/2026 : −27 c€ par litre d'essence, −24 c€ de gazole, TVA comprise) : l'unité n'est pas écrite, lue par litre et TVA comprise (« taxes ») ; le chiffre du camp (12 Md€) portait sur la baisse d'un tiers et n'est plus repris. "
+             + k['note'])
+s = C['zemmour']['sim']; assert s['accise_carburant']['essence'] == 0.2301
+s['accise_carburant'] = {"essence": round(CUT / 100, 4), "gazole": round(CUT / 100, 4), "note": "Taxe sur les carburants baissée de 40 c€ par litre (site du candidat ; unité non écrite, lue par litre et TVA comprise) : −33,3 c€ par litre hors TVA"}
+# (1e) chômeurs étrangers : six mois (TF1, 10/11, citation dans la dépêche de l'AFP), chiffrage indépendant de cette version (Institut Montaigne)
+AFP1011 = 'https://fr.news.yahoo.com/%C3%A9ric-zemmour-annonce-candidature-%C3%A0-214019669.html'
+MT_REM = 'https://www.institutmontaigne.org/presidentielle-2022/eric-zemmour/renvoyer-les-etrangers-venus-travailler-au-bout-de-6-mois-sans-emploi'
+m = M('zemmour', 'remigration'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (1.0, 0.5, 1.3)
+m['proposal'] = "Expulser les étrangers en situation régulière au chômage depuis plus de six mois (un an en septembre 2026), ainsi que les délinquants étrangers et les clandestins ; ministère de la Remigration."
+m['estimates'].append({"source": "AFP (F. Fontemaggi), dépêche du 10/11/2026 reprise par Yahoo Actualités : JT de 20 h de TF1", "year": 2026,
+    "value": "Le candidat « entend expulser les délinquants étrangers qui sont en prison, mais aussi \"les chômeurs étrangers de plus de six mois\", même s'ils sont en situation régulière »", "low_md": None, "high_md": None, "url": AFP1011})
+SET('zemmour', 'remigration', 1.8, 0.9, 2.4, "Chiffrage indépendant de la même version (six mois de chômage) : Institut Montaigne (2022), environ 200 000 chômeurs étrangers depuis plus de six mois × 12 200 € d'allocation annuelle (estimation médiane) = 2,4 Md€, moins 0,6 Md€ de frais d'éloignement ≈ +1,8 Md€ ; bornes de la source : +0,9 (allocation de 7 500 €) et +2,4 (15 000 €)",
+    method='médiane', note="Version la plus récente : « les chômeurs étrangers de plus de six mois » (JT de TF1, 10/11/2026, citation dans la dépêche de l'AFP), à la place d'« un an de chômage » (BFMTV, 17/09/2026). L'Insee ne publie pas de série des chômeurs étrangers par ancienneté du chômage : l'Institut Montaigne estime ceux de plus de six mois « de l'ordre du double » des 109 000 chômeurs étrangers de longue durée (plus d'un an). Données 2019-2020 non revalorisées. Objectif annoncé le même jour, « deux millions d'immigrés en moins à la fin du quinquennat » : non chiffré.",
+    inputs=[{"label": "Chômeurs étrangers depuis plus de six mois", "value": "« le nombre chômeurs étrangers de plus de 6 mois est de l'ordre du double, soit 200 000 personnes » (109 000 depuis plus d'un an ; données 2020)", "source": "Institut Montaigne (2022)", "url": MT_REM},
+            {"label": "Allocation annuelle ; frais d'éloignement", "value": "estimation médiane « indemnisation annuelle de 12 200€ » (basse 7 500, haute 15 000) ; éloignements « de l'ordre de 0,6 Md€ » ; économie nette « de l'ordre de 1,8 Md€ par an » (0,9 à 2,4)", "source": "Institut Montaigne (2022)", "url": MT_REM},
+            {"label": "Durée publiée (10/11/2026)", "value": "« les chômeurs étrangers de plus de six mois », même en situation régulière (JT de 20 h de TF1)", "source": "AFP, dépêche du 10/11/2026 (Yahoo Actualités)", "url": AFP1011}])
+s = C['zemmour']['sim']
+a0 = "un étranger au chômage depuis un an serait expulsé."; assert s['chomeurs'].endswith(a0); s['chomeurs'] = s['chomeurs'][:-len(a0)] + "un étranger au chômage depuis plus de six mois serait expulsé."
+a0 = "expulsion après un an de chômage"; assert s['etrangers'].count(a0) == 1; s['etrangers'] = s['etrangers'].replace(a0, "expulsion après six mois de chômage")
+# (1f) simulateur : gain publié pour la CSG (« 10 % de hausse de revenus pour tous les actifs ») : 10 % du revenu net d'activité, salariés, agents
+#      publics et indépendants, au prorata, sans plafond (mécanisme valable pour tous les revenus d'activité) ; part imposable = part déductible
+#      d'une CSG supprimée (6,8/9,2, règle commune) ; successions et IFI : notes
+assert s['salaire_net'] is None and 'non reprise' in s['salaire_note']
+s.pop('salaire_note')
+s['salaire_net'] = {"gain_mensuel": round(0.1 * SQ['salaire_moyen'], 1), "ref": SQ['salaire_moyen'], "prorata": True, "sans_plafond": True, "independants": True,
+    "public": "salariés, agents publics et indépendants", "imposable": round(6.8 / 9.2, 3),
+    "note": "Suppression de la CSG : « 10 % de hausse de revenus pour tous les actifs » (site du candidat), soit 10 % du revenu net d'activité, sans plafond, le mécanisme valant pour tous les revenus d'activité (notre calcul)"}
+s['independants'] = "Concernés par la suppression de la CSG sur les revenus d'activité (calculée ci-dessus) ; pas d'autre mesure spécifique publiée."
+s['heritage'] = [{"seuil": 100000, "effet": "Abolition des droits de succession (site du candidat) ; la plupart des héritages en ligne directe sous 100 000 € par enfant ne sont déjà pas taxés."}]
+s['patrimoine'] = [{"seuil": 1300000, "effet": "Impôt sur la fortune immobilière (IFI) supprimé (site du candidat)."}]
+C['zemmour']['total']['claimed'] = "140 Md€ d'économies par an (plan de Sarah Knafo publié sur budget2027.fr, repris par le candidat le 17/09/2026) ; selon son autrice, ce plan doit financer la suppression de la CSG sur les revenus d'activité, reprise par le candidat sur son site de campagne (2026)"
+MISS('zemmour', "ministère de la Remigration, ", "ministère de la Remigration, objectif de « deux millions d'immigrés en moins à la fin du quinquennat » (10/11/2026, non chiffré), ")
+# (2) Glucksmann : livret du 9/11/2026
+LIVRET = 'https://glucks2027.fr/wp-content/uploads/2026/11/livret_progr_revolution_ecologique_2027.pdf'
+LIVRET_S = "R. Glucksmann et Y. Jadot, livret « Révolution écologique, les premiers 100 jours pour sortir des énergies fossiles », première partie (glucks2027.fr, 9/11/2026)"
+PS0911 = 'https://www.publicsenat.fr/actualites/politique/presidentielle-2027-raphael-glucksmann-met-200-milliards-sur-la-table-et-invite-le-senat-a-voter-en-faveur-dune-future-republique-ecologique'
+PS0911_S = "Public Sénat (S. Barbarit, 9/11/2026)"
+def LIN(label, cit): return {"label": label, "value": "« " + cit + " »", "source": LIVRET_S, "url": LIVRET}
+def LEST(cit, lo=None, hi=None): return {"source": LIVRET_S, "year": 2026, "value": "« " + cit + " »", "low_md": lo, "high_md": hi, "url": LIVRET}
+CIT_200 = "Nous investirons, sur la durée du quinquennat, 200 milliards d’euros d’argent public."
+CIT_SC = "nous préparerons notre pays à mieux faire face aux risques de canicules et d’incendies, en allouant 1 Md € d’investissement, dès juin 2027, à la sécurité civile"
+CIT_CH = "Chèque énergie : sans attendre, face à l’explosion des prix de l’énergie, nous verserons un chèque énergie de 500 euros pour six millions de familles, de 200 euros pour dix millions de familles des classes moyennes."
+CIT_LS = "Leasing social : 1 million de voitures électriques sur 5 ans, à 100€ par mois et sans apport, dont 100 000 mises tout de suite à la disposition des auxiliaires de vie et professionnels du soin en zone rurale."
+CIT_CEPIC = "Cette contribution concernera une infime minorité de foyers, tout en haut de l’échelle des patrimoines, et rapportera 50 milliards d’euros. […] que nous financerons par une recette exceptionnelle, une seule année"
+# (2a) chèque énergie « exceptionnel » : versé une fois dans les cent premiers jours, aucun effet sur le solde de 2030
+m = M('glucksmann', 'cheque_energie'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-4.2, -5.0, -1.9)
+m.update(title="Chèque énergie exceptionnel", proposal="Chèque énergie « exceptionnel », versé dès les cent premiers jours : 500 € pour six millions de familles, 200 € pour dix millions de familles des classes moyennes ; financement annoncé jusqu'ici par une taxe sur les superprofits, non chiffrée (portée au niveau européen dans le livret du 9/11/2026).")
+m['estimates'] += [LEST(CIT_CH), {"source": PS0911_S, "year": 2026, "value": "« un chèque énergie exceptionnel de 500 euros pour 6 millions de familles », « élargi à 200 euros pour 10 millions de familles supplémentaires des classes moyennes »", "low_md": None, "high_md": None, "url": PS0911}]
+SET('glucksmann', 'cheque_energie', 0.0, -4.2, 0.0, "Versement « exceptionnel » (livret du 9/11/2026 ; propos du candidat cités par Public Sénat), parmi les mesures des cent premiers jours : versé une fois en 2027 (6 M × 500 € + 10 M × 200 € = 5,0 Md€), aucun effet sur le solde de 2030, le livret ne disant pas qu'il est reconduit ; borne basse : lecture annuelle comptée jusqu'au 8/11 (5,0 − 0,8 de chèque actuel remplacé ≈ −4,2)")
+k['inputs'] = [LIN("Livret du 9/11/2026", CIT_CH), {"label": "Versement exceptionnel", "value": "« un chèque énergie exceptionnel de 500 euros pour 6 millions de familles »", "source": PS0911_S, "url": PS0911}] + k['inputs']
+k['note'] = "Versement ponctuel : non compté en 2030 (s'il était reconduit chaque année, environ −4,2 Md€, borne basse). Compris dans le plan de 200 Md€ du livret et retiré de son assiette (pas de double compte). Seuils de revenu non publiés. Le même plan du 22/10 propose d'encadrer les marges de raffinage et de distribution des carburants (« réduire immédiatement de 20 centimes les prix à la pompe ») : sans coût public direct, en « Vie quotidienne ». Simulateur : seuils non publiés, non calculé (note)."
+# (2b) leasing social : « 1 million de voitures électriques sur 5 ans » (échéance désormais publiée) ; coût unitaire non publié : chiffre du camp ±50 %
+m = M('glucksmann', 'leasing_social'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-1.4, -6.0, -0.7)
+m.update(proposal="Leasing social : un million de voitures électriques sur cinq ans, à 100 € par mois sans apport, dont 100 000 tout de suite pour les auxiliaires de vie et les soignants en zone rurale.",
+         obstacle="Par la loi de finances ; financement non précisé dans la mesure.")
+m['estimates'].append(LEST(CIT_LS))
+SET('glucksmann', 'leasing_social', -1.4, -2.1, -0.7, "Coût annoncé : 6 Md€ pour un million de véhicules (2/10/2026), sur cinq ans (livret du 9/11/2026) : montant cumulé → flux 2030 = 3,5/15 × 6 ≈ −1,4 (règle commune) ; coût unitaire non publié, aucun chiffrage indépendant : chiffre du camp ±50 % (−2,1 et −0,7)")
+k['inputs'].append(LIN("Livret du 9/11/2026", CIT_LS))
+k['note'] = "Seul chiffrage : celui du candidat (aucun chiffrage indépendant ; coût par véhicule non publié). Compris dans le plan de 200 Md€ du livret et retiré de son assiette (pas de double compte). Financement non publié. Conditions d'accès non publiées dans le livret."
+# (2c) sécurité civile : enveloppe de 1 Md€ (ligne d'au moins 1 Md€ du livret), même règle que le plan d'un milliard de Mélenchon
+ADD('glucksmann', {"id": "securite_civile", "theme": "depense", "title": "Sécurité civile : 1 Md€", "proposal": "Allouer 1 Md€ d'investissement à la sécurité civile dès juin 2027 (canicules, incendies) ; fonds d'indemnisation qui avance le paiement des dommages aux sinistrés.",
+  "claimed": "1 Md€", "claimed_md": -1.0, "estimates": [LEST(CIT_SC, -1.0, -1.0)], "consensus": "isolé", "verdict": "faisable", "obstacle": "Par la loi de finances ; financement non précisé dans la mesure.",
+  "claude": {"id": "securite_civile", "central": -1.0, "low": -1.0, "high": -1.0, "method": "enveloppe (camp)", "formula": "Enveloppe annoncée : 1 Md€ (une enveloppe vaut son montant), supposée annuelle, même règle que le plan d'un milliard de Mélenchon",
+    "inputs": [LIN("Livret du 9/11/2026", CIT_SC)],
+    "note": "Rythme non précisé (« dès juin 2027 ») : compté comme une dépense annuelle, comme les autres enveloppes ; retiré de l'assiette du plan de 200 Md€ (pas de double compte). Fonds d'indemnisation des sinistrés : avance de paiement, montant non publié, non compté."}})
+# (2d) plan de 200 Md€ : montant cumulé sur cinq ans (3,5/15), parts qui ont leur propre fiche retirées ; chiffre du camp ±50 %
+BASE200 = 200 - 6 - 5 - 5; p0 = -BASE200 * 3.5 / 15; pc, pl, ph = round(p0, 1), round(p0 * 1.5, 1), round(p0 * 0.5, 1); assert (BASE200, pc, pl, ph) == (184, -42.9, -64.4, -21.5), (pc, pl, ph)
+ADD('glucksmann', {"id": "plan_ecologique", "theme": "energie", "title": "Révolution écologique : 200 Md€ sur le quinquennat",
+  "proposal": "Investir 200 Md€ d'argent public (État, collectivités, Sécurité sociale) sur le quinquennat pour sortir des énergies fossiles : chèque énergie, leasing social, un million de pompes à chaleur à 1 € par jour, transports du quotidien, rénovation de 4 000 écoles primaires par an, plan « droit à la fraîcheur », sécurité civile ; loi de programmation écologique.",
+  "claimed": "200 Md€ sur le quinquennat (livret du 9/11/2026)", "claimed_md": None,
+  "estimates": [LEST(CIT_200), {"source": PS0911_S, "year": 2026, "value": "« 200 milliards d’euros d’investissements qui seront engagés par l’ensemble des administrations publiques »", "low_md": None, "high_md": None, "url": PS0911}],
+  "consensus": "isolé", "verdict": "sous_conditions", "obstacle": "Par les lois de finances et une loi de programmation écologique ; une partie engagée par les collectivités (contrat avec les régions, plan « droit à la fraîcheur ») : mise en œuvre avec elles ; ventilation par poste et par année non publiée.",
+  "claude": {"id": "plan_ecologique", "central": pc, "low": pl, "high": ph, "method": "camp",
+    "formula": "Règle commune des montants cumulés sur cinq ans (flux 2030 = 3,5/15) : 200 Md€ d'argent public sur le quinquennat, moins les parts qui ont leur propre fiche (leasing social 6, un million de voitures sur cinq ans ; chèque énergie exceptionnel 5, versé une fois en 2027 ; sécurité civile 5, 1 Md€ par an) = 184 Md€ → 3,5/15 × 184 ≈ −42,9 Md€ ; aucun chiffrage indépendant : chiffre du camp ±50 % (−64,4 et −21,5)",
+    "inputs": [LIN("Montant (livret, p. 8)", CIT_200), {"label": "Qui dépense", "value": "« 200 milliards d’euros d’investissements qui seront engagés par l’ensemble des administrations publiques »", "source": PS0911_S, "url": PS0911},
+               LIN("Mesures financées (livret, p. 12-13)", "À quoi serviront ces 200 milliards ? […] Chèque énergie […] Leasing social […] Pompes à chaleur : 1 million de pompes à chaleur à 1 € par jour […] Transports du quotidien"),
+               LIN("Contribution exceptionnelle (livret, p. 9)", CIT_CEPIC)],
+    "note": "Le livret présente les 200 Md€ comme l'investissement public du programme (« Nous investirons ») sans en séparer une part déjà prévue ni publier de ventilation par poste ou par année : comptés comme dépense du programme (une enveloppe vaut son montant) ; une part déjà prévue, si elle était publiée, serait retirée (même règle que le plan IA de Retailleau, compté pour sa seule part nouvelle). Pompes à chaleur, Pass Mobilité Durable Jeunes, 5 000 lignes de covoiturage, rénovation des écoles, droit à la fraîcheur : compris dans le plan, sans coût à part. Financement annoncé : contribution exceptionnelle de 5 % des patrimoines de plus de 100 M€ (taux et seuil rapportés par Public Sénat et l'AFP ; 50 Md€ selon le camp), levée une seule année : recette ponctuelle, aucun effet sur le solde de 2030, non comptée ; taxe sur les superprofits et grand emprunt au niveau européen : non comptés. Objectif de stabilisation de la dette à l'horizon 2032 : sans ratio publié, non compté. D'autres mesures « pour la durée du quinquennat » et une seconde partie (biodiversité, eau, agriculture, santé) sont annoncées."}})
+k = M('glucksmann', 'zucman')['claude']; a0 = "Reprise dans le programme 2027 non confirmée"; assert k['note'] == a0
+k['note'] = a0 + ". Livret du 9/11/2026 : contribution exceptionnelle de 5 % des patrimoines de plus de 100 M€, levée une seule année (taux et seuil rapportés par Public Sénat et l'AFP ; 50 Md€ selon le camp), autre mesure, ponctuelle, non comptée en 2030 (fiche « Révolution écologique ») ; l'impôt plancher annuel de 2 % n'est pas repris : toujours hors total."
+MISS('glucksmann', "transition écologique, ", "")
+MISS_ADD('glucksmann', "livret « Révolution écologique » (9/11/2026) : contribution exceptionnelle pour l'investissement climatique (5 % des patrimoines de plus de 100 M€ selon Public Sénat et l'AFP, 50 Md€ selon le camp, une seule année : recette ponctuelle levée avant 2030, sans effet sur le solde de 2030), fin des exonérations sur le carburant des vols intérieurs et hausse de la taxe sur les billets d'avion (taux non publiés), Livret A au plafond doublé, fusionné avec le LDDS et rémunéré à 2,5 % (effet sur les finances publiques : aucune base officielle ouverte), moratoire sur les hausses de taxes sur l'électricité et prix garanti sous l'inflation (mécanisme non publié), taxe sur les superprofits pétroliers et gaziers et grand emprunt au niveau européen (accord d'autres États)")
+sg = C['glucksmann']['sim']
+a0 = "Chèque énergie : 500 € par an pour six millions de familles et 200 € pour dix millions d'autres ménages (plan du 22/10/2026) ; seuils de revenu non publiés, non calculé ici."
+a1 = "Leasing social : une voiture électrique à environ 100 €/mois pour un million de ménages modestes (conditions non publiées), non calculé ici."
+assert sg['tous'].count(a0) == 1 and sg['tous'].count(a1) == 1
+sg['tous'] = [{a0: "Chèque énergie exceptionnel, versé une fois dès les cent premiers jours : 500 € pour six millions de familles et 200 € pour dix millions de familles des classes moyennes (livret du 9/11/2026) ; seuils de revenu non publiés, non calculé ici.",
+               a1: "Leasing social : une voiture électrique à 100 €/mois sans apport, un million sur cinq ans (conditions non publiées dans le livret), non calculé ici."}.get(x, x) for x in sg['tous']]
+assert len(sg['patrimoine']) == 1 and sg['patrimoine'][0]['seuil'] == 100000000
+sg['patrimoine'] = [{"seuil": 100000000, "effet": "Contribution exceptionnelle de 5 % des patrimoines de plus de 100 M€, une seule année (taux rapporté par Public Sénat et l'AFP) ; taxe Zucman annuelle (2 %) soutenue en 2025, non reconfirmée."}]
+# (3) Mélenchon : « état d'urgence sociale » (décrets dès l'arrivée au pouvoir, puis loi de validation) ; voie juridique inchangée
+CN0811 = 'https://www.cnews.fr/france/2026-11-08/presidentielle-2027-en-cas-delection-de-jean-luc-melenchon-lfi-appliquerait-des'
+IN_EUS = {"label": "« État d'urgence sociale » (8/11/2026)", "value": "décrets « quelques jours après notre arrivée au pouvoir » pour « bloquer les prix des carburants » ou abroger la dernière réforme des retraites (M. Bompard, BFMTV), « augmenter tout de suite le Smic à 1.700 euros net » (C. Guetté, LCI) ; validation ensuite par une loi", "source": "CNews (8/11/2026, dépêche AFP)", "url": CN0811}
+EUS = " « État d'urgence sociale » annoncé (le candidat au Bourget, 7/11/2026 ; M. Bompard et C. Guetté, 8/11) : mesure appliquée par décret dès l'arrivée au pouvoir, puis validée par une loi."
+for mid in ('retraites', 'smic', 'prix'):
+    k = M('melenchon', mid)['claude']; k['note'] = (k.get('note') or '').replace("à son état prévu en 2030 Le programme", "à son état prévu en 2030. Le programme").rstrip('.') + '.' + EUS; k.setdefault('inputs', []).append(IN_EUS)
+m = M('melenchon', 'retraites'); a0 = "Par la loi ; "; assert m['obstacle'].startswith(a0)
+m['obstacle'] = "Par la loi : l'âge légal de départ étant fixé par la loi, un décret ne suffit pas ; " + m['obstacle'][len(a0):]
+# (4) PLF 2027 : première partie rejetée par l'Assemblée le 4/11 (scrutin n° 9759) ; le Sénat examine le projet initial du Gouvernement
+SCR9759 = 'https://www.assemblee-nationale.fr/dyn/17/scrutins/9759'
+k = M('le-pen', 'tva')['claude']; a0 = " Rien n'est voté définitivement : situation de départ inchangée jusqu'au vote de la loi (registre)."; assert k['note'].endswith(a0)
+k['note'] = k['note'][:-len(a0)] + " Le 4/11/2026, l'Assemblée a rejeté la première partie du projet (scrutin n° 9759) : le texte est considéré comme rejeté en première lecture et le Sénat examine le projet initial du Gouvernement, sans cette TVA à 5,5 % sur l'électricité. Rien n'est voté définitivement : situation de départ inchangée jusqu'au vote de la loi (registre)."
+k['inputs'].append({"label": "Projet de loi de finances pour 2027, première partie", "value": "rejetée par l'Assemblée le 4/11/2026 (0 pour, 458 contre, 2 abstentions) ; texte considéré comme rejeté en première lecture", "source": "Assemblée nationale, scrutin n° 9759", "url": SCR9759})
+k = M('lisnard', 'abattement_pensions')['claude']; a0 = "Le plafond à 3 000 € du PLF 2027 a été supprimé par l'Assemblée en première lecture : s'il était rétabli, la situation de départ changerait pour tous."; assert k['note'].endswith(a0)
+k['note'] = k['note'][:-len(a0)] + "Le plafond à 3 000 € du PLF 2027 a été supprimé par l'Assemblée en première lecture (15/10), mais la première partie du projet a été rejetée le 4/11/2026 (scrutin n° 9759) : le Sénat examine le projet initial du Gouvernement, qui le contient ; s'il était voté, la situation de départ changerait pour tous."
+k['inputs'].append({"label": "Projet de loi de finances pour 2027, première partie", "value": "rejetée par l'Assemblée le 4/11/2026 (0 pour, 458 contre, 2 abstentions) ; texte considéré comme rejeté en première lecture", "source": "Assemblée nationale, scrutin n° 9759", "url": SCR9759})
+D['asof'] = '11 novembre 2026'
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
@@ -2611,11 +2794,11 @@ for c0 in D['candidates']:
 P={'le-pen':("Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite à 62 ans et la TVA à 5,5 % sur l'énergie.","la révision de la Constitution, pour la priorité nationale, le prêt réservé aux jeunes ménages français et la règle d'or."),
 'melenchon':("Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines.","la modification des traités européens à l'unanimité des 27, pour l'annulation de la dette, et la révision de la Constitution, pour la VIe République."),
 'philippe':("Promet la retraite à 65 ans, un départ sur trois non remplacé dans la fonction publique, une allocation familiale dès le premier enfant et zéro impôt pour les jeunes parents.","la révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or."),
-'glucksmann':("Promet le retour à 62 ans, un SMIC à 1 700 € net, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun.","l'accord des autres pays européens, pour la défense européenne financée par emprunt commun et la saisie des avoirs russes."),
+'glucksmann':("Promet le retour à 62 ans, un SMIC à 1 700 € net, 200 Md€ d'investissement public écologique sur le quinquennat, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun.","l'accord des autres pays européens, pour la défense européenne financée par emprunt commun et la saisie des avoirs russes."),
 'retailleau':("Promet 197 Md€ d'économies par an en 2032, 51 Md€ de baisses d'impôts, un âge minimal de 63 ans et un référendum sur l'immigration.","la révision de la Constitution, pour le référendum sur l'immigration, les aides réservées après cinq ans, les peines planchers et la règle d'or."),
 'attal':("Promet la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.","la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen."),
 'lisnard':("Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations.","la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats."),
-'zemmour':("Promet l'expulsion des étrangers restés un an au chômage, des aides réservées aux Français, 800 000 postes publics en moins et la fin de l'aide publique au développement.","la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.")}
+'zemmour':("Promet l'expulsion des étrangers au chômage depuis plus de six mois, des aides réservées aux Français, la suppression de la CSG sur les revenus d'activité, la fin des droits de succession et 800 000 postes publics en moins.","la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.")}
 MEN=D['statu_quo']['menages']
 def fr(x): return (('+' if x>0 else '−' if x<0 else '')+f"{abs(x):.1f}".replace('.',','))
 for c0 in D['candidates']:

@@ -36,7 +36,8 @@ python3 tests/smoke.py      # Playwright + Chromium
 ## À surveiller
 - LFI : programme « L'Avenir en commun » publié le 6 novembre 2026 (melenchon2027.fr/programme/livre/), intégré le 8/11 ; livre papier (1 069 mesures) à consulter pour les mesures absentes du texte en ligne ; chiffrage complet annoncé début 2027.
 - RN : réforme des retraites détaillée le 17 novembre 2026.
-- Zemmour : programme 2026 attendu (CSG, successions aujourd'hui hors total, non reconfirmées).
+- Zemmour : candidat déclaré le 10/11/2026 (TF1) ; son site de campagne (ericzemmour.fr/priorites) reprend la suppression de la CSG, la fin des droits de succession et de l'IFI (comptées depuis le 11/11) et 40 c de baisse des taxes sur les carburants ; programme écrit attendu (impôts de production et quotient familial toujours non reconfirmés, hors total).
+- Glucksmann : livret « Révolution écologique », première partie (9/11/2026), intégré le 11/11 (plan de 200 Md€ sur le quinquennat) ; seconde partie (biodiversité, eau, agriculture, santé) et autres mesures du quinquennat annoncées « dans les prochaines semaines ».
 - Sondages (`poll`) : moyenne des instituts, `pipeline/data/sondages.json` (règle dans `_regle` : dernière vague de chaque institut dont le terrain s'est achevé dans les 15 jours, 15e jour compris, milieu de la fourchette des hypothèses, même poids par institut ; l'ordre des candidats en découle). À la mise à jour : changer `date`, remplacer les vagues, vérifier chaque score sur la notice de la Commission des sondages. Masqués automatiquement les 17-18 avril et 1er-2 mai 2027 (`D.blackout`).
 
 ## Déploiement

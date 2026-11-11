@@ -263,11 +263,12 @@ with sync_playwright() as p:
     # signalement visible sur chaque page : bouton en bas de page, formulaire qui s'ouvre ; rubrique Contact
     r = pg.evaluate("(()=>{ go('quiz'); const b=document.getElementById('foot-report'); const vis=b.offsetParent!==null; b.click(); const f=document.getElementById('foot-rep'); const ok=!f.hidden && !!f.querySelector('textarea'); go('accueil'); return [vis, ok, f.hidden, document.getElementById('contact').textContent.length>50 && /indépendant/.test(document.getElementById('about').textContent) && /Hébergeur/.test(document.getElementById('legal').textContent)]; })()")
     check(r == [True, True, True, True], f'signalement : bouton en bas de page, formulaire, fermé au changement de page ; contact, qui fait ce site, mentions légales {r}')
-    # carburant : baisse de la taxe par litre (Le Pen : tarif 2017 avec TVA à 5,5 % ; Zemmour : −1/3, TVA à 20 %) pour 300 €/mois d'essence
+    # carburant : baisse de la taxe par litre (Le Pen : tarif 2017 avec TVA à 5,5 % ; Zemmour : 40 c€ par litre TVA comprise, paramètre publié sur son
+    # site de campagne en 2026, à la place de la baisse d'un tiers : 300 / 1,94 × 0,40 ≈ 62 €, au lieu de 43 €) pour 300 €/mois d'essence (review 46)
     r = pg.evaluate("""(()=>{ document.getElementById('s-fuel').value=300; document.querySelector('#s-status [data-v="prive"]').click(); openSim.clear(); ['le-pen','zemmour'].forEach(i=>openSim.add(i)); sim();
       const v=id=>{ const row=[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].find(x=>/Taxe sur les carburants/.test(x.textContent)); const m=row&&row.textContent.match(/([0-9]+) €\\/mois/); return m?+m[1]:0; };
       const out=[v('le-pen'), v('zemmour')]; document.getElementById('s-fuel').value=100; sim(); return out; })()""")
-    check(r[0] in (5, 6) and r[1] in (42, 43, 44), f'simulateur : taxe carburant Le Pen ≈ 5,3 €, Zemmour ≈ 43 € pour 300 €/mois d\'essence au prix moyen des 12 derniers mois {r}')
+    check(r[0] in (5, 6) and r[1] in (61, 62, 63), f'simulateur : taxe carburant Le Pen ≈ 5,3 €, Zemmour ≈ 62 € pour 300 €/mois d\'essence au prix moyen des 12 derniers mois {r}')
     # fin des certificats d'économies d'énergie : même hypothèse officielle (−7 c€ par litre, TTC) chez Retailleau et Zemmour, rien chez les autres
     r = pg.evaluate("""(()=>{ document.getElementById('s-fuel').value=300; document.querySelector('#s-status [data-v="prive"]').click(); openSim.clear(); D.candidates.forEach(c=>openSim.add(c.id)); sim();
       const v=id=>{ const row=[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].find(x=>/certificats d'économies d'énergie/.test(x.textContent)); const m=row&&row.textContent.match(/([0-9]+) €\\/mois/); return m?+m[1]:0; };
@@ -302,6 +303,14 @@ with sync_playwright() as p:
       const out=[f(2238), f(1248), f(1900), f(4476)]; presetVal=null; return out; })()""")
     # review 45 : second point publié (42,50 € à 1 560 € net) : au prorata en dessous (1 248 € : 34 €), interpolation entre les points (1 900 € : 42 €)
     check(r == [[42, False], [34, False], [42, False], [83, False]], f'simulateur : gain publié en deux points, au prorata en dessous, interpolation, au prorata au-dessus quand le mécanisme vaut pour tous les salaires (Retailleau : 42,50 € à 1 560 €, 41,7 € au salaire médian) {r}')
+    # review 46 : gain publié en part du revenu (Zemmour, suppression de la CSG : « 10 % de hausse de revenus pour tous les actifs », site du candidat) :
+    # 10 % du revenu net d'activité, au prorata, sans plafond, pour les salariés, les agents publics et les indépendants ; plus de note « non reprise »
+    r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); S.kids=0; openSim.clear(); openSim.add('zemmour');
+      const f=(st,v)=>{ document.querySelector(`#s-status [data-v="${st}"]`).click(); presetVal=v; g('s-salary').value=v; sim(); const t=document.querySelector('#simres .srow[data-c="zemmour"]').innerText.replace(/\\s+/g,' ');
+        const row=[...document.querySelectorAll('#simres .srow[data-c="zemmour"] .rw')].find(x=>/^Revenu net/.test(x.textContent.trim())); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/);
+        return [m?+m[1]:0, /non reprise/.test(t)]; };
+      const out=[f('prive',1500), f('prive',4000), f('public',2200), f('independant',2500)]; document.querySelector('#s-status [data-v="prive"]').click(); presetVal=null; return out; })()""")
+    check(r == [[150, False], [400, False], [220, False], [250, False]], f'simulateur : suppression de la CSG de Zemmour, 10 % du revenu net d\'activité publié, sans plafond, salariés, agents publics et indépendants {r}')
     # impôt sur le revenu sur les gains de salaire (3/11/2026) : même calcul pour tous, au barème du simulateur avec décote, sur la hausse du revenu imposable
     # (hausse de salaire × net imposable / net ; baisse de CSG ou de cotisations × part déductible) ; rien au SMIC pour une baisse de prélèvement seule
     # (Retailleau, Lisnard), une ligne pour la hausse du SMIC à 1 700 € (Glucksmann, Mélenchon) ; une ligne au salaire médian pour les baisses de prélèvement

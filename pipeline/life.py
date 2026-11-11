@@ -1349,6 +1349,40 @@ _ps = _cur('le-pen', 'economie'); assert len(_ps) == 5 and _ps[3]['text'].starts
 _put('le-pen', 'economie', _ps[:3] + _ps[4:] + [_p("Limiter à une rupture conventionnelle tous les 10 ans")])
 _so('le-pen', 'economie', add=[CB_RN])
 
+# --- review 46 : revue du 11/11 (11/11/2026) ; registre S274 et suivants
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; à égalité ou à
+# date inconnue, ordre affiché gardé, S106). Sources ouvertes le 11/11.
+# Zemmour : site de campagne (ericzemmour.fr, « Nos priorités pour les Français », page de 2026 : règle de reconfirmation, comme les fiches) :
+# « Prélèvements des amendes sur les salaires et les aides sociales, construction de 100 000 places de prison en 24 mois ». Amendes : précise
+# (mécanisme de recouvrement nommé, même test que « y compris sur leurs allocations » des casseurs) ; places de prison : l'échéance publiée
+# (24 mois) précise la proposition affichée. Les deux, les plus récentes, entrent en tête ; le thème dépasse 5 : « Expulser les détenus
+# étrangers » (Public Sénat, 18/09, la plus ancienne) sort de l'affichage (S106 ; la dépêche de l'AFP du 10/11 qui la redit n'est lue que sur un
+# portail de reprise : registre).
+# Glucksmann : livret « Révolution écologique » (glucks2027.fr, site de campagne, 9/11) : « République écologique » à l'article 1er de la
+# Constitution (libertés, précise : article nommé ; 4 → 5, après les précises de 2026) ; leasing social : échéance publiée (« sur 5 ans »).
+# Régularisation des travailleurs sans papiers : reconfirmée par LCP (9/11), qui cite la vidéo du candidat publiée sur ses réseaux fin octobre
+# 2026 et écrit que la mesure est « reprise par Raphaël Glucksmann dans son programme de campagne ».
+OFFICIEL['zemmour'] += ('ericzemmour.fr',)
+OFFICIEL['glucksmann'] += ('glucks2027.fr',)
+Z_PRIO = _s("Site de campagne d'Éric Zemmour, « Nos priorités pour les Français » (2026)", 'https://www.ericzemmour.fr/priorites')
+G_LIVRET = _s("R. Glucksmann et Y. Jadot, livret « Révolution écologique, les premiers 100 jours » (9/11)", 'https://glucks2027.fr/wp-content/uploads/2026/11/livret_progr_revolution_ecologique_2027.pdf')
+LCP0911 = _s("LCP, proposition de loi de régularisation des travailleurs sans papiers, « reprise par Raphaël Glucksmann dans son programme » (9/11)", 'https://lcp.fr/actualites/il-faut-sortir-de-l-hypocrisie-les-deputes-ps-defendent-un-texte-pour-regulariser-300000')
+_ps = {p['text']: p for p in _cur('zemmour', 'securite')}
+assert list(_ps) == ["Rétablir les peines planchers, supprimer le juge de l'application des peines", 'Construire très vite 100 000 places de prison',
+    "Faire payer les dégâts aux casseurs et à leurs parents, y compris sur leurs allocations ; rétablir la loi anticasseurs de 1970",
+    'Déchéance de nationalité puis départ des binationaux auteurs des violences', 'Expulser les détenus étrangers, estimés à 25 % de la population carcérale'], list(_ps)
+_put('zemmour', 'securite', [_p("Prélever les amendes sur les salaires et les aides sociales"), _p("Construire 100 000 places de prison en 24 mois"),
+     _ps["Rétablir les peines planchers, supprimer le juge de l'application des peines"],
+     _ps["Faire payer les dégâts aux casseurs et à leurs parents, y compris sur leurs allocations ; rétablir la loi anticasseurs de 1970"],
+     _ps['Déchéance de nationalité puis départ des binationaux auteurs des violences']])
+_so('zemmour', 'securite', add=[Z_PRIO])
+_ps = _cur('glucksmann', 'libertes'); assert [(p['verifiable'], p['old']) for p in _ps] == [(True, False), (True, False), (True, True), (True, True)], [p['text'] for p in _ps]
+_put('glucksmann', 'libertes', _ps[:2] + [_p("Inscrire la « République écologique » à l'article 1er de la Constitution")] + _ps[2:])
+_so('glucksmann', 'libertes', add=[G_LIVRET])
+_txt('glucksmann', 'environnement', "Leasing social : 1 million de voitures électriques à 100 €/mois", "Leasing social : 1 million de voitures électriques sur 5 ans, à 100 €/mois sans apport")
+_so('glucksmann', 'environnement', add=[G_LIVRET])
+_so('glucksmann', 'economie', add=[LCP0911])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.

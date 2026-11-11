@@ -429,9 +429,6 @@
    ]
   },
   "environnement": {
-   "Leasing social : 1 million de voitures électriques à 100 €/mois": [
-    "https://www.lagazettefrance.fr/article/en-seine-maritime-glucksmann-defend-les-voitures-electriques-et-la-transition-ecologique"
-   ],
    "Encadrer les marges de raffinage et de distribution des carburants pour baisser de 20 centimes le prix à la pompe": [
     "https://bsky.app/profile/placepublique.bsky.social/post/3myhxt47cic2k"
    ],
@@ -443,6 +440,10 @@
    ],
    "Consacrer 20 à 25 % de la nouvelle PAC à rémunérer les services écologiques des agriculteurs (haies, friches)": [
     "https://france3-regions.franceinfo.fr/grand-est/marne/chalons-en-champagne/ce-sont-des-patriotes-de-pacotille-a-la-foire-de-chalons-raphael-glucksmann-en-campagne-contre-le-rn-3412121.html"
+   ],
+   "Leasing social : 1 million de voitures électriques sur 5 ans, à 100 €/mois sans apport": [
+    "https://glucks2027.fr/wp-content/uploads/2026/11/livret_progr_revolution_ecologique_2027.pdf",
+    "https://www.lagazettefrance.fr/article/en-seine-maritime-glucksmann-defend-les-voitures-electriques-et-la-transition-ecologique"
    ]
   },
   "logement": {
@@ -470,12 +471,16 @@
    ],
    "Fin du 49.3 : vote de confiance, censure constructive": [
     "https://place-publique.eu/document/6J8wjk3EW8dBCLwKxa7J96/projet-placepublique-acte1.pdf"
+   ],
+   "Inscrire la « République écologique » à l'article 1er de la Constitution": [
+    "https://glucks2027.fr/wp-content/uploads/2026/11/livret_progr_revolution_ecologique_2027.pdf"
    ]
   },
   "economie": {
    "Régulariser environ 300 000 travailleurs sans papiers : titre de séjour après six mois de travail sur les deux dernières années": [
     "https://www.rtl.fr/actu/politique/presidentielle-2027-raphael-glucksmann-promet-de-regulariser-300-000-sans-papiers-s-il-est-elu-le-ps-pousse-la-mesure-a-l-assemblee-7900690049",
-    "https://www.franceinfo.fr/politique/raphael-glucksmann/on-est-obliges-de-faire-attention-comment-raphael-glucksmann-cherche-la-parade-face-a-l-hostilite-des-insoumis-sur-le-terrain_8257408.html"
+    "https://www.franceinfo.fr/politique/raphael-glucksmann/on-est-obliges-de-faire-attention-comment-raphael-glucksmann-cherche-la-parade-face-a-l-hostilite-des-insoumis-sur-le-terrain_8257408.html",
+    "https://lcp.fr/actualites/il-faut-sortir-de-l-hypocrisie-les-deputes-ps-defendent-un-texte-pour-regulariser-300000"
    ],
    "Porter le SMIC à 1 700 € net": [
     "https://bsky.app/profile/placepublique.bsky.social/post/3myhxt47cic2k"
@@ -888,9 +893,6 @@
    "Rétablir les peines planchers, supprimer le juge de l'application des peines": [
     "https://lesincorrectibles.substack.com/p/eric-zemmour-la-france-face-au-chaos-1"
    ],
-   "Construire très vite 100 000 places de prison": [
-    "https://lesincorrectibles.substack.com/p/eric-zemmour-la-france-face-au-chaos-1"
-   ],
    "Faire payer les dégâts aux casseurs et à leurs parents, y compris sur leurs allocations ; rétablir la loi anticasseurs de 1970": [
     "https://www.europe1.fr/politique/blocus-des-lycees-eric-zemmour-veut-faire-payer-les-casseurs-et-leurs-parents-jusqua-la-nuit-des-temps-1129292",
     "https://lesincorrectibles.substack.com/p/eric-zemmour-la-france-face-au-chaos-1"
@@ -899,8 +901,12 @@
     "https://entrevue.fr/medias/une-horde-de-barbares-maghrebins-et-africains-eric-zemmour-provoque/",
     "https://www.europe1.fr/politique/en-direct-immigration-pouvoir-dachat-narcotrafic-ce-quil-faut-retenir-de-linterview-deric-zemmour-dans-la-france-en-face-936419"
    ],
-   "Expulser les détenus étrangers, estimés à 25 % de la population carcérale": [
-    "https://www.publicsenat.fr/actualites/politique/eric-zemmour-officialise-sa-candidature-a-la-presidentielle-2027"
+   "Prélever les amendes sur les salaires et les aides sociales": [
+    "https://www.ericzemmour.fr/priorites"
+   ],
+   "Construire 100 000 places de prison en 24 mois": [
+    "https://www.ericzemmour.fr/priorites",
+    "https://lesincorrectibles.substack.com/p/eric-zemmour-la-france-face-au-chaos-1"
    ]
   },
   "sante": {
