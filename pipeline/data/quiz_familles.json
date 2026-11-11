@@ -16,7 +16,7 @@
   "Moins d'élèves par classe": ["melenchon.ecole.2", "attal.ecole.1"],
   "Moins d'éolien et de solaire": ["le-pen.enr", "zemmour.enr", "retailleau.energie"],
   "Taxes sur l'énergie et les carburants en baisse": ["le-pen.tva", "le-pen.ticpe", "zemmour.accise"],
-  "CSG sur les salaires en baisse": ["lisnard.csg_deductible", "lisnard.csg_actifs"],
+  "CSG sur les salaires en baisse": ["lisnard.csg_deductible", "lisnard.csg_actifs", "zemmour.csg"],
   "Impôt sur le revenu des familles en baisse": ["le-pen.part-fiscale", "philippe.jeunes_parents", "lisnard.quotient"],
   "Gel des prestations": ["attal.annee_blanche", "lisnard.gel_pensions"]
  }
