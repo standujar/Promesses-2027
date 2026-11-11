@@ -839,11 +839,11 @@
    ],
    "mesure": null,
    "sujet": "Quiz : candidats absents des duels école, santé ou logement",
-   "detail": "Seules les propositions « Vie quotidienne » précises et reconfirmées entrent au quiz. Absents faute de telles propositions : école (Le Pen, Zemmour), santé (Le Pen, Glucksmann, Philippe, Attal, Zemmour : propositions non reconfirmées ou intentions), logement (Glucksmann, Zemmour). À revoir à chaque programme publié (LFI 6/11, RN 17/11, Zemmour 2026) : une proposition qui devient précise et reconfirmée reçoit son texte et ses deux explications. 29/10 (veille) : Zemmour entre au quiz école (examens d'entrée en sixième et en seconde, zemmour.ecole.1, mêmes explications que Retailleau, Attal et Lisnard) et Attal au quiz santé (formation des médecins, attal.sante.1, même constat, même « Pour » et mêmes cas que Lisnard). Restent absents : école, Le Pen (exclusion des élèves et réforme de Parcoursup, précises depuis le 29/10, sans entrée sourcée : S140) ; santé, Le Pen, Glucksmann, Philippe, Zemmour ; logement, Glucksmann, Zemmour.",
+   "detail": "Seules les propositions « Vie quotidienne » précises et reconfirmées entrent au quiz. Absents faute de telles propositions : école (Le Pen, Zemmour), santé (Le Pen, Glucksmann, Philippe, Attal, Zemmour : propositions non reconfirmées ou intentions), logement (Glucksmann, Zemmour). À revoir à chaque programme publié (LFI 6/11, RN 17/11, Zemmour 2026) : une proposition qui devient précise et reconfirmée reçoit son texte et ses deux explications. 29/10 (veille) : Zemmour entre au quiz école (examens d'entrée en sixième et en seconde, zemmour.ecole.1, mêmes explications que Retailleau, Attal et Lisnard) et Attal au quiz santé (formation des médecins, attal.sante.1, même constat, même « Pour » et mêmes cas que Lisnard). Restent absents : école, Le Pen (exclusion des élèves et réforme de Parcoursup, précises depuis le 29/10, sans entrée sourcée : S140) ; santé, Le Pen, Glucksmann, Philippe, Zemmour ; logement, Glucksmann, Zemmour. 11/11 : Glucksmann entre au quiz logement (glucksmann.logement.1, encadrement des loyers en zones tendues : constat Insee des loyers, +0,9 % sur un an en juillet 2026 dans le secteur libre ; mêmes cas que retailleau.logement.3, côtés inversés : loyers −2 à −4 %, annonces −8 % hors Île-de-France, pas de baisse durable à Paris ; « mitigé » des deux côtés). Restent absents, avec la raison : école, Le Pen (exclusion d'élèves et Parcoursup, précises et reconfirmées, sans fait français sourcé : S140, S266) ; santé, Le Pen (soins dentaires au quiz par la fiche « dentaire », thème Social ; ses autres propositions de santé sont de 2022), Glucksmann (dépistage à 16 et 20 ans, précis, sans fait mesuré pour le « Pour »), Zemmour (propositions de 2022 seulement, non reconfirmées) ; logement, Zemmour (loi SRU : 2022 seulement). Philippe, Attal : présents (philippe.sante.1, philippe.ecole.3, philippe.logement.1 ; attal.sante.1).",
    "echeance": "2026-11-18",
    "statut": "ouvert",
    "cree": "2026-10-27",
-   "maj": "2026-10-29",
+   "maj": "2026-11-11",
    "resolution": null
   },
   {
@@ -874,11 +874,11 @@
    ],
    "mesure": null,
    "sujet": "Quiz : revoir les « Contre » et leurs compléments à chaque programme publié",
-   "detail": "Le « Contre » d'une proposition tient compte du reste du programme : une mesure du même candidat qui répond à la critique est signalée (complément). Notre base peut être incomplète tant que des programmes ne sont pas publiés (LFI 6/11, RN 17/11, Zemmour) : à chaque publication, relire les « Contre » du candidat et ajouter les compléments nouveaux. On n'écrit jamais « aucune réponse prévue » : l'absence dans notre base n'est pas une preuve d'absence dans le programme. Revue du 8/11 : Mélenchon (programme du 6/11) : « Contre » de ses propositions relus ; le plan pluriannuel de recrutement de soignants et de médecins (fiche « hopitaux ») devient le complément de la réouverture des urgences et maternités (sante.2, au lieu des seuls médecins salariés) ; pour les effectifs par classe, la priorité nouvelle (maternelles et REP) est dans la proposition elle-même ; aucun autre complément (point d'indice, niches, cantine, jeunes, SMIC : aucune mesure nouvelle ne répond à la critique principale). Restent le RN (17/11) et Zemmour (programme non publié).",
+   "detail": "Le « Contre » d'une proposition tient compte du reste du programme : une mesure du même candidat qui répond à la critique est signalée (complément). Notre base peut être incomplète tant que des programmes ne sont pas publiés (LFI 6/11, RN 17/11, Zemmour) : à chaque publication, relire les « Contre » du candidat et ajouter les compléments nouveaux. On n'écrit jamais « aucune réponse prévue » : l'absence dans notre base n'est pas une preuve d'absence dans le programme. Revue du 8/11 : Mélenchon (programme du 6/11) : « Contre » de ses propositions relus ; le plan pluriannuel de recrutement de soignants et de médecins (fiche « hopitaux ») devient le complément de la réouverture des urgences et maternités (sante.2, au lieu des seuls médecins salariés) ; pour les effectifs par classe, la priorité nouvelle (maternelles et REP) est dans la proposition elle-même ; aucun autre complément (point d'indice, niches, cantine, jeunes, SMIC : aucune mesure nouvelle ne répond à la critique principale). Restent le RN (17/11) et Zemmour (programme non publié). 11/11 : « Contre » relus pour Glucksmann (livret « Révolution écologique » du 9/11) et Zemmour (site de campagne, 10/11). Glucksmann : le complément de glucksmann.ecole est mis à jour (« mieux payer les profs et rénover 4 000 écoles primaires par an », réf. glucksmann.ecole et glucksmann.plan_ecologique) ; aucune autre mesure nouvelle ne répond à la critique principale d'un « Contre » (chèque énergie, industrie, défense, SMIC, retraites, service civique, Ukraine, régularisation, Parcoursup). Zemmour : suppression de la CSG, fin des droits de succession et de l'IFI, 40 c de baisse sur les carburants : aucune ne répond à la critique d'un « Contre » (retraites, aides, AME, Anah, certificats, RSA, prisons, aide au développement, examens) ; aucun complément. Reste le RN (17/11).",
    "echeance": "2026-11-18",
    "statut": "ouvert",
    "cree": "2026-10-27",
-   "maj": "2026-11-08",
+   "maj": "2026-11-11",
    "resolution": null
   },
   {
@@ -4517,11 +4517,11 @@
    ],
    "mesure": "life",
    "sujet": "Quiz : propositions précises de 2026 (école, santé) ajoutées le 8/11 sans explications sourcées (complément du point S057)",
-   "detail": "Entrées au quiz le 8/11 : philippe.sante.1 (mêmes constat, Pour, Contre et cas que retailleau.sante.1 ; même famille), lisnard.ecole.5 (mêmes faits que melenchon.ecole.1, sans les cas étrangers ; famille « Suppression de Parcoursup »), melenchon.ecole.4 (constat Insee des sortants précoces ; Contre : obligation portée à 16 ans en 1967, sans effet sur les diplômes ni les salaires, Grenet 2013). Pas encore au quiz, faute d'explications sourcées sur des faits français (décision du porteur du 8/11 : pas d'exemples étrangers) : philippe.ecole.4 (portable jusqu'au lycée : loi de 2018 pour l'école et le collège, « pause numérique » généralisée au collège en 2025 sans évaluation publiée ; pages de la DEPP et du ministère inaccessibles depuis cet environnement, erreur 403) ; glucksmann.ecole.4 (réforme du lycée de 2019 : notes de la DEPP 20.38, 21.22, 24.06, 25.10 sur les spécialités et les mathématiques, à lire à la source) ; lisnard.sante.4 (Sécurité sociale en concurrence : évaluations seulement étrangères ; fait français possible : frais de gestion des complémentaires et de l'Assurance maladie, DREES, comptes de la santé) ; attal.sante.2 (dépistage de l'addiction aux écrans : pas d'évaluation française trouvée) ; melenchon.sante.5 (cannabis légalisé : évaluations seulement étrangères ; constat possible : usages de l'OFDT). Même méthode pour les cinq : constat officiel, Pour et Contre sur des faits français, « pas d'étude » quand aucune évaluation n'existe.",
+   "detail": "Entrées au quiz le 8/11 : philippe.sante.1 (mêmes constat, Pour, Contre et cas que retailleau.sante.1 ; même famille), lisnard.ecole.5 (mêmes faits que melenchon.ecole.1, sans les cas étrangers ; famille « Suppression de Parcoursup »), melenchon.ecole.4 (constat Insee des sortants précoces ; Contre : obligation portée à 16 ans en 1967, sans effet sur les diplômes ni les salaires, Grenet 2013). Pas encore au quiz, faute d'explications sourcées sur des faits français (décision du porteur du 8/11 : pas d'exemples étrangers) : philippe.ecole.4 (portable jusqu'au lycée : loi de 2018 pour l'école et le collège, « pause numérique » généralisée au collège en 2025 sans évaluation publiée ; pages de la DEPP et du ministère inaccessibles depuis cet environnement, erreur 403) ; glucksmann.ecole.4 (réforme du lycée de 2019 : notes de la DEPP 20.38, 21.22, 24.06, 25.10 sur les spécialités et les mathématiques, à lire à la source) ; lisnard.sante.4 (Sécurité sociale en concurrence : évaluations seulement étrangères ; fait français possible : frais de gestion des complémentaires et de l'Assurance maladie, DREES, comptes de la santé) ; attal.sante.2 (dépistage de l'addiction aux écrans : pas d'évaluation française trouvée) ; melenchon.sante.5 (cannabis légalisé : évaluations seulement étrangères ; constat possible : usages de l'OFDT). Même méthode pour les cinq : constat officiel, Pour et Contre sur des faits français, « pas d'étude » quand aucune évaluation n'existe. 11/11 (règle des exemples étrangers, point S288) : aucune des cinq propositions n'entre encore au quiz faute de faits français sourcés pour le « Pour » et le « Contre » : philippe.ecole.4 (portable : aucune évaluation publiée de la loi de 2018 ni de la pause numérique), glucksmann.ecole.4 (réforme du lycée : notes de la DEPP à lire à la source, pages en 403), lisnard.sante.4 (concurrence des caisses : fait français possible, frais de gestion des complémentaires et de l'Assurance maladie, DREES, comptes de la santé, à rouvrir ; aucun pour le « Pour »), attal.sante.2 (dépistage de l'addiction aux écrans : aucune évaluation française trouvée), melenchon.sante.5 (cannabis : constat OFDT possible, usage dans l'année 10,8 % des 18-64 ans en 2023, lu dans une synthèse de presse, à rouvrir à la source ; aucun fait français pour « Pour » et « Contre » vérifié). Autres propositions précises et reconfirmées sans entrée : le-pen.ecole.1 et zemmour.ecole.2 (exclusion d'élèves, S140), le-pen.ecole.2 (Parcoursup réformé), glucksmann.sante.1 (dépistage à 16 et 20 ans), melenchon.sante.3 (100 % Sécu). Doublons d'une fiche déjà au quiz, pas d'entrée : philippe.ecole.1, lisnard.ecole.3, attal.ecole.2 (enseignants), glucksmann.ecole.1 (loi pour l'école), le-pen.sante.1 (soins dentaires).",
    "echeance": "2026-11-18",
    "statut": "ouvert",
    "cree": "2026-11-08",
-   "maj": "2026-11-08",
+   "maj": "2026-11-11",
    "resolution": null
   },
   {
@@ -4854,6 +4854,105 @@
    "mesure": "etudiants_etrangers",
    "sujet": "Quiz : fiches « droits d'inscription des étudiants étrangers » ajoutées le 11/11",
    "detail": "La fiche de Retailleau est au quiz ; celles ajoutées le 11/11 (Philippe, compté ; Le Pen et Zemmour, non chiffrables) n'ont pas d'entrée dans quiz_plain.json. À examiner avec la règle du quiz : même famille que Retailleau si Philippe entre au quiz (mêmes Pour et Contre pour une même mesure).",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-11",
+   "maj": "2026-11-11",
+   "resolution": null
+  },
+  {
+   "id": "S288",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": "quiz",
+   "sujet": "Quiz : exemples étrangers retirés (décision du porteur du projet, 11/11 : « pas ou peu d'exemple étranger »)",
+   "detail": "Même règle pour les 171 entrées de quiz_effets.json : cas observés en France seulement (outre-mer compris) ; un cas sur une institution ou une décision de l'Union compte quand la France y participe (Parquet européen, Schengen, taxe sur les transactions financières à onze dont la France, achats d'armement des pays de l'UE, emprunt du plan de relance, pertes de la BCE, aide européenne à l'Ukraine) ; un fait qui ne concerne qu'un autre pays est retiré (prêts SURE à dix-neuf pays sans la France, rabais d'autres États, banque centrale suisse). État des études sans nom de pays ni chiffre étranger : « Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent … ». Niveaux de preuve jugés sur les preuves françaises (au plus « faible » si seules des évaluations étrangères existent).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-11",
+   "maj": "2026-11-11",
+   "resolution": "Fait le 11/11 (quiz_effets.json ; contrôle dans pipeline/quizfx.py : le pipeline échoue si un cas, l'état des études, le « Pour » ou le « Contre » nomme un pays, une région ou une ville étrangers d'une liste fermée). 206 cas étrangers retirés ; cas 593 → 417 (avec la nouvelle entrée glucksmann.logement.1) ; sources 728 → 548 ; 110 entrées modifiées, 95 textes « Pour »/« Contre » réécrits sur un fait français ou, à défaut, sur le mécanisme sans pays, 87 états des études réécrits ; 74 niveaux de preuve changés (mitigé → faible : 50, solide → faible : 12, solide → mitigé : 11, mitigé → pas d'étude : 1) ; 22 entrées sans cas. Cas français ajoutés, sources ouvertes le 11/11 : Fonds de réserve pour les retraites, −24,8 % en 2008 (réponse du ministère du Budget à la question écrite n° 57261 ; attal.bebe, philippe.premier_contrat, zemmour.retraites) ; règle de 2012 et « écart important » de −1,9 point de PIB en 2024, −1,4 en 2025 (avis HCFP-2026-2 ; les 4 « règle d'or ») ; grâce collective du 14 juillet 1996 et récidive (Maurin et Ouss, IZA DP 3990 ; les 3 « prisons ») ; erreurs traitées comme fraudes (Défenseur des droits, 2017 ; le-pen.fraude, retailleau.fraude) ; RIP des aérodromes de Paris, 1 093 030 soutiens pour 4 717 396 requis (décision n° 2019-1-8 RIP ; lisnard.referendum) ; rabais forfaitaires de cinq États financés en premier par la France, 1 428 M€ en 2023 (jaune budgétaire PLF 2025 ; le-pen.ue) ; crédit d'impôt de 2007 sur les intérêts, « peu d'effets sur l'accession » (Sénat, avis PLF 2011 ; retailleau.logement.2) ; allocation parentale d'éducation de 1994, 100 000 à 150 000 mères sorties de l'emploi (Piketty, CEPREMAP 0309 ; retailleau.conge_naissance) ; nouvelles annonces de location −8 % hors Île-de-France (Cour des comptes, octobre 2026 ; retailleau.logement.3) ; et, mêmes cas que les mesures du même type : Laroque-Salanié et Landais (philippe.famille, le-pen.pret-3e-enfant), Trésor sur la fin des droits au chômage (zemmour.rsa3), séjour de cohésion du SNU (glucksmann.service_civique), carte scolaire (DEPP 2013 ; lisnard.ecole.1), primes reversées aux agents (Sénat 2012 ; le-pen.etat), référendum de 2005 (Sénat 2008 ; melenchon.constituante). Constats inchangés (point S291)."
+  },
+  {
+   "id": "S289",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen",
+    "lisnard",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": "ame",
+   "sujet": "Quiz : deux sources étrangères gardées dans les 4 entrées « AME » à cause d'un contrôle de life.py",
+   "detail": "Les cas espagnol et allemand sont retirés des entrées le-pen.ame, lisnard.ame, retailleau.ame et zemmour.ame, mais leurs deux sources (European Economic Review 2021, PLOS ONE 2015) restent dans « src » : life.py, l. 632-633, filtre les sources AME de quiz_effets.json sur '271649', 'eecrev' et 'journal.pone' et exige qu'il y en ait 3 (lecture OVR non publiée de Zemmour, santé). life.py n'est pas dans le périmètre du quiz. Correctif proposé (propriétaire de life.py) : l. 632, filtrer sur '271649' seul ; l. 633, assert len(AME_S) == 1 ; puis retirer les deux sources des 4 entrées AME de quiz_effets.json (elles ne sont plus citées).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-11",
+   "maj": "2026-11-11",
+   "resolution": "Corrigé le 11/11 : life.py ne demande plus les sources étrangères de la lecture AME (non publiée depuis le 8/11) ; les deux études étrangères sont retirées des 4 entrées AME du quiz, les sources françaises (rapport sur l'AME, Cour des comptes) restent."
+  },
+  {
+   "id": "S290",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen",
+    "philippe",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "glucksmann",
+    "zemmour"
+   ],
+   "mesure": "quiz",
+   "sujet": "Quiz : constats qui comparent la France à une moyenne ou à un pays étrangers",
+   "detail": "Constats gardés (la règle du 11/11 vise les cas, l'état des études, le « Pour » et le « Contre » ; une moyenne de référence n'est pas un exemple) : salaire des enseignants « contre +4 à +6 % en moyenne OCDE » (attal.profs, lisnard.profs, philippe.profs, retailleau.profs, glucksmann.ecole), impôts de production comparés à l'Allemagne (le-pen.production, lisnard.impots, philippe.production, retailleau.production), dépense de recherche et moyenne OCDE (le-pen.recherche), aide au développement (OCDE, source des données françaises ; zemmour.aide_developpement). Même traitement pour tous ; à revoir seulement si le porteur étend la règle aux constats.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-11",
+   "maj": "2026-11-11",
+   "resolution": null
+  },
+  {
+   "id": "S291",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": "quiz",
+   "sujet": "Quiz : « Pour » ou « Contre » sans fait français (mécanisme, niveau « faible »), à compléter si un fait français sourcé existe",
+   "detail": "Après le retrait des cas étrangers, ces textes décrivent le mécanisme, sans pays, avec « faible » : attal.immigration, attal.retraites (Pour), glucksmann.industrie, glucksmann/le-pen.economie.1, les aides réservées (le-pen.immigration, lisnard.aides5, zemmour.aides, retailleau.immigration), philippe.immigration et zemmour.cedh, les examens d'entrée (Pour : retailleau.ecole.2, attal.ecole.3, lisnard.ecole.2, zemmour.ecole.1), retailleau.ecole.3 et .4 et .5 (Pour), lisnard.ecole.1 (Pour), lisnard.logement.2, retailleau.logement.1 (Pour), le-pen.recherche, melenchon.hopitaux, melenchon.vss, melenchon.violences-enfants, melenchon.cantine (Pour), melenchon.universites (Pour), melenchon.prix (Contre), lisnard.referendum (Contre), lisnard.allocation (Contre), le-pen.tva-produits-essentiels (Pour), le-pen.ir-moins-30-ans (Pour), le-pen.proches-aidants (Pour), philippe.ingenieurs (Pour), retailleau.conge_naissance (Pour), zemmour.rsa3 (Pour), zemmour.remigration (Contre), zemmour.aide_developpement, la règle d'or (Contre), le service obligatoire des jeunes (Contre). Pistes françaises à ouvrir à la source : bouclier qualité-prix outre-mer (blocage des prix), enquête ELIPA (regroupement familial), évaluations de l'AFD (aide au développement), cantine à 1 € (tarification sociale), Mon bilan prévention (dépistage).",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-11",
+   "maj": "2026-11-11",
+   "resolution": null
+  },
+  {
+   "id": "S292",
+   "type": "a_verifier",
+   "candidats": [
+    "lisnard",
+    "melenchon"
+   ],
+   "mesure": "quiz",
+   "sujet": "Quiz : deux phrases de l'état des études sans source dans la liste",
+   "detail": "lisnard.logement.2 : « En France, 62 % des terres prises par l'habitat l'ont été là où le logement est peu demandé (Cerema 2026) » : aucune source Cerema dans « src » (le rapport de la Cour des comptes sur l'encadrement des loyers cité ne donne pas ce chiffre, vérifié le 11/11). melenchon.sante.1 : « selon la DREES, ailleurs elle n'évite pas les pénuries » : pas de source DREES dans la liste, et « ailleurs » ne dit pas s'il s'agit de l'étranger. À rouvrir à la source ou à retirer, même règle pour les deux.",
    "echeance": null,
    "statut": "ouvert",
    "cree": "2026-11-11",
