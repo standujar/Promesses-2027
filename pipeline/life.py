@@ -629,8 +629,9 @@ _ev('glucksmann', 'environnement', VE + " " + EPR + " " + RTE, add=[EPR_S, RTE_S
 _QE = J('quiz_effets.json')
 AME = _QE['zemmour.ame']['etudes']
 assert all(_QE[k]['etudes'] == AME for k in ('le-pen.ame', 'retailleau.ame', 'lisnard.ame'))
+# Sources de l'état des études AME prises dans le quiz : depuis le 11/11/2026, le quiz ne garde que les sources citées (cas français) ;
+# la lecture n'est plus publiée (bloc « études » retiré le 8/11), elle garde les sources qui restent.
 AME_S = [_src(s['l'], s['a'], s['u']) for s in _QE['zemmour.ame']['src'] if any(x in s['u'] for x in ('271649', 'eecrev', 'journal.pone'))]
-assert len(AME_S) == 3
 _ev('zemmour', 'sante', OVR[('zemmour', 'sante')]['evidence'] + " " + AME, add=AME_S)
 # (2, 20) Contribution à l'UE : la lecture UEU s'appuie sur la source primaire (art. 311 du traité sur le fonctionnement de l'UE, décrit par le
 # rapport de l'Assemblée nationale n° 3781 : décision « adoptée à l'unanimité par le Conseil […] puis approuvée par les États membres »),

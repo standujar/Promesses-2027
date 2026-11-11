@@ -524,9 +524,13 @@ table.grid td button{min-width:44px;min-height:44px;display:inline-grid;grid-aut
         <div class="field"><span class="lab">Enfants de moins de 20 ans</span><div class="stepper"><button id="k-minus" aria-label="Un enfant de moins">−</button><b id="s-kids-v">2</b><button id="k-plus" aria-label="Un enfant de plus">+</button></div></div>
         <div class="field"><span class="lab">Nationalité</span><div class="seg" id="s-nat" role="group" aria-label="Nationalité"></div></div>
       </div>
+      <div class="field"><span class="lab">Déclaration d'impôt</span><div class="seg" id="s-foyer" role="group" aria-label="Déclaration d'impôt"></div></div>
+      <div class="slider" id="f-conj" hidden><span class="l1"><label for="s-conj" class="small muted">Revenu net mensuel du conjoint (même nature que le vôtre)</label><b id="s-conj-v"></b></span><input type="range" id="s-conj" min="0" max="8000" step="20" value="0"></div>
+      <label class="check" id="f-aspa" hidden><input type="checkbox" id="s-aspa"> Je touche le minimum vieillesse (ASPA)</label>
       <div class="field"><span class="lab">Logement</span><div class="seg" id="s-home" role="group" aria-label="Logement"></div></div>
       <div class="slider" id="f-apl"><span class="l1"><label for="s-apl" class="small muted">APL (aide au logement) perçues par mois</label><b id="s-apl-v"></b></span><input type="range" id="s-apl" min="0" max="600" step="10" value="0"></div>
       <label class="check" id="f-baby" hidden><input type="checkbox" id="s-baby"> Un enfant de moins de 3 ans</label>
+      <div class="slider" id="f-cant" hidden><span class="l1"><label for="s-cant" class="small muted">Cantine payée par mois (tous les enfants)</label><b id="s-cant-v"></b></span><input type="range" id="s-cant" min="0" max="400" step="5" value="0"></div>
       <label class="check" id="f-res" hidden><input type="checkbox" id="s-res"> En France depuis moins de 5 ans</label>
       <label class="check" id="f-work" hidden><input type="checkbox" id="s-work"> Moins de 5 ans de travail en France</label>
       <details class="more"><summary>Affiner : énergie, heures sup, CFE, patrimoine</summary><div>
@@ -919,14 +923,18 @@ const STATUS=[['prive','Salarié du privé'],['public','Agent public'],['enseign
 const NAT=[['fr','Française'],['ue','UE'],['hors','Hors UE']];
 const WEALTH=[[0,'< 300 k€'],[300000,'300 k€ – 1,3 M€'],[1300000,'1,3 – 10 M€'],[10000000,'10 – 100 M€'],[100000000,'> 100 M€']];
 const INH=[[0,'< 100 k€'],[100000,'100 – 500 k€'],[500000,'0,5 – 2 M€'],[2000000,'2 – 12 M€'],[12000000,'> 12 M€']];
-const S={status:'prive',nat:'fr',wealth:0,inh:0,kids:2,home:'loc'};
+const S={status:'prive',nat:'fr',wealth:0,inh:0,kids:2,home:'loc',foyer:'seul'};
 const HOME=[['loc','Locataire'],['credit','Propriétaire avec crédit'],['proprio','Propriétaire sans crédit'],['heberge','Hébergé']];
+const FOYER=[['seul','Seul'],['couple','En couple (marié, pacsé)']];
+// foyer fiscal (review 47) : seul (parent isolé avec des enfants) ou couple marié ou pacsé (deux parts, revenu du conjoint de même nature que le vôtre)
+const HH={couple:false,conj:0};
+const foyerTxt=k=>HH.couple?(k?'couple avec enfants':'couple'):(k?'parent isolé':'personne seule');
 function seg(id, opts, key){ const el=document.getElementById(id); el.innerHTML=opts.map(([v,l])=>`<button data-v="${v}" aria-pressed="${String(S[key])===String(v)}">${l}</button>`).join('');
   el.querySelectorAll('button').forEach(b=>b.onclick=()=>{ S[key]=isNaN(+b.dataset.v)?b.dataset.v:+b.dataset.v; if(key==='status'||key==='nat') S[key]=b.dataset.v; el.querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',z===b)); sim(); }); }
-seg('s-status',STATUS,'status'); seg('s-nat',NAT,'nat'); seg('s-home',HOME,'home'); seg('s-wealth',WEALTH,'wealth'); seg('s-inh',INH,'inh');
+seg('s-status',STATUS,'status'); seg('s-nat',NAT,'nat'); seg('s-home',HOME,'home'); seg('s-foyer',FOYER,'foyer'); seg('s-wealth',WEALTH,'wealth'); seg('s-inh',INH,'inh');
 document.getElementById('k-minus').onclick=()=>{ S.kids=Math.max(0,S.kids-1); sim(); };
 document.getElementById('k-plus').onclick=()=>{ S.kids=Math.min(8,S.kids+1); sim(); };
-['s-year','s-salary','s-energy','s-fuel','s-cfe','s-ot','s-food','s-res','s-work','s-baby','s-apl'].forEach(i=>document.getElementById(i).addEventListener('input',sim));
+['s-year','s-salary','s-energy','s-fuel','s-cfe','s-ot','s-food','s-res','s-work','s-baby','s-apl','s-conj','s-aspa','s-cant'].forEach(i=>document.getElementById(i).addEventListener('input',sim));
 const WORKERS=['prive','public','enseignant'];
 function allocOf(a, n, fb){ if(n<=0) return 0; if(!a) return fb?allocOf(fb,n):0; const k=n>=3?'3':String(n); if(a[k]==null) return fb?allocOf(fb,n):0; return n<=3 ? a[k] : a['3']+(n-3)*(a.par_enfant_sup ?? (fb?fb.par_enfant_sup:0)); }
 function sqAge(y){ const t=SQ.retraite.table; let a=t[0][1]; for(const [yy,aa] of t){ if(y>=yy) a=aa; } return a; }
@@ -935,9 +943,14 @@ const ageTxt = a => { const y=Math.floor(a), mo=Math.round((a-y)*12), ys=y?`${y}
 // o.plus : hausse mensuelle du revenu imposable due aux gains de salaire d'un programme (impôt sur ces gains, même barème pour tous)
 // o.pens : pension de retraite (review 43) : net imposable des pensions (CSG au taux normal) et abattement de 10 % avec son plancher par
 // pensionné et son plafond par foyer (barème 2026) ; o.noAbat : abattement supprimé ; salaires : déduction de 10 % pour frais
-function irAnnuel(net, kids, o={}){ const I=SQ.ir, b=(net*(o.ni??(o.pens?I.net_imposable_pension:I.net_imposable))+(o.plus||0))*12,
-  R=o.pens?(o.noAbat?b:Math.max(0,b-Math.min(I.abat_pension_max,Math.max(I.abat_pension_min,b*0.1)))):b*0.9, parts=1+(kids>=1?1:0)+(kids>=2?(o.part2?1:0.5):0)+Math.max(0,kids-2), q=R/parts, T=I.tranches; let t=0;
-  T.forEach(([thr,rate],i)=>{ const up=i<T.length-1?T[i+1][0]:Infinity; if(q>thr) t+=(Math.min(q,up)-thr)*rate; }); t*=parts; const t1=bar(R), cap=o.noCap?Infinity:kids>=1?I.plafond_parent_isole+(parts-2)*2*I.plafond_demi_part:0; t=Math.max(t,t1-cap); const dec=SQ.ir.decote_seul-SQ.ir.decote_taux*t; if(dec>0) t=Math.max(0,t-dec); return t; }
+// couple (review 47) : HH.couple, revenu du conjoint HH.conj (même nature) ; deux parts, une demi-part par enfant pour les deux premiers, plafond
+// du quotient au-delà de deux parts, décote des couples ; abattement des pensions par pensionné, plafond par foyer ; o.indiv : chacun imposé sur
+// son revenu (fin du quotient conjugal), couple sans enfant
+function irAnnuel(net, kids, o={}){ const I=SQ.ir, cp=o.couple??HH.couple, cj=cp?(o.conj??HH.conj):0, ni=o.ni??(o.pens?I.net_imposable_pension:I.net_imposable);
+  if(cp && o.indiv){ const o1={...o,couple:false,conj:0,indiv:false}; return irAnnuel(net,kids,o1)+irAnnuel(cj,0,{...o1,plus:0}); }
+  const b=(net*ni+(o.plus||0))*12, bc=cj*ni*12, ab=x=>x>0?Math.min(x,Math.max(I.abat_pension_min,x*0.1)):0,
+  R=o.pens?(o.noAbat?b+bc:Math.max(0,b+bc-Math.min(I.abat_pension_max,ab(b)+ab(bc)))):(b+bc)*0.9, nb=cp?2:1, parts=nb+(kids>=1?(cp?0.5:1):0)+(kids>=2?(o.part2?1:0.5):0)+Math.max(0,kids-2), q=R/parts, T=I.tranches; let t=0;
+  T.forEach(([thr,rate],i)=>{ const up=i<T.length-1?T[i+1][0]:Infinity; if(q>thr) t+=(Math.min(q,up)-thr)*rate; }); t*=parts; const t1=nb*bar(R/nb), cap=o.noCap?Infinity:cp?(parts-2)*2*I.plafond_demi_part:kids>=1?I.plafond_parent_isole+(parts-2)*2*I.plafond_demi_part:0; t=Math.max(t,t1-cap); const dec=(cp?I.decote_couple:I.decote_seul)-I.decote_taux*t; if(dec>0) t=Math.max(0,t-dec); return t; }
 // barème publié d'une baisse de CSG (review 45, Glucksmann) : gain = CSG actuelle − CSG du barème, sur le salaire brut annuel (taux marginaux par tranche),
 // brut déduit du net avec le taux de cotisations publié avec le barème ; au-delà du dernier seuil, le gain est plafonné (même montant pour tous les salaires au-dessus)
 function csgBareme(b, net){ const B=12*net/(1-b.cotis); let t=0, p=0; b.tranches.forEach(([s,r])=>{ t+=Math.max(0,Math.min(B,s)-p)*r; p=s; }); t+=Math.max(0,B-p)*b.taux; return Math.max(0,(B*b.taux-t)/12); }
@@ -956,6 +969,8 @@ function sim(){
   const year=+g('s-year').value, st=S.status, kids=S.kids, en=+g('s-energy').value, nat=S.nat, wealth=S.wealth, inh=S.inh, ot=g('s-ot').checked, cfe=+g('s-cfe').value, food=+g('s-food').value, fuel=+g('s-fuel').value, lt5=nat!=='fr'&&g('s-res').checked, lt5w=lt5||(nat!=='fr'&&g('s-work').checked);
   g('f-res').hidden=nat==='fr'; g('f-work').hidden=nat==='fr'||lt5; g('s-fuel-v').textContent=eur(fuel,false)+'/mois'; const baby=kids>0&&g('s-baby').checked; g('f-baby').hidden=kids===0;
   const home=S.home, apl=home==='loc'?+g('s-apl').value:0; g('f-apl').hidden=home!=='loc'; g('s-apl-v').textContent=eur(apl,false)+'/mois';
+  HH.couple=S.foyer==='couple'; HH.conj=HH.couple?+g('s-conj').value:0; g('f-conj').hidden=!HH.couple; g('s-conj-v').textContent=eur(HH.conj,false);
+  const cant=kids>0?+g('s-cant').value:0; g('f-cant').hidden=kids===0; g('s-cant-v').textContent=eur(cant,false)+'/mois';
   g('s-year-v').textContent=year; g('s-energy-v').textContent=eur(en,false)+'/mois'; g('s-food-v').textContent=eur(food,false)+'/mois'; g('s-cfe-v').textContent=eur(cfe,false); g('s-kids-v').textContent=kids;
   if(st!==lastSt){ const sl=g('s-salary'); sl.max=MAXS[st]; sl.step=STEPS[st]||20; sl.value=DEF[st]; const ny=DEFY[st]||(DEFY[lastSt]?1990:null); if(ny) g('s-year').value=ny; lastSt=st;
     g('s-presets').innerHTML = (['prive','public','enseignant','independant'].includes(st)?[[SQ.smic_net,'SMIC'],[SQ.salaire_moyen||2733,'Salaire moyen']]:[]).map(([v,l])=>`<button data-v="${v}">${l} · ${eur(v,false)}</button>`).join('');
@@ -965,8 +980,11 @@ function sim(){
   g('s-salary-l').textContent=LABELS[st]; g('f-cfe').hidden=st!=='independant'; g('f-ot').hidden=st!=='prive';
   const age=2027-year, worker=WORKERS.includes(st), active=worker||st==='independant';
   const pens=st==='retraite', sqA=sqAge(year), sqAlloc=allocOf(SQ.alloc_familiales,kids), ir=active?irAnnuel(sal,kids):pens?irAnnuel(sal,kids,{pens:true}):0;
+  // minimum vieillesse (review 47) : allocation différentielle, montant 2026 pour une personne seule ou un couple ; hors UE, 10 ans de titre de séjour
+  // permettant de travailler déjà exigés aujourd'hui (pas de minimum vieillesse avec moins de 5 ans en France)
+  g('f-aspa').hidden=!pens; const aspaOn=pens&&g('s-aspa').checked, aspaNo=aspaOn&&nat==='hors'&&lt5, aspaV=aspaOn&&!aspaNo?Math.max(0,(HH.couple?SQ.aspa_couple:SQ.aspa)-sal-HH.conj):0;
   const warn = st==='retraite' && year>1966 ? `Né en ${year} : le simulateur vous considère comme déjà retraité. ` : (st==='etudiant' && age>25 ? 'Étudiant de plus de 25 ans : les aides jeunes ne s\'appliquent pas. ' : '');
-  g('sim-base').textContent = warn + `Aujourd'hui : départ légal à ${ageTxt(sqA)}${year===1965?' (62 ans et 9 mois si vous êtes né de janvier à mars 1965)':''}${kids>=2?`, allocations familiales ${eur(sqAlloc,false)}/mois`:''}${active||pens?`, impôt sur le revenu estimé ${eur(ir,false)}/an`:''}.`;
+  g('sim-base').textContent = warn + `Aujourd'hui : départ légal à ${ageTxt(sqA)}${year===1965?' (62 ans et 9 mois si vous êtes né de janvier à mars 1965)':''}${kids>=2?`, allocations familiales ${eur(sqAlloc,false)}/mois`:''}${active||pens?`, impôt sur le revenu estimé ${eur(ir,false)}/an${HH.couple?' pour le foyer':''}`:''}${aspaOn?(aspaNo?', pas de minimum vieillesse (hors Union européenne, 10 ans de titre de séjour permettant de travailler sont déjà exigés)':`, minimum vieillesse ${eur(aspaV,false)}/mois (${eur2(HH.couple?SQ.aspa_couple:SQ.aspa)} au plus${HH.couple?' pour un couple':''}, moins vos autres ressources)`):''}${HH.couple&&!(active||pens)?' ; impôt du couple calculé seulement pour les actifs et les retraités':''}.`;
   const out=D.candidates.map(c=>{
     const s=c.sim||{}; let money=0; const rows=[], notes=[]; let ret=null;
     const add=(lab,desc,v)=>{ money+=v; rows.push([lab,desc,eur(v)+'/mois']); }; let cap=0;
@@ -1013,20 +1031,22 @@ function sim(){
     else if(sn && sn.max && sal>sn.max && active) notes.push(`${sn.note} : rien au-delà de ${eur(sn.max,false)} net dans la version publiée.`);
     if(s.overtime && st==='prive' && ot) notes.push(`${s.overtime.label} : pour le salarié, l'impôt (jusqu'à 7 500 € par an) et les cotisations sur les heures sup sont déjà supprimés aujourd'hui, et aucune baisse de la CSG ou de la CRDS n'est annoncée : pas de gain calculé ; la mesure baisse surtout le coût des heures pour l'employeur.`);
     const irEx=!!(s.ir_exempt_under && age<s.ir_exempt_under && active && (!s.ir_exempt_max||sal<=s.ir_exempt_max));
-    if(irEx){ if(ir>0) add('Impôt',`Moins de ${s.ir_exempt_under} ans exonérés d'impôt sur le revenu`,ir/12); else notes.push(`Moins de ${s.ir_exempt_under} ans exonérés d'impôt sur le revenu : vous n'en payez pas aujourd'hui.`); }
+    // couple (review 47) : seul votre revenu est exonéré ; gain = impôt du foyer moins impôt du foyer sans votre revenu
+    if(irEx){ const irE=ir-(HH.couple?irAnnuel(0,kids):0); if(irE>0.5) add('Impôt',`Moins de ${s.ir_exempt_under} ans exonérés d'impôt sur le revenu`+(HH.couple?' (votre revenu seulement, impôt du foyer recalculé sans lui)':''),irE/12); else notes.push(`Moins de ${s.ir_exempt_under} ans exonérés d'impôt sur le revenu : vous n'en payez pas aujourd'hui.`); }
     if(s.ir_reforme && active && ir>0 && !irEx && (!s.ir_reforme.part2||kids>=2)){ const r=s.ir_reforme, d=ir-irAnnuel(sal,kids,{ni:r.ni,noCap:r.noCap,part2:r.part2}); if(d>0.5) add('Impôt',esc(r.note),d/12); }
     if(s.ir_jeunes_parents && kids>0 && active){ const jp=s.ir_jeunes_parents;
       if(!baby) notes.push(jp.note+' : cochez « un enfant de moins de 3 ans » si c\'est votre cas.');
-      else if(ir>0) add('Impôt',esc(jp.note)+` : impôt supprimé s'il est inférieur à ${eur(jp.plafond,false)} par an, sinon réduit de ${eur(jp.plafond,false)} (impôt estimé pour une personne seule)`,Math.min(ir,jp.plafond)/12);
+      else if(ir>0) add('Impôt',esc(jp.note)+` : impôt supprimé s'il est inférieur à ${eur(jp.plafond,false)} par an, sinon réduit de ${eur(jp.plafond,false)} (impôt estimé du foyer, ${foyerTxt(kids)})`,Math.min(ir,jp.plafond)/12);
       else notes.push(jp.note+' : vous ne payez pas d\'impôt sur le revenu aujourd\'hui.'); }
     if(ptV>0 && ptV>smicV){ add('Point d\'indice',`+${String(s.point_indice_pct).replace('.',',')} % sur la part indiciaire du salaire, supposée à 80 % du net`+(smicV>0?` ; le SMIC relevé (${eur(smicV)}) n'y ajoute rien : le nouveau traitement est le plus élevé des deux, pas leur somme`:''),ptV); gB+=ptV; }
     if(st==='enseignant' && s.enseignants_pct && sal>0){ const v=sal*s.enseignants_pct/100; add('Salaire enseignant',esc(s.enseignants_note||`+${s.enseignants_pct} % d'ici la fin du mandat`),v); gB+=v; }
     if(st==='enseignant' && s.enseignants_eur){ add('Salaire enseignant',esc(s.enseignants_eur.note),s.enseignants_eur.montant); gB+=s.enseignants_eur.montant; }
     // impôt sur le revenu dû sur ces gains, le même calcul pour tous : barème du simulateur avec décote, après la réforme de l'impôt du candidat
     // (part fiscale, CSG déductible, impôt des jeunes parents) ; hausse brute × net imposable / net, baisse de prélèvement × part déductible
-    if(active && !irEx && (gB>0||gP>0)){ const r=s.ir_reforme&&(!s.ir_reforme.part2||kids>=2)?s.ir_reforme:{}, o={ni:r.ni,noCap:r.noCap,part2:r.part2}, jp=s.ir_jeunes_parents&&baby?s.ir_jeunes_parents.plafond:0, f=x=>Math.max(0,x-jp),
+    const indiv=!!(s.quotient_conjugal && HH.couple && kids===0);
+    if(active && !irEx && (gB>0||gP>0)){ const r=s.ir_reforme&&(!s.ir_reforme.part2||kids>=2)?s.ir_reforme:{}, o={ni:r.ni,noCap:r.noCap,part2:r.part2,indiv}, jp=s.ir_jeunes_parents&&baby?s.ir_jeunes_parents.plafond:0, f=x=>Math.max(0,x-jp),
       plus=gB*(r.ni??SQ.ir.net_imposable)+gP, d=(f(irAnnuel(sal,kids,{...o,plus}))-f(irAnnuel(sal,kids,o)))/12;
-      if(d>0.5) add('Impôt',`Impôt sur le revenu sur la hausse du salaire imposable (barème 2026, ${kids?'parent isolé':'personne seule'})`,-d); }
+      if(d>0.5) add('Impôt',`Impôt sur le revenu sur la hausse du salaire imposable (barème 2026, ${foyerTxt(kids)})`,-d); }
     if((st==='public'||st==='enseignant') && s.carence_jours && sal>0){ const j=s.carence_jours-SQ.carence_public; if(j>0) rows.push(['Arrêt maladie',`${s.carence_jours} jours de carence non payés à chaque arrêt (aujourd'hui : ${SQ.carence_public}, puis 90 % du traitement) ; perte seulement si vous êtes arrêté`,`−${eur(j*0.9*sal*12/365,false)} par arrêt`]); }
     if(st==='prive' && s.carence_prive && sal>0) rows.push(['Arrêt maladie',esc(s.carence_prive),`−${eur(sal*12/365,false)} par arrêt`]);
     if(s.carence_note && worker) notes.push(s.carence_note);
@@ -1044,8 +1064,13 @@ function sim(){
     // plafond 2026) ; réforme de l'impôt du candidat qui vaut pour tous les contribuables, fin de l'abattement, impôt sur la variation de la pension
     if(pens && sal>0){ const r=s.ir_reforme&&(!s.ir_reforme.part2||kids>=2)?s.ir_reforme:null, o={pens:true,ni:r?r.ni_pension:undefined,noCap:r?r.noCap:undefined,part2:r?r.part2:undefined};
       if(r && ir>0){ const d=ir-irAnnuel(sal,kids,o); if(d>0.5) add('Impôt',esc(r.note),d/12); }
-      if(s.abattement_pensions){ const d=irAnnuel(sal,kids,{...o,noAbat:true})-irAnnuel(sal,kids,o); if(d>0.5) add('Impôt',esc(s.abattement_pensions)+` (barème 2026, ${kids?'parent isolé':'personne seule'})`,-d/12); else notes.push(s.abattement_pensions+' : sans effet pour vous, votre pension restant sous le seuil d\'imposition.'); o.noAbat=true; }
-      if(gR){ const d=(irAnnuel(sal,kids,{...o,plus:gR*(o.ni??SQ.ir.net_imposable_pension)})-irAnnuel(sal,kids,o))/12; if(Math.abs(d)>0.5) add('Impôt',`Impôt sur le revenu sur ${gR>0?'la hausse':'la baisse'} de la pension imposable (barème 2026, ${kids?'parent isolé':'personne seule'})`,-d); } }
+      if(s.abattement_pensions){ const d=irAnnuel(sal,kids,{...o,noAbat:true})-irAnnuel(sal,kids,o); if(d>0.5) add('Impôt',esc(s.abattement_pensions)+` (barème 2026, ${foyerTxt(kids)})`,-d/12); else notes.push(s.abattement_pensions+' : sans effet pour vous, votre pension restant sous le seuil d\'imposition.'); o.noAbat=true; }
+      if(gR){ const d=(irAnnuel(sal,kids,{...o,plus:gR*(o.ni??SQ.ir.net_imposable_pension)})-irAnnuel(sal,kids,o))/12; if(Math.abs(d)>0.5) add('Impôt',`Impôt sur le revenu sur ${gR>0?'la hausse':'la baisse'} de la pension imposable (barème 2026, ${foyerTxt(kids)})`,-d); } }
+    // fin du quotient conjugal (review 47, Mélenchon) : couple sans enfant, chacun imposé sur son revenu au même barème (décote d'une personne seule) ;
+    // avec enfants, répartition des enfants et crédit d'impôt par enfant non publiés : une note
+    if(HH.couple && s.quotient_conjugal && (active||pens)){ const qc=s.quotient_conjugal;
+      if(kids>0) notes.push(qc.enfants);
+      else { const d=irAnnuel(sal,0,{pens,indiv:true})-ir; if(Math.abs(d)>0.5) add('Impôt',`${esc(qc.note)} : impôt du couple ${eur(ir,false)} → ${eur(ir+d,false)} par an`,-d/12); else notes.push(qc.note+' : sans effet pour vous.'); } }
     if(s.alloc_familiales && s.alloc_familiales.unique && kids>0){ const af=s.alloc_familiales, k=Math.max(0,Math.min(1,(sal-af.degress_above)/1000)), f=1-(1-af.degress_factor)*k, nu=af.unique*(af.par_enfant?kids:1)*f; let a=Math.max(nu,sqAlloc); const d=a-sqAlloc; if(d>0.5) addAF('Allocations',esc(af.note)+(k>0&&k<1?' ; réduction progressive entre 3 000 et 4 000 € (hypothèse)':''),d); else notes.push(af.note+'.'); if(sqAlloc>nu) notes.push('Vos allocations actuelles sont plus élevées que l\'allocation unique : on suppose qu\'elles sont maintenues (le camp ne l\'a pas précisé).'); }
     else if(s.alloc_familiales && kids>0){ const a=allocOf(s.alloc_familiales,kids,SQ.alloc_familiales), d=a-sqAlloc; if(Math.abs(d)>0.5) addAF('Allocations',esc(s.alloc_familiales.note||''),d); else if(s.alloc_familiales.note) notes.push(s.alloc_familiales.note+'.'); }
     const etr=s.etr, hit=r=>r==='nonfr'?nat!=='fr':r==='hors'?nat==='hors':r==='lt5'?lt5:r==='lt5w'?lt5w:false, cond={nonfr:'réservées aux foyers dont au moins un parent est français',hors:'réservées aux Français et aux Européens',lt5:'réservées aux étrangers installés depuis au moins 5 ans',lt5w:'réservées aux étrangers ayant au moins 5 ans de travail en France'}, condA={...cond,nonfr:'réservées aux Français'}, rev=nat==='ue'?'(si la révision de la Constitution passe et si le droit de l\'UE change)':'(si la révision de la Constitution passe)';
@@ -1057,6 +1082,18 @@ function sim(){
     if(aahLost) add('AAH',`AAH ${cond[etr.minima].replace('réservées','réservée')} ${rev}`,-sal);
     else if(st==='aah' && sal>0 && s.aah_max && s.aah_max>SQ.aah) add('AAH',`${esc(s.aah_note)} (aujourd'hui : ${eur2(SQ.aah)}) ; l'AAH complète vos autres ressources jusqu'à ce montant : même hausse pour tout allocataire dont les autres ressources ne changent pas`,s.aah_max-SQ.aah);
     if(st==='aah' && s.aah_nc) notes.push(s.aah_nc);
+    // minimum vieillesse (review 47) : perte selon la même condition que les minima ; hausse publiée du montant maximal (allocation différentielle :
+    // nouveau montant − ancien, à ressources égales) ; gel nommé (gel_status 'aspa'), petites retraites épargnées sous le même seuil que les pensions
+    if(aspaV>0 && etr && hit(etr.minima)) add('Minimum vieillesse',`Minimum vieillesse ${cond[etr.minima].replace('réservées','réservé')} ${rev}`,-aspaV);
+    else if(aspaOn && !aspaNo){
+      if(s.aspa_hausse){ if(HH.couple) notes.push(s.aspa_hausse.couple); else { const v=Math.max(0,s.aspa_hausse.montant-sal)-Math.max(0,SQ.aspa-sal); if(v>0.5) add('Minimum vieillesse',`${esc(s.aspa_hausse.note)} (aujourd'hui : ${eur2(SQ.aspa)}) ; il complète vos autres ressources jusqu'à ce montant`,v); } }
+      if(aspaV>0 && s.gel_pct && gelS.includes('aspa')){ if(s.gel_min && sal+aspaV<s.gel_min) notes.push(s.gel_note+' : votre minimum vieillesse serait épargné.'); else add('Revalorisation',`Minimum vieillesse : ${esc(s.gel_note)}`,-aspaV*s.gel_pct/100); } }
+    // droits d'inscription des étudiants étrangers (review 47) : écart publié pour un étudiant aujourd'hui exonéré, « jusqu'à », non ajouté au total ;
+    // montant non publié : une note
+    const di=s.droits_inscription;
+    if(di && st==='etudiant' && hit(di.cond)){ if(di.licence) rows.push(["Droits d'inscription",`${esc(di.note)} : si vous êtes exonéré aujourd'hui (exonérations limitées à 20 % des étudiants concernés à partir de 2028), ${eur(di.licence,false)} de plus par an en licence, ${eur(di.master,false)} en master ; non ajouté au total`,`jusqu'à −${eur(di.master/12,false)}/mois`]); else notes.push(di.note); }
+    // cantine gratuite (review 47) : gain = frais de cantine indiqués par la famille
+    if(s.cantine && kids>0){ if(cant>0) add('Cantine',esc(s.cantine.note),cant); else notes.push(s.cantine.note+' : indiquez vos frais de cantine pour le calcul.'); }
     if(minLost) add('Minima sociaux',`RSA, prime d'activité et ASS ${cond[etr.minima]} ${rev}`,-sal);
     else if(etr && nat!=='fr' && !lt5w && /lt5/.test(etr.minima) && (st==='minima'||st==='aah'||sqAlloc>0||apl>0)) notes.push('Aides réservées aux étrangers installés ou ayant travaillé en France depuis au moins 5 ans : cochez la case qui vous correspond.');
     if(etr && nat==='hors' && st==='minima') notes.push('Hors Union européenne, le RSA et la prime d\'activité exigent déjà aujourd\'hui 5 ans de titre de séjour, sauf exceptions (réfugiés, carte de résident).');

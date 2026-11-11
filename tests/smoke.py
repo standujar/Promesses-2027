@@ -219,11 +219,14 @@ with sync_playwright() as p:
     SET = """(p)=>{ document.querySelector(`#s-status [data-v="${p.st}"]`).click(); document.querySelector(`#s-nat [data-v="${p.nat}"]`).click();
       S.kids=p.kids; S.wealth=p.w; S.inh=p.inh; const g=id=>document.getElementById(id);
       g('s-salary').value=p.sal; g('s-year').value=p.year; g('s-res').checked=p.lt5; g('s-baby').checked=true; g('s-energy').value=p.en; g('s-food').value=p.food; g('s-ot').checked=p.ot; g('s-cfe').value=p.cfe;
+      document.querySelector(`#s-foyer [data-v="${p.foyer}"]`).click(); g('s-conj').value=p.conj; g('s-aspa').checked=p.aspa; g('s-cant').value=p.cant;
       openSim.clear(); D.candidates.forEach(c=>openSim.add(c.id)); sim(); return document.getElementById('simres').innerHTML; }"""
-    base = dict(st='prive', nat='fr', kids=2, w=0, inh=0, sal=1800, year=1990, lt5=False, en=220, food=400, ot=False, cfe=250)
-    starts = [base, dict(base, st='minima', sal=600, nat='hors'), dict(base, st='enseignant', sal=2400), dict(base, st='independant'), dict(base, st='retraite', year=1958, sal=1500)]
+    base = dict(st='prive', nat='fr', kids=2, w=0, inh=0, sal=1800, year=1990, lt5=False, en=220, food=400, ot=False, cfe=250, foyer='seul', conj=0, aspa=False, cant=0)
+    starts = [base, dict(base, st='minima', sal=600, nat='hors'), dict(base, st='enseignant', sal=2400), dict(base, st='independant'), dict(base, st='retraite', year=1958, sal=1500),
+              dict(base, foyer='couple', conj=1500), dict(base, st='retraite', year=1955, sal=600, kids=0)]
     grid = dict(st=['prive', 'public', 'chomage', 'minima', 'etudiant', 'retraite'], nat=['fr', 'ue', 'hors'], kids=[0, 3], sal=[0, 4500], year=[1960, 2005],
-                w=[0, 100000000], inh=[0, 12000000], lt5=[False, True], ot=[False, True], en=[0, 400], food=[0, 800], cfe=[0, 2000])
+                w=[0, 100000000], inh=[0, 12000000], lt5=[False, True], ot=[False, True], en=[0, 400], food=[0, 800], cfe=[0, 2000],
+                foyer=['seul', 'couple'], conj=[0, 3000], aspa=[False, True], cant=[0, 150])
     inert, invalid = [], 0
     for k, vals in grid.items():
         moved = False
@@ -351,6 +354,7 @@ with sync_playwright() as p:
       return rs.map(x=>{ const m=x.querySelector('.v').textContent.replace(/\\s+/g,' ').match(/([+−-]?)\\s*([0-9 ]+) €/); return m?(m[1]==='−'||m[1]==='-'?-1:1)*+m[2].replace(/\\s/g,''):null; }); }"""
     PROF = """(p)=>{ const g=id=>document.getElementById(id); document.querySelector(`#s-status [data-v="${p.st}"]`).click(); document.querySelector(`#s-nat [data-v="${p.nat||'fr'}"]`).click();
       S.kids=p.kids||0; S.wealth=p.w||0; S.inh=p.inh||0; g('s-year').value=p.year||1990; g('s-res').checked=!!p.lt5; g('s-work').checked=false; presetVal=p.sal; g('s-salary').value=p.sal;
+      document.querySelector(`#s-foyer [data-v="${p.foyer||'seul'}"]`).click(); g('s-conj').value=p.conj||0; g('s-aspa').checked=!!p.aspa; g('s-cant').value=p.cant||0; if(p.baby!=null) g('s-baby').checked=p.baby;
       openSim.clear(); D.candidates.forEach(c=>openSim.add(c.id)); sim(); presetVal=null; return 1; }"""
     def row(c, lab): return pg.evaluate(f"(a)=>({ROW})(a[0],a[1])", [c, lab])
     def txt(c): return pg.evaluate(f"document.querySelector('#simres .srow[data-c=\"{c}\"]').innerText.replace(/\\s+/g,' ')")
@@ -421,6 +425,69 @@ with sync_playwright() as p:
     pg.evaluate("(()=>{ document.querySelector('#s-home [data-v=\"loc\"]').click(); })()"); pg.evaluate(f"({PROF})({{st:'prive',sal:1800}})")
     n3 += [all(x in txt('melenchon') for x in ("Taxe d'habitation", 'Première tranche gratuite', 'Loyers gelés'))]
     check(all(n3), f'simulateur : notes du 8/11 (AAH hors plafond, minimum vieillesse retiré, demi-part des veufs, notes de Mélenchon) {n3}')
+    # --- review 47 (11/11/2026) : profils manquants, mêmes règles pour les 8
+    # (1) couple marié ou pacsé : deux parts, revenu du conjoint, décote des couples ; impôt égal au calcul de référence ; réformes du quotient de chaque
+    # candidat appliquées (Le Pen, part entière dès le 2e enfant ; Philippe, jeunes parents ; Mélenchon, fin du quotient conjugal sans enfant, note avec enfants)
+    import json
+    IRS = json.load(open(os.path.join(ROOT, 'pipeline', 'promesses-2027-data.json')))['statu_quo']['ir']
+    def bar(q):
+        T = IRS['tranches']; return sum((min(q, T[i + 1][0] if i < len(T) - 1 else 1e18) - thr) * r for i, (thr, r) in enumerate(T) if q > thr)
+    def irref(net, conj, kids, couple, part2=False):
+        R = 0.9 * 12 * IRS['net_imposable'] * (net + conj); nb = 2 if couple else 1
+        parts = nb + (kids >= 1) * (0.5 if couple else 1) + (kids >= 2) * (1 if part2 else 0.5) + max(0, kids - 2)
+        cap = (parts - 2) * 2 * IRS['plafond_demi_part'] if couple else (IRS['plafond_parent_isole'] + (parts - 2) * 2 * IRS['plafond_demi_part'] if kids >= 1 else 0)
+        t = max(bar(R / parts) * parts, nb * bar(R / nb) - cap); dec = (IRS['decote_couple'] if couple else IRS['decote_seul']) - IRS['decote_taux'] * t
+        return max(0, t - dec) if dec > 0 else t
+    RT = """(a)=>{ const w=[...document.querySelectorAll(`#simres .srow[data-c="${a[0]}"] .rw`)].filter(x=>x.querySelector('b').textContent===a[1]&&new RegExp(a[2]).test(x.textContent));
+      return w.map(x=>{ const m=x.querySelector('.v').textContent.replace(/\\s+/g,' ').match(/([+−-]?)\\s*([0-9 ]+) €/); return (m[1]==='−'||m[1]==='-'?-1:1)*+m[2].replace(/\\s/g,''); }); }"""
+    def rowt(c, lab, pat): return pg.evaluate(RT, [c, lab, pat])
+    def irbase(): return int(re.sub(r'\D', '', re.search(r'impôt sur le revenu estimé ([\d\s]+)€', pg.evaluate("document.getElementById('sim-base').textContent")).group(1)))
+    pg.evaluate(f"({PROF})({{st:'prive',sal:3000,foyer:'couple',conj:1000}})")
+    j = irref(3000, 1000, 0, True); cp = [irbase(), rowt('melenchon', 'Impôt', 'quotient conjugal'), 'pour le foyer' in pg.evaluate("document.getElementById('sim-base').textContent")]
+    exp1 = [round(j), [-round((irref(3000, 0, 0, False) + irref(1000, 0, 0, False) - j) / 12)], True]
+    pg.evaluate(f"({PROF})({{st:'prive',sal:4000,foyer:'couple',conj:2000,kids:2}})"); j2 = irref(4000, 2000, 2, True)
+    cp += [irbase(), rowt('le-pen', 'Impôt', 'Part fiscale'), 'répartition des enfants' in txt('melenchon')]
+    exp1 += [round(j2), [round((j2 - irref(4000, 2000, 2, True, part2=True)) / 12)], True]
+    pg.evaluate(f"({PROF})({{st:'prive',sal:4000,foyer:'couple',conj:3000,kids:1,baby:true}})"); j3 = irref(4000, 3000, 1, True)
+    cp += [rowt('philippe', 'Impôt', 'premières années.*couple avec enfants')]; exp1 += [[round(min(j3, 3000) / 12)]]
+    pg.evaluate(f"({PROF})({{st:'prive',sal:3000}})"); cp += [irbase(), pg.evaluate("document.getElementById('f-conj').hidden")]; exp1 += [round(irref(3000, 0, 0, False)), True]
+    check(cp == exp1 and exp1[1][0] < 0 and exp1[4][0] > 0, f'simulateur : couple (impôt du foyer au calcul de référence, fin du quotient conjugal de Mélenchon, part entière de Le Pen, jeunes parents de Philippe, note avec enfants) {cp} {exp1}')
+    # (2) étudiant étranger : droits d'inscription « jusqu'à » l'écart publié chez Retailleau et Philippe (étudiant hors UE exonéré aujourd'hui), non ajouté au
+    # total ; note sans montant chez Le Pen et Zemmour ; rien pour un étudiant français
+    def sv(c): return pg.evaluate(f"document.querySelector('#simres .srow[data-c=\"{c}\"] .eur').textContent")
+    DI = "(c)=>{ const w=[...document.querySelectorAll(`#simres .srow[data-c=\"${c}\"] .rw`)].find(x=>x.querySelector('b').textContent==='Droits d\\'inscription'); return w?w.querySelector('.v').textContent.replace(/\\s+/g,' '):null; }"
+    pg.evaluate(f"({PROF})({{st:'etudiant',sal:400,year:2004,nat:'hors'}})")
+    di = [pg.evaluate(DI, c) for c in ('retailleau', 'philippe', 'le-pen', 'zemmour')] + ['montant non publié' in txt('le-pen'), 'montant non publié' in txt('zemmour')]; m_h = sv('retailleau')
+    pg.evaluate(f"({PROF})({{st:'etudiant',sal:400,year:2004,nat:'ue'}})"); di += [pg.evaluate(DI, 'retailleau'), sv('retailleau') == m_h]
+    pg.evaluate(f"({PROF})({{st:'etudiant',sal:400,year:2004}})"); di += [any(pg.evaluate(DI, c) for c in ('retailleau', 'philippe')), 'frais de scolarité' in txt('le-pen')]
+    check(di == ["jusqu'à −308 €/mois", "jusqu'à −308 €/mois", None, None, True, True, None, True, False, False],
+          f'simulateur : droits d\'inscription des étudiants étrangers (Retailleau et Philippe « jusqu\'à », non ajouté ; Le Pen et Zemmour en note ; rien pour un Français) {di}')
+    # (3) cantine : gain = frais indiqués chez le candidat qui propose la gratuité (Mélenchon) ; sans frais indiqués, une note ; curseur caché sans enfant
+    pg.evaluate(f"({PROF})({{st:'prive',sal:1800,kids:2,cant:120}})")
+    ca = [row('melenchon', 'Cantine'), sum(len(row(c, 'Cantine')) for c in pg.evaluate("D.candidates.map(c=>c.id)") if c != 'melenchon')]
+    pg.evaluate(f"({PROF})({{st:'prive',sal:1800,kids:2}})"); ca += [row('melenchon', 'Cantine'), 'indiquez vos frais de cantine' in txt('melenchon')]
+    pg.evaluate(f"({PROF})({{st:'prive',sal:1800,cant:120}})"); ca += [pg.evaluate("document.getElementById('f-cant').hidden"), row('melenchon', 'Cantine')]
+    check(ca == [[120], 0, [], True, True, []], f'simulateur : cantine gratuite (Mélenchon, frais indiqués ; note sans frais ; rien sans enfant) {ca}')
+    # (4) minimum vieillesse (1 043,59 € au plus, allocation différentielle) : hausse publiée de Mélenchon (1 337 €) ; perte selon la même condition que les
+    # minima (Zemmour hors UE ; Le Pen, Lisnard, Retailleau pour un Européen installé depuis moins de 5 ans) ; hors UE avec moins de 5 ans, pas de minimum
+    # vieillesse aujourd'hui (10 ans de titre de séjour) ; gel d'Attal, petites retraites épargnées ; couple : montant du couple, note chez Mélenchon
+    ids4 = ('melenchon', 'le-pen', 'lisnard', 'retailleau', 'zemmour')
+    asp = []
+    for nat, lt5 in (('fr', False), ('hors', False), ('ue', True), ('hors', True)):
+        pg.evaluate(f"({PROF})({{st:'retraite',year:1955,sal:500,aspa:true,nat:'{nat}',lt5:{str(lt5).lower()}}})"); asp.append([row(c, 'Minimum vieillesse') for c in ids4])
+    asp.append(['pas de minimum vieillesse' in pg.evaluate("document.getElementById('sim-base').textContent")])
+    pg.evaluate(f"({PROF})({{st:'retraite',year:1955,sal:500,aspa:true}})"); asp.append(['minimum vieillesse serait épargné' in txt('attal')])
+    pg.evaluate(f"({PROF})({{st:'retraite',year:1955,sal:500,aspa:true,foyer:'couple',conj:300}})")
+    asp.append(['montant pour un couple non publié' in txt('melenchon'), 'minimum vieillesse 820 €/mois' in re.sub(r'\s+', ' ', pg.evaluate("document.getElementById('sim-base').textContent"))])
+    pg.evaluate(f"({PROF})({{st:'prive',sal:1800,aspa:true}})"); asp.append([pg.evaluate("document.getElementById('f-aspa').hidden")])
+    check(asp == [[[293], [], [], [], []], [[293], [], [], [], [-544]], [[293], [-544], [-544], [-544], []], [[], [], [], [], []], [True], [True], [True, True], [True]],
+          f'simulateur : minimum vieillesse (hausse de Mélenchon, pertes selon la condition des minima, hors UE déjà soumis à 10 ans, gel d\'Attal, couple) {asp}')
+    # (5) pas de débordement à 360 px avec les nouveaux réglages ouverts
+    vp = pg.viewport_size; pg.set_viewport_size({'width': 360, 'height': 800})
+    pg.evaluate(f"({PROF})({{st:'retraite',year:1955,sal:500,aspa:true,foyer:'couple',conj:300,kids:2,cant:100}})"); w1 = pg.evaluate('document.documentElement.scrollWidth')
+    pg.evaluate(f"({PROF})({{st:'etudiant',sal:400,year:2004,nat:'hors'}})"); w2 = pg.evaluate('document.documentElement.scrollWidth')
+    pg.set_viewport_size(vp)
+    check(w1 <= 360 and w2 <= 360, f'simulateur : couple, minimum vieillesse, cantine et étudiant étranger sans débordement à 360 px {w1} {w2}')
     pg.evaluate(f"({PROF})({{st:'prive',sal:1800}})")
     check(not errs, f'aucune erreur JS {errs[:1]}')
     # sources faibles : nom d'hôte exact (aucune adresse franceinfo.fr étiquetée « agrégateur »), étiquette aussi sur les données d'entrée et en Vie quotidienne ;

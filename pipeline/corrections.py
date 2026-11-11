@@ -2743,6 +2743,112 @@ k = M('lisnard', 'abattement_pensions')['claude']; a0 = "Le plafond à 3 000 €
 k['note'] = k['note'][:-len(a0)] + "Le plafond à 3 000 € du PLF 2027 a été supprimé par l'Assemblée en première lecture (15/10), mais la première partie du projet a été rejetée le 4/11/2026 (scrutin n° 9759) : le Sénat examine le projet initial du Gouvernement, qui le contient ; s'il était voté, la situation de départ changerait pour tous."
 k['inputs'].append({"label": "Projet de loi de finances pour 2027, première partie", "value": "rejetée par l'Assemblée le 4/11/2026 (0 pour, 458 contre, 2 abstentions) ; texte considéré comme rejeté en première lecture", "source": "Assemblée nationale, scrutin n° 9759", "url": SCR9759})
 D['asof'] = '11 novembre 2026'
+# --- review 47 : suites du 11/11, fiches et simulateur (11/11/2026) ; registre S228 à S231, S242, S249 (résolus), S284 et suivants
+# (1) Droits d'inscription des étudiants étrangers (S249). Règle écrite : une ligne d'au moins 1 Md€ d'un budget publié ligne à ligne est ajoutée
+#     en fiche ; rien n'impose de retirer une fiche sous 1 Md€ (AME 0,9 chez quatre candidats, prisons 0,6, sécurité 0,45…). Même règle pour les
+#     quatre, dans le sens qui garde les fiches : une fiche par candidat, même méthode que la fiche de Retailleau (droit en vigueur en 2030 :
+#     exonérations plafonnées à 20 % des étudiants concernés, décret du 19 mai 2026 ; la mesure les supprime).
+#     - Philippe (« appliquer réellement la hausse des droits d'inscription des étudiants extra-européens », site) : même champ (hors UE), mêmes
+#       droits (ceux en vigueur), même calcul : +0,07 (0 à 0,09), compté.
+#     - Le Pen (« Hausse des frais de scolarité des étudiants étrangers (sauf conventions interétatiques) 1,100 », contre-budget 2027) et Zemmour
+#       (« Fin de la gratuité des études pour les étudiants étrangers », 4 Md€, budget2027.fr) : montant des droits non publié = paramètre clé non
+#       publié → fiche non chiffrable (règle « paramètre clé non publié »), fourchette indicative en note, même base de calcul ; une recette sans
+#       chiffrage indépendant ni paramètre publié n'est pas comptée (règle des budgets ligne à ligne). Verdict : même voie que Retailleau.
+KR = M('retailleau', 'etudiants_etrangers'); kr = KR['claude']; assert (kr['central'], kr['low'], kr['high']) == (0.07, 0.0, 0.09)
+IN_ETU = [i for i in kr['inputs'] if i['label'] != 'Ligne du plan']; assert len(IN_ETU) == 3
+CIT_PH_ETU = "appliquer réellement la hausse des droits d'inscription des étudiants extra-européens"
+ADD('philippe', {'id': 'etudiants_etrangers', 'theme': 'immigration', 'title': "Droits d'inscription différenciés appliqués aux étudiants extra-européens",
+  'proposal': "Appliquer réellement la hausse des droits d'inscription des étudiants extra-européens et vérifier qu'ils ont les moyens de leurs études.",
+  'claimed': 'Non chiffré', 'claimed_md': None,
+  'estimates': [{'source': 'edouardphilippe.fr, « Pour une France plus sûre »', 'year': 2026, 'value': '« ' + CIT_PH_ETU + ' »', 'low_md': None, 'high_md': None, 'url': PHSUR}],
+  'consensus': 'isolé', 'verdict': KR['verdict'], 'obstacle': KR['obstacle'],
+  'claude': {'id': 'etudiants_etrangers', 'central': 0.07, 'low': 0.0, 'high': 0.09, 'method': 'ascendant',
+    'formula': "Même mesure et même calcul que Retailleau (droits différenciés en vigueur appliqués à tous les étudiants hors UE) : droit en vigueur en 2030, exonérations individuelles plafonnées à 20 % des étudiants concernés (décret du 19 mai 2026) ; la mesure les supprime : 20 % × 111 400 étudiants dans le périmètre (2024-2025) ≈ 22 300 × écart moyen 3 184 € (licence 2 902 − 178 = 2 724 € ; master 3 950 − 255 = 3 695 € ; pondéré par 57 800 / 51 400 / 2 300 inscrits) ≈ 71 M€ ≈ +0,07 Md€, en entier en 2030 ; borne haute 0,09 (plafond rapporté aux 139 200 étudiants potentiellement concernés) ; borne basse 0 (le décret appliqué tel quel, exonérations seulement partielles ou départs). Vérification des ressources : non comptée (aucun effet sans hypothèse de départs), comme chez Retailleau",
+    'inputs': [{'label': 'Mesure', 'value': '« ' + CIT_PH_ETU + ' » ; « vérifier que les étudiants étrangers ont les moyens de leurs études »', 'source': 'edouardphilippe.fr, « Pour une France plus sûre »', 'url': PHSUR}] + IN_ETU,
+    'note': "Même fiche et même valeur que Retailleau (règle : même mesure, même montant). Le Pen et Zemmour : montant des droits non publié, fiches non chiffrables."}})
+OB_ETU = "Par décret et arrêté, comme les droits différenciés en vigueur (étudiants hors Union européenne) ; montant des droits et champ non publiés."
+IND_ETU = ("Indicatif, même base que Retailleau et Philippe : les droits différenciés en vigueur appliqués à tous les étudiants hors UE ≈ +0,07 Md€ ; "
+           "chaque 1 000 € de droits en plus par an pour les 111 400 étudiants du périmètre ≈ +0,11 Md€, sans départs ; ")
+ADD('le-pen', {'id': 'etudiants_etrangers', 'theme': 'immigration', 'title': "Hausse des frais de scolarité des étudiants étrangers",
+  'proposal': "Augmenter les frais de scolarité des étudiants étrangers, sauf conventions entre États (contre-budget 2027 ; montant des droits non publié).",
+  'claimed': '1,1 Md€ (contre-budget 2027 du groupe RN)', 'claimed_md': 1.1,
+  'estimates': [{'source': RNCB_S, 'year': 2026, 'value': "« Hausse des frais de scolarité des étudiants étrangers (sauf conventions interétatiques) 1,100 »", 'low_md': 1.1, 'high_md': 1.1, 'url': RNCB}],
+  'consensus': 'isolé', 'verdict': 'faisable', 'obstacle': OB_ETU,
+  'claude': {'id': 'etudiants_etrangers', 'central': 0, 'low': 0, 'high': 0, 'method': 'nc', 'nc': True,
+    'formula': "Non chiffrable : montant des droits non publié (paramètre clé) ; une recette sans chiffrage indépendant ni paramètre publié n'est pas comptée (règle des budgets publiés ligne à ligne)",
+    'inputs': [{'label': 'Ligne du contre-budget 2027', 'value': "« Hausse des frais de scolarité des étudiants étrangers (sauf conventions interétatiques) 1,100 »", 'source': RNCB_S, 'url': RNCB}] + IN_ETU,
+    'note': IND_ETU + "chiffre du camp 1,1."}})
+CIT_Z_ETU = "Fin de la gratuité des études pour les étudiants étrangers."
+ADD('zemmour', {'id': 'etudiants_etrangers', 'theme': 'immigration', 'title': "Fin de la gratuité des études pour les étudiants étrangers",
+  'proposal': "Mettre fin à la gratuité des études pour les étudiants étrangers (plan de 140 Md€ repris en 2026 ; montant des droits non publié).",
+  'claimed': '4 Md€ (budget2027.fr)', 'claimed_md': 4.0,
+  'estimates': [{'source': 'budget2027.fr (plan de S. Knafo, repris le 17/09)', 'year': 2026, 'value': '« ' + CIT_Z_ETU + ' » 4 Md€', 'low_md': 4.0, 'high_md': 4.0, 'url': 'https://www.budget2027.fr/'}],
+  'consensus': 'isolé', 'verdict': 'faisable', 'obstacle': OB_ETU,
+  'claude': {'id': 'etudiants_etrangers', 'central': 0, 'low': 0, 'high': 0, 'method': 'nc', 'nc': True,
+    'formula': "Non chiffrable : montant des droits non publié (paramètre clé) ; une recette sans chiffrage indépendant ni paramètre publié n'est pas comptée (règle des budgets publiés ligne à ligne)",
+    'inputs': [{'label': 'Ligne du plan de 140 Md€', 'value': '« ' + CIT_Z_ETU + ' » 4 Md€', 'source': 'budget2027.fr', 'url': 'https://www.budget2027.fr/'}] + IN_ETU,
+    'note': IND_ETU + "chiffre du camp 4."}})
+kr['note'] = kr['note'] + " Même calcul pour Philippe ; Le Pen et Zemmour : montant des droits non publié, fiches non chiffrables (11/11/2026)."
+MISS('le-pen', "hausse des frais de scolarité des étudiants étrangers 1,1 (montant des droits non publié), ", "")
+MISS('zemmour', "fin de la gratuité des études pour les étudiants étrangers 4 (montant des droits non publié), ", "")
+MISS('philippe', ", hausse des droits d'inscription des étudiants extra-européens « appliquée réellement » et preuve de ressources obligatoire (montant des droits non publié ; même lecture que Le Pen et Zemmour)", "")
+# (2) Mélenchon, service public de la petite enfance (S242) : valeurs officielles ouvertes le 11/11 (Cour des comptes, décembre 2024 ; Cnaf, Onape
+#     2025). Calcul ascendant, même forme que les plans de places de prison (fonctionnement compté, construction en borne) : 500 000 places
+#     (crèches publiques, associatives, assistantes maternelles, jardins d'enfants : répartition non publiée) × coût public annuel moyen d'une place
+#     d'accueil formel (13 000 €, hors préscolarisation et investissement, Cour des comptes), plan progressif sans date → 70 % en 2030 ; gratuité
+#     des crèches publiques = participations des familles aux crèches PSU (1,252 Md€ en 2022, Cour des comptes) × part des places gérées par les
+#     collectivités (55 %, Onape 2025), en entier en 2030.
+CC_AJE = 'https://www.vie-publique.fr/files/rapport/pdf/296579.pdf'
+CC_AJE_S = "Cour des comptes, « La politique d'accueil du jeune enfant », rapport public thématique, décembre 2024 (vie-publique.fr)"
+ONAPE25 = 'https://caf.fr/sites/default/files/medias/061/PARTENAIRES/NOS-PUBLICATIONS/CNAF_ONAPE_EDITION_2025.pdf'
+ONAPE25_S = "Cnaf, rapport de l'Observatoire national de la petite enfance, édition 2025"
+CIT_PE1 = "Planifier l’ouverture progressive de 500 000 places pour l’accueil des jeunes enfants (crèches publiques, associatives, assistantes maternelles, jardins d’enfants)"
+CIT_PE2 = "Garantir la gratuité des crèches publiques"
+pl_, gr_ = 500000 * 13000 / 1e9, 1.252 * 0.55
+pe_c, pe_l, pe_h = -round(pl_ * 0.7 + gr_, 1), -round(pl_ * 0.7 + gr_ + 500000 * 50000 / 5 / 1e9, 1), -round(pl_ * 0.5 + gr_, 1)
+assert (pe_c, pe_l, pe_h) == (-5.2, -10.2, -3.9), (pe_c, pe_l, pe_h)
+ADD('melenchon', {'id': 'petite_enfance', 'theme': 'social', 'title': "Petite enfance : 500 000 places, crèches publiques gratuites",
+  'proposal': "Service public de la petite enfance : ouverture progressive de 500 000 places d'accueil (crèches publiques, associatives, assistantes maternelles, jardins d'enfants) et gratuité des crèches publiques.",
+  'claimed': 'Non chiffré', 'claimed_md': None, 'estimates': [LVEST(CIT_PE1, LV_SECU3), LVEST(CIT_PE2, LV_SECU3)],
+  'consensus': 'isolé', 'verdict': 'sous_conditions',
+  'obstacle': "Par la loi de finances et la loi de financement de la Sécurité sociale ; crèches publiques gérées par les collectivités : ouverture des places et gratuité mises en œuvre avec elles ; professionnels à former et à recruter ; financement non précisé dans la mesure.",
+  'claude': {'id': 'petite_enfance', 'central': pe_c, 'low': pe_l, 'high': pe_h, 'method': 'ascendant',
+    'formula': "Calcul ascendant sur les valeurs officielles, même forme que les places de prison (fonctionnement compté, construction en borne) : (1) 500 000 places × 13 000 € de coût public annuel moyen d'une place d'accueil formel (hors préscolarisation et investissement, Cour des comptes 2024 ; répartition des places entre crèches et assistantes maternelles non publiée) = 6,5 Md€ à terme, plan progressif sans date → 70 % en 2030 : 4,55 ; (2) gratuité des crèches publiques : participations des familles aux crèches financées par la prestation de service unique 1,252 Md€ (2022) × 55 % des places gérées par les collectivités (2024) ≈ 0,69, en entier en 2030 ; total ≈ −5,2 Md€ (montants non projetés). Borne basse avec la construction : 50 000 € d'investissement par place dans le secteur public (Cour des comptes) × 500 000 sur 5 ans ≈ 5,0 de plus → −10,2 ; borne haute : moitié des places ouvertes en 2030 → −3,9",
+    'inputs': [LVIN("Programme du 6/11/2026", CIT_PE1, LV_SECU3), LVIN("Programme du 6/11/2026", CIT_PE2, LV_SECU3),
+      {'label': "Coût public annuel de l'accueil formel", 'value': "« Le coût annuel public de l’accueil formel (hors préscolarisation et investissement), évalué à 13 000 € par place » (p. 170)", 'source': CC_AJE_S, 'url': CC_AJE},
+      {'label': 'Participations des familles (crèches PSU)', 'value': "« Le montant des participations familiales, qui représentaient au total 1,252 Md€ en 2022 » (p. 101) ; 17 % du fonctionnement des crèches PSU en 2022", 'source': CC_AJE_S, 'url': CC_AJE},
+      {'label': "Coût d'investissement par place", 'value': "« un coût d’investissement plus faible (30 000 € par place contre 50 000 €) » pour le secteur marchand, par rapport au secteur public", 'source': CC_AJE_S, 'url': CC_AJE},
+      {'label': 'Places en crèche PSU (2024)', 'value': "419 800 places ; collectivités locales : « 55 % de l’offre de places » ; coût de revient d'une place gérée par une collectivité : 19 050 € (2024)", 'source': ONAPE25_S, 'url': ONAPE25}],
+    'note': "Non compté, faute de paramètre publié : hausse des salaires des professionnelles, norme d'encadrement de 5 enfants par adulte, gratuité des nouvelles places en crèche publique (part des 500 000 places non publiée ; à 19 050 € par place, la participation des familles pèse environ 17 % du fonctionnement). Ouvertures du secteur privé lucratif gelées et aides publiques à ces crèches interdites : effet non chiffré. Aucun chiffrage indépendant publié."}})
+MISS('melenchon', ", service public de la petite enfance : 500 000 places d'accueil ouvertes progressivement et crèches publiques gratuites (programme du 6/11/2026 ; coût public de fonctionnement par place et participation des familles : pas de source officielle ouverte)", "")
+# (3) Simulateur, profils manquants (S228 à S231), mêmes règles pour les 8 :
+#   - foyer « en couple » (marié ou pacsé) : deux parts, revenu du conjoint (de même nature que le vôtre), même barème, décote des couples
+#     (1 483 €, service-public.gouv.fr) ; les réformes du quotient de chaque candidat s'appliquent (Le Pen, part entière dès le 2e enfant ;
+#     Lisnard, quotient sans plafond ; Philippe, impôt des jeunes parents ; Mélenchon, fin du quotient conjugal : chacun imposé sur son revenu,
+#     même barème, calculé pour un couple sans enfant ; avec enfants, répartition et crédit d'impôt par enfant non publiés, une note) ;
+#   - étudiant étranger : droits d'inscription (S249), « jusqu'à » l'écart publié pour un étudiant aujourd'hui exonéré (Retailleau, Philippe),
+#     note sans montant (Le Pen, Zemmour) ; non ajouté au total ;
+#   - cantine : frais saisis par la famille, gain = ces frais chez le candidat qui propose la gratuité (Mélenchon) ;
+#   - minimum vieillesse (ASPA, 1 043,59 € par mois pour une personne seule, 1 620,18 € pour un couple, service-public.gouv.fr) : allocation
+#     différentielle ; perte selon la même condition que les minima chez les candidats qui réservent les aides (Le Pen, Lisnard, Retailleau,
+#     Zemmour) ; hausse publiée (Mélenchon, seuil de pauvreté à 1 337 € pour une personne seule, montant du programme) ; gel d'Attal
+#     (« toutes les prestations sociales », sauf les petites retraites : même seuil supposé que pour les pensions).
+SQ['ir']['decote_couple'] = 1483
+SQ['aspa'] = 1043.59; SQ['aspa_couple'] = 1620.18; SQ['aspa_url'] = 'https://www.service-public.gouv.fr/particuliers/vosdroits/F16871'
+for cid in ('retailleau', 'philippe'):
+    C[cid]['sim']['droits_inscription'] = {'cond': 'hors', 'licence': 2724, 'master': 3695,
+      'note': {'retailleau': "Droits d'inscription différenciés appliqués à tous les étudiants hors Union européenne (exonérations supprimées)",
+               'philippe': "« Appliquer réellement » la hausse des droits d'inscription des étudiants extra-européens (exonérations supprimées, même lecture que Retailleau)"}[cid]}
+C['le-pen']['sim']['droits_inscription'] = {'cond': 'nonfr', 'note': "Hausse des frais de scolarité des étudiants étrangers, sauf conventions entre États (contre-budget 2027) : montant non publié, non calculé ici."}
+C['zemmour']['sim']['droits_inscription'] = {'cond': 'nonfr', 'note': "Fin de la gratuité des études pour les étudiants étrangers (plan de 140 Md€ repris en 2026) : montant non publié, non calculé ici."}
+sm = C['melenchon']['sim']; a0 = "Cantine scolaire gratuite (note LFI d'octobre 2026, 3,6 Md€) : gain selon vos frais de cantine, non calculé ici ; comptée dans notre total."; assert sm['famille'] == a0
+sm['famille'] = "Fournitures, manuels, transport scolaire et périscolaire gratuits à l'école publique ; crèches publiques gratuites et 500 000 places d'accueil (programme du 6/11/2026) : gain selon vos dépenses, non calculé ici."
+sm['cantine'] = {'note': "Cantine gratuite à l'école publique (programme du 6/11/2026, gratuité réelle de l'école)"}
+sm['aspa_hausse'] = {'montant': 1337, 'note': "Minimum vieillesse porté au seuil de pauvreté, 1 337 € pour une personne seule (programme du 6/11/2026)",
+                     'couple': "Minimum vieillesse porté au seuil de pauvreté (programme du 6/11/2026) : montant pour un couple non publié, non calculé ici."}
+sm['quotient_conjugal'] = {'note': "Fin du quotient conjugal (programme du 6/11/2026) : chacun imposé sur son revenu, même barème",
+                           'enfants': "Fin du quotient conjugal et crédit d'impôt par enfant (programme du 6/11/2026) : répartition des enfants entre les parents et montant du crédit non publiés, non calculé ici."}
+sa = C['attal']['sim']; assert 'aspa' not in sa['gel_status']; sa['gel_status'].append('aspa')
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
