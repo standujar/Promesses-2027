@@ -1,5 +1,5 @@
 {
-"_regles": "Par proposition : « Pour » et « Contre », le meilleur argument réel de chaque côté (100 caractères environ, en mots simples, sans pays ni étude) : un fait que la mesure ne dit pas d'elle-même (ce qui s'est passé quand elle a été appliquée : effet mesuré, ordre de grandeur, effet de bord), jamais la mesure redite à l'envers, même test pour les deux côtés, la force des preuves de chacun (solide, mitigé, faible, pas d'étude), 0 à 3 cas réels sourcés par côté (le fait observé, puis source, lieu et année entre parenthèses), l'état des études et les sources (format dans pipeline/quizfx.py ; l'ancien format [plus, moins, sources] reste lu). Même méthode et même exigence pour toutes les mesures, sans fausse symétrie : rien d'inventé pour équilibrer. Mêmes cas pour les mesures du même type. Pas de nom, pas de coût de la mesure, pas de faisabilité juridique, pas de jugement moral. Les sources dont le titre ou l'adresse nomme un candidat ne sont pas affichées (quiz à l'aveugle). Pas ou peu d'exemple étranger (décision du porteur du projet, 11/11/2026) : les cas sont observés en France, outre-mer compris (une institution ou une décision de l'Union compte quand la France y participe ; un fait qui ne concerne qu'un autre pays est retiré) ; l'état des études ne nomme aucun pays étranger et ne donne aucun chiffre étranger : quand des évaluations n'existent qu'à l'étranger, une seule phrase, « Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent … » ; les niveaux de preuve sont jugés sur les preuves françaises (au plus « faible » si seules des évaluations étrangères existent, « pas d'étude » s'il n'y en a aucune), les mêmes pour les mesures du même type ; « Pour » et « Contre » reposent sur un fait français ou, à défaut, sur le mécanisme, sans pays (contrôle dans pipeline/quizfx.py, liste fermée de noms de pays, régions et villes étrangers).",
+"_regles": "Par proposition : « Pour » et « Contre », le meilleur argument réel de chaque côté (100 caractères environ, en mots simples, sans pays ni étude) : un fait que la mesure ne dit pas d'elle-même (ce qui s'est passé quand elle a été appliquée : effet mesuré, ordre de grandeur, effet de bord), jamais la mesure redite à l'envers, même test pour les deux côtés, la force des preuves de chacun (solide, mitigé, faible, pas d'étude), 0 à 3 cas réels sourcés par côté (le fait observé, puis source, lieu et année entre parenthèses), l'état des études et les sources (format dans pipeline/quizfx.py ; l'ancien format [plus, moins, sources] reste lu). Même méthode et même exigence pour toutes les mesures, sans fausse symétrie : rien d'inventé pour équilibrer. Mêmes cas pour les mesures du même type. Pas de nom, pas de coût de la mesure, pas de faisabilité juridique, pas de jugement moral. Les sources dont le titre ou l'adresse nomme un candidat ne sont pas affichées (quiz à l'aveugle). Pas ou peu d'exemple étranger (décision du porteur du projet, 11/11/2026) : les cas sont observés en France, outre-mer compris (une institution ou une décision de l'Union compte quand la France y participe ; un fait qui ne concerne qu'un autre pays est retiré) ; l'état des études ne nomme aucun pays étranger et ne donne aucun chiffre étranger : quand des évaluations n'existent qu'à l'étranger, une seule phrase, « Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent … » ; les niveaux de preuve sont jugés sur les preuves françaises (au plus « faible » si seules des évaluations étrangères existent, « pas d'étude » s'il n'y en a aucune), les mêmes pour les mesures du même type ; « Pour » et « Contre » reposent sur un fait français ou, à défaut, sur le mécanisme, sans pays (contrôle dans pipeline/quizfx.py, liste fermée de noms de pays, régions et villes étrangers). Une proposition précise et reconfirmée entre au quiz même sans évaluation : le Pour et le Contre disent alors ce que la mesure change concrètement, sans affirmer d'effet, avec le niveau « pas d'étude » (décision du porteur du projet, 11/11/2026).",
 "attal.annee_blanche": {
 "constat": "Dette publique : de 98 % du PIB fin 2019 à 119 % mi-2026 (Insee).",
 "constat_s": [
@@ -8189,6 +8189,398 @@
 "l": "Insee, Informations rapides n° 221, « Entre avril et juillet 2026, les loyers augmentent de 0,2 % » (France métropolitaine, résidences principales louées vides)",
 "a": 2026,
 "u": "https://www.insee.fr/fr/statistiques/9050041"
+}
+]
+},
+"philippe.ecole.4": {
+"pour": "Là où le portable a été mis à l'écart toute la journée, les collèges disent le climat scolaire meilleur.",
+"preuve_pour": "faible",
+"contre": "L'essai français n'a mesuré ni les notes ni le bien-être : l'effet sur la réussite reste inconnu.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [
+{
+"t": "Dans plus de 110 collèges et 32 800 élèves privés de portable toute la journée, 78 % des établissements ont jugé l'essai positif, citant un meilleur climat scolaire (ministère de l'Éducation nationale, France, 2025).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française des résultats : l'essai de la « pause numérique » au collège (2024-2025) a été jugé positif par 78 % des établissements, sans mesure des notes ni du bien-être.",
+"src": [
+{
+"l": "Assemblée nationale, question écrite n° 1865 sur le téléphone portable au collège, réponse du ministère de l'Éducation nationale (bilan de la « pause numérique »)",
+"a": 2025,
+"u": "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE1865.pdf"
+}
+]
+},
+"glucksmann.ecole.4": {
+"pour": "Depuis 2019, moins de filles font beaucoup de maths en terminale : 22 %, contre 33 % en série S.",
+"preuve_pour": "mitigé",
+"contre": "Le nombre de jeunes femmes qui partent en études scientifiques après le bac est resté stable.",
+"preuve_contre": "mitigé",
+"cas_pour": [
+{
+"t": "La part des filles de terminale qui suivent au moins six heures de mathématiques est passée de 33 % (série S) à 22 % (spécialité mathématiques) après la réforme (IGF-IGESR, via le ministère de l'Éducation nationale, France, 2025).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [
+{
+"t": "Le nombre de femmes qui entrent après le bac en études scientifiques et techniques (classes préparatoires, écoles d'ingénieurs, licences, BTS) est resté stable, autour de 25 000 par an (IGF-IGESR, via le ministère de l'Éducation nationale, France, 2025).",
+"s": [
+0
+]
+},
+{
+"t": "Depuis la rentrée 2023, tous les élèves de première générale ont de nouveau un enseignement de mathématiques (ministère de l'Éducation nationale, France, 2025).",
+"s": [
+0
+]
+}
+],
+"etudes": "Le rapport des inspections générales (IGF-IGESR, 2025) ne trouve pas d'effet significatif de la réforme sur l'orientation des filles vers les études scientifiques, malgré moins de filles en mathématiques renforcées au lycée.",
+"src": [
+{
+"l": "Assemblée nationale, question écrite n° 2512 sur la réforme du lycée et les filles en mathématiques, réponse du ministère de l'Éducation nationale (rapport IGF-IGESR de février 2025)",
+"a": 2025,
+"u": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE2512.pdf"
+}
+]
+},
+"lisnard.sante.4": {
+"pour": "Chacun choisit son organisme : pour garder ses assurés, il doit mieux servir ou coûter moins.",
+"preuve_pour": "pas d'étude",
+"contre": "Les complémentaires, en concurrence, dépensent 27,5 % de ce qu'elles remboursent en gestion, la Sécu 4,6 %.",
+"preuve_contre": "mitigé",
+"cas_pour": [],
+"cas_contre": [
+{
+"t": "En 2018, la gestion a coûté 4,6 % des dépenses remboursées à l'Assurance maladie, 27,5 % aux complémentaires santé, champs pas tout à fait comparables (Cour des comptes, France, 2021).",
+"s": [
+0
+]
+},
+{
+"t": "Sur 7,5 Md€ de frais de gestion des complémentaires santé en 2018, près de 3 Md€ (40 %) servaient à attirer de nouveaux clients (Cour des comptes, France, 2021).",
+"s": [
+0
+]
+}
+],
+"etudes": "Pas d'évaluation française de la mise en concurrence de l'Assurance maladie. En France, la gestion des complémentaires santé, en concurrence, coûte bien plus que celle de l'Assurance maladie, rapportée aux remboursements (Cour des comptes, 2021).",
+"src": [
+{
+"l": "Cour des comptes, Les complémentaires santé : un système très protecteur mais peu efficient",
+"a": 2021,
+"u": "https://www.ccomptes.fr/sites/default/files/2021-07/20210721-132-3-1-rapport-complementaires-sante.pdf"
+}
+]
+},
+"attal.sante.2": {
+"pour": "Un repérage au même âge pour tous signale tôt les élèves qui ont du mal à décrocher des écrans.",
+"preuve_pour": "pas d'étude",
+"contre": "Les bilans de santé déjà prévus à un âge fixé manquent souvent : à 6 ans, moins d'un enfant sur cinq.",
+"preuve_contre": "mitigé",
+"cas_pour": [],
+"cas_contre": [
+{
+"t": "La visite médicale obligatoire de la 6e année n'a été faite que pour 18 % des enfants en 2018, contre 26 % en 2013 (Cour des comptes, France, 2020).",
+"s": [
+0
+]
+},
+{
+"t": "Le bilan infirmier de la 12e année n'a été fait que pour 62 % des élèves en 2018 (Cour des comptes, France, 2020).",
+"s": [
+0
+]
+}
+],
+"etudes": "Pas d'évaluation française d'un dépistage de l'addiction aux écrans ni des écrans en noir et blanc. Les visites de santé obligatoires à l'école ne touchent qu'une partie des élèves (Cour des comptes, 2020).",
+"src": [
+{
+"l": "Cour des comptes, Les médecins et les personnels de santé scolaire",
+"a": 2020,
+"u": "https://www.ccomptes.fr/sites/default/files/2023-10/20200527-rapport-58-2-medecins-personnels-sante-scolaire.pdf"
+}
+]
+},
+"glucksmann.sante.1": {
+"pour": "Deux rendez-vous de santé gratuits pour chaque jeune, pour repérer tôt un trouble ou un risque.",
+"preuve_pour": "pas d'étude",
+"contre": "Les bilans de santé déjà prévus à un âge fixé manquent souvent : à 6 ans, moins d'un enfant sur cinq.",
+"preuve_contre": "mitigé",
+"cas_pour": [],
+"cas_contre": [
+{
+"t": "La visite médicale obligatoire de la 6e année n'a été faite que pour 18 % des enfants en 2018, contre 26 % en 2013 (Cour des comptes, France, 2020).",
+"s": [
+0
+]
+},
+{
+"t": "Le bilan infirmier de la 12e année n'a été fait que pour 62 % des élèves en 2018 (Cour des comptes, France, 2020).",
+"s": [
+0
+]
+}
+],
+"etudes": "Pas d'évaluation française de consultations de dépistage à 16 et à 20 ans. Les visites de santé obligatoires à l'école ne touchent qu'une partie des élèves (Cour des comptes, 2020).",
+"src": [
+{
+"l": "Cour des comptes, Les médecins et les personnels de santé scolaire",
+"a": 2020,
+"u": "https://www.ccomptes.fr/sites/default/files/2023-10/20200527-rapport-58-2-medecins-personnels-sante-scolaire.pdf"
+}
+]
+},
+"melenchon.sante.5": {
+"constat": "Usage de cannabis dans l'année : 10,8 % des 18-64 ans en 2023, stable depuis près de dix ans (OFDT).",
+"constat_s": [
+0
+],
+"pour": "Vendu par l'État, il aurait une teneur contrôlée ; celle de la résine de rue a plus que doublé depuis 2011.",
+"preuve_pour": "faible",
+"contre": "Rendu légal et vendu en boutique, le cannabis devient plus facile à acheter pour les adultes.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [
+{
+"t": "La teneur moyenne en THC de la résine de cannabis est passée de 12,3 % en 2011 à 29 % en 2023 (OFDT, France, 2025).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française de la légalisation. La teneur en THC de la résine vendue en France a plus que doublé depuis 2011 (OFDT).",
+"src": [
+{
+"l": "OFDT, Cannabis : résine, herbe, huile, CBD, synthèse des connaissances",
+"a": 2025,
+"u": "https://www.ofdt.fr/cannabis-resine-herbe-huile-cbd-synthese-des-connaissances-1724"
+}
+]
+},
+"le-pen.ecole.1": {
+"constat": "Incidents graves signalés en collège et lycée : 14 pour 1 000 élèves en 2024-2025, 16 l'année précédente (DEPP).",
+"constat_s": [
+0
+],
+"pour": "Écarter un élève très perturbateur protège les cours et les apprentissages de ses camarades.",
+"preuve_pour": "faible",
+"contre": "Un élève exclu sans école prête à l'accueillir risque de rester sans formation ni diplôme.",
+"preuve_contre": "faible",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent qu'un élève perturbateur pèse durablement sur ses camarades, et que les élèves exclus quittent plus souvent l'école sans diplôme.",
+"src": [
+{
+"l": "DEPP, Note d'information n° 26.03, Les signalements d'incidents graves en 2024-2025 (enquête Sivis)",
+"a": 2026,
+"u": "https://www.education.gouv.fr/sites/default/files/document/Note%20d%26%23039%3BInformation%20n%C2%B0%2026-03-479480.pdf"
+}
+]
+},
+"zemmour.ecole.2": {
+"constat": "Incidents graves signalés en collège et lycée : 14 pour 1 000 élèves en 2024-2025, 16 l'année précédente (DEPP).",
+"constat_s": [
+0
+],
+"pour": "Écarter un élève très perturbateur protège les cours et les apprentissages de ses camarades.",
+"preuve_pour": "faible",
+"contre": "Un élève exclu sans école prête à l'accueillir risque de rester sans formation ni diplôme.",
+"preuve_contre": "faible",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent qu'un élève perturbateur pèse durablement sur ses camarades, et que les élèves exclus quittent plus souvent l'école sans diplôme.",
+"src": [
+{
+"l": "DEPP, Note d'information n° 26.03, Les signalements d'incidents graves en 2024-2025 (enquête Sivis)",
+"a": 2026,
+"u": "https://www.education.gouv.fr/sites/default/files/document/Note%20d%26%23039%3BInformation%20n%C2%B0%2026-03-479480.pdf"
+}
+]
+},
+"le-pen.ecole.2": {
+"constat": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 49,1 % passent en 2e année de licence (SIES).",
+"constat_s": [
+1,
+2
+],
+"pour": "Les classements restent opaques : jusqu'à une licence très demandée sur cinq tient compte du lycée d'origine.",
+"preuve_pour": "mitigé",
+"contre": "Chaque formation publie déjà ses critères et leur poids, et un rapport sur son examen des dossiers.",
+"preuve_contre": "mitigé",
+"cas_pour": [
+{
+"t": "Jusqu'à 20 % des commissions des licences les plus demandées ont tenu compte du lycée d'origine des candidats en 2019 (Cour des comptes, France, 2020).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [
+{
+"t": "Depuis 2023, chaque formation indique sur Parcoursup le poids de ses critères d'examen ; plus de 11 000 rapports sur l'examen des vœux sont publiés chaque année (ministère de l'Enseignement supérieur, France, 2024).",
+"s": [
+3
+]
+}
+],
+"etudes": "Aucune évaluation d'une publication complète des critères. La Cour des comptes (2020) jugeait les critères peu transparents ; depuis, chaque formation publie le poids de ses critères et un rapport annuel.",
+"src": [
+{
+"l": "Cour des comptes, Un premier bilan de l'accès à l'enseignement supérieur dans le cadre de la loi ORE",
+"a": 2020,
+"u": "https://www.ccomptes.fr/system/files/2020-03/20200227-rapport-premier-bilan-loi-ORE-3.pdf"
+},
+{
+"l": "SIES, Note Flash n° 26, Parcoursup 2026 : les propositions d'admission dans l'enseignement supérieur",
+"a": 2026,
+"u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-10/NF2_Admission_Parcoursup_2026_def.pdf"
+},
+{
+"l": "SIES, Note Flash n° 29, Parcours et réussite en licence : les résultats de la session 2024",
+"a": 2025,
+"u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf"
+},
+{
+"l": "Assemblée nationale, question écrite n° 11371 sur la transparence de Parcoursup, réponse du ministère de l'Enseignement supérieur",
+"a": 2024,
+"u": "https://questions.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE11371.pdf"
+}
+]
+},
+"melenchon.logement.2": {
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat_s": [
+0,
+1
+],
+"pour": "Construire davantage de logements augmente l'offre et freine la hausse des loyers.",
+"preuve_pour": "faible",
+"contre": "Des logements publics en plus remplacent en partie des logements privés qui se seraient construits.",
+"preuve_contre": "faible",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent que plus de logements neufs modèrent les loyers, mais que des logements publics en plus remplacent en partie des constructions privées.",
+"src": [
+{
+"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+},
+{
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
+}
+]
+},
+"melenchon.logement.3": {
+"pour": "Plus de meublés touristiques fait monter les loyers dans certaines grandes villes, dont Paris et Lyon.",
+"preuve_pour": "mitigé",
+"contre": "Hors de quelques grandes villes, les meublés touristiques n'ont pas d'effet mesuré sur les loyers.",
+"preuve_contre": "mitigé",
+"cas_pour": [
+{
+"t": "Plus il y a de logements loués aux touristes, plus les loyers sont élevés à Paris, Lyon et Montpellier (Ayouba et al., France, 2020).",
+"s": [
+0
+]
+},
+{
+"t": "À Bordeaux, l'enregistrement obligatoire et la limite de 120 jours par an pour une résidence principale ont réduit de 43 % les jours loués aux touristes (Robertson, Dejean et Suire, France, 2024).",
+"s": [
+1
+]
+}
+],
+"cas_contre": [
+{
+"t": "Pas d'effet significatif des locations touristiques sur les loyers dans cinq des huit grandes villes étudiées (Ayouba et al., France, 2020).",
+"s": [
+0
+]
+}
+],
+"etudes": "Des études françaises trouvent que plus de meublés touristiques fait monter les loyers à Paris, Lyon et Montpellier, sans effet net dans cinq autres grandes villes ; à Bordeaux, l'encadrement a fait reculer de 43 % les jours loués aux touristes. Pas d'évaluation de l'effet d'une limite de jours sur les loyers.",
+"src": [
+{
+"l": "Ayouba, Breuillé, Grivault et Le Gallo, Does Airbnb Disrupt the Private Rental Market? An Empirical Analysis for French Cities (International Regional Science Review)",
+"a": 2020,
+"u": "https://ideas.repec.org/a/sae/inrsre/v43y2020i1-2p76-104.html"
+},
+{
+"l": "Robertson, Dejean et Suire, « Airbnb in the City » : assessing short-term rental regulation in Bordeaux (The Annals of Regional Science)",
+"a": 2024,
+"u": "https://nudd.univ-larochelle.fr/app/uploads/sites/10/2024/07/Airbnb20in20the20City20published.pdf"
+}
+]
+},
+"melenchon.secu100": {
+"constat": "Renoncement au médecin jugé trop cher : 1,9 % des 16 ans et plus en 2025 (2,0 % en 2022) ; 3,9 % des plus modestes (Eurostat).",
+"constat_s": [
+3
+],
+"pour": "La gestion des complémentaires coûte six fois plus que celle de la Sécu, rapportée aux remboursements.",
+"preuve_pour": "mitigé",
+"contre": "Presque tous ont une mutuelle qui paie déjà ce reste, et supprimer un reste à payer a attiré peu de patients.",
+"preuve_contre": "mitigé",
+"cas_pour": [
+{
+"t": "En 2018, la gestion a coûté 4,6 % des dépenses remboursées à l'Assurance maladie, 27,5 % aux complémentaires santé, champs pas tout à fait comparables (Cour des comptes, France, 2021).",
+"s": [
+2
+]
+},
+{
+"t": "Parmi ceux qui en avaient besoin, 30,5 % des personnes sans complémentaire n'ont pas pu payer leurs soins dentaires, contre 11,2 % avec une complémentaire privée (Drees, France, 2019).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [
+{
+"t": "Un contrat de complémentaire « responsable » rembourse déjà 100 % de la base de la Sécurité sociale pour les soins dentaires courants ; 94,5 % des 15 ans et plus en ont un (Cnam, Cour des comptes, France, 2022).",
+"s": [
+0,
+1
+]
+},
+{
+"t": "Après la suppression du reste à payer sur une partie des prothèses, 92 % des patients avaient déjà consulté un dentiste les années précédentes : surtout plus de prothèses par patient (Cour des comptes, France, 2022).",
+"s": [
+0
+]
+}
+],
+"etudes": "Le renoncement aux soins est bien plus fréquent sans complémentaire ; supprimer le reste à payer sur les prothèses a peu changé le nombre de patients ; la gestion des complémentaires coûte bien plus que celle de l'Assurance maladie, rapportée aux remboursements. Pas d'évaluation d'une prise en charge à 100 % par la seule Sécurité sociale.",
+"src": [
+{
+"l": "Sénat, rapport d'information n° 832 (2021-2022) sur l'enquête de la Cour des comptes sur la réforme du 100 % santé",
+"a": 2022,
+"u": "https://www.senat.fr/rap/r21-832/r21-8321.pdf"
+},
+{
+"l": "Service-public.gouv.fr, Couverture maladie complémentaire (mutuelle) : ce que rembourse le contrat responsable",
+"a": 2026,
+"u": "https://www.service-public.gouv.fr/particuliers/vosdroits/F20314"
+},
+{
+"l": "Cour des comptes, Les complémentaires santé : un système très protecteur mais peu efficient",
+"a": 2021,
+"u": "https://www.ccomptes.fr/sites/default/files/2021-07/20210721-132-3-1-rapport-complementaires-sante.pdf"
+},
+{
+"l": "Eurostat, besoins non satisfaits d'examen médical déclarés, raison « trop cher » (hlth_silc_08), France",
+"a": 2026,
+"u": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_silc_08?geo=FR&sex=T&age=Y_GE16&reason=TXP&time=2022&time=2025"
 }
 ]
 }

@@ -731,5 +731,64 @@
 "Encadrer les loyers dans les villes où le logement manque",
 "Dans les zones où le logement manque, le loyer d'une location ne pourrait pas dépasser un plafond fixé selon le quartier et le type de logement.",
 "Encadrement des loyers en zones tendues"
+],
+"philippe.ecole.4": [
+"Interdire le téléphone portable à l'école, au collège et au lycée",
+"L'interdiction, déjà en vigueur à l'école et au collège, s'étend au lycée : un téléphone sorti est confisqué et rendu aux parents.",
+"Téléphone portable interdit à l'école primaire, au collège et au lycée : confisqué s'il est sorti, rendu aux parents"
+],
+"glucksmann.ecole.4": [
+"Revenir sur la réforme du lycée de 2019, qui a remplacé les séries S, ES et L par des spécialités",
+"Le bac par spécialités serait remis en cause ; ce qui le remplacerait n'est pas précisé.",
+"Revenir sur la réforme du lycée de 2019 (réforme Blanquer)"
+],
+"lisnard.sante.4": [
+"Mettre l'Assurance maladie en concurrence : chacun choisit l'organisme qui rembourse un panier de soins obligatoire",
+"Plusieurs organismes rembourseraient le même panier de soins de base ; chacun choisirait le sien et pourrait en changer.",
+"Mettre la Sécurité sociale en concurrence, sur le modèle des Pays-Bas : panier de soins obligatoire, libre choix de l'organisme"
+],
+"attal.sante.2": [
+"Dépister l'addiction aux écrans à l'entrée en sixième et en seconde",
+"Chaque élève serait repéré à ces deux moments ; les applications passeraient aussi en noir et blanc après 30 minutes d'utilisation.",
+"Dépister l'addiction aux écrans à l'entrée en sixième et en seconde ; applications en noir et blanc après 30 minutes d'utilisation"
+],
+"glucksmann.sante.1": [
+"Des consultations gratuites de dépistage pour tous les jeunes, à 16 et à 20 ans",
+"Deux rendez-vous de santé entièrement pris en charge, pour repérer tôt un problème de santé.",
+"Consultations gratuites de dépistage en santé à 16 et à 20 ans"
+],
+"melenchon.sante.5": [
+"Légaliser le cannabis, pour soigner et pour le loisir, avec une production et une vente réservées à l'État",
+"L'État produirait et vendrait seul le cannabis ; en consommer ne serait plus puni.",
+"Légaliser le cannabis (usage médical et récréatif) sous monopole d'État de production et de vente"
+],
+"le-pen.ecole.1": [
+"Exclure du lycée ou de l'université les jeunes de plus de 16 ans qui dégradent ou menacent",
+"Un lycéen ou un étudiant de plus de 16 ans auteur de dégradations ou de menaces perdrait sa place dans son établissement.",
+"Exclure de leur lycée ou de leur université les élèves de plus de 16 ans qui dégradent ou menacent"
+],
+"zemmour.ecole.2": [
+"Exclure les élèves violents, sans obligation de leur trouver une autre école",
+"Un élève violent exclu ne serait plus forcément accueilli dans un autre établissement public.",
+"Exclure les élèves violents, sans obligation pour l'État de les rescolariser"
+],
+"le-pen.ecole.2": [
+"Réformer Parcoursup : vœux à la fin du 2e trimestre et critères de chaque formation rendus publics",
+"Les lycéens choisiraient leurs vœux à la fin du 2e trimestre et verraient sur quels critères chaque formation classe les dossiers.",
+"Réformer Parcoursup : vœux à la fin du 2e trimestre, critères de chaque formation rendus publics"
+],
+"melenchon.logement.2": [
+"Construire 200 000 logements publics par an pendant cinq ans",
+"Les organismes publics bâtiraient un million de logements sur le quinquennat.",
+"200 000 logements publics par an pendant cinq ans"
+],
+"melenchon.logement.3": [
+"Limiter à 60 jours par an la location d'un logement aux touristes",
+"Au-delà de 60 jours dans l'année, un logement ne pourrait plus être loué en meublé de tourisme.",
+"Plafonner les meublés touristiques à 60 jours par an"
+],
+"melenchon.secu100": [
+"Rembourser entièrement les soins prescrits par la Sécurité sociale, qui reprendrait le rôle des mutuelles",
+"Plus de complémentaire santé à payer pour les soins prescrits ; fin des franchises et des dépassements d'honoraires en secteur conventionné."
 ]
 }

@@ -5768,7 +5768,71 @@
       ],
       "note": "Le camp annonce un financement par les cotisations (transfert des primes des complémentaires ; taux non publié, non compté, même règle que les autres financements sans paramètre) et une économie de frais de gestion (« sur 1€ cotisé à la complémentaire, 17 centimes partent en frais de gestion », contre 2 centimes à la Sécurité sociale : « près de 10 milliards d'euros », plan santé) : elle porte sur les primes payées par les ménages aux complémentaires, pas sur la dépense publique, et n'est pas comptée sur le solde ; les frais de gestion de l'Assurance maladie sur les prestations reprises ne sont pas ajoutés, comme pour les soins dentaires de Le Pen. Fin des dépassements d'honoraires en secteur conventionné : comprise dans la part des complémentaires et des ménages, non chiffrée à part. La part des ménages (19,7 Md€ en 2025) n'est pas comptée : la DREES ne sépare pas les soins prescrits des autres. Arrêts maladie payés à 100 % et fin des jours de carence : coût non publié, non comptés."
      },
-     "quiz_text": "Rembourser à 100 % les soins prescrits en intégrant les complémentaires santé dans la Sécurité sociale ; fin des dépassements d'honoraires en secteur conventionné ; supprimer les franchises médicales et les participations forfaitaires."
+     "quiz_text": "Rembourser entièrement les soins prescrits par la Sécurité sociale, qui reprendrait le rôle des mutuelles",
+     "quiz_concret": "Plus de complémentaire santé à payer pour les soins prescrits ; fin des franchises et des dépassements d'honoraires en secteur conventionné.",
+     "quiz_plus": "La gestion des complémentaires coûte six fois plus que celle de la Sécu, rapportée aux remboursements.",
+     "quiz_moins": "Presque tous ont une mutuelle qui paie déjà ce reste, et supprimer un reste à payer a attiré peu de patients.",
+     "quiz_preuve_pour": "mitigé",
+     "quiz_preuve_contre": "mitigé",
+     "quiz_cas_pour": [
+      {
+       "t": "En 2018, la gestion a coûté 4,6 % des dépenses remboursées à l'Assurance maladie, 27,5 % aux complémentaires santé, champs pas tout à fait comparables (Cour des comptes, France, 2021).",
+       "s": [
+        2
+       ]
+      },
+      {
+       "t": "Parmi ceux qui en avaient besoin, 30,5 % des personnes sans complémentaire n'ont pas pu payer leurs soins dentaires, contre 11,2 % avec une complémentaire privée (Drees, France, 2019).",
+       "s": [
+        0
+       ]
+      }
+     ],
+     "quiz_cas_contre": [
+      {
+       "t": "Un contrat de complémentaire « responsable » rembourse déjà 100 % de la base de la Sécurité sociale pour les soins dentaires courants ; 94,5 % des 15 ans et plus en ont un (Cnam, Cour des comptes, France, 2022).",
+       "s": [
+        0,
+        1
+       ]
+      },
+      {
+       "t": "Après la suppression du reste à payer sur une partie des prothèses, 92 % des patients avaient déjà consulté un dentiste les années précédentes : surtout plus de prothèses par patient (Cour des comptes, France, 2022).",
+       "s": [
+        0
+       ]
+      }
+     ],
+     "quiz_etudes": "Le renoncement aux soins est bien plus fréquent sans complémentaire ; supprimer le reste à payer sur les prothèses a peu changé le nombre de patients ; la gestion des complémentaires coûte bien plus que celle de l'Assurance maladie, rapportée aux remboursements. Pas d'évaluation d'une prise en charge à 100 % par la seule Sécurité sociale.",
+     "quiz_src": [
+      {
+       "l": "Sénat, rapport d'information n° 832 (2021-2022) sur l'enquête de la Cour des comptes sur la réforme du 100 % santé",
+       "a": 2022,
+       "u": "https://www.senat.fr/rap/r21-832/r21-8321.pdf"
+      },
+      {
+       "l": "Service-public.gouv.fr, Couverture maladie complémentaire (mutuelle) : ce que rembourse le contrat responsable",
+       "a": 2026,
+       "u": "https://www.service-public.gouv.fr/particuliers/vosdroits/F20314"
+      },
+      {
+       "l": "Cour des comptes, Les complémentaires santé : un système très protecteur mais peu efficient",
+       "a": 2021,
+       "u": "https://www.ccomptes.fr/sites/default/files/2021-07/20210721-132-3-1-rapport-complementaires-sante.pdf"
+      },
+      {
+       "l": "Eurostat, besoins non satisfaits d'examen médical déclarés, raison « trop cher » (hlth_silc_08), France",
+       "a": 2026,
+       "u": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_silc_08?geo=FR&sex=T&age=Y_GE16&reason=TXP&time=2022&time=2025"
+      }
+     ],
+     "quiz_constat": {
+      "t": "Renoncement au médecin jugé trop cher : 1,9 % des 16 ans et plus en 2025 (2,0 % en 2022) ; 3,9 % des plus modestes (Eurostat).",
+      "s": [
+       3
+      ]
+     },
+     "quiz_fam": "le-pen.dentaire"
     },
     {
      "id": "service_citoyen",
@@ -17360,7 +17424,7 @@
   "<b>Résumés.</b> Même gabarit pour tous : ce que le candidat promet, notre chiffrage, le principal obstacle. Celui-ci est la condition juridique ou pratique des mesures retenues qui ont le verdict le plus contraignant (« exige une révision » d'abord, puis « très difficile »), jamais un coût, un rendement ou un paramètre non publié.",
   "<b>Vie quotidienne.</b> Pour huit thèmes (sécurité, santé, école, environnement, logement, libertés, économie, rayonnement), on liste 1 à 5 propositions publiées par candidat. Une proposition est « vérifiable » (précise) si elle donne un chiffre, une échéance ou un moyen juridique précis, c'est-à-dire un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou accord nommé et ce qui y change) ; sinon c'est une « intention » (un objectif, une orientation, ou une création sans paramètre : plan, pôle, fonds). La même règle s'applique à tous. Chaque proposition affichée est attribuée au candidat par au moins une source qui parle pour lui : le candidat lui-même (discours, entretien, tribune, réseau officiel) ou son site de campagne ; un document officiel de son parti ou de son groupe publié après sa désignation, ou repris par lui ; une personne au rôle officiel dans sa campagne ; un média reconnu qui le cite ou rapporte précisément ses propos, datés, ou deux médias reconnus indépendants qui rapportent la même proposition ; pour une proposition de 2022, une analyse d'une institution reconnue ou d'un média reconnu qui décrit son programme officiel. Un agrégateur, un site non officiel, une seule reprise de presse sans citation ou une étude ne suffisent pas : sans autre source, la proposition n'est pas affichée (le contrôle est automatique, proposition par proposition), et une source qui parle pour le candidat remplace l'agrégateur ou le site non officiel qui portait la même proposition. Une proposition est de 2026 si une telle source la porte en 2026 (site de campagne, document du parti publié depuis la désignation, entretien) ; sinon elle est signalée « non reconfirmée », chez tous ; une page sans date ne reconfirme pas, sauf sur le site de campagne du candidat, ouvert pour cette élection, et quand une partie seulement d'une proposition est redite en 2026, les deux parties sont affichées séparément. Quand un thème compte plus de cinq propositions, on affiche, dans le même ordre pour tous : d'abord celles de 2026 (les non reconfirmées passent après), parmi elles les précises avant les intentions, puis les plus récentes ; à égalité ou à date inconnue, l'ordre déjà affiché est gardé (une page de programme mise à jour n'est pas une nouvelle annonce) ; une proposition remplacée par sa version précise n'est pas gardée en double, et une même proposition n'est affichée que dans un thème, le plus précis (l'énergie et le nucléaire dans « environnement »). Les propositions hors affichage restent notées dans le registre de suivi du projet (dépôt public). Le site n'affiche pas d'avis d'études sur ces propositions : seules les sources qui les attribuent au candidat sont données. Les repères « où en est la France » sont les mêmes pour tous les candidats : pour chaque thème, 7 à 14 chiffres officiels (SSMSI, Insee, DREES, DEPP, Dares, COR, Ofpra, Ancols, Eurostat, OCDE, OTAN, RTE, SDES, Citepa, Banque de France, Cour des comptes, Sénat, etc. ; seul le classement de la liberté de la presse vient d'une ONG, RSF, et il est signalé comme tel), choisis parmi ceux que les bilans officiels mettent en avant, problèmes comme progrès, y compris les faits sensibles (violences sexuelles, part des étrangers parmi les mis en cause) avec leur définition exacte. Chacun donne le dernier chiffre publié, de préférence son évolution sur au moins cinq ans (jamais depuis une année choisie pour son creux ou son pic), et la précaution de lecture donnée par la source (par exemple : délinquance enregistrée, pas commise ; « mis en cause » n'est pas « condamné »). Quatre sont affichés, les autres se déplient. Le site de campagne d'un candidat n'est jamais utilisé comme source sur un autre.",
   "<b>Simulateur.</b> Il applique à votre situation tout gain ou toute perte que le candidat a publiés et confirmés en 2026, qu'ils soient comptés ou non dans notre total, à terme, sans les mesures de financement ; aucun gain n'est compté pour une mesure non confirmée ou sans montant publié (si un paramètre clé manque, une note le dit, sans montant). Droit actuel : retraite comparée au droit actuel après la suspension de la réforme 2023 ; SMIC 1 477,93 € net (juin 2026) ; AAH 1 041,59 € par mois au maximum ; barème 2026 de l'impôt sur le revenu avec décote, sur le net imposable, pour une personne seule (parent isolé si elle a des enfants) ou un couple marié ou pacsé (deux parts, revenu du conjoint de même nature que le vôtre, décote des couples, plafond du quotient au-delà de deux parts ; impôt calculé pour les actifs et les retraités), le même pour les actifs et les retraités (pour une pension : abattement de 10 %, au moins 454 € par pensionné et au plus 4 439 € par foyer, et CSG au taux normal) ; allocations familiales 2026 avant modulation ; minimum vieillesse (ASPA) 1 043,59 € par mois au plus pour une personne seule, 1 620,18 € pour un couple, moins les autres ressources. Les pertes sont comptées comme les gains : aides réservées selon la nationalité ou la durée de séjour (même calcul pour les quatre candidats qui en proposent, chacun avec sa condition, « si la révision de la Constitution passe », et pour un ressortissant de l'UE « si le droit de l'UE change » ; l'AAH et le minimum vieillesse suivent la condition des minima sociaux chez ces quatre candidats, leur mesure visant toutes les prestations non contributives ou les nommant ; hors Union européenne, le minimum vieillesse exige déjà dix ans de titre de séjour permettant de travailler), gel des prestations, baisse des minima ; le logement compte aussi (APL réservées selon la nationalité, relevées de 10 % ou gelées, à partir du montant que vous indiquez ; les mesures sans paramètre publié, comme les prêts à taux zéro, sont signalées en note ; une réduction d'impôt sur les intérêts d'emprunt dont le plafond est publié est affichée « jusqu'à » ce plafond, dans la limite de votre impôt, sans être ajoutée, car elle dépend de vos intérêts) ; les jours de carence et la durée du chômage sont affichés à part, dans les deux sens (une durée allongée comme une durée raccourcie), car ils ne jouent qu'en cas d'arrêt ou de chômage long ; un service obligatoire des jeunes est affiché à part pour les 17-25 ans, avec la rémunération publiée ou retenue dans la fiche, ou une note si elle n'est pas publiée. Le SMIC est un plancher : pour un agent public, le nouveau traitement est le plus élevé des deux, salaire relevé par le point d'indice ou nouveau SMIC, jamais leur somme. Une AAH ou un minimum vieillesse relevés augmentent d'autant l'allocation de tout allocataire (elle complète ses autres ressources jusqu'au montant maximal). Les réformes du quotient familial ou conjugal de chaque candidat s'appliquent au couple (part fiscale, plafond, impôt des jeunes parents ; fin du quotient conjugal : chacun imposé sur son revenu, au même barème, calculée pour un couple sans enfant, une note avec enfants tant que leur répartition n'est pas publiée). Une cantine gratuite rapporte les frais de cantine que vous indiquez. Des droits d'inscription relevés pour les étudiants étrangers sont affichés « jusqu'à » l'écart publié pour un étudiant aujourd'hui exonéré, sans être ajoutés, ou en note si le montant n'est pas publié. Le report de l'âge de la retraite est exprimé en années, avec la durée de cotisation pour le taux plein quand elle est publiée. Un avantage déjà acquis aujourd'hui n'est pas compté comme un gain (heures sup : impôt et cotisations du salarié déjà exonérés). La fin des certificats d'économies d'énergie compte −7 c€ par litre de carburant, TTC (coût moyen officiel de 2022 à 2025), la même hypothèse pour tous les candidats qui la proposent. Une hausse publiée en fourchette (« jusqu'à ») compte pour son montant minimal, l'autre borne étant donnée en note (salaires des enseignants, la même règle pour tous les candidats qui en proposent) ; un gel ne s'applique qu'aux prestations que le programme nomme. Un gain publié pour quelques niveaux de salaire seulement (au SMIC et au salaire médian, par exemple) est appliqué entre ces niveaux par interpolation (notre calcul), au prorata du salaire en dessous du premier, et rien n'est calculé au-dessus du dernier tant que le barème n'est pas publié (une note le dit), sauf quand le mécanisme publié vaut pour tous les salaires (par exemple des cotisations en moins « dès le premier euro ») : le gain est alors au prorata du salaire au-dessus du dernier niveau aussi. Un barème publié par écrit (taux par tranche de salaire) prime sur des montants donnés à l'oral pour quelques niveaux : il est appliqué à chaque salaire, y compris au-delà du dernier seuil, où le gain reste plafonné. Un gain publié qui comprend ou remplace une baisse déjà calculée (une baisse de la CSG, par exemple) ne s'y ajoute jamais : le plus grand des deux est retenu jusqu'au dernier niveau publié, la baisse déjà calculée seule au-delà ; de même, un SMIC visé « baisse de la CSG comprise » ne s'ajoute pas à cette baisse (le plus grand des deux). Un minimum social remplacé par un barème publié (montant sans activité, avec activité, puis dégressif avec le salaire) est calculé sur ce barème. Une baisse de cotisations annoncée pour les « salariés », sans exclure le public, est appliquée aussi aux agents publics (hypothèse écrite dans la note, la même pour tous). Les gains de salaire (hausse du SMIC, du point d'indice ou des salaires des enseignants, baisse de la CSG ou des cotisations) sont comptés après l'impôt sur le revenu qu'ils font payer, avec le même barème pour tous, après la réforme de l'impôt du candidat s'il en propose une : le revenu imposable augmente de la hausse de salaire (rapportée au net imposable) ou de la part déductible du prélèvement baissé (entière pour des cotisations, 6,8 points sur 9,2 pour une baisse de CSG dont la part n'est pas précisée) ; l'impôt dû apparaît sur une ligne à part, et il est nul pour qui reste sous le seuil d'imposition. Pour un retraité, la même règle vaut pour une variation de la pension (un gel fait baisser un peu l'impôt), et la réforme de l'impôt du candidat qui vaut pour tous les contribuables est appliquée (part fiscale, quotient familial, fin de l'abattement de 10 % sur les pensions). Ce sont des ordres de grandeur.",
-  "<b>Quiz.</b> 20 duels tirés au hasard entre deux candidats sur un même thème ; chaque candidat apparaît 5 fois et aucune paire ne se répète. Deux propositions de la même famille (même sens et même instrument : deux retours à 62 ans, deux plans de suppression de postes, deux hausses du salaire des enseignants…) ne s'affrontent jamais, et une famille ne revient qu'une fois par partie : sont de la même famille les propositions qui ont le même « Pour » et le même « Contre », et celles d'une liste publiée avec les données. Les duels portent sur les mesures des fiches (chiffrées ou non chiffrables) et sur les propositions précises et reconfirmées du volet « Vie quotidienne » (école, santé, logement, économie) ; un candidat sans proposition de ce type sur un thème n'y apparaît pas. À l'accueil, on peut choisir les thèmes qui comptent pour soi : ils reviennent plus souvent et comptent double dans le résultat. Chaque proposition est reformulée en langage courant. Dessous, un constat : la réalité française que la proposition veut traiter, avec le chiffre officiel (le dernier chiffre officiel et son évolution en %, même forme pour toutes ; les problèmes réels sont dits clairement, sans cause ni jugement) ; une mesure institutionnelle ou d'organisation (Constitution, référendum, organisation de l'État, des agences ou des établissements), ou une mesure dont aucune série officielle ne mesure ce qu'elle vise, n'a pas de constat, avec la même règle pour toutes. Puis « Pour » et « Contre » donnent en une ligne le meilleur argument réel de ceux qui la défendent et de ceux qui la critiquent : un fait que la proposition ne dit pas d'elle-même (ce qui s'est passé quand elle a été appliquée, un ordre de grandeur), jamais la proposition redite autrement ; avec la force des preuves de chacun (solides, mitigées, faibles, pas d'étude). Sous le duel, des cas réels sourcés (en France d'abord) et l'état des études. Même méthode pour toutes les mesures, sans fausse symétrie : on n'invente ni argument ni exemple pour équilibrer, et un exemple n'est retenu que s'il est pertinent, observé et de source reconnue ; on montre où penchent les faits et le lecteur juge ; les mesures du même type ont les mêmes cas et les mêmes niveaux de preuve. Le « Contre » tient compte du reste du programme : si une autre mesure du même candidat répond à la critique, elle est signalée. Pas de nom de candidat, pas de coût de la mesure, pas de faisabilité juridique, pas de jugement. Le résultat montre d'abord le ou les candidats les plus proches et ce qu'impliquent les propositions retenues (faisabilité, déficit ; « Les deux » compte la moyenne des deux effets), puis une pastille par proposition vue. La proximité est la part des propositions d'un candidat que vous avez retenues (choisie ou « Les deux ») ; une proposition d'un thème que vous marquez compte deux fois. Les égalités ne sont jamais départagées : les ex æquo sont signalés et affichés dans un ordre tiré au hasard. Suivent la tendance par thème, ce qui colle et ce qui colle moins chez les plus proches, et le détail des duels. Quiz : les exemples sont des cas observés en France (ou au niveau de l'Union quand la France y participe) ; quand des évaluations n'existent qu'à l'étranger, l'état des études le dit en une phrase, sans pays ni chiffre, et le niveau de preuve est au plus « faible ».",
+  "<b>Quiz.</b> 20 duels tirés au hasard entre deux candidats sur un même thème ; chaque candidat apparaît 5 fois et aucune paire ne se répète. Deux propositions de la même famille (même sens et même instrument : deux retours à 62 ans, deux plans de suppression de postes, deux hausses du salaire des enseignants…) ne s'affrontent jamais, et une famille ne revient qu'une fois par partie : sont de la même famille les propositions qui ont le même « Pour » et le même « Contre », et celles d'une liste publiée avec les données. Les duels portent sur les mesures des fiches (chiffrées ou non chiffrables) et sur les propositions précises et reconfirmées du volet « Vie quotidienne » (école, santé, logement, économie) ; un candidat sans proposition de ce type sur un thème n'y apparaît pas. À l'accueil, on peut choisir les thèmes qui comptent pour soi : ils reviennent plus souvent et comptent double dans le résultat. Chaque proposition est reformulée en langage courant. Dessous, un constat : la réalité française que la proposition veut traiter, avec le chiffre officiel (le dernier chiffre officiel et son évolution en %, même forme pour toutes ; les problèmes réels sont dits clairement, sans cause ni jugement) ; une mesure institutionnelle ou d'organisation (Constitution, référendum, organisation de l'État, des agences ou des établissements), ou une mesure dont aucune série officielle ne mesure ce qu'elle vise, n'a pas de constat, avec la même règle pour toutes. Puis « Pour » et « Contre » donnent en une ligne le meilleur argument réel de ceux qui la défendent et de ceux qui la critiquent : un fait que la proposition ne dit pas d'elle-même (ce qui s'est passé quand elle a été appliquée, un ordre de grandeur), jamais la proposition redite autrement ; avec la force des preuves de chacun (solides, mitigées, faibles, pas d'étude). Sous le duel, des cas réels sourcés (en France d'abord) et l'état des études. Même méthode pour toutes les mesures, sans fausse symétrie : on n'invente ni argument ni exemple pour équilibrer, et un exemple n'est retenu que s'il est pertinent, observé et de source reconnue ; on montre où penchent les faits et le lecteur juge ; les mesures du même type ont les mêmes cas et les mêmes niveaux de preuve. Le « Contre » tient compte du reste du programme : si une autre mesure du même candidat répond à la critique, elle est signalée. Pas de nom de candidat, pas de coût de la mesure, pas de faisabilité juridique, pas de jugement. Le résultat montre d'abord le ou les candidats les plus proches et ce qu'impliquent les propositions retenues (faisabilité, déficit ; « Les deux » compte la moyenne des deux effets), puis une pastille par proposition vue. La proximité est la part des propositions d'un candidat que vous avez retenues (choisie ou « Les deux ») ; une proposition d'un thème que vous marquez compte deux fois. Les égalités ne sont jamais départagées : les ex æquo sont signalés et affichés dans un ordre tiré au hasard. Suivent la tendance par thème, ce qui colle et ce qui colle moins chez les plus proches, et le détail des duels. Quiz : les exemples sont des cas observés en France (ou au niveau de l'Union quand la France y participe) ; quand des évaluations n'existent qu'à l'étranger, l'état des études le dit en une phrase, sans pays ni chiffre, et le niveau de preuve est au plus « faible ». Une proposition précise et reconfirmée entre au quiz même sans évaluation : le Pour et le Contre disent alors ce que la mesure change concrètement, sans affirmer d'effet, avec le niveau « pas d'étude ».",
   "<b>Sondages et contexte.</b> Intentions de vote au 1er tour : moyenne de 2 instituts (Ifop pour LCI, du 27 au 29/10 ; Toluna Harris Interactive pour M6 et RTL, du 03 au 05/11), dernière vague de chacun dont le terrain s'est achevé dans les 15 jours précédant le 11/11/2026, 15e jour compris ; pour chaque institut, milieu de la fourchette des hypothèses où le candidat est testé, même poids pour chaque institut. L'ordre des candidats suit cette moyenne, et la date de la moyenne est affichée à côté des intentions de vote. Source : notices de la Commission des sondages ; sondages masqués la veille et le jour de chaque tour. PLF 2027, Insee, taux à 10 ans d'octobre 2026. Ménages : 30,9 millions (Insee). 1 point de PIB ≈ 30 Md€."
  ],
  "statu_quo": {
@@ -17483,7 +17547,11 @@
  "changelog": [
   {
    "date": "11/11/2026",
-   "text": "Quiz : encadrement des loyers en zones tendues (Glucksmann) ajouté, avec les mêmes faits que sa suppression chez Retailleau ; complément de l'école de Glucksmann mis à jour après son livret du 9/11 (rénovation de 4 000 écoles primaires par an)."
+   "text": "Simulateur : les boutons « SMIC » et « Salaire moyen » s'affichent dès l'ouverture pour un salarié du privé (ils n'apparaissaient qu'après avoir changé de situation)."
+  },
+  {
+   "date": "11/11/2026",
+   "text": "Quiz : une proposition précise et reconfirmée y entre même sans évaluation (le « Pour » et le « Contre » disent alors ce que la mesure change concrètement, avec le niveau « pas d'étude ») ; 12 propositions d'école, de santé et de logement ajoutées, avec les mêmes faits que les propositions du même type : téléphone portable interdit jusqu'au lycée (Philippe), retour sur la réforme du lycée de 2019 (Glucksmann), Assurance maladie mise en concurrence (Lisnard) et « 100 % Sécu » (Mélenchon), sur le même constat de la Cour des comptes (frais de gestion), dépistages à âge fixé (addiction aux écrans, Attal ; consultations à 16 et 20 ans, Glucksmann), cannabis légalisé, 200 000 logements publics par an et meublés touristiques limités à 60 jours (Mélenchon), exclusion des élèves violents (Le Pen, Zemmour), Parcoursup réformé (Le Pen) ; encadrement des loyers en zones tendues (Glucksmann) ajouté, avec les mêmes faits que sa suppression chez Retailleau ; complément de l'école de Glucksmann mis à jour après son livret du 9/11 (rénovation de 4 000 écoles primaires par an)."
   },
   {
    "date": "11/11/2026",
@@ -24713,6 +24781,434 @@
     ]
    },
    "quiz_fam": "glucksmann.logement.1"
+  },
+  {
+   "c": "philippe",
+   "id": "ecole.4",
+   "life": true,
+   "theme": "ecole",
+   "title": "Interdire le téléphone portable à l'école, au collège et au lycée",
+   "quiz_text": "Interdire le téléphone portable à l'école, au collège et au lycée",
+   "quiz_concret": "L'interdiction, déjà en vigueur à l'école et au collège, s'étend au lycée : un téléphone sorti est confisqué et rendu aux parents.",
+   "quiz_plus": "Là où le portable a été mis à l'écart toute la journée, les collèges disent le climat scolaire meilleur.",
+   "quiz_moins": "L'essai français n'a mesuré ni les notes ni le bien-être : l'effet sur la réussite reste inconnu.",
+   "quiz_preuve_pour": "faible",
+   "quiz_preuve_contre": "pas d'étude",
+   "quiz_cas_pour": [
+    {
+     "t": "Dans plus de 110 collèges et 32 800 élèves privés de portable toute la journée, 78 % des établissements ont jugé l'essai positif, citant un meilleur climat scolaire (ministère de l'Éducation nationale, France, 2025).",
+     "s": [
+      0
+     ]
+    }
+   ],
+   "quiz_cas_contre": [],
+   "quiz_etudes": "Pas d'évaluation française des résultats : l'essai de la « pause numérique » au collège (2024-2025) a été jugé positif par 78 % des établissements, sans mesure des notes ni du bien-être.",
+   "quiz_src": [
+    {
+     "l": "Assemblée nationale, question écrite n° 1865 sur le téléphone portable au collège, réponse du ministère de l'Éducation nationale (bilan de la « pause numérique »)",
+     "a": 2025,
+     "u": "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE1865.pdf"
+    }
+   ],
+   "quiz_fam": "philippe.ecole.4"
+  },
+  {
+   "c": "glucksmann",
+   "id": "ecole.4",
+   "life": true,
+   "theme": "ecole",
+   "title": "Revenir sur la réforme du lycée de 2019, qui a remplacé les séries S, ES et L par des spécialités",
+   "quiz_text": "Revenir sur la réforme du lycée de 2019, qui a remplacé les séries S, ES et L par des spécialités",
+   "quiz_concret": "Le bac par spécialités serait remis en cause ; ce qui le remplacerait n'est pas précisé.",
+   "quiz_plus": "Depuis 2019, moins de filles font beaucoup de maths en terminale : 22 %, contre 33 % en série S.",
+   "quiz_moins": "Le nombre de jeunes femmes qui partent en études scientifiques après le bac est resté stable.",
+   "quiz_preuve_pour": "mitigé",
+   "quiz_preuve_contre": "mitigé",
+   "quiz_cas_pour": [
+    {
+     "t": "La part des filles de terminale qui suivent au moins six heures de mathématiques est passée de 33 % (série S) à 22 % (spécialité mathématiques) après la réforme (IGF-IGESR, via le ministère de l'Éducation nationale, France, 2025).",
+     "s": [
+      0
+     ]
+    }
+   ],
+   "quiz_cas_contre": [
+    {
+     "t": "Le nombre de femmes qui entrent après le bac en études scientifiques et techniques (classes préparatoires, écoles d'ingénieurs, licences, BTS) est resté stable, autour de 25 000 par an (IGF-IGESR, via le ministère de l'Éducation nationale, France, 2025).",
+     "s": [
+      0
+     ]
+    },
+    {
+     "t": "Depuis la rentrée 2023, tous les élèves de première générale ont de nouveau un enseignement de mathématiques (ministère de l'Éducation nationale, France, 2025).",
+     "s": [
+      0
+     ]
+    }
+   ],
+   "quiz_etudes": "Le rapport des inspections générales (IGF-IGESR, 2025) ne trouve pas d'effet significatif de la réforme sur l'orientation des filles vers les études scientifiques, malgré moins de filles en mathématiques renforcées au lycée.",
+   "quiz_src": [
+    {
+     "l": "Assemblée nationale, question écrite n° 2512 sur la réforme du lycée et les filles en mathématiques, réponse du ministère de l'Éducation nationale (rapport IGF-IGESR de février 2025)",
+     "a": 2025,
+     "u": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE2512.pdf"
+    }
+   ],
+   "quiz_fam": "glucksmann.ecole.4"
+  },
+  {
+   "c": "lisnard",
+   "id": "sante.4",
+   "life": true,
+   "theme": "sante",
+   "title": "Mettre l'Assurance maladie en concurrence : chacun choisit l'organisme qui rembourse un panier de soins obligatoire",
+   "quiz_text": "Mettre l'Assurance maladie en concurrence : chacun choisit l'organisme qui rembourse un panier de soins obligatoire",
+   "quiz_concret": "Plusieurs organismes rembourseraient le même panier de soins de base ; chacun choisirait le sien et pourrait en changer.",
+   "quiz_plus": "Chacun choisit son organisme : pour garder ses assurés, il doit mieux servir ou coûter moins.",
+   "quiz_moins": "Les complémentaires, en concurrence, dépensent 27,5 % de ce qu'elles remboursent en gestion, la Sécu 4,6 %.",
+   "quiz_preuve_pour": "pas d'étude",
+   "quiz_preuve_contre": "mitigé",
+   "quiz_cas_pour": [],
+   "quiz_cas_contre": [
+    {
+     "t": "En 2018, la gestion a coûté 4,6 % des dépenses remboursées à l'Assurance maladie, 27,5 % aux complémentaires santé, champs pas tout à fait comparables (Cour des comptes, France, 2021).",
+     "s": [
+      0
+     ]
+    },
+    {
+     "t": "Sur 7,5 Md€ de frais de gestion des complémentaires santé en 2018, près de 3 Md€ (40 %) servaient à attirer de nouveaux clients (Cour des comptes, France, 2021).",
+     "s": [
+      0
+     ]
+    }
+   ],
+   "quiz_etudes": "Pas d'évaluation française de la mise en concurrence de l'Assurance maladie. En France, la gestion des complémentaires santé, en concurrence, coûte bien plus que celle de l'Assurance maladie, rapportée aux remboursements (Cour des comptes, 2021).",
+   "quiz_src": [
+    {
+     "l": "Cour des comptes, Les complémentaires santé : un système très protecteur mais peu efficient",
+     "a": 2021,
+     "u": "https://www.ccomptes.fr/sites/default/files/2021-07/20210721-132-3-1-rapport-complementaires-sante.pdf"
+    }
+   ],
+   "quiz_fam": "lisnard.sante.4"
+  },
+  {
+   "c": "attal",
+   "id": "sante.2",
+   "life": true,
+   "theme": "sante",
+   "title": "Dépister l'addiction aux écrans à l'entrée en sixième et en seconde",
+   "quiz_text": "Dépister l'addiction aux écrans à l'entrée en sixième et en seconde",
+   "quiz_concret": "Chaque élève serait repéré à ces deux moments ; les applications passeraient aussi en noir et blanc après 30 minutes d'utilisation.",
+   "quiz_plus": "Un repérage au même âge pour tous signale tôt les élèves qui ont du mal à décrocher des écrans.",
+   "quiz_moins": "Les bilans de santé déjà prévus à un âge fixé manquent souvent : à 6 ans, moins d'un enfant sur cinq.",
+   "quiz_preuve_pour": "pas d'étude",
+   "quiz_preuve_contre": "mitigé",
+   "quiz_cas_pour": [],
+   "quiz_cas_contre": [
+    {
+     "t": "La visite médicale obligatoire de la 6e année n'a été faite que pour 18 % des enfants en 2018, contre 26 % en 2013 (Cour des comptes, France, 2020).",
+     "s": [
+      0
+     ]
+    },
+    {
+     "t": "Le bilan infirmier de la 12e année n'a été fait que pour 62 % des élèves en 2018 (Cour des comptes, France, 2020).",
+     "s": [
+      0
+     ]
+    }
+   ],
+   "quiz_etudes": "Pas d'évaluation française d'un dépistage de l'addiction aux écrans ni des écrans en noir et blanc. Les visites de santé obligatoires à l'école ne touchent qu'une partie des élèves (Cour des comptes, 2020).",
+   "quiz_src": [
+    {
+     "l": "Cour des comptes, Les médecins et les personnels de santé scolaire",
+     "a": 2020,
+     "u": "https://www.ccomptes.fr/sites/default/files/2023-10/20200527-rapport-58-2-medecins-personnels-sante-scolaire.pdf"
+    }
+   ],
+   "quiz_fam": "glucksmann.sante.1"
+  },
+  {
+   "c": "glucksmann",
+   "id": "sante.1",
+   "life": true,
+   "theme": "sante",
+   "title": "Des consultations gratuites de dépistage pour tous les jeunes, à 16 et à 20 ans",
+   "quiz_text": "Des consultations gratuites de dépistage pour tous les jeunes, à 16 et à 20 ans",
+   "quiz_concret": "Deux rendez-vous de santé entièrement pris en charge, pour repérer tôt un problème de santé.",
+   "quiz_plus": "Deux rendez-vous de santé gratuits pour chaque jeune, pour repérer tôt un trouble ou un risque.",
+   "quiz_moins": "Les bilans de santé déjà prévus à un âge fixé manquent souvent : à 6 ans, moins d'un enfant sur cinq.",
+   "quiz_preuve_pour": "pas d'étude",
+   "quiz_preuve_contre": "mitigé",
+   "quiz_cas_pour": [],
+   "quiz_cas_contre": [
+    {
+     "t": "La visite médicale obligatoire de la 6e année n'a été faite que pour 18 % des enfants en 2018, contre 26 % en 2013 (Cour des comptes, France, 2020).",
+     "s": [
+      0
+     ]
+    },
+    {
+     "t": "Le bilan infirmier de la 12e année n'a été fait que pour 62 % des élèves en 2018 (Cour des comptes, France, 2020).",
+     "s": [
+      0
+     ]
+    }
+   ],
+   "quiz_etudes": "Pas d'évaluation française de consultations de dépistage à 16 et à 20 ans. Les visites de santé obligatoires à l'école ne touchent qu'une partie des élèves (Cour des comptes, 2020).",
+   "quiz_src": [
+    {
+     "l": "Cour des comptes, Les médecins et les personnels de santé scolaire",
+     "a": 2020,
+     "u": "https://www.ccomptes.fr/sites/default/files/2023-10/20200527-rapport-58-2-medecins-personnels-sante-scolaire.pdf"
+    }
+   ],
+   "quiz_fam": "glucksmann.sante.1"
+  },
+  {
+   "c": "melenchon",
+   "id": "sante.5",
+   "life": true,
+   "theme": "sante",
+   "title": "Légaliser le cannabis, pour soigner et pour le loisir, avec une production et une vente réservées à l'État",
+   "quiz_text": "Légaliser le cannabis, pour soigner et pour le loisir, avec une production et une vente réservées à l'État",
+   "quiz_concret": "L'État produirait et vendrait seul le cannabis ; en consommer ne serait plus puni.",
+   "quiz_plus": "Vendu par l'État, il aurait une teneur contrôlée ; celle de la résine de rue a plus que doublé depuis 2011.",
+   "quiz_moins": "Rendu légal et vendu en boutique, le cannabis devient plus facile à acheter pour les adultes.",
+   "quiz_preuve_pour": "faible",
+   "quiz_preuve_contre": "pas d'étude",
+   "quiz_cas_pour": [
+    {
+     "t": "La teneur moyenne en THC de la résine de cannabis est passée de 12,3 % en 2011 à 29 % en 2023 (OFDT, France, 2025).",
+     "s": [
+      0
+     ]
+    }
+   ],
+   "quiz_cas_contre": [],
+   "quiz_etudes": "Pas d'évaluation française de la légalisation. La teneur en THC de la résine vendue en France a plus que doublé depuis 2011 (OFDT).",
+   "quiz_src": [
+    {
+     "l": "OFDT, Cannabis : résine, herbe, huile, CBD, synthèse des connaissances",
+     "a": 2025,
+     "u": "https://www.ofdt.fr/cannabis-resine-herbe-huile-cbd-synthese-des-connaissances-1724"
+    }
+   ],
+   "quiz_constat": {
+    "t": "Usage de cannabis dans l'année : 10,8 % des 18-64 ans en 2023, stable depuis près de dix ans (OFDT).",
+    "s": [
+     0
+    ]
+   },
+   "quiz_fam": "melenchon.sante.5"
+  },
+  {
+   "c": "le-pen",
+   "id": "ecole.1",
+   "life": true,
+   "theme": "ecole",
+   "title": "Exclure du lycée ou de l'université les jeunes de plus de 16 ans qui dégradent ou menacent",
+   "quiz_text": "Exclure du lycée ou de l'université les jeunes de plus de 16 ans qui dégradent ou menacent",
+   "quiz_concret": "Un lycéen ou un étudiant de plus de 16 ans auteur de dégradations ou de menaces perdrait sa place dans son établissement.",
+   "quiz_plus": "Écarter un élève très perturbateur protège les cours et les apprentissages de ses camarades.",
+   "quiz_moins": "Un élève exclu sans école prête à l'accueillir risque de rester sans formation ni diplôme.",
+   "quiz_preuve_pour": "faible",
+   "quiz_preuve_contre": "faible",
+   "quiz_cas_pour": [],
+   "quiz_cas_contre": [],
+   "quiz_etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent qu'un élève perturbateur pèse durablement sur ses camarades, et que les élèves exclus quittent plus souvent l'école sans diplôme.",
+   "quiz_src": [
+    {
+     "l": "DEPP, Note d'information n° 26.03, Les signalements d'incidents graves en 2024-2025 (enquête Sivis)",
+     "a": 2026,
+     "u": "https://www.education.gouv.fr/sites/default/files/document/Note%20d%26%23039%3BInformation%20n%C2%B0%2026-03-479480.pdf"
+    }
+   ],
+   "quiz_constat": {
+    "t": "Incidents graves signalés en collège et lycée : 14 pour 1 000 élèves en 2024-2025, 16 l'année précédente (DEPP).",
+    "s": [
+     0
+    ]
+   },
+   "quiz_fam": "retailleau.ecole.5"
+  },
+  {
+   "c": "zemmour",
+   "id": "ecole.2",
+   "life": true,
+   "theme": "ecole",
+   "title": "Exclure les élèves violents, sans obligation de leur trouver une autre école",
+   "quiz_text": "Exclure les élèves violents, sans obligation de leur trouver une autre école",
+   "quiz_concret": "Un élève violent exclu ne serait plus forcément accueilli dans un autre établissement public.",
+   "quiz_plus": "Écarter un élève très perturbateur protège les cours et les apprentissages de ses camarades.",
+   "quiz_moins": "Un élève exclu sans école prête à l'accueillir risque de rester sans formation ni diplôme.",
+   "quiz_preuve_pour": "faible",
+   "quiz_preuve_contre": "faible",
+   "quiz_cas_pour": [],
+   "quiz_cas_contre": [],
+   "quiz_etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent qu'un élève perturbateur pèse durablement sur ses camarades, et que les élèves exclus quittent plus souvent l'école sans diplôme.",
+   "quiz_src": [
+    {
+     "l": "DEPP, Note d'information n° 26.03, Les signalements d'incidents graves en 2024-2025 (enquête Sivis)",
+     "a": 2026,
+     "u": "https://www.education.gouv.fr/sites/default/files/document/Note%20d%26%23039%3BInformation%20n%C2%B0%2026-03-479480.pdf"
+    }
+   ],
+   "quiz_constat": {
+    "t": "Incidents graves signalés en collège et lycée : 14 pour 1 000 élèves en 2024-2025, 16 l'année précédente (DEPP).",
+    "s": [
+     0
+    ]
+   },
+   "quiz_fam": "retailleau.ecole.5"
+  },
+  {
+   "c": "le-pen",
+   "id": "ecole.2",
+   "life": true,
+   "theme": "ecole",
+   "title": "Réformer Parcoursup : vœux à la fin du 2e trimestre et critères de chaque formation rendus publics",
+   "quiz_text": "Réformer Parcoursup : vœux à la fin du 2e trimestre et critères de chaque formation rendus publics",
+   "quiz_concret": "Les lycéens choisiraient leurs vœux à la fin du 2e trimestre et verraient sur quels critères chaque formation classe les dossiers.",
+   "quiz_plus": "Les classements restent opaques : jusqu'à une licence très demandée sur cinq tient compte du lycée d'origine.",
+   "quiz_moins": "Chaque formation publie déjà ses critères et leur poids, et un rapport sur son examen des dossiers.",
+   "quiz_preuve_pour": "mitigé",
+   "quiz_preuve_contre": "mitigé",
+   "quiz_cas_pour": [
+    {
+     "t": "Jusqu'à 20 % des commissions des licences les plus demandées ont tenu compte du lycée d'origine des candidats en 2019 (Cour des comptes, France, 2020).",
+     "s": [
+      0
+     ]
+    }
+   ],
+   "quiz_cas_contre": [
+    {
+     "t": "Depuis 2023, chaque formation indique sur Parcoursup le poids de ses critères d'examen ; plus de 11 000 rapports sur l'examen des vœux sont publiés chaque année (ministère de l'Enseignement supérieur, France, 2024).",
+     "s": [
+      3
+     ]
+    }
+   ],
+   "quiz_etudes": "Aucune évaluation d'une publication complète des critères. La Cour des comptes (2020) jugeait les critères peu transparents ; depuis, chaque formation publie le poids de ses critères et un rapport annuel.",
+   "quiz_src": [
+    {
+     "l": "Cour des comptes, Un premier bilan de l'accès à l'enseignement supérieur dans le cadre de la loi ORE",
+     "a": 2020,
+     "u": "https://www.ccomptes.fr/system/files/2020-03/20200227-rapport-premier-bilan-loi-ORE-3.pdf"
+    },
+    {
+     "l": "SIES, Note Flash n° 26, Parcoursup 2026 : les propositions d'admission dans l'enseignement supérieur",
+     "a": 2026,
+     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-10/NF2_Admission_Parcoursup_2026_def.pdf"
+    },
+    {
+     "l": "SIES, Note Flash n° 29, Parcours et réussite en licence : les résultats de la session 2024",
+     "a": 2025,
+     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf"
+    },
+    {
+     "l": "Assemblée nationale, question écrite n° 11371 sur la transparence de Parcoursup, réponse du ministère de l'Enseignement supérieur",
+     "a": 2024,
+     "u": "https://questions.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE11371.pdf"
+    }
+   ],
+   "quiz_constat": {
+    "t": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 49,1 % passent en 2e année de licence (SIES).",
+    "s": [
+     1,
+     2
+    ]
+   },
+   "quiz_fam": "le-pen.ecole.2"
+  },
+  {
+   "c": "melenchon",
+   "id": "logement.2",
+   "life": true,
+   "theme": "logement",
+   "title": "Construire 200 000 logements publics par an pendant cinq ans",
+   "quiz_text": "Construire 200 000 logements publics par an pendant cinq ans",
+   "quiz_concret": "Les organismes publics bâtiraient un million de logements sur le quinquennat.",
+   "quiz_plus": "Construire davantage de logements augmente l'offre et freine la hausse des loyers.",
+   "quiz_moins": "Des logements publics en plus remplacent en partie des logements privés qui se seraient construits.",
+   "quiz_preuve_pour": "faible",
+   "quiz_preuve_contre": "faible",
+   "quiz_cas_pour": [],
+   "quiz_cas_contre": [],
+   "quiz_etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent que plus de logements neufs modèrent les loyers, mais que des logements publics en plus remplacent en partie des constructions privées.",
+   "quiz_src": [
+    {
+     "l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+     "a": 2026,
+     "u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+    },
+    {
+     "l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+     "a": 2026,
+     "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
+    }
+   ],
+   "quiz_constat": {
+    "t": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+    "s": [
+     0,
+     1
+    ]
+   },
+   "quiz_fam": "retailleau.logement.1"
+  },
+  {
+   "c": "melenchon",
+   "id": "logement.3",
+   "life": true,
+   "theme": "logement",
+   "title": "Limiter à 60 jours par an la location d'un logement aux touristes",
+   "quiz_text": "Limiter à 60 jours par an la location d'un logement aux touristes",
+   "quiz_concret": "Au-delà de 60 jours dans l'année, un logement ne pourrait plus être loué en meublé de tourisme.",
+   "quiz_plus": "Plus de meublés touristiques fait monter les loyers dans certaines grandes villes, dont Paris et Lyon.",
+   "quiz_moins": "Hors de quelques grandes villes, les meublés touristiques n'ont pas d'effet mesuré sur les loyers.",
+   "quiz_preuve_pour": "mitigé",
+   "quiz_preuve_contre": "mitigé",
+   "quiz_cas_pour": [
+    {
+     "t": "Plus il y a de logements loués aux touristes, plus les loyers sont élevés à Paris, Lyon et Montpellier (Ayouba et al., France, 2020).",
+     "s": [
+      0
+     ]
+    },
+    {
+     "t": "À Bordeaux, l'enregistrement obligatoire et la limite de 120 jours par an pour une résidence principale ont réduit de 43 % les jours loués aux touristes (Robertson, Dejean et Suire, France, 2024).",
+     "s": [
+      1
+     ]
+    }
+   ],
+   "quiz_cas_contre": [
+    {
+     "t": "Pas d'effet significatif des locations touristiques sur les loyers dans cinq des huit grandes villes étudiées (Ayouba et al., France, 2020).",
+     "s": [
+      0
+     ]
+    }
+   ],
+   "quiz_etudes": "Des études françaises trouvent que plus de meublés touristiques fait monter les loyers à Paris, Lyon et Montpellier, sans effet net dans cinq autres grandes villes ; à Bordeaux, l'encadrement a fait reculer de 43 % les jours loués aux touristes. Pas d'évaluation de l'effet d'une limite de jours sur les loyers.",
+   "quiz_src": [
+    {
+     "l": "Ayouba, Breuillé, Grivault et Le Gallo, Does Airbnb Disrupt the Private Rental Market? An Empirical Analysis for French Cities (International Regional Science Review)",
+     "a": 2020,
+     "u": "https://ideas.repec.org/a/sae/inrsre/v43y2020i1-2p76-104.html"
+    },
+    {
+     "l": "Robertson, Dejean et Suire, « Airbnb in the City » : assessing short-term rental regulation in Bordeaux (The Annals of Regional Science)",
+     "a": 2024,
+     "u": "https://nudd.univ-larochelle.fr/app/uploads/sites/10/2024/07/Airbnb20in20the20City20published.pdf"
+    }
+   ],
+   "quiz_fam": "melenchon.logement.3"
   }
  ]
 }
