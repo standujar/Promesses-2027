@@ -25,6 +25,12 @@ with sync_playwright() as p:
         check(not errs, f'{scheme} : aucune erreur JS {errs[:1]}')
         pg.close()
 
+    # simulateur au premier affichage (statut par défaut « salarié du privé ») : boutons SMIC et salaire moyen présents, comme pour les autres statuts (11/11/2026)
+    pg = b.new_page(viewport={'width': 390, 'height': 800}); pg.goto(URL); pg.wait_for_timeout(400); pg.evaluate("go('moi')"); pg.wait_for_timeout(150)
+    r = pg.evaluate("[S.status, [...document.querySelectorAll('#s-presets button')].map(x=>x.textContent.split(' ')[0])]")
+    check(r[0] == 'prive' and r[1] == ['SMIC', 'Salaire'], f'simulateur : boutons SMIC et salaire moyen dès le premier affichage, statut salarié du privé {r}')
+    pg.close()
+
     # ordinateur : page large en colonnes (fiches sur deux colonnes, colonne latérale fixe, simulateur à deux colonnes, sommaire de la méthode), sans débordement
     for W in (1100, 1440, 1920):
         pg = b.new_page(viewport={'width': W, 'height': 900}); errs = []

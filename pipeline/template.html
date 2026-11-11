@@ -959,7 +959,7 @@ const LABELS={prive:'Salaire net mensuel',public:'Salaire net mensuel',enseignan
 const MAXS={prive:8000,public:8000,enseignant:6000,independant:10000,chomage:8800,minima:1500,aah:Math.ceil(SQ.aah),etudiant:2000,retraite:6000};
 const STEPS={minima:1,aah:1,etudiant:10};
 const DEF={prive:1480,public:2200,enseignant:2400,independant:2500,chomage:1100,minima:650,aah:Math.round(SQ.aah),etudiant:400,retraite:1500};
-let lastSt='prive';
+let lastSt=null; // null : les boutons SMIC / salaire moyen et le curseur sont posés dès le premier affichage (statut par défaut compris)
 const DEFY={etudiant:2006,retraite:1958};
 const fmtD=d=>Math.abs(d)<0.01?'inchangé':(d<0?`${ageTxt(-d)} plus tôt`:`${ageTxt(d)} plus tard`);
 let simT=null;
