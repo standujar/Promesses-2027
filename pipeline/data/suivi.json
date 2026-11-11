@@ -3918,10 +3918,10 @@
    "sujet": "Simulateur : profil « en couple » (quotient familial, jeunes parents)",
    "detail": "L'impôt est calculé pour une personne seule ou un parent isolé. Les mesures sur le quotient familial (Le Pen, part entière dès le 2e enfant ; Lisnard, quotient sans plafond ; Zemmour, quotient doublé, non reconfirmé) et l'impôt des jeunes parents de Philippe visent surtout les couples avec enfants : gain sous-estimé ou nul pour eux. À ajouter : profil « en couple » (deux parts, revenu du conjoint), même barème pour tous.",
    "echeance": null,
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-08",
-   "maj": "2026-11-08",
-   "resolution": null
+   "maj": "2026-11-11",
+   "resolution": "Fait le 11/11 (bloc « review 47 » de corrections.py, simulateur) : réglage « Déclaration d'impôt : seul / en couple (marié, pacsé) » et revenu net du conjoint (même nature que le vôtre). Même barème pour tous : deux parts, demi-part par enfant pour les deux premiers, plafond du quotient au-delà de deux parts, décote des couples 1 483 € (service-public.gouv.fr, F34328, vérifié le 15/04/2026), abattement des pensions par pensionné. Réformes appliquées au couple : Le Pen (part entière dès le 2e enfant), Lisnard (quotient sans plafond), Philippe (impôt des jeunes parents, impôt du foyer), Mélenchon (« Mettre fin au quotient conjugal », programme du 6/11 : chacun imposé sur son revenu au même barème, calculé pour un couple sans enfant ; note avec enfants, répartition et crédit d'impôt par enfant non publiés). Zemmour (quotient doublé) : non reconfirmé, rien. Contrôle smoke : impôt du foyer égal au calcul de référence. Reste : S286."
   },
   {
    "id": "S229",
@@ -3933,10 +3933,10 @@
    "sujet": "Simulateur : étudiant étranger hors UE (droits d'inscription différenciés)",
    "detail": "Fiche comptée : droits différenciés pour tous les étudiants hors UE (écarts de 2 724 € en licence et 3 695 € en master selon la formule de la fiche). Profil étudiant + nationalité hors UE possible, rien n'est affiché. À ajouter : ligne « jusqu'à » ou note pour un étudiant hors UE aujourd'hui exonéré, même forme que les autres pertes.",
    "echeance": null,
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-08",
-   "maj": "2026-11-08",
-   "resolution": null
+   "maj": "2026-11-11",
+   "resolution": "Fait le 11/11 (review 47) : profil étudiant étranger. Retailleau et Philippe (même mesure, S249) : ligne « Droits d'inscription » « jusqu'à » 3 695 € par an de plus en master (2 724 € en licence) pour un étudiant hors UE aujourd'hui exonéré, non ajoutée au total (même forme que la réduction d'impôt sur les intérêts d'emprunt) ; Le Pen et Zemmour : note sans montant (montant non publié). Contrôle smoke."
   },
   {
    "id": "S230",
@@ -3948,10 +3948,10 @@
    "sujet": "Simulateur : frais de cantine (cantine gratuite)",
    "detail": "Fiche comptée (cantine scolaire gratuite) ; le simulateur ne connaît pas les frais de cantine du ménage : note seulement. À ajouter : curseur « cantine par mois » visible avec des enfants, gain = frais saisis chez tout candidat qui propose la gratuité.",
    "echeance": null,
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-08",
-   "maj": "2026-11-08",
-   "resolution": null
+   "maj": "2026-11-11",
+   "resolution": "Fait le 11/11 (review 47) : curseur « Cantine payée par mois » visible avec des enfants ; gain = frais indiqués chez tout candidat qui propose la gratuité (Mélenchon, « gratuité réelle de l'éducation publique, y compris de la cantine », programme du 6/11) ; sans frais indiqués, une note. Pas de valeur par défaut (aucun tarif moyen officiel retenu : le gain dépend des frais de chaque famille). Contrôle smoke."
   },
   {
    "id": "S231",
@@ -3966,10 +3966,10 @@
    "sujet": "Simulateur : minimum vieillesse (ASPA)",
    "detail": "Un retraité au minimum vieillesse n'est pas représentable : Zemmour réserve l'ASPA aux Français (fiche « aides », comptée si la révision passe) ; Mélenchon (seuil de pauvreté), Le Pen et Lisnard (1 000 €, déjà dépassé) en texte. À ajouter : case « je touche le minimum vieillesse », perte selon la même condition que les minima, montant 2026 de service-public.gouv.fr. 8/11 : le minimum vieillesse à 1 000 € de Le Pen et de Lisnard (2022, non reconfirmé) est retiré des notes (S239).",
    "echeance": null,
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-08",
-   "maj": "2026-11-08",
-   "resolution": null
+   "maj": "2026-11-11",
+   "resolution": "Fait le 11/11 (review 47) : case « Je touche le minimum vieillesse (ASPA) » pour les retraités ; montants 2026 de service-public.gouv.fr (F16871, vérifié le 23/06/2026 : 1 043,59 € pour une personne seule, 1 620,18 € pour un couple ; hors UE, dix ans de titre de séjour permettant de travailler) ; allocation différentielle (montant maximal moins les autres ressources). Perte selon la même condition que les minima et l'AAH (Le Pen, Lisnard, Retailleau, Zemmour, « si la révision passe ») ; hors UE avec moins de 5 ans en France, pas de minimum vieillesse aujourd'hui (aucune perte) ; Mélenchon : « le minimum vieillesse au niveau du seuil de pauvreté », 1 337 € pour une personne seule selon le programme du 6/11 (gain = nouveau montant − ancien) ; couple : note (montant non publié) ; Attal : gel de « toutes les prestations sociales » sauf petites retraites, même seuil supposé que pour les pensions (minimum vieillesse épargné). Contrôle smoke."
   },
   {
    "id": "S232",
@@ -4134,10 +4134,10 @@
    "sujet": "Mélenchon : service public de la petite enfance (500 000 places, crèches publiques gratuites) non chiffré",
    "detail": "Programme du 6/11 : « Planifier l'ouverture progressive de 500 000 places pour l'accueil des jeunes enfants » ; « Garantir la gratuité des crèches publiques ». Calcul ascendant possible avec le coût public de fonctionnement d'une place et la participation des familles aux crèches publiques (Cnaf, Observatoire national de la petite enfance ; Cour des comptes, rapport du 12/12/2024).",
    "echeance": null,
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-08",
-   "maj": "2026-11-08",
-   "resolution": "Liste « non comptée » le 8/11 (décision du porteur : fiche seulement si les valeurs officielles sont ouvertes) ; valeurs officielles non ouvertes ce jour. À chiffrer (70 % du plan en 2030, règle des objectifs sans date)."
+   "maj": "2026-11-11",
+   "resolution": "Liste « non comptée » le 8/11 (décision du porteur : fiche seulement si les valeurs officielles sont ouvertes) ; valeurs officielles non ouvertes ce jour. À chiffrer (70 % du plan en 2030, règle des objectifs sans date). — Fait le 11/11 (review 47) : fiche « Petite enfance : 500 000 places, crèches publiques gratuites », −5,2 Md€ (−10,2 à −3,9), comptée ; total de Mélenchon −242,7 → −247,9. Valeurs officielles ouvertes : Cour des comptes, « La politique d'accueil du jeune enfant », décembre 2024 (https://www.vie-publique.fr/files/rapport/pdf/296579.pdf) : « coût annuel public de l'accueil formel (hors préscolarisation et investissement), évalué à 13 000 € par place » (p. 170), participations familiales des crèches PSU 1,252 Md€ en 2022 (p. 101), coût d'investissement 50 000 € par place dans le secteur public ; Cnaf, Onape 2025 : collectivités, 55 % des places de crèche PSU (2024). Règle appliquée : plan progressif sans date → 70 % ; même forme que les places de prison (fonctionnement compté, construction en borne). Répartition des 500 000 places non publiée : coût moyen d'une place d'accueil formel (crèches et assistantes maternelles). Non compté : voir S285."
   },
   {
    "id": "S243",
@@ -4243,10 +4243,10 @@
    "sujet": "Droits d'inscription des étudiants extra-européens : fiche chez Retailleau seulement",
    "detail": "Philippe (« appliquer réellement la hausse des droits d'inscription des étudiants extra-européens », site), Le Pen et Zemmour : listés « non comptés » (montant non publié) ; Retailleau garde sa fiche (+0,07, droits différenciés pour tous les étudiants hors UE). Écart à régler : même champ ou non (Retailleau étend les droits différenciés à tous ; Philippe veut appliquer ceux qui existent).",
    "echeance": null,
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-08",
-   "maj": "2026-11-08",
-   "resolution": "Philippe ajouté à la liste non comptée le 8/11 (décision du porteur), même lecture que Le Pen et Zemmour ; reste à vérifier si la base de la fiche de Retailleau permet de chiffrer les autres (voir aussi S229, simulateur)."
+   "maj": "2026-11-11",
+   "resolution": "Philippe ajouté à la liste non comptée le 8/11 (décision du porteur), même lecture que Le Pen et Zemmour ; reste à vérifier si la base de la fiche de Retailleau permet de chiffrer les autres (voir aussi S229, simulateur). — Tranché le 11/11 en appliquant la règle écrite (review 47) : seule la règle des budgets ligne à ligne fixe un seuil de 1 Md€ (lignes à ajouter) ; les fiches sous 1 Md€ restent (AME 0,9, prisons 0,6…). Une fiche par candidat, même méthode que celle de Retailleau (droit en vigueur en 2030 : exonérations plafonnées à 20 %, décret du 19/05/2026 ; la mesure les supprime). Philippe (« appliquer réellement la hausse des droits d'inscription des étudiants extra-européens », site) : même champ et mêmes droits, +0,07 (0 à 0,09), compté (total −0,3 → −0,2). Le Pen (contre-budget 2027 : « Hausse des frais de scolarité des étudiants étrangers (sauf conventions interétatiques) 1,100 », vérifié sur le PDF du groupe RN) et Zemmour (budget2027.fr : « Fin de la gratuité des études pour les étudiants étrangers », 4 Md€) : montant des droits non publié, fiches non chiffrables (fourchette indicative en note : +0,11 Md€ par tranche de 1 000 € sur les 111 400 étudiants du périmètre), retirées des listes « non comptées ». Verdict : faisable (décret et arrêté). Suite : S284."
   },
   {
    "id": "S250",
@@ -4783,6 +4783,77 @@
    "mesure": "life",
    "sujet": "Philippe : intentions du 9/11 (Chartres) non affichées",
    "detail": "Capital (9/11) : prévention, dépistage et vaccination avec les maires ; compétences des infirmières, kinés et pharmaciens ; IA et soins à distance (santé) ; apprentissage et alternance à développer (économie) ; financer la protection sociale « autrement qu'en ponctionnant les salaires avec 28 % de charges » (aucun paramètre). Intentions sans dispositif ni chiffre ; départ à 65 ans et 45 années de cotisations redits (fiche inchangée). À examiner selon la règle d'ordre (S106).",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-11",
+   "maj": "2026-11-11",
+   "resolution": null
+  },
+  {
+   "id": "S284",
+   "type": "non_chiffrable",
+   "candidats": [
+    "le-pen",
+    "zemmour"
+   ],
+   "mesure": "etudiants_etrangers",
+   "sujet": "Droits d'inscription des étudiants étrangers : montant non publié (Le Pen, Zemmour)",
+   "detail": "Fiches non chiffrables depuis le 11/11 (S249) : Le Pen (contre-budget 2027, 1,1 Md€ selon le camp, « sauf conventions interétatiques ») et Zemmour (budget2027.fr, 4 Md€) ne publient ni le montant des droits ni le champ (étudiants de l'UE ou non). À compter avec la même méthode que Retailleau et Philippe dès qu'un montant ou un champ est publié (programme écrit de Zemmour attendu ; réforme détaillée du RN).",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-11",
+   "maj": "2026-11-11",
+   "resolution": null
+  },
+  {
+   "id": "S285",
+   "type": "non_chiffrable",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "petite_enfance",
+   "sujet": "Petite enfance (Mélenchon) : volets non comptés et base de 2022",
+   "detail": "Fiche comptée le 11/11 (S242) sur le fonctionnement des places et la gratuité des crèches publiques existantes. Non comptés faute de paramètre publié : hausse des salaires des professionnelles, norme d'encadrement (5 enfants par adulte), part des 500 000 places en crèche publique gratuite (leur participation familiale, ≈ 17 % du fonctionnement), gel du secteur privé lucratif et fin de ses aides publiques. Coût public par place de la Cour des comptes (13 000 €) établi sur des données antérieures à 2024 : à remplacer si la Cnaf ou la Cour publient une valeur plus récente.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-11",
+   "maj": "2026-11-11",
+   "resolution": null
+  },
+  {
+   "id": "S286",
+   "type": "a_ajouter",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": null,
+   "sujet": "Simulateur, couple : gains du conjoint et impôt des non-actifs non calculés",
+   "detail": "Profil « en couple » ajouté le 11/11 (S228) : le revenu du conjoint ne sert qu'au calcul de l'impôt du foyer (supposé de même nature que le vôtre) ; les gains ou pertes du conjoint (SMIC, CSG, pension…) ne sont pas calculés, et l'impôt du couple n'est calculé que pour les actifs et les retraités (pas pour un demandeur d'emploi, un allocataire ou un étudiant dont le conjoint travaille). Mélenchon, fin du quotient conjugal avec enfants : note tant que la répartition des enfants et le crédit d'impôt par enfant ne sont pas publiés.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-11",
+   "maj": "2026-11-11",
+   "resolution": null
+  },
+  {
+   "id": "S287",
+   "type": "a_verifier",
+   "candidats": [
+    "philippe",
+    "retailleau",
+    "le-pen",
+    "zemmour"
+   ],
+   "mesure": "etudiants_etrangers",
+   "sujet": "Quiz : fiches « droits d'inscription des étudiants étrangers » ajoutées le 11/11",
+   "detail": "La fiche de Retailleau est au quiz ; celles ajoutées le 11/11 (Philippe, compté ; Le Pen et Zemmour, non chiffrables) n'ont pas d'entrée dans quiz_plain.json. À examiner avec la règle du quiz : même famille que Retailleau si Philippe entre au quiz (mêmes Pour et Contre pour une même mesure).",
    "echeance": null,
    "statut": "ouvert",
    "cree": "2026-11-11",

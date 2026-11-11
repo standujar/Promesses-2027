@@ -726,5 +726,10 @@
 "Rendre l'école obligatoire jusqu'à 18 ans",
 "L'école est obligatoire jusqu'à 16 ans, puis une formation, un apprentissage ou un emploi jusqu'à 18 ans ; l'école le deviendrait jusqu'à 18 ans.",
 "Scolarité obligatoire jusqu'à 18 ans"
+],
+"glucksmann.logement.1": [
+"Encadrer les loyers dans les villes où le logement manque",
+"Dans les zones où le logement manque, le loyer d'une location ne pourrait pas dépasser un plafond fixé selon le quartier et le type de logement.",
+"Encadrement des loyers en zones tendues"
 ]
 }
