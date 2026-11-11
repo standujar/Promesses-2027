@@ -18,6 +18,10 @@
   "Taxes sur l'énergie et les carburants en baisse": ["le-pen.tva", "le-pen.ticpe", "zemmour.accise"],
   "CSG sur les salaires en baisse": ["lisnard.csg_deductible", "lisnard.csg_actifs", "zemmour.csg"],
   "Impôt sur le revenu des familles en baisse": ["le-pen.part-fiscale", "philippe.jeunes_parents", "lisnard.quotient"],
-  "Gel des prestations": ["attal.annee_blanche", "lisnard.gel_pensions"]
+  "Gel des prestations": ["attal.annee_blanche", "lisnard.gel_pensions"],
+  "Écarter les élèves violents ou perturbateurs": ["retailleau.ecole.5", "le-pen.ecole.1", "zemmour.ecole.2"],
+  "Dépistages de santé à un âge fixé": ["glucksmann.sante.1", "attal.sante.2"],
+  "Construire plus de logements": ["retailleau.logement.1", "melenchon.logement.2"],
+  "Soins remboursés entièrement par la Sécurité sociale": ["le-pen.dentaire", "melenchon.secu100"]
  }
 }
