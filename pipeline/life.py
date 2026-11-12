@@ -1384,6 +1384,52 @@ _txt('glucksmann', 'environnement', "Leasing social : 1 million de voitures éle
 _so('glucksmann', 'environnement', add=[G_LIVRET])
 _so('glucksmann', 'economie', add=[LCP0911])
 
+# --- review 48 : revue du 12/11 (12/11/2026) ; registre S106, S280 et suivants
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; à égalité ou
+# à date inconnue, ordre affiché gardé, S106). Une proposition nouvelle se place après les précises de 2026 déjà affichées, sans réordonner
+# les autres ; au-delà de 5, sort celle que la règle classe dernière (même forme que les remplacements du 8/11 chez Lisnard et Le Pen).
+# Test « précis » : un changement de droit nommé, un chiffre ou un ordre de grandeur publié, une échéance ou un niveau scolaire nommé ;
+# l'expulsion d'une catégorie nommée d'étrangers est précise, comme les propositions d'expulsion déjà affichées. Sources ouvertes le 12/11.
+# Zemmour, JT de 20 h de TF1 (10/11), transcription de l'entretien publiée par TF1 Info et direct de TF1 Info (média reconnu) :
+#  - libertés (nationalité, même thème que le droit du sol de Mélenchon) : fin du droit du sol par « un référendum sur la politique
+#    migratoire » (précise : droit nommé) ; 4 → 5, après les précises de 2026 ;
+#  - rayonnement (entrées d'étrangers, même thème que les visas et l'asile de Philippe et Retailleau) : étudiants étrangers réduits « à
+#    quelques milliers seulement », par le même référendum (précise : ordre de grandeur publié et voie nommée) ; 2 → 3, en tête (2026) ;
+#  - sécurité : « les prisonniers, les délinquants, les criminels étrangers, je les renvoie » (S280 : publié par TF1 Info) ; 6e proposition
+#    du thème, toutes de 2026 et précises : sort la moins récente, « Déchéance de nationalité puis départ des binationaux auteurs des
+#    violences » (18/10 ; S106).
+#  « Loi liberticide » que le candidat abolirait (loi non nommée) : registre, rien d'affiché.
+# Attal, franceinfo (« Nos services publics », 12/11) :
+#  - école : fermeture des filières professionnelles à faible insertion, ouverture dans les métiers qui recrutent, « classes passerelles »
+#    entre primaire et collège et entre collège et lycée (précise : niveaux scolaires nommés) ; 6e du thème : sort l'intention « Réformer
+#    Parcoursup » (S106) ; entre aussi au quiz (proposition d'école précise et reconfirmée) ;
+#  - sécurité : suppression des remises de peine automatiques (même formulation que « Supprimer les remises de peine » de Le Pen) et
+#    réécriture du code de procédure pénale en 100 jours (précise : échéance) ; 6e du thème, toutes de 2026 et précises : sort la moins
+#    récente, l'imprescriptibilité des crimes sur mineurs (12/06 ; S106, comme chez Philippe).
+MEDIAS += ('tf1info.fr',)
+TF1_LIVE = _s("TF1 Info, direct du JT de 20 h : É. Zemmour candidat (10/11)", 'https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-eric-zemmour-invite-du-jt-de-20h-ce-mardi-2475074.html')
+TF1_VID = _s("TF1 Info, JT de 20 h du 10/11, transcription de l'entretien d'É. Zemmour", 'https://www.tf1info.fr/politique/videos/video-presidentielle-2027-eric-zemmour-officialise-sa-candidature-au-20h-de-tf1-4341-2475122.html')
+FI_NSP = _s("franceinfo, « Nos services publics », entretien de G. Attal (12/11)", 'https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-education-sante-transports-suivez-les-interviews-de-huit-candidats-dans-le-cadre-de-l-operation-nos-services-publics_8276135.html')
+_ps = _cur('zemmour', 'securite')
+assert [p['text'] for p in _ps] == ["Prélever les amendes sur les salaires et les aides sociales", "Construire 100 000 places de prison en 24 mois",
+    "Rétablir les peines planchers, supprimer le juge de l'application des peines",
+    "Faire payer les dégâts aux casseurs et à leurs parents, y compris sur leurs allocations ; rétablir la loi anticasseurs de 1970",
+    'Déchéance de nationalité puis départ des binationaux auteurs des violences'], [p['text'] for p in _ps]
+_put('zemmour', 'securite', _ps[:4] + [_p("Renvoyer les prisonniers, délinquants et criminels étrangers")])
+_so('zemmour', 'securite', add=[TF1_LIVE, TF1_VID])
+_ps = _cur('zemmour', 'libertes'); assert [(p['verifiable'], p['old']) for p in _ps] == [(True, False), (True, False), (True, True), (True, True)], [p['text'] for p in _ps]
+_put('zemmour', 'libertes', _ps[:2] + [_p("Supprimer le droit du sol, par référendum sur la politique migratoire")] + _ps[2:])
+_so('zemmour', 'libertes', add=[TF1_VID])
+_ps = _cur('zemmour', 'rayonnement'); assert [p['old'] for p in _ps] == [True, True], [p['text'] for p in _ps]
+_put('zemmour', 'rayonnement', [_p("Réduire à « quelques milliers » le nombre d'étudiants étrangers, par référendum sur la politique migratoire")] + _ps)
+_so('zemmour', 'rayonnement', add=[TF1_VID])
+_ps = _cur('attal', 'ecole'); assert [p['verifiable'] for p in _ps] == [True, True, True, True, False] and _ps[4]['text'].startswith('Réformer Parcoursup'), [p['text'] for p in _ps]
+_put('attal', 'ecole', _ps[:4] + [_p("Fermer les filières professionnelles à faible insertion dans l'emploi, en ouvrir dans les métiers qui recrutent ; « classes passerelles » entre primaire et collège et entre collège et lycée")])
+_so('attal', 'ecole', add=[FI_NSP])
+_ps = _cur('attal', 'securite'); assert len(_ps) == 5 and _ps[4]['text'].startswith('Rendre imprescriptibles'), [p['text'] for p in _ps]
+_put('attal', 'securite', _ps[:4] + [_p("Supprimer les remises de peine automatiques ; réécrire le code de procédure pénale en 100 jours")])
+_so('attal', 'securite', add=[FI_NSP])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.
