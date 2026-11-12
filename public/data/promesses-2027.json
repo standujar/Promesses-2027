@@ -1,5 +1,5 @@
 {
- "asof": "11 novembre 2026",
+ "asof": "12 novembre 2026",
  "context": [
   {
    "v": "5,4 %",
@@ -12256,6 +12256,14 @@
        "low_md": -3,
        "high_md": -2.5,
        "url": "https://www.capital.fr/votre-carriere/salaires-des-enseignants-raphael-glucksmann-assure-vouloir-les-augmenter-d-au-moins-10-pour-tous-1529686"
+      },
+      {
+       "source": "franceinfo, « Nos services publics », entretien du candidat (12/11/2026)",
+       "year": 2026,
+       "value": "« Dès 2028, il y aura une augmentation du salaire des enseignants. C'est une priorité » (montants non redits)",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-education-sante-transports-suivez-les-interviews-de-huit-candidats-dans-le-cadre-de-l-operation-nos-services-publics_8276135.html"
       }
      ],
      "consensus": "isolé",
@@ -12286,9 +12294,15 @@
         "value": "« La mesure que je défends, elle coûte entre 2,5 et 3 milliards d'euros » (entretien au Monde)",
         "source": "Capital (30/08/2026), entretien du candidat au Monde",
         "url": "https://www.capital.fr/votre-carriere/salaires-des-enseignants-raphael-glucksmann-assure-vouloir-les-augmenter-d-au-moins-10-pour-tous-1529686"
+       },
+       {
+        "label": "Calendrier (12/11/2026)",
+        "value": "« Dès 2028, il y aura une augmentation du salaire des enseignants. C'est une priorité »",
+        "source": "franceinfo, « Nos services publics », entretien du candidat (12/11/2026)",
+        "url": "https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-education-sante-transports-suivez-les-interviews-de-huit-candidats-dans-le-cadre-de-l-operation-nos-services-publics_8276135.html"
        }
       ],
-      "note": "Répartition de la hausse jusqu'à 500 € non publiée. Même règle que les autres hausses des enseignants : borne haute = part explicite au barème commun, 70 % en 2030."
+      "note": "Répartition de la hausse jusqu'à 500 € non publiée. Même règle que les autres hausses des enseignants : borne haute = part explicite au barème commun, 70 % en 2030. Début annoncé « dès 2028 » (franceinfo, 12/11/2026) : première loi de finances du mandat, départ que suppose la même règle pour toutes les hausses des enseignants ; date de fin et étapes non publiées : 70 % en 2030, inchangé."
      },
      "quiz_text": "Augmenter le salaire des enseignants de quelques centaines d'euros par mois",
      "quiz_concret": "Les profs gagnent plus, surtout en milieu de carrière.",
@@ -12640,7 +12654,7 @@
     "p10": 1.1,
     "p90": 8.0,
     "realsum": 7.0,
-    "missing": "classes de moins de 20 élèves, baisse des cotisations salariales (« droit au brut » : 250 € nets de plus par mois au salaire médian dès 2027, financés par des économies sur l'assurance chômage et les indemnités journalières ; barème, coût et économies non publiés), arrêts maladie, défense, reste du plan de 150 Md€ non ventilé, dont le frein d'urgence de 20 Md€ (contenu non publié), annulation des 1 588 suppressions nettes de postes d'enseignants du projet de budget 2027 (règle des recrutements publics : 1 588 × 61,6 k€ ≈ 0,1 Md€, sous 1 Md€), crédit d'impôt « productivité » (montant non publié), leasing social étendu aux voitures électriques d'occasion (paramètres non publiés), livret d'épargne « garde d'enfant » pour financer des places en crèche et 200 000 professionnels de la petite enfance formés d'ici 2030 (paramètres non publiés), barème kilométrique revalorisé, prime carburant exonérée portée à 1 000 €, moitié du boîtier E85 financée, aides aux gros rouleurs élargies et bonus électrique étendu aux véhicules d'occasion (paramètres non publiés), donations facilitées aux petits-enfants, petits-neveux et petites-nièces et transmission des exploitations agricoles (abattements non publiés), garantie universelle des loyers et nouvelles résidences universitaires pour les étudiants et les jeunes actifs (paramètres non publiés), prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11/2026 : assiette non publiée, aucune base officielle ni chiffrage indépendant, non compté), pensions alimentaires reçues pour les enfants sorties du revenu imposable (coût non publié), 3 000 magistrats et greffiers de plus (règle des recrutements publics : 3 000 × 61,6 k€ × 70 % ≈ 0,13 Md€, sous 1 Md€), suppression d'un échelon de collectivité territoriale (échelon et économie non publiés ; comptée par le camp avec les 100 000 postes)",
+    "missing": "classes de moins de 20 élèves, baisse des cotisations salariales (« droit au brut » : 250 € nets de plus par mois au salaire médian dès 2027, financés par des économies sur l'assurance chômage et les indemnités journalières ; barème, coût et économies non publiés), arrêts maladie, défense, reste du plan de 150 Md€ non ventilé, dont le frein d'urgence de 20 Md€ (contenu non publié), annulation des 1 588 suppressions nettes de postes d'enseignants du projet de budget 2027 (règle des recrutements publics : 1 588 × 61,6 k€ ≈ 0,1 Md€, sous 1 Md€), crédit d'impôt « productivité » (montant non publié), leasing social étendu aux voitures électriques d'occasion (paramètres non publiés), livret d'épargne « garde d'enfant » pour financer des places en crèche et 200 000 professionnels de la petite enfance formés d'ici 2030 (paramètres non publiés), barème kilométrique revalorisé, prime carburant exonérée portée à 1 000 €, moitié du boîtier E85 financée, aides aux gros rouleurs élargies et bonus électrique étendu aux véhicules d'occasion (paramètres non publiés), donations facilitées aux petits-enfants, petits-neveux et petites-nièces et transmission des exploitations agricoles (abattements non publiés), garantie universelle des loyers et nouvelles résidences universitaires pour les étudiants et les jeunes actifs (paramètres non publiés), prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11/2026 : assiette non publiée, aucune base officielle ni chiffrage indépendant, non compté), pensions alimentaires reçues pour les enfants sorties du revenu imposable (coût non publié), 3 000 magistrats et greffiers de plus (règle des recrutements publics : 3 000 × 61,6 k€ × 70 % ≈ 0,13 Md€, sous 1 Md€), suppression d'un échelon de collectivité territoriale (échelon et économie non publiés ; comptée par le camp avec les 100 000 postes), banque nationale d'investissement qui prendrait en charge la moitié de l'emprunt des jeunes pour se loger (franceinfo, 12/11/2026 ; public, plafond, taux et coût non publiés)",
     "n": 6,
     "cost": -3.0,
     "gain": 10.0,
@@ -15295,6 +15309,14 @@
        "low_md": null,
        "high_md": null,
        "url": "https://fr.news.yahoo.com/%C3%A9ric-zemmour-annonce-candidature-%C3%A0-214019669.html"
+      },
+      {
+       "source": "TF1 Info, « VÉRIF' » (T. Deszpot, 11/11/2026) : JT de 20 h de TF1 du 10/11",
+       "year": 2026,
+       "value": "« Je renvoie également les chômeurs étrangers de plus de six mois. », a affirmé le candidat",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.tf1info.fr/international/verif-les-etats-unis-et-la-suisse-expulsent-ils-les-etrangers-depuis-plus-de-six-mois-au-chomage-comme-l-affirme-eric-zemmour-2475294.html"
       }
      ],
      "consensus": "isolé",
@@ -15324,9 +15346,15 @@
         "value": "« les chômeurs étrangers de plus de six mois », même en situation régulière (JT de 20 h de TF1)",
         "source": "AFP, dépêche du 10/11/2026 (Yahoo Actualités)",
         "url": "https://fr.news.yahoo.com/%C3%A9ric-zemmour-annonce-candidature-%C3%A0-214019669.html"
+       },
+       {
+        "label": "Durée publiée, citation directe (10/11/2026)",
+        "value": "« Je renvoie également les chômeurs étrangers de plus de six mois. »",
+        "source": "TF1 Info, « VÉRIF' » (T. Deszpot, 11/11/2026)",
+        "url": "https://www.tf1info.fr/international/verif-les-etats-unis-et-la-suisse-expulsent-ils-les-etrangers-depuis-plus-de-six-mois-au-chomage-comme-l-affirme-eric-zemmour-2475294.html"
        }
       ],
-      "note": "Version la plus récente : « les chômeurs étrangers de plus de six mois » (JT de TF1, 10/11/2026, citation dans la dépêche de l'AFP), à la place d'« un an de chômage » (BFMTV, 17/09/2026). L'Insee ne publie pas de série des chômeurs étrangers par ancienneté du chômage : l'Institut Montaigne estime ceux de plus de six mois « de l'ordre du double » des 109 000 chômeurs étrangers de longue durée (plus d'un an). Données 2019-2020 non revalorisées. Objectif annoncé le même jour, « deux millions d'immigrés en moins à la fin du quinquennat » : non chiffré."
+      "note": "Version la plus récente : « Je renvoie également les chômeurs étrangers de plus de six mois » (JT de TF1, 10/11/2026, cité par TF1 Info le 11/11 ; même durée dans la dépêche de l'AFP), à la place d'« un an de chômage » (BFMTV, 17/09/2026). L'Insee ne publie pas de série des chômeurs étrangers par ancienneté du chômage : l'Institut Montaigne estime ceux de plus de six mois « de l'ordre du double » des 109 000 chômeurs étrangers de longue durée (plus d'un an). Données 2019-2020 non revalorisées. Objectif annoncé le même jour, « deux millions d'immigrés en moins à la fin du quinquennat » : non chiffré."
      },
      "quiz_text": "Expulser les étrangers restés plus de six mois au chômage, ainsi que les délinquants et sans-papiers",
      "quiz_concret": "Un étranger en règle sans emploi depuis plus de six mois devrait quitter la France.",
@@ -15460,6 +15488,14 @@
        "low_md": null,
        "high_md": null,
        "url": "https://www.bfmtv.com/politique/video-en-visite-a-la-foire-agricole-de-chalons-en-champagne-eric-zemmour-president-du-parti-reconquete-souhaite-un-referendum-sur-l-immigration_VN-202609030636.html"
+      },
+      {
+       "source": "TF1 Info, JT de 20 h du 10/11/2026, transcription de l'entretien",
+       "year": 2026,
+       "value": "« nous ferons un référendum sur la politique migratoire globalement. […] Il y a la suppression du droit du sol, il y a le blocage du regroupement familial, il y a la réduction à quelques milliers seulement d'étudiants étrangers. »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.tf1info.fr/politique/videos/video-presidentielle-2027-eric-zemmour-officialise-sa-candidature-au-20h-de-tf1-4341-2475122.html"
       }
      ],
      "consensus": "isolé",
@@ -17420,12 +17456,12 @@
   "<b>Ce qui n'est pas compté.</b> Les mesures non reconfirmées en 2026, ou connues par une seule reprise de presse qui ne cite pas le candidat (marquées « À confirmer »), et les mesures dont un paramètre clé n'est pas publié (ampleur, taux, plafond) : elles sont « non chiffrables », avec une fourchette indicative dans la fiche. Une mesure qui exige une révision est comptée « si elle passe », chez tous les candidats. Pas d'effets macroéconomiques de bouclage ; effets de comportement seulement quand ils sont documentés. Un chiffrage qu'un candidat reprend comme le sien (d'un institut, d'une association ou d'un parti) compte comme chiffre de son camp, quel que soit son auteur. Le reprendre comme le sien, c'est publier ce chiffre comme son propre chiffre ; citer une étude comme une base parmi d'autres n'en fait pas un chiffre du camp. Une économie qui repose sur une baisse de flux ou un comportement supposés par une seule note n'est pas comptée, sauf si une évaluation ou une donnée officielle les établit. Un document d'un parti publié avant la désignation de son candidat (un projet de parti, par exemple) ne vaut programme que si le candidat le reprend ; un document officiel publié depuis (le contre-budget d'un groupe parlementaire, par exemple) compte. Une demande adressée au Gouvernement en place d'utiliser un outil qui existe déjà (état d'urgence, couvre-feux, drones, militaires en garde statique) n'est pas une proposition de programme. Le tableau « Qu'est-ce qui peut passer ? » et la répartition des verdicts d'un candidat portent sur les mêmes mesures que les totaux et le quiz : hors mesures non confirmées et doublons (les mesures non chiffrables y sont).",
   "<b>Fourchette probable.</b> Chaque mesure a une valeur basse et une valeur haute ; le total en tire une fourchette à 80 % par simulation (20 000 tirages, propres à chaque candidat).",
   "<b>Verdicts.</b> Le verdict porte sur la voie juridique et pratique de la mesure, ni sur son coût ni sur l'écart entre le chiffre annoncé par le camp et notre chiffrage, que le chiffrage montre déjà, pour tous. Faisable : par décret ou par une loi ordinaire (lois de finances et de financement de la Sécurité sociale comprises), sans autre condition hors de cette décision, avec la majorité à l'Assemblée que suppose tout programme ; « faisable » ne dit rien du coût (c'est le chiffrage) ni de l'effet de la mesure ; une dépense ou une baisse d'impôt ou de cotisations non financée reste faisable, et l'obstacle le dit (« financement non précisé dans la mesure »). Sous conditions : la mesure dépend d'une condition identifiée hors de cette décision (accord de tiers : collectivités, partenaires sociaux, autre État ou institution ; contrats en cours ; obligation européenne à remplir par d'autres moyens ; capacités à bâtir : recrutements, places, constructions, moyens de contrôle ; rendement ou contenu d'une autre mesure ; risque de censure sur un point précis). Un paramètre, un contenu ou une échéance non publiés ne changent pas le verdict : l'obstacle les dit (« … non publié »), et la mesure est non chiffrable ou comptée selon la règle des objectifs. Assurance chômage : ses règles sont fixées par une convention des partenaires sociaux agréée par le Gouvernement, par décret faute d'accord, ou par la loi : la décision reste publique, la mesure est faisable. Très difficile : accord extérieur nécessaire, à l'unanimité des États de l'UE ou d'autres États, ou censure probable au vu de décisions ou d'avis sur des dispositifs proches. Exige une révision : impossible en l'état du droit sans réviser la Constitution ou les traités ; la fiche indique le chemin et qui doit dire oui. Une même situation juridique reçoit le même verdict chez tous les candidats ; une fiche qui réunit plusieurs mesures prend le verdict de la plus contraignante.",
-  "<b>Sources.</b> 396 sources distinctes pour les chiffrages des fiches, sans compter celles du quiz, des repères et du volet « Vie quotidienne ». L'année des chiffrages publiés est affichée ; « base 2022 » signale une estimation antérieure au programme 2027, « agrégateur » un site de synthèse à confirmer par une source primaire (repéré par son nom de domaine exact, et signalé partout où il est cité : estimations, données d'entrée, Vie quotidienne). Une source a une seule année, celle de sa publication, et un seul titre (son auteur et sa date), partout où elle est citée ; dans les repères « où en est la France », l'année indiquée est celle du chiffre (« données 2025 »).",
+  "<b>Sources.</b> 399 sources distinctes pour les chiffrages des fiches, sans compter celles du quiz, des repères et du volet « Vie quotidienne ». L'année des chiffrages publiés est affichée ; « base 2022 » signale une estimation antérieure au programme 2027, « agrégateur » un site de synthèse à confirmer par une source primaire (repéré par son nom de domaine exact, et signalé partout où il est cité : estimations, données d'entrée, Vie quotidienne). Une source a une seule année, celle de sa publication, et un seul titre (son auteur et sa date), partout où elle est citée ; dans les repères « où en est la France », l'année indiquée est celle du chiffre (« données 2025 »).",
   "<b>Résumés.</b> Même gabarit pour tous : ce que le candidat promet, notre chiffrage, le principal obstacle. Celui-ci est la condition juridique ou pratique des mesures retenues qui ont le verdict le plus contraignant (« exige une révision » d'abord, puis « très difficile »), jamais un coût, un rendement ou un paramètre non publié.",
   "<b>Vie quotidienne.</b> Pour huit thèmes (sécurité, santé, école, environnement, logement, libertés, économie, rayonnement), on liste 1 à 5 propositions publiées par candidat. Une proposition est « vérifiable » (précise) si elle donne un chiffre, une échéance ou un moyen juridique précis, c'est-à-dire un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou accord nommé et ce qui y change) ; sinon c'est une « intention » (un objectif, une orientation, ou une création sans paramètre : plan, pôle, fonds). La même règle s'applique à tous. Chaque proposition affichée est attribuée au candidat par au moins une source qui parle pour lui : le candidat lui-même (discours, entretien, tribune, réseau officiel) ou son site de campagne ; un document officiel de son parti ou de son groupe publié après sa désignation, ou repris par lui ; une personne au rôle officiel dans sa campagne ; un média reconnu qui le cite ou rapporte précisément ses propos, datés, ou deux médias reconnus indépendants qui rapportent la même proposition ; pour une proposition de 2022, une analyse d'une institution reconnue ou d'un média reconnu qui décrit son programme officiel. Un agrégateur, un site non officiel, une seule reprise de presse sans citation ou une étude ne suffisent pas : sans autre source, la proposition n'est pas affichée (le contrôle est automatique, proposition par proposition), et une source qui parle pour le candidat remplace l'agrégateur ou le site non officiel qui portait la même proposition. Une proposition est de 2026 si une telle source la porte en 2026 (site de campagne, document du parti publié depuis la désignation, entretien) ; sinon elle est signalée « non reconfirmée », chez tous ; une page sans date ne reconfirme pas, sauf sur le site de campagne du candidat, ouvert pour cette élection, et quand une partie seulement d'une proposition est redite en 2026, les deux parties sont affichées séparément. Quand un thème compte plus de cinq propositions, on affiche, dans le même ordre pour tous : d'abord celles de 2026 (les non reconfirmées passent après), parmi elles les précises avant les intentions, puis les plus récentes ; à égalité ou à date inconnue, l'ordre déjà affiché est gardé (une page de programme mise à jour n'est pas une nouvelle annonce) ; une proposition remplacée par sa version précise n'est pas gardée en double, et une même proposition n'est affichée que dans un thème, le plus précis (l'énergie et le nucléaire dans « environnement »). Les propositions hors affichage restent notées dans le registre de suivi du projet (dépôt public). Le site n'affiche pas d'avis d'études sur ces propositions : seules les sources qui les attribuent au candidat sont données. Les repères « où en est la France » sont les mêmes pour tous les candidats : pour chaque thème, 7 à 14 chiffres officiels (SSMSI, Insee, DREES, DEPP, Dares, COR, Ofpra, Ancols, Eurostat, OCDE, OTAN, RTE, SDES, Citepa, Banque de France, Cour des comptes, Sénat, etc. ; seul le classement de la liberté de la presse vient d'une ONG, RSF, et il est signalé comme tel), choisis parmi ceux que les bilans officiels mettent en avant, problèmes comme progrès, y compris les faits sensibles (violences sexuelles, part des étrangers parmi les mis en cause) avec leur définition exacte. Chacun donne le dernier chiffre publié, de préférence son évolution sur au moins cinq ans (jamais depuis une année choisie pour son creux ou son pic), et la précaution de lecture donnée par la source (par exemple : délinquance enregistrée, pas commise ; « mis en cause » n'est pas « condamné »). Quatre sont affichés, les autres se déplient. Le site de campagne d'un candidat n'est jamais utilisé comme source sur un autre.",
   "<b>Simulateur.</b> Il applique à votre situation tout gain ou toute perte que le candidat a publiés et confirmés en 2026, qu'ils soient comptés ou non dans notre total, à terme, sans les mesures de financement ; aucun gain n'est compté pour une mesure non confirmée ou sans montant publié (si un paramètre clé manque, une note le dit, sans montant). Droit actuel : retraite comparée au droit actuel après la suspension de la réforme 2023 ; SMIC 1 477,93 € net (juin 2026) ; AAH 1 041,59 € par mois au maximum ; barème 2026 de l'impôt sur le revenu avec décote, sur le net imposable, pour une personne seule (parent isolé si elle a des enfants) ou un couple marié ou pacsé (deux parts, revenu du conjoint de même nature que le vôtre, décote des couples, plafond du quotient au-delà de deux parts ; impôt calculé pour les actifs et les retraités), le même pour les actifs et les retraités (pour une pension : abattement de 10 %, au moins 454 € par pensionné et au plus 4 439 € par foyer, et CSG au taux normal) ; allocations familiales 2026 avant modulation ; minimum vieillesse (ASPA) 1 043,59 € par mois au plus pour une personne seule, 1 620,18 € pour un couple, moins les autres ressources. Les pertes sont comptées comme les gains : aides réservées selon la nationalité ou la durée de séjour (même calcul pour les quatre candidats qui en proposent, chacun avec sa condition, « si la révision de la Constitution passe », et pour un ressortissant de l'UE « si le droit de l'UE change » ; l'AAH et le minimum vieillesse suivent la condition des minima sociaux chez ces quatre candidats, leur mesure visant toutes les prestations non contributives ou les nommant ; hors Union européenne, le minimum vieillesse exige déjà dix ans de titre de séjour permettant de travailler), gel des prestations, baisse des minima ; le logement compte aussi (APL réservées selon la nationalité, relevées de 10 % ou gelées, à partir du montant que vous indiquez ; les mesures sans paramètre publié, comme les prêts à taux zéro, sont signalées en note ; une réduction d'impôt sur les intérêts d'emprunt dont le plafond est publié est affichée « jusqu'à » ce plafond, dans la limite de votre impôt, sans être ajoutée, car elle dépend de vos intérêts) ; les jours de carence et la durée du chômage sont affichés à part, dans les deux sens (une durée allongée comme une durée raccourcie), car ils ne jouent qu'en cas d'arrêt ou de chômage long ; un service obligatoire des jeunes est affiché à part pour les 17-25 ans, avec la rémunération publiée ou retenue dans la fiche, ou une note si elle n'est pas publiée. Le SMIC est un plancher : pour un agent public, le nouveau traitement est le plus élevé des deux, salaire relevé par le point d'indice ou nouveau SMIC, jamais leur somme. Une AAH ou un minimum vieillesse relevés augmentent d'autant l'allocation de tout allocataire (elle complète ses autres ressources jusqu'au montant maximal). Les réformes du quotient familial ou conjugal de chaque candidat s'appliquent au couple (part fiscale, plafond, impôt des jeunes parents ; fin du quotient conjugal : chacun imposé sur son revenu, au même barème, calculée pour un couple sans enfant, une note avec enfants tant que leur répartition n'est pas publiée). Une cantine gratuite rapporte les frais de cantine que vous indiquez. Des droits d'inscription relevés pour les étudiants étrangers sont affichés « jusqu'à » l'écart publié pour un étudiant aujourd'hui exonéré, sans être ajoutés, ou en note si le montant n'est pas publié. Le report de l'âge de la retraite est exprimé en années, avec la durée de cotisation pour le taux plein quand elle est publiée. Un avantage déjà acquis aujourd'hui n'est pas compté comme un gain (heures sup : impôt et cotisations du salarié déjà exonérés). La fin des certificats d'économies d'énergie compte −7 c€ par litre de carburant, TTC (coût moyen officiel de 2022 à 2025), la même hypothèse pour tous les candidats qui la proposent. Une hausse publiée en fourchette (« jusqu'à ») compte pour son montant minimal, l'autre borne étant donnée en note (salaires des enseignants, la même règle pour tous les candidats qui en proposent) ; un gel ne s'applique qu'aux prestations que le programme nomme. Un gain publié pour quelques niveaux de salaire seulement (au SMIC et au salaire médian, par exemple) est appliqué entre ces niveaux par interpolation (notre calcul), au prorata du salaire en dessous du premier, et rien n'est calculé au-dessus du dernier tant que le barème n'est pas publié (une note le dit), sauf quand le mécanisme publié vaut pour tous les salaires (par exemple des cotisations en moins « dès le premier euro ») : le gain est alors au prorata du salaire au-dessus du dernier niveau aussi. Un barème publié par écrit (taux par tranche de salaire) prime sur des montants donnés à l'oral pour quelques niveaux : il est appliqué à chaque salaire, y compris au-delà du dernier seuil, où le gain reste plafonné. Un gain publié qui comprend ou remplace une baisse déjà calculée (une baisse de la CSG, par exemple) ne s'y ajoute jamais : le plus grand des deux est retenu jusqu'au dernier niveau publié, la baisse déjà calculée seule au-delà ; de même, un SMIC visé « baisse de la CSG comprise » ne s'ajoute pas à cette baisse (le plus grand des deux). Un minimum social remplacé par un barème publié (montant sans activité, avec activité, puis dégressif avec le salaire) est calculé sur ce barème. Une baisse de cotisations annoncée pour les « salariés », sans exclure le public, est appliquée aussi aux agents publics (hypothèse écrite dans la note, la même pour tous). Les gains de salaire (hausse du SMIC, du point d'indice ou des salaires des enseignants, baisse de la CSG ou des cotisations) sont comptés après l'impôt sur le revenu qu'ils font payer, avec le même barème pour tous, après la réforme de l'impôt du candidat s'il en propose une : le revenu imposable augmente de la hausse de salaire (rapportée au net imposable) ou de la part déductible du prélèvement baissé (entière pour des cotisations, 6,8 points sur 9,2 pour une baisse de CSG dont la part n'est pas précisée) ; l'impôt dû apparaît sur une ligne à part, et il est nul pour qui reste sous le seuil d'imposition. Pour un retraité, la même règle vaut pour une variation de la pension (un gel fait baisser un peu l'impôt), et la réforme de l'impôt du candidat qui vaut pour tous les contribuables est appliquée (part fiscale, quotient familial, fin de l'abattement de 10 % sur les pensions). Ce sont des ordres de grandeur.",
   "<b>Quiz.</b> 20 duels tirés au hasard entre deux candidats sur un même thème ; chaque candidat apparaît 5 fois et aucune paire ne se répète. Deux propositions de la même famille (même sens et même instrument : deux retours à 62 ans, deux plans de suppression de postes, deux hausses du salaire des enseignants…) ne s'affrontent jamais, et une famille ne revient qu'une fois par partie : sont de la même famille les propositions qui ont le même « Pour » et le même « Contre », et celles d'une liste publiée avec les données. Les duels portent sur les mesures des fiches (chiffrées ou non chiffrables) et sur les propositions précises et reconfirmées du volet « Vie quotidienne » (école, santé, logement, économie) ; un candidat sans proposition de ce type sur un thème n'y apparaît pas. À l'accueil, on peut choisir les thèmes qui comptent pour soi : ils reviennent plus souvent et comptent double dans le résultat. Chaque proposition est reformulée en langage courant. Dessous, un constat : la réalité française que la proposition veut traiter, avec le chiffre officiel (le dernier chiffre officiel et son évolution en %, même forme pour toutes ; les problèmes réels sont dits clairement, sans cause ni jugement) ; une mesure institutionnelle ou d'organisation (Constitution, référendum, organisation de l'État, des agences ou des établissements), ou une mesure dont aucune série officielle ne mesure ce qu'elle vise, n'a pas de constat, avec la même règle pour toutes. Puis « Pour » et « Contre » donnent en une ligne le meilleur argument réel de ceux qui la défendent et de ceux qui la critiquent : un fait que la proposition ne dit pas d'elle-même (ce qui s'est passé quand elle a été appliquée, un ordre de grandeur), jamais la proposition redite autrement ; avec la force des preuves de chacun (solides, mitigées, faibles, pas d'étude). Sous le duel, des cas réels sourcés (en France d'abord) et l'état des études. Même méthode pour toutes les mesures, sans fausse symétrie : on n'invente ni argument ni exemple pour équilibrer, et un exemple n'est retenu que s'il est pertinent, observé et de source reconnue ; on montre où penchent les faits et le lecteur juge ; les mesures du même type ont les mêmes cas et les mêmes niveaux de preuve. Le « Contre » tient compte du reste du programme : si une autre mesure du même candidat répond à la critique, elle est signalée. Pas de nom de candidat, pas de coût de la mesure, pas de faisabilité juridique, pas de jugement. Le résultat montre d'abord le ou les candidats les plus proches et ce qu'impliquent les propositions retenues (faisabilité, déficit ; « Les deux » compte la moyenne des deux effets), puis une pastille par proposition vue. La proximité est la part des propositions d'un candidat que vous avez retenues (choisie ou « Les deux ») ; une proposition d'un thème que vous marquez compte deux fois. Les égalités ne sont jamais départagées : les ex æquo sont signalés et affichés dans un ordre tiré au hasard. Suivent la tendance par thème, ce qui colle et ce qui colle moins chez les plus proches, et le détail des duels. Quiz : les exemples sont des cas observés en France (ou au niveau de l'Union quand la France y participe) ; quand des évaluations n'existent qu'à l'étranger, l'état des études le dit en une phrase, sans pays ni chiffre, et le niveau de preuve est au plus « faible ». Une proposition précise et reconfirmée entre au quiz même sans évaluation : le Pour et le Contre disent alors ce que la mesure change concrètement, sans affirmer d'effet, avec le niveau « pas d'étude ».",
-  "<b>Sondages et contexte.</b> Intentions de vote au 1er tour : moyenne de 2 instituts (Ifop pour LCI, du 27 au 29/10 ; Toluna Harris Interactive pour M6 et RTL, du 03 au 05/11), dernière vague de chacun dont le terrain s'est achevé dans les 15 jours précédant le 11/11/2026, 15e jour compris ; pour chaque institut, milieu de la fourchette des hypothèses où le candidat est testé, même poids pour chaque institut. L'ordre des candidats suit cette moyenne, et la date de la moyenne est affichée à côté des intentions de vote. Source : notices de la Commission des sondages ; sondages masqués la veille et le jour de chaque tour. PLF 2027, Insee, taux à 10 ans d'octobre 2026. Ménages : 30,9 millions (Insee). 1 point de PIB ≈ 30 Md€."
+  "<b>Sondages et contexte.</b> Intentions de vote au 1er tour : moyenne de 2 instituts (Ifop pour LCI, du 27 au 29/10 ; Toluna Harris Interactive pour M6 et RTL, du 03 au 05/11), dernière vague de chacun dont le terrain s'est achevé dans les 15 jours précédant le 12/11/2026, 15e jour compris ; pour chaque institut, milieu de la fourchette des hypothèses où le candidat est testé, même poids pour chaque institut. L'ordre des candidats suit cette moyenne, et la date de la moyenne est affichée à côté des intentions de vote. Source : notices de la Commission des sondages ; sondages masqués la veille et le jour de chaque tour. PLF 2027, Insee, taux à 10 ans d'octobre 2026. Ménages : 30,9 millions (Insee). 1 point de PIB ≈ 30 Md€."
  ],
  "statu_quo": {
   "retraite": {
@@ -17545,6 +17581,18 @@
   "2027-05-02"
  ],
  "changelog": [
+  {
+   "date": "12/11/2026",
+   "text": "Attal, entretien franceinfo du 12/11 : hausse des salaires des enseignants « dès 2028 », première année budgétaire du mandat, comme le suppose la règle commune (70 % en 2030, inchangé) ; banque nationale d'investissement prenant en charge la moitié de l'emprunt des jeunes pour se loger, listée non comptée (paramètres non publiés). Vie quotidienne : fermeture des filières professionnelles à faible insertion et « classes passerelles » (école, aussi au quiz ; « Réformer Parcoursup », intention, sort de l'affichage), suppression des remises de peine automatiques et code de procédure pénale réécrit en 100 jours (sécurité ; l'imprescriptibilité des crimes sur mineurs, la moins récente des six, sort de l'affichage). Total inchangé."
+  },
+  {
+   "date": "12/11/2026",
+   "text": "Zemmour, entretien au JT de TF1 du 10/11 (transcription publiée par TF1 Info) : l'expulsion des étrangers au chômage depuis plus de six mois est désormais citée directement par TF1 Info (fiche inchangée, +1,8 Md€). Vie quotidienne : fin du droit du sol par référendum (libertés), étudiants étrangers ramenés « à quelques milliers » par le même référendum (rayonnement), renvoi des prisonniers, délinquants et criminels étrangers (sécurité ; la déchéance de nationalité des binationaux, la moins récente des six propositions du thème, sort de l'affichage). Le plan de « 280 milliards » rapporté par le direct de TF1 Info n'apparaît pas dans la transcription de l'entretien : rien de compté. Total inchangé."
+  },
+  {
+   "date": "12/11/2026",
+   "text": "Sondages : moyenne au 12/11 inchangée (Ifop pour LCI et Toluna Harris Interactive pour M6 et RTL) ; la vague de Cluster17 pour Politico du 9 au 10/11 attend sa notice de la Commission des sondages."
+  },
   {
    "date": "11/11/2026",
    "text": "Simulateur : les boutons « SMIC » et « Salaire moyen » s'affichent dès l'ouverture pour un salarié du privé (ils n'apparaissaient qu'après avoir changé de situation)."
@@ -17837,8 +17885,8 @@
  ],
  "sondages": {
   "regle": "Intentions de vote au 1er tour. Dernière vague de chaque institut dont le terrain s'est achevé dans les 15 jours précédant la date ci-dessous, 15e jour compris ; pour chaque institut, fourchette [plus bas, plus haut] des scores publiés dans les hypothèses où le candidat est testé, et on retient le milieu ; le chiffre affiché est la moyenne de ces milieux entre instituts (même poids pour chacun). L'ordre des candidats suit cette moyenne. Source : notices de la Commission des sondages.",
-  "date": "11/11/2026",
-  "exclus": "Cluster17 pour Politico (terrain du 19 au 22/10), Ipsos BVA pour Le Parisien (21-22/10) et OpinionWay pour CNews (21-22/10) : terrains achevés le 22/10, 20 jours avant le 11/11 ; Elabe pour BFMTV et La Tribune Dimanche (14-16/10), YouGov pour Le HuffPost (12-15/10) et Odoxa (24/09-07/10) : plus de 15 jours ; vague précédente d'Ifop-Fiducial (17-19/10) remplacée par la vague suivante du même institut ; vague précédente de Toluna Harris Interactive pour M6 et RTL (19-21/10) remplacée par celle du 3 au 5/11 ; notices de novembre sans intentions de vote au 1er tour (Toluna Harris Interactive pour CommStrat et L'Opinion, potentiel électoral ; YouGov, Odoxa, Elabe, CSA) : non retenues.",
+  "date": "12/11/2026",
+  "exclus": "Cluster17 pour Politico (vague du 9 au 10/11) : notice de la Commission des sondages pas encore publiée au 12/11, la vague précédente du même institut (19-22/10) étant hors délai ; Ipsos BVA pour Le Parisien (21-22/10) et OpinionWay pour CNews (21-22/10) : terrains achevés le 22/10, 21 jours avant le 12/11 ; Elabe pour BFMTV et La Tribune Dimanche (14-16/10), YouGov pour Le HuffPost (12-15/10) et Odoxa (24/09-07/10) : plus de 15 jours ; vague précédente d'Ifop-Fiducial (17-19/10) remplacée par la vague suivante du même institut ; vague précédente de Toluna Harris Interactive pour M6 et RTL (19-21/10) remplacée par celle du 3 au 5/11 ; notices de novembre sans intentions de vote au 1er tour (Toluna Harris Interactive pour CommStrat et L'Opinion, potentiel électoral ; YouGov, Odoxa, Elabe, CSA) : non retenues.",
   "instituts": [
    {
     "institut": "Ifop",
@@ -19775,7 +19823,7 @@
       "old": false
      },
      {
-      "text": "Rendre imprescriptibles les crimes commis sur des mineurs, à commencer par les crimes sexuels",
+      "text": "Supprimer les remises de peine automatiques ; réécrire le code de procédure pénale en 100 jours",
       "verifiable": true,
       "old": false
      }
@@ -19798,9 +19846,9 @@
       "url": "https://attalpresident.fr/actualites/dans-le-jdd-gabriel-attal-veut-proposer-la-plus-grande-reforme-institutionnelle-depuis-1958"
      },
      {
-      "label": "attalpresident.fr, imprescriptibilité des crimes sexuels sur mineurs (12/06)",
+      "label": "franceinfo, « Nos services publics », entretien de G. Attal (12/11)",
       "year": 2026,
-      "url": "https://attalpresident.fr/programme/mesures/imprescriptibilite-crimes-sexuels-mineurs"
+      "url": "https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-education-sante-transports-suivez-les-interviews-de-huit-candidats-dans-le-cadre-de-l-operation-nos-services-publics_8276135.html"
      }
     ]
    },
@@ -19886,8 +19934,8 @@
       "old": false
      },
      {
-      "text": "Réformer Parcoursup (mentorat, tutorat, stages), sans retour au tirage au sort",
-      "verifiable": false,
+      "text": "Fermer les filières professionnelles à faible insertion dans l'emploi, en ouvrir dans les métiers qui recrutent ; « classes passerelles » entre primaire et collège et entre collège et lycée",
+      "verifiable": true,
       "old": false
      }
     ],
@@ -19909,14 +19957,14 @@
       "url": "https://attalpresident.fr/actualites/gabriel-attal-face-aux-lyceens-il-faut-un-president-qui-comprenne-la-jeunesse"
      },
      {
-      "label": "attalpresident.fr, mesures pour la jeunesse (10/10)",
-      "year": 2026,
-      "url": "https://attalpresident.fr/actualites/gabriel-attal-presente-ses-mesures-pour-la-jeunesse-et-l-avenir-de-la-france"
-     },
-     {
       "label": "attalpresident.fr, France Info (15/10)",
       "year": 2026,
       "url": "https://attalpresident.fr/actualites/gabriel-attal-france-info-ecouter-la-jeunesse"
+     },
+     {
+      "label": "franceinfo, « Nos services publics », entretien de G. Attal (12/11)",
+      "year": 2026,
+      "url": "https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-education-sante-transports-suivez-les-interviews-de-huit-candidats-dans-le-cadre-de-l-operation-nos-services-publics_8276135.html"
      }
     ]
    },
@@ -20567,7 +20615,7 @@
       "old": false
      },
      {
-      "text": "Déchéance de nationalité puis départ des binationaux auteurs des violences",
+      "text": "Renvoyer les prisonniers, délinquants et criminels étrangers",
       "verifiable": true,
       "old": false
      }
@@ -20585,19 +20633,19 @@
       "url": "https://lesincorrectibles.substack.com/p/eric-zemmour-la-france-face-au-chaos-1"
      },
      {
-      "label": "Entrevue, déclarations sur LCI (18/10)",
-      "year": 2026,
-      "url": "https://entrevue.fr/medias/une-horde-de-barbares-maghrebins-et-africains-eric-zemmour-provoque/"
-     },
-     {
-      "label": "Europe 1, « La France en face » (19/05)",
-      "year": 2026,
-      "url": "https://www.europe1.fr/politique/en-direct-immigration-pouvoir-dachat-narcotrafic-ce-quil-faut-retenir-de-linterview-deric-zemmour-dans-la-france-en-face-936419"
-     },
-     {
       "label": "Site de campagne d'Éric Zemmour, « Nos priorités pour les Français » (2026)",
       "year": 2026,
       "url": "https://www.ericzemmour.fr/priorites"
+     },
+     {
+      "label": "TF1 Info, direct du JT de 20 h : É. Zemmour candidat (10/11)",
+      "year": 2026,
+      "url": "https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-eric-zemmour-invite-du-jt-de-20h-ce-mardi-2475074.html"
+     },
+     {
+      "label": "TF1 Info, JT de 20 h du 10/11, transcription de l'entretien d'É. Zemmour",
+      "year": 2026,
+      "url": "https://www.tf1info.fr/politique/videos/video-presidentielle-2027-eric-zemmour-officialise-sa-candidature-au-20h-de-tf1-4341-2475122.html"
      }
     ]
    },
@@ -20777,6 +20825,11 @@
       "old": false
      },
      {
+      "text": "Supprimer le droit du sol, par référendum sur la politique migratoire",
+      "verifiable": true,
+      "old": false
+     },
+     {
       "text": "Article 55 révisé : toute nouvelle loi nationale au-dessus du droit européen existant",
       "verifiable": true,
       "old": true
@@ -20808,6 +20861,11 @@
       "label": "franceinfo, les candidats hostiles à la loi sur la fin de vie (17/07)",
       "year": 2026,
       "url": "https://www.franceinfo.fr/societe/euthanasie/presidentielle-2027-les-candidats-hostiles-a-la-loi-sur-la-fin-de-vie-vont-ils-promettre-de-l-abroger_8108582.html"
+     },
+     {
+      "label": "TF1 Info, JT de 20 h du 10/11, transcription de l'entretien d'É. Zemmour",
+      "year": 2026,
+      "url": "https://www.tf1info.fr/politique/videos/video-presidentielle-2027-eric-zemmour-officialise-sa-candidature-au-20h-de-tf1-4341-2475122.html"
      }
     ]
    },
@@ -20868,6 +20926,11 @@
     "theme": "rayonnement",
     "proposals": [
      {
+      "text": "Réduire à « quelques milliers » le nombre d'étudiants étrangers, par référendum sur la politique migratoire",
+      "verifiable": true,
+      "old": false
+     },
+     {
       "text": "Défense à 70 Md€ par an en 2030",
       "verifiable": true,
       "old": true
@@ -20889,6 +20952,11 @@
       "label": "Programme présidentiel d'Éric Zemmour, « Pour que la France reste la France » (25/03/2022)",
       "year": 2022,
       "url": "https://assets.nationbuilder.com/themes/61c071ce4764e8b1483d1a8c/attachments/original/1648220408/programme_eric_zemmour_presidentielle_2022.pdf"
+     },
+     {
+      "label": "TF1 Info, JT de 20 h du 10/11, transcription de l'entretien d'É. Zemmour",
+      "year": 2026,
+      "url": "https://www.tf1info.fr/politique/videos/video-presidentielle-2027-eric-zemmour-officialise-sa-candidature-au-20h-de-tf1-4341-2475122.html"
      }
     ]
    }
@@ -25209,6 +25277,36 @@
     }
    ],
    "quiz_fam": "melenchon.logement.3"
+  },
+  {
+   "c": "attal",
+   "id": "ecole.5",
+   "life": true,
+   "theme": "ecole",
+   "title": "Fermer les formations professionnelles qui mènent peu à l'emploi et en ouvrir dans les métiers qui recrutent",
+   "quiz_text": "Fermer les formations professionnelles qui mènent peu à l'emploi et en ouvrir dans les métiers qui recrutent",
+   "quiz_concret": "Des CAP et bacs pros où peu d'élèves trouvent un emploi fermeraient, d'autres ouvriraient, dans l'industrie notamment ; des classes de transition aideraient les élèves qui en ont besoin à entrer au collège ou au lycée.",
+   "quiz_plus": "Six mois après, 48 % des sortants des services à la collectivité ont un emploi salarié, 40 % en commerce.",
+   "quiz_moins": "Les écarts entre spécialités peuvent tenir en partie au diplôme préparé (CAP, bac pro ou BTS).",
+   "quiz_preuve_pour": "pas d'étude",
+   "quiz_preuve_contre": "pas d'étude",
+   "quiz_cas_pour": [],
+   "quiz_cas_contre": [],
+   "quiz_etudes": "Pas d'évaluation trouvée de l'effet d'une fermeture de formations professionnelles ni de classes passerelles ; les chiffres décrits sont ceux du dispositif InserJeunes (DEPP, Dares).",
+   "quiz_src": [
+    {
+     "l": "DEPP, Note d'information n° 25.68, Insertion des lycéens professionnels et étudiants de niveau CAP à BTS six mois après leur sortie d'études en 2024 (avec la Dares, InserJeunes)",
+     "a": 2025,
+     "u": "https://www.education.gouv.fr/sites/default/files/document/Education_nationale_DEPP_NI%20IJ%20lyc%C3%A9ens%2025-68.pdf-476744.pdf"
+    }
+   ],
+   "quiz_constat": {
+    "t": "Lycéens professionnels sortis en 2024 : 41 % en emploi salarié six mois après (45 % pour ceux sortis en 2023) (DEPP, Dares).",
+    "s": [
+     0
+    ]
+   },
+   "quiz_fam": "attal.ecole.5"
   }
  ]
 }

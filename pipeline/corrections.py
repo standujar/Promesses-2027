@@ -2849,6 +2849,46 @@ sm['aspa_hausse'] = {'montant': 1337, 'note': "Minimum vieillesse porté au seui
 sm['quotient_conjugal'] = {'note': "Fin du quotient conjugal (programme du 6/11/2026) : chacun imposé sur son revenu, même barème",
                            'enfants': "Fin du quotient conjugal et crédit d'impôt par enfant (programme du 6/11/2026) : répartition des enfants entre les parents et montant du crédit non publiés, non calculé ici."}
 sa = C['attal']['sim']; assert 'aspa' not in sa['gel_status']; sa['gel_status'].append('aspa')
+# --- review 48 : revue du 12/11 (12/11/2026) ; registre S207, S276 (résolus), S106, S208, S275, S280, S284 (mis à jour), S294 et suivants
+# Décisions du 12/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 11 au 12/11, sources ouvertes le 12/11).
+# (1) Zemmour, entretien au JT de 20 h de TF1 (10/11) : transcription publiée par TF1 Info sur la page vidéo, direct de TF1 Info, et vérification
+#     de TF1 Info du 11/11 (« VÉRIF' »), qui cite directement le candidat : « Je renvoie également les chômeurs étrangers de plus de six mois ».
+#     Fiche « remigration » : la durée publiée (six mois, comptée depuis le 11/11) est désormais citée directement par un média reconnu (source
+#     ajoutée ; chiffrage inchangé). Fiche « cedh » : « le blocage du regroupement familial » par « un référendum sur la politique migratoire »
+#     (transcription) : source ajoutée, rien d'autre. Plan de « 280 milliards » (direct de TF1 Info) : la transcription de l'entretien ne
+#     contient aucun montant (« un grand plan de redressement des finances publiques et de baisse des dépenses publiques et des impôts ») : rien
+#     de compté (registre). Vie quotidienne : life.py.
+# (2) Attal, entretien franceinfo du 12/11 (« Nos services publics ») : « Dès 2028, il y aura une augmentation du salaire des enseignants ».
+#     2028 est l'année de la première loi de finances du mandat (élection en mai 2027) : c'est le départ que suppose la règle commune pour toutes
+#     les hausses des enseignants (plan étalé sur le mandat ou sans date de fin : 70 % en 2030, comme Philippe, Lisnard, Glucksmann et
+#     Retailleau) ; aucune date de fin ni étape publiée : part comptée en 2030 inchangée (70 %), source et note ajoutées. Banque nationale
+#     d'investissement qui prendrait « la moitié de l'emprunt » des jeunes : public, plafond, taux et coût non publiés → liste « non comptée ».
+FI1211 = 'https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-education-sante-transports-suivez-les-interviews-de-huit-candidats-dans-le-cadre-de-l-operation-nos-services-publics_8276135.html'
+FI1211_S = "franceinfo, « Nos services publics », entretien du candidat (12/11/2026)"
+TF1VID = 'https://www.tf1info.fr/politique/videos/video-presidentielle-2027-eric-zemmour-officialise-sa-candidature-au-20h-de-tf1-4341-2475122.html'
+TF1VID_S = "TF1 Info, JT de 20 h du 10/11/2026, transcription de l'entretien"
+TF1VER = 'https://www.tf1info.fr/international/verif-les-etats-unis-et-la-suisse-expulsent-ils-les-etrangers-depuis-plus-de-six-mois-au-chomage-comme-l-affirme-eric-zemmour-2475294.html'
+TF1VER_S = "TF1 Info, « VÉRIF' » (T. Deszpot, 11/11/2026)"
+CIT_Z6 = "Je renvoie également les chômeurs étrangers de plus de six mois."
+CIT_ZRF = "nous ferons un référendum sur la politique migratoire globalement. […] Il y a la suppression du droit du sol, il y a le blocage du regroupement familial, il y a la réduction à quelques milliers seulement d'étudiants étrangers."
+# (1a) remigration : citation directe du candidat (TF1 Info), chiffrage inchangé (+1,8)
+m = M('zemmour', 'remigration'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (1.8, 0.9, 2.4)
+m['estimates'].append({"source": TF1VER_S + " : JT de 20 h de TF1 du 10/11", "year": 2026, "value": "« " + CIT_Z6 + " », a affirmé le candidat", "low_md": None, "high_md": None, "url": TF1VER})
+a0 = "« les chômeurs étrangers de plus de six mois » (JT de TF1, 10/11/2026, citation dans la dépêche de l'AFP)"; assert k['note'].count(a0) == 1
+k['note'] = k['note'].replace(a0, "« Je renvoie également les chômeurs étrangers de plus de six mois » (JT de TF1, 10/11/2026, cité par TF1 Info le 11/11 ; même durée dans la dépêche de l'AFP)")
+k['inputs'].append({"label": "Durée publiée, citation directe (10/11/2026)", "value": "« " + CIT_Z6 + " »", "source": TF1VER_S, "url": TF1VER})
+# (1b) cedh : regroupement familial « bloqué » par référendum sur la politique migratoire (transcription de TF1 Info) ; source seulement
+M('zemmour', 'cedh')['estimates'].append({"source": TF1VID_S, "year": 2026, "value": "« " + CIT_ZRF + " »", "low_md": None, "high_md": None, "url": TF1VID})
+# (2a) Attal, enseignants : « dès 2028 » = première loi de finances du mandat ; 70 % en 2030 inchangé
+CIT_A28 = "Dès 2028, il y aura une augmentation du salaire des enseignants. C'est une priorité"
+m = M('attal', 'profs'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-1.9, -2.8, -1.7)
+m['estimates'].append({"source": FI1211_S, "year": 2026, "value": "« " + CIT_A28 + " » (montants non redits)", "low_md": None, "high_md": None, "url": FI1211})
+k['inputs'].append({"label": "Calendrier (12/11/2026)", "value": "« " + CIT_A28 + " »", "source": FI1211_S, "url": FI1211})
+a0 = "Même règle que les autres hausses des enseignants : borne haute = part explicite au barème commun, 70 % en 2030."; assert k['note'].endswith(a0)
+k['note'] = k['note'] + " Début annoncé « dès 2028 » (franceinfo, 12/11/2026) : première loi de finances du mandat, départ que suppose la même règle pour toutes les hausses des enseignants ; date de fin et étapes non publiées : 70 % en 2030, inchangé."
+# (2b) banque nationale d'investissement : paramètres non publiés
+MISS_ADD('attal', "banque nationale d'investissement qui prendrait en charge la moitié de l'emprunt des jeunes pour se loger (franceinfo, 12/11/2026 ; public, plafond, taux et coût non publiés)")
+D['asof'] = '12 novembre 2026'
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:

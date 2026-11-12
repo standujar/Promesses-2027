@@ -8583,5 +8583,25 @@
 "u": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_silc_08?geo=FR&sex=T&age=Y_GE16&reason=TXP&time=2022&time=2025"
 }
 ]
+},
+"attal.ecole.5": {
+"constat": "Lycéens professionnels sortis en 2024 : 41 % en emploi salarié six mois après (45 % pour ceux sortis en 2023) (DEPP, Dares).",
+"constat_s": [
+0
+],
+"pour": "Six mois après, 48 % des sortants des services à la collectivité ont un emploi salarié, 40 % en commerce.",
+"preuve_pour": "pas d'étude",
+"contre": "Les écarts entre spécialités peuvent tenir en partie au diplôme préparé (CAP, bac pro ou BTS).",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation trouvée de l'effet d'une fermeture de formations professionnelles ni de classes passerelles ; les chiffres décrits sont ceux du dispositif InserJeunes (DEPP, Dares).",
+"src": [
+{
+"l": "DEPP, Note d'information n° 25.68, Insertion des lycéens professionnels et étudiants de niveau CAP à BTS six mois après leur sortie d'études en 2024 (avec la Dares, InserJeunes)",
+"a": 2025,
+"u": "https://www.education.gouv.fr/sites/default/files/document/Education_nationale_DEPP_NI%20IJ%20lyc%C3%A9ens%2025-68.pdf-476744.pdf"
+}
+]
 }
 }
