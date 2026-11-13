@@ -8043,59 +8043,22 @@
 ]
 },
 "lisnard.ecole.5": {
-"constat": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 49,1 % passent en 2e année de licence (SIES).",
+"constat": "Entrée en 6e en 2025 : 28 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
 "constat_s": [
-1,
-2
-],
-"pour": "Les classements restent opaques : jusqu'à une licence très demandée sur cinq tient compte du lycée d'origine.",
-"preuve_pour": "mitigé",
-"contre": "Les moins préparés réussissent peu à l'université : 6,5 % des bacheliers pro y obtiennent leur licence.",
-"preuve_contre": "mitigé",
-"cas_pour": [
-{
-"t": "Jusqu'à 20 % des commissions des licences les plus demandées ont tenu compte du lycée d'origine des candidats en 2019 (Cour des comptes, France, 2020).",
-"s": [
 0
-]
-},
-{
-"t": "Les quotas de boursiers et de bacheliers technologiques ou professionnels n'ont eu que de faibles effets (Cour des comptes, France, 2020).",
-"s": [
-0
-]
-}
 ],
-"cas_contre": [
-{
-"t": "Avant Parcoursup, les licences plus demandées que leurs places départageaient les candidats, en dernier recours, par tirage au sort (Cour des comptes, France, 2020).",
-"s": [
-0
-]
-},
-{
-"t": "Parmi les bacheliers 2020 inscrits en licence, 40,3 % l'ont obtenue en 3 ou 4 ans : 14 % des bacheliers technologiques, 6,5 % des professionnels (SIES, France, 2025).",
-"s": [
-2
-]
-}
-],
-"etudes": "Aucune évaluation directe d'une suppression de Parcoursup ni d'une sélection généralisée. La Cour des comptes (2020) note la fin du tirage au sort mais des critères peu transparents.",
+"pour": "Les élèves auraient des notes chiffrées et un repère commun en fin de primaire (CM2) et de collège (3e).",
+"preuve_pour": "pas d'étude",
+"contre": "L'entrée en 6e est déjà évaluée chaque année depuis 2017, pour tous les élèves (817 000 en 2025).",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation trouvée de l'effet des notes chiffrées, d'évaluations communes en CM2 et en 3e ni de la philosophie au primaire ; les évaluations décrites sont celles de la DEPP.",
 "src": [
 {
-"l": "Cour des comptes, Un premier bilan de l'accès à l'enseignement supérieur dans le cadre de la loi ORE",
-"a": 2020,
-"u": "https://www.ccomptes.fr/system/files/2020-03/20200227-rapport-premier-bilan-loi-ORE-3.pdf"
-},
-{
-"l": "SIES, Note Flash n° 26, Parcoursup 2026 : les propositions d'admission dans l'enseignement supérieur",
+"l": "DEPP, Note d'information n° 26.21, évaluations de début de 6e, 5e et 4e 2025",
 "a": 2026,
-"u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-10/NF2_Admission_Parcoursup_2026_def.pdf"
-},
-{
-"l": "SIES, Note Flash n° 29, Parcours et réussite en licence : les résultats de la session 2024",
-"a": 2025,
-"u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf"
+"u": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-21evals-2dpdf-517319.pdf"
 }
 ]
 },
@@ -8601,6 +8564,97 @@
 "l": "DEPP, Note d'information n° 25.68, Insertion des lycéens professionnels et étudiants de niveau CAP à BTS six mois après leur sortie d'études en 2024 (avec la Dares, InserJeunes)",
 "a": 2025,
 "u": "https://www.education.gouv.fr/sites/default/files/document/Education_nationale_DEPP_NI%20IJ%20lyc%C3%A9ens%2025-68.pdf-476744.pdf"
+}
+]
+},
+"philippe.ecole.5": {
+"constat": "Orientés en 2de générale après la 3e en 2025 : 47,8 % des boursiers (47,9 % en 2024), 66,7 % des autres (65,5 %) (DGESCO).",
+"constat_s": [
+0
+],
+"pour": "En 3e, les boursiers demandent moins la voie générale (57,1 %) que les autres élèves (71,6 %).",
+"preuve_pour": "pas d'étude",
+"contre": "Les conseils de classe orientent vers la voie pro 52,2 % des boursiers, 33,3 % des autres.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation trouvée de l'effet d'une orientation dès la 5e ni d'un tuteur pour chaque élève ; les chiffres décrits sont ceux de la procédure d'orientation de fin de 3e (DGESCO).",
+"src": [
+{
+"l": "DGESCO, Repères pour l'orientation et l'affectation des élèves, campagne 2025",
+"a": 2026,
+"u": "https://eduscol.education.gouv.fr/sites/default/files/document/reperes-pour-l-orientation-et-l-affectation-des-eleves-campagne-2025-126290.pdf"
+}
+]
+},
+"zemmour.ecole.3": {
+"constat": "Élèves de 3e du public orientés vers la voie professionnelle : 38,6 % en 2025 (36,7 % en 2022) (DGESCO).",
+"constat_s": [
+0
+],
+"pour": "Les élèves qui visent un métier commenceraient la voie professionnelle un an plus tôt qu'aujourd'hui.",
+"preuve_pour": "pas d'étude",
+"contre": "Le choix de la voie, fait aujourd'hui en 3e, se ferait un an plus tôt, avant la fin du collège commun.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation trouvée de l'effet d'une orientation dès la 4e ; les chiffres décrits sont ceux de la procédure d'orientation de fin de 3e (DGESCO).",
+"src": [
+{
+"l": "DGESCO, Repères pour l'orientation et l'affectation des élèves, campagne 2025",
+"a": 2026,
+"u": "https://eduscol.education.gouv.fr/sites/default/files/document/reperes-pour-l-orientation-et-l-affectation-des-eleves-campagne-2025-126290.pdf"
+}
+]
+},
+"zemmour.sante.1": {
+"constat": "Sans médecin traitant en 2025 : 11,4 % des 16 ans et plus (11,5 % en 2022), 3,9 % des malades chroniques (6 %) (Sécurité sociale).",
+"constat_s": [
+3
+],
+"pour": "Former un médecin prend dix ans : ouvrir des places aujourd'hui prépare la relève de demain.",
+"preuve_pour": "solide",
+"contre": "Former plus n'envoie pas, à lui seul, les médecins là où ils manquent.",
+"preuve_contre": "solide",
+"cas_pour": [
+{
+"t": "Les places en médecine, tombées à 3 500 en 1993, remontent depuis 2000 ; les jeunes médecins issus de cette hausse arrivent en activité (Cour des comptes, France, 2025).",
+"s": [
+0,
+1
+]
+}
+],
+"cas_contre": [
+{
+"t": "Dans la région la moins dotée, l'arrivée de jeunes médecins issue de la hausse des places est moins marquée qu'ailleurs (Cour des comptes, Centre-Val de Loire, 2025).",
+"s": [
+1,
+0
+]
+}
+],
+"etudes": "Les travaux concordent (DREES, Cour des comptes) : former plus accroît l'offre de médecins après une dizaine d'années, sans corriger seule leur répartition.",
+"src": [
+{
+"l": "Cour des comptes, L'accès aux études de santé, quatre ans après la réforme",
+"a": 2024,
+"u": "https://www.ccomptes.fr/sites/default/files/2024-12/20241211-Lacces-aux-%C3%A9tudes-de-sante.pdf"
+},
+{
+"l": "Cour des comptes, Les aides à l'installation des médecins libéraux",
+"a": 2025,
+"u": "https://www.ccomptes.fr/sites/default/files/2025-11/20251112-Aides-installation-des-medecins-liberaux.pdf"
+},
+{
+"l": "Cour des comptes, L'organisation territoriale des soins de premier recours (synthèse)",
+"a": 2024,
+"u": "https://www.ccomptes.fr/sites/default/files/2024-05/20240513-synthese-Organisation-territoriale-soins-premier-recours.pdf"
+},
+{
+"l": "Sécurité sociale, rapport d'évaluation (REPSS Maladie), fiche 2.7.4 « Assurer l'accès à un médecin traitant »",
+"a": 2026,
+"u": "https://evaluation.securite-sociale.fr/home/maladie/2-7-4-assurer-l-acces-a-un-medecin-traitant.html"
 }
 ]
 }
