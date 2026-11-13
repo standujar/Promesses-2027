@@ -1430,6 +1430,106 @@ _ps = _cur('attal', 'securite'); assert len(_ps) == 5 and _ps[4]['text'].startsw
 _put('attal', 'securite', _ps[:4] + [_p("Supprimer les remises de peine automatiques ; réécrire le code de procédure pénale en 100 jours")])
 _so('attal', 'securite', add=[FI_NSP])
 
+# --- review 49 : revue du 13/11 (13/11/2026) ; registre S106, S268, S280, S297 et suivants
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; à égalité ou
+# à date inconnue, ordre affiché gardé ; une proposition nouvelle se place après les précises de 2026 déjà affichées ; au-delà de 5, sort celle
+# que la règle classe dernière, S106). Même test « précis » (changement de droit nommé, chiffre, échéance ou niveau scolaire nommé). Sources
+# ouvertes le 13/11.
+# Philippe : site refait le 12/11 ; les pages /priorites/… (301 vers /programme) sont remplacées, proposition par proposition, par la page
+# thématique datée du 12/11 qui dit la même chose (une page mise à jour n'est pas une nouvelle annonce : dates inchangées). Textes ajustés à la
+# page : orientation « dès la 5e » (précise : niveau scolaire nommé, entre aussi au quiz) ; « Canadairs » construits en France, sans échéance
+# (intention) ; santé : « mieux dépenser », sans diminuer les dépenses (intention). Page d'actualité des émeutes (404) : non affichée depuis le
+# 29/10, retirée des sources. Entretien franceinfo du 12/11 :
+#  - sécurité : suppression du juge d'application des peines (même texte que Retailleau et Attal ; écrite aussi sur la page Justice) ; 6e d'un
+#    thème de précises de 2026 : sort la moins récente, la reconnaissance faciale contre les casseurs (Journal du Net, 22/10) ;
+#  - libertés : magistrats interdits de se syndiquer et recrutés aussi hors de l'ENM (précise : statut de la magistrature) ; après les précises,
+#    l'intention la dernière dans l'ordre affiché (dates inconnues) sort : « Combattre l'islamisme… » (S106).
+# Zemmour, entretien franceinfo du 12/11 (article) et direct de RTL :
+#  - sécurité : « accumulation des peines » au lieu de la confusion des peines (précise : règle pénale nommée) ; sort la moins récente, les
+#    casseurs et la loi anticasseurs (25/10) ; magistrats « responsables de leurs actes » (intention, thème plein de précises : S106) ;
+#  - santé : numerus clausus supprimé, sélection par examen et non par concours (précise ; 2026, en tête ; entre au quiz) ;
+#  - école : fin du collège unique et orientation vers l'enseignement professionnel à partir de la 4e (précise, aussi sur le site de campagne) :
+#    version précise de « orientation vers le CAP dès la quatrième », retirée de l'intention qui la portait (« Plus d'heures de français et de
+#    mathématiques » reste) ; « Classes de niveau au collège » (2022, non reconfirmée) sort ; entre au quiz.
+# Retailleau, livret « Reprendre le contrôle de l'immigration » et pages de mesures (site, 12/11), toutes précises :
+#  - rayonnement (entrées et séjour des étrangers, 2 → 5) : étudiants étrangers divisés par deux ; regroupement familial après deux ans et titre
+#    salarié retiré après un an de chômage ; titre de séjour doublé, naturalisation taxée 1 000 €, réexamens d'asile payants ;
+#  - libertés (nationalité, comme le droit du sol) : naturalisation après dix ans de résidence, fin de la nationalité par mariage ; sort la moins
+#    récente des précises : les trois propositions de Public Sénat (3/09) sont les plus anciennes (droit à la sécurité et laïcité : pages du
+#    11/09), à égalité la dernière affichée, « Surmonter une censure du Conseil constitutionnel » (S106). Résidence effective de neuf mois et
+#    quinze ans de cotisation des retraités installés à l'étranger : thème économie plein de précises plus anciennes ou à égalité : S106.
+# Attal : suppression du juge d'application des peines citée par l'article de franceinfo du 12/11 (S297) : source ajoutée.
+# Glucksmann, franceinfo (12/11) : budget de l'audiovisuel public garanti sur cinq ans (précise : durée) ; publicité microciblée interdite sur
+#  les plateformes et réseau social européen (précise : interdiction nommée ; même phrase) ; libertés : les deux propositions de 2025 non
+#  reconfirmées (proportionnelle, 49.3) sortent. École : moratoire sur les fermetures d'écoles rurales sans concertation (intention, 12/11) ;
+#  sort l'intention la moins récente, « Baisser le nombre d'élèves par classe en primaire ».
+# Lisnard, compte rendu de Nouvelle Énergie (13/11) : notes chiffrées, évaluations en CM2, 6e et 3e, philosophie dès le primaire (précise :
+#  niveaux scolaires nommés) ; le même compte rendu redit le chèque-éducation, les contractuels et la fin de la carte scolaire ; sort la dernière
+#  dans l'ordre affiché des propositions de date inconnue, « Supprimer Parcoursup » (S106) ; entre au quiz à sa place.
+EPPL = 'https://www.edouardphilippe.fr/programme/'
+EPT = {'justice': 'Justice', 'securite': 'Sécurité', 'immigration': 'Immigration', 'travail': 'Travail et salaires', 'entreprises': 'Entreprises et industrie',
+       'comptes-publics': 'Finances publiques', 'ecole': 'École', 'famille': 'Famille', 'adaptation-climatique': 'Adaptation climatique', 'energie': 'Énergie'}
+EPx = {p: _s("Site de campagne d'Édouard Philippe, programme « " + t + " » (12/11)", EPPL + p) for p, t in EPT.items()}
+FI_PH = _s("franceinfo, « Nos services publics », entretien d'É. Philippe (12/11)", 'https://www.franceinfo.fr/elections/presidentielle-2027-la-possibilite-de-se-syndiquer-doit-etre-interdite-dans-la-magistrature-estime-edouard-philippe_8279816.html')
+FI_ZE = _s("franceinfo, « Nos services publics », entretien d'É. Zemmour (12/11)", 'https://www.franceinfo.fr/elections/presidentielle/presidentielle-eric-zemmour-souhaite-supprimer-800-000-postes-dans-la-fonction-publique_8279303.html')
+RTL_NSP = _s("RTL, direct du « grand oral » des candidats sur les services publics (12/11)", 'https://www.rtl.fr/actu/politique/en-direct-presidentielle-2027-suivez-le-grand-oral-de-huit-candidats-sur-leurs-propositions-pour-les-services-publics-7900695336')
+R_LIV = _s("avecretailleau.fr, livret « Reprendre le contrôle de l'immigration » (12/11)", "https://www.avecretailleau.fr/api/media/file/LR_Reprendre%20le%20contro%CC%82le%20de%20l'immigration%20v111126-3.pdf")
+R127 = _s("avecretailleau.fr, mesure « Réduire l'immigration étudiante » (12/11)", 'https://www.avecretailleau.fr/projet/mesure/n-accueillir-que-les-etudiants-dont-la-france-a-besoin')
+R132 = _s("avecretailleau.fr, mesure « Faire payer aux étrangers le coût de leur venue » (12/11)", 'https://www.avecretailleau.fr/projet/mesure/faire-payer-aux-etrangers-les-couts-de-la-politique-d')
+FI_AT = _s("franceinfo, « Nos services publics », entretien de G. Attal (article, 12/11)", 'https://www.franceinfo.fr/elections/presidentielle/presidentielle-le-candidat-renaissance-gabriel-attal-promet-qu-il-n-y-aura-pas-de-poste-supprime-dans-l-education-nationale-s-il-est-elu_8278985.html')
+FI_GL = _s("franceinfo, « Nos services publics », entretien de R. Glucksmann (12/11)", 'https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-je-ne-veux-pas-d-une-societe-ou-les-grands-medias-sont-controles-par-quelques-oligarques-assure-raphael-glucksmann_8279636.html')
+NE_DEST = _s("Nouvelle Énergie, D. Lisnard dans le podcast « Destinée » (compte rendu du 13/11)", 'https://www.unenouvelleenergie.fr/david-lisnard-dans-le-podcast-destinee-faire-de-la-france-une-superpuissance-educative/')
+JAP = "Supprimer le juge d'application des peines"
+# Philippe
+_PHD = ['edouardphilippe.fr/priorites/', 'edouard-philippe-reagit-aux-emeutes']
+_ps = _cur('philippe', 'securite'); assert _ps[4]['text'] == "Autoriser la reconnaissance faciale et des techniques de marquage pour identifier les casseurs" and all(p['verifiable'] and not p['old'] for p in _ps)
+_put('philippe', 'securite', _ps[:4] + [_p(JAP)])
+_so('philippe', 'securite', drop=_PHD, add=[EPx['justice'], FI_PH])
+_so('philippe', 'sante', drop=_PHD, add=[EPx['travail'], EPx['comptes-publics']])
+_txt('philippe', 'sante', 'Stabiliser les dépenses de santé en misant sur la prévention', "Mieux dépenser en santé, sans diminuer les dépenses, en misant sur la prévention", v=False)
+_txt('philippe', 'ecole', "Refonder l'orientation en fin de collège et au lycée", "Refonder l'orientation dès la 5e : temps en classe pour découvrir les études et les métiers, un tuteur pour chaque élève", v=True)
+_so('philippe', 'ecole', drop=_PHD, add=[EPx['ecole']])
+_txt('philippe', 'environnement', 'Produire un « Canadair français » durant le quinquennat', "Construire en France des « Canadairs » contre les incendies", v=False)
+_so('philippe', 'environnement', drop=_PHD, add=[EPx['adaptation-climatique'], EPx['energie']])
+_so('philippe', 'logement', drop=_PHD, add=[EPx['famille']])
+_ps = _cur('philippe', 'libertes'); assert [p['verifiable'] for p in _ps] == [True, True, True, False, False] and _ps[4]['text'].startswith("Combattre l'islamisme"), [p['text'] for p in _ps]
+_put('philippe', 'libertes', _ps[:3] + [_p("Interdire aux magistrats de se syndiquer ; les recruter aussi hors de l'École nationale de la magistrature")] + _ps[3:4])
+_so('philippe', 'libertes', drop=_PHD, add=[EPx['justice'], FI_PH])
+_so('philippe', 'economie', drop=_PHD, add=[EPx['travail'], EPx['comptes-publics'], EPx['entreprises'], EPx['immigration']])
+_so('philippe', 'rayonnement', drop=_PHD, add=[EPx['immigration']])
+# Zemmour
+_ps = _cur('zemmour', 'securite'); assert _ps[3]['text'].startswith('Faire payer les dégâts aux casseurs'), [p['text'] for p in _ps]
+_put('zemmour', 'securite', _ps[:3] + _ps[4:] + [_p("Cumuler les peines au lieu de les confondre (« accumulation des peines »)")])
+_so('zemmour', 'securite', add=[FI_ZE])
+_ps = _cur('zemmour', 'sante'); assert all(p['old'] for p in _ps) and len(_ps) == 3
+_put('zemmour', 'sante', [_p("Supprimer le numerus clausus : sélection des étudiants en médecine par un examen, non plus par un concours")] + _ps)
+_so('zemmour', 'sante', add=[RTL_NSP])
+_ps = _cur('zemmour', 'ecole'); assert [p['text'] for p in _ps][3:] == ["Plus d'heures de français et de mathématiques ; orientation vers le CAP dès la quatrième", 'Classes de niveau au collège'] and _ps[4]['old'], [p['text'] for p in _ps]
+_put('zemmour', 'ecole', _ps[:2] + [_p("Supprimer le collège unique : orientation vers l'enseignement professionnel à partir de la 4e")] + [_ps[2], dict(_ps[3], text="Plus d'heures de français et de mathématiques")])
+_so('zemmour', 'ecole', add=[FI_ZE, Z_PRIO])
+# Retailleau
+_ps = _cur('retailleau', 'rayonnement'); assert len(_ps) == 2
+_put('retailleau', 'rayonnement', _ps + [_p("Diviser par deux le flux d'étudiants étrangers ; droits d'inscription relevés"),
+     _p("Regroupement familial après deux ans de présence, contre 18 mois ; titre de séjour salarié retiré après un an de chômage, sauf motif légitime"),
+     _p("Doubler le prix du titre de séjour (350 € aujourd'hui), taxe de naturalisation portée à 1 000 € ; réexamens de demande d'asile payants")])
+_so('retailleau', 'rayonnement', add=[R127, R_LIV, R132])
+_ps = _cur('retailleau', 'libertes'); assert _ps[2]['text'] == 'Surmonter une censure du Conseil constitutionnel par référendum ou Congrès' and len(_ps) == 5
+_put('retailleau', 'libertes', _ps[:2] + _ps[3:] + [_p("Naturalisation après dix ans de résidence, contre cinq ; fin de l'acquisition de la nationalité par le mariage")])
+_so('retailleau', 'libertes', add=[R_LIV])
+# Attal
+_so('attal', 'securite', add=[FI_AT])
+# Glucksmann
+_ps = _cur('glucksmann', 'libertes'); assert [(p['verifiable'], p['old']) for p in _ps] == [(True, False), (True, False), (True, False), (True, True), (True, True)], [p['text'] for p in _ps]
+_put('glucksmann', 'libertes', _ps[:3] + [_p("Garantir le budget de l'audiovisuel public sur cinq ans"), _p("Interdire la publicité microciblée sur les plateformes ; créer un réseau social européen")])
+_so('glucksmann', 'libertes', add=[FI_GL])
+_ps = _cur('glucksmann', 'ecole'); assert _ps[4]['text'] == "Baisser le nombre d'élèves par classe en primaire" and not _ps[4]['verifiable'], [p['text'] for p in _ps]
+_put('glucksmann', 'ecole', _ps[:4] + [_p("Moratoire sur les fermetures d'écoles en milieu rural décidées sans concertation", False)])
+_so('glucksmann', 'ecole', add=[FI_GL, dict(FI_NSP, label="franceinfo, direct « Nos services publics » : moratoire sur les fermetures d'écoles rurales (12/11)")])
+# Lisnard
+_ps = _cur('lisnard', 'ecole'); assert _ps[4]['text'] == 'Supprimer Parcoursup' and len(_ps) == 5
+_put('lisnard', 'ecole', _ps[:4] + [_p("Rétablir les notes chiffrées ; évaluations en CM2, en 6e et en 3e ; philosophie dès l'école primaire")])
+_so('lisnard', 'ecole', add=[NE_DEST])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.

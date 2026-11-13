@@ -2889,6 +2889,164 @@ k['note'] = k['note'] + " Début annoncé « dès 2028 » (franceinfo, 12/11/202
 # (2b) banque nationale d'investissement : paramètres non publiés
 MISS_ADD('attal', "banque nationale d'investissement qui prendrait en charge la moitié de l'emprunt des jeunes pour se loger (franceinfo, 12/11/2026 ; public, plafond, taux et coût non publiés)")
 D['asof'] = '12 novembre 2026'
+# --- review 49 : revue du 13/11 (13/11/2026) ; registre S294, S296, S297 (résolus), S106, S268, S280, S298 (mis à jour), S300 et suivants
+# Décisions du 13/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 12 au 13/11, sources ouvertes le 13/11).
+# (1) Philippe : site de campagne refait le 12/11. Les pages /priorites/… renvoient (301) vers la page générale /programme ; chaque citation
+#     est reprise de la page thématique /programme/<thème> datée du 12/11 qui contient le même engagement, avec son texte exact (même contenu ;
+#     une page mise à jour n'est pas une nouvelle annonce). Contrôle : plus aucune adresse /priorites/ dans les données.
+#     - Famille : la page du 12/11 écrit « allocation familiale de 350 € par mois dès le premier enfant », qui « atteindra 350 € pour les plus
+#       modestes et sera dégressive avec le revenu », sans redire « par enfant » ; la page du 8/10 (toujours en ligne) écrit « 350 euros par mois
+#       et par enfant » : pas de paramètre contraire publié, fiche inchangée (non chiffrable), les deux sources citées.
+#     - Jeunes parents : champ écrit en déciles le 12/11 (« du 4e au 6e décile et au début du 7e » ; 3 000 € de réduction pour « les familles
+#       plus aisées qui travaillent ») ; le chiffrage compté est celui du camp (3 Md€, 8/10), qui ne repose sur aucun calcul de périmètre de
+#       notre part : inchangé (−3).
+#     - Retraites : la page du 12/11 ne mentionne plus les excédents de l'Agirc-Arrco ; mécanisme publié : capitalisation collective
+#       généralisée à tous les salariés, « sans hausse des cotisations », gestion confiée aux partenaires sociaux « une fois les retraites
+#       revenues à l'équilibre » (après la réforme, pas une condition de celle-ci). Plus aucun accord de tiers dont la mesure dépende : verdict
+#       « faisable » (loi), financement de la capitalisation non précisé, même forme que Lisnard, Retailleau et Zemmour. Chiffrage inchangé.
+#     - Durée du RSA limitée « pour inciter à la reprise du travail » (page Finances publiques) : durée non publiée → liste « non comptée »
+#       (le RSA limité à trois ans de Zemmour, durée publiée, a sa fiche ; même base dès qu'une durée est publiée).
+EPP = 'https://www.edouardphilippe.fr/programme/'
+EP_T = {'justice': 'Justice', 'securite': 'Sécurité', 'immigration': 'Immigration', 'defense': 'Défense', 'travail': 'Travail et salaires',
+        'entreprises': 'Entreprises et industrie', 'comptes-publics': 'Finances publiques', 'retraites': 'Retraites', 'ecole': 'École',
+        'famille': 'Famille', 'adaptation-climatique': 'Adaptation climatique', 'energie': 'Énergie'}
+def EPS(p): return "Site de campagne d'Édouard Philippe, programme « " + EP_T[p] + " » (12/11/2026)"
+PH_OLD = 'https://www.edouardphilippe.fr/priorites/'
+PHMAP = {('fonction', 'inputs'): ('comptes-publics', "« Ne pas remplacer 1 fonctionnaire sur 3, soit 250 000 postes en moins sur le quinquennat » ; « fusionner ou supprimer des dizaines d'opérateurs, d'agences et de comités publics, et regrouper ou privatiser ceux qui s'enchevêtrent »"),
+         ('chomage', 'inputs'): ('travail', "Trois jours de carence pour tous, dans le privé comme dans le public."),
+         ('heures_sup', 'inputs'): ('travail', "« au-delà de la 37e heure, l'entreprise ne paiera plus de cotisation patronale »"),
+         ('fonds_climat', 'inputs'): ('adaptation-climatique', None),
+         ('premier_contrat', 'inputs'): ('retraites', "premier versement de 500 € par l'État dès le premier emploi"),
+         ('armees', 'estimates'): ('defense', "« faire passer le service militaire volontaire de 3 000 à 50 000 places par an et porter le nombre de réservistes à 250 000 » ; « porter le nombre de réservistes de 45 000 à 250 000 »"),
+         ('ingenieurs', 'inputs'): ('ecole', "« faire passer le nombre d'ingénieurs formés chaque année de 40 000 à 100 000 en cinq ans »"),
+         ('regle_or', 'inputs'): ('comptes-publics', "« Inscrire dans la Constitution une « règle d'or » budgétaire adoptée par référendum dès le début du quinquennat » ; « Ramener le déficit de plus de 5 % à 2 % de la richesse nationale à la fin du mandat »"),
+         ('etudiants_etrangers', 'estimates'): ('immigration', "« appliquer vraiment la hausse des droits d'inscription prévue pour les étudiants venus hors d'Europe »"),
+         ('etudiants_etrangers', 'inputs'): ('immigration', "« vérifier qu'ils ont réellement les moyens de financer leurs études et d'appliquer vraiment la hausse des droits d'inscription prévue pour les étudiants venus hors d'Europe »")}
+_vus = set()
+for m in C['philippe']['measures']:
+    for kind, arr in (('estimates', m['estimates']), ('inputs', (m.get('claude') or {}).get('inputs', []))):
+        for o in arr:
+            if o['url'].startswith(PH_OLD):
+                p, v = PHMAP[(m['id'], kind)]; _vus.add((m['id'], kind))
+                o['url'] = EPP + p; o['source'] = EPS(p)
+                if v: o['value'] = v
+assert _vus == set(PHMAP), set(PHMAP) - _vus
+assert PH_OLD not in json.dumps(D), "adresse /priorites/ restante (Philippe)"
+C['philippe']['sim']['droits_inscription']['note'] = "« Appliquer vraiment » la hausse des droits d'inscription des étudiants venus hors d'Europe (exonérations supprimées, même lecture que Retailleau)"
+# (1a) famille : « par enfant » non redit le 12/11, pas de paramètre contraire ; fiche inchangée
+CIT_PH350 = "Verser une allocation familiale de 350 € par mois dès le premier enfant."
+m = M('philippe', 'famille'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (0, 0, 0)
+m['estimates'].append({"source": EPS('famille'), "year": 2026, "value": "« " + CIT_PH350 + " » ; « Elle atteindra 350 € pour les plus modestes et sera dégressive avec le revenu. »", "low_md": None, "high_md": None, "url": EPP + 'famille'})
+k['inputs'].append({"label": "Mesure redite (12/11/2026)", "value": "« " + CIT_PH350 + " » (« par enfant » non redit ; « 350 euros par mois et par enfant » sur la page du 8/10, toujours en ligne)", "source": EPS('famille'), "url": EPP + 'famille'})
+k['note'] += " Page du programme du 12/11/2026 : « 350 € par mois dès le premier enfant », « 350 € pour les plus modestes », dégressive avec le revenu ; elle ne redit pas « par enfant », que la page du 8/10 (toujours en ligne) écrit : aucun paramètre contraire publié, lecture inchangée."
+# (1b) jeunes parents : champ en déciles, chiffrage du camp inchangé
+CIT_PHJP = "Pendant les trois premières années de l'enfant, Édouard Philippe veut supprimer l'impôt sur le revenu des ménages des classes moyennes, du 4e au 6e décile et au début du 7e. Les familles plus aisées qui travaillent auront droit à 3 000 € de réduction d'impôt par an."
+m = M('philippe', 'jeunes_parents'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-3, -4.5, -2)
+m['proposal'] = "Pendant les 3 premières années de l'enfant : pas d'impôt sur le revenu pour les ménages des classes moyennes (du 4e au 6e décile et au début du 7e), réduction de 3 000 € par an pour les familles plus aisées qui travaillent."
+k['inputs'].append({"label": "Champ publié (12/11/2026)", "value": "« " + CIT_PHJP + " »", "source": EPS('famille'), "url": EPP + 'famille'})
+k['note'] = "Aucun chiffrage indépendant publié. Champ écrit en déciles sur la page du programme du 12/11/2026 (le 8/10 : exonération sous 3 000 € d'impôt, réduction de 3 000 € au-delà) ; le montant compté est celui du camp (3 Md€), qui ne dépend d'aucun calcul de périmètre de notre part : inchangé."
+# (1c) retraites : plus d'Agirc-Arrco ; « faisable »
+CIT_PHR = "Généraliser la capitalisation collective à tous les salariés et ouvrir un plan d'épargne retraite à chaque Français."
+m = M('philippe', 'retraites'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (1.8, 1.8, 5.8)
+m['proposal'] = "Porter progressivement l'âge de départ à 65 ans et la durée de cotisation à 45 ans en moins de dix ans (départs anticipés maintenus pour raisons de santé et carrières longues) ; capitalisation collective généralisée à tous les salariés, plan d'épargne retraite pour chaque Français."
+a0 = "capitalisation alimentée par les excédents de l'Agirc-Arrco : 0 si le fonds reste une administration publique (classement non publié), sinon au plus ≈ −1,4"; assert k['formula'].count(a0) == 1, k['formula']
+k['formula'] = k['formula'].replace(a0, "capitalisation collective généralisée à tous les salariés, « sans hausse des cotisations » (programme du 12/11/2026) : financement et classement du fonds non publiés, 0")
+k['inputs'].append({"label": "Mécanisme publié (12/11/2026)", "value": "« " + CIT_PHR + " » ; « Confier la gestion du système de retraites aux partenaires sociaux une fois les retraites revenues à l'équilibre. »", "source": EPS('retraites'), "url": EPP + 'retraites'})
+VB('philippe', 'retraites', SC, FA, "Par la loi ; capitalisation alimentée par les réserves de l'Agirc-Arrco, régime complémentaire géré par les partenaires sociaux : accord de ceux-ci.",
+   "Par la loi ; financement de la capitalisation collective généralisée à tous les salariés " + FNP[len('financement '):] + ".")
+MISS_ADD('philippe', "durée du RSA limitée pour inciter à la reprise du travail (programme du 12/11/2026 : durée non publiée ; même base que le RSA limité à trois ans de Zemmour dès qu'une durée est publiée)")
+# (2) Zemmour, entretien franceinfo du 12/11 (« Nos services publics »), article de franceinfo :
+#     - « Je vais recruter 40 000 gardiens de prison parce que je veux construire très rapidement 100 000 places de prison en préfabriqué » :
+#       même plan que la fiche « prisons » (les gardiens servent les places). Valeur commune des fiches prisons : coût annuel complet d'un
+#       détenu (32 000 €, personnel compris), compté pour chaque place, chez les quatre candidats qui proposent des places ; les 40 000
+#       surveillants au barème des recrutements publics (40 000 × 61,6 k€ × 70 % ≈ 1,7 Md€) sont une part de ce coût (3,2 Md€ pour 100 000
+#       places) : pas d'ajout, sinon le personnel serait compté deux fois et chez lui seul. 100 000 places gardées (citation de l'article et
+#       site de campagne) ; 200 000 dans les directs de franceinfo, RTL et BFMTV : registre.
+#     - 800 000 postes : règle publiée « un tiers des départs à la retraite ne sont pas remplacés » ; chiffrage selon la règle commune inchangé.
+#     - Revenu des médecins retraités qui reprennent une activité « dispensé d'impôt sur le revenu » : plafond et durée non publiés, non compté.
+FIZ = 'https://www.franceinfo.fr/elections/presidentielle/presidentielle-eric-zemmour-souhaite-supprimer-800-000-postes-dans-la-fonction-publique_8279303.html'
+FIZ_S = "franceinfo, « Nos services publics », entretien d'É. Zemmour (12/11/2026)"
+CIT_Z40 = "Je vais recruter 40 000 gardiens de prison parce que je veux construire très rapidement 100 000 places de prison en préfabriqué"
+m = M('zemmour', 'prisons'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-3.2, -9.0, -1.6)
+m['proposal'] = "Recruter 40 000 gardiens de prison et construire très rapidement 100 000 places de prison supplémentaires, en préfabriqué."
+m['estimates'].append({"source": FIZ_S, "year": 2026, "value": "« " + CIT_Z40 + " »", "low_md": None, "high_md": None, "url": FIZ})
+k['inputs'].append({"label": "Proposition redite (12/11/2026)", "value": "« " + CIT_Z40 + " »", "source": FIZ_S, "url": FIZ})
+k['note'] += (" 40 000 gardiens de prison (franceinfo, 12/11/2026) : ils servent les places du même plan ; le coût annuel d'un détenu (32 000 €, la même valeur pour"
+              " les quatre candidats) comprend le personnel : au barème des recrutements publics, 40 000 × 61,6 k€ × 70 % ≈ 1,7 Md€, compris dans les 3,2 Md€ comptés"
+              " pour 100 000 places, sans ajout (pas de double compte).")
+m = M('zemmour', 'fonctionnaires'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (17.2, 3.2, 24.6)
+CIT_Z13 = "Un tiers des départs à la retraite ne sont pas remplacés"
+m['estimates'].append({"source": FIZ_S, "year": 2026, "value": "800 000 postes non renouvelés : « " + CIT_Z13 + " »", "low_md": None, "high_md": None, "url": FIZ})
+k['note'] += " Règle redite le 12/11/2026 (franceinfo) : « " + CIT_Z13 + " », pour 800 000 postes ; chiffrage selon la règle commune des plans de postes, inchangé (la borne basse de la règle commune est déjà un départ sur trois non remplacé)."
+MISS_ADD('zemmour', "revenu des médecins retraités qui reprennent une activité dispensé d'impôt sur le revenu (franceinfo, 12/11/2026 : revenu visé, plafond et durée non publiés)")
+# (3) Retailleau, livret « Reprendre le contrôle de l'immigration » (site de campagne, 12/11) et entretien franceinfo du 12/11 :
+#     - moyens de la lutte contre l'immigration irrégulière portés « de 1,6 à environ 4 milliards d'euros par an » : ligne ≥ 1 Md€ d'un budget
+#       publié → fiche ; dépense sans chiffrage indépendant : chiffre du camp, bornes ±50 % ; niveau visé à l'horizon 2032 sans étapes publiées :
+#       70 % en 2030 (règle des objectifs en niveau, comme la fraude du même plan). Le tableau du livret (10,1 Md€ « nets ») n'a pas de ligne de
+#       dépense : les moyens nouveaux y sont dits « financés par les mesures du livret qui vont au-delà des hypothèses prudentes du chiffrage » ;
+#       la fiche « Référendum immigration » compte des économies tirées d'études indépendantes : la dépense est comptée une seule fois, ici.
+#     - 40 000 places de prison (franceinfo et BFMTV, deux médias indépendants, 12/11) au lieu des 10 000 du plan : fiche « Peines planchers »
+#       recalculée au gabarit commun des fiches prisons (Le Pen, Lisnard, Zemmour : fonctionnement compté, construction en borne basse, moitié des
+#       places en borne haute) ; 4 000 années de détention des peines planchers gardées dans les trois valeurs.
+#     - Ademe supprimée, missions confiées aux régions : agence nommée dont les missions sont reprises → 0, hors de la valeur commune (note).
+#     - Titre de séjour doublé (350 → 700 €), taxe de naturalisation à 1 000 € : base officielle (titres délivrés et renouvelés, naturalisations)
+#       sous 1 Md€ ; ligne du camp (0,5 Md€ en 2032) déjà listée non comptée. « Un peu moins de 2 milliards » pour recruter des magistrats :
+#       horizon et nombre de postes non publiés → liste « non comptée » (comme les 3 000 magistrats et greffiers d'Attal, comptés au barème
+#       commun dès qu'un nombre est publié).
+LIV_R = "https://www.avecretailleau.fr/api/media/file/LR_Reprendre%20le%20contro%CC%82le%20de%20l'immigration%20v111126-3.pdf"
+LIV_RS = "avecretailleau.fr, livret « Reprendre le contrôle de l'immigration » (novembre 2026, en ligne le 12/11)"
+R125 = 'https://www.avecretailleau.fr/projet/mesure/faire-du-depart-force-et-immediat-la-regle'
+R125_S = "avecretailleau.fr, mesure « Faire du départ forcé et immédiat la règle » (12/11/2026)"
+CIT_R16 = "Moyens portés de 1,6 à environ 4 milliards d'euros par an; une journée de rétention coûte 602 euros selon la Cour des comptes; cette dépense rend possibles chaque année des économies cinq fois supérieures"
+CIT_R10 = "Résultat : 10 milliards d'euros d'économies nettes par an à l'horizon 2032 - une fois intégralement payé le réarmement de la lutte contre l'immigration illégale (budget porté de 1,6 à environ 4 milliards d'euros par an, proposition 12)."
+ADD('retailleau', {'id': 'lutte_irreguliere', 'theme': 'immigration', 'title': "Lutte contre l'immigration irrégulière : de 1,6 à 4 Md€ par an",
+  'proposal': "Porter les moyens de la lutte contre l'immigration irrégulière (contrôles à l'entrée, rétention, éloignements) de 1,6 à environ 4 Md€ par an ; rétention jusqu'à 24 mois pour les sortants de prison et les profils dangereux.",
+  'claimed': "≈ 2,4 Md€ de dépense en plus par an (niveau 2032)", 'claimed_md': -2.4,
+  'estimates': [{"source": R125_S, "year": 2026, "value": "« " + CIT_R16 + " »", "low_md": -2.4, "high_md": -2.4, "url": R125}],
+  'consensus': 'isolé', 'verdict': 'faisable', 'obstacle': "Par la loi de finances ; " + FNP + ".",
+  'claude': {'id': 'lutte_irreguliere', 'central': -1.7, 'low': -2.5, 'high': -0.8, 'method': 'camp',
+    'formula': "Ligne de dépense publiée (≥ 1 Md€) : 4 − 1,6 = 2,4 Md€ par an, niveau visé à l'horizon 2032 sans étapes publiées → 70 % en 2030 (règle des objectifs en niveau, comme la fraude du même plan) ≈ −1,7 ; aucun chiffrage indépendant : chiffre du camp, bornes ±50 % (−2,5 à −0,8)",
+    'inputs': [{"label": "Dépense publiée", "value": "« " + CIT_R16 + " »", "source": R125_S, "url": R125},
+               {"label": "Chiffrage du livret (annexe 2)", "value": "« " + CIT_R10 + " »", "source": LIV_RS, "url": LIV_R}],
+    'note': "Le tableau du livret (10,1 Md€ d'économies « nettes » en 2032) n'a pas de ligne de dépense : les moyens nouveaux y sont dits « financés par les mesures du livret qui vont au-delà des hypothèses prudentes du chiffrage ». La fiche « Référendum immigration » compte des économies tirées d'études indépendantes (prestations 2,7, asile 1,2), hors de ce tableau : la dépense est comptée une fois, ici."}})
+FIR = 'https://www.franceinfo.fr/elections/presidentielle/presidentielle-bruno-retailleau-veut-economiser-300-000-postes-dans-la-fonction-publique-grace-a-l-intelligence-artificielle_8279522.html'
+FIR_S = "franceinfo, « Nos services publics », entretien de B. Retailleau (12/11/2026)"
+BFMR = 'https://www.bfmtv.com/politique/elections/presidentielle/direct-presidentielle-2027-jean-luc-melenchon-estime-que-la-droite-a-enfin-un-candidat-qui-ressemble-a-quelque-chose-avec-teddy-riner_LN-202611120185.html'
+BFMR_S = "BFMTV, direct présidentielle du 12/11/2026"
+m = M('retailleau', 'securite'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-0.45, -1.2, -0.1)
+m['proposal'] = "Peines minimales obligatoires inscrites dans un « pacte constitutionnel » ; 40 000 places de prison supplémentaires."
+m['estimates'] += [{"source": FIR_S, "year": 2026, "value": "« Bruno Retailleau veut également construire 40 000 places de prison supplémentaires. »", "low_md": None, "high_md": None, "url": FIR},
+                   {"source": BFMR_S, "year": 2026, "value": "« créer 40.000 places de prison »", "low_md": None, "high_md": None, "url": BFMR}]
+k.update(central=-1.4, low=-3.7, high=-0.8,
+  formula="Même règle que Le Pen (30 000 places), Lisnard (20 000 places) et Zemmour (100 000 places), construction exclue : 40 000 places × 32 k€ de coût annuel d'un détenu ≈ 1,28 + 4 000 années de détention des peines planchers × 32 k€ ≈ 0,13 → −1,4 ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 40 000 sur 5 ans ≈ 2,96 + moitié des places ouvertes ≈ 0,64 + 0,13 → −3,7 ; borne haute : moitié des places ouvertes en 2030 et peines planchers (−0,8)")
+k['inputs'].append({"label": "Places publiées (12/11/2026)", "value": "40 000 places de prison supplémentaires (franceinfo ; BFMTV : « créer 40.000 places de prison »)", "source": FIR_S, "url": FIR})
+a0 = "Construction exclue de la valeur centrale, comptée en borne basse comme dans les autres fiches prisons."; assert k['note'].startswith(a0)
+k['note'] = k['note'].replace(a0, a0 + " 40 000 places depuis le 12/11/2026 (franceinfo et BFMTV ; 10 000 dans le plan du 12/10).")
+m = M('retailleau', 'etat'); k = m['claude']
+m['estimates'].append({"source": FIR_S, "year": 2026, "value": "« Bruno Retailleau dit également vouloir supprimer plusieurs agences, dont l'Agence de l'environnement et de la maîtrise de l'énergie (Ademe), dont il confiera les missions aux régions. »", "low_md": None, "high_md": None, "url": FIR})
+k['note'] += " Ademe supprimée, missions confiées aux régions (franceinfo, 12/11/2026) : agence nommée dont les missions sont reprises, 0 hors de la valeur commune des agences (règle commune)."
+MISS_ADD('retailleau', "recrutement de procureurs, juges d'instruction et greffiers (« un peu moins de 2 milliards », franceinfo, 12/11/2026 : horizon et nombre de postes non publiés), titre de séjour doublé (350 → 700 €) et taxe de naturalisation portée à 1 000 € (livret du 12/11/2026 : recettes sous 1 Md€ ; ligne du camp de 0,5 Md€ en 2032 déjà listée)")
+# (4) Attal : suspension pendant deux ans de l'imposition des plus-values de cession des résidences secondaires (C. Géraud, responsable de la
+#     communication et du porte-parolat de sa campagne depuis le 3/09 (LCP), RCF, 12/11) : mesure temporaire, dates non publiées ; si elle
+#     commence avec la première loi de finances du mandat (2028), elle s'achève avant 2030 : aucun effet sur le solde de 2030, non comptée.
+#     Banque nationale d'investissement dans le logement : la citation du candidat (franceinfo, reprise par Batiactu le 13/11) ne la réserve pas
+#     aux jeunes : texte de la liste corrigé.
+MISS('attal', "banque nationale d'investissement qui prendrait en charge la moitié de l'emprunt des jeunes pour se loger (franceinfo, 12/11/2026 ; public, plafond, taux et coût non publiés)",
+     "banque nationale d'investissement dans le logement qui financerait la moitié du prix du bien, l'acquéreur n'empruntant que sur l'autre moitié (franceinfo, 12/11/2026 ; public, plafond, taux et coût non publiés)")
+MISS_ADD('attal', "suspension pendant deux ans de l'imposition des plus-values de cession des résidences secondaires (porte-parole de campagne, RCF, 12/11/2026 : mesure temporaire, dates non publiées ; achevée avant 2030 si elle commence avec la première loi de finances du mandat, sans effet sur le solde de 2030)")
+# (5) Mélenchon : rémunération des élèves de l'enseignement professionnel « supérieur[e] au seuil de pauvreté » dès 16 ans (franceinfo, 12/11) :
+#     absente du programme écrit ; montant et lien avec la garantie d'autonomie (réservée aux jeunes détachés du foyer fiscal) non publiés.
+MISS_ADD('melenchon', "rémunération au-dessus du seuil de pauvreté pour tous les élèves de l'enseignement professionnel dès 16 ans (franceinfo, 12/11/2026 : montant et articulation avec la garantie d'autonomie non publiés)")
+m = M('melenchon', 'jeunes'); m['claude']['note'] += " Le 12/11/2026 (franceinfo), le candidat vise aussi une rémunération « supérieur[e] au seuil de pauvreté » pour tous les élèves de l'enseignement professionnel dès 16 ans : montant et articulation avec la garantie d'autonomie non publiés, non comptée."
+# (6) Glucksmann : hausse des enseignants redite (franceinfo, 12/11) : source ajoutée, chiffrage inchangé.
+FIG = 'https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-je-ne-veux-pas-d-une-societe-ou-les-grands-medias-sont-controles-par-quelques-oligarques-assure-raphael-glucksmann_8279636.html'
+FIG_S = "franceinfo, « Nos services publics », entretien de R. Glucksmann (12/11/2026)"
+m = M('glucksmann', 'ecole'); assert (m['claude']['central'], m['claude']['low'], m['claude']['high']) == (-4.2, -6.0, -2.7)
+m['estimates'].append({"source": FIG_S, "year": 2026, "value": "« Il propose une augmentation des salaires des enseignants allant jusqu'à 25% en milieu de carrière et de 10% minimum pour l'ensemble des enseignants » ; coût « estimé à 6 milliards d'euros » (estimation non attribuée par le média)", "low_md": None, "high_md": None, "url": FIG})
+# (7) Lisnard : fonds souverain pour l'épargne retraite des épargnants qui ne veulent pas la confier à des acteurs privés (Rencontres de
+#     l'Avenir, 6/11, compte rendu de Nouvelle Énergie du 13/11) : opération financière, note.
+m = M('lisnard', 'retraites'); m['claude']['note'] += " Fonds souverain pour les épargnants qui ne veulent pas confier leur épargne retraite à des acteurs privés (Nouvelle Énergie, compte rendu du 13/11/2026 des Rencontres de l'Avenir du 6/11) : opération financière, sans effet direct sur le solde."
+D['asof'] = '13 novembre 2026'
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
