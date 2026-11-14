@@ -1530,6 +1530,57 @@ _ps = _cur('lisnard', 'ecole'); assert _ps[4]['text'] == 'Supprimer Parcoursup' 
 _put('lisnard', 'ecole', _ps[:4] + [_p("Rétablir les notes chiffrées ; évaluations en CM2, en 6e et en 3e ; philosophie dès l'école primaire")])
 _so('lisnard', 'ecole', add=[NE_DEST])
 
+# --- review 50 : revue du 14/11 (14/11/2026) ; registre S106, S282 (résolu), S304 et suivants
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; à égalité ou
+# à date inconnue, ordre affiché gardé ; une proposition nouvelle se place après les précises de 2026 déjà affichées ; au-delà de 5, sort celle
+# que la règle classe dernière, S106). Même test « précis » (changement de droit nommé, instrument nommé et ce qui y change, chiffre, durée,
+# échéance ou niveau scolaire nommé). Sources ouvertes le 14/11.
+# Positions sur l'Ukraine (rayonnement), même règle pour les trois candidats dont une source qui parle pour eux la porte en 2026 :
+#  - Le Pen (franceinfo avec l'AFP, 13/11, qui la cite) : aide financière « maintenue durant six mois » après l'élection, puis « cesserait »
+#    (précise : durée publiée) ; 2 → 3 ;
+#  - Mélenchon (communiqué de La France insoumise, 9/11, S282) : toute cession de territoire validée par le vote des populations concernées ;
+#    soutien aux plans d'aide sauf missiles longue portée, forces combattantes et adhésion à l'UE (précise : exceptions nommées, comme « aucune
+#    intervention sans mandat de l'ONU ») ; après les précises de 2026, 4 → 5 ;
+#  - Glucksmann (LCP, 9/10, déjà source de la fiche « Plus d'aide à l'Ukraine ») : renforcer l'aide, financée par la saisie des avoirs publics
+#    russes gelés (précise : instrument nommé) ; 2 → 3. Les autres candidats : aucune position relevée dans nos sources de 2026 (registre).
+# Commande publique : « priorité nationale dans la commande publique » (Le Pen, franceinfo, 13/11 ; mécanisme non publié : intention, même lecture
+#  que le « Buy European Act » de Glucksmann) : thème économie plein de propositions précises de 2026, 6e, non affichée (S106). « Buy European
+#  Act » redit par Glucksmann le 14/11 (franceinfo, direct du salon du Made in France) : intention de 2026, plus récente que « État d'urgence
+#  industriel pour les secteurs menacés par la Chine » (LCP, 13/06), qui sort.
+# Attal, émission LCI-U2P du 12/11 (direct de TF1 Info, média reconnu, propos cités) :
+#  - économie : « droit au répit », aucun nouveau contrôle fiscal, social ou douanier lancé en juillet et en août (précise : règle nommée) ;
+#    6e d'un thème de précises de 2026 : sort la moins récente, « Plan de 200 Md€ pour la puissance de calcul et l'IA » (Les Échos, 17/06 ;
+#    « Constitution du travail », page de programme sans date, garde sa place affichée) ;
+#  - école : 25 % du temps scolaire « différencié » à partir de la 4e (précise : part et niveau nommés ; entre au quiz) ; sort la moins récente,
+#    « Moins de 20 élèves par classe en primaire » (Public Sénat, 30/05).
+OFFICIEL['melenchon'] += ('lafranceinsoumise.fr',)
+FI_LPU = _s("franceinfo avec l'AFP, M. Le Pen et l'aide à l'Ukraine (13/11)", 'https://www.franceinfo.fr/politique/marine-le-pen/si-je-peux-le-rencontrer-a-bruxelles-je-le-dirai-a-l-ambassadeur-d-ukraine-marine-le-pen-se-dit-prete-a-echanger-avec-volodymyr-zelensky_8281529.html')
+LFI_UKR = _s("La France insoumise, mise au point sur la position du candidat sur la guerre en Ukraine (9/11)", 'https://lafranceinsoumise.fr/2026/11/09/mise-au-point-sur-la-position-de-la-france-insoumise-et-son-candidat-sur-la-guerre-en-ukraine/')
+LCP_GUK = _s("LCP, différences entre les candidats à la primaire socialiste, dont l'aide à l'Ukraine (9/10)", 'https://lcp.fr/actualites/glucksmann-faure-royal-maurel-guedj-quelles-differences-entre-les-candidats-a-la')
+FI_MIF = _s("franceinfo, direct du salon du Made in France : « Buy European Act » (14/11)", 'https://www.franceinfo.fr/elections/presidentielle-2027-raphael-glucksmann-et-teddy-riner-attendus-au-salon-du-made-in-france_8282213.html')
+TF1_U2P = _s("TF1 Info, direct de l'émission de LCI avec l'U2P, G. Attal face aux petits patrons (12/11)", 'https://www.tf1info.fr/politique/elections/presidentielle/direct-video-gabriel-attal-face-aux-petits-patrons-suivez-l-emission-sur-lci-en-collaboration-avec-l-u2p-2475506.html')
+# Ukraine
+_ps = _cur('le-pen', 'rayonnement'); assert len(_ps) == 2 and not any(p['old'] for p in _ps), [p['text'] for p in _ps]
+_put('le-pen', 'rayonnement', _ps + [_p("Maintenir l'aide financière à l'Ukraine six mois après l'élection, puis l'arrêter")])
+_so('le-pen', 'rayonnement', add=[FI_LPU])
+_ps = _cur('melenchon', 'rayonnement'); assert len(_ps) == 4 and _ps[2]['text'].startswith('Aucune intervention') and not _ps[3]['verifiable'], [p['text'] for p in _ps]
+_put('melenchon', 'rayonnement', _ps[:3] + [_p("Ukraine : toute cession de territoire validée par le vote des populations concernées ; soutien aux plans d'aide, sauf missiles longue portée, forces combattantes et adhésion à l'UE")] + _ps[3:])
+_so('melenchon', 'rayonnement', add=[LFI_UKR])
+_ps = _cur('glucksmann', 'rayonnement'); assert len(_ps) == 2 and not _ps[0]['verifiable'], [p['text'] for p in _ps]
+_put('glucksmann', 'rayonnement', _ps + [_p("Renforcer l'aide à l'Ukraine, financée par la saisie des avoirs publics russes gelés")])
+_so('glucksmann', 'rayonnement', add=[LCP_GUK])
+# Commande publique (Glucksmann ; Le Pen : S106)
+_ps = _cur('glucksmann', 'economie'); assert [p['verifiable'] for p in _ps] == [True, True, True, True, False] and _ps[4]['text'].startswith("État d'urgence industriel"), [p['text'] for p in _ps]
+_put('glucksmann', 'economie', _ps[:4] + [_p("« Buy European Act » : préférence européenne dans les marchés publics", False)])
+_so('glucksmann', 'economie', add=[FI_MIF])
+# Attal
+_ps = _cur('attal', 'economie'); assert all(p['verifiable'] and not p['old'] for p in _ps) and _ps[3]['text'] == "Plan de 200 Md€ pour la puissance de calcul et l'IA", [p['text'] for p in _ps]
+_put('attal', 'economie', _ps[:3] + _ps[4:] + [_p("« Droit au répit » : aucun nouveau contrôle fiscal, social ou douanier lancé en juillet et en août")])
+_so('attal', 'economie', add=[TF1_U2P])
+_ps = _cur('attal', 'ecole'); assert all(p['verifiable'] and not p['old'] for p in _ps) and _ps[0]['text'] == 'Moins de 20 élèves par classe en primaire', [p['text'] for p in _ps]
+_put('attal', 'ecole', _ps[1:] + [_p("À partir de la 4e, 25 % du temps scolaire « différencié » : options en plus pour certains élèves, découverte des métiers et initiation aux métiers manuels pour d'autres")])
+_so('attal', 'ecole', add=[TF1_U2P])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.

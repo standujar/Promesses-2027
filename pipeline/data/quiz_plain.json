@@ -362,12 +362,7 @@
 "Des écoles, collèges et lycées publics sous contrat choisissent leurs professeurs, leur organisation et leurs méthodes, et sont évalués tous les trois ans.",
 "Créer 1 000 établissements publics « innovants » et autonomes d'ici 2032"
 ],
-"attal.ecole.1": [
-"Moins de 20 élèves par classe en primaire",
-"Les classes d'école passent sous 20 élèves ; la moyenne est aujourd'hui de 21 (24 dans le privé).",
-"Moins de 20 élèves par classe en primaire"
-],
-"attal.ecole.3": [
+"attal.ecole.2": [
 "Exiger le brevet pour entrer au lycée et un certificat d'études pour entrer au collège",
 "Sans ce diplôme, l'élève suit une année de transition avant d'entrer au collège ou au lycée.",
 "Groupes de niveau et méthode de Singapour ; certificat d'études pour entrer au collège, brevet obligatoire pour entrer au lycée"
@@ -702,7 +697,7 @@
 "Un garant public paie le loyer en cas d'impayé, pour que les jeunes trouvent plus facilement un logement ; de nouvelles résidences étudiantes sont bâties.",
 "Garantie universelle des loyers et nouvelles résidences universitaires pour les étudiants et les jeunes actifs"
 ],
-"attal.ecole.4": [
+"attal.ecole.3": [
 "Évaluer les licences et masters tous les trois ans et fermer les filières aux moins bons résultats",
 "Les formations où beaucoup d'étudiants abandonnent ou trouvent mal un emploi seraient réorientées ou fermées.",
 "Évaluer licences et masters tous les trois ans (décrochage, insertion) ; réorienter ou fermer les filières les moins performantes"
@@ -791,7 +786,7 @@
 "Rembourser entièrement les soins prescrits par la Sécurité sociale, qui reprendrait le rôle des mutuelles",
 "Plus de complémentaire santé à payer pour les soins prescrits ; fin des franchises et des dépassements d'honoraires en secteur conventionné."
 ],
-"attal.ecole.5": [
+"attal.ecole.4": [
 "Fermer les formations professionnelles qui mènent peu à l'emploi et en ouvrir dans les métiers qui recrutent",
 "Des CAP et bacs pros où peu d'élèves trouvent un emploi fermeraient, d'autres ouvriraient, dans l'industrie notamment ; des classes de transition aideraient les élèves qui en ont besoin à entrer au collège ou au lycée.",
 "Fermer les filières professionnelles à faible insertion dans l'emploi, en ouvrir dans les métiers qui recrutent ; « classes passerelles » entre primaire et collège et entre collège et lycée"
@@ -810,5 +805,14 @@
 "Supprimer le numerus clausus en médecine : un examen à réussir plutôt qu'un concours",
 "Les étudiants en médecine seraient retenus sur un examen à réussir, et non plus classés dans un concours aux places limitées.",
 "Supprimer le numerus clausus : sélection des étudiants en médecine par un examen, non plus par un concours"
+],
+"attal.ecole.5": [
+"Dès la 4e, consacrer un quart du temps scolaire à des options ou à la découverte des métiers",
+"Un quart des heures de cours serait différent selon les élèves : options en plus pour certains, découverte de métiers et initiation aux métiers manuels pour d'autres.",
+"À partir de la 4e, 25 % du temps scolaire « différencié » : options en plus pour certains élèves, découverte des métiers et initiation aux métiers manuels pour d'autres"
+],
+"attal.allocation": [
+"Remplacer les aides sociales par une allocation unique, au montant plafonné",
+"Une seule aide au lieu de plusieurs, avec un maximum : plus simple, mais certains toucheraient moins qu'aujourd'hui."
 ]
 }

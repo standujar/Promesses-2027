@@ -4252,81 +4252,7 @@
 "etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent que l'autonomie aide surtout des écoles en difficulté soumises à un contrôle des résultats, et change peu les résultats ailleurs.",
 "src": []
 },
-"attal.ecole.1": {
-"constat": "Élèves par classe à l'école : −11 % de 2015 à 2025, 21,3 en moyenne (24,4 dans le privé) (DEPP).",
-"constat_s": [
-4
-],
-"pour": "Avec moins d'élèves, l'enseignant suit chacun de plus près, surtout ceux qui ont du mal.",
-"preuve_pour": "solide",
-"contre": "Le gain s'estompe en partie avec les années, et ouvrir des classes demande des salles.",
-"preuve_contre": "mitigé",
-"cas_pour": [
-{
-"t": "Après deux ans en CP et CE1 dédoublés, les élèves d'éducation prioritaire renforcée ont rattrapé 38 % de leur écart en maths et 16 % en français (DEPP, France, 2021).",
-"s": [
-0,
-1
-]
-},
-{
-"t": "Un élève de moins par classe en primaire améliore les résultats, deux fois plus chez les élèves défavorisés (Piketty et Valdenaire, DEPP, France, 2006).",
-"s": [
-2
-]
-}
-],
-"cas_contre": [
-{
-"t": "Pour la première génération de CP-CE1 dédoublés, l'avance ne se voyait plus à l'entrée en 6e ; les suivantes gardent un petit gain en maths (DEPP, France, 2026).",
-"s": [
-0,
-3,
-5
-]
-},
-{
-"t": "La première année des CP dédoublés, 23 % des écoles concernées ont dû loger deux classes dans une même salle (DEPP, France, 2017).",
-"s": [
-0
-]
-}
-],
-"etudes": "Les évaluations françaises concordent sur un gain rapide des petites classes, plus net pour les élèves défavorisés ; sa durée est discutée (maths oui, français non).",
-"src": [
-{
-"l": "DEPP, Synthèse n° 8, Réduction de la taille de classe en éducation prioritaire",
-"a": 2026,
-"u": "https://www.education.gouv.fr/sites/default/files/document/r-duction-de-la-taille-de-classe-en-ducation-prioritaire-que-nous-apprennent-les-donn-es-de-la-depp--478949.pdf"
-},
-{
-"l": "DEPP, première évaluation des CP dédoublés (via Banque des territoires)",
-"a": 2019,
-"u": "https://www.banquedesterritoires.fr/le-ministere-publie-un-premier-bilan-encourageant-du-dedoublement-des-classes-de-cp-en-rep"
-},
-{
-"l": "DEPP, Les Dossiers n° 173, L'impact de la taille des classes sur la réussite scolaire (Piketty, Valdenaire)",
-"a": 2006,
-"u": "https://media.education.gouv.fr/file/48/4/2484.pdf"
-},
-{
-"l": "DEPP, document de travail n° 2026-E18, effets à long terme des classes réduites en éducation prioritaire, trois premières cohortes (p. 14)",
-"a": 2026,
-"u": "https://archives-statistiques-depp.education.gouv.fr/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?parentDocumentId=57771&documentId=57772&skipWatermark=true&skipCopyright=true"
-},
-{
-"l": "DEPP, Repères et références statistiques 2026, chapitre 2 (les établissements)",
-"a": 2026,
-"u": "https://www.education.gouv.fr/sites/default/files/document/2-les-etablissementspdf-519279.pdf"
-},
-{
-"l": "DEPP, document de travail n° 2026-E01, effets à long terme des classes réduites, première cohorte (p. 9)",
-"a": 2026,
-"u": "https://www.education.gouv.fr/sites/default/files/document/les-effets-long-terme-de-la-r-duction-de-la-taille-de-classe-en-ducation-prioritaire-sur-les-performances-des-l-ves-478865.pdf"
-}
-]
-},
-"attal.ecole.3": {
+"attal.ecole.2": {
 "constat": "Entrée en 6e en 2025 : 28 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
 "constat_s": [
 1
@@ -7821,7 +7747,7 @@
 }
 ]
 },
-"attal.ecole.4": {
+"attal.ecole.3": {
 "constat": "Licence obtenue en 3 ou 4 ans : 40,3 % des bacheliers 2020 inscrits en L1, −14 % en deux promotions (SIES).",
 "constat_s": [
 0
@@ -8547,7 +8473,7 @@
 }
 ]
 },
-"attal.ecole.5": {
+"attal.ecole.4": {
 "constat": "Lycéens professionnels sortis en 2024 : 41 % en emploi salarié six mois après (45 % pour ceux sortis en 2023) (DEPP, Dares).",
 "constat_s": [
 0
@@ -8655,6 +8581,59 @@
 "l": "Sécurité sociale, rapport d'évaluation (REPSS Maladie), fiche 2.7.4 « Assurer l'accès à un médecin traitant »",
 "a": 2026,
 "u": "https://evaluation.securite-sociale.fr/home/maladie/2-7-4-assurer-l-acces-a-un-medecin-traitant.html"
+}
+]
+},
+"attal.ecole.5": {
+"constat": "Élèves de 3e du public orientés vers la voie professionnelle : 38,6 % en 2025 (36,7 % en 2022) (DGESCO).",
+"constat_s": [
+0
+],
+"pour": "Les élèves attirés par un métier pourraient le découvrir dès la 4e, sur un quart de leurs heures.",
+"preuve_pour": "pas d'étude",
+"contre": "Un quart des heures de 4e et de 3e ne serait plus commun à tous les élèves d'une même classe.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation trouvée de l'effet d'un temps scolaire différencié dès la 4e ; les chiffres décrits sont ceux de la procédure d'orientation de fin de 3e (DGESCO).",
+"src": [
+{
+"l": "DGESCO, Repères pour l'orientation et l'affectation des élèves, campagne 2025",
+"a": 2026,
+"u": "https://eduscol.education.gouv.fr/sites/default/files/document/reperes-pour-l-orientation-et-l-affectation-des-eleves-campagne-2025-126290.pdf"
+}
+]
+},
+"attal.allocation": {
+"constat": "33 à 37 % des foyers éligibles au RSA ne le touchaient pas fin 2021, environ un tiers déjà en 2010-2011 (Drees).",
+"constat_s": [
+1,
+0
+],
+"pour": "Une aide fusionnée est plus demandée : après la fusion de 2016, le non-recours est tombé de 68 % à 30 %.",
+"preuve_pour": "mitigé",
+"contre": "Un plafond global touche d'abord les familles nombreuses, dont les aides s'additionnent.",
+"preuve_contre": "faible",
+"cas_pour": [
+{
+"t": "Après la fusion de 2016 dans la prime d'activité, le non-recours est passé de 68 % pour l'ancien RSA activité à un peu moins de 30 % (Cour des comptes, France, 2026).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [],
+"etudes": "En France, la fusion de 2016 dans la prime d'activité a nettement amélioré le recours. Pas d'évaluation française d'un plafond global ; des évaluations à l'étranger, dans des contextes différents, trouvent un peu plus d'emploi chez les foyers plafonnés, surtout des familles nombreuses.",
+"src": [
+{
+"l": "Cour des comptes, La prime d'activité (communication à la commission des finances du Sénat)",
+"a": 2026,
+"u": "https://www.vie-publique.fr/files/rapport/pdf/303828.pdf"
+},
+{
+"l": "DREES, Études et résultats n° 1370, non-recours au RSA fin 2021",
+"a": 2026,
+"u": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/260506-non-recours-au-rsa-fin-2021"
 }
 ]
 }

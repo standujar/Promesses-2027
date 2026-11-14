@@ -3047,6 +3047,115 @@ m['estimates'].append({"source": FIG_S, "year": 2026, "value": "« Il propose un
 #     l'Avenir, 6/11, compte rendu de Nouvelle Énergie du 13/11) : opération financière, note.
 m = M('lisnard', 'retraites'); m['claude']['note'] += " Fonds souverain pour les épargnants qui ne veulent pas confier leur épargne retraite à des acteurs privés (Nouvelle Énergie, compte rendu du 13/11/2026 des Rencontres de l'Avenir du 6/11) : opération financière, sans effet direct sur le solde."
 D['asof'] = '13 novembre 2026'
+
+# --- review 50 : revue du 14/11 (14/11/2026) ; registre S282, S300 (résolus ou mis à jour), S017, S106, S161, S208, S299, S303, S304, S311 et suivants
+# Décisions du 14/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 13 au 14/11, sources ouvertes le 14/11).
+# (1) Sondages (data/sondages.json, règle de « review 19 ») : moyenne au 14/11 ; Ifop pour LCI (terrain achevé le 29/10) sort de la fenêtre de
+#     15 jours ; OpinionWay pour CNews (terrain du 10 au 12/11, notice 10371) entre, chaque score des hypothèses 1 et 2 vérifié sur la notice
+#     (colonne « Publié ») ; Toluna Harris Interactive (10362) et Cluster17 (10368) gardés. Ordre des candidats inchangé.
+# (2) Mélenchon : plan d'investissement « Textile » (melenchon2027.fr, publié le 12/11, modifié le 13/11) : colonne « Investissements
+#     supplémentaires de l'État » = 240 M€ par an, ajoutée à la fiche « Planification écologique » selon sa règle (somme des colonnes « État »
+#     des plans publiés, ligne à ligne ; une enveloppe vaut son montant) : −13,2 → −13,5 (borne basse −13,4 → −13,6 ; borne haute inchangée).
+#     Non comptés, comme dans les deux autres plans : colonne « pôle public bancaire, redéploiements de la PAC et autres acteurs » (450 M€ par
+#     an) ; critères de la commande publique d'habillement et bonus-malus sur les vêtements (paramètres non publiés). Plans automobile et santé
+#     modifiés les 12 et 13/11 : paramètres relus, inchangés ; dates des sources mises à jour.
+PTEX = 'https://melenchon2027.fr/plans-investissement/textile/'
+PTEX_S = "La France insoumise, plan d'investissement textile (12/11/2026, modifié le 13/11)"
+TEX = [("Relocaliser une filière d'habillement grand public (dont lin et chanvre 30, transformation, filature, tissage et ennoblissement 50, confection 30)", 110),
+       ("Bifurcation circulaire du secteur (écoconception, réparation, réemploi, recyclage)", 20), ("Textiles professionnels et collectifs", 70),
+       ("Textiles techniques", 10), ("Recherche et développement", 20), ("Formation", 10)]
+st = sum(v for _, v in TEX) / 1e3; assert round(st, 2) == 0.24
+m = M('melenchon', 'planification'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-13.2, -13.4, -10.0)
+pc, pl = round(-(12.01 + 1.37 + st - 0.155), 1), round(-(12.01 + 1.37 + st), 1); assert (pc, pl) == (-13.5, -13.6), (pc, pl)
+a0 = "BTP et logement 12,01 Md€ par an + automobile 1,37 Md€ par an = 13,38 ; moins la part de l'hébergement d'urgence, comptée dans la fiche « Logements d'urgence » (10 000 logements d'hébergement d'urgence par an sur 200 000 logements publics : 3,1 × 5 % ≈ 0,16) ≈ −13,2 Md€ ; borne basse : sans ce retrait (−13,4)"
+assert k['formula'].count(a0) == 1, k['formula']
+k['formula'] = k['formula'].replace(a0, "BTP et logement 12,01 Md€ par an + automobile 1,37 Md€ par an + textile 0,24 Md€ par an = 13,62 ; moins la part de l'hébergement d'urgence, comptée dans la fiche « Logements d'urgence » (10 000 logements d'hébergement d'urgence par an sur 200 000 logements publics : 3,1 × 5 % ≈ 0,16) ≈ −13,5 Md€ ; borne basse : sans ce retrait (−13,6)")
+k.update(central=pc, low=pl)
+m.update(proposal="Plans d'investissement de l'État publiés ligne à ligne : BTP et logement (12 Md€ par an : 200 000 logements publics, 700 000 isolations, chaudières, bâtiments publics), automobile (1,4 Md€ par an) et textile (0,24 Md€ par an : lin et chanvre, confection, réemploi, textiles professionnels) ; le reste par un pôle public bancaire.",
+         claimed="12 Md€ par an (BTP et logement) + 1,4 Md€ par an (automobile) + 0,24 Md€ par an (textile) de l'État ; 10 Md€ en 2027 (note LFI du 14/10/2026)", claimed_md=-13.6)
+m['estimates'].append({"source": PTEX_S, "year": 2026, "value": "« Les investissements totaux, de l’État et du pôle public bancaire, représentent 3,45 milliards d’euros sur le quinquennat. » ; tableau (en millions d’euros par an), colonne « Investissements supplémentaires de l’État » : « Total par an 240 »", "low_md": -0.24, "high_md": -0.24, "url": PTEX})
+i0 = next(i for i, x in enumerate(k['inputs']) if x['label'].startswith('Plan automobile'))
+k['inputs'].insert(i0 + 1, {"label": "Plan textile, colonne « État » (M€ par an)", "value": " ; ".join(f"{a} {v}" for a, v in TEX) + " ; total 240 (colonne « pôle public bancaire, redéploiements de la PAC et autres acteurs » : 450, non comptée)", "source": PTEX_S, "url": PTEX})
+a0 = "Seuls deux plans d'investissement sont publiés au 8/11/2026 (page « Les plans d'investissement productif »)."; assert k['note'].count(a0) == 1
+k['note'] = k['note'].replace(a0, "Trois plans d'investissement sont publiés au 14/11/2026 : BTP et logement, automobile, textile (page « Les plans d'investissement productif »). Plan textile : colonne « pôle public bancaire, redéploiements de la PAC et autres acteurs » (450 M€ par an) non comptée, comme le pôle public bancaire des autres plans ; critères environnementaux de la commande publique d'habillement et bonus-malus sur les vêtements : paramètres non publiés, non comptés.")
+_DT = {"plan d'investissement automobile (10/10/2026, modifié le 16/10)": "plan d'investissement automobile (10/10/2026, modifié le 12/11)",
+       "plan santé (30/10/2026, modifié le 4/11)": "plan santé (30/10/2026, modifié le 13/11)"}
+_nd = 0
+for m in C['melenchon']['measures']:
+    for o in m['estimates'] + (m.get('claude') or {}).get('inputs', []):
+        for a, b in _DT.items():
+            if a in o.get('source', ''): o['source'] = o['source'].replace(a, b); _nd += 1
+assert _nd == 6, _nd
+# (3) Le Pen, salon du Made in France (franceinfo, 13/11) : « priorité nationale dans la commande publique », sans mécanisme, seuil ni part
+#     réservée publiés : aucune dépense ni recette publiée → liste « non comptée » (même lecture que le « Buy European Act » de Glucksmann, fiche
+#     « Préférence européenne », non chiffrable : achats publics encadrés par le droit de l'Union). Ukraine : aide financière maintenue six mois
+#     après l'élection, puis arrêtée (franceinfo avec l'AFP, 13/11, qui rappelle sa déclaration d'octobre) : précision ajoutée à la ligne « non
+#     comptée » (niveau non publié, même lecture que la hausse de l'aide de Glucksmann) ; Vie quotidienne : bloc « review 50 » de life.py.
+MISS_ADD('le-pen', "priorité nationale dans la commande publique (franceinfo, 13/11/2026 : « La commande publique, c'est 200 milliards d'euros par an » selon la candidate ; mécanisme, seuil et part réservée non publiés ; même lecture que le « Buy European Act » de Glucksmann, achats publics encadrés par le droit de l'Union européenne)")
+MISS('le-pen', "selon la candidate, 15/10/2026 ; niveau non publié,", "selon la candidate, 15/10/2026 ; aide financière maintenue six mois après l'élection puis arrêtée, rappelle franceinfo le 13/11/2026 ; niveau non publié,")
+# (4) Attal, émission de LCI avec l'U2P (12/11, direct de TF1 Info lu en entier) :
+#     - allocation sociale unique « plafonnée à 75 % du SMIC maximum » : fiche, même méthode que les mesures du même type. Retailleau (aides
+#       plafonnées à 70 % du SMIC) : le plafond n'est pas compté, son seul chiffrage (iFRAP) portant sur un autre dispositif ; seule la baisse de
+#       30 % de l'allocation fusionnée, paramètre publié, l'est. Attal ne publie ni les aides fusionnées ni d'autre paramètre : non chiffrable,
+#       comme Lisnard (plafond non publié), fourchette indicative en note ; verdict « faisable » (loi ; aides fusionnées non publiées) ;
+#     - « droit au brut » : gain au salaire médian « autour de 200-250 euros » (250 € sur son site) : simulateur au montant minimal de la
+#       fourchette (200 €, règle commune) ; 5 Md€ d'économies par la durée d'indemnisation du chômage (fiche « Heures sup et chômage » : source
+#       ajoutée) ; coût de 40 Md€ (La Dépêche, 3/11, chiffre non attribué) : rien de compté (registre) ;
+#     - retraites pilotées par la durée de cotisation, paramètres confiés aux partenaires sociaux : source ajoutée, paramètres non publiés.
+TF1U = 'https://www.tf1info.fr/politique/elections/presidentielle/direct-video-gabriel-attal-face-aux-petits-patrons-suivez-l-emission-sur-lci-en-collaboration-avec-l-u2p-2475506.html'
+TF1U_S = "TF1 Info, direct de l'émission de LCI avec l'U2P, « Gabriel Attal face aux petits patrons » (12/11/2026)"
+CIT_A75 = "favorable à ce qu'on puisse avoir une allocation sociale unique, plafonnée à 75 % du SMIC maximum"
+IFRAP_ASU = 'https://www.ifrap.org/emploi-et-politiques-sociales/12-34-milliards-deuros-deconomies-les-differents-scenarios-dun-plafonnement-dune-allocation-sociale-unique-par-rapport'
+ADD('attal', {'id': 'allocation', 'theme': 'social', 'title': "Allocation sociale unique", 'proposal': "Allocation sociale unique plafonnée à 75 % du SMIC au plus ; aides fusionnées non publiées.",
+  'claimed': "Non chiffré", 'claimed_md': None,
+  'estimates': [{"source": TF1U_S, "year": 2026, "value": "Gabriel Attal se dit « " + CIT_A75 + " »", "low_md": None, "high_md": None, "url": TF1U},
+                {"source": "iFRAP", "year": 2024, "value": "Plafond à 100 % du SMIC : ~12 Md€ ; à 70 % : ~34 Md€ (allocation unique versée en crédit d'impôt, autre dispositif)", "low_md": 12, "high_md": 34, "url": IFRAP_ASU}],
+  'consensus': 'isolé', 'verdict': 'faisable', 'obstacle': "Par la loi ; aides fusionnées et modalités du plafond non publiées.",
+  'claude': {'id': 'allocation', 'central': 0, 'low': 0, 'high': 0, 'method': 'médiane',
+    'formula': "Non chiffrable : aides fusionnées non publiées ; le plafond de 75 % du SMIC n'est pas compté, son seul chiffrage (iFRAP, 12 à 34 Md€ selon le plafond) portant sur un autre dispositif (même lecture que le plafond à 70 % du SMIC de Retailleau et l'allocation unique de Lisnard)",
+    'inputs': [{"label": "Mesure publiée (12/11/2026)", "value": "« " + CIT_A75 + " »", "source": TF1U_S, "url": TF1U},
+               {"label": "Économies selon le plafond", "value": "12 (100 % SMIC) à 34 Md€ (70 %)", "source": "iFRAP", "url": IFRAP_ASU},
+               {"label": "Minima sociaux", "value": "30,6 Md€ en 2022", "source": "DREES (Banque des Territoires)", "url": "https://www.banquedesterritoires.fr/minima-sociaux-le-rsa-et-laah-ont-coute-chacun-12-milliards-deuros-en-2022"}],
+    'note': "Indicatif : +12 à +34 Md€ selon le plafond (scénarios iFRAP, allocation unique versée en crédit d'impôt, autre dispositif) ; aides fusionnées non publiées"}})
+sa = C['attal']['sim']
+sa['minima_sociaux'] = sa['minima_sociaux'].rstrip() + " Allocation sociale unique plafonnée à 75 % du SMIC au plus : aides fusionnées non publiées, baisse possible non calculée ici."
+sn = sa['salaire_net']; assert sn['points'] == [[2238, 250]], sn['points']
+sn['points'] = [[2238, 200]]
+a0 = "250 €/mois nets de plus au salaire médian (2 238 € net, Insee ; 2 200 € selon le candidat)"; assert _nb(sn['note']).count(_nb(a0)) == 1, sn['note']
+sn['note'] = _nb(sn['note']).replace(_nb(a0), "un gain « autour de 200-250 euros » nets par mois au salaire médian selon le candidat (12/11/2026 ; 250 € sur son site) : montant minimal retenu, 200 € au salaire médian (2 238 € net, Insee ; 2 200 € selon le candidat)")
+MISS('attal', "250 € nets de plus par mois au salaire médian dès 2027, financés par des économies sur l'assurance chômage et les indemnités journalières",
+     "250 € nets de plus par mois au salaire médian dès 2027 selon son site, « autour de 200-250 euros » le 12/11/2026, financés par des économies sur l'assurance chômage, dont 5 Md€ par la durée d'indemnisation, et sur les indemnités journalières")
+m = M('attal', 'travail')
+m['estimates'].append({"source": TF1U_S, "year": 2026, "value": "Réforme de l'assurance chômage, durée d'indemnisation réduite : « Ça permet de faire 5 milliards d'euros d'économie et en plus d'inciter davantage à leur prise d'activité »", "low_md": None, "high_md": None, "url": TF1U})
+m = M('attal', 'retraites'); assert m['verdict'] == 'faisable'
+m['estimates'].append({"source": TF1U_S, "year": 2026, "value": "« Je propose qu'on pilote notre système de retraite non plus par l'âge légal de départ, mais par la durée de cotisation » ; « Je veux confier les paramètres de ce nouveau système aux partenaires sociaux »", "low_md": None, "high_md": None, "url": TF1U})
+m['claude']['note'] += " Pilotage par la durée de cotisation et paramètres confiés aux partenaires sociaux (LCI, 12/11/2026) : paramètres toujours non publiés ; la réforme passe par la loi, la gestion confiée ensuite aux partenaires sociaux n'en est pas une condition (même lecture que Philippe)."
+# (5) Lisnard, compte rendu officiel de Nouvelle Énergie (13/11) du DLive du 10/11 : masse salariale publique réduite « d'au moins 12 %, avec un
+#     objectif de 20 % », sans horizon ni nombre de postes : note de la fiche « Fonctionnaires et agences », chiffrage selon la règle commune
+#     inchangé (400 000 postes publiés) ; échelon obligatoire de retraite par capitalisation, complémentaire : note de la fiche retraites ; plan de
+#     réforme des retraites annoncé « avant la fin de l'année » (registre).
+NE_DL = 'https://www.unenouvelleenergie.fr/dlive-david-lisnard-lance-son-nouveau-rendez-vous-mensuel-avec-les-francais/'
+NE_DL_S = "Nouvelle Énergie, compte rendu du DLive du 10/11/2026 (13/11/2026)"
+m = M('lisnard', 'fonction'); k = m['claude']
+k['inputs'].append({"label": "Objectif redit (10/11/2026)", "value": "« Réduire la masse salariale publique d’au moins 12 %, avec un objectif de 20 %. »", "source": NE_DL_S, "url": NE_DL})
+k['note'] = (k.get('note') or '') + " Masse salariale publique réduite « d’au moins 12 %, avec un objectif de 20 % » (Nouvelle Énergie, 13/11/2026) : horizon et nombre de postes non publiés ; chiffrage selon la règle commune inchangé (400 000 postes publiés)."
+m = M('lisnard', 'retraites')
+m['claude']['note'] += " Échelon obligatoire de retraite par capitalisation, « complémentaire au système actuel », et plan de réforme des retraites annoncé « avant la fin de l’année » (Nouvelle Énergie, compte rendu du 13/11/2026 du DLive du 10/11) : taux et financement non publiés, coût de transition non chiffré."
+# (6) Glucksmann : « Buy European Act » redit au salon du Made in France (franceinfo, 14/11) : source ajoutée à la fiche « Préférence
+#     européenne » ; tract « dix propositions pour sortir de la crise » (franceinfo, 14/11 ; texte non publié, trois propositions citées, déjà
+#     dans les données) : source ajoutée aux fiches SMIC et chèque énergie, chiffrages inchangés.
+FI_MIF = 'https://www.franceinfo.fr/elections/presidentielle-2027-raphael-glucksmann-et-teddy-riner-attendus-au-salon-du-made-in-france_8282213.html'
+FI_TRACT = 'https://www.franceinfo.fr/replay-radio/le-brief-politique/info-franceinfo-raphael-glucksmann-va-diffuser-ce-week-end-un-tract-presentant-dix-propositions-pour-sortir-de-la-crise_8261228.html'
+FI_TRACT_S = "franceinfo, « Le brief politique », tract de dix propositions de R. Glucksmann (14/11/2026)"
+M('glucksmann', 'industrie')['estimates'].append({"source": "franceinfo, direct du salon du Made in France (14/11/2026)", "year": 2026, "value": "« Au salon du Made in France, Raphaël Glucksmann plaide pour un \"Buy European Act\" qui réserverait les marchés européens \"aux productions européennes\". »", "low_md": None, "high_md": None, "url": FI_MIF})
+for mid in ('smic', 'cheque_energie'):
+    M('glucksmann', mid)['estimates'].append({"source": FI_TRACT_S, "year": 2026, "value": "« Dans le document figure une hausse du Smic à 1 700 euros net, l'abrogation de Parcoursup, ou encore, une aide d'urgence face au prix des carburants et de l'énergie. » (montant de l'aide non redit)", "low_md": None, "high_md": None, "url": FI_TRACT})
+# (7) Retailleau : « une centaine » d'écoles autonomes (Public Sénat, 12/11, paraphrase) : son site dit toujours « Créer mille écoles autonomes »
+#     (page mise à jour le 24/09) : rien de changé (registre) ; 300 000 postes « dont » IA (Public Sénat, paraphrase) : fiche inchangée (S303) ;
+#     IA à l'hôpital, « l'équivalent de 6 000 postes de médecins » : sans effet chiffrable sur le solde, registre (S304). Philippe : entretien
+#     franceinfo du 12/11 conforme aux fiches (registre) ; réunion de Toulouse du 14/11 : rien de publié. Zemmour : rien de nouveau (S301).
+#     SMIC : décret du 1er décembre non publié au Journal officiel du 14/11 (S299).
+D['asof'] = '14 novembre 2026'
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
