@@ -296,13 +296,14 @@ with sync_playwright() as p:
       const out=[f(SQ.smic_net), f(1600), f(1690), f(2238), f(3000), f(6000)]; presetVal=null; return out; })()""")
     check(r == [[222, 0, False], [100, 0, False], [0, 88, False], [0, 109, False], [0, 119, False], [0, 119, False]],
           f'simulateur : barème de CSG publié (109 € au salaire médian, plafonné à 119 € au-delà du dernier seuil), SMIC « CSG comprise » sans addition des deux {r}')
-    # même règle avec un seul point publié (Attal, « droit au brut » : 250 € nets au salaire médian) : au prorata en dessous, rien au-delà avec une note
+    # même règle avec un seul point publié (Attal, « droit au brut ») : au prorata en dessous, rien au-delà avec une note ; gain publié en fourchette
+    # (« autour de 200-250 euros » au salaire médian, LCI, 12/11/2026 ; 250 € sur son site) : montant minimal retenu, 200 € (review 50, règle commune)
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; openSim.clear(); openSim.add('attal');
       const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); const t=document.querySelector('#simres .srow[data-c="attal"]').innerText.replace(/\\s+/g,' ');
         const row=[...document.querySelectorAll('#simres .srow[data-c="attal"] .rw')].find(x=>/^Revenu net/.test(x.textContent.trim())); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/);
         return [m?+m[1]:0, /montant non publié, pas de gain calculé/.test(t)]; };
       const out=[f(2238), f(1119), f(3000)]; presetVal=null; return out; })()""")
-    check(r == [[250, False], [125, False], [0, True]], f'simulateur : gain publié en un seul point (Attal, 250 € au salaire médian, au prorata en dessous, rien au-delà avec une note) {r}')
+    check(r == [[200, False], [100, False], [0, True]], f'simulateur : gain publié en un seul point (Attal, 200 € au salaire médian, montant minimal de la fourchette publiée, au prorata en dessous, rien au-delà avec une note) {r}')
     # un seul point publié, mécanisme valable pour tous les salaires (Retailleau, cotisations salariales en moins « dès le premier euro » : ≈ 500 € nets
     # par an au salaire médian, soit 41,7 €/mois) : au prorata en dessous comme au-dessus du point, sans note « pas de gain calculé » (review 41)
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; openSim.clear(); openSim.add('retailleau');
