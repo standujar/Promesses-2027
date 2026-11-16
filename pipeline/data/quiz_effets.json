@@ -8636,5 +8636,82 @@
 "u": "https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/260506-non-recours-au-rsa-fin-2021"
 }
 ]
+},
+"philippe.logement.2": {
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat_s": [
+1,
+2
+],
+"pour": "Construire davantage de logements augmente l'offre et freine la hausse des loyers.",
+"preuve_pour": "faible",
+"contre": "Les chantiers suivent surtout les taux d'intérêt : −31 % de 2022 à 2024, quand les taux ont monté.",
+"preuve_contre": "mitigé",
+"cas_pour": [],
+"cas_contre": [
+{
+"t": "Avec la remontée des taux d'intérêt, les mises en chantier ont chuté de 31 % entre 2022 et 2024 (Cour des comptes, France, 2026).",
+"s": [
+0
+]
+}
+],
+"etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent que plus de logements neufs modèrent les loyers. L'effet de normes simplifiées sur le nombre de chantiers n'est pas mesuré en France.",
+"src": [
+{
+"l": "Cour des comptes, L'encadrement des loyers",
+"a": 2026,
+"u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
+},
+{
+"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+},
+{
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
+}
+]
+},
+"philippe.logement.3": {
+"constat": "Ménages propriétaires de leur logement en 2021 : 16,7 % avant 30 ans (12,8 % en 2010), 47,3 % de 30 à 39 ans (47,2 %) (Insee).",
+"constat_s": [
+1
+],
+"pour": "Les achats réagissent à ces taxes : leur hausse de 2014 a fait reculer les ventes de 14 % par mois sur 3 mois.",
+"preuve_pour": "faible",
+"contre": "L'effet de la hausse de 2014 sur le nombre de ventes n'a pas duré : aucun effet à moyen ou long terme.",
+"preuve_contre": "faible",
+"cas_pour": [
+{
+"t": "Droits de mutation relevés de 3,8 % à 4,5 % en 2014 : ventes −14 % par mois les trois mois suivants, au moins 15 000 ventes perdues (Insee, France, 2018).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [
+{
+"t": "Après la hausse de 2014 des droits de mutation, aucun effet à moyen ou long terme sur le nombre de ventes n'est observé (Insee, France, 2018).",
+"s": [
+0
+]
+}
+],
+"etudes": "Une évaluation française porte sur une hausse de ces taxes (2014) : achats avancés puis retardés de quelques mois, sans effet durable sur le nombre de ventes. Pas d'évaluation française d'une suppression réservée aux jeunes.",
+"src": [
+{
+"l": "Insee, Bérard et Trannoy, « Les effets de la hausse des droits de mutation de 2014 sur le marché du logement » (Économie et Statistique n° 500-501-502)",
+"a": 2018,
+"u": "https://www.insee.fr/fr/statistiques/3621930"
+},
+{
+"l": "Insee, « Détention de la résidence principale », Les revenus et le patrimoine des ménages (Insee Références, figure 1)",
+"a": 2024,
+"u": "https://www.insee.fr/fr/statistiques/7941429"
+}
+]
 }
 }

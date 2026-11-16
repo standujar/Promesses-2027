@@ -203,8 +203,12 @@ with sync_playwright() as p:
     pg.evaluate("""document.querySelector('#s-nat [data-v="hors"]').click(); document.querySelector('#s-home [data-v="loc"]').click();
       document.getElementById('s-apl').value=200; D.candidates.forEach(c=>openSim.add(c.id)); sim()""")
     vals = sorted(pg.evaluate("""[...document.querySelectorAll('#simres .srow')].map(r=>{ const m=r.innerText.replace(/\\s+/g,' ').match(/Aide au logement.*?([+−]\\d+) €\\/mois/); return m?m[1]:null; }).filter(Boolean)"""))
+    # Le Pen : APL réservées aux Français et aux étrangers ayant cinq ans de travail en France (LCP, 15/11/2026), même condition que Retailleau :
+    # sans la case « moins de 5 ans de travail », seul Zemmour (« hors ») les retire ; avec elle, Le Pen, Retailleau et Zemmour (3)
+    vals5 = pg.evaluate("""(()=>{ document.getElementById('s-work').checked=true; sim(); const v=[...document.querySelectorAll('#simres .srow')].map(r=>{ const m=r.innerText.replace(/\\s+/g,' ').match(/Aide au logement.*?([+−]\\d+) €\\/mois/); return m?m[1]:null; }).filter(Boolean);
+      document.getElementById('s-work').checked=false; sim(); return v; })()""")
     hidden = pg.evaluate("""(()=>{ document.querySelector('#s-home [data-v="proprio"]').click(); return document.getElementById('f-apl').hidden; })()""")
-    check(vals.count('−200') == 2 and '+20' in vals and hidden, f'simulateur : logement (APL réservées ou +10 %, curseur caché hors location) {vals}')
+    check(vals.count('−200') == 1 and vals5.count('−200') == 3 and '+20' in vals and hidden, f'simulateur : logement (APL réservées selon la nationalité ou cinq ans de travail, ou +10 %, curseur caché hors location) {vals} {vals5}')
     pg.evaluate("""document.querySelector('#s-nat [data-v="fr"]').click(); document.querySelector('#s-home [data-v="loc"]').click(); document.getElementById('s-apl').value=0; sim()""")
     # paramètre publié mais hors total : appliqué (allocations familiales +10 %, 2 enfants)
     pg.evaluate("document.querySelector('#s-status [data-v=\"prive\"]').click(); S.kids=2; document.getElementById('s-salary').value=1800; openSim.add('melenchon'); sim()")
@@ -218,9 +222,11 @@ with sync_playwright() as p:
     t = pg.evaluate("""(()=>{ document.querySelector('#s-status [data-v="minima"]').click(); S.kids=3; document.getElementById('s-salary').value=1300; sim();
       const r=[...document.querySelectorAll('#simres .srow')].find(x=>x.dataset.c==='melenchon'); return r.innerText.replace(/\\s+/g,' '); })()""")
     check('Ajustement du RSA' in t, 'simulateur : hausse des allocations reprise par le RSA (Mélenchon)')
-    t = pg.evaluate("""(()=>{ document.querySelector('#s-nat [data-v="hors"]').click(); document.querySelector('#s-home [data-v="loc"]').click(); document.getElementById('s-apl').value=200; sim();
-      const t=document.getElementById('simres').innerText.replace(/\\s+/g,' '); document.querySelector('#s-nat [data-v="fr"]').click(); document.getElementById('s-apl').value=0; S.kids=0; sim(); return t; })()""")
-    check('APL réservées aux Français' in t, 'simulateur : APL de Le Pen « réservées aux Français »')
+    t = pg.evaluate("""(()=>{ document.querySelector('#s-nat [data-v="hors"]').click(); document.querySelector('#s-home [data-v="loc"]').click(); document.getElementById('s-apl').value=200; openSim.add('le-pen'); sim();
+      const row=()=>[...document.querySelectorAll('#simres .srow')].find(x=>x.dataset.c==='le-pen').innerText.replace(/\\s+/g,' ');
+      const a=row(); document.getElementById('s-work').checked=true; sim(); const b=row(); document.getElementById('s-work').checked=false;
+      document.querySelector('#s-nat [data-v="fr"]').click(); document.getElementById('s-apl').value=0; S.kids=0; sim(); return [a,b]; })()""")
+    check(not re.search(r'Aide au logement', t[0]) and 'APL réservées aux étrangers ayant au moins 5 ans de travail en France' in t[1], 'simulateur : APL de Le Pen perdues seulement sans cinq ans de travail en France (LCP, 15/11/2026)')
     # chaque réglage du simulateur doit changer le résultat d'au moins un candidat, sans texte invalide
     SET = """(p)=>{ document.querySelector(`#s-status [data-v="${p.st}"]`).click(); document.querySelector(`#s-nat [data-v="${p.nat}"]`).click();
       S.kids=p.kids; S.wealth=p.w; S.inh=p.inh; const g=id=>document.getElementById(id);
