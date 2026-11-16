@@ -1581,6 +1581,48 @@ _ps = _cur('attal', 'ecole'); assert all(p['verifiable'] and not p['old'] for p 
 _put('attal', 'ecole', _ps[1:] + [_p("À partir de la 4e, 25 % du temps scolaire « différencié » : options en plus pour certains élèves, découverte des métiers et initiation aux métiers manuels pour d'autres")])
 _so('attal', 'ecole', add=[TF1_U2P])
 
+# --- review 51 : revue du 16/11 (16/11/2026) ; registre S106, S319 à S321
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; à égalité ou
+# à date inconnue, ordre affiché gardé ; une proposition nouvelle se place après les précises de 2026 déjà affichées ; au-delà de 5, sort celle
+# que la règle classe dernière, S106). Même test « précis » (changement de droit nommé, instrument nommé et ce qui y change, chiffre, durée,
+# âge, échéance ou niveau scolaire nommé). Sources ouvertes le 16/11.
+# Le Pen, « Brevet présidentiel » de LCP (15/11 ; article de LCP qui rapporte précisément ses propos datés) :
+#  - logement : APL réservées « aux Français et aux étrangers ayant travaillé cinq ans en équivalent temps plein en France » : texte corrigé
+#    à sa place (HLM réservés et logement étudiant, sources antérieures, inchangés) ;
+#  - sécurité : aucun aménagement de peine au-delà de six mois de condamnation pour les atteintes à l'intégrité physique (précise : seuil et
+#    champ publiés) ; 6e du thème : sort celle que la règle classe dernière, « Supprimer les remises de peine » (2022, non reconfirmée ; S106) ;
+#  - environnement (adaptation à la chaleur, même thème que les « Canadairs » de Philippe) : climatiser toutes les écoles, les Ehpad et les
+#    hôpitaux (intention : ni calendrier ni moyen publié, même lecture que le « droit à la climatisation » d'Attal) ; 4 → 5, après les précises
+#    de 2026.
+#  Permis gratuit « pour les jeunes qui n'ont pas de casier judiciaire » : pas affiché en Vie quotidienne (ligne « non comptée » précisée).
+# Philippe, entretien au Parisien (15/11), cité par franceinfo avec l'AFP : logement, 1 → 3, après la précise de 2026 déjà affichée :
+#  4 millions de nouveaux logements en dix ans (précise : chiffre et durée, même forme que le million de logements en cinq ans de Retailleau) ;
+#  suppression des « frais de notaire » pour les moins de 35 ans (précise : taxe et âge nommés) ; les deux entrent au quiz ; prêt à taux zéro à
+#  chaque nouvel enfant redit (source ajoutée).
+# Attal, entretien à Sud Ouest (11/11, compte rendu sur son site de campagne) : garantie Visale étendue à tous les locataires : version précise
+#  de la « garantie universelle des loyers » déjà affichée, réécrite à sa place (instrument nommé et ce qui y change) ; texte du quiz aligné.
+LCP_LP = _s("LCP, « Brevet présidentiel », entretien de M. Le Pen (15/11)", 'https://lcp.fr/actualites/permis-gratuit-apl-climatisation-des-ecoles-marine-le-pen-passe-son-brevet-presidentiel')
+FI_PHL = _s("franceinfo avec l'AFP, entretien d'É. Philippe au Parisien sur le logement (15/11)", 'https://www.franceinfo.fr/politique/edouard-philippe/presidentielle-2027-edouard-philippe-veut-batir-quatre-millions-de-logements-supplementaires-en-10-ans_8283821.html')
+AT_SO = _s("Site de campagne de G. Attal, entretien à Sud Ouest sur le logement (11/11)", 'https://attalpresident.fr/actualites/gabriel-attal-sud-ouest-tous-proprietaires-banque-investissement-logement')
+# Le Pen
+_txt('le-pen', 'logement', "Priorité nationale : HLM et APL réservés aux Français ; priorité d'accès au logement étudiant pour les jeunes Français",
+     "Priorité nationale : HLM réservés aux Français ; APL réservées aux Français et aux étrangers ayant travaillé cinq ans en équivalent temps plein en France ; priorité d'accès au logement étudiant pour les jeunes Français")
+_so('le-pen', 'logement', add=[LCP_LP])
+_ps = _cur('le-pen', 'securite'); assert [(p['verifiable'], p['old']) for p in _ps] == [(True, False)] * 4 + [(True, True)] and _ps[4]['text'] == 'Supprimer les remises de peine', [p['text'] for p in _ps]
+_put('le-pen', 'securite', _ps[:4] + [_p("Aucun aménagement de peine au-delà de six mois de condamnation pour les atteintes à l'intégrité physique")])
+_so('le-pen', 'securite', add=[LCP_LP])
+_ps = _cur('le-pen', 'environnement'); assert [(p['verifiable'], p['old']) for p in _ps] == [(True, False), (False, False), (True, True), (True, True)], [p['text'] for p in _ps]
+_put('le-pen', 'environnement', _ps[:1] + [_p("Climatiser toutes les écoles, les Ehpad et les hôpitaux", False)] + _ps[1:])
+_so('le-pen', 'environnement', add=[LCP_LP])
+# Philippe
+_ps = _cur('philippe', 'logement'); assert len(_ps) == 1 and _ps[0]['verifiable'] and not _ps[0]['old'], [p['text'] for p in _ps]
+_put('philippe', 'logement', _ps + [_p("Construire 4 millions de nouveaux logements en dix ans"), _p("Supprimer les « frais de notaire » (taxes perçues à l'achat d'un logement) pour les moins de 35 ans")])
+_so('philippe', 'logement', add=[FI_PHL])
+# Attal
+_txt('attal', 'logement', "Garantie universelle des loyers et nouvelles résidences universitaires pour les étudiants et les jeunes actifs",
+     "Étendre la garantie Visale à tous les locataires ; nouvelles résidences universitaires pour les étudiants et les jeunes actifs", v=True)
+_so('attal', 'logement', add=[AT_SO])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.

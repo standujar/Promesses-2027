@@ -3156,6 +3156,64 @@ for mid in ('smic', 'cheque_energie'):
 #     franceinfo du 12/11 conforme aux fiches (registre) ; réunion de Toulouse du 14/11 : rien de publié. Zemmour : rien de nouveau (S301).
 #     SMIC : décret du 1er décembre non publié au Journal officiel du 14/11 (S299).
 D['asof'] = '14 novembre 2026'
+# --- review 51 : revue du 16/11 (16/11/2026) ; registre S106, S138, S205, S261, S275, S281, S299, S301, S307 (mis à jour), S318 à S321
+# Décisions du 16/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 14 au 16/11, sources ouvertes le 16/11).
+# (1) Sondages (data/sondages.json, règle de « review 19 ») : moyenne au 16/11, mêmes trois vagues (aucune notice nouvelle depuis le 12/11) ;
+#     vague Elabe pour BFMTV et La Tribune Dimanche (12-13/11) sans notice : registre (S318), intégrée dès la notice.
+# (2) Zemmour, « 40 centimes » (S281) : le simulateur combienjegagne.fr qui décompose la baisse (un tiers de l'accise + fin des CEE) est
+#     « édité par Sarah Knafo » et « a pour objet d'informer les citoyens sur les propositions de Sarah Knafo » (mentions légales) ; il
+#     n'est pas lié depuis le site de campagne du candidat (ericzemmour.fr) et figure dans le menu de parti-reconquete.fr parmi les sites de
+#     S. Knafo (sarahknafo.fr, budget2027.fr). Règle « qui parle pour un candidat » (S074) : S. Knafo ne parle pas pour lui sans reprise ; le
+#     site du candidat n'écrit que « 40 centimes de baisse de taxes ». Fiche et simulateur inchangés (lecture du 11/11), registre détaillé.
+#     Plan de 280 Md€ (JDD, 15/11, non ouvert ; reprises sans citation) : rien de compté (S275). Impôts de production : S008 inchangé.
+# (3) Le Pen, « Brevet présidentiel » de LCP (15/11 ; article de LCP qui rapporte précisément ses propos datés, média reconnu) :
+#     - APL maintenues, réservées « aux Français et aux étrangers ayant travaillé cinq ans en équivalent temps plein en France » : la condition
+#       est celle de l'étude déjà comptée dans la fiche « Priorité nationale » (Institut Montaigne 2024, RSA, prime d'activité, AAH et aides au
+#       logement après cinq ans de travail, 2,6 Md€ ; même étude de la même condition que Retailleau, règle « aides réservées ») : chiffrage
+#       inchangé, source et note ajoutées ; simulateur : APL perdues selon la même condition que les minima (`lt5w`), plus « réservées aux
+#       Français ». Vie quotidienne : life.py.
+#     - permis gratuit « pour les jeunes qui n'ont pas de casier judiciaire » : précision de la ligne « non comptée » (dépense de moins de 1 Md€) ;
+#     - climatisation de toutes les écoles, des Ehpad et des hôpitaux : calendrier et coût non publiés, liste « non comptée » (même lecture que
+#       la climatisation des lieux accueillant des personnes fragiles de Philippe).
+LCP_BP = 'https://lcp.fr/actualites/permis-gratuit-apl-climatisation-des-ecoles-marine-le-pen-passe-son-brevet-presidentiel'
+LCP_BP_S = "LCP, « Brevet présidentiel », entretien de M. Le Pen (15/11/2026)"
+CIT_LPAPL = "Elle dit vouloir maintenir les APL, mais les réserver aux Français et aux étrangers ayant travaillé cinq ans en équivalent temps plein en France."
+m = M('le-pen', 'immigration'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (8.3, 1.9, 14.3)
+m['estimates'].append({"source": LCP_BP_S, "year": 2026, "value": "« " + CIT_LPAPL + " »", "low_md": None, "high_md": None, "url": LCP_BP})
+k['inputs'].append({"label": "APL : condition publiée (15/11/2026)", "value": "« " + CIT_LPAPL + " » (aides au logement comprises dans l'étude de la même condition : 1 825 M€ versés aux étrangers, économie médiane 821 M€)", "source": LCP_BP_S, "url": LCP_BP})
+k['note'] += " APL réservées aux Français et aux étrangers ayant travaillé cinq ans en équivalent temps plein (LCP, 15/11/2026) : même condition que l'étude comptée (Institut Montaigne 2024), qui comprend les aides au logement ; chiffrage inchangé."
+s = C['le-pen']['sim']; assert s['etr']['apl'] == 'nonfr'
+s['etr']['apl'] = 'lt5w'
+a0 = "RSA, prime d'activité, AAH après 5 ans de travail ; allocations familiales réservées aux foyers avec un parent français ; APL réservées aux Français ;"
+assert s['etrangers'].count(a0) == 1, s['etrangers']
+s['etrangers'] = s['etrangers'].replace(a0, "RSA, prime d'activité, AAH et APL après 5 ans de travail ; allocations familiales réservées aux foyers avec un parent français ;")
+MISS('le-pen', "permis gratuit,", "permis gratuit pour les jeunes sans casier judiciaire,")
+MISS_ADD('le-pen', "climatisation de toutes les écoles, des Ehpad et des hôpitaux (LCP, 15/11/2026 : calendrier et coût non publiés ; même lecture que la climatisation des lieux accueillant des personnes fragiles de Philippe)")
+# (4) Philippe, entretien au Parisien du 15/11 (franceinfo avec l'AFP, qui le cite) : suppression des « frais de notaire » pour les moins de 35 ans
+#     (périmètre, plafond, compensation aux départements et coût non publiés) : liste « non comptée » ; 4 millions de logements en dix ans :
+#     objectif sans dépense publiée, Vie quotidienne (life.py), même forme que l'objectif de Retailleau ; prêt à taux zéro à chaque nouvel enfant
+#     redit (ligne « non comptée » existante).
+FI_PHL = 'https://www.franceinfo.fr/politique/edouard-philippe/presidentielle-2027-edouard-philippe-veut-batir-quatre-millions-de-logements-supplementaires-en-10-ans_8283821.html'
+MISS_ADD('philippe', "suppression des taxes perçues à l'achat d'un logement (« frais de notaire ») pour les moins de 35 ans (entretien au Parisien, 15/11/2026, cité par franceinfo : premier achat ou non, plafond de prix, compensation aux départements et coût non publiés)")
+# (5) Attal, entretien à Sud Ouest du 11/11 (compte rendu sur son site de campagne, lu le 16/11) :
+#     - banque nationale d'investissement pour le logement : jusqu'à 50 % du prix d'une première résidence, aux côtés de l'acquéreur, part rachetée
+#       ou remboursée à la revente : prise de participation (opération financière), « aucun coût pour les finances publiques » selon le candidat ;
+#       l'amorçage de 5 Md€ est donné par « son entourage » (AFP), qui ne parle pas pour lui : note de la ligne non comptée ;
+#     - donations des grands-parents aux petits-enfants alignées sur celles des parents aux enfants : précision de la ligne non comptée (coût non
+#       publié) ; statut du bailleur privé (amortissement élargi contre un engagement de location) : non compté, paramètres non publiés ;
+#     - garantie Visale étendue à tous les locataires : ligne non comptée et Vie quotidienne (life.py) ;
+#     - géothermie, 160 M€ par an : enveloppe sous 1 Md€, listée non comptée avec son montant (comme les 10 000 enseignants de Mélenchon) ;
+#     - plus-values des résidences secondaires exonérées pendant deux ans : déjà listée (S307, dates non publiées).
+MISS('attal', "banque nationale d'investissement dans le logement qui financerait la moitié du prix du bien, l'acquéreur n'empruntant que sur l'autre moitié (franceinfo, 12/11/2026 ; public, plafond, taux et coût non publiés)",
+     "banque nationale d'investissement dans le logement qui financerait jusqu'à la moitié du prix d'une première résidence des jeunes et des classes moyennes, aux côtés de l'acquéreur, sa part étant rachetée ou remboursée à la revente (franceinfo, 12/11/2026 ; entretien à Sud Ouest, 11/11/2026 : prise de participation, opération financière, « aucun coût pour les finances publiques » selon le candidat ; dotation non publiée par le candidat, l'amorçage de 5 Md€ venant de son entourage selon l'AFP ; plafond et conditions non publiés)")
+MISS('attal', "donations facilitées aux petits-enfants, petits-neveux et petites-nièces et transmission des exploitations agricoles (abattements non publiés)",
+     "donations facilitées aux petits-enfants (fiscalité des donations des grands-parents alignée sur celle des parents aux enfants, entretien à Sud Ouest du 11/11/2026), petits-neveux et petites-nièces et transmission des exploitations agricoles (abattements et coût non publiés)")
+MISS('attal', "garantie universelle des loyers et nouvelles résidences universitaires pour les étudiants et les jeunes actifs (paramètres non publiés)",
+     "garantie Visale étendue à tous les locataires (entretien à Sud Ouest, 11/11/2026) et nouvelles résidences universitaires pour les étudiants et les jeunes actifs (paramètres non publiés)")
+MISS_ADD('attal', "statut du bailleur privé, amortissement fiscal élargi contre un engagement de location (entretien à Sud Ouest, 11/11/2026 : taux, durée et coût non publiés), plan d'investissement de 160 M€ par an dans la géothermie (entretien à Sud Ouest, 11/11/2026 : 0,16 Md€, sous 1 Md€)")
+# (6) Mélenchon, Glucksmann, Lisnard, Retailleau : rien de nouveau du 14 au 16/11. SMIC : décret du 1er décembre non publié au Journal officiel
+#     du 15/11 (pas de JO le 16/11) (S299). Logement (S205) : article 6 du texte de la commission (n° 3188-A0) relu, noté au registre ; rien voté.
+D['asof'] = '16 novembre 2026'
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:

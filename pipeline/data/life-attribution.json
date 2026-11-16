@@ -14,8 +14,8 @@
    "Peines minimales (peines planchers) et comparution immédiate des interpellés": [
     "https://rassemblementnational.fr/petition/face-au-chaos-la-france-en-ordre"
    ],
-   "Supprimer les remises de peine": [
-    "https://rassemblementnational.fr/22-mesures"
+   "Aucun aménagement de peine au-delà de six mois de condamnation pour les atteintes à l'intégrité physique": [
+    "https://lcp.fr/actualites/permis-gratuit-apl-climatisation-des-ecoles-marine-le-pen-passe-son-brevet-presidentiel"
    ]
   },
   "sante": {
@@ -57,6 +57,9 @@
    "Abroger la loi Hulot de 2017, qui interdit la recherche d'hydrocarbures en France": [
     "https://www.europe1.fr/politique/congres-du-rn-a-orleans-ce-quil-faut-retenir-du-premier-discours-de-campagne-de-marine-le-pen-1181118"
    ],
+   "Climatiser toutes les écoles, les Ehpad et les hôpitaux": [
+    "https://lcp.fr/actualites/permis-gratuit-apl-climatisation-des-ecoles-marine-le-pen-passe-son-brevet-presidentiel"
+   ],
    "S'opposer à la PPE 2026, dont elle estime le coût à 300 Md€": [
     "https://www.syndicat-energies-renouvelables.fr/wp-content/uploads/2026/02/Les-Echos-11-02-2026-Page-7.pdf"
    ],
@@ -68,9 +71,10 @@
    ]
   },
   "logement": {
-   "Priorité nationale : HLM et APL réservés aux Français ; priorité d'accès au logement étudiant pour les jeunes Français": [
+   "Priorité nationale : HLM réservés aux Français ; APL réservées aux Français et aux étrangers ayant travaillé cinq ans en équivalent temps plein en France ; priorité d'accès au logement étudiant pour les jeunes Français": [
     "https://www.sudradio.fr/societe/le-pen-veut-mettre-la-priorite-nationale-au-centre-dun-grand-chantier-sur-le-logement",
-    "https://rassemblementnational.fr/petition/logement-avec-marine-le-pen-appliquons-la-priorite-nationale"
+    "https://rassemblementnational.fr/petition/logement-avec-marine-le-pen-appliquons-la-priorite-nationale",
+    "https://lcp.fr/actualites/permis-gratuit-apl-climatisation-des-ecoles-marine-le-pen-passe-son-brevet-presidentiel"
    ],
    "Abroger la loi SRU et supprimer le ZAN": [
     "https://www.sudradio.fr/societe/le-pen-veut-mettre-la-priorite-nationale-au-centre-dun-grand-chantier-sur-le-logement"
@@ -334,7 +338,14 @@
   "logement": {
    "Prêt à taux zéro pour acheter plus grand à l'arrivée d'un enfant": [
     "https://fr.euronews.com/2026/10/09/presidentielle-2027-edouard-philippe-mise-sur-le-travail-et-la-reduction-des-depenses-publ",
-    "https://www.edouardphilippe.fr/programme/famille"
+    "https://www.edouardphilippe.fr/programme/famille",
+    "https://www.franceinfo.fr/politique/edouard-philippe/presidentielle-2027-edouard-philippe-veut-batir-quatre-millions-de-logements-supplementaires-en-10-ans_8283821.html"
+   ],
+   "Construire 4 millions de nouveaux logements en dix ans": [
+    "https://www.franceinfo.fr/politique/edouard-philippe/presidentielle-2027-edouard-philippe-veut-batir-quatre-millions-de-logements-supplementaires-en-10-ans_8283821.html"
+   ],
+   "Supprimer les « frais de notaire » (taxes perçues à l'achat d'un logement) pour les moins de 35 ans": [
+    "https://www.franceinfo.fr/politique/edouard-philippe/presidentielle-2027-edouard-philippe-veut-batir-quatre-millions-de-logements-supplementaires-en-10-ans_8283821.html"
    ]
   },
   "libertes": {
@@ -597,8 +608,9 @@
     "https://attalpresident.fr/actualites/gabriel-attal-veut-liberer-l-acces-au-logement-et-relancer-le-secteur-du-batiment",
     "https://www.batirama.com/article/112473-crise-du-btp-les-candidats-passent-leur-grand-oral-a-batimat.html"
    ],
-   "Garantie universelle des loyers et nouvelles résidences universitaires pour les étudiants et les jeunes actifs": [
-    "https://attalpresident.fr/actualites/gabriel-attal-debat-avec-les-francais-a-blois-et-a-bourges"
+   "Étendre la garantie Visale à tous les locataires ; nouvelles résidences universitaires pour les étudiants et les jeunes actifs": [
+    "https://attalpresident.fr/actualites/gabriel-attal-debat-avec-les-francais-a-blois-et-a-bourges",
+    "https://attalpresident.fr/actualites/gabriel-attal-sud-ouest-tous-proprietaires-banque-investissement-logement"
    ],
    "« Droit à la climatisation » : lever les blocages des copropriétés et alléger les contraintes des Architectes des Bâtiments de France": [
     "https://attalpresident.fr/programme/mesures/droit-a-la-climatisation"
