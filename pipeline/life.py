@@ -1623,6 +1623,65 @@ _txt('attal', 'logement', "Garantie universelle des loyers et nouvelles résiden
      "Étendre la garantie Visale à tous les locataires ; nouvelles résidences universitaires pour les étudiants et les jeunes actifs", v=True)
 _so('attal', 'logement', add=[AT_SO])
 
+# --- review 52 : revue du 17/11, première passe (17/11/2026) ; registre S106, S322 et suivants
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; à égalité ou
+# à date inconnue, ordre affiché gardé ; une proposition nouvelle se place après les précises de 2026 déjà affichées ; au-delà de 5, sort celle
+# que la règle classe dernière, S106). Même test « précis » (changement de droit nommé, instrument nommé et ce qui y change, chiffre, durée,
+# âge, échéance ou niveau scolaire nommé). Débat TF1-LCI des Restos du Cœur (16/11) ; sources ouvertes le 17/11.
+# Le Pen (vidéo du 16/11 citée par l'AFP) : école, « Il faut supprimer Parcoursup », entrée dans le supérieur sur le seul baccalauréat,
+#  avancé à la seconde quinzaine de mai, plus de contrôle continu en première et en terminale : version de 2026 qui remplace « Réformer
+#  Parcoursup » (15/10), à sa place ; texte du quiz aligné.
+# Glucksmann : logement, loger « en trois semaines » les 3 000 enfants qui dorment dans la rue (LCP, qui le cite ; précise : chiffre et délai) ;
+#  3 → 4, après la précise de 2026 ; entre au quiz. Libertés (même thème que le budget de l'audiovisuel public sur cinq ans) : cadre
+#  budgétaire pluriannuel sur cinq ans pour les associations et statut de leurs bénévoles (son compte Bluesky ; précise : durée) ; 6e d'un
+#  thème de précises de 2026 : sort la moins récente, la convention citoyenne sur l'immigration (LCP et Public Sénat, premières lignes du
+#  programme ; S106).
+# Attal et Retailleau (LCP et AFP, deux médias reconnus) : priorité au travail dans l'attribution des logements sociaux, même texte pour les
+#  deux (précise : critère d'attribution nommé) ; Attal 3 → 4, après les précises de 2026 ; Retailleau, 6e d'un thème de précises de 2026 à
+#  date inconnue : sort la dernière dans l'ordre affiché, la fin des quotas SRU (S106) ; entre au quiz chez les deux.
+# Zemmour (son compte Instagram, publications du 16/11 affichées sur le site de Reconquête) : libertés (même thème que les magistrats de
+#  Philippe), magistrats sanctionnés pour faute, mise à pied et renvoi dans les cas les plus graves (précise : sanctions nommées ; version
+#  précise des magistrats « responsables de leurs actes » du 12/11, S106) ; après les précises de 2026, sort la dernière des propositions de
+#  2022 non reconfirmées (loi Pleven) ; sécurité : « un détenu qui se comporte mal verra sa peine prolongée », ajouté au cumul des peines
+#  redit dans la même publication.
+# Non affichées : statut des familles monoparentales (Glucksmann), « solidarité à la source » et pensions alimentaires défiscalisées (Attal),
+#  versement automatique des prestations (Mélenchon) : aucun thème de la Vie quotidienne pour la politique familiale (registre, à trancher) ;
+#  plan « pauvreté » de Mélenchon (16/11) : registre.
+OFFICIEL_U['glucksmann'] += ('https://bsky.app/profile/raphaelglucksmann.bsky.social/',)  # compte officiel du candidat
+OFFICIEL_U['zemmour'] += ('https://www.instagram.com/ericzemmour_/',)  # compte officiel du candidat
+AFP_LPP = _s("AFP (Orange Actu), M. Le Pen veut supprimer Parcoursup et le contrôle continu (16/11)", 'https://actu.orange.fr/france/lycee-le-pen-veut-supprimer-parcoursup-le-controle-continu-et-avancer-le-bac-en-mai-CNT000002tKBlc.html')
+LCP_DEB = _s("LCP, ce qu'il faut retenir du débat TF1-LCI des Restos du Cœur (16/11)", 'https://lcp.fr/actualites/logement-associations-jeunesse-ce-qu-il-faut-retenir-du-debat-presidentiel-sur-lci')
+AFP_DEB = _s("AFP (Orange Actu), ce qu'il faut retenir du débat TF1-LCI des Restos du Cœur (16/11)", 'https://actu.orange.fr/politique/impots-logement-smic-ce-qu-il-faut-retenir-du-debat-entre-candidats-a-la-presidentielle-CNT000002tKH6A.html')
+G_BSA = _s("Bluesky de R. Glucksmann, associations (16/11)", 'https://bsky.app/profile/raphaelglucksmann.bsky.social/post/3n2hmo34oqk2n')
+Z_IGM = _s("Instagram d'É. Zemmour, responsabilité des magistrats (16/11)", 'https://www.instagram.com/ericzemmour_/reel/Dfz5nbsRw9m/')
+Z_IGP = _s("Instagram d'É. Zemmour, cumul des peines (16/11)", 'https://www.instagram.com/ericzemmour_/reel/DfzWVHBN0_q/')
+LS52 = "Logement social : priorité aux personnes qui travaillent dans les critères d'attribution"
+# Le Pen
+_txt('le-pen', 'ecole', "Réformer Parcoursup : vœux à la fin du 2e trimestre, critères de chaque formation rendus publics",
+     "Supprimer Parcoursup : entrée dans le supérieur sur le seul baccalauréat, avancé à la seconde quinzaine de mai ; plus de contrôle continu en première et en terminale")
+_so('le-pen', 'ecole', add=[AFP_LPP])
+# Glucksmann
+_ps = _cur('glucksmann', 'logement'); assert [p['text'] for p in _ps] == ['Encadrement des loyers en zones tendues', "Fonds national d'acquisition foncière", 'Fiscalité progressive sur la vacance longue'] and not _ps[0]['old'] and _ps[1]['old'] and _ps[2]['old'], [(p['text'], p['verifiable'], p['old']) for p in _ps]
+_put('glucksmann', 'logement', _ps[:1] + [_p("Loger en trois semaines les 3 000 enfants qui dorment dans la rue")] + _ps[1:])
+_so('glucksmann', 'logement', add=[LCP_DEB])
+_ps = _cur('glucksmann', 'libertes'); assert len(_ps) == 5 and all(p['verifiable'] and not p['old'] for p in _ps) and _ps[1]['text'].startswith('Convention citoyenne'), [p['text'] for p in _ps]
+_put('glucksmann', 'libertes', _ps[:1] + _ps[2:] + [_p("Donner aux associations un cadre budgétaire pluriannuel sur cinq ans ; statut pour leurs bénévoles")])
+_so('glucksmann', 'libertes', add=[G_BSA])
+# Attal et Retailleau
+_ps = _cur('attal', 'logement'); assert [p['verifiable'] for p in _ps] == [True, True, False] and not any(p['old'] for p in _ps), [p['text'] for p in _ps]
+_put('attal', 'logement', _ps[:2] + [_p(LS52)] + _ps[2:])
+_so('attal', 'logement', add=[LCP_DEB, AFP_DEB])
+_ps = _cur('retailleau', 'logement'); assert len(_ps) == 5 and all(p['verifiable'] and not p['old'] for p in _ps) and _ps[4]['text'].startswith('Mettre fin aux quotas SRU'), [p['text'] for p in _ps]
+_put('retailleau', 'logement', _ps[:4] + [_p(LS52)])
+_so('retailleau', 'logement', add=[LCP_DEB, AFP_DEB])
+# Zemmour
+_ps = _cur('zemmour', 'libertes'); assert [(p['verifiable'], p['old']) for p in _ps] == [(True, False)] * 3 + [(True, True)] * 2 and _ps[4]['text'].startswith('Abroger la loi Pleven'), [p['text'] for p in _ps]
+_put('zemmour', 'libertes', _ps[:3] + [_p("Sanctionner les magistrats pour faute : mise à pied, renvoi dans les cas les plus graves (délinquant libéré qui récidive)")] + _ps[3:4])
+_so('zemmour', 'libertes', add=[Z_IGM])
+_txt('zemmour', 'securite', "Cumuler les peines au lieu de les confondre (« accumulation des peines »)",
+     "Cumuler les peines au lieu de les confondre (« accumulation des peines ») ; peine prolongée pour un détenu qui se comporte mal")
+_so('zemmour', 'securite', add=[Z_IGP])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.

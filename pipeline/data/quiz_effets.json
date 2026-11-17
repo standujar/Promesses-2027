@@ -7768,74 +7768,22 @@
 ]
 },
 "retailleau.logement.5": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Ménages en attente d'un logement social : 2,76 millions en 2024, +45 % depuis 2015 (Assemblée nationale).",
 "constat_s": [
-4,
-5
-],
-"pour": "Imposer un quota change peu la part de ménages modestes dans les communes visées.",
-"preuve_pour": "solide",
-"contre": "Sans quota par commune, celles qui en ont peu construiraient moins de logements sociaux.",
-"preuve_contre": "solide",
-"cas_pour": [
-{
-"t": "Le quota a fait monter la part de logements sociaux des communes visées, mais à peine celle des ménages pauvres qui y vivent (Chapelle et al., France, 2025).",
-"s": [
 0
-]
-},
-{
-"t": "Les logements sociaux sont mieux répartis, mais les 20 % de ménages les plus modestes restent aussi concentrés par quartier depuis 2012 (France Stratégie, France, 2021).",
-"s": [
-1
-]
-}
 ],
-"cas_contre": [
-{
-"t": "Le quota explique 61 % de la hausse du nombre de logements sociaux dans les communes visées entre 2000 et 2008 (Chapelle et al., France, 2025).",
-"s": [
-0
-]
-},
-{
-"t": "De 1999 à 2011, le parc social a crû de 12,7 % dans les communes en retard sur le quota, contre 6 % dans les communes non concernées (CGDD, France, 2014).",
-"s": [
-2
-]
-}
-],
-"etudes": "Les évaluations concordent : le quota a nettement accru le logement social dans les communes visées, mais a peu changé la place des ménages modestes.",
+"pour": "Avoir un emploi n'est pas un critère de priorité aujourd'hui : seule la reprise après un long chômage l'est.",
+"preuve_pour": "pas d'étude",
+"contre": "Le préfet réserve déjà 5 % de ses logements aux agents publics, et Action Logement loge les salariés.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation trouvée de l'effet d'une priorité donnée aux personnes en emploi ; les règles décrites sont celles du code de la construction et de l'habitation (Assemblée nationale, 2025).",
 "src": [
 {
-"l": "Chapelle, Gobillon, Vignolles, Building without income mixing: Public housing quotas in France (PSE, document de travail 2025-18)",
+"l": "Assemblée nationale, rapport n° 865 sur la proposition de loi visant à prioriser les travailleurs dans l'attribution de logements sociaux",
 "a": 2025,
-"u": "https://shs.hal.science/halshs-05039367/file/WP_2025-18_.pdf"
-},
-{
-"l": "France Stratégie, La meilleure répartition des logements sociaux a-t-elle fait progresser la mixité sociale ? (via Banque des Territoires)",
-"a": 2021,
-"u": "https://www.banquedesterritoires.fr/des-logements-sociaux-mieux-repartis-sur-le-territoire-mais-sans-effet-sur-la-mixite-sociale"
-},
-{
-"l": "CGDD, Le Point sur n° 195, les dynamiques locales du logement social 1999-2011 : l'effet de la loi SRU (via Banque des Territoires)",
-"a": 2014,
-"u": "https://www.banquedesterritoires.fr/la-loi-sru-ca-sert-creer-du-logement-social"
-},
-{
-"l": "Cour des comptes, L'encadrement des loyers",
-"a": 2026,
-"u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
-},
-{
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
-"a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
-},
-{
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
-"a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
+"u": "https://www.assemblee-nationale.fr/dyn/17/rapports/cion-eco/l17b0865_rapport-fond.pdf"
 }
 ]
 },
@@ -8302,7 +8250,7 @@
 ],
 "pour": "Les classements restent opaques : jusqu'à une licence très demandée sur cinq tient compte du lycée d'origine.",
 "preuve_pour": "mitigé",
-"contre": "Chaque formation publie déjà ses critères et leur poids, et un rapport sur son examen des dossiers.",
+"contre": "Les moins préparés réussissent peu à l'université : 6,5 % des bacheliers pro y obtiennent leur licence.",
 "preuve_contre": "mitigé",
 "cas_pour": [
 {
@@ -8310,17 +8258,23 @@
 "s": [
 0
 ]
+},
+{
+"t": "Les quotas de boursiers et de bacheliers technologiques ou professionnels n'ont eu que de faibles effets (Cour des comptes, France, 2020).",
+"s": [
+0
+]
 }
 ],
 "cas_contre": [
 {
-"t": "Depuis 2023, chaque formation indique sur Parcoursup le poids de ses critères d'examen ; plus de 11 000 rapports sur l'examen des vœux sont publiés chaque année (ministère de l'Enseignement supérieur, France, 2024).",
+"t": "Parmi les bacheliers 2020 inscrits en licence, 40,3 % l'ont obtenue en 3 ou 4 ans : 14 % des bacheliers technologiques, 6,5 % des professionnels (SIES, France, 2025).",
 "s": [
-3
+2
 ]
 }
 ],
-"etudes": "Aucune évaluation d'une publication complète des critères. La Cour des comptes (2020) jugeait les critères peu transparents ; depuis, chaque formation publie le poids de ses critères et un rapport annuel.",
+"etudes": "Aucune évaluation directe d'une suppression de Parcoursup ni d'une sélection généralisée. La Cour des comptes (2020) note la fin du tirage au sort mais des critères peu transparents.",
 "src": [
 {
 "l": "Cour des comptes, Un premier bilan de l'accès à l'enseignement supérieur dans le cadre de la loi ORE",
@@ -8336,11 +8290,6 @@
 "l": "SIES, Note Flash n° 29, Parcours et réussite en licence : les résultats de la session 2024",
 "a": 2025,
 "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf"
-},
-{
-"l": "Assemblée nationale, question écrite n° 11371 sur la transparence de Parcoursup, réponse du ministère de l'Enseignement supérieur",
-"a": 2024,
-"u": "https://questions.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE11371.pdf"
 }
 ]
 },
@@ -8711,6 +8660,93 @@
 "l": "Insee, « Détention de la résidence principale », Les revenus et le patrimoine des ménages (Insee Références, figure 1)",
 "a": 2024,
 "u": "https://www.insee.fr/fr/statistiques/7941429"
+}
+]
+},
+"attal.csg": {
+"constat": "Le salaire net au salaire moyen a augmenté de 15 % de 2019 à 2025, moins que les prix (+19 %) (Eurostat).",
+"constat_s": [
+2,
+3
+],
+"pour": "Lors de la dernière baisse de ce type, en 2018, le net moyen a crû de 2,2 %, contre 1,7 % pour le brut.",
+"preuve_pour": "solide",
+"contre": "Lors de la baisse de 2018, les 10 % les plus modestes n'ont gagné que 19 € par an, contre 60 à 90 € au-dessus.",
+"preuve_contre": "solide",
+"cas_pour": [
+{
+"t": "En 2018, la suppression de cotisations des salariés a fait croître le salaire net moyen du privé de 2,2 %, contre 1,7 % pour le brut (Insee, France, 2020).",
+"s": [
+0,
+1
+]
+}
+],
+"cas_contre": [
+{
+"t": "La bascule de 2018 (cotisations des salariés supprimées, CSG relevée) a rapporté 19 € par an de niveau de vie aux 10 % les plus modestes, 60 à 90 € aux 2e à 9e déciles (Insee, France, 2019).",
+"s": [
+1
+]
+}
+],
+"etudes": "Les données concordent : la baisse des cotisations des salariés de 2018 a augmenté le net moyen ; le gain est allé aux revenus d'activité, très peu aux 10 % les plus modestes.",
+"src": [
+{
+"l": "Insee Première n° 1828, « En 2018, le salaire net moyen dans le secteur privé augmente de 0,4 % en euros constants »",
+"a": 2020,
+"u": "https://www.insee.fr/fr/statistiques/4990766"
+},
+{
+"l": "Insee, France portrait social 2019, dossier sur les mesures socio-fiscales de 2018 (Biotteau et al.)",
+"a": 2019,
+"u": "https://www.insee.fr/fr/statistiques/4238451"
+},
+{
+"l": "Eurostat, gains nets annuels, célibataire sans enfant au salaire moyen, France (earn_nt_net)",
+"a": 2026,
+"u": "https://ec.europa.eu/eurostat/databrowser/view/earn_nt_net/default/table"
+},
+{
+"l": "Eurostat, indice des prix à la consommation harmonisé, France, moyennes annuelles (prc_hicp_aind)",
+"a": 2026,
+"u": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_aind/default/table"
+}
+]
+},
+"glucksmann.logement.2": {
+"pour": "Les enfants comptés à la rue auraient un toit dans un délai fixé, trois semaines au plus.",
+"preuve_pour": "pas d'étude",
+"contre": "L'accès à l'hébergement d'urgence, à tout moment, est déjà un droit pour toute personne sans abri en détresse.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation trouvée de l'effet d'un délai de mise à l'abri ; le droit décrit est celui du code de l'action sociale et des familles (article L. 345-2-2).",
+"src": [
+{
+"l": "Fonction publique, « Le dispositif d'hébergement d'urgence » (article L. 345-2-2 du code de l'action sociale et des familles)",
+"a": 2026,
+"u": "https://www.fonction-publique.gouv.fr/etre-agent-public/mon-quotidien-au-travail/laction-sociale-interministerielle/logement/les-solutions-de-logement-temporaire-ou-durgence/le-dispositif-dhebergement-durgence"
+}
+]
+},
+"attal.logement.3": {
+"constat": "Ménages en attente d'un logement social : 2,76 millions en 2024, +45 % depuis 2015 (Assemblée nationale).",
+"constat_s": [
+0
+],
+"pour": "Avoir un emploi n'est pas un critère de priorité aujourd'hui : seule la reprise après un long chômage l'est.",
+"preuve_pour": "pas d'étude",
+"contre": "Le préfet réserve déjà 5 % de ses logements aux agents publics, et Action Logement loge les salariés.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation trouvée de l'effet d'une priorité donnée aux personnes en emploi ; les règles décrites sont celles du code de la construction et de l'habitation (Assemblée nationale, 2025).",
+"src": [
+{
+"l": "Assemblée nationale, rapport n° 865 sur la proposition de loi visant à prioriser les travailleurs dans l'attribution de logements sociaux",
+"a": 2025,
+"u": "https://www.assemblee-nationale.fr/dyn/17/rapports/cion-eco/l17b0865_rapport-fond.pdf"
 }
 ]
 }
