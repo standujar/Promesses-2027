@@ -698,9 +698,9 @@
 "Supprimer les interdictions de louer liées au DPE (classes G, F puis E), le DPE devenant informatif"
 ],
 "retailleau.logement.5": [
-"Remplacer le quota de logements sociaux par commune par des objectifs négociés localement",
-"Fini les 20 à 25 % de logements sociaux exigés de chaque commune : des objectifs en nombre fixés avec l'intercommunalité là où les logements manquent, aucun ailleurs, et plus d'aides au-delà de 30 % de logements sociaux.",
-"Mettre fin aux quotas SRU : objectifs de logements sociaux en volume, fixés par contrat entre le préfet et l'intercommunalité, aucun en zone non tendue ; plus d'aides publiques au-delà de 30 % de logements sociaux"
+"Donner la priorité aux personnes qui travaillent pour obtenir un logement social",
+"Avoir un emploi deviendrait un critère de priorité dans l'attribution des logements sociaux.",
+"Logement social : priorité aux personnes qui travaillent dans les critères d'attribution"
 ],
 "attal.logement.2": [
 "Étendre à tous les locataires la garantie publique des loyers, et construire des résidences universitaires",
@@ -778,9 +778,9 @@
 "Exclure les élèves violents, sans obligation pour l'État de les rescolariser"
 ],
 "le-pen.ecole.2": [
-"Réformer Parcoursup : vœux à la fin du 2e trimestre et critères de chaque formation rendus publics",
-"Les lycéens choisiraient leurs vœux à la fin du 2e trimestre et verraient sur quels critères chaque formation classe les dossiers.",
-"Réformer Parcoursup : vœux à la fin du 2e trimestre, critères de chaque formation rendus publics"
+"Supprimer Parcoursup : l'entrée dans le supérieur se ferait sur le seul bac, passé fin mai, sans contrôle continu",
+"Plus de dossier sur Parcoursup : le résultat au bac, avancé à la fin mai, déciderait de l'entrée dans les formations du supérieur.",
+"Supprimer Parcoursup : entrée dans le supérieur sur le seul baccalauréat, avancé à la seconde quinzaine de mai ; plus de contrôle continu en première et en terminale"
 ],
 "melenchon.logement.2": [
 "Construire 200 000 logements publics par an pendant cinq ans",
@@ -824,5 +824,19 @@
 "attal.allocation": [
 "Remplacer les aides sociales par une allocation unique, au montant plafonné",
 "Une seule aide au lieu de plusieurs, avec un maximum : plus simple, mais certains toucheraient moins qu'aujourd'hui."
+],
+"attal.csg": [
+"Supprimer la CSG prélevée sur les salaires",
+"Votre salaire net augmente nettement ; la Sécurité sociale perd cette recette."
+],
+"glucksmann.logement.2": [
+"Loger en trois semaines tous les enfants qui dorment dans la rue",
+"Les familles avec enfants sans abri recevraient un logement ou un hébergement dans les trois semaines.",
+"Loger en trois semaines les 3 000 enfants qui dorment dans la rue"
+],
+"attal.logement.3": [
+"Donner la priorité aux personnes qui travaillent pour obtenir un logement social",
+"Avoir un emploi deviendrait un critère de priorité dans l'attribution des logements sociaux.",
+"Logement social : priorité aux personnes qui travaillent dans les critères d'attribution"
 ]
 }

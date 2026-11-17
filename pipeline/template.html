@@ -1107,6 +1107,8 @@ function sim(){
     if(st==='minima' && sal>0 && !minLost && Math.abs(afD)>0.5){ const adj = afD>0 ? -Math.min(afD,sal) : -afD; add('Ajustement du RSA','Les allocations familiales comptent dans le calcul du RSA : une hausse est en grande partie reprise, une baisse compensée (calcul simplifié)',adj); }
     if(s.pension_min && st==='retraite' && sal>0 && sal<s.pension_min.montant){ const lo=Math.max(0,SQ.smic_net-sal); rows.push(['Pension minimale',esc(s.pension_min.note)+` : ${lo>0?eur(lo)+' au SMIC actuel, ':''}${eur(s.pension_min.montant-sal)} avec le SMIC prévu ; seulement avec une carrière complète, donc non ajouté à votre gain`,`jusqu'à ${eur(s.pension_min.montant-sal)}/mois`]); }
     if(s.jeunes_alloc && age>=18 && age<=25 && st==='etudiant'){ const v=Math.max(0,s.jeunes_alloc.montant-sal); if(v>0){ cap=v; rows.push(['Allocation jeunes', esc(s.jeunes_alloc.label)+' : montant maximal, sous conditions de ressources ; non ajouté à votre total', `jusqu'à ${eur(v)}/mois`]); } }
+    // prime d'activité étudiante (review 52) : part publiée du salaire, dans la limite du plafond publié ; gain publié et confirmé, compté
+    if(s.prime_etudiante && st==='etudiant' && sal>0) add("Prime d'activité étudiante", esc(s.prime_etudiante.note), Math.min(sal*s.prime_etudiante.taux, s.prime_etudiante.plafond));
     // logement : APL (perte si réservées selon la nationalité, sinon hausse publiée) ; notes pour les mesures sans paramètre publié
     if(etr && etr.apl && apl>0 && hit(etr.apl)) add('Aide au logement',`APL ${condA[etr.apl]} ${rev}`,-apl);
     else if(s.apl_pct && apl>0) add('Aide au logement',esc(s.apl_note),apl*s.apl_pct/100);

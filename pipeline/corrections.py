@@ -3214,6 +3214,117 @@ MISS_ADD('attal', "statut du bailleur privé, amortissement fiscal élargi contr
 # (6) Mélenchon, Glucksmann, Lisnard, Retailleau : rien de nouveau du 14 au 16/11. SMIC : décret du 1er décembre non publié au Journal officiel
 #     du 15/11 (pas de JO le 16/11) (S299). Logement (S205) : article 6 du texte de la commission (n° 3188-A0) relu, noté au registre ; rien voté.
 D['asof'] = '16 novembre 2026'
+# --- review 52 : revue du 17/11, première passe (17/11/2026) ; registre S318 (résolu), S106, S138, S205, S208, S299 (mis à jour), S322 et suivants
+# Décisions du 17/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 16 au 17/11, sources ouvertes le 17/11).
+# Débat TF1-LCI « Quelle société pour demain ? » avec les Restos du Cœur (16/11). Retraites du RN (17/11) : pas dans cette passe.
+# (1) Sondages (data/sondages.json, règle de « review 19 ») : moyenne au 17/11 ; Elabe pour BFMTV et La Tribune Dimanche (12-13/11, notice
+#     10375) entre, chaque score des six hypothèses relu sur la notice (colonne « Publié ») ; Présitrack d'OpinionWay (9-10/11, notice 10372) non
+#     retenu (vague du 10 au 12/11 pour CNews retenue pour cet institut). Ordre des candidats inchangé.
+# (2) Attal, CSG sur les salaires (débat du 16/11 ; message du candidat sur X le même soir) : « La ligne sur la CSG, je vais la supprimer. […]
+#     C'est en moyenne 270 euros nets en plus par mois. Pour vous. Pour tous les salariés. » ; à l'oral, « Je propose de supprimer cette
+#     ligne », « jusqu'à 270 euros net par mois pour les personnes qui travaillent » (Capital ; AFP). Mesure publiée : suppression de la CSG
+#     sur les salaires → fiche chiffrée par la méthode des fiches CSG de Zemmour et de Lisnard (base DSS 2025 de 110,4 Md€, part des salaires
+#     publiée par la DSS, impôt sur le revenu récupéré sur la part déductible au taux commun de 11,0 %, bornes de la règle commune ; baisse
+#     sans calendrier entière en 2030). Le « jusqu'à 270 € » de l'oral n'est pas un plafond publié : le message écrit parle d'une moyenne et le
+#     mécanisme (supprimer la ligne) vaut pour chaque salaire ; règle commune, l'écrit prime sur l'oral : aucun plafond appliqué. Coût de
+#     « 50 milliards » (sites non reconnus) : non retenu. Simulateur : CSG supprimée sur chaque salaire (9,2 % de 98,25 % du brut), au
+#     prorata, sans plafond, part imposable 6,8/9,2 ; la baisse des cotisations du « droit au brut » (200 € au salaire médian) ne s'y ajoute
+#     pas : l'articulation n'est pas publiée et la suppression de la CSG donne plus à chaque salaire (règle du plus grand des deux).
+#     Pensions alimentaires défiscalisées (redit le 16/11) : ligne non comptée existante ; « toutes petites retraites » revalorisées : seuil
+#     et montant non publiés, non comptées (même lecture que Glucksmann).
+AX = 'https://x.com/GabrielAttal/status/2122419108696244385'
+AX_S = "Message de G. Attal sur X, débat TF1-LCI (16/11/2026)"
+CIT_AX = "La ligne sur la CSG, je vais la supprimer. Pour augmenter drastiquement votre salaire. C'est en moyenne 270 euros nets en plus par mois. Pour vous. Pour tous les salariés."
+CAPA = 'https://www.capital.fr/votre-carriere/un-gain-jusqu-a-270-euros-net-gabriel-attal-le-repete-il-veut-supprimer-la-csg-1531896'
+CAPA_S = "Capital, débat TF1-LCI des Restos du Cœur (16/11/2026)"
+AFPD = 'https://actu.orange.fr/politique/hausse-du-smic-quot-c-est-pas-l-urss-quot-retorque-melenchon-a-le-pen-CNT000002tKFIN.html'
+AFPD_S = "AFP (Orange Actu), débat TF1-LCI des Restos du Cœur (16/11/2026)"
+AFPR = 'https://actu.orange.fr/politique/impots-logement-smic-ce-qu-il-faut-retenir-du-debat-entre-candidats-a-la-presidentielle-CNT000002tKH6A.html'
+AFPR_S = "AFP (Orange Actu), « Impôts, logement, Smic : ce qu'il faut retenir du débat » (16/11/2026)"
+DSS25 = 'https://www.securite-sociale.fr/files/live/sites/SSFR/files/medias/PLFSS/2025/PLFSS2025-Annexe03.pdf'
+_kz = M('zemmour', 'csg')['claude']
+_IRIN = [dict(i) for i in _kz['inputs'] if i['label'].startswith('Impôt sur le revenu récupéré')]; assert len(_IRIN) == 3
+sal, sal_h = 0.89, 2 / 3 + 0.18
+b_c = 110.4 * sal; b_h = 110.4 * sal_h
+c0 = round(-(b_c - b_c * 6.8 / 9.2 * 0.11), 1); l0 = round(-b_c, 1); h0 = round(-(b_h - b_h * 6.8 / 9.2 * 0.171), 1)
+assert (c0, l0, h0) == (-90.3, -98.3, -81.7), (c0, l0, h0)
+assert not any(m['id'] == 'csg' for m in C['attal']['measures'])
+ADD('attal', {'id': 'csg', 'theme': 'fiscalite', 'title': "Suppression de la CSG sur les salaires",
+  'proposal': "Supprimer la CSG prélevée sur les salaires (9,2 %), « pour tous les salariés », financée par des économies sur le fonctionnement de l'État (montant non publié).",
+  'claimed': "Non chiffré par le candidat ; « en moyenne 270 euros nets en plus par mois » par salarié", 'claimed_md': None,
+  'estimates': [{"source": AX_S, "year": 2026, "value": "« " + CIT_AX + " »", "low_md": None, "high_md": None, "url": AX},
+                {"source": CAPA_S, "year": 2026, "value": "« Je propose de supprimer cette ligne » ; gain « jusqu'à 270 euros net par mois pour les personnes qui travaillent » ; financement : économies sur les dépenses de fonctionnement de l'État, « Je ne cache pas qu'il faudra des efforts »", "low_md": None, "high_md": None, "url": CAPA},
+                {"source": AFPD_S, "year": 2026, "value": "« Gabriel Attal proposant pour sa part de la supprimer (pour un gain \"jusqu'à 270 euros net par mois\") »", "low_md": None, "high_md": None, "url": AFPD}],
+  'consensus': 'isolé', 'verdict': 'faisable', 'obstacle': "Par la loi de financement de la Sécurité sociale ; perte de recettes de la Sécurité sociale à compenser ; " + FNP + ".",
+  'claude': {'id': 'csg', 'central': c0, 'low': l0, 'high': h0, 'method': 'ascendant',
+    'formula': "CSG sur les revenus d'activité 2025, tous affectataires : 110,4 Md€ (DSS, PLFSS 2025, annexe 3 ; même base que les fiches CSG de Zemmour et de Lisnard) ; part prélevée sur les salaires : 89 % (DSS, 2023 : deux tiers sur la masse salariale du secteur privé, 18 % sur celle du secteur public, moins de 4 % sur d'autres rémunérations ; les 11 % des travailleurs indépendants sont exclus, la mesure visant « tous les salariés ») → 98,3 Md€ ; les 6,8 points déductibles (98,3 × 6,8/9,2 = 72,6) redeviennent imposables : impôt sur le revenu récupéré au taux commun de 11,0 % ≈ 8,0 → −90,3 Md€ ; borne basse −98,3 (sans retour d'impôt sur le revenu) ; borne haute −81,7 (secteurs privé et public seuls, 84,7 % : 93,5 Md€, impôt récupéré au taux de 17,1 % : 93,5 × 6,8/9,2 × 17,1 % = 11,8)",
+    'inputs': [{"label": "Mesure publiée (16/11/2026)", "value": "« " + CIT_AX + " »", "source": AX_S, "url": AX},
+               {"label": "CSG sur les revenus d'activité 2025", "value": "110,4 Md€ (9,2 points)", "source": "DSS, PLFSS 2025, annexe 3, appendice p. 64 : 110 386 M€ prévus en 2025 (même base que les fiches CSG de Zemmour et de Lisnard)", "url": DSS25},
+               {"label": "Part des salaires", "value": "« Les deux tiers de la CSG sur les revenus d'activité ont été prélevés sur la masse salariale du secteur privé, 18 % sur celle du secteur public, 11 % sur les rémunérations des travailleurs indépendants et moins de 4 % sur d'autres rémunérations (régime agricole et autre secteurs spécifiques). » (2023, p. 19)", "source": "DSS, PLFSS 2025, annexe 3", "url": DSS25}] + _IRIN,
+    'note': "Mesure publiée le 16/11/2026 (débat TF1-LCI ; message du candidat sur X le même soir). À l'oral, « jusqu'à 270 euros net par mois » (Capital, AFP) : aucun plafond publié par écrit, le message écrit parle d'une moyenne (« en moyenne 270 euros nets ») et le mécanisme (supprimer la ligne de CSG) vaut pour chaque salaire : aucun plafond appliqué (règle commune, l'écrit prime sur l'oral). Indépendants exclus (« tous les salariés »), agents publics compris. Baisse sans calendrier : comptée entière en 2030 (règle commune), sans déduire le financement annoncé (économies sur le fonctionnement de l'État, non chiffrées), comme les fiches CSG de Zemmour et de Lisnard. Coût d'« environ 50 milliards » rapporté par des sites non reconnus : non retenu. Base 2025 non projetée en 2030. Articulation avec la baisse des cotisations salariales du « droit au brut » (liste non comptée) non publiée."}})
+sa = C['attal']['sim']; assert sa['salaire_net']['points'] == [[2238, 200]]
+g0 = round(2797 / 0.78 * 0.9825 * 0.092, 1); assert g0 == 324.1, g0
+sa['salaire_net'] = {"gain_mensuel": g0, "ref": 2797, "prorata": True, "sans_plafond": True, "public": "salariés et agents publics", "imposable": round(6.8 / 9.2, 3),
+  "note": "Suppression de la CSG sur les salaires (9,2 % sur 98,25 % du salaire brut, brut ≈ net / 0,78), au prorata du salaire, sans plafond, le mécanisme valant pour chaque salaire (notre calcul ; 259 € au salaire médian, « en moyenne 270 euros nets » selon le candidat) ; la baisse des cotisations du « droit au brut » (200 € au salaire médian) ne s'y ajoute pas ; appliquée aussi aux agents publics et aux enseignants, le candidat parlant de « tous les salariés » sans exclure le public (notre hypothèse)"}
+sa['retraites_actuels'] = sa['retraites_actuels'] + " Revalorisation des « toutes petites retraites » annoncée le 16/11/2026 : seuil et montant non publiés, non calculée ici."
+MISS('attal', "barème, coût et économies non publiés)", "barème, coût et économies non publiés ; articulation avec la suppression de la CSG sur les salaires, comptée à part depuis le 16/11/2026, non publiée)")
+MISS('attal', "pensions alimentaires reçues pour les enfants sorties du revenu imposable (coût non publié)", "pensions alimentaires reçues pour les enfants sorties du revenu imposable (redit au débat TF1-LCI du 16/11/2026 ; plafond et coût non publiés)")
+MISS_ADD('attal', "revalorisation des « toutes petites retraites » (débat TF1-LCI, 16/11/2026 : seuil et montant non publiés ; même lecture que les petites retraites de Glucksmann)")
+# (3) Mélenchon, plan « Comment nous allons abolir la pauvreté » (melenchon2027.fr, 16/11) :
+#     - garantie d'autonomie pour chaque personne : mécanisme publié (complément jusqu'au seuil de pauvreté selon la composition du foyer, 1 337 €
+#       pour une personne seule, RSA remplacé, versement automatique ; dès 18 ans pour les personnes fiscalement indépendantes, dès 16 ans dans
+#       l'enseignement professionnel ; « en commençant par » les moins de 25 ans). Aucune source officielle (Insee, DREES) ne donne le montant
+#       nécessaire pour porter les ménages au seuil ; l'OFCE (27/03/2026) chiffre ce déficit à 26 Md€ en 2023 (« plancher théorique ») :
+#       indicatif, en note ; extension au-delà des jeunes sans calendrier : toujours non comptée au-delà de la fiche « jeunes » (registre) ;
+#     - mesures d'urgence nouvelles (loyers commerciaux bloqués, coupures d'énergie interdites toute l'année, frais bancaires plafonnés…) :
+#       aucun paramètre avec base officielle : liste non comptée ;
+#     - héritages taxés à 100 % au-delà de 12 M€ (débat du 16/11) : déjà dans la fiche (Institut Montaigne 2024 : « transmission maximale de
+#       12 millions d'euros », 9 Md€) : source ajoutée, chiffrage inchangé ; « 400 000 logements sociaux par an » (Public Sénat seul, sans
+#       citation) et population « 18 à 25 ans » (message sur X) : registre, rien de changé.
+PPAU = 'https://melenchon2027.fr/plans-thematiques/pauvrete/'
+PPAU_S = "La France insoumise, plan thématique « Comment nous allons abolir la pauvreté » (16/11/2026)"
+LCPD = 'https://lcp.fr/actualites/logement-associations-jeunesse-ce-qu-il-faut-retenir-du-debat-presidentiel-sur-lci'
+LCPD_S = "LCP, débat TF1-LCI des Restos du Cœur (16/11/2026)"
+OFCE_PG = 'https://www.ofce.fr/blog2024/fr/2026/20260327_PIM/index.html'
+IMNFP = 'https://www.institutmontaigne.org/legislatives-2024/nouveau-front-populaire/synthese'
+CIT_MGA = "Une garantie d’autonomie sera créée, en commençant par les jeunes de moins de 25 ans aujourd’hui exclu·es des minima sociaux, pour permettre à toute personne résidant en France de disposer d’un revenu au moins égal au seuil de pauvreté actuel, soit 1 337 euros par mois pour une personne seule."
+CIT_OFCE = "Le poverty gap — le déficit de revenu agrégé des ménages pauvres par rapport au seuil de pauvreté— fournit un plancher théorique du montant nécessaire pour éradiquer la pauvreté monétaire. En euros courants, ce coût atteint 26 milliards d’euros en 2023"
+m = M('melenchon', 'fiscalite'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (21.4, 9, 35)
+m['estimates'].append({"source": LCPD_S, "year": 2026, "value": "« \"Tout ce qui est au-dessus de douze millions, on prend tout\", tranche Jean-Luc Mélenchon. \"Avec ça, on paie l’allocation d’autonomie de tous les jeunes au-delà de 18 ans\" »", "low_md": None, "high_md": None, "url": LCPD})
+k['inputs'].append({"label": "Héritages : paramètre publié (16/11/2026)", "value": "100 % au-delà de 12 M€ (LCP) ; chiffrage de l'Institut Montaigne (2024) : « Créer un impôt sur les successions dorées qui rend l’impôt sur l’héritage plus progressif et cible les plus hauts patrimoines en instaurant une transmission maximale de 12 millions d’euros : 9 Md€ »", "source": "Institut Montaigne (2024), synthèse du programme du Nouveau Front populaire", "url": IMNFP})
+k['note'] += " Héritages : 100 % au-delà de 12 M€ (débat TF1-LCI, 16/11/2026), le paramètre que chiffre l'Institut Montaigne (« transmission maximale de 12 millions d'euros », 9 Md€) : chiffrage inchangé."
+m = M('melenchon', 'jeunes'); k = m['claude']
+m['estimates'].append({"source": PPAU_S, "year": 2026, "value": "« " + CIT_MGA + " » ; « Est accessible dès 18 ans pour les personnes indépendantes fiscalement et dès 16 ans pour les élèves de l’enseignement professionnel »", "low_md": None, "high_md": None, "url": PPAU})
+k['inputs'].append({"label": "Mécanisme publié (16/11/2026)", "value": "« " + CIT_MGA + " » ; « Une personne seule qui perçoit aujourd’hui le RSA voit son allocation remplacée par la garantie d’autonomie »", "source": PPAU_S, "url": PPAU})
+k['note'] += " Plan « pauvreté » du 16/11/2026 : mécanisme publié (complément jusqu'au seuil de pauvreté selon la composition du foyer, RSA remplacé, versement automatique ; dès 16 ans dans l'enseignement professionnel), sans calendrier pour l'extension au-delà des jeunes ni calcul officiel du même champ : toujours non comptée au-delà des jeunes (indicatif : 26 Md€ de déficit de revenu des ménages pauvres par rapport au seuil en 2023, « plancher théorique » selon l'OFCE)."
+k['inputs'].append({"label": "Déficit de revenu des ménages pauvres (indicatif)", "value": "« " + CIT_OFCE + " »", "source": "OFCE, P. Madec, « Pauvreté monétaire en France : les causes d'un décrochage inquiétant » (27/03/2026)", "url": OFCE_PG})
+MISS('melenchon', "garantie d'autonomie pour chaque personne (paramètre clé non publié : population et mécanisme)",
+     "garantie d'autonomie pour chaque personne (plan « pauvreté » du 16/11/2026 : complément jusqu'au seuil de pauvreté selon la composition du foyer, 1 337 € pour une personne seule, RSA remplacé, versement automatique ; extension au-delà des jeunes sans calendrier publié ; aucun calcul officiel du même champ, déficit de revenu des ménages pauvres de 26 Md€ en 2023 selon l'OFCE, « plancher théorique », indicatif)")
+MISS('melenchon', "rémunération au-dessus du seuil de pauvreté pour tous les élèves de l'enseignement professionnel dès 16 ans (franceinfo, 12/11/2026 : montant et articulation avec la garantie d'autonomie non publiés)",
+     "rémunération au-dessus du seuil de pauvreté pour tous les élèves de l'enseignement professionnel dès 16 ans (franceinfo, 12/11/2026 ; garantie d'autonomie accessible dès 16 ans dans l'enseignement professionnel selon le plan « pauvreté » du 16/11/2026 : effectifs et articulation avec les aides existantes non publiés)")
+MISS_ADD('melenchon', "plan « pauvreté » du 16/11/2026, paramètres et coûts non publiés : blocage des loyers, y compris commerciaux, et gel temporaire des remboursements de crédit dans l'« état d'urgence sociale », échelle mobile des salaires temporaire, coupures d'énergie interdites toute l'année (puissance minimale fixée par décret) et coupures d'accès aux réseaux vitaux interdites pour impayés, frais bancaires d'incident plafonnés (niveau non publié), stocks tampons alimentaires, expérimentation d'une Sécurité sociale de l'alimentation, guichets physiques à moins de 15 minutes et versement automatique des prestations")
+# (4) Le Pen, hors retraites (débat du 16/11 ; AFP, LCP, Euronews) :
+#     - prime d'activité étudiante : 20 % du salaire dans la limite de 200 €, 30 % et 300 € pour les boursiers (LCP, Euronews) : aucune
+#       source officielle ouverte ne donne le nombre d'étudiants salariés et la répartition de leurs salaires (base du calcul ascendant) :
+#       liste non comptée avec ses paramètres ; simulateur (profil étudiant) : gain publié, compté selon la règle commune du simulateur
+#       (« un gain publié par le candidat et confirmé en 2026 compte, compté ou non dans le total ») ;
+#     - permis gratuit : 0,7 Md€ par an « selon le RN » (Euronews) : chiffre du camp ajouté à la ligne non comptée (sous 1 Md€) ;
+#     - subventions aux associations : 3,7 Md€ selon Quartz ; le contre-budget du groupe RN (source primaire) écrit 2,000 (État) et 2,000
+#       (collectivités) : rien de changé (registre). Parcoursup supprimé, bac en mai : Vie quotidienne (life.py).
+MISS('le-pen', "dépenses de moins de 1 Md€ (AAH au-dessus du seuil de pauvreté, permis gratuit pour les jeunes sans casier judiciaire, prime d'activité étudiante…)",
+     "dépenses de moins de 1 Md€ (AAH au-dessus du seuil de pauvreté, permis gratuit pour les jeunes sans casier judiciaire : 0,7 Md€ par an selon le RN, Euronews, 17/11/2026), prime d'activité étudiante (débat TF1-LCI, 16/11/2026 : 20 % du salaire dans la limite de 200 € par mois, 30 % et 300 € pour les boursiers ; nombre d'étudiants salariés et répartition de leurs salaires sans source officielle ouverte, non chiffrée)")
+sl = C['le-pen']['sim']; assert 'prime_etudiante' not in sl
+sl['prime_etudiante'] = {"taux": 0.2, "plafond": 200, "note": "Prime d'activité étudiante : 20 % du salaire dans la limite de 200 € par mois (30 % et 300 € pour les boursiers, cas non calculé ici), revenus saisis supposés salariaux (notre hypothèse)"}
+# (5) Glucksmann, Retailleau, Zemmour, Attal (débat du 16/11 ; Vie quotidienne : life.py) : budget fiscal sans paramètre nouveau.
+#     Glucksmann : petites retraites revalorisées « au-dessus de l'inflation » (seuil et niveau non publiés : simulateur, note ; liste non
+#     comptée, même lecture qu'Attal) ; enfants à la rue logés en trois semaines et cadre budgétaire de cinq ans pour les associations :
+#     montants non publiés, liste non comptée.
+C['glucksmann']['sim']['retraites_actuels'] = "Petites retraites revalorisées « au-dessus de l'inflation » (16/11/2026) : seuil et niveau non publiés, non calculé ici."
+MISS_ADD('glucksmann', "petites retraites revalorisées au-dessus de l'inflation (débat TF1-LCI, 16/11/2026 : seuil et niveau non publiés ; même lecture que les « toutes petites retraites » d'Attal), 3 000 enfants à la rue logés en trois semaines (débat TF1-LCI, 16/11/2026 : moyens et coût non publiés), cadre budgétaire pluriannuel de cinq ans pour les associations et statut des bénévoles (16/11/2026 : montant non publié)")
+# (6) Lisnard : tribune du 16/11 (Le Figaro, non ouverte) : registre. (7) Situation de départ : budget de la Sécurité sociale au Sénat
+#     (1re lecture, 16/11 : réforme des retraites de 2023 rétablie, scrutin n° 112 ; articles 34 et 35 supprimés) : rien de définitif, valeurs
+#     communes inchangées (S138) ; SMIC : décret non publié au Journal officiel du 17/11 (S299) ; logement : rien de voté (S205).
+D['asof'] = '17 novembre 2026'
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
@@ -3267,7 +3378,7 @@ P={'le-pen':("Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baiss
 'philippe':("Promet la retraite à 65 ans, un départ sur trois non remplacé dans la fonction publique, une allocation familiale dès le premier enfant et zéro impôt pour les jeunes parents.","la révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or."),
 'glucksmann':("Promet le retour à 62 ans, un SMIC à 1 700 € net, 200 Md€ d'investissement public écologique sur le quinquennat, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun.","l'accord des autres pays européens, pour la défense européenne financée par emprunt commun et la saisie des avoirs russes."),
 'retailleau':("Promet 197 Md€ d'économies par an en 2032, 51 Md€ de baisses d'impôts, un âge minimal de 63 ans et un référendum sur l'immigration.","la révision de la Constitution, pour le référendum sur l'immigration, les aides réservées après cinq ans, les peines planchers et la règle d'or."),
-'attal':("Promet la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.","la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen."),
+'attal':("Promet la suppression de la CSG sur les salaires, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.","la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen."),
 'lisnard':("Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations.","la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats."),
 'zemmour':("Promet l'expulsion des étrangers au chômage depuis plus de six mois, des aides réservées aux Français, la suppression de la CSG sur les revenus d'activité, la fin des droits de succession et 800 000 postes publics en moins.","la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.")}
 MEN=D['statu_quo']['menages']
