@@ -1682,6 +1682,29 @@ _txt('zemmour', 'securite', "Cumuler les peines au lieu de les confondre (« acc
      "Cumuler les peines au lieu de les confondre (« accumulation des peines ») ; peine prolongée pour un détenu qui se comporte mal")
 _so('zemmour', 'securite', add=[Z_IGP])
 
+# --- review 53 : revue du 17/11, seconde passe (17/11/2026) ; registre S327
+# Mélenchon, plan « Comment nous allons abolir la pauvreté » (melenchon2027.fr, 16/11 ; site du candidat). Même règle d'ordre et
+# d'attribution que pour les propositions des autres candidats du 16/11 (5 au plus ; 2026 d'abord, précises avant intentions ; une proposition
+# nouvelle se place après les précises de 2026 déjà affichées) et même test « précis » (changement de droit nommé) :
+#  - logement, 3 → 5 : abrogation de la loi « Kasbarian » de 2023 (loi nommée) ; coupures d'énergie interdites toute l'année, puissance
+#    minimale fixée par décret (interdiction et instrument nommés) ; le blocage des loyers, y compris commerciaux, n'est qu'un outil de
+#    l'« état d'urgence sociale », dispositif provisoire déclenché par décret (déjà dans la liste non comptée) : pas affiché, comme les autres
+#    mesures de cet état d'exception ;
+#  - école, 4 → 5 : interdiction faite aux collectivités d'exclure un enfant de la cantine pour impayés (précise) ; pas au quiz : le même
+#    programme rend la cantine gratuite (melenchon.cantine, déjà au quiz), ce qui supprime les impayés, et le quiz ne répète pas une proposition ;
+#  - non affichés : frais bancaires d'incident plafonnés (niveau non publié : intention ; aucun thème bancaire), coupures d'accès aux réseaux
+#    de télécommunication interdites pour impayés, guichets physiques à moins de 15 minutes, Sécurité sociale de l'alimentation (expérimentation),
+#    abrogation des règles de la loi pour le plein emploi sur le RSA (aucune proposition sur le RSA en Vie quotidienne chez les 8) : liste non
+#    comptée du plan (corrections.py).
+LFI_PAU = _s("Mélenchon 2027, plan « Comment nous allons abolir la pauvreté » (16/11)", 'https://melenchon2027.fr/plans-thematiques/pauvrete/')
+_ps = _cur('melenchon', 'logement'); assert [p['text'] for p in _ps] == ['Rénover au moins 700 000 logements par an', '200 000 logements publics par an pendant cinq ans', 'Plafonner les meublés touristiques à 60 jours par an'] and all(p['verifiable'] and not p['old'] for p in _ps), [(p['text'], p['verifiable'], p['old']) for p in _ps]
+_put('melenchon', 'logement', _ps + [_p("Abroger la loi « Kasbarian » de 2023 (squats, loyers impayés et procédures d'expulsion)"),
+                                     _p("Interdire les coupures d'énergie toute l'année, avec une puissance minimale garantie fixée par décret")])
+_so('melenchon', 'logement', add=[LFI_PAU])
+_ps = _cur('melenchon', 'ecole'); assert len(_ps) == 4 and all(p['verifiable'] and not p['old'] for p in _ps), [p['text'] for p in _ps]
+_put('melenchon', 'ecole', _ps + [_p("Interdire aux collectivités d'exclure un enfant de la cantine pour impayés")])
+_so('melenchon', 'ecole', add=[LFI_PAU])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.
