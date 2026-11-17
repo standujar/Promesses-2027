@@ -3325,6 +3325,115 @@ MISS_ADD('glucksmann', "petites retraites revalorisées au-dessus de l'inflation
 #     (1re lecture, 16/11 : réforme des retraites de 2023 rétablie, scrutin n° 112 ; articles 34 et 35 supprimés) : rien de définitif, valeurs
 #     communes inchangées (S138) ; SMIC : décret non publié au Journal officiel du 17/11 (S299) ; logement : rien de voté (S205).
 D['asof'] = '17 novembre 2026'
+# --- review 53 : revue du 17/11, seconde passe (17/11/2026) ; registre S002, S327 (résolus), S059, S074, S138 (mis à jour), S333 et suivants
+# Décisions du 17/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; conférence de presse du RN du 17/11, 11 h,
+# comptes rendus ouverts le 17/11 de 12 h 15 à 12 h 40 : Le Figaro, BFMTV, Le Parisien (directs), TF1 Info, La Provence, Midi Libre, CNews).
+# (1) Le Pen, réforme des retraites (S002) :
+#     - qui parle : la candidate a annoncé la conférence comme la présentation de « notre projet » avec J. Bardella et J.-P. Tanguy (son
+#       compte X, cité par Le Parisien) et l'a menée : les paramètres qu'y détaille J. Bardella sont repris par elle (règle « qui parle » :
+#       reprise par le candidat, S074) ; J.-P. Tanguy, coordinateur du pôle économie et finances de la campagne, parle pour elle ;
+#     - âge : abolition de la réforme de 2023 au 1/1/2028 → 62 ans en 2030 : valeur commune entière (−11,8) ; départs de 60 à 61 ans et demi
+#       selon l'âge du premier emploi stable (cinq catégories), « pleinement opérationnelle en 2032 », progressive : état prévu en 2030 =
+#       moitié du chiffrage des carrières précoces (interpolation 2028 → 2032 ; même règle de montée en charge que Philippe et Mélenchon) :
+#       iFRAP ≈ 4,0 → −2,0 ;
+#     - durée de 160 à 168 trimestres : ≈ 0 en 2030 (même lecture que Philippe, au plus un trimestre pour les générations qui partent en
+#       2030) ; borne basse −1,0 (Cour des comptes 2025 : 42 annuités au lieu de 43 = 3,9 Md€ en 2035) ;
+#     - capitalisation obligatoire (moins de 52 ans) alimentée par 12 Md€ par an de prélèvements patronaux réaffectés (participation des
+#       employeurs à l'effort de construction, cotisation au FNAL, moitié des contributions de formation professionnelle) versés sur des
+#       comptes individuels gérés par la Caisse des dépôts : argent public versé à des comptes individuels = dépense, même règle que
+#       attal.bebe et philippe.premier_contrat (une enveloppe vaut son montant, « flux minimum ») → −12,0 ; borne haute 0 si le fonds était
+#       classé dans les administrations publiques (classement non publié). Vérifié : aucune autre fiche de la candidate ne compte ces
+#       prélèvements (logement, formation : lignes du contre-budget non comptées) ; les politiques qu'ils financent (aides au logement,
+#       Action Logement, formation) gardent leur coût faute de paramètre publié pour leur réforme ;
+#     - économies à paramètres publiés sans chiffrage indépendant (décote 2,5 % par trimestre au plus 50 %, 160 trimestres au minimum,
+#       trimestre validé à mi-temps, 4 trimestres de chômage non cotisé, majorations pour trois enfants, critères de pénibilité) : non
+#       comptées (liste) ; exonération de cotisations pour qui continue avec tous ses droits : non comptée, comme Retailleau ;
+#     - central −25,8 ; bornes : basse = ancienne borne basse (−38,2, version large de Montaigne 2024) − 1,0 − 12,0 = −51,2 ; haute = −11,8
+#       (62 ans seul, catégories et capitalisation à 0) ; chiffre du camp : 18,6 Md€ brut, 10,1 Md€ net (J.-P. Tanguy) ;
+#     - verdict : faisable (loi de financement de la Sécurité sociale ; fonds géré par la Caisse des dépôts, sans accord de tiers) ;
+#       référendum annoncé faute de majorité absolue : note.
+LFG = 'https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-detaille-ce-mardi-son-projet-de-reforme-des-retraites-20261117'
+LFG_S = "Le Figaro, direct de la présentation de la réforme des retraites du RN (17/11/2026)"
+BFR = 'https://www.bfmtv.com/economie/patrimoine/retraite/direct-age-de-depart-a-62-ou-60-ans-capitalisation-le-rassemblement-national-devoile-son-projet-de-reforme-pour-reparer-le-systeme-de-retraites_LN-202611170426.html'
+BFR_S = "BFMTV, direct de la présentation de la réforme des retraites du RN (17/11/2026)"
+LPR = 'https://www.leparisien.fr/elections/presidentielle/direct-presidentielle-2027-suivez-la-presentation-de-la-reforme-des-retraites-du-rassemblement-national-17-11-2026-PEYTNR2FCRAFRHF3CUWW6R4Q4I.php'
+LPR_S = "Le Parisien, direct de la présentation de la réforme des retraites du RN (17/11/2026)"
+TFR = 'https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-60-a-62-ans-capitalisation-marine-le-pen-devoile-son-projet-de-reforme-des-retraites-2476352.html'
+TFR_S = "TF1 Info, réforme des retraites de M. Le Pen (17/11/2026)"
+LPV = 'https://www.laprovence.com/article/elections/4511042206382814/presidentielle-2027-lage-de-depart-a-la-retraite-sera-compris-entre-60-et-62-ans-promet-marine-le-pen'
+LPV_S = "La Provence, réforme des retraites de M. Le Pen (17/11/2026)"
+IFRAP_RET = 'https://www.ifrap.org/retraite/retraites-et-si-lon-arretait-de-mentir-aux-francais'
+m = M('le-pen', 'retraites'); k = m['claude']
+assert (k['central'], k['low'], k['high'], m['verdict']) == (-15.8, -38.2, -12.2, 'faisable'), (k['central'], k['low'], k['high'], m['verdict'])
+assert not any(x['id'] in ('capitalisation', 'formation', 'action_logement') for x in C['le-pen']['measures'])
+_ifr = 4.0; c_ret = round(-11.8 - _ifr / 2 + 0 - 12.0, 1); l_ret = round(-38.2 - 1.0 - 12.0, 1); h_ret = -11.8
+assert (c_ret, l_ret, h_ret) == (-25.8, -51.2, -11.8), (c_ret, l_ret, h_ret)
+m['title'] = "Retraite entre 60 et 62 ans, capitalisation"
+m['proposal'] = ("Abolir la réforme de 2023 au 1er janvier 2028 ; départ de 60 à 62 ans et 40 à 42 annuités (160 à 168 trimestres) selon l'âge du "
+                 "premier emploi stable, en place progressivement d'ici 2032 ; taux plein à 67 ans maintenu ; indexation de toutes les retraites "
+                 "pendant cinq ans ; pilier de capitalisation obligatoire pour les moins de 52 ans, alimenté par 12 Md€ par an de prélèvements "
+                 "patronaux réaffectés et géré par la Caisse des dépôts.")
+m['claimed'] = "18,6 Md€ brut, 10,1 Md€ net selon le RN (J.-P. Tanguy, coordinateur du pôle économie de la campagne, 17/11/2026 ; année non dite)"
+m['claimed_md'] = -10.1
+m['estimates'].append({"source": LFG_S, "year": 2026, "value": "J.-P. Tanguy : « Le coût brut de notre réforme sera de 18,6 milliards d’euros », coût net de 10,1 milliards d’euros", "low_md": None, "high_md": None, "url": LFG})
+OB('le-pen', 'retraites', "Par la loi (loi de financement de la Sécurité sociale) ; " + FNP + " ; calendrier de la baisse de l'âge entre 2028 et 2032 non publié année par année.")
+k.update(central=c_ret, low=l_ret, high=h_ret, method='ascendant',
+  formula=("Abolition de la réforme de 2023 au 1er janvier 2028, donc 62 ans en 2030 : 11,8 Md€, valeur commune à tous (rendement de la réforme 2023 en 2030 : "
+           "13,6 Md€, médiane Montaigne 11,8 / CNAV 13,6 / étude d'impact 14,1 ; moins 1,8 Md€ déjà perdus par la suspension votée en 2025) ; départs de 60 à "
+           "61 ans et demi selon l'âge du premier emploi stable, en place progressivement de 2028 à 2032 : moitié en 2030 (même règle de montée en charge que "
+           "Philippe et Mélenchon) du coût du départ à 60 ans des carrières précoces (≈ 4 Md€, iFRAP) ≈ 2,0 ; durée de 160 à 168 trimestres : ≈ 0 en 2030 "
+           "(au plus un trimestre pour les générations qui partent en 2030 ; même lecture que Philippe) ; capitalisation : 12 Md€ par an de prélèvements "
+           "obligatoires versés sur des comptes individuels, dépense comme les comptes retraite d'Attal et de Philippe ≈ 12,0 ; total ≈ −25,8. Borne basse "
+           "−51,2 (version Montaigne 2024 plus large, plan entier en 2030 : −38,2 ; 42 annuités au lieu de 43 : −1,0 d'après la Cour des comptes 2025, "
+           "3,9 Md€ en 2035 ; capitalisation −12,0) ; borne haute −11,8 (62 ans seul ; catégories à 0 ; capitalisation à 0 si le fonds était classé "
+           "dans les administrations publiques)"),
+  inputs=[i for i in k['inputs'] if not i['label'].startswith('Date de présentation')] + [
+    {"label": "Âges et durée (17/11/2026)", "value": "« Notre réforme des retraites prévoira un âge de départ à la retraite compris entre 60 et 62 ans, avec une durée de cotisation au régime de retraite comprise entre 40 et 42 ans, en fonction de la date à laquelle le salarié a commencé à travailler » (la candidate)", "source": LFG_S, "url": LFG},
+    {"label": "Calendrier (17/11/2026)", "value": "la candidate : « la réforme Borne au 1er janvier 2028 » sera abolie ; J. Bardella : réforme « pleinement opérationnelle en 2032, à la fin du premier quinquennat », appliquée progressivement", "source": LFG_S, "url": LFG},
+    {"label": "Catégories du premier emploi (17/11/2026)", "value": "« à chaque catégorie correspondra un âge d’ouverture des droits » : « 60 ans, 60 ans et demi, 61 ans, 61 ans et demi, et 62 ans » ; de 160 trimestres « pour ceux qui ont commencé à travailler avant 20 ans, à 168 trimestres (42 annuités), pour ceux qui ont commencé après 23 ans » (J. Bardella, à la conférence de la candidate)", "source": BFR_S, "url": BFR},
+    {"label": "Capitalisation (17/11/2026)", "value": "réaffecter « les cotisations du 1% logement, celles du Fonds National d'Aide au Logement, et la moitié de celles liées à la formation professionnelle », soit un « flux minimum de 12 milliards d'euros par an, versé à un fonds de capitalisation universel et individuel géré par la Caisse des dépôts et consignations » (J. Bardella ; la candidate selon La Provence) ; pilier obligatoire pour les moins de 52 ans (Le Parisien)", "source": BFR_S, "url": BFR},
+    {"label": "Capitalisation, reprise par la candidate (17/11/2026)", "value": "« constituer, pour la seule partie obligatoire et universelle, un fonds de quasi 900 milliards d'euros en une génération » (la candidate)", "source": TFR_S, "url": TFR},
+    {"label": "Flux de 12 Md€ attribué à la candidate", "value": "flux de 12 Md€ par an « a expliqué la candidate »", "source": LPV_S, "url": LPV},
+    {"label": "Décote, durée minimale, taux plein (17/11/2026)", "value": "« Nous fixerons un seuil minimal de 160 trimestres acquis pour pouvoir liquider sa retraite, c’est à dire 40 annuités au minimum. La décote sera portée à 2,5 % par trimestres manquants, dans la limite de 50 % » (J. Bardella) ; « maintient l'âge de 67 ans pour prendre sa retraite à taux plein » et « indexation de toutes les retraites pour les cinq ans à venir » (la candidate, BFMTV)", "source": LFG_S, "url": LFG},
+    {"label": "Validation des trimestres (17/11/2026)", "value": "« il faudra avoir travaillé au moins à mi-temps pendant un trimestre et sans critère de salaire » ; « Nous limiterons la validation de trimestres au chômage sans avoir cotisé à quatre sur l’ensemble de la carrière » (J. Bardella)", "source": LFG_S, "url": LFG},
+    {"label": "42 annuités au lieu de 43 (borne basse)", "value": "3,9 Md€ pour le système de retraite en 2035", "source": "Cour des comptes, situation financière et perspectives du système de retraites (février 2025)", "url": CC_RET},
+    {"label": "Coût selon le camp (17/11/2026)", "value": "« Le coût brut de notre réforme sera de 18,6 milliards d’euros », coût net de 10,1 milliards d’euros (J.-P. Tanguy)", "source": LFG_S, "url": LFG},
+    {"label": "Adoption (17/11/2026)", "value": "« si ça n'était pas le cas, nous soumettrions cette réforme par référendum » (la candidate, faute de majorité absolue)", "source": BFR_S, "url": BFR}],
+  note=("Réforme présentée le 17/11/2026 par la candidate avec J. Bardella et J.-P. Tanguy (« notre projet », message de la candidate) : les paramètres "
+        "détaillés par J. Bardella à cette conférence sont repris par elle. Abolition de la réforme de 2023 au 1er janvier 2028, puis baisse de l'âge "
+        "jusqu'en 2032 sans calendrier année par année : moitié du coût des catégories en 2030. Catégories de 20 à 23 ans (60 ans et demi à 61 ans et demi) "
+        "sans chiffrage indépendant : couvertes par la borne basse. Capitalisation : 12 Md€ par an de prélèvements patronaux versés sur des comptes "
+        "individuels, comptés comme dépense ; les politiques qu'ils financent aujourd'hui (aides au logement, Action Logement, formation professionnelle) "
+        "gardent leur coût faute de paramètre publié pour leur réforme ; aucun autre chiffrage de la candidate ne compte ces prélèvements. Non comptées "
+        "faute de chiffrage pour 2030 : décote portée à 2,5 % par trimestre manquant (au plus 50 %), 160 trimestres au minimum pour liquider, trimestre "
+        "validé à partir d'un mi-temps, 4 trimestres de chômage non cotisé au plus, majoration pour trois enfants portée à 12 % pour les mères et "
+        "supprimée peu à peu pour les pères, critères de pénibilité supprimés, exonération de cotisations retraite et chômage pour qui continue de "
+        "travailler avec tous ses droits (même lecture que Retailleau) ; 8,5 Md€ d'économies selon le camp (18,6 brut moins 10,1 net), année non dite. "
+        "Indexation de toutes les retraites pendant cinq ans (droit en vigueur). La candidate évoque un référendum si elle n'a pas la majorité absolue."))
+MISS('le-pen', "« corrections » retraites (15-20 Md€) non détaillées",
+     "économies de la réforme des retraites sans chiffrage pour 2030 (décote portée à 2,5 % par trimestre manquant dans la limite de 50 %, 160 trimestres "
+     "au minimum pour liquider, trimestre validé à partir d'un mi-temps, 4 trimestres de chômage non cotisé au plus sur la carrière, majoration pour trois "
+     "enfants portée à 12 % pour les mères et supprimée peu à peu pour les pères, critères de pénibilité supprimés : 8,5 Md€ d'économies selon le camp, "
+     "18,6 Md€ brut moins 10,1 Md€ net, année non dite), exonération de cotisations retraite et chômage pour qui continue de travailler avec tous ses "
+     "droits et cumul emploi-retraite libéralisé (sans chiffrage, même lecture que Retailleau), réforme des politiques financées aujourd'hui par les "
+     "prélèvements réaffectés à la capitalisation (aides au logement, Action Logement, formation professionnelle : paramètres non publiés)")
+sl = C['le-pen']['sim']; r = sl['retraite']; assert r['regle'].endswith('détail promis le 17 novembre.'), r
+r.update(age_legal=62, age_taux_plein=67, duree=42,
+  carriere_longue="Départ selon l'âge du premier emploi stable (six mois à temps plein) : 60 ans et 40 annuités avant 20 ans, puis 60 ans et demi, 61 ans, 61 ans et demi, et 62 ans et 42 annuités après 23 ans ; en place progressivement d'ici 2032.",
+  regle="Réforme de 2023 abolie au 1er janvier 2028 ; taux plein à 67 ans maintenu ; 2,5 % de pension en moins par trimestre manquant (au plus 50 %) ; trimestre validé avec au moins un mi-temps ; part de capitalisation obligatoire pour les moins de 52 ans (capital à la retraite, montant non calculé ici) ; plus de cotisations retraite ni chômage pour qui continue de travailler avec tous ses droits (non calculé ici).")
+assert 'décote' not in r['carriere_longue']
+_ra = "Pensions indexées sur l'inflation ; petites retraites revalorisées."; assert sl['retraites_actuels'].startswith(_ra)
+sl['retraites_actuels'] = sl['retraites_actuels'].replace(_ra, "Toutes les pensions indexées sur l'inflation pendant cinq ans (17/11/2026) ; petites retraites revalorisées ; majoration pour trois enfants portée de 10 à 12 % pour les mères dès 2028, celle des pères supprimée peu à peu sans baisse du montant versé : non calculé ici.")
+assert sl['chomeurs'] is None
+sl['chomeurs'] = "Au-delà de 4 trimestres de chômage non cotisé sur toute la carrière, plus de trimestre de retraite validé sans cotiser (effet sur la pension future, non calculé ici)."
+# (2) Mélenchon, plan « Comment nous allons abolir la pauvreté » (16/11, S327) : Vie quotidienne (life.py) ; abrogation des dispositions de la
+#     loi pour le plein emploi sur le RSA ajoutée à la liste non comptée du plan (aucune proposition sur le RSA n'est affichée en Vie
+#     quotidienne chez les 8 ; RSA de Zemmour et de Retailleau : fiches).
+MISS('melenchon', "guichets physiques à moins de 15 minutes et versement automatique des prestations",
+     "guichets physiques à moins de 15 minutes et versement automatique des prestations, abrogation des dispositions de la loi pour le plein emploi qui conditionnent le RSA à une durée minimale d'activité et renforcent les sanctions")
+# (3) Situation de départ : compromis Sénat-Gouvernement sur le budget de la Sécurité sociale (titre de BFMTV du 17/11, article non ouvert) :
+#     registre seulement (S138), rien de changé.
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
@@ -3373,7 +3482,7 @@ for c0 in D['candidates']:
 # Principal obstacle (review 43, 08/11/2026 ; registre S226) : pour les 8, la condition juridique ou pratique des mesures retenues au verdict le plus
 # contraignant (« exige une révision » d'abord, puis « très difficile »), même forme « condition, pour mesures » ; jamais un rendement, un coût, un
 # paramètre non publié ou l'identification d'économies. Contrôle à la fin de ce bloc.
-P={'le-pen':("Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite à 62 ans et la TVA à 5,5 % sur l'énergie.","la révision de la Constitution, pour la priorité nationale, le prêt réservé aux jeunes ménages français et la règle d'or."),
+P={'le-pen':("Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite entre 60 et 62 ans et la TVA à 5,5 % sur l'énergie.","la révision de la Constitution, pour la priorité nationale, le prêt réservé aux jeunes ménages français et la règle d'or."),
 'melenchon':("Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines.","la modification des traités européens à l'unanimité des 27, pour l'annulation de la dette, et la révision de la Constitution, pour la VIe République."),
 'philippe':("Promet la retraite à 65 ans, un départ sur trois non remplacé dans la fonction publique, une allocation familiale dès le premier enfant et zéro impôt pour les jeunes parents.","la révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or."),
 'glucksmann':("Promet le retour à 62 ans, un SMIC à 1 700 € net, 200 Md€ d'investissement public écologique sur le quinquennat, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun.","l'accord des autres pays européens, pour la défense européenne financée par emprunt commun et la saisie des avoirs russes."),

@@ -1087,7 +1087,7 @@
 ]
 },
 "le-pen.retraites": {
-"complement": "Le même programme annonce des mesures de financement des retraites, sans les détailler à ce jour.",
+"complement": "Le même programme exonère de cotisations retraite et chômage ceux qui travaillent après avoir tous leurs droits.",
 "complement_ref": [
 "le-pen.retraites"
 ],
@@ -8747,6 +8747,56 @@
 "l": "Assemblée nationale, rapport n° 865 sur la proposition de loi visant à prioriser les travailleurs dans l'attribution de logements sociaux",
 "a": 2025,
 "u": "https://www.assemblee-nationale.fr/dyn/17/rapports/cion-eco/l17b0865_rapport-fond.pdf"
+}
+]
+},
+"melenchon.logement.4": {
+"constat": "Expulsions locatives exécutées avec le concours de la force publique : 24 556 en 2024 (DIHAL).",
+"constat_s": [
+1
+],
+"pour": "Le juge pourrait de nouveau accorder jusqu'à trois ans de délai avant l'expulsion, contre un an depuis 2023.",
+"preuve_pour": "pas d'étude",
+"contre": "La peine pour squat d'un domicile redescendrait à un an de prison et 15 000 €, contre trois ans et 45 000 €.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation trouvée de l'effet de la loi de 2023 sur les impayés, les expulsions ou les squats ; les règles décrites sont celles de cette loi (ANIL).",
+"src": [
+{
+"l": "ANIL, loi du 27 juillet 2023 visant à protéger les logements contre l'occupation illicite (analyse juridique)",
+"a": 2023,
+"u": "https://www.anil.org/aj-occupation-illicite-logement/"
+},
+{
+"l": "DIHAL, bilan du Fonds national d'accompagnement vers et dans le logement 2024 (expulsions locatives exécutées avec le concours de la force publique)",
+"a": 2025,
+"u": "https://www.info.gouv.fr/upload/media/mixed/0001/16/ed592f30035c67037477cdbff89c95139e9ef7c6.pdf"
+}
+]
+},
+"melenchon.logement.5": {
+"constat": "Interventions pour impayés d'énergie chez les particuliers : 1,2 million en 2025, −3,7 % en un an (médiateur de l'énergie).",
+"constat_s": [
+0
+],
+"pour": "En 2025, il y a eu 143 625 coupures d'électricité pour impayé : elles deviendraient interdites.",
+"preuve_pour": "pas d'étude",
+"contre": "Les coupures sont déjà interdites de novembre à mars, et la puissance réduite domine : 948 000 en 2025.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation trouvée de l'effet d'une interdiction des coupures sur les impayés ou le froid dans les logements ; chiffres du médiateur national de l'énergie, règles de la trêve hivernale (depuis 2013).",
+"src": [
+{
+"l": "Médiateur national de l'énergie, « 1,2 million d'interventions pour impayés de factures d'énergie en 2025 » (communiqué, 3/03/2026)",
+"a": 2026,
+"u": "https://www.energie-mediateur.fr/12-million-dinterventions-pour-impayes-de-factures-denergie-en-2025/"
+},
+{
+"l": "Énergie-info (médiateur national de l'énergie), la trêve hivernale des coupures d'énergie",
+"a": 2026,
+"u": "https://www.energie-info.fr/fiche_pratique/la-treve-hivernale/"
 }
 ]
 }

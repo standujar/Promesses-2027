@@ -1,7 +1,7 @@
 {
 "le-pen.retraites": [
-"Revenir à la retraite à 62 ans, et à 60 ans pour ceux qui ont commencé à travailler avant 20 ans",
-"Vous pourriez partir plus tôt qu'aujourd'hui."
+"Partir à la retraite entre 60 et 62 ans selon l'âge du premier emploi, et créer une épargne retraite obligatoire pour les actifs de moins de 52 ans",
+"Vous pourriez partir plus tôt qu'aujourd'hui, mais il faudrait au moins un mi-temps pour valider un trimestre."
 ],
 "le-pen.immigration": [
 "Réserver les allocations familiales et le RSA aux Français, ou aux étrangers après 5 ans de travail",
@@ -838,5 +838,15 @@
 "Donner la priorité aux personnes qui travaillent pour obtenir un logement social",
 "Avoir un emploi deviendrait un critère de priorité dans l'attribution des logements sociaux.",
 "Logement social : priorité aux personnes qui travaillent dans les critères d'attribution"
+],
+"melenchon.logement.4": [
+"Abroger la loi de 2023 qui a durci les peines contre les squats et raccourci les délais en cas de loyers impayés",
+"Les règles d'avant 2023 reviendraient pour les squats, les loyers impayés et les expulsions.",
+"Abroger la loi « Kasbarian » de 2023 (squats, loyers impayés et procédures d'expulsion)"
+],
+"melenchon.logement.5": [
+"Interdire toute l'année les coupures d'électricité et de gaz pour factures impayées",
+"Un foyer en impayé garderait toujours assez de courant pour se chauffer et avoir de l'eau chaude.",
+"Interdire les coupures d'énergie toute l'année, avec une puissance minimale garantie fixée par décret"
 ]
 }
