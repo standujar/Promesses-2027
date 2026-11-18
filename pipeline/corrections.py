@@ -3434,6 +3434,204 @@ MISS('melenchon', "guichets physiques à moins de 15 minutes et versement automa
 # (3) Situation de départ : compromis Sénat-Gouvernement sur le budget de la Sécurité sociale (titre de BFMTV du 17/11, article non ouvert) :
 #     registre seulement (S138), rien de changé.
 
+# --- review 54 : revue du 18/11 (18/11/2026) ; registre S323, S330 (résolus), S106, S138, S205, S208, S299, S336, S337 (mis à jour), S339 et suivants
+# Décisions du 18/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 17 au 18/11, sources ouvertes le 18/11).
+# (1) Sondages (data/sondages.json, règle de « review 19 ») : moyenne au 18/11 ; Ifop-Fiducial pour TF1-LCI, Le Figaro et Sud Radio (13-16/11,
+#     notice 10384) entre, chaque score des cinq hypothèses relu sur la notice (colonne « publiés »), y compris l'hypothèse avec T. Riner (même
+#     traitement que les deux hypothèses d'OpinionWay) ; elle remplace la vague Ifop du 27-29/10 ; cinq instituts ; notices de novembre sans
+#     intentions de vote listées dans « exclus ». Ordre des candidats inchangé.
+# (2) Attal, CSG sur les salaires (S322, S323) : correction de la lecture du 17/11. Sa page de campagne du 16/11 écrit qu'avec le « droit au
+#     brut » il veut réduire l'écart entre brut et net « notamment par la suppression de la CSG sur les salaires, afin de permettre aux
+#     travailleurs de gagner jusqu'à 270 euros nets supplémentaires par mois » : source écrite du candidat ; règle commune, l'écrit prime sur
+#     l'oral (le message sur X disait « en moyenne ») : gain plafonné à 270 € nets par mois et par salarié. Fiche recalculée : CSG de chaque
+#     salaire (9,2 % de 98,25 % du brut, brut ≈ net / 0,78, hypothèse du simulateur : 11,59 % du net), plafonnée à 270 € par mois (atteint à
+#     2 330 € nets), sur la distribution officielle des salaires du privé en 2025 (Insee Première n° 2132, même source et même centre de tranche
+#     que le barème de Glucksmann) : 75,4 % de la CSG sans plafond ; part appliquée à la CSG des salaires (DSS, base des fiches CSG, secteurs
+#     privé et public : agents publics supposés répartis comme le privé, faute de distribution officielle ouverte par tranche, hypothèse dite
+#     dans la note) ; impôt sur le revenu récupéré au taux commun (11,0 % de la part déductible) ; bornes de la règle commune. « Environ 50
+#     milliards » (transcription automatique non officielle) : registre, pas de chiffre du camp. Simulateur : CSG supprimée, au prorata, plafonnée
+#     à 270 € par mois ; ne s'ajoute pas au « droit au brut », dont elle est le moyen (règle du plus grand des deux, inchangée).
+ATP = 'https://attalpresident.fr/actualites/gabriel-attal-lci-restos-du-coeur-nouveau-modele-social'
+ATP_S = "Site de campagne de G. Attal, « Gabriel Attal sur LCI : réinventer le modèle social pour mieux rémunérer le travail » (16/11/2026)"
+CIT_ATP = "Avec sa proposition de « droit au brut », il souhaite réduire l'écart entre le salaire brut et le salaire net, notamment par la suppression de la CSG sur les salaires, afin de permettre aux travailleurs de gagner jusqu'à 270 euros nets supplémentaires par mois."
+m = M('attal', 'csg'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-90.3, -98.3, -81.7), (k['central'], k['low'], k['high'])
+_fa = 0.092 * 0.9825 / 0.78; _cap = 270; _ref = round(_cap / _fa); assert _ref == 2330, _ref
+_unc = sum(n * 1e3 * 12 * _mid(a, b) * _fa for a, b, n in FIG3); _cpd = sum(n * 1e3 * 12 * min(_mid(a, b) * _fa, _cap) for a, b, n in FIG3)
+_ra = _cpd / _unc; assert (round(_unc / 1e9, 1), round(_cpd / 1e9, 1), round(_ra, 3)) == (69.8, 52.7, 0.754), (_unc, _cpd, _ra)
+b_c = 110.4 * 0.89 * _ra; b_h = 110.4 * (2 / 3 + 0.18) * _ra
+c0 = round(-(b_c - b_c * 6.8 / 9.2 * 0.11), 1); l0 = round(-b_c, 1); h0 = round(-(b_h - b_h * 6.8 / 9.2 * 0.171), 1)
+assert (c0, l0, h0) == (-68.1, -74.1, -61.6), (c0, l0, h0)
+m['proposal'] = ("Supprimer la CSG prélevée sur les salaires (9,2 %), « pour tous les salariés », comme moyen du « droit au brut », pour un gain « jusqu'à "
+                 "270 euros nets supplémentaires par mois » ; financée par des économies sur le fonctionnement de l'État (montant non publié).")
+m['claimed'] = "Non chiffré par écrit ; « jusqu'à 270 euros nets supplémentaires par mois » par salarié (site de campagne, 16/11/2026)"
+m['estimates'].insert(0, {"source": ATP_S, "year": 2026, "value": "« " + CIT_ATP + " »", "low_md": None, "high_md": None, "url": ATP})
+k.update(central=c0, low=l0, high=h0,
+  formula=("CSG sur les revenus d'activité 2025, tous affectataires : 110,4 Md€ (DSS, PLFSS 2025, annexe 3 ; même base que les fiches CSG de Zemmour et de Lisnard) ; "
+           "part prélevée sur les salaires : 89 % (DSS, 2023 : deux tiers sur le secteur privé, 18 % sur le secteur public, moins de 4 % sur d'autres rémunérations ; "
+           "indépendants exclus, la mesure visant « tous les salariés ») → 98,3 Md€ sans plafond ; gain plafonné à 270 € nets par mois et par salarié (site de "
+           "campagne) : CSG de chaque salaire = 9,2 % de 98,25 % du brut, brut ≈ net / 0,78 (hypothèse du simulateur), soit 11,59 % du net, plafond atteint à "
+           "2 330 € nets ; appliqué à la distribution officielle des salaires du privé en 2025 (Insee : 18,5 millions d'EQTP par tranche de 100 € de salaire net, "
+           "centre de chaque tranche, 1 250 € pour la tranche sous 1 300 €, même calcul que le barème de Glucksmann) : 52,7 Md€ au lieu de 69,8, soit 75,4 % ; "
+           "même part pour les agents publics (hypothèse) → 98,3 × 75,4 % = 74,1 Md€ ; les 6,8 points déductibles redeviennent imposables : impôt sur le revenu "
+           "récupéré au taux commun de 11,0 % (74,1 × 6,8/9,2 × 11,0 % ≈ 6,0) → −68,1 Md€ ; borne basse −74,1 (sans retour d'impôt sur le revenu) ; borne haute "
+           "−61,6 (secteurs privé et public seuls, 84,7 % : 70,5 Md€, impôt récupéré au taux de 17,1 %)"),
+  note=("Mesure publiée le 16/11/2026 (débat TF1-LCI ; message du candidat sur X le même soir) ; plafond écrit par la campagne le même jour (« jusqu'à 270 euros "
+        "nets supplémentaires par mois », page de son site qui présente la suppression de la CSG comme le moyen du « droit au brut ») : règle commune, l'écrit "
+        "prime sur l'oral (« en moyenne 270 euros nets » sur X) ; correction du 18/11/2026 (le 17/11, aucun plafond n'était appliqué : −90,3). Agents publics "
+        "compris (« tous les salariés »), supposés répartis comme les salariés du privé faute de distribution officielle ouverte par tranche (notre "
+        "hypothèse ; leurs salaires médians publiés par l'Insee sont plus élevés, ce qui ferait jouer le plafond plus souvent). Temps partiels comptés en "
+        "équivalent temps plein, comme le barème de Glucksmann. Baisse sans calendrier : comptée entière en 2030 (règle commune), sans déduire le financement "
+        "annoncé (économies sur le fonctionnement de l'État, non chiffrées). Coût d'« autour de 50 milliards » dit au débat selon une transcription "
+        "automatique non officielle : non retenu (registre). Base 2025 non projetée en 2030. La baisse de cotisations du « droit au brut » (liste non "
+        "comptée) ne s'y ajoute pas : la campagne présente la suppression de la CSG comme son moyen."))
+k['inputs'].insert(1, {"label": "Plafond écrit (16/11/2026)", "value": "« " + CIT_ATP + " »", "source": ATP_S, "url": ATP})
+k['inputs'].append({"label": "Distribution des salaires du privé (2025)", "value": "18,5 millions d'EQTP ; salaire net médian 2 238 € ; effectifs par tranche de 100 € (figure 3)", "source": "Insee Première n° 2132, « Les salaires dans le secteur privé en 2025 » (22/10/2026)", "url": IP2132})
+sa = C['attal']['sim']; assert sa['salaire_net']['gain_mensuel'] == 324.1 and sa['salaire_net']['sans_plafond'], sa['salaire_net']
+sa['salaire_net'] = {"gain_mensuel": _cap, "ref": _ref, "prorata": True, "public": "salariés et agents publics", "imposable": round(6.8 / 9.2, 3),
+  "note": "Suppression de la CSG sur les salaires (9,2 % sur 98,25 % du salaire brut, brut ≈ net / 0,78), au prorata du salaire, plafonnée à 270 € nets par mois (« jusqu'à 270 euros nets supplémentaires par mois », site du candidat, 16/11/2026), plafond atteint vers 2 330 € nets (notre calcul) ; la baisse des cotisations du « droit au brut » ne s'y ajoute pas, la campagne présentant la suppression de la CSG comme son moyen ; appliquée aussi aux agents publics et aux enseignants, le candidat parlant de « tous les salariés » sans exclure le public (notre hypothèse)"}
+MISS('attal', "barème, coût et économies non publiés ; articulation avec la suppression de la CSG sur les salaires, comptée à part depuis le 16/11/2026, non publiée)",
+     "barème, coût et économies non publiés ; la campagne présente la suppression de la CSG sur les salaires, comptée dans sa fiche, comme le moyen du « droit au brut » (site, 16/11/2026) : rien de plus n'est compté)")
+# (3) Le Pen, retraites (S336, S337) : chiffre du camp daté (2032 : 18,6 brut, 10,1 net, iFRAP, CNews, Public Sénat) ; économies annoncées par le
+#     camp, toutes en 2032 et sans chiffrage indépendant : plancher de 160 trimestres 5,8, décote 2,7, majoration pour trois enfants réservée aux
+#     mères 5, moitié des excédents de l'Unédic 1,2 (iFRAP), APA et ASPA suspendues au-delà de 3 000 € de pension (9,7 avec l'Unédic selon
+#     Public Sénat ; « en cas de réversion » selon l'iFRAP) ; surcote : 2 de coût. Règle : économie comptée seulement avec un chiffrage
+#     indépendant ou un paramètre publié et une base officielle ; aucune base officielle ouverte ne donne la dépense d'APA et d'ASPA des
+#     bénéficiaires dont la pension dépasse 3 000 € (l'ASPA est réservée aux ressources sous 1 043,59 € par mois pour une personne seule) : non
+#     comptées (liste). Capitalisation : « en moyenne 500 € » par an et 81 000 € de capital (Le Figaro, LCP, iFRAP ; 400 € et 70 000 € selon
+#     BFMTV seul), Fonds de réserve pour les retraites mobilisé (« la vingtaine de milliards d'euros existants », LCP : stock, pas un flux) :
+#     notes. Décote de 2,5 % ou de 5 % par trimestre, carrières longues gardées ou non : sources contradictoires, registre. iFRAP : coût du
+#     volet âge « sous-estimé selon nos calculs », sans montant : note. Valeur de la fiche inchangée.
+PSR = 'https://www.publicsenat.fr/actualites/politique/presidentielle-2027-que-contient-la-reforme-des-retraites-presentee-par-marine-le-pen'
+PSR_S = "Public Sénat, réforme des retraites présentée par M. Le Pen (17/11/2026)"
+IFR17 = 'https://www.ifrap.org/retraite/propositions-des-candidats-la-presidentielle-sur-les-retraites-la-realite-des-chiffres'
+IFR17_S = "Fondation iFRAP, « Propositions des candidats à la présidentielle sur les retraites » (17/11/2026, mis à jour le 18/11)"
+LCPC = 'https://lcp.fr/actualites/reforme-des-retraites-c-est-quoi-la-capitalisation-obligatoire-que-marine-le-pen-veut'
+LCPC_S = "LCP, la capitalisation obligatoire du RN (17/11/2026)"
+m = M('le-pen', 'retraites'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-25.8, -51.2, -11.8) and m['claimed_md'] == -10.1
+m['claimed'] = "18,6 Md€ brut, 10,1 Md€ net en 2032 selon le RN (J.-P. Tanguy, coordinateur du pôle économie de la campagne, 17/11/2026)"
+m['estimates'] += [{"source": IFR17_S, "year": 2026, "value": "« Récapitulatif (présentation de Jean-Philippe Tanguy) Coût brut des mesures d’âge et d’accompagnement 2032 : 18,6 Md€ Mesures de « réparation » immédiates (plancher 160 trimestres 5,8 Md€ ; décote : 2,7 Md€) Coût net : 10,1 Md€ » ; volet âge : « 9,5 milliards d'euros en 2031 selon le chiffrage du RN (chiffre sous-estimé selon nos calculs) »", "low_md": None, "high_md": None, "url": IFR17},
+                   {"source": PSR_S, "year": 2026, "value": "« Le coût brut de la réforme est évalué par le RN à 18,6 milliards d’euros en 2032 » ; « Le RN estime que ces deux derniers leviers rapporteraient ensemble 9,7 milliards d’euros » (Unédic, APA et ASPA)", "low_md": None, "high_md": None, "url": PSR}]
+k['inputs'] = [i for i in k['inputs'] if i['label'] != 'Coût selon le camp (17/11/2026)'] + [
+    {"label": "Coût et économies selon le camp (2032)", "value": "« Coût brut des mesures d’âge et d’accompagnement 2032 : 18,6 Md€ Mesures de « réparation » immédiates (plancher 160 trimestres 5,8 Md€ ; décote : 2,7 Md€) Coût net : 10,1 Md€ Mesures additionnelles (surcote 2Md€, mesures pour les mères de 3 enfants 5 Md€, …) et mesures d’économies (suppression de l’ASPA ou APA en cas de réversion, affectation de la moitié des excédents de l’Unédic (1,2 Md€),…) »", "source": IFR17_S, "url": IFR17},
+    {"label": "APA et ASPA (selon le camp)", "value": "« la suspension de l’allocation personnalisée d’autonomie (APA) et de l’allocation de solidarité aux personnes âgées (Aspa) pour les bénéficiaires disposant d’une pension supérieure à 3 000 euros. Le RN estime que ces deux derniers leviers rapporteraient ensemble 9,7 milliards d’euros. »", "source": PSR_S, "url": PSR},
+    {"label": "Capitalisation : versement et capital (17/11/2026)", "value": "« le versement d'environ 500 euros chaque année sur le compte de capitalisation des salariés et fonctionnaires, sans prélèvement supplémentaire. Ce qui reviendrait en moyenne à accumuler un capital de 81 000 euros » ; « D'abord, s'appuyer sur la vingtaine de milliards d'euros existants du Fonds de réserve pour les retraites. »", "source": LCPC_S, "url": LCPC}]
+_n85 = "8,5 Md€ d'économies selon le camp (18,6 brut moins 10,1 net), année non dite."
+assert _nb(k['note']).count(_n85) == 1, k['note']
+k['note'] = _nb(k['note']).replace(_n85, "8,5 Md€ d'économies en 2032 selon le camp (plancher de 160 trimestres 5,8, décote 2,7 : 18,6 brut moins 10,1 net) ; "
+  "autres montants du camp pour 2032, non comptés faute de chiffrage indépendant ou de base officielle : majoration pour trois enfants réservée aux mères 5, "
+  "moitié des excédents de l'Unédic 1,2, APA et ASPA suspendues au-delà de 3 000 € de pension (9,7 avec l'Unédic selon Public Sénat ; « en cas de "
+  "réversion » selon l'iFRAP ; aucune base officielle ouverte pour ces bénéficiaires, l'ASPA étant réservée aux ressources sous 1 043,59 € par mois pour "
+  "une personne seule), surcote 2 de coût. L'iFRAP juge le coût du volet âge selon le RN (9,5 Md€ en 2031) « sous-estimé selon nos calculs », sans "
+  "montant. Capitalisation : « environ 500 euros chaque année » par actif, 81 000 € de capital en fin de carrière (Le Figaro, LCP, iFRAP ; 400 € et "
+  "70 000 € selon BFMTV) ; le Fonds de réserve pour les retraites (« la vingtaine de milliards d'euros existants », LCP) serait mobilisé : stock déjà "
+  "public, pas un flux annuel, sans effet compté. Décote de 2,5 % (Le Figaro, iFRAP) ou de 5 % (franceinfo, Public Sénat) par trimestre manquant, et "
+  "carrières longues gardées « lorsqu'il s'avère plus avantageux » (Public Sénat) ou non (iFRAP) : sources contradictoires, sans effet sur le chiffrage.")
+_m85 = "8,5 Md€ d'économies selon le camp, 18,6 Md€ brut moins 10,1 Md€ net, année non dite)"
+MISS('le-pen', _m85, "8,5 Md€ d'économies en 2032 selon le camp : plancher 5,8, décote 2,7), mesures de la réforme des retraites chiffrées par le camp pour 2032 "
+     "sans chiffrage indépendant ni base officielle ouverte (majoration pour trois enfants réservée aux mères : 5 Md€ d'économies ; moitié des excédents de "
+     "l'Unédic affectée aux retraites : 1,2 Md€ ; APA et ASPA suspendues au-delà de 3 000 € de pension : 9,7 Md€ avec l'Unédic selon Public Sénat ; "
+     "surcote : 2 Md€ de coût)")
+# (4) Philippe, programme « Croire en nous » (volume 1, conférence de presse du 18/11 ; pages /programme/ mises à jour le 18/11 ; franceinfo,
+#     Reuters) :
+#     - règle d'or : déficit « sous 2,5 % » du PIB en fin de quinquennat (au lieu de 2 %), « près de 150 milliards d'économies », aucun nouvel
+#       impôt pendant cinq ans : proposition et notes ; règle de procédure inscrite dans la Constitution : « exige une révision », inchangé ;
+#     - « une trentaine » d'agences et d'opérateurs fusionnés, supprimés ou privatisés (liste non publiée : non comptée, pas la plupart des
+#       agences, donc hors de la valeur commune de 0,26) ; France Travail privatisé : missions reprises (règle des agences nommées : 0 ;
+#       privatisation = opération financière) ; CESE supprimé : inscrit dans la Constitution (titre XI), suppression par révision ; budget
+#       officiel de 34 M€ (programme 126, PLF 2027), sous 1 Md€ : liste non comptée, même traitement que la ligne CESE de Zemmour (même mention
+#       de la révision ajoutée chez lui) ;
+#     - statut de fonctionnaire limité au régalien et aux enseignants, casseurs traités comme le terrorisme : Vie quotidienne (life.py) ; RSA
+#       suspendu pour les délinquants condamnés et 30 % d'allocataires du RSA en moins : non comptés (économie sans chiffrage indépendant ni
+#       paramètre suffisant), Vie quotidienne selon le plafond (non affichés, S106) ; livret derrière un formulaire, non téléchargé : registre.
+PHCP = 'https://www.edouardphilippe.fr/programme/comptes-publics'; PHCP_S = "Site de campagne d'Édouard Philippe, programme « Finances publiques » (18/11/2026)"
+FIPH18 = 'https://www.franceinfo.fr/politique/edouard-philippe/priorite-donnee-a-l-ecole-retablissement-des-comptes-publics-edouard-philippe-met-en-lumiere-plusieurs-mesures-de-son-programme-presidentiel_8287970.html'
+FIPH18_S = "franceinfo, présentation du programme d'É. Philippe (18/11/2026)"
+SEN126 = 'https://www.senat.fr/fileadmin/cru-1792598966/Commissions/Finances/2026-2027/PLF_2027/NP/NP_CCE_PLF_2027.pdf'
+CIT_RO = "Ramener le déficit sous 2,5 % de la richesse nationale à la fin du quinquennat, soit près de 150 milliards d’économies."
+CIT_AG = "Édouard Philippe veut fusionner, supprimer ou privatiser une trentaine d’agences et d’opérateurs de l’État qui font doublon, avec par exemple la privatisation de France Travail et la suppression du CESE."
+m = M('philippe', 'regle_or'); assert m['verdict'] == 'bloque' and m['claimed'] == "Déficit de 2 % du PIB en fin de quinquennat"
+m['proposal'] = "Inscrire dans la Constitution, par référendum dès le début du quinquennat, une règle d'or budgétaire ; déficit ramené sous 2,5 % du PIB à la fin du quinquennat."
+m['claimed'] = "Déficit sous 2,5 % du PIB en fin de quinquennat, « près de 150 milliards d'économies » (site de campagne, 18/11/2026)"
+m['estimates'].append({"source": PHCP_S, "year": 2026, "value": "« " + CIT_RO + " » ; « Ne créer aucun nouvel impôt pendant cinq ans. »", "low_md": None, "high_md": None, "url": PHCP})
+m['claude']['inputs'] = (m['claude'].get('inputs') or []) + [{"label": "Objectif du 18/11/2026", "value": "« " + CIT_RO + " » ; effort « pour moitié sur les dépenses sociales (retraites, chômage, arrêts maladie), pour un quart sur l’État et les collectivités », le dernier quart par la croissance", "source": PHCP_S, "url": PHCP}]
+m['claude']['note'] = ("L'effet dépend des mesures prises pour la respecter. Objectif porté le 18/11/2026 à un déficit « sous 2,5 % » du PIB en fin de quinquennat "
+  "(2 % auparavant) ; « près de 150 milliards d'économies » (moitié dépenses sociales, un quart État et collectivités, un quart croissance) : non ventilées, "
+  "non comptées au-delà des fiches ; engagement de ne créer « aucun nouvel impôt pendant cinq ans », sans effet chiffré.")
+m = M('philippe', 'fonction'); k = m['claude']; assert m['verdict'] == 'sous_conditions' and (k['central'], k['low'], k['high']) == (5.4, 5.2, 7.7)
+m['proposal'] = ("Ne pas remplacer un départ à la retraite sur trois « dans les fonctions de bureau », 250 000 postes en moins sur le quinquennat ; fusionner, supprimer "
+                 "ou privatiser une trentaine d'agences et d'opérateurs de l'État, dont la privatisation de France Travail.")
+k['inputs'].append({"label": "Agences (18/11/2026)", "value": "« " + CIT_AG + " »", "source": PHCP_S, "url": PHCP})
+_ng = "Opérateurs et agences : « des dizaines » fusionnés ou supprimés (site de campagne), liste non publiée,"
+assert _nb(k['note']).count(_ng) == 1, k['note']
+k['note'] = _nb(k['note']).replace(_ng, "Opérateurs et agences : « une trentaine » fusionnés, supprimés ou privatisés (site de campagne, 18/11/2026), liste non publiée hors deux exemples,") + (
+  " France Travail privatisé : missions reprises par une autre structure, 0 hors de la valeur commune (règle des agences nommées) ; suppression du CESE, inscrit "
+  "dans la Constitution : listée à part, non comptée (révision de la Constitution ; budget officiel de 34 M€, même traitement que chez Zemmour). Statut de "
+  "fonctionnaire limité aux fonctions régaliennes et aux enseignants (franceinfo, 18/11/2026) : sans effet chiffré.")
+_kr = "durée du RSA limitée pour inciter à la reprise du travail (programme du 12/11/2026 : durée non publiée ; même base que le RSA limité à trois ans de Zemmour dès qu'une durée est publiée)"
+MISS('philippe', _kr, _kr + ", 30 % d'allocataires du RSA en moins (site, 18/11/2026 : suivi individuel, métiers en tension, contrôle ; économie sans chiffrage "
+     "indépendant ni calendrier), RSA suspendu automatiquement pour les délinquants condamnés sauf décision du maire (site, 18/11/2026 : nombre de "
+     "bénéficiaires concernés sans source officielle ouverte)")
+MISS_ADD('philippe', "« près de 150 milliards d'économies » pour un déficit sous 2,5 % du PIB en fin de quinquennat (site, 18/11/2026 : non ventilées au-delà "
+         "des fiches), une trentaine d'agences et d'opérateurs fusionnés, supprimés ou privatisés (liste non publiée ; France Travail privatisé : missions "
+         "reprises, 0), suppression du CESE (inscrit dans la Constitution : exige une révision ; budget officiel de 34 M€, programme 126, PLF 2027)")
+MISS('zemmour', "CESE et Ceser 0,07), ", "CESE et Ceser 0,07, le CESE étant inscrit dans la Constitution : exige une révision), ")
+# (5) Glucksmann (entretien au groupe EBRA du 17/11, rapporté par 6Médias avec L'Express) : baisse de la CSG « dès septembre 2027 », « du Smic
+#     jusqu'à 4 000 euros net » : règle du simulateur, un barème publié par écrit prime sur l'oral : barème du 4/11 gardé (gain plafonné à
+#     environ 119 € au-delà de 44 808 € bruts par an, pour tous les salaires au-dessus) ; écart au-delà de 4 000 € net : note et registre ;
+#     « dès septembre 2027 » : entier en 2030, rien à changer ; 62 ans reconfirmé : source ; régularisation : life.py.
+GEX = 'https://actu.orange.fr/politique/presidentielle-2027-jean-luc-melenchon-perdra-au-second-tour-affirme-raphael-glucksmann-l-express-via-6medias-CNT000002tNlSa.html'
+GEX_S = "6Médias avec L'Express (Orange Actu), entretien de R. Glucksmann au groupe EBRA (17/11/2026)"
+CIT_GCSG = "Si je suis élu, dès septembre 2027, je baisserai la CSG de manière progressive sur les salaires, du Smic jusqu'à 4 000 euros net par mois. Cela correspond par exemple à un gain immédiat de 100 euros de salaire par mois pour un salarié à 2 000 euros net"
+m = M('glucksmann', 'heritages'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-9.1, -22.9, 0.4)
+m['estimates'].append({"source": GEX_S, "year": 2026, "value": "« " + CIT_GCSG + " »", "low_md": None, "high_md": None, "url": GEX})
+k['note'] += (" Entretien du 17/11/2026 : baisse « dès septembre 2027 », « du Smic jusqu'à 4 000 euros net par mois » (oral) ; le barème écrit du simulateur de la "
+              "campagne prime (règle commune) : gardé, avec son gain plafonné pour tous les salaires au-delà de 44 808 € bruts par an, y compris au-delà de "
+              "4 000 € nets, jusqu'à un texte écrit qui dise autre chose.")
+sg = C['glucksmann']['sim']['salaire_net']; assert sg.get('bareme')
+sg['note'] += " ; « du Smic jusqu'à 4 000 euros net par mois » à l'oral (17/11/2026) : le barème écrit, qui garde le gain au-delà, prime"
+m = M('glucksmann', 'retraites')
+m['estimates'].append({"source": GEX_S, "year": 2026, "value": "« pour un âge de référence de départ à la retraite fixé à 62 ans, en incitant ceux qui le peuvent à partir plus tard et en permettant aux métiers les plus pénibles de partir plus tôt »", "low_md": None, "high_md": None, "url": GEX})
+# (6) Retailleau (Sud Radio, 18/11) : décote « de -7 % » à 63 ans à l'oral ; ses fiches presse du 12/10 (avecretailleau.fr) écrivent « une décote de
+#     7 % par année manquante » : l'écrit prime, fiche et simulateur inchangés (registre) ; « deux mois de facture électrique en moins » par
+#     l'arrêt des subventions aux renouvelables : sans montant ni calcul publié, non compté (simulateur : note ; liste) ; conseil juridique dans
+#     les centres de rétention confié à l'OFII : Vie quotidienne (life.py).
+SRR = 'https://www.sudradio.fr/sud-radio/bruno-retailleau-la-primaire-naura-pas-lieu-si-on-inclut-eric-zemmour'
+k = M('retailleau', 'retraites')['claude']
+k['note'] += " Sud Radio (18/11/2026) : départ à 63 ans « avec une décote de -7 % » à l'oral ; les fiches presse écrites du camp (12/10/2026) disent « une décote de 7 % par année manquante » : l'écrit prime, 7 % par an retenus."
+srt = C['retailleau']['sim']; srt['tous'] = (srt.get('tous') or []) + ["Électricité : « deux mois de facture électrique en moins » par an annoncés (Sud Radio, 18/11/2026), par l'arrêt des subventions aux énergies renouvelables : montant et calcul non publiés, non calculé ici."]
+MISS_ADD('retailleau', "baisse de la facture d'électricité de « deux mois de facture » par an (Sud Radio, 18/11/2026 : montant et calcul non publiés), conseil juridique des étrangers en centre de rétention confié à l'OFII au lieu des associations (Sud Radio, 18/11/2026 : coût non publié)")
+# (7) Lisnard, tribune sur les retraites (Le Figaro ; reprise sur le site de Nouvelle Énergie le 17/11 ; S330) : étage de capitalisation collective
+#     obligatoire en plus d'une « répartition réformée » (note de « retraites » ; transition « bientôt » détaillée, S312) ; fin des régimes spéciaux
+#     et convergence public-privé (Vie quotidienne, non comptée : aucun paramètre) ; désindexer « certaines années » les plus hautes pensions, sans
+#     seuil (note de « gel_pensions », seuil de 2 200 € gardé) ; socle de pension : la fiche disait 1 000 €, la page du parti mise à jour le
+#     16/10/2026 écrit « autour de 1 200 euros » (citation d'une tribune de 2023) : source de 2026 la plus récente gardée (registre).
+NETR = 'https://www.unenouvelleenergie.fr/pour-une-reforme-des-retraites-qui-reconcilie-les-generations/'
+NETR_S = "Nouvelle Énergie, tribune de D. Lisnard parue dans Le Figaro, « Pour une réforme des retraites qui réconcilie les générations » (17/11/2026)"
+NECAP = 'https://www.unenouvelleenergie.fr/questions/quel-candidat-propose-la-retraite-par-capitalisation/'
+NECAP_S = "Nouvelle Énergie, « Quel candidat à la présidentielle 2027 propose la retraite par capitalisation ? » (mise à jour le 16/10/2026)"
+m = M('lisnard', 'retraites'); k = m['claude']
+assert m['proposal'] == "Âge à 65 ans, socle par répartition (minimum 1 000 €/mois), bascule progressive vers la capitalisation."
+m['proposal'] = "Âge à 65 ans, socle par répartition (pension minimale autour de 1 200 €/mois), étage de capitalisation collective obligatoire, bascule progressive vers la capitalisation."
+m['estimates'] += [{"source": NETR_S, "year": 2026, "value": "« Un étage de capitalisation collective obligatoire doit compléter une répartition réformée et une capitalisation libre. » ; « La transition devra être financée car les pensions resteront dues pendant que les actifs constitueront leur épargne. »", "low_md": None, "high_md": None, "url": NETR},
+                   {"source": NECAP_S, "year": 2026, "value": "« un socle par répartition maintenu autour de 1 200 euros de pension mensuelle »", "low_md": None, "high_md": None, "url": NECAP}]
+_iv = [i for i in k['inputs'] if i['label'] == 'Minimum vieillesse 2026']; assert len(_iv) == 1
+_iv[0]['value'] = "1 043,59 €/mois (socle visé : autour de 1 200 €/mois)"
+k['note'] += (" Tribune du 17/11/2026 : étage de capitalisation collective obligatoire, en plus d'une « répartition réformée » et d'une capitalisation libre, "
+              "transition « bientôt » détaillée (taux et coût non publiés) ; fin des régimes spéciaux et convergence des règles du public et du privé "
+              "(sans paramètre, non comptée). Socle : « autour de 1 200 euros » de pension mensuelle (page du parti mise à jour le 16/10/2026), au lieu de "
+              "1 000 € dans une source antérieure : la source de 2026 la plus récente est gardée ; sans paramètre de financement, non compté.")
+k = M('lisnard', 'gel_pensions')['claude']
+k['note'] += " Tribune du 17/11/2026 : « certaines années désindexer les pensions les plus élevées » (sans seuil ni durée) : seuil de 2 200 € et un an de gel gardés."
+r = C['lisnard']['sim']['retraite']; assert r['regle'] == "Âge légal 65 ans ; socle par répartition, minimum de 1 000 €/mois ; bascule progressive vers la capitalisation."
+r['regle'] = "Âge légal 65 ans ; socle par répartition, pension minimale autour de 1 200 €/mois (non calculé ici) ; étage de capitalisation collective obligatoire, bascule progressive vers la capitalisation."
+MISS_ADD('lisnard', "fin des régimes spéciaux et convergence des règles de retraite du public et du privé (tribune du 17/11/2026 : paramètres non publiés), socle de pension autour de 1 200 € par mois (page du parti, 16/10/2026 : financement non publié)")
+# (8) Situation de départ (S138, S205, S299) : Sénat, budget de la Sécurité sociale adopté en 1re lecture le 18/11 (scrutin n° 118 : 201 pour,
+#     124 contre), avec le rétablissement de la réforme des retraites de 2023 (scrutin n° 112), articles 34 et 35 supprimés, article 37 gardé à un
+#     an, ONDAM de 277,9 Md€ ; commission mixte paritaire annoncée le 26/11 : rien de définitif, valeurs communes inchangées. Loi logement :
+#     article 6 réécrit le 17/11 (amendement n° 85 : fin des interdictions de location fondées sur le DPE), vote solennel le 24/11 : situation de
+#     départ de la proposition de Retailleau du même type à revoir au vote final (registre). SMIC : aucun décret au Journal officiel du 18/11.
+D['asof'] = '18 novembre 2026'
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
@@ -3487,7 +3685,7 @@ P={'le-pen':("Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baiss
 'philippe':("Promet la retraite à 65 ans, un départ sur trois non remplacé dans la fonction publique, une allocation familiale dès le premier enfant et zéro impôt pour les jeunes parents.","la révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or."),
 'glucksmann':("Promet le retour à 62 ans, un SMIC à 1 700 € net, 200 Md€ d'investissement public écologique sur le quinquennat, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun.","l'accord des autres pays européens, pour la défense européenne financée par emprunt commun et la saisie des avoirs russes."),
 'retailleau':("Promet 197 Md€ d'économies par an en 2032, 51 Md€ de baisses d'impôts, un âge minimal de 63 ans et un référendum sur l'immigration.","la révision de la Constitution, pour le référendum sur l'immigration, les aides réservées après cinq ans, les peines planchers et la règle d'or."),
-'attal':("Promet la suppression de la CSG sur les salaires, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.","la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen."),
+'attal':("Promet la suppression de la CSG sur les salaires, jusqu'à 270 € nets par mois, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.","la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen."),
 'lisnard':("Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations.","la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats."),
 'zemmour':("Promet l'expulsion des étrangers au chômage depuis plus de six mois, des aides réservées aux Français, la suppression de la CSG sur les revenus d'activité, la fin des droits de succession et 800 000 postes publics en moins.","la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.")}
 MEN=D['statu_quo']['menages']

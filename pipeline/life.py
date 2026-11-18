@@ -1705,6 +1705,55 @@ _ps = _cur('melenchon', 'ecole'); assert len(_ps) == 4 and all(p['verifiable'] a
 _put('melenchon', 'ecole', _ps + [_p("Interdire aux collectivités d'exclure un enfant de la cantine pour impayés")])
 _so('melenchon', 'ecole', add=[LFI_PAU])
 
+# --- review 54 : revue du 18/11 (18/11/2026) ; registre S106, S339 et suivants
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; à égalité ou
+# à date inconnue, ordre affiché gardé ; une proposition nouvelle se place après les précises de 2026 déjà affichées ; au-delà de 5, sort celle
+# que la règle classe dernière, S106). Même test « précis » (changement de droit nommé, instrument nommé et ce qui y change, chiffre, durée,
+# âge, échéance ou niveau scolaire nommé). Sources ouvertes le 18/11.
+# Philippe, programme « Croire en nous » (volume 1, conférence de presse du 18/11 ; pages /programme/ mises à jour le 18/11 ; franceinfo, qui
+#  cite le « document mis à jour de son programme ») :
+#  - sécurité : contre les casseurs, les mesures de prévention du terrorisme (fichier sur le modèle du FSPRT, visites domiciliaires, mesures
+#    individuelles de contrôle administratif, assignation à résidence ; précise : instruments nommés ; 18/11) ; 6e d'un thème de précises de
+#    2026 : sort la moins récente, « Faire payer les dégâts aux casseurs » (Capital, 29/10, seule source ; S106). RSA suspendu automatiquement
+#    pour les délinquants condamnés (page « Sécurité », date d'apparition non établie) : classé après, non affiché (S106) ;
+#  - économie : règle d'or, déficit « sous 2,5 % » du PIB en fin de quinquennat (au lieu de 2 %), texte corrigé à sa place ; statut de
+#    fonctionnaire limité aux fonctions régaliennes et aux enseignants, recrutement des autres agents sous contrat de droit privé (précise :
+#    changement de droit nommé ; franceinfo, 18/11) : sort l'intention « Verrou Schengen » (S106) ; objectif de 30 % d'allocataires du RSA en
+#    moins (page « Finances publiques », date d'apparition non établie) : classé après, non affiché (S106 ; non compté, corrections.py).
+# Glucksmann (entretien au groupe EBRA, 17/11, rapporté par 6Médias avec L'Express) : régularisation de « 250 000 à 300 000 » travailleurs,
+#  précision de la proposition affichée, texte corrigé à sa place (quiz aligné).
+# Retailleau (Sud Radio, 18/11) : conseil juridique des étrangers en centre de rétention confié à l'OFII, à la place des associations (précise :
+#  instrument nommé et ce qui y change) ; 6e d'un thème de précises de 2026 : sort la moins récente, les centres de retour dans des pays tiers
+#  (communiqué du 31/07 ; S106).
+# Lisnard (tribune parue dans Le Figaro, reprise par Nouvelle Énergie le 17/11) : fin des régimes spéciaux et convergence des règles de
+#  retraite du public et du privé, avec des critères communs d'usure des métiers (précise : changement de droit nommé) ; sort l'intention
+#  « Simplifier les taux de TVA » (S106 ; non comptée, corrections.py).
+EP18 = {p: _s("Site de campagne d'Édouard Philippe, programme « " + t + " » (18/11)", EPPL + p) for p, t in (('securite', 'Sécurité'), ('comptes-publics', 'Finances publiques'))}
+FI_PH18 = _s("franceinfo, présentation du programme d'É. Philippe (18/11)", 'https://www.franceinfo.fr/politique/edouard-philippe/priorite-donnee-a-l-ecole-retablissement-des-comptes-publics-edouard-philippe-met-en-lumiere-plusieurs-mesures-de-son-programme-presidentiel_8287970.html')
+GL_EBRA = _s("6Médias avec L'Express (Orange Actu), entretien de R. Glucksmann au groupe EBRA (17/11)", 'https://actu.orange.fr/politique/presidentielle-2027-jean-luc-melenchon-perdra-au-second-tour-affirme-raphael-glucksmann-l-express-via-6medias-CNT000002tNlSa.html')
+SR_BR = _s("Sud Radio, entretien de B. Retailleau (18/11)", 'https://www.sudradio.fr/sud-radio/bruno-retailleau-la-primaire-naura-pas-lieu-si-on-inclut-eric-zemmour')
+NE_RET = _s("Nouvelle Énergie, tribune de D. Lisnard sur les retraites parue dans Le Figaro (reprise le 17/11)", 'https://www.unenouvelleenergie.fr/pour-une-reforme-des-retraites-qui-reconcilie-les-generations/')
+# Philippe
+_ps = _cur('philippe', 'securite'); assert [p['text'] for p in _ps][2] == "Faire payer les dégâts aux casseurs : prélèvement sur leurs salaires ou prestations sociales" and len(_ps) == 5 and all(p['verifiable'] and not p['old'] for p in _ps), [p['text'] for p in _ps]
+_put('philippe', 'securite', _ps[:2] + _ps[3:] + [_p("Contre les casseurs, les mêmes mesures de prévention que contre le terrorisme : fichier sur le modèle du FSPRT, visites domiciliaires, contrôle administratif, assignation à résidence lors des manifestations à risque")])
+_so('philippe', 'securite', add=[EP18['securite'], FI_PH18])
+_ps = _cur('philippe', 'economie'); assert len(_ps) == 5 and [p['verifiable'] for p in _ps] == [True] * 4 + [False] and _ps[4]['text'].startswith('« Verrou Schengen »'), [p['text'] for p in _ps]
+_put('philippe', 'economie', _ps[:4] + [_p("Statut de fonctionnaire limité aux fonctions régaliennes et aux enseignants ; autres agents recrutés sous contrat de droit privé, au choix des collectivités")])
+_txt('philippe', 'economie', "Règle d'or budgétaire par référendum : déficit à 2 % du PIB en fin de quinquennat", "Règle d'or budgétaire par référendum : déficit sous 2,5 % du PIB en fin de quinquennat")
+_so('philippe', 'economie', add=[EP18['comptes-publics'], FI_PH18])
+# Glucksmann
+_txt('glucksmann', 'economie', "Régulariser environ 300 000 travailleurs sans papiers : titre de séjour après six mois de travail sur les deux dernières années",
+     "Régulariser 250 000 à 300 000 travailleurs sans papiers : titre de séjour après six mois de travail sur les deux dernières années")
+_so('glucksmann', 'economie', add=[GL_EBRA])
+# Retailleau
+_ps = _cur('retailleau', 'rayonnement'); assert len(_ps) == 5 and all(p['verifiable'] and not p['old'] for p in _ps) and _ps[1]['text'].startswith('Créer des centres de retour'), [p['text'] for p in _ps]
+_put('retailleau', 'rayonnement', _ps[:1] + _ps[2:] + [_p("Conseil juridique des étrangers en centre de rétention confié à l'OFII, à la place des associations")])
+_so('retailleau', 'rayonnement', add=[SR_BR])
+# Lisnard
+_ps = _cur('lisnard', 'economie'); assert len(_ps) == 5 and [p['verifiable'] for p in _ps] == [True] * 4 + [False] and _ps[4]['text'] == 'Simplifier les taux de TVA', [p['text'] for p in _ps]
+_put('lisnard', 'economie', _ps[:4] + [_p("Fin des régimes spéciaux de retraite et mêmes règles pour le public et le privé, usure des métiers évaluée selon des critères communs")])
+_so('lisnard', 'economie', add=[NE_RET])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.

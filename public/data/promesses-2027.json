@@ -1,5 +1,5 @@
 {
- "asof": "17 novembre 2026",
+ "asof": "18 novembre 2026",
  "context": [
   {
    "v": "5,4 %",
@@ -35,7 +35,7 @@
    "id": "le-pen",
    "name": "Marine Le Pen",
    "party": "RN",
-   "poll": "31,9 %",
+   "poll": "32,2 %",
    "summary": "Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite entre 60 et 62 ans et la TVA à 5,5 % sur l'énergie. Notre chiffrage : −88,3 Md€ par an en 2030, soit −2 857 € par ménage. Principal obstacle : la révision de la Constitution, pour la priorité nationale, le prêt réservé aux jeunes ménages français et la règle d'or.",
    "measures": [
     {
@@ -43,7 +43,7 @@
      "theme": "retraites",
      "title": "Retraite entre 60 et 62 ans, capitalisation",
      "proposal": "Abolir la réforme de 2023 au 1er janvier 2028 ; départ de 60 à 62 ans et 40 à 42 annuités (160 à 168 trimestres) selon l'âge du premier emploi stable, en place progressivement d'ici 2032 ; taux plein à 67 ans maintenu ; indexation de toutes les retraites pendant cinq ans ; pilier de capitalisation obligatoire pour les moins de 52 ans, alimenté par 12 Md€ par an de prélèvements patronaux réaffectés et géré par la Caisse des dépôts.",
-     "claimed": "18,6 Md€ brut, 10,1 Md€ net selon le RN (J.-P. Tanguy, coordinateur du pôle économie de la campagne, 17/11/2026 ; année non dite)",
+     "claimed": "18,6 Md€ brut, 10,1 Md€ net en 2032 selon le RN (J.-P. Tanguy, coordinateur du pôle économie de la campagne, 17/11/2026)",
      "claimed_md": -10.1,
      "estimates": [
       {
@@ -77,6 +77,22 @@
        "low_md": null,
        "high_md": null,
        "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-detaille-ce-mardi-son-projet-de-reforme-des-retraites-20261117"
+      },
+      {
+       "source": "Fondation iFRAP, « Propositions des candidats à la présidentielle sur les retraites » (17/11/2026, mis à jour le 18/11)",
+       "year": 2026,
+       "value": "« Récapitulatif (présentation de Jean-Philippe Tanguy) Coût brut des mesures d’âge et d’accompagnement 2032 : 18,6 Md€ Mesures de « réparation » immédiates (plancher 160 trimestres 5,8 Md€ ; décote : 2,7 Md€) Coût net : 10,1 Md€ » ; volet âge : « 9,5 milliards d'euros en 2031 selon le chiffrage du RN (chiffre sous-estimé selon nos calculs) »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.ifrap.org/retraite/propositions-des-candidats-la-presidentielle-sur-les-retraites-la-realite-des-chiffres"
+      },
+      {
+       "source": "Public Sénat, réforme des retraites présentée par M. Le Pen (17/11/2026)",
+       "year": 2026,
+       "value": "« Le coût brut de la réforme est évalué par le RN à 18,6 milliards d’euros en 2032 » ; « Le RN estime que ces deux derniers leviers rapporteraient ensemble 9,7 milliards d’euros » (Unédic, APA et ASPA)",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-que-contient-la-reforme-des-retraites-presentee-par-marine-le-pen"
       }
      ],
      "consensus": "divergent",
@@ -175,19 +191,31 @@
         "url": "https://www.ccomptes.fr/sites/default/files/2025-03/20250220-Situation-financiere-et-perspectives-du-systeme-de%20retraites.pdf"
        },
        {
-        "label": "Coût selon le camp (17/11/2026)",
-        "value": "« Le coût brut de notre réforme sera de 18,6 milliards d’euros », coût net de 10,1 milliards d’euros (J.-P. Tanguy)",
-        "source": "Le Figaro, direct de la présentation de la réforme des retraites du RN (17/11/2026)",
-        "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-detaille-ce-mardi-son-projet-de-reforme-des-retraites-20261117"
-       },
-       {
         "label": "Adoption (17/11/2026)",
         "value": "« si ça n'était pas le cas, nous soumettrions cette réforme par référendum » (la candidate, faute de majorité absolue)",
         "source": "BFMTV, direct de la présentation de la réforme des retraites du RN (17/11/2026)",
         "url": "https://www.bfmtv.com/economie/patrimoine/retraite/direct-age-de-depart-a-62-ou-60-ans-capitalisation-le-rassemblement-national-devoile-son-projet-de-reforme-pour-reparer-le-systeme-de-retraites_LN-202611170426.html"
+       },
+       {
+        "label": "Coût et économies selon le camp (2032)",
+        "value": "« Coût brut des mesures d’âge et d’accompagnement 2032 : 18,6 Md€ Mesures de « réparation » immédiates (plancher 160 trimestres 5,8 Md€ ; décote : 2,7 Md€) Coût net : 10,1 Md€ Mesures additionnelles (surcote 2Md€, mesures pour les mères de 3 enfants 5 Md€, …) et mesures d’économies (suppression de l’ASPA ou APA en cas de réversion, affectation de la moitié des excédents de l’Unédic (1,2 Md€),…) »",
+        "source": "Fondation iFRAP, « Propositions des candidats à la présidentielle sur les retraites » (17/11/2026, mis à jour le 18/11)",
+        "url": "https://www.ifrap.org/retraite/propositions-des-candidats-la-presidentielle-sur-les-retraites-la-realite-des-chiffres"
+       },
+       {
+        "label": "APA et ASPA (selon le camp)",
+        "value": "« la suspension de l’allocation personnalisée d’autonomie (APA) et de l’allocation de solidarité aux personnes âgées (Aspa) pour les bénéficiaires disposant d’une pension supérieure à 3 000 euros. Le RN estime que ces deux derniers leviers rapporteraient ensemble 9,7 milliards d’euros. »",
+        "source": "Public Sénat, réforme des retraites présentée par M. Le Pen (17/11/2026)",
+        "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-que-contient-la-reforme-des-retraites-presentee-par-marine-le-pen"
+       },
+       {
+        "label": "Capitalisation : versement et capital (17/11/2026)",
+        "value": "« le versement d'environ 500 euros chaque année sur le compte de capitalisation des salariés et fonctionnaires, sans prélèvement supplémentaire. Ce qui reviendrait en moyenne à accumuler un capital de 81 000 euros » ; « D'abord, s'appuyer sur la vingtaine de milliards d'euros existants du Fonds de réserve pour les retraites. »",
+        "source": "LCP, la capitalisation obligatoire du RN (17/11/2026)",
+        "url": "https://lcp.fr/actualites/reforme-des-retraites-c-est-quoi-la-capitalisation-obligatoire-que-marine-le-pen-veut"
        }
       ],
-      "note": "Réforme présentée le 17/11/2026 par la candidate avec J. Bardella et J.-P. Tanguy (« notre projet », message de la candidate) : les paramètres détaillés par J. Bardella à cette conférence sont repris par elle. Abolition de la réforme de 2023 au 1er janvier 2028, puis baisse de l'âge jusqu'en 2032 sans calendrier année par année : moitié du coût des catégories en 2030. Catégories de 20 à 23 ans (60 ans et demi à 61 ans et demi) sans chiffrage indépendant : couvertes par la borne basse. Capitalisation : 12 Md€ par an de prélèvements patronaux versés sur des comptes individuels, comptés comme dépense ; les politiques qu'ils financent aujourd'hui (aides au logement, Action Logement, formation professionnelle) gardent leur coût faute de paramètre publié pour leur réforme ; aucun autre chiffrage de la candidate ne compte ces prélèvements. Non comptées faute de chiffrage pour 2030 : décote portée à 2,5 % par trimestre manquant (au plus 50 %), 160 trimestres au minimum pour liquider, trimestre validé à partir d'un mi-temps, 4 trimestres de chômage non cotisé au plus, majoration pour trois enfants portée à 12 % pour les mères et supprimée peu à peu pour les pères, critères de pénibilité supprimés, exonération de cotisations retraite et chômage pour qui continue de travailler avec tous ses droits (même lecture que Retailleau) ; 8,5 Md€ d'économies selon le camp (18,6 brut moins 10,1 net), année non dite. Indexation de toutes les retraites pendant cinq ans (droit en vigueur). La candidate évoque un référendum si elle n'a pas la majorité absolue."
+      "note": "Réforme présentée le 17/11/2026 par la candidate avec J. Bardella et J.-P. Tanguy (« notre projet », message de la candidate) : les paramètres détaillés par J. Bardella à cette conférence sont repris par elle. Abolition de la réforme de 2023 au 1er janvier 2028, puis baisse de l'âge jusqu'en 2032 sans calendrier année par année : moitié du coût des catégories en 2030. Catégories de 20 à 23 ans (60 ans et demi à 61 ans et demi) sans chiffrage indépendant : couvertes par la borne basse. Capitalisation : 12 Md€ par an de prélèvements patronaux versés sur des comptes individuels, comptés comme dépense ; les politiques qu'ils financent aujourd'hui (aides au logement, Action Logement, formation professionnelle) gardent leur coût faute de paramètre publié pour leur réforme ; aucun autre chiffrage de la candidate ne compte ces prélèvements. Non comptées faute de chiffrage pour 2030 : décote portée à 2,5 % par trimestre manquant (au plus 50 %), 160 trimestres au minimum pour liquider, trimestre validé à partir d'un mi-temps, 4 trimestres de chômage non cotisé au plus, majoration pour trois enfants portée à 12 % pour les mères et supprimée peu à peu pour les pères, critères de pénibilité supprimés, exonération de cotisations retraite et chômage pour qui continue de travailler avec tous ses droits (même lecture que Retailleau) ; 8,5 Md€ d'économies en 2032 selon le camp (plancher de 160 trimestres 5,8, décote 2,7 : 18,6 brut moins 10,1 net) ; autres montants du camp pour 2032, non comptés faute de chiffrage indépendant ou de base officielle : majoration pour trois enfants réservée aux mères 5, moitié des excédents de l'Unédic 1,2, APA et ASPA suspendues au-delà de 3 000 € de pension (9,7 avec l'Unédic selon Public Sénat ; « en cas de réversion » selon l'iFRAP ; aucune base officielle ouverte pour ces bénéficiaires, l'ASPA étant réservée aux ressources sous 1 043,59 € par mois pour une personne seule), surcote 2 de coût. L'iFRAP juge le coût du volet âge selon le RN (9,5 Md€ en 2031) « sous-estimé selon nos calculs », sans montant. Capitalisation : « environ 500 euros chaque année » par actif, 81 000 € de capital en fin de carrière (Le Figaro, LCP, iFRAP ; 400 € et 70 000 € selon BFMTV) ; le Fonds de réserve pour les retraites (« la vingtaine de milliards d'euros existants », LCP) serait mobilisé : stock déjà public, pas un flux annuel, sans effet compté. Décote de 2,5 % (Le Figaro, iFRAP) ou de 5 % (franceinfo, Public Sénat) par trimestre manquant, et carrières longues gardées « lorsqu'il s'avère plus avantageux » (Public Sénat) ou non (iFRAP) : sources contradictoires, sans effet sur le chiffrage. Indexation de toutes les retraites pendant cinq ans (droit en vigueur). La candidate évoque un référendum si elle n'a pas la majorité absolue."
      },
      "quiz_text": "Partir à la retraite entre 60 et 62 ans selon l'âge du premier emploi, et créer une épargne retraite obligatoire pour les actifs de moins de 52 ans",
      "quiz_concret": "Vous pourriez partir plus tôt qu'aujourd'hui, mais il faudrait au moins un mi-temps pour valider un trimestre.",
@@ -3222,7 +3250,7 @@
     "p10": -116.0,
     "p90": -70.2,
     "realsum": -91.5,
-    "missing": "économies de la réforme des retraites sans chiffrage pour 2030 (décote portée à 2,5 % par trimestre manquant dans la limite de 50 %, 160 trimestres au minimum pour liquider, trimestre validé à partir d'un mi-temps, 4 trimestres de chômage non cotisé au plus sur la carrière, majoration pour trois enfants portée à 12 % pour les mères et supprimée peu à peu pour les pères, critères de pénibilité supprimés : 8,5 Md€ d'économies selon le camp, 18,6 Md€ brut moins 10,1 Md€ net, année non dite), exonération de cotisations retraite et chômage pour qui continue de travailler avec tous ses droits et cumul emploi-retraite libéralisé (sans chiffrage, même lecture que Retailleau), réforme des politiques financées aujourd'hui par les prélèvements réaffectés à la capitalisation (aides au logement, Action Logement, formation professionnelle : paramètres non publiés), sortie du marché européen de l'électricité, taxe sur les rachats d'actions, coût du prêt à taux zéro « 100 % Rénov' » qui remplace MaPrimeRénov' (montant et conditions non publiés), recettes et économies du contre-budget sans chiffrage indépendant (chiffres du camp pour 2027) : impôt sur les sociétés assis sur le chiffre d'affaires 3,75, Autorité de la concurrence 1,2, dividendes d'EDF sur les exportations 3,7, économies sur le TURPE 2, économies sur la Sécurité sociale ≈ 20, droits de douane rendus 2,2, rationalisation de l'aide publique au développement et de l'action extérieure de l'État 2,1 (sans niveau publié), rebudgétisation des certificats d'économies d'énergie 8 (mécanisme non publié : sans effet sur le solde si les programmes passent au budget avec une recette équivalente, perte de TVA d'environ 0,9 Md€ si la charge disparaît des factures, même lecture que Retailleau et Zemmour) ; dépenses de moins de 1 Md€ (AAH au-dessus du seuil de pauvreté, permis gratuit pour les jeunes sans casier judiciaire : 0,7 Md€ par an selon le RN, Euronews, 17/11/2026), prime d'activité étudiante (débat TF1-LCI, 16/11/2026 : 20 % du salaire dans la limite de 200 € par mois, 30 % et 300 € pour les boursiers ; nombre d'étudiants salariés et répartition de leurs salaires sans source officielle ouverte, non chiffrée), dispense d'impôt sur le revenu pour les entrepreneurs (public et durée non publiés), fonds souverain (opération financière), abrogation de la loi Hulot, lignes immigration du contre-budget sans chiffrage indépendant ni paramètre suffisant (chiffres du camp pour 2027) : suppression du visa pour soins 1, effets indirects sur la sécurité 0,5, départ des étrangers sans emploi 0,1, timbre sur les visas touristiques 0,1 ; taxe de 1 000 € par an à l'embauche d'un salarié extra-européen 1 et taxe de 14 % sur les transferts d'argent vers les pays tiers 1,9 (à l'étude), gel des tarifs et minima de l'accise sur le tabac et fin de leur indexation (lettre aux buralistes du 7/09/2026 ; paramètre précisé par l'amendement I-CF1011 du groupe RN au projet de budget 2027, 4/10/2026) : ≈ −0,1 Md€ en 2030 (jusqu'à −0,5 si toute l'accise suivait l'indexation), sous le seuil de 1 Md€, recentralisation de l'aide sociale à l'enfance par l'État, rebaptisée « aide sociale à la famille », et ministère de plein exercice (transfert entre administrations, sans dépense nouvelle publiée : sans effet sur le solde public), fin ou baisse de l'aide à l'Ukraine (« nous n'avons plus les moyens » d'une aide qui « nous a coûté, en engagement, 6 milliards d'euros par an » selon la candidate, 15/10/2026 ; aide financière maintenue six mois après l'élection puis arrêtée, rappelle franceinfo le 13/11/2026 ; niveau non publié, même lecture que la hausse de l'aide de Glucksmann, non chiffrable ; matériels livrés : 0,94 Md€ en 2025 selon le ministère des Armées), trains gratuits pour les 18-25 ans sur les places invendues de la SNCF (paramètres non publiés), postes publics non remplacés (nombre non publié par la candidate ; ≈ 201 000 d'ici 2032 selon un seul site citant un député RN : fourchette indicative dans la fiche), agences et opérateurs au-delà de la valeur commune (3,4 Md€ en 2027, chiffre du camp), imposition des « surprofits » des multinationales tirés des crises (message de la candidate du 29/10/2026 : ni taux, ni assiette, ni rendement publiés), fin des régularisations d'étrangers en situation irrégulière (« zéro régularisation », porte-parole de campagne, 28/10/2026 : effet sur les cotisations non chiffré, paramètres non publiés), fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée, lignes du contre-budget 2027 sans chiffrage indépendant ni base officielle permettant le calcul (chiffres du camp pour 2027) : aides au logement plafonnées à 90 % du loyer 1,0 (répartition officielle des allocataires selon la part du loyer couverte non publiée), chèques apprentissage réservés aux étudiants avant la licence 1,6 (dispositif non défini par le document), gestion des bons du Trésor à taux fixe 4,2, logement social, dont la fin de l'exonération de taxe foncière des bailleurs sociaux, 3,2, subventions aux associations « ne relevant pas de l'intérêt général » de l'État 2,0 et des collectivités 2,0, coût de la dette 1,3, parc immobilier de l'État 1,0 ; sans effet sur le solde public : écrêtement puis rebudgétisation de la TVA transférée aux collectivités 3,4 et hausse de la cotisation employeur de la fonction publique territoriale 1,0 (transferts entre administrations, même règle que la fraction de TVA aux communes de Retailleau), « retour de TVA lié à la baisse des dépenses contraintes » 2,6 (effet de bouclage, exclu par la méthode) ; plus-values immobilières exonérées après quinze ans de détention (lettre de la candidate aux professionnels de l'immobilier, 21/09/2026 : coût non publié, répartition officielle des plus-values par durée de détention non ouverte), priorité nationale dans la commande publique (franceinfo, 13/11/2026 : « La commande publique, c'est 200 milliards d'euros par an » selon la candidate ; mécanisme, seuil et part réservée non publiés ; même lecture que le « Buy European Act » de Glucksmann, achats publics encadrés par le droit de l'Union européenne), climatisation de toutes les écoles, des Ehpad et des hôpitaux (LCP, 15/11/2026 : calendrier et coût non publiés ; même lecture que la climatisation des lieux accueillant des personnes fragiles de Philippe)",
+    "missing": "économies de la réforme des retraites sans chiffrage pour 2030 (décote portée à 2,5 % par trimestre manquant dans la limite de 50 %, 160 trimestres au minimum pour liquider, trimestre validé à partir d'un mi-temps, 4 trimestres de chômage non cotisé au plus sur la carrière, majoration pour trois enfants portée à 12 % pour les mères et supprimée peu à peu pour les pères, critères de pénibilité supprimés : 8,5 Md€ d'économies en 2032 selon le camp : plancher 5,8, décote 2,7), mesures de la réforme des retraites chiffrées par le camp pour 2032 sans chiffrage indépendant ni base officielle ouverte (majoration pour trois enfants réservée aux mères : 5 Md€ d'économies ; moitié des excédents de l'Unédic affectée aux retraites : 1,2 Md€ ; APA et ASPA suspendues au-delà de 3 000 € de pension : 9,7 Md€ avec l'Unédic selon Public Sénat ; surcote : 2 Md€ de coût), exonération de cotisations retraite et chômage pour qui continue de travailler avec tous ses droits et cumul emploi-retraite libéralisé (sans chiffrage, même lecture que Retailleau), réforme des politiques financées aujourd'hui par les prélèvements réaffectés à la capitalisation (aides au logement, Action Logement, formation professionnelle : paramètres non publiés), sortie du marché européen de l'électricité, taxe sur les rachats d'actions, coût du prêt à taux zéro « 100 % Rénov' » qui remplace MaPrimeRénov' (montant et conditions non publiés), recettes et économies du contre-budget sans chiffrage indépendant (chiffres du camp pour 2027) : impôt sur les sociétés assis sur le chiffre d'affaires 3,75, Autorité de la concurrence 1,2, dividendes d'EDF sur les exportations 3,7, économies sur le TURPE 2, économies sur la Sécurité sociale ≈ 20, droits de douane rendus 2,2, rationalisation de l'aide publique au développement et de l'action extérieure de l'État 2,1 (sans niveau publié), rebudgétisation des certificats d'économies d'énergie 8 (mécanisme non publié : sans effet sur le solde si les programmes passent au budget avec une recette équivalente, perte de TVA d'environ 0,9 Md€ si la charge disparaît des factures, même lecture que Retailleau et Zemmour) ; dépenses de moins de 1 Md€ (AAH au-dessus du seuil de pauvreté, permis gratuit pour les jeunes sans casier judiciaire : 0,7 Md€ par an selon le RN, Euronews, 17/11/2026), prime d'activité étudiante (débat TF1-LCI, 16/11/2026 : 20 % du salaire dans la limite de 200 € par mois, 30 % et 300 € pour les boursiers ; nombre d'étudiants salariés et répartition de leurs salaires sans source officielle ouverte, non chiffrée), dispense d'impôt sur le revenu pour les entrepreneurs (public et durée non publiés), fonds souverain (opération financière), abrogation de la loi Hulot, lignes immigration du contre-budget sans chiffrage indépendant ni paramètre suffisant (chiffres du camp pour 2027) : suppression du visa pour soins 1, effets indirects sur la sécurité 0,5, départ des étrangers sans emploi 0,1, timbre sur les visas touristiques 0,1 ; taxe de 1 000 € par an à l'embauche d'un salarié extra-européen 1 et taxe de 14 % sur les transferts d'argent vers les pays tiers 1,9 (à l'étude), gel des tarifs et minima de l'accise sur le tabac et fin de leur indexation (lettre aux buralistes du 7/09/2026 ; paramètre précisé par l'amendement I-CF1011 du groupe RN au projet de budget 2027, 4/10/2026) : ≈ −0,1 Md€ en 2030 (jusqu'à −0,5 si toute l'accise suivait l'indexation), sous le seuil de 1 Md€, recentralisation de l'aide sociale à l'enfance par l'État, rebaptisée « aide sociale à la famille », et ministère de plein exercice (transfert entre administrations, sans dépense nouvelle publiée : sans effet sur le solde public), fin ou baisse de l'aide à l'Ukraine (« nous n'avons plus les moyens » d'une aide qui « nous a coûté, en engagement, 6 milliards d'euros par an » selon la candidate, 15/10/2026 ; aide financière maintenue six mois après l'élection puis arrêtée, rappelle franceinfo le 13/11/2026 ; niveau non publié, même lecture que la hausse de l'aide de Glucksmann, non chiffrable ; matériels livrés : 0,94 Md€ en 2025 selon le ministère des Armées), trains gratuits pour les 18-25 ans sur les places invendues de la SNCF (paramètres non publiés), postes publics non remplacés (nombre non publié par la candidate ; ≈ 201 000 d'ici 2032 selon un seul site citant un député RN : fourchette indicative dans la fiche), agences et opérateurs au-delà de la valeur commune (3,4 Md€ en 2027, chiffre du camp), imposition des « surprofits » des multinationales tirés des crises (message de la candidate du 29/10/2026 : ni taux, ni assiette, ni rendement publiés), fin des régularisations d'étrangers en situation irrégulière (« zéro régularisation », porte-parole de campagne, 28/10/2026 : effet sur les cotisations non chiffré, paramètres non publiés), fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée, lignes du contre-budget 2027 sans chiffrage indépendant ni base officielle permettant le calcul (chiffres du camp pour 2027) : aides au logement plafonnées à 90 % du loyer 1,0 (répartition officielle des allocataires selon la part du loyer couverte non publiée), chèques apprentissage réservés aux étudiants avant la licence 1,6 (dispositif non défini par le document), gestion des bons du Trésor à taux fixe 4,2, logement social, dont la fin de l'exonération de taxe foncière des bailleurs sociaux, 3,2, subventions aux associations « ne relevant pas de l'intérêt général » de l'État 2,0 et des collectivités 2,0, coût de la dette 1,3, parc immobilier de l'État 1,0 ; sans effet sur le solde public : écrêtement puis rebudgétisation de la TVA transférée aux collectivités 3,4 et hausse de la cotisation employeur de la fonction publique territoriale 1,0 (transferts entre administrations, même règle que la fraction de TVA aux communes de Retailleau), « retour de TVA lié à la baisse des dépenses contraintes » 2,6 (effet de bouclage, exclu par la méthode) ; plus-values immobilières exonérées après quinze ans de détention (lettre de la candidate aux professionnels de l'immobilier, 21/09/2026 : coût non publié, répartition officielle des plus-values par durée de détention non ouverte), priorité nationale dans la commande publique (franceinfo, 13/11/2026 : « La commande publique, c'est 200 milliards d'euros par an » selon la candidate ; mécanisme, seuil et part réservée non publiés ; même lecture que le « Buy European Act » de Glucksmann, achats publics encadrés par le droit de l'Union européenne), climatisation de toutes les écoles, des Ehpad et des hôpitaux (LCP, 15/11/2026 : calendrier et coût non publiés ; même lecture que la climatisation des lieux accueillant des personnes fragiles de Philippe)",
     "n": 29,
     "cost": -103.7,
     "gain": 15.4,
@@ -3339,7 +3367,7 @@
    "id": "melenchon",
    "name": "Jean-Luc Mélenchon",
    "party": "LFI",
-   "poll": "18,0 %",
+   "poll": "18,1 %",
    "summary": "Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines. Notre chiffrage : −248,2 Md€ par an en 2030, soit −8 031 € par ménage. Principal obstacle : la modification des traités européens à l'unanimité des 27, pour l'annulation de la dette, et la révision de la Constitution, pour la VIe République.",
    "measures": [
     {
@@ -6528,7 +6556,7 @@
      "id": "fonction",
      "theme": "depense",
      "title": "1 fonctionnaire sur 3",
-     "proposal": "Ne pas remplacer un départ à la retraite sur trois, plus de 250 000 postes en moins sur le quinquennat ; fusionner et supprimer des dizaines d'opérateurs, d'agences et de comités publics.",
+     "proposal": "Ne pas remplacer un départ à la retraite sur trois « dans les fonctions de bureau », 250 000 postes en moins sur le quinquennat ; fusionner, supprimer ou privatiser une trentaine d'agences et d'opérateurs de l'État, dont la privatisation de France Travail.",
      "claimed": "Aucun montant annoncé",
      "claimed_md": null,
      "estimates": [
@@ -6589,9 +6617,15 @@
         "value": "« Ne pas remplacer 1 fonctionnaire sur 3, soit 250 000 postes en moins sur le quinquennat » ; « fusionner ou supprimer des dizaines d'opérateurs, d'agences et de comités publics, et regrouper ou privatiser ceux qui s'enchevêtrent »",
         "source": "Site de campagne d'Édouard Philippe, programme « Finances publiques » (12/11/2026)",
         "url": "https://www.edouardphilippe.fr/programme/comptes-publics"
+       },
+       {
+        "label": "Agences (18/11/2026)",
+        "value": "« Édouard Philippe veut fusionner, supprimer ou privatiser une trentaine d’agences et d’opérateurs de l’État qui font doublon, avec par exemple la privatisation de France Travail et la suppression du CESE. »",
+        "source": "Site de campagne d'Édouard Philippe, programme « Finances publiques » (18/11/2026)",
+        "url": "https://www.edouardphilippe.fr/programme/comptes-publics"
        }
       ],
-      "note": "Collectivités et hôpitaux hors contrôle de l'État. Opérateurs et agences : « des dizaines » fusionnés ou supprimés (site de campagne), liste non publiée, périmètre plus étroit que la suppression de la plupart des agences (valeur commune de 0,26 Md€ chez Le Pen, Retailleau et Lisnard) : rien de compté, comme les agences nommées de Zemmour ; les privatisations sont des opérations financières, sans effet sur le solde."
+      "note": "Collectivités et hôpitaux hors contrôle de l'État. Opérateurs et agences : « une trentaine » fusionnés, supprimés ou privatisés (site de campagne, 18/11/2026), liste non publiée hors deux exemples, périmètre plus étroit que la suppression de la plupart des agences (valeur commune de 0,26 Md€ chez Le Pen, Retailleau et Lisnard) : rien de compté, comme les agences nommées de Zemmour ; les privatisations sont des opérations financières, sans effet sur le solde. France Travail privatisé : missions reprises par une autre structure, 0 hors de la valeur commune (règle des agences nommées) ; suppression du CESE, inscrit dans la Constitution : listée à part, non comptée (révision de la Constitution ; budget officiel de 34 M€, même traitement que chez Zemmour). Statut de fonctionnaire limité aux fonctions régaliennes et aux enseignants (franceinfo, 18/11/2026) : sans effet chiffré."
      },
      "quiz_text": "Ne pas remplacer un fonctionnaire sur trois partant à la retraite",
      "quiz_concret": "Moins de postes publics au fil des départs.",
@@ -7839,8 +7873,8 @@
      "id": "regle_or",
      "theme": "institutions",
      "title": "Règle d'or par référendum",
-     "proposal": "Inscrire dans la Constitution, par référendum, une règle d'or de maîtrise des déficits ; déficit ramené à 2 % du PIB à la fin du quinquennat.",
-     "claimed": "Déficit de 2 % du PIB en fin de quinquennat",
+     "proposal": "Inscrire dans la Constitution, par référendum dès le début du quinquennat, une règle d'or budgétaire ; déficit ramené sous 2,5 % du PIB à la fin du quinquennat.",
+     "claimed": "Déficit sous 2,5 % du PIB en fin de quinquennat, « près de 150 milliards d'économies » (site de campagne, 18/11/2026)",
      "claimed_md": null,
      "estimates": [
       {
@@ -7850,6 +7884,14 @@
        "low_md": null,
        "high_md": null,
        "url": "https://blog.landot-avocats.net/2026/10/18/reforme-de-la-constitution-art-11-devoir-de-reserve-petits-rappels-de-quelques-evidences-sur-la-polemique-du-jour-2/"
+      },
+      {
+       "source": "Site de campagne d'Édouard Philippe, programme « Finances publiques » (18/11/2026)",
+       "year": 2026,
+       "value": "« Ramener le déficit sous 2,5 % de la richesse nationale à la fin du quinquennat, soit près de 150 milliards d’économies. » ; « Ne créer aucun nouvel impôt pendant cinq ans. »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.edouardphilippe.fr/programme/comptes-publics"
       }
      ],
      "consensus": "isolé",
@@ -7868,9 +7910,15 @@
         "value": "« Inscrire dans la Constitution une « règle d'or » budgétaire adoptée par référendum dès le début du quinquennat » ; « Ramener le déficit de plus de 5 % à 2 % de la richesse nationale à la fin du mandat »",
         "source": "Site de campagne d'Édouard Philippe, programme « Finances publiques » (12/11/2026)",
         "url": "https://www.edouardphilippe.fr/programme/comptes-publics"
+       },
+       {
+        "label": "Objectif du 18/11/2026",
+        "value": "« Ramener le déficit sous 2,5 % de la richesse nationale à la fin du quinquennat, soit près de 150 milliards d’économies. » ; effort « pour moitié sur les dépenses sociales (retraites, chômage, arrêts maladie), pour un quart sur l’État et les collectivités », le dernier quart par la croissance",
+        "source": "Site de campagne d'Édouard Philippe, programme « Finances publiques » (18/11/2026)",
+        "url": "https://www.edouardphilippe.fr/programme/comptes-publics"
        }
       ],
-      "note": "L'effet dépend des mesures prises pour la respecter",
+      "note": "L'effet dépend des mesures prises pour la respecter. Objectif porté le 18/11/2026 à un déficit « sous 2,5 % » du PIB en fin de quinquennat (2 % auparavant) ; « près de 150 milliards d'économies » (moitié dépenses sociales, un quart État et collectivités, un quart croissance) : non ventilées, non comptées au-delà des fiches ; engagement de ne créer « aucun nouvel impôt pendant cinq ans », sans effet chiffré.",
       "nc": true
      },
      "quiz_text": "Faire adopter par référendum une règle d'or qui limite le déficit public en fin de mandat",
@@ -7984,7 +8032,7 @@
     "p10": -24.1,
     "p90": 5.2,
     "realsum": -0.2,
-    "missing": "défense hors réservistes et volontaires (dont un plan munitions pour passer de 100 000 à 700 000 obus par an : aucun coût unitaire officiel ouvert, objectif de production sans part de l'État publiée), capitalisation collective obligatoire (classement du fonds non publié), effectifs réduits en maternelle et en primaire, soutien scolaire universel et gratuit, prêt à taux zéro à chaque naissance, plafonds de donation relevés pendant trois ans, temps partiel parental payé deux mois, aides sociales des étrangers alignées sur la moyenne européenne, capacité de calcul IA doublée, climatisation des lieux accueillant des personnes fragiles, 8 EPR supplémentaires, livret capital France (fiscalité non publiée), durée du RSA limitée pour inciter à la reprise du travail (programme du 12/11/2026 : durée non publiée ; même base que le RSA limité à trois ans de Zemmour dès qu'une durée est publiée), suppression des taxes perçues à l'achat d'un logement (« frais de notaire ») pour les moins de 35 ans (entretien au Parisien, 15/11/2026, cité par franceinfo : premier achat ou non, plafond de prix, compensation aux départements et coût non publiés)",
+    "missing": "défense hors réservistes et volontaires (dont un plan munitions pour passer de 100 000 à 700 000 obus par an : aucun coût unitaire officiel ouvert, objectif de production sans part de l'État publiée), capitalisation collective obligatoire (classement du fonds non publié), effectifs réduits en maternelle et en primaire, soutien scolaire universel et gratuit, prêt à taux zéro à chaque naissance, plafonds de donation relevés pendant trois ans, temps partiel parental payé deux mois, aides sociales des étrangers alignées sur la moyenne européenne, capacité de calcul IA doublée, climatisation des lieux accueillant des personnes fragiles, 8 EPR supplémentaires, livret capital France (fiscalité non publiée), durée du RSA limitée pour inciter à la reprise du travail (programme du 12/11/2026 : durée non publiée ; même base que le RSA limité à trois ans de Zemmour dès qu'une durée est publiée), 30 % d'allocataires du RSA en moins (site, 18/11/2026 : suivi individuel, métiers en tension, contrôle ; économie sans chiffrage indépendant ni calendrier), RSA suspendu automatiquement pour les délinquants condamnés sauf décision du maire (site, 18/11/2026 : nombre de bénéficiaires concernés sans source officielle ouverte), suppression des taxes perçues à l'achat d'un logement (« frais de notaire ») pour les moins de 35 ans (entretien au Parisien, 15/11/2026, cité par franceinfo : premier achat ou non, plafond de prix, compensation aux départements et coût non publiés), « près de 150 milliards d'économies » pour un déficit sous 2,5 % du PIB en fin de quinquennat (site, 18/11/2026 : non ventilées au-delà des fiches), une trentaine d'agences et d'opérateurs fusionnés, supprimés ou privatisés (liste non publiée ; France Travail privatisé : missions reprises, 0), suppression du CESE (inscrit dans la Constitution : exige une révision ; budget officiel de 34 M€, programme 126, PLF 2027)",
     "n": 10,
     "cost": -10.6,
     "gain": 10.4,
@@ -8057,7 +8105,7 @@
    "id": "glucksmann",
    "name": "Raphaël Glucksmann",
    "party": "PS-Place publique",
-   "poll": "11,1 %",
+   "poll": "10,8 %",
    "summary": "Promet le retour à 62 ans, un SMIC à 1 700 € net, 200 Md€ d'investissement public écologique sur le quinquennat, une taxe sur les très gros héritages et une défense européenne financée par emprunt commun. Notre chiffrage : −92,9 Md€ par an en 2030, soit −3 006 € par ménage. Principal obstacle : l'accord des autres pays européens, pour la défense européenne financée par emprunt commun et la saisie des avoirs russes.",
    "measures": [
     {
@@ -8159,6 +8207,14 @@
        "low_md": 13.8,
        "high_md": 14.3,
        "url": "https://www.ifrap.org/budget-et-fiscalite/droits-de-succession-44-milliards-dimpots-en-moins-ou-14-milliards-de-taxes-en-plus"
+      },
+      {
+       "source": "6Médias avec L'Express (Orange Actu), entretien de R. Glucksmann au groupe EBRA (17/11/2026)",
+       "year": 2026,
+       "value": "« Si je suis élu, dès septembre 2027, je baisserai la CSG de manière progressive sur les salaires, du Smic jusqu'à 4 000 euros net par mois. Cela correspond par exemple à un gain immédiat de 100 euros de salaire par mois pour un salarié à 2 000 euros net »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://actu.orange.fr/politique/presidentielle-2027-jean-luc-melenchon-perdra-au-second-tour-affirme-raphael-glucksmann-l-express-via-6medias-CNT000002tNlSa.html"
       }
      ],
      "consensus": "divergent",
@@ -8251,7 +8307,7 @@
         "url": "https://www.insee.fr/fr/statistiques/9087193"
        }
       ],
-      "note": "Barème publié par écrit le 4/11/2026 (simulateur de la campagne) : il remplace les deux points donnés le 2/11 (83 € au SMIC, 100 € au salaire médian). La baisse plafonne à environ 119 € par mois pour tous les salaires au-delà de 44 808 € bruts par an : 23,0 Md€ pour les seuls salariés du privé, au-delà des 15 Md€ annoncés, que la recette des héritages ne couvre pas. Agents publics : distribution de leurs salaires non ouverte, comptés seulement dans la borne basse. Financement publié par la campagne (même page) : taux marginaux plus élevés sur les héritages de plus de 2 M€, pacte Dutreil rendu dégressif, imposition des plus-values latentes transmises au décès ; taux non publiés. La taxe Zucman n'y figure pas (toujours hors total). Entrée en vigueur au 1/09/2027 : entière en 2030."
+      "note": "Barème publié par écrit le 4/11/2026 (simulateur de la campagne) : il remplace les deux points donnés le 2/11 (83 € au SMIC, 100 € au salaire médian). La baisse plafonne à environ 119 € par mois pour tous les salaires au-delà de 44 808 € bruts par an : 23,0 Md€ pour les seuls salariés du privé, au-delà des 15 Md€ annoncés, que la recette des héritages ne couvre pas. Agents publics : distribution de leurs salaires non ouverte, comptés seulement dans la borne basse. Financement publié par la campagne (même page) : taux marginaux plus élevés sur les héritages de plus de 2 M€, pacte Dutreil rendu dégressif, imposition des plus-values latentes transmises au décès ; taux non publiés. La taxe Zucman n'y figure pas (toujours hors total). Entrée en vigueur au 1/09/2027 : entière en 2030. Entretien du 17/11/2026 : baisse « dès septembre 2027 », « du Smic jusqu'à 4 000 euros net par mois » (oral) ; le barème écrit du simulateur de la campagne prime (règle commune) : gardé, avec son gain plafonné pour tous les salaires au-delà de 44 808 € bruts par an, y compris au-delà de 4 000 € nets, jusqu'à un texte écrit qui dise autre chose."
      },
      "quiz_text": "Taxer les 1 % plus gros héritages pour augmenter les salaires nets",
      "quiz_concret": "Les très gros héritages sont plus taxés ; les salariés gagnent un peu plus.",
@@ -8361,6 +8417,14 @@
        "low_md": -16.5,
        "high_md": -1.8,
        "url": "https://www.ifrap.org/retraite/retraites-la-suspension-va-couter-des-milliards"
+      },
+      {
+       "source": "6Médias avec L'Express (Orange Actu), entretien de R. Glucksmann au groupe EBRA (17/11/2026)",
+       "year": 2026,
+       "value": "« pour un âge de référence de départ à la retraite fixé à 62 ans, en incitant ceux qui le peuvent à partir plus tard et en permettant aux métiers les plus pénibles de partir plus tôt »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://actu.orange.fr/politique/presidentielle-2027-jean-luc-melenchon-perdra-au-second-tour-affirme-raphael-glucksmann-l-express-via-6medias-CNT000002tNlSa.html"
       }
      ],
      "consensus": "concordant",
@@ -9528,7 +9592,7 @@
      },
      "public": "salariés",
      "imposable": 1,
-     "note": "« CSG progressive » au 1/09/2027 (barème publié par la campagne le 4/11/2026, sur le salaire brut annuel : 4,9 % jusqu'à 22 404 €, 6,25 % jusqu'à 35 847 €, 8,5 % jusqu'à 44 808 €, 9,2 % au-delà) ; salaire brut déduit du net avec le taux de cotisations du simulateur de la campagne (20,84 %) ; gain plafonné à environ 119 €/mois au-delà du dernier seuil (notre calcul)"
+     "note": "« CSG progressive » au 1/09/2027 (barème publié par la campagne le 4/11/2026, sur le salaire brut annuel : 4,9 % jusqu'à 22 404 €, 6,25 % jusqu'à 35 847 €, 8,5 % jusqu'à 44 808 €, 9,2 % au-delà) ; salaire brut déduit du net avec le taux de cotisations du simulateur de la campagne (20,84 %) ; gain plafonné à environ 119 €/mois au-delà du dernier seuil (notre calcul) ; « du Smic jusqu'à 4 000 euros net par mois » à l'oral (17/11/2026) : le barème écrit, qui garde le gain au-delà, prime"
     },
     "alloc_familiales": null,
     "tva_energie": null,
@@ -9572,7 +9636,7 @@
    "id": "lisnard",
    "name": "David Lisnard",
    "party": "Nouvelle Énergie",
-   "poll": "9,2 %",
+   "poll": "9,4 %",
    "summary": "Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations. Notre chiffrage : −41,4 Md€ par an en 2030, soit −1 340 € par ménage. Principal obstacle : la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats.",
    "measures": [
     {
@@ -9788,7 +9852,7 @@
      "id": "retraites",
      "theme": "retraites",
      "title": "65 ans et capitalisation",
-     "proposal": "Âge à 65 ans, socle par répartition (minimum 1 000 €/mois), bascule progressive vers la capitalisation.",
+     "proposal": "Âge à 65 ans, socle par répartition (pension minimale autour de 1 200 €/mois), étage de capitalisation collective obligatoire, bascule progressive vers la capitalisation.",
      "claimed": "Non chiffré",
      "claimed_md": null,
      "estimates": [
@@ -9799,6 +9863,22 @@
        "low_md": null,
        "high_md": null,
        "url": "https://www.previssima.fr/actualite/retraite-a-68-ans-deficit-qui-explose-le-nouveau-rapport-alerte-sur-letat-des-retraites-francaises.html"
+      },
+      {
+       "source": "Nouvelle Énergie, tribune de D. Lisnard parue dans Le Figaro, « Pour une réforme des retraites qui réconcilie les générations » (17/11/2026)",
+       "year": 2026,
+       "value": "« Un étage de capitalisation collective obligatoire doit compléter une répartition réformée et une capitalisation libre. » ; « La transition devra être financée car les pensions resteront dues pendant que les actifs constitueront leur épargne. »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.unenouvelleenergie.fr/pour-une-reforme-des-retraites-qui-reconcilie-les-generations/"
+      },
+      {
+       "source": "Nouvelle Énergie, « Quel candidat à la présidentielle 2027 propose la retraite par capitalisation ? » (mise à jour le 16/10/2026)",
+       "year": 2026,
+       "value": "« un socle par répartition maintenu autour de 1 200 euros de pension mensuelle »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.unenouvelleenergie.fr/questions/quel-candidat-propose-la-retraite-par-capitalisation/"
       }
      ],
      "consensus": "isolé",
@@ -9820,7 +9900,7 @@
        },
        {
         "label": "Minimum vieillesse 2026",
-        "value": "1 043,59 €/mois, déjà au-dessus des 1 000 € promis",
+        "value": "1 043,59 €/mois (socle visé : autour de 1 200 €/mois)",
         "source": "Moneyvox",
         "url": "https://www.moneyvox.fr/retraite/actualites/106807/minimum-vieillesse-voici-le-montant-officiel-de-aspa-a-partir-du-1er-janvier-2026"
        },
@@ -9831,7 +9911,7 @@
         "url": "https://www.lagrandeconversation.com/app/uploads/2025/05/la-retraite-par-capitalisation-obligatoire-quelques-pistes-pour-gerer-la-difficile-periode-de-transition-la-grande-conversation.pdf"
        }
       ],
-      "note": "Calendrier du candidat non publié : même lecture que Philippe et Zemmour. Coût de transition vers la capitalisation exclu. Capitalisation obligatoire : environ 40 % des cotisations transférées vers des comptes individuels selon Capital (6/11/2026, paraphrase du média, sans citation du candidat) : coût de transition non chiffré. Fonds souverain pour les épargnants qui ne veulent pas confier leur épargne retraite à des acteurs privés (Nouvelle Énergie, compte rendu du 13/11/2026 des Rencontres de l'Avenir du 6/11) : opération financière, sans effet direct sur le solde. Échelon obligatoire de retraite par capitalisation, « complémentaire au système actuel », et plan de réforme des retraites annoncé « avant la fin de l’année » (Nouvelle Énergie, compte rendu du 13/11/2026 du DLive du 10/11) : taux et financement non publiés, coût de transition non chiffré."
+      "note": "Calendrier du candidat non publié : même lecture que Philippe et Zemmour. Coût de transition vers la capitalisation exclu. Capitalisation obligatoire : environ 40 % des cotisations transférées vers des comptes individuels selon Capital (6/11/2026, paraphrase du média, sans citation du candidat) : coût de transition non chiffré. Fonds souverain pour les épargnants qui ne veulent pas confier leur épargne retraite à des acteurs privés (Nouvelle Énergie, compte rendu du 13/11/2026 des Rencontres de l'Avenir du 6/11) : opération financière, sans effet direct sur le solde. Échelon obligatoire de retraite par capitalisation, « complémentaire au système actuel », et plan de réforme des retraites annoncé « avant la fin de l’année » (Nouvelle Énergie, compte rendu du 13/11/2026 du DLive du 10/11) : taux et financement non publiés, coût de transition non chiffré. Tribune du 17/11/2026 : étage de capitalisation collective obligatoire, en plus d'une « répartition réformée » et d'une capitalisation libre, transition « bientôt » détaillée (taux et coût non publiés) ; fin des régimes spéciaux et convergence des règles du public et du privé (sans paramètre, non comptée). Socle : « autour de 1 200 euros » de pension mensuelle (page du parti mise à jour le 16/10/2026), au lieu de 1 000 € dans une source antérieure : la source de 2026 la plus récente est gardée ; sans paramètre de financement, non compté."
      },
      "quiz_text": "Repousser la retraite à 65 ans et développer l'épargne retraite individuelle",
      "quiz_concret": "Vous partez plus tard ; une partie de votre retraite dépend de votre épargne.",
@@ -11243,7 +11323,7 @@
         "url": "https://www.unenouvelleenergie.fr/david-lisnard-sur-cnews-et-europe-1-je-ne-suis-pas-candidat-pour-un-poste-je-viens-pour-redresser-le-pays/"
        }
       ],
-      "note": "Durée du gel non publiée (un an retenu). Le camp affecte ces économies à la transition vers la capitalisation, dont le coût n'est pas compté. Le projet de loi de financement de la Sécurité sociale pour 2027 prévoit déjà une désindexation au-delà de 1 260 € : s'il est voté, la situation de départ change pour tous."
+      "note": "Durée du gel non publiée (un an retenu). Le camp affecte ces économies à la transition vers la capitalisation, dont le coût n'est pas compté. Le projet de loi de financement de la Sécurité sociale pour 2027 prévoit déjà une désindexation au-delà de 1 260 € : s'il est voté, la situation de départ change pour tous. Tribune du 17/11/2026 : « certaines années désindexer les pensions les plus élevées » (sans seuil ni durée) : seuil de 2 200 € et un an de gel gardés."
      },
      "quiz_text": "Geler les retraites les plus élevées, les petites restant revalorisées",
      "quiz_concret": "Les pensions au-dessus d'un certain montant ne suivraient plus la hausse des prix ; les autres, si.",
@@ -11594,7 +11674,7 @@
     "p10": -51.7,
     "p90": -34.9,
     "realsum": -44.9,
-    "missing": "reste du plan de 200 Md€ non ventilé, transition vers la capitalisation, décentralisation, défense (hausse du budget des armées, sans montant ni date), « flat tax universelle » sur tous les revenus du capital, revenus fonciers compris (taux de 25 % rapporté par Le Figaro le 7/11/2026, sans citation du candidat ni document du parti qui le donne ; niches supprimées en contrepartie non publiées), plan de remise à niveau de la police sur dix ans et budget de la justice porté à la moyenne européenne (montants non publiés), nouveaux centres de rétention (places non publiées), impôt résidentiel universel payé par tous les habitants (taux, assiette et baisses en contrepartie non publiés), réforme de l'assurance chômage pour réduire les dépenses (non détaillée), budgets revus « à partir de zéro » (montant non publié), simplification des taux de TVA (tribune du 16/04/2026 : taux non publiés), fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée, à confirmer en 2026 : charges supprimées pour les employeurs à domicile au niveau du SMIC et charges patronales négatives pour l'embauche d'allocataires du RSA depuis plus de deux ans (page de programme sans date de rédaction), privatisation de France 2 et réorganisation de l'audiovisuel public (cession : opération financière ; effet annuel non publié, même lecture que l'audiovisuel de Retailleau et de Zemmour), projets d'énergies renouvelables ramenés au droit commun (effet sur les charges de service public de l'énergie non publié)",
+    "missing": "reste du plan de 200 Md€ non ventilé, transition vers la capitalisation, décentralisation, défense (hausse du budget des armées, sans montant ni date), « flat tax universelle » sur tous les revenus du capital, revenus fonciers compris (taux de 25 % rapporté par Le Figaro le 7/11/2026, sans citation du candidat ni document du parti qui le donne ; niches supprimées en contrepartie non publiées), plan de remise à niveau de la police sur dix ans et budget de la justice porté à la moyenne européenne (montants non publiés), nouveaux centres de rétention (places non publiées), impôt résidentiel universel payé par tous les habitants (taux, assiette et baisses en contrepartie non publiés), réforme de l'assurance chômage pour réduire les dépenses (non détaillée), budgets revus « à partir de zéro » (montant non publié), simplification des taux de TVA (tribune du 16/04/2026 : taux non publiés), fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée, à confirmer en 2026 : charges supprimées pour les employeurs à domicile au niveau du SMIC et charges patronales négatives pour l'embauche d'allocataires du RSA depuis plus de deux ans (page de programme sans date de rédaction), privatisation de France 2 et réorganisation de l'audiovisuel public (cession : opération financière ; effet annuel non publié, même lecture que l'audiovisuel de Retailleau et de Zemmour), projets d'énergies renouvelables ramenés au droit commun (effet sur les charges de service public de l'énergie non publié), fin des régimes spéciaux et convergence des règles de retraite du public et du privé (tribune du 17/11/2026 : paramètres non publiés), socle de pension autour de 1 200 € par mois (page du parti, 16/10/2026 : financement non publié)",
     "n": 15,
     "cost": -63.7,
     "gain": 22.3,
@@ -11606,7 +11686,7 @@
      "age_legal": 65,
      "age_taux_plein": null,
      "carriere_longue": null,
-     "regle": "Âge légal 65 ans ; socle par répartition, minimum de 1 000 €/mois ; bascule progressive vers la capitalisation."
+     "regle": "Âge légal 65 ans ; socle par répartition, pension minimale autour de 1 200 €/mois (non calculé ici) ; étage de capitalisation collective obligatoire, bascule progressive vers la capitalisation."
     },
     "smic_net": null,
     "salaire_net": {
@@ -11675,7 +11755,7 @@
    "name": "Gabriel Attal",
    "party": "Renaissance",
    "poll": "6,3 %",
-   "summary": "Promet la suppression de la CSG sur les salaires, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037. Notre chiffrage : −83,3 Md€ par an en 2030, soit −2 695 € par ménage. Principal obstacle : la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen.",
+   "summary": "Promet la suppression de la CSG sur les salaires, jusqu'à 270 € nets par mois, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037. Notre chiffrage : −61,1 Md€ par an en 2030, soit −1 977 € par ménage. Principal obstacle : la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen.",
    "measures": [
     {
      "id": "retraites",
@@ -12898,10 +12978,18 @@
      "id": "csg",
      "theme": "fiscalite",
      "title": "Suppression de la CSG sur les salaires",
-     "proposal": "Supprimer la CSG prélevée sur les salaires (9,2 %), « pour tous les salariés », financée par des économies sur le fonctionnement de l'État (montant non publié).",
-     "claimed": "Non chiffré par le candidat ; « en moyenne 270 euros nets en plus par mois » par salarié",
+     "proposal": "Supprimer la CSG prélevée sur les salaires (9,2 %), « pour tous les salariés », comme moyen du « droit au brut », pour un gain « jusqu'à 270 euros nets supplémentaires par mois » ; financée par des économies sur le fonctionnement de l'État (montant non publié).",
+     "claimed": "Non chiffré par écrit ; « jusqu'à 270 euros nets supplémentaires par mois » par salarié (site de campagne, 16/11/2026)",
      "claimed_md": null,
      "estimates": [
+      {
+       "source": "Site de campagne de G. Attal, « Gabriel Attal sur LCI : réinventer le modèle social pour mieux rémunérer le travail » (16/11/2026)",
+       "year": 2026,
+       "value": "« Avec sa proposition de « droit au brut », il souhaite réduire l'écart entre le salaire brut et le salaire net, notamment par la suppression de la CSG sur les salaires, afin de permettre aux travailleurs de gagner jusqu'à 270 euros nets supplémentaires par mois. »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://attalpresident.fr/actualites/gabriel-attal-lci-restos-du-coeur-nouveau-modele-social"
+      },
       {
        "source": "Message de G. Attal sur X, débat TF1-LCI (16/11/2026)",
        "year": 2026,
@@ -12932,17 +13020,23 @@
      "obstacle": "Par la loi de financement de la Sécurité sociale ; perte de recettes de la Sécurité sociale à compenser ; financement non précisé dans la mesure.",
      "claude": {
       "id": "csg",
-      "central": -90.3,
-      "low": -98.3,
-      "high": -81.7,
+      "central": -68.1,
+      "low": -74.1,
+      "high": -61.6,
       "method": "ascendant",
-      "formula": "CSG sur les revenus d'activité 2025, tous affectataires : 110,4 Md€ (DSS, PLFSS 2025, annexe 3 ; même base que les fiches CSG de Zemmour et de Lisnard) ; part prélevée sur les salaires : 89 % (DSS, 2023 : deux tiers sur la masse salariale du secteur privé, 18 % sur celle du secteur public, moins de 4 % sur d'autres rémunérations ; les 11 % des travailleurs indépendants sont exclus, la mesure visant « tous les salariés ») → 98,3 Md€ ; les 6,8 points déductibles (98,3 × 6,8/9,2 = 72,6) redeviennent imposables : impôt sur le revenu récupéré au taux commun de 11,0 % ≈ 8,0 → −90,3 Md€ ; borne basse −98,3 (sans retour d'impôt sur le revenu) ; borne haute −81,7 (secteurs privé et public seuls, 84,7 % : 93,5 Md€, impôt récupéré au taux de 17,1 % : 93,5 × 6,8/9,2 × 17,1 % = 11,8)",
+      "formula": "CSG sur les revenus d'activité 2025, tous affectataires : 110,4 Md€ (DSS, PLFSS 2025, annexe 3 ; même base que les fiches CSG de Zemmour et de Lisnard) ; part prélevée sur les salaires : 89 % (DSS, 2023 : deux tiers sur le secteur privé, 18 % sur le secteur public, moins de 4 % sur d'autres rémunérations ; indépendants exclus, la mesure visant « tous les salariés ») → 98,3 Md€ sans plafond ; gain plafonné à 270 € nets par mois et par salarié (site de campagne) : CSG de chaque salaire = 9,2 % de 98,25 % du brut, brut ≈ net / 0,78 (hypothèse du simulateur), soit 11,59 % du net, plafond atteint à 2 330 € nets ; appliqué à la distribution officielle des salaires du privé en 2025 (Insee : 18,5 millions d'EQTP par tranche de 100 € de salaire net, centre de chaque tranche, 1 250 € pour la tranche sous 1 300 €, même calcul que le barème de Glucksmann) : 52,7 Md€ au lieu de 69,8, soit 75,4 % ; même part pour les agents publics (hypothèse) → 98,3 × 75,4 % = 74,1 Md€ ; les 6,8 points déductibles redeviennent imposables : impôt sur le revenu récupéré au taux commun de 11,0 % (74,1 × 6,8/9,2 × 11,0 % ≈ 6,0) → −68,1 Md€ ; borne basse −74,1 (sans retour d'impôt sur le revenu) ; borne haute −61,6 (secteurs privé et public seuls, 84,7 % : 70,5 Md€, impôt récupéré au taux de 17,1 %)",
       "inputs": [
        {
         "label": "Mesure publiée (16/11/2026)",
         "value": "« La ligne sur la CSG, je vais la supprimer. Pour augmenter drastiquement votre salaire. C'est en moyenne 270 euros nets en plus par mois. Pour vous. Pour tous les salariés. »",
         "source": "Message de G. Attal sur X, débat TF1-LCI (16/11/2026)",
         "url": "https://x.com/GabrielAttal/status/2122419108696244385"
+       },
+       {
+        "label": "Plafond écrit (16/11/2026)",
+        "value": "« Avec sa proposition de « droit au brut », il souhaite réduire l'écart entre le salaire brut et le salaire net, notamment par la suppression de la CSG sur les salaires, afin de permettre aux travailleurs de gagner jusqu'à 270 euros nets supplémentaires par mois. »",
+        "source": "Site de campagne de G. Attal, « Gabriel Attal sur LCI : réinventer le modèle social pour mieux rémunérer le travail » (16/11/2026)",
+        "url": "https://attalpresident.fr/actualites/gabriel-attal-lci-restos-du-coeur-nouveau-modele-social"
        },
        {
         "label": "CSG sur les revenus d'activité 2025",
@@ -12973,12 +13067,18 @@
         "value": "« il faut tenir compte de la hausse de l'IR pour les revenus imposés au taux marginal de 11 % » sur les 6,8 points déductibles",
         "source": "Institut Montaigne (présidentielle 2022, CSG de Zemmour)",
         "url": "https://www.institutmontaigne.org/presidentielle-2022/eric-zemmour/baisser-le-taux-de-la-csg-sur-les-revenus-dactivite-de-92-a-25"
+       },
+       {
+        "label": "Distribution des salaires du privé (2025)",
+        "value": "18,5 millions d'EQTP ; salaire net médian 2 238 € ; effectifs par tranche de 100 € (figure 3)",
+        "source": "Insee Première n° 2132, « Les salaires dans le secteur privé en 2025 » (22/10/2026)",
+        "url": "https://www.insee.fr/fr/statistiques/9087193"
        }
       ],
-      "note": "Mesure publiée le 16/11/2026 (débat TF1-LCI ; message du candidat sur X le même soir). À l'oral, « jusqu'à 270 euros net par mois » (Capital, AFP) : aucun plafond publié par écrit, le message écrit parle d'une moyenne (« en moyenne 270 euros nets ») et le mécanisme (supprimer la ligne de CSG) vaut pour chaque salaire : aucun plafond appliqué (règle commune, l'écrit prime sur l'oral). Indépendants exclus (« tous les salariés »), agents publics compris. Baisse sans calendrier : comptée entière en 2030 (règle commune), sans déduire le financement annoncé (économies sur le fonctionnement de l'État, non chiffrées), comme les fiches CSG de Zemmour et de Lisnard. Coût d'« environ 50 milliards » rapporté par des sites non reconnus : non retenu. Base 2025 non projetée en 2030. Articulation avec la baisse des cotisations salariales du « droit au brut » (liste non comptée) non publiée."
+      "note": "Mesure publiée le 16/11/2026 (débat TF1-LCI ; message du candidat sur X le même soir) ; plafond écrit par la campagne le même jour (« jusqu'à 270 euros nets supplémentaires par mois », page de son site qui présente la suppression de la CSG comme le moyen du « droit au brut ») : règle commune, l'écrit prime sur l'oral (« en moyenne 270 euros nets » sur X) ; correction du 18/11/2026 (le 17/11, aucun plafond n'était appliqué : −90,3). Agents publics compris (« tous les salariés »), supposés répartis comme les salariés du privé faute de distribution officielle ouverte par tranche (notre hypothèse ; leurs salaires médians publiés par l'Insee sont plus élevés, ce qui ferait jouer le plafond plus souvent). Temps partiels comptés en équivalent temps plein, comme le barème de Glucksmann. Baisse sans calendrier : comptée entière en 2030 (règle commune), sans déduire le financement annoncé (économies sur le fonctionnement de l'État, non chiffrées). Coût d'« autour de 50 milliards » dit au débat selon une transcription automatique non officielle : non retenu (registre). Base 2025 non projetée en 2030. La baisse de cotisations du « droit au brut » (liste non comptée) ne s'y ajoute pas : la campagne présente la suppression de la CSG comme son moyen."
      },
-     "quiz_text": "Supprimer la CSG prélevée sur les salaires",
-     "quiz_concret": "Votre salaire net augmente nettement ; la Sécurité sociale perd cette recette.",
+     "quiz_text": "Supprimer la CSG prélevée sur les salaires, avec un gain plafonné chaque mois",
+     "quiz_concret": "Votre salaire net augmente du montant de la CSG, jusqu'à un plafond mensuel ; la Sécurité sociale perd cette recette.",
      "quiz_plus": "Lors de la dernière baisse de ce type, en 2018, le net moyen a crû de 2,2 %, contre 1,7 % pour le brut.",
      "quiz_moins": "Lors de la baisse de 2018, les 10 % les plus modestes n'ont gagné que 19 € par an, contre 60 à 90 € au-dessus.",
      "quiz_preuve_pour": "solide",
@@ -13046,13 +13146,12 @@
     },
     "smic_net": null,
     "salaire_net": {
-     "gain_mensuel": 324.1,
-     "ref": 2797,
+     "gain_mensuel": 270,
+     "ref": 2330,
      "prorata": true,
-     "sans_plafond": true,
      "public": "salariés et agents publics",
      "imposable": 0.739,
-     "note": "Suppression de la CSG sur les salaires (9,2 % sur 98,25 % du salaire brut, brut ≈ net / 0,78), au prorata du salaire, sans plafond, le mécanisme valant pour chaque salaire (notre calcul ; 259 € au salaire médian, « en moyenne 270 euros nets » selon le candidat) ; la baisse des cotisations du « droit au brut » (200 € au salaire médian) ne s'y ajoute pas ; appliquée aussi aux agents publics et aux enseignants, le candidat parlant de « tous les salariés » sans exclure le public (notre hypothèse)"
+     "note": "Suppression de la CSG sur les salaires (9,2 % sur 98,25 % du salaire brut, brut ≈ net / 0,78), au prorata du salaire, plafonnée à 270 € nets par mois (« jusqu'à 270 euros nets supplémentaires par mois », site du candidat, 16/11/2026), plafond atteint vers 2 330 € nets (notre calcul) ; la baisse des cotisations du « droit au brut » ne s'y ajoute pas, la campagne présentant la suppression de la CSG comme son moyen ; appliquée aussi aux agents publics et aux enseignants, le candidat parlant de « tous les salariés » sans exclure le public (notre hypothèse)"
     },
     "salaire_note": null,
     "alloc_familiales": null,
@@ -13095,25 +13194,25 @@
     }
    },
    "claude_total": {
-    "sum": -83.3,
-    "p10": -94.2,
-    "p90": -76.1,
-    "realsum": -83.3,
-    "missing": "classes de moins de 20 élèves, baisse des cotisations salariales (« droit au brut » : 250 € nets de plus par mois au salaire médian dès 2027 selon son site, « autour de 200-250 euros » le 12/11/2026, financés par des économies sur l'assurance chômage, dont 5 Md€ par la durée d'indemnisation, et sur les indemnités journalières ; barème, coût et économies non publiés ; articulation avec la suppression de la CSG sur les salaires, comptée à part depuis le 16/11/2026, non publiée), arrêts maladie, défense, reste du plan de 150 Md€ non ventilé, dont le frein d'urgence de 20 Md€ (contenu non publié), annulation des 1 588 suppressions nettes de postes d'enseignants du projet de budget 2027 (règle des recrutements publics : 1 588 × 61,6 k€ ≈ 0,1 Md€, sous 1 Md€), crédit d'impôt « productivité » (montant non publié), leasing social étendu aux voitures électriques d'occasion (paramètres non publiés), livret d'épargne « garde d'enfant » pour financer des places en crèche et 200 000 professionnels de la petite enfance formés d'ici 2030 (paramètres non publiés), barème kilométrique revalorisé, prime carburant exonérée portée à 1 000 €, moitié du boîtier E85 financée, aides aux gros rouleurs élargies et bonus électrique étendu aux véhicules d'occasion (paramètres non publiés), donations facilitées aux petits-enfants (fiscalité des donations des grands-parents alignée sur celle des parents aux enfants, entretien à Sud Ouest du 11/11/2026), petits-neveux et petites-nièces et transmission des exploitations agricoles (abattements et coût non publiés), garantie Visale étendue à tous les locataires (entretien à Sud Ouest, 11/11/2026) et nouvelles résidences universitaires pour les étudiants et les jeunes actifs (paramètres non publiés), prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11/2026 : assiette non publiée, aucune base officielle ni chiffrage indépendant, non compté), pensions alimentaires reçues pour les enfants sorties du revenu imposable (redit au débat TF1-LCI du 16/11/2026 ; plafond et coût non publiés), 3 000 magistrats et greffiers de plus (règle des recrutements publics : 3 000 × 61,6 k€ × 70 % ≈ 0,13 Md€, sous 1 Md€), suppression d'un échelon de collectivité territoriale (échelon et économie non publiés ; comptée par le camp avec les 100 000 postes), banque nationale d'investissement dans le logement qui financerait jusqu'à la moitié du prix d'une première résidence des jeunes et des classes moyennes, aux côtés de l'acquéreur, sa part étant rachetée ou remboursée à la revente (franceinfo, 12/11/2026 ; entretien à Sud Ouest, 11/11/2026 : prise de participation, opération financière, « aucun coût pour les finances publiques » selon le candidat ; dotation non publiée par le candidat, l'amorçage de 5 Md€ venant de son entourage selon l'AFP ; plafond et conditions non publiés), suspension pendant deux ans de l'imposition des plus-values de cession des résidences secondaires (porte-parole de campagne, RCF, 12/11/2026 : mesure temporaire, dates non publiées ; achevée avant 2030 si elle commence avec la première loi de finances du mandat, sans effet sur le solde de 2030), statut du bailleur privé, amortissement fiscal élargi contre un engagement de location (entretien à Sud Ouest, 11/11/2026 : taux, durée et coût non publiés), plan d'investissement de 160 M€ par an dans la géothermie (entretien à Sud Ouest, 11/11/2026 : 0,16 Md€, sous 1 Md€), revalorisation des « toutes petites retraites » (débat TF1-LCI, 16/11/2026 : seuil et montant non publiés ; même lecture que les petites retraites de Glucksmann)",
+    "sum": -61.1,
+    "p10": -70.2,
+    "p90": -55.8,
+    "realsum": -61.1,
+    "missing": "classes de moins de 20 élèves, baisse des cotisations salariales (« droit au brut » : 250 € nets de plus par mois au salaire médian dès 2027 selon son site, « autour de 200-250 euros » le 12/11/2026, financés par des économies sur l'assurance chômage, dont 5 Md€ par la durée d'indemnisation, et sur les indemnités journalières ; barème, coût et économies non publiés ; la campagne présente la suppression de la CSG sur les salaires, comptée dans sa fiche, comme le moyen du « droit au brut » (site, 16/11/2026) : rien de plus n'est compté), arrêts maladie, défense, reste du plan de 150 Md€ non ventilé, dont le frein d'urgence de 20 Md€ (contenu non publié), annulation des 1 588 suppressions nettes de postes d'enseignants du projet de budget 2027 (règle des recrutements publics : 1 588 × 61,6 k€ ≈ 0,1 Md€, sous 1 Md€), crédit d'impôt « productivité » (montant non publié), leasing social étendu aux voitures électriques d'occasion (paramètres non publiés), livret d'épargne « garde d'enfant » pour financer des places en crèche et 200 000 professionnels de la petite enfance formés d'ici 2030 (paramètres non publiés), barème kilométrique revalorisé, prime carburant exonérée portée à 1 000 €, moitié du boîtier E85 financée, aides aux gros rouleurs élargies et bonus électrique étendu aux véhicules d'occasion (paramètres non publiés), donations facilitées aux petits-enfants (fiscalité des donations des grands-parents alignée sur celle des parents aux enfants, entretien à Sud Ouest du 11/11/2026), petits-neveux et petites-nièces et transmission des exploitations agricoles (abattements et coût non publiés), garantie Visale étendue à tous les locataires (entretien à Sud Ouest, 11/11/2026) et nouvelles résidences universitaires pour les étudiants et les jeunes actifs (paramètres non publiés), prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11/2026 : assiette non publiée, aucune base officielle ni chiffrage indépendant, non compté), pensions alimentaires reçues pour les enfants sorties du revenu imposable (redit au débat TF1-LCI du 16/11/2026 ; plafond et coût non publiés), 3 000 magistrats et greffiers de plus (règle des recrutements publics : 3 000 × 61,6 k€ × 70 % ≈ 0,13 Md€, sous 1 Md€), suppression d'un échelon de collectivité territoriale (échelon et économie non publiés ; comptée par le camp avec les 100 000 postes), banque nationale d'investissement dans le logement qui financerait jusqu'à la moitié du prix d'une première résidence des jeunes et des classes moyennes, aux côtés de l'acquéreur, sa part étant rachetée ou remboursée à la revente (franceinfo, 12/11/2026 ; entretien à Sud Ouest, 11/11/2026 : prise de participation, opération financière, « aucun coût pour les finances publiques » selon le candidat ; dotation non publiée par le candidat, l'amorçage de 5 Md€ venant de son entourage selon l'AFP ; plafond et conditions non publiés), suspension pendant deux ans de l'imposition des plus-values de cession des résidences secondaires (porte-parole de campagne, RCF, 12/11/2026 : mesure temporaire, dates non publiées ; achevée avant 2030 si elle commence avec la première loi de finances du mandat, sans effet sur le solde de 2030), statut du bailleur privé, amortissement fiscal élargi contre un engagement de location (entretien à Sud Ouest, 11/11/2026 : taux, durée et coût non publiés), plan d'investissement de 160 M€ par an dans la géothermie (entretien à Sud Ouest, 11/11/2026 : 0,16 Md€, sous 1 Md€), revalorisation des « toutes petites retraites » (débat TF1-LCI, 16/11/2026 : seuil et montant non publiés ; même lecture que les petites retraites de Glucksmann)",
     "n": 7,
-    "cost": -93.3,
+    "cost": -71.1,
     "gain": 10.0,
     "confirm": []
    },
    "short": "Attal",
-   "promise": "Promet la suppression de la CSG sur les salaires, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.",
+   "promise": "Promet la suppression de la CSG sur les salaires, jusqu'à 270 € nets par mois, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.",
    "obstacle_main": "La révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen."
   },
   {
    "id": "retailleau",
    "name": "Bruno Retailleau",
    "party": "LR",
-   "poll": "6,0 %",
+   "poll": "5,7 %",
    "summary": "Promet 197 Md€ d'économies par an en 2032, 51 Md€ de baisses d'impôts, un âge minimal de 63 ans et un référendum sur l'immigration. Notre chiffrage : −21,7 Md€ par an en 2030, soit −702 € par ménage. Principal obstacle : la révision de la Constitution, pour le référendum sur l'immigration, les aides réservées après cinq ans, les peines planchers et la règle d'or.",
    "measures": [
     {
@@ -13463,7 +13562,7 @@
         "url": "https://www.avecretailleau.fr/api/media/file/20261011_Fiches_presse_comptes_publics_mise_en_page%20(1).pdf"
        }
       ],
-      "note": "Le départ à 63 ans avec décote peut avoir un effet dès 2028 (décote sur les nouveaux retraités), dans un sens ou dans l'autre selon les générations ; sans chiffrage indépendant du dispositif, la valeur commune s'applique, comme pour Philippe, Lisnard et Zemmour. Volet retraites du 14-15/10/2026 : carrières longues remplacées par une enveloppe confiée aux branches, taux plein dès 63 ans et plus de cotisations retraite ni chômage pour une carrière complète (43 ans) avant 63 ans, surcote de 5 % par année après 65 ans, écart avec l'ancien calcul plafonné à 3 % en 2028, 6 % en 2029 et 12 % en 2030 : sans chiffrage, la valeur commune s'applique."
+      "note": "Le départ à 63 ans avec décote peut avoir un effet dès 2028 (décote sur les nouveaux retraités), dans un sens ou dans l'autre selon les générations ; sans chiffrage indépendant du dispositif, la valeur commune s'applique, comme pour Philippe, Lisnard et Zemmour. Volet retraites du 14-15/10/2026 : carrières longues remplacées par une enveloppe confiée aux branches, taux plein dès 63 ans et plus de cotisations retraite ni chômage pour une carrière complète (43 ans) avant 63 ans, surcote de 5 % par année après 65 ans, écart avec l'ancien calcul plafonné à 3 % en 2028, 6 % en 2029 et 12 % en 2030 : sans chiffrage, la valeur commune s'applique. Sud Radio (18/11/2026) : départ à 63 ans « avec une décote de -7 % » à l'oral ; les fiches presse écrites du camp (12/10/2026) disent « une décote de 7 % par année manquante » : l'écrit prime, 7 % par an retenus."
      },
      "quiz_text": "Retraite possible dès 63 ans avec une pension réduite, pleine à 65 ans",
      "quiz_concret": "Vous choisissez : partir plus tôt en touchant moins, ou attendre 65 ans.",
@@ -15678,7 +15777,7 @@
     "p10": -29.3,
     "p90": -9.2,
     "realsum": -24.2,
-    "missing": "capitalisation, audiovisuel public, aide au développement (« Coopération » : 3,5 Md€ en 2032 selon le camp, sans niveau publié), et des postes du plan non vérifiés : collectivités 10, budget base zéro 11,5, santé 4, formation professionnelle 6 Md€ (niveaux annuels en 2032), réduction d'impôt sur les intérêts d'emprunt de la résidence principale (50 à 100 % des intérêts selon le nombre d'enfants, plafonnée à 400 € plus 400 € par enfant ; nombre de ménages accédants concernés et intérêts versés : pas de source officielle ouverte), prêt à taux zéro pour tous les primo-accédants (neuf et ancien, sans zonage), baisse des droits de succession « au maximum du possible », donations de 150 000 € par parent aux moins de 30 ans pendant trois ans, cumul emploi-retraite exonéré, Fonds France Production (0,6 Md€/an), suramortissement IA et robotique, arrêt de subventions à des associations (3 Md€ en 2032, sans chiffrage indépendant), autres lignes immigration du plan, reprises de l'Observatoire de l'immigration et de la démographie et que les données officielles ne permettent pas de refaire sans ses hypothèses (niveaux 2032) : immigration familiale 1,5, étudiants au-delà des droits différenciés (preuve de ressources) 1,4, titres au coût complet 0,5, hébergement d'urgence fermé aux personnes sous OQTF 0,5, mineurs non accompagnés, soins des demandeurs d'asile et contentieux 0,8, statut du bailleur privé (amortissement du bâti à 4 % par an, option pour le prélèvement forfaitaire à 30 % ; coût statique non publié, le « gain net » de 1,9 Md€ annoncé repose sur des recettes induites), barème kilométrique réévalué (ampleur non publiée), agences et opérateurs au-delà de la valeur commune (contrats non renouvelés et départs volontaires 5, structures 4, concours recentrés 3,5 ; niveaux 2032, chiffres du camp), recentrage des aides versées aux moins de 25 ans (5 Md€ selon le camp, financement du pré-apprentissage), apprentissage : fin des aides et des prises en charge dans le supérieur tertiaire (4 Md€ dont 2,6 réaffectés) et financement selon les résultats (2 à 3 Md€), capitalisation (cotisation de 1 % du salaire sous le plafond de la Sécurité sociale, 6 Md€ en 2032 selon le camp, gérée par les partenaires sociaux ; cotisation additionnelle de la fonction publique sur les primes doublée), épargne retraite (déduction portée à 50 000 € par an, crédit d'impôt de 30 % pour les non-imposables, rente défiscalisée à 25 %), lignes de moins de 1 Md€ du logement social (exonération d'impôt sur les sociétés des bailleurs sociaux supprimée, 350 M€ redistribués ; APL des étudiants étrangers hors UE non boursiers 200 M€ et des étudiants des familles aisées 200 à 300 M€), garde d'enfants (plafond du crédit d'impôt famille supprimé, exonération de l'aide de l'employeur portée à 7 000 € : 0,8 Md€ selon le camp, sous 1 Md€), recrutement de procureurs, juges d'instruction et greffiers (« un peu moins de 2 milliards », franceinfo, 12/11/2026 : horizon et nombre de postes non publiés), titre de séjour doublé (350 → 700 €) et taxe de naturalisation portée à 1 000 € (livret du 12/11/2026 : recettes sous 1 Md€ ; ligne du camp de 0,5 Md€ en 2032 déjà listée)",
+    "missing": "capitalisation, audiovisuel public, aide au développement (« Coopération » : 3,5 Md€ en 2032 selon le camp, sans niveau publié), et des postes du plan non vérifiés : collectivités 10, budget base zéro 11,5, santé 4, formation professionnelle 6 Md€ (niveaux annuels en 2032), réduction d'impôt sur les intérêts d'emprunt de la résidence principale (50 à 100 % des intérêts selon le nombre d'enfants, plafonnée à 400 € plus 400 € par enfant ; nombre de ménages accédants concernés et intérêts versés : pas de source officielle ouverte), prêt à taux zéro pour tous les primo-accédants (neuf et ancien, sans zonage), baisse des droits de succession « au maximum du possible », donations de 150 000 € par parent aux moins de 30 ans pendant trois ans, cumul emploi-retraite exonéré, Fonds France Production (0,6 Md€/an), suramortissement IA et robotique, arrêt de subventions à des associations (3 Md€ en 2032, sans chiffrage indépendant), autres lignes immigration du plan, reprises de l'Observatoire de l'immigration et de la démographie et que les données officielles ne permettent pas de refaire sans ses hypothèses (niveaux 2032) : immigration familiale 1,5, étudiants au-delà des droits différenciés (preuve de ressources) 1,4, titres au coût complet 0,5, hébergement d'urgence fermé aux personnes sous OQTF 0,5, mineurs non accompagnés, soins des demandeurs d'asile et contentieux 0,8, statut du bailleur privé (amortissement du bâti à 4 % par an, option pour le prélèvement forfaitaire à 30 % ; coût statique non publié, le « gain net » de 1,9 Md€ annoncé repose sur des recettes induites), barème kilométrique réévalué (ampleur non publiée), agences et opérateurs au-delà de la valeur commune (contrats non renouvelés et départs volontaires 5, structures 4, concours recentrés 3,5 ; niveaux 2032, chiffres du camp), recentrage des aides versées aux moins de 25 ans (5 Md€ selon le camp, financement du pré-apprentissage), apprentissage : fin des aides et des prises en charge dans le supérieur tertiaire (4 Md€ dont 2,6 réaffectés) et financement selon les résultats (2 à 3 Md€), capitalisation (cotisation de 1 % du salaire sous le plafond de la Sécurité sociale, 6 Md€ en 2032 selon le camp, gérée par les partenaires sociaux ; cotisation additionnelle de la fonction publique sur les primes doublée), épargne retraite (déduction portée à 50 000 € par an, crédit d'impôt de 30 % pour les non-imposables, rente défiscalisée à 25 %), lignes de moins de 1 Md€ du logement social (exonération d'impôt sur les sociétés des bailleurs sociaux supprimée, 350 M€ redistribués ; APL des étudiants étrangers hors UE non boursiers 200 M€ et des étudiants des familles aisées 200 à 300 M€), garde d'enfants (plafond du crédit d'impôt famille supprimé, exonération de l'aide de l'employeur portée à 7 000 € : 0,8 Md€ selon le camp, sous 1 Md€), recrutement de procureurs, juges d'instruction et greffiers (« un peu moins de 2 milliards », franceinfo, 12/11/2026 : horizon et nombre de postes non publiés), titre de séjour doublé (350 → 700 €) et taxe de naturalisation portée à 1 000 € (livret du 12/11/2026 : recettes sous 1 Md€ ; ligne du camp de 0,5 Md€ en 2032 déjà listée), baisse de la facture d'électricité de « deux mois de facture » par an (Sud Radio, 18/11/2026 : montant et calcul non publiés), conseil juridique des étrangers en centre de rétention confié à l'OFII au lieu des associations (Sud Radio, 18/11/2026 : coût non publié)",
     "n": 23,
     "cost": -52.8,
     "gain": 31.1,
@@ -15737,7 +15836,8 @@
     },
     "tous": [
      "Fin de MaPrimeRénov' : plus d'aide de l'État pour isoler un logement ou changer de chauffage.",
-     "Congé de naissance jusqu'aux 6 mois de l'enfant, payé 70 % du salaire (2 mois aujourd'hui) : un choix de garde, pas un gain, non calculé ici."
+     "Congé de naissance jusqu'aux 6 mois de l'enfant, payé 70 % du salaire (2 mois aujourd'hui) : un choix de garde, pas un gain, non calculé ici.",
+     "Électricité : « deux mois de facture électrique en moins » par an annoncés (Sud Radio, 18/11/2026), par l'arrêt des subventions aux énergies renouvelables : montant et calcul non publiés, non calculé ici."
     ],
     "logement": [
      {
@@ -17978,7 +18078,7 @@
     "p10": -122.8,
     "p90": -76.8,
     "realsum": -112.9,
-    "missing": "ministère de la Remigration, objectif de « deux millions d'immigrés en moins à la fin du quinquennat » (10/11/2026, non chiffré), capitalisation, renforcement des armées (sans montant), réforme des allocations chômage (non détaillée), reste du plan de 140 Md€ (budget2027.fr, économies sans chiffrage indépendant : intelligence artificielle 5, politique de la ville 8, France Travail 4, audiovisuel 4, fraude 2 à 3 (champ non publié : leviers du CAE impossibles à rapporter à la mesure), associations 1 à 2, presse 0,2, syndicats 0,1, CESE et Ceser 0,07), ARS 1 et autres agences nommées 1 du même plan (Arcom, Conseil national du bruit, Haut Conseil à l'égalité, Observatoire de la laïcité, Haut Comité pour le logement…) : agences nommées, hors valeur commune des agences, qui vise la suppression ou la fusion de la plupart d'entre elles ; missions reprises, valeur propre 0, comme les ARS, DREAL et DDTM de Lisnard et l'Office français de la biodiversité de Retailleau (ARS : missions de santé que le plan ne supprime pas ; Arcom : missions imposées par le droit de l'UE ; autres instances : budgets non isolés, liste ouverte), lignes immigration de moins de 1 Md€ : visas plus chers 0,7, hébergement d'urgence fermé aux étrangers en situation irrégulière 0,7, aide juridictionnelle réservée aux Français 0,1, fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée (programme de 2022, non reconfirmée), 1 000 médecins salariés par l'État dans les déserts médicaux (programme de 2022, non reconfirmé ; règle des recrutements publics : 1 000 × 61,6 k€ ≈ 0,06 Md€), revenu des médecins retraités qui reprennent une activité dispensé d'impôt sur le revenu (franceinfo, 12/11/2026 : revenu visé, plafond et durée non publiés)",
+    "missing": "ministère de la Remigration, objectif de « deux millions d'immigrés en moins à la fin du quinquennat » (10/11/2026, non chiffré), capitalisation, renforcement des armées (sans montant), réforme des allocations chômage (non détaillée), reste du plan de 140 Md€ (budget2027.fr, économies sans chiffrage indépendant : intelligence artificielle 5, politique de la ville 8, France Travail 4, audiovisuel 4, fraude 2 à 3 (champ non publié : leviers du CAE impossibles à rapporter à la mesure), associations 1 à 2, presse 0,2, syndicats 0,1, CESE et Ceser 0,07, le CESE étant inscrit dans la Constitution : exige une révision), ARS 1 et autres agences nommées 1 du même plan (Arcom, Conseil national du bruit, Haut Conseil à l'égalité, Observatoire de la laïcité, Haut Comité pour le logement…) : agences nommées, hors valeur commune des agences, qui vise la suppression ou la fusion de la plupart d'entre elles ; missions reprises, valeur propre 0, comme les ARS, DREAL et DDTM de Lisnard et l'Office français de la biodiversité de Retailleau (ARS : missions de santé que le plan ne supprime pas ; Arcom : missions imposées par le droit de l'UE ; autres instances : budgets non isolés, liste ouverte), lignes immigration de moins de 1 Md€ : visas plus chers 0,7, hébergement d'urgence fermé aux étrangers en situation irrégulière 0,7, aide juridictionnelle réservée aux Français 0,1, fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée (programme de 2022, non reconfirmée), 1 000 médecins salariés par l'État dans les déserts médicaux (programme de 2022, non reconfirmé ; règle des recrutements publics : 1 000 × 61,6 k€ ≈ 0,06 Md€), revenu des médecins retraités qui reprennent une activité dispensé d'impôt sur le revenu (franceinfo, 12/11/2026 : revenu visé, plafond et durée non publiés)",
     "n": 16,
     "cost": -138.7,
     "gain": 33.1,
@@ -17999,12 +18099,12 @@
   "<b>Ce qui n'est pas compté.</b> Les mesures non reconfirmées en 2026, ou connues par une seule reprise de presse qui ne cite pas le candidat (marquées « À confirmer »), et les mesures dont un paramètre clé n'est pas publié (ampleur, taux, plafond) : elles sont « non chiffrables », avec une fourchette indicative dans la fiche. Une mesure qui exige une révision est comptée « si elle passe », chez tous les candidats. Pas d'effets macroéconomiques de bouclage ; effets de comportement seulement quand ils sont documentés. Un chiffrage qu'un candidat reprend comme le sien (d'un institut, d'une association ou d'un parti) compte comme chiffre de son camp, quel que soit son auteur. Le reprendre comme le sien, c'est publier ce chiffre comme son propre chiffre ; citer une étude comme une base parmi d'autres n'en fait pas un chiffre du camp. Une économie qui repose sur une baisse de flux ou un comportement supposés par une seule note n'est pas comptée, sauf si une évaluation ou une donnée officielle les établit. Un document d'un parti publié avant la désignation de son candidat (un projet de parti, par exemple) ne vaut programme que si le candidat le reprend ; un document officiel publié depuis (le contre-budget d'un groupe parlementaire, par exemple) compte. Une demande adressée au Gouvernement en place d'utiliser un outil qui existe déjà (état d'urgence, couvre-feux, drones, militaires en garde statique) n'est pas une proposition de programme. Le tableau « Qu'est-ce qui peut passer ? » et la répartition des verdicts d'un candidat portent sur les mêmes mesures que les totaux et le quiz : hors mesures non confirmées et doublons (les mesures non chiffrables y sont).",
   "<b>Fourchette probable.</b> Chaque mesure a une valeur basse et une valeur haute ; le total en tire une fourchette à 80 % par simulation (20 000 tirages, propres à chaque candidat).",
   "<b>Verdicts.</b> Le verdict porte sur la voie juridique et pratique de la mesure, ni sur son coût ni sur l'écart entre le chiffre annoncé par le camp et notre chiffrage, que le chiffrage montre déjà, pour tous. Faisable : par décret ou par une loi ordinaire (lois de finances et de financement de la Sécurité sociale comprises), sans autre condition hors de cette décision, avec la majorité à l'Assemblée que suppose tout programme ; « faisable » ne dit rien du coût (c'est le chiffrage) ni de l'effet de la mesure ; une dépense ou une baisse d'impôt ou de cotisations non financée reste faisable, et l'obstacle le dit (« financement non précisé dans la mesure »). Sous conditions : la mesure dépend d'une condition identifiée hors de cette décision (accord de tiers : collectivités, partenaires sociaux, autre État ou institution ; contrats en cours ; obligation européenne à remplir par d'autres moyens ; capacités à bâtir : recrutements, places, constructions, moyens de contrôle ; rendement ou contenu d'une autre mesure ; risque de censure sur un point précis). Un paramètre, un contenu ou une échéance non publiés ne changent pas le verdict : l'obstacle les dit (« … non publié »), et la mesure est non chiffrable ou comptée selon la règle des objectifs. Assurance chômage : ses règles sont fixées par une convention des partenaires sociaux agréée par le Gouvernement, par décret faute d'accord, ou par la loi : la décision reste publique, la mesure est faisable. Très difficile : accord extérieur nécessaire, à l'unanimité des États de l'UE ou d'autres États, ou censure probable au vu de décisions ou d'avis sur des dispositifs proches. Exige une révision : impossible en l'état du droit sans réviser la Constitution ou les traités ; la fiche indique le chemin et qui doit dire oui. Une même situation juridique reçoit le même verdict chez tous les candidats ; une fiche qui réunit plusieurs mesures prend le verdict de la plus contraignante.",
-  "<b>Sources.</b> 425 sources distinctes pour les chiffrages des fiches, sans compter celles du quiz, des repères et du volet « Vie quotidienne ». L'année des chiffrages publiés est affichée ; « base 2022 » signale une estimation antérieure au programme 2027, « agrégateur » un site de synthèse à confirmer par une source primaire (repéré par son nom de domaine exact, et signalé partout où il est cité : estimations, données d'entrée, Vie quotidienne). Une source a une seule année, celle de sa publication, et un seul titre (son auteur et sa date), partout où elle est citée ; dans les repères « où en est la France », l'année indiquée est celle du chiffre (« données 2025 »).",
+  "<b>Sources.</b> 432 sources distinctes pour les chiffrages des fiches, sans compter celles du quiz, des repères et du volet « Vie quotidienne ». L'année des chiffrages publiés est affichée ; « base 2022 » signale une estimation antérieure au programme 2027, « agrégateur » un site de synthèse à confirmer par une source primaire (repéré par son nom de domaine exact, et signalé partout où il est cité : estimations, données d'entrée, Vie quotidienne). Une source a une seule année, celle de sa publication, et un seul titre (son auteur et sa date), partout où elle est citée ; dans les repères « où en est la France », l'année indiquée est celle du chiffre (« données 2025 »).",
   "<b>Résumés.</b> Même gabarit pour tous : ce que le candidat promet, notre chiffrage, le principal obstacle. Celui-ci est la condition juridique ou pratique des mesures retenues qui ont le verdict le plus contraignant (« exige une révision » d'abord, puis « très difficile »), jamais un coût, un rendement ou un paramètre non publié.",
   "<b>Vie quotidienne.</b> Pour huit thèmes (sécurité, santé, école, environnement, logement, libertés, économie, rayonnement), on liste 1 à 5 propositions publiées par candidat. Une proposition est « vérifiable » (précise) si elle donne un chiffre, une échéance ou un moyen juridique précis, c'est-à-dire un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou accord nommé et ce qui y change) ; sinon c'est une « intention » (un objectif, une orientation, ou une création sans paramètre : plan, pôle, fonds). La même règle s'applique à tous. Chaque proposition affichée est attribuée au candidat par au moins une source qui parle pour lui : le candidat lui-même (discours, entretien, tribune, réseau officiel) ou son site de campagne ; un document officiel de son parti ou de son groupe publié après sa désignation, ou repris par lui ; une personne au rôle officiel dans sa campagne ; un média reconnu qui le cite ou rapporte précisément ses propos, datés, ou deux médias reconnus indépendants qui rapportent la même proposition ; pour une proposition de 2022, une analyse d'une institution reconnue ou d'un média reconnu qui décrit son programme officiel. Un agrégateur, un site non officiel, une seule reprise de presse sans citation ou une étude ne suffisent pas : sans autre source, la proposition n'est pas affichée (le contrôle est automatique, proposition par proposition), et une source qui parle pour le candidat remplace l'agrégateur ou le site non officiel qui portait la même proposition. Une proposition est de 2026 si une telle source la porte en 2026 (site de campagne, document du parti publié depuis la désignation, entretien) ; sinon elle est signalée « non reconfirmée », chez tous ; une page sans date ne reconfirme pas, sauf sur le site de campagne du candidat, ouvert pour cette élection, et quand une partie seulement d'une proposition est redite en 2026, les deux parties sont affichées séparément. Quand un thème compte plus de cinq propositions, on affiche, dans le même ordre pour tous : d'abord celles de 2026 (les non reconfirmées passent après), parmi elles les précises avant les intentions, puis les plus récentes ; à égalité ou à date inconnue, l'ordre déjà affiché est gardé (une page de programme mise à jour n'est pas une nouvelle annonce) ; une proposition remplacée par sa version précise n'est pas gardée en double, et une même proposition n'est affichée que dans un thème, le plus précis (l'énergie et le nucléaire dans « environnement »). Les propositions hors affichage restent notées dans le registre de suivi du projet (dépôt public). Le site n'affiche pas d'avis d'études sur ces propositions : seules les sources qui les attribuent au candidat sont données. Les repères « où en est la France » sont les mêmes pour tous les candidats : pour chaque thème, 7 à 14 chiffres officiels (SSMSI, Insee, DREES, DEPP, Dares, COR, Ofpra, Ancols, Eurostat, OCDE, OTAN, RTE, SDES, Citepa, Banque de France, Cour des comptes, Sénat, etc. ; seul le classement de la liberté de la presse vient d'une ONG, RSF, et il est signalé comme tel), choisis parmi ceux que les bilans officiels mettent en avant, problèmes comme progrès, y compris les faits sensibles (violences sexuelles, part des étrangers parmi les mis en cause) avec leur définition exacte. Chacun donne le dernier chiffre publié, de préférence son évolution sur au moins cinq ans (jamais depuis une année choisie pour son creux ou son pic), et la précaution de lecture donnée par la source (par exemple : délinquance enregistrée, pas commise ; « mis en cause » n'est pas « condamné »). Quatre sont affichés, les autres se déplient. Le site de campagne d'un candidat n'est jamais utilisé comme source sur un autre.",
   "<b>Simulateur.</b> Il applique à votre situation tout gain ou toute perte que le candidat a publiés et confirmés en 2026, qu'ils soient comptés ou non dans notre total, à terme, sans les mesures de financement ; aucun gain n'est compté pour une mesure non confirmée ou sans montant publié (si un paramètre clé manque, une note le dit, sans montant). Droit actuel : retraite comparée au droit actuel après la suspension de la réforme 2023 ; SMIC 1 477,93 € net (juin 2026) ; AAH 1 041,59 € par mois au maximum ; barème 2026 de l'impôt sur le revenu avec décote, sur le net imposable, pour une personne seule (parent isolé si elle a des enfants) ou un couple marié ou pacsé (deux parts, revenu du conjoint de même nature que le vôtre, décote des couples, plafond du quotient au-delà de deux parts ; impôt calculé pour les actifs et les retraités), le même pour les actifs et les retraités (pour une pension : abattement de 10 %, au moins 454 € par pensionné et au plus 4 439 € par foyer, et CSG au taux normal) ; allocations familiales 2026 avant modulation ; minimum vieillesse (ASPA) 1 043,59 € par mois au plus pour une personne seule, 1 620,18 € pour un couple, moins les autres ressources. Les pertes sont comptées comme les gains : aides réservées selon la nationalité ou la durée de séjour (même calcul pour les quatre candidats qui en proposent, chacun avec sa condition, « si la révision de la Constitution passe », et pour un ressortissant de l'UE « si le droit de l'UE change » ; l'AAH et le minimum vieillesse suivent la condition des minima sociaux chez ces quatre candidats, leur mesure visant toutes les prestations non contributives ou les nommant ; hors Union européenne, le minimum vieillesse exige déjà dix ans de titre de séjour permettant de travailler), gel des prestations, baisse des minima ; le logement compte aussi (APL réservées selon la nationalité, relevées de 10 % ou gelées, à partir du montant que vous indiquez ; les mesures sans paramètre publié, comme les prêts à taux zéro, sont signalées en note ; une réduction d'impôt sur les intérêts d'emprunt dont le plafond est publié est affichée « jusqu'à » ce plafond, dans la limite de votre impôt, sans être ajoutée, car elle dépend de vos intérêts) ; les jours de carence et la durée du chômage sont affichés à part, dans les deux sens (une durée allongée comme une durée raccourcie), car ils ne jouent qu'en cas d'arrêt ou de chômage long ; un service obligatoire des jeunes est affiché à part pour les 17-25 ans, avec la rémunération publiée ou retenue dans la fiche, ou une note si elle n'est pas publiée. Le SMIC est un plancher : pour un agent public, le nouveau traitement est le plus élevé des deux, salaire relevé par le point d'indice ou nouveau SMIC, jamais leur somme. Une AAH ou un minimum vieillesse relevés augmentent d'autant l'allocation de tout allocataire (elle complète ses autres ressources jusqu'au montant maximal). Les réformes du quotient familial ou conjugal de chaque candidat s'appliquent au couple (part fiscale, plafond, impôt des jeunes parents ; fin du quotient conjugal : chacun imposé sur son revenu, au même barème, calculée pour un couple sans enfant, une note avec enfants tant que leur répartition n'est pas publiée). Une cantine gratuite rapporte les frais de cantine que vous indiquez. Des droits d'inscription relevés pour les étudiants étrangers sont affichés « jusqu'à » l'écart publié pour un étudiant aujourd'hui exonéré, sans être ajoutés, ou en note si le montant n'est pas publié. Le report de l'âge de la retraite est exprimé en années, avec la durée de cotisation pour le taux plein quand elle est publiée. Un avantage déjà acquis aujourd'hui n'est pas compté comme un gain (heures sup : impôt et cotisations du salarié déjà exonérés). La fin des certificats d'économies d'énergie compte −7 c€ par litre de carburant, TTC (coût moyen officiel de 2022 à 2025), la même hypothèse pour tous les candidats qui la proposent. Une hausse publiée en fourchette (« jusqu'à ») compte pour son montant minimal, l'autre borne étant donnée en note (salaires des enseignants, la même règle pour tous les candidats qui en proposent) ; un gel ne s'applique qu'aux prestations que le programme nomme. Un gain publié pour quelques niveaux de salaire seulement (au SMIC et au salaire médian, par exemple) est appliqué entre ces niveaux par interpolation (notre calcul), au prorata du salaire en dessous du premier, et rien n'est calculé au-dessus du dernier tant que le barème n'est pas publié (une note le dit), sauf quand le mécanisme publié vaut pour tous les salaires (par exemple des cotisations en moins « dès le premier euro ») : le gain est alors au prorata du salaire au-dessus du dernier niveau aussi. Un barème publié par écrit (taux par tranche de salaire) prime sur des montants donnés à l'oral pour quelques niveaux : il est appliqué à chaque salaire, y compris au-delà du dernier seuil, où le gain reste plafonné. Un gain publié qui comprend ou remplace une baisse déjà calculée (une baisse de la CSG, par exemple) ne s'y ajoute jamais : le plus grand des deux est retenu jusqu'au dernier niveau publié, la baisse déjà calculée seule au-delà ; de même, un SMIC visé « baisse de la CSG comprise » ne s'ajoute pas à cette baisse (le plus grand des deux). Un minimum social remplacé par un barème publié (montant sans activité, avec activité, puis dégressif avec le salaire) est calculé sur ce barème. Une baisse de cotisations annoncée pour les « salariés », sans exclure le public, est appliquée aussi aux agents publics (hypothèse écrite dans la note, la même pour tous). Les gains de salaire (hausse du SMIC, du point d'indice ou des salaires des enseignants, baisse de la CSG ou des cotisations) sont comptés après l'impôt sur le revenu qu'ils font payer, avec le même barème pour tous, après la réforme de l'impôt du candidat s'il en propose une : le revenu imposable augmente de la hausse de salaire (rapportée au net imposable) ou de la part déductible du prélèvement baissé (entière pour des cotisations, 6,8 points sur 9,2 pour une baisse de CSG dont la part n'est pas précisée) ; l'impôt dû apparaît sur une ligne à part, et il est nul pour qui reste sous le seuil d'imposition. Pour un retraité, la même règle vaut pour une variation de la pension (un gel fait baisser un peu l'impôt), et la réforme de l'impôt du candidat qui vaut pour tous les contribuables est appliquée (part fiscale, quotient familial, fin de l'abattement de 10 % sur les pensions). Ce sont des ordres de grandeur.",
   "<b>Quiz.</b> 20 duels tirés au hasard entre deux candidats sur un même thème ; chaque candidat apparaît 5 fois et aucune paire ne se répète. Deux propositions de la même famille (même sens et même instrument : deux retours à 62 ans, deux plans de suppression de postes, deux hausses du salaire des enseignants…) ne s'affrontent jamais, et une famille ne revient qu'une fois par partie : sont de la même famille les propositions qui ont le même « Pour » et le même « Contre », et celles d'une liste publiée avec les données. Les duels portent sur les mesures des fiches (chiffrées ou non chiffrables) et sur les propositions précises et reconfirmées du volet « Vie quotidienne » (école, santé, logement, économie) ; un candidat sans proposition de ce type sur un thème n'y apparaît pas. À l'accueil, on peut choisir les thèmes qui comptent pour soi : ils reviennent plus souvent et comptent double dans le résultat. Chaque proposition est reformulée en langage courant. Dessous, un constat : la réalité française que la proposition veut traiter, avec le chiffre officiel (le dernier chiffre officiel et son évolution en %, même forme pour toutes ; les problèmes réels sont dits clairement, sans cause ni jugement) ; une mesure institutionnelle ou d'organisation (Constitution, référendum, organisation de l'État, des agences ou des établissements), ou une mesure dont aucune série officielle ne mesure ce qu'elle vise, n'a pas de constat, avec la même règle pour toutes. Puis « Pour » et « Contre » donnent en une ligne le meilleur argument réel de ceux qui la défendent et de ceux qui la critiquent : un fait que la proposition ne dit pas d'elle-même (ce qui s'est passé quand elle a été appliquée, un ordre de grandeur), jamais la proposition redite autrement ; avec la force des preuves de chacun (solides, mitigées, faibles, pas d'étude). Sous le duel, des cas réels sourcés (en France d'abord) et l'état des études. Même méthode pour toutes les mesures, sans fausse symétrie : on n'invente ni argument ni exemple pour équilibrer, et un exemple n'est retenu que s'il est pertinent, observé et de source reconnue ; on montre où penchent les faits et le lecteur juge ; les mesures du même type ont les mêmes cas et les mêmes niveaux de preuve. Le « Contre » tient compte du reste du programme : si une autre mesure du même candidat répond à la critique, elle est signalée. Pas de nom de candidat, pas de coût de la mesure, pas de faisabilité juridique, pas de jugement. Le résultat montre d'abord le ou les candidats les plus proches et ce qu'impliquent les propositions retenues (faisabilité, déficit ; « Les deux » compte la moyenne des deux effets), puis une pastille par proposition vue. La proximité est la part des propositions d'un candidat que vous avez retenues (choisie ou « Les deux ») ; une proposition d'un thème que vous marquez compte deux fois. Les égalités ne sont jamais départagées : les ex æquo sont signalés et affichés dans un ordre tiré au hasard. Suivent la tendance par thème, ce qui colle et ce qui colle moins chez les plus proches, et le détail des duels. Quiz : les exemples sont des cas observés en France (ou au niveau de l'Union quand la France y participe) ; quand des évaluations n'existent qu'à l'étranger, l'état des études le dit en une phrase, sans pays ni chiffre, et le niveau de preuve est au plus « faible ». Une proposition précise et reconfirmée entre au quiz même sans évaluation : le Pour et le Contre disent alors ce que la mesure change concrètement, sans affirmer d'effet, avec le niveau « pas d'étude ».",
-  "<b>Sondages et contexte.</b> Intentions de vote au 1er tour : moyenne de 4 instituts (Toluna Harris Interactive pour M6 et RTL, du 03 au 05/11 ; Cluster17 pour Politico, du 09 au 10/11 ; OpinionWay pour CNews, du 10 au 12/11 ; Elabe pour BFMTV et La Tribune Dimanche, du 12 au 13/11), dernière vague de chacun dont le terrain s'est achevé dans les 15 jours précédant le 17/11/2026, 15e jour compris ; pour chaque institut, milieu de la fourchette des hypothèses où le candidat est testé, même poids pour chaque institut. L'ordre des candidats suit cette moyenne, et la date de la moyenne est affichée à côté des intentions de vote. Source : notices de la Commission des sondages ; sondages masqués la veille et le jour de chaque tour. PLF 2027, Insee, taux à 10 ans d'octobre 2026. Ménages : 30,9 millions (Insee). 1 point de PIB ≈ 30 Md€."
+  "<b>Sondages et contexte.</b> Intentions de vote au 1er tour : moyenne de 5 instituts (Toluna Harris Interactive pour M6 et RTL, du 03 au 05/11 ; Cluster17 pour Politico, du 09 au 10/11 ; OpinionWay pour CNews, du 10 au 12/11 ; Elabe pour BFMTV et La Tribune Dimanche, du 12 au 13/11 ; Ifop pour TF1-LCI, Le Figaro et Sud Radio (Ifop-Fiducial), du 13 au 16/11), dernière vague de chacun dont le terrain s'est achevé dans les 15 jours précédant le 18/11/2026, 15e jour compris ; pour chaque institut, milieu de la fourchette des hypothèses où le candidat est testé, même poids pour chaque institut. L'ordre des candidats suit cette moyenne, et la date de la moyenne est affichée à côté des intentions de vote. Source : notices de la Commission des sondages ; sondages masqués la veille et le jour de chaque tour. PLF 2027, Insee, taux à 10 ans d'octobre 2026. Ménages : 30,9 millions (Insee). 1 point de PIB ≈ 30 Md€."
  ],
  "statu_quo": {
   "retraite": {
@@ -18124,6 +18224,26 @@
   "2027-05-02"
  ],
  "changelog": [
+  {
+   "date": "18/11/2026",
+   "text": "Glucksmann (entretien du 17/11) : baisse de la CSG « du Smic jusqu'à 4 000 euros net » à l'oral ; le barème écrit de son simulateur, qui garde le gain au-delà, reste appliqué ; régularisation de 250 000 à 300 000 travailleurs en Vie quotidienne. Retailleau (Sud Radio, 18/11) : décote de 7 % par année manquante gardée (texte écrit du camp) ; « deux mois de facture électrique en moins » en note, sans montant ; conseil juridique en centre de rétention confié à l'OFII en Vie quotidienne. Lisnard (tribune du 17/11) : pension minimale « autour de 1 200 euros » (et non 1 000 €), capitalisation collective obligatoire en note, fin des régimes spéciaux en Vie quotidienne. Totaux inchangés."
+  },
+  {
+   "date": "18/11/2026",
+   "text": "Philippe, programme « Croire en nous » (18/11) : règle d'or avec un déficit sous 2,5 % du PIB en fin de quinquennat (au lieu de 2 %) et « près de 150 milliards d'économies », non ventilées ; une trentaine d'agences fusionnées, supprimées ou privatisées, dont France Travail (missions reprises : rien de compté) ; suppression du CESE, inscrit dans la Constitution, listée non comptée comme chez Zemmour ; 30 % d'allocataires du RSA en moins et RSA suspendu pour les délinquants condamnés, listés non comptés. Vie quotidienne : statut de fonctionnaire limité au régalien et aux enseignants ; contre les casseurs, les mesures de prévention du terrorisme. Total inchangé (−0,2 Md€)."
+  },
+  {
+   "date": "18/11/2026",
+   "text": "Le Pen, retraites : le chiffre du camp porte sur 2032 (18,6 Md€ brut, 10,1 Md€ net). Montants annoncés pour 2032 listés non comptés, faute de chiffrage indépendant ou de base officielle : majoration pour trois enfants réservée aux mères, moitié des excédents de l'Unédic, APA et ASPA suspendues au-delà de 3 000 € de pension, surcote. Capitalisation (environ 500 € par an, 81 000 € de capital en fin de carrière, Fonds de réserve pour les retraites mobilisé) en note. Total inchangé (−88,3 Md€)."
+  },
+  {
+   "date": "18/11/2026",
+   "text": "Attal, suppression de la CSG sur les salaires : sa page de campagne du 16/11 écrit « jusqu'à 270 euros nets supplémentaires par mois » ; l'écrit primant sur l'oral, le gain est désormais plafonné à 270 € par mois et par salarié (plafond atteint vers 2 330 € nets). Fiche recalculée sur la distribution officielle des salaires : −90,3 → −68,1 Md€ ; total −83,3 → −61,1 Md€ par an en 2030. Simulateur, résumé et quiz : même plafond, sans addition du « droit au brut », dont la CSG est le moyen."
+  },
+  {
+   "date": "18/11/2026",
+   "text": "Sondages : moyenne au 18/11, avec la vague Ifop-Fiducial pour TF1-LCI, Le Figaro et Sud Radio (13-16/11), qui remplace la précédente vague Ifop (27-29/10) ; cinq instituts. Ordre des candidats inchangé."
+  },
   {
    "date": "17/11/2026",
    "text": "Le Pen : réforme des retraites présentée le 17/11 (réforme de 2023 abolie au 1er janvier 2028, départ de 60 à 62 ans et 40 à 42 annuités selon l'âge du premier emploi, en place d'ici 2032, capitalisation obligatoire alimentée par 12 Md€ par an de prélèvements patronaux réaffectés). Notre chiffrage : 62 ans en 2030 (−11,8, comme Mélenchon et Glucksmann), moitié du coût des départs anticipés en 2030 (−2,0), capitalisation comptée comme dépense, comme les comptes retraite d'Attal et de Philippe (−12,0) : −15,8 → −25,8 Md€ ; décote durcie, validation des trimestres et majorations non comptées faute de chiffrage. Le RN annonce 18,6 Md€ brut, 10,1 Md€ net. Total −78,3 → −88,3 Md€ par an en 2030. Simulateur et quiz mis à jour."
@@ -18504,8 +18624,8 @@
  ],
  "sondages": {
   "regle": "Intentions de vote au 1er tour. Dernière vague de chaque institut dont le terrain s'est achevé dans les 15 jours précédant la date ci-dessous, 15e jour compris ; pour chaque institut, fourchette [plus bas, plus haut] des scores publiés dans les hypothèses où le candidat est testé, et on retient le milieu ; le chiffre affiché est la moyenne de ces milieux entre instituts (même poids pour chacun). L'ordre des candidats suit cette moyenne. Source : notices de la Commission des sondages.",
-  "date": "17/11/2026",
-  "exclus": "Ifop pour LCI (27-29/10) : terrain achevé le 29/10, plus de 15 jours avant le 16/11 ; OpinionWay pour Les Echos et Radio Classique (Présitrack, vague du 9 au 10/11, notice 10372) : vague antérieure à celle du 10 au 12/11 pour CNews retenue pour cet institut ; vague précédente d'OpinionWay pour CNews (21-22/10) remplacée par celle du 10 au 12/11 ; Ipsos BVA pour Le Parisien (21-22/10) : terrain achevé le 22/10, plus de 15 jours ; Elabe pour BFMTV et La Tribune Dimanche (14-16/10), YouGov pour Le HuffPost (12-15/10) et Odoxa (24/09-07/10) : plus de 15 jours ; vague précédente de Cluster17 (19-22/10) remplacée par celle du 9 au 10/11 ; vague précédente de Toluna Harris Interactive pour M6 et RTL (19-21/10) remplacée par celle du 3 au 5/11 ; notices de novembre sans intentions de vote au 1er tour (Ipsos BVA pour La Tribune Dimanche, baromètre politique, notice 10373 ; CSA pour CNews, Europe 1 et le JDD, balise d'opinion, notice 10376 ; Ipsos BVA pour Le Monde, « Fractures françaises », notice 10377 ; Toluna Harris Interactive pour CommStrat et L'Opinion, potentiel électoral ; Cluster17 pour Le Point, baromètre des personnalités ; Ifop, CSA et Odoxa sur une candidature de T. Riner ; Ifop-Fiducial pour Sud Radio, primaire de la droite et du centre ; YouGov, Elabe, Verian) : non retenues.",
+  "date": "18/11/2026",
+  "exclus": "Ifop pour LCI (27-29/10) : vague précédente de cet institut, remplacée par la vague Ifop-Fiducial pour TF1-LCI, Le Figaro et Sud Radio du 13 au 16/11 (notice 10384) ; OpinionWay pour Les Echos et Radio Classique (Présitrack, vague du 9 au 10/11, notice 10372) : vague antérieure à celle du 10 au 12/11 pour CNews retenue pour cet institut ; vague précédente d'OpinionWay pour CNews (21-22/10) remplacée par celle du 10 au 12/11 ; Ipsos BVA pour Le Parisien (21-22/10) : terrain achevé le 22/10, plus de 15 jours ; Elabe pour BFMTV et La Tribune Dimanche (14-16/10), YouGov pour Le HuffPost (12-15/10) et Odoxa (24/09-07/10) : plus de 15 jours ; vague précédente de Cluster17 (19-22/10) remplacée par celle du 9 au 10/11 ; vague précédente de Toluna Harris Interactive pour M6 et RTL (19-21/10) remplacée par celle du 3 au 5/11 ; notices de novembre sans intentions de vote au 1er tour (Ipsos BVA pour La Tribune Dimanche, baromètre politique, notice 10373 ; CSA pour CNews, Europe 1 et le JDD, balise d'opinion, notice 10376 ; Ipsos BVA pour Le Monde, « Fractures françaises », notice 10377 ; Toluna Harris Interactive pour CommStrat et L'Opinion, potentiel électoral ; Cluster17 pour Le Point, baromètre des personnalités ; Ifop, CSA et Odoxa sur une candidature de T. Riner ; Ifop-Fiducial pour Sud Radio, primaire de la droite et du centre ; Elabe pour BFMTV, « Les Français et les programmes présidentiels », notice 10386 ; Ifop pour la Fédération française du bâtiment, logement, notice 10383 ; Ifop pour Franc-Tireur, participation au 1er et au 2d tour, notice 10381 ; Ifop pour Paris Match, T. Riner, notice 10379 ; Ifop pour L'Humanité, mesures de pouvoir d'achat, notice 10380 ; Ifop, antisémitisme, notice 10378 ; YouGov, Elabe, Verian) : non retenues.",
   "instituts": [
    {
     "institut": "Toluna Harris Interactive",
@@ -18530,6 +18650,12 @@
     "pour": "BFMTV et La Tribune Dimanche",
     "terrain": "12-13/11/2026",
     "url": "https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10375-pres-iv-elabe-14-novembre.pdf"
+   },
+   {
+    "institut": "Ifop",
+    "pour": "TF1-LCI, Le Figaro et Sud Radio (Ifop-Fiducial)",
+    "terrain": "13-16/11/2026",
+    "url": "https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10384-pres-iv-ifop-18-novembre.pdf"
    }
   ]
  },
@@ -19381,17 +19507,17 @@
       "old": false
      },
      {
-      "text": "Faire payer les dégâts aux casseurs : prélèvement sur leurs salaires ou prestations sociales",
-      "verifiable": true,
-      "old": false
-     },
-     {
       "text": "Interdire à des casseurs de paraître dans certains lieux et les obliger à pointer au commissariat avant les manifestations",
       "verifiable": true,
       "old": false
      },
      {
       "text": "Supprimer le juge d'application des peines",
+      "verifiable": true,
+      "old": false
+     },
+     {
+      "text": "Contre les casseurs, les mêmes mesures de prévention que contre le terrorisme : fichier sur le modèle du FSPRT, visites domiciliaires, contrôle administratif, assignation à résidence lors des manifestations à risque",
       "verifiable": true,
       "old": false
      }
@@ -19417,6 +19543,16 @@
       "label": "franceinfo, « Nos services publics », entretien d'É. Philippe (12/11)",
       "year": 2026,
       "url": "https://www.franceinfo.fr/elections/presidentielle-2027-la-possibilite-de-se-syndiquer-doit-etre-interdite-dans-la-magistrature-estime-edouard-philippe_8279816.html"
+     },
+     {
+      "label": "Site de campagne d'Édouard Philippe, programme « Sécurité » (18/11)",
+      "year": 2026,
+      "url": "https://www.edouardphilippe.fr/programme/securite"
+     },
+     {
+      "label": "franceinfo, présentation du programme d'É. Philippe (18/11)",
+      "year": 2026,
+      "url": "https://www.franceinfo.fr/politique/edouard-philippe/priorite-donnee-a-l-ecole-retablissement-des-comptes-publics-edouard-philippe-met-en-lumiere-plusieurs-mesures-de-son-programme-presidentiel_8287970.html"
      }
     ]
    },
@@ -19654,7 +19790,7 @@
       "old": false
      },
      {
-      "text": "Règle d'or budgétaire par référendum : déficit à 2 % du PIB en fin de quinquennat",
+      "text": "Règle d'or budgétaire par référendum : déficit sous 2,5 % du PIB en fin de quinquennat",
       "verifiable": true,
       "old": false
      },
@@ -19664,8 +19800,8 @@
       "old": false
      },
      {
-      "text": "« Verrou Schengen » : aucun État européen ne régularise massivement seul au-delà d'un seuil commun, sans l'accord de ses partenaires",
-      "verifiable": false,
+      "text": "Statut de fonctionnaire limité aux fonctions régaliennes et aux enseignants ; autres agents recrutés sous contrat de droit privé, au choix des collectivités",
+      "verifiable": true,
       "old": false
      }
     ],
@@ -19692,9 +19828,9 @@
       "url": "https://www.edouardphilippe.fr/programme/entreprises"
      },
      {
-      "label": "Site de campagne d'Édouard Philippe, programme « Immigration » (12/11)",
+      "label": "franceinfo, présentation du programme d'É. Philippe (18/11)",
       "year": 2026,
-      "url": "https://www.edouardphilippe.fr/programme/immigration"
+      "url": "https://www.franceinfo.fr/politique/edouard-philippe/priorite-donnee-a-l-ecole-retablissement-des-comptes-publics-edouard-philippe-met-en-lumiere-plusieurs-mesures-de-son-programme-presidentiel_8287970.html"
      }
     ]
    },
@@ -20055,7 +20191,7 @@
     "theme": "economie",
     "proposals": [
      {
-      "text": "Régulariser environ 300 000 travailleurs sans papiers : titre de séjour après six mois de travail sur les deux dernières années",
+      "text": "Régulariser 250 000 à 300 000 travailleurs sans papiers : titre de séjour après six mois de travail sur les deux dernières années",
       "verifiable": true,
       "old": false
      },
@@ -20116,6 +20252,11 @@
       "label": "franceinfo, direct du salon du Made in France : « Buy European Act » (14/11)",
       "year": 2026,
       "url": "https://www.franceinfo.fr/elections/presidentielle-2027-raphael-glucksmann-et-teddy-riner-attendus-au-salon-du-made-in-france_8282213.html"
+     },
+     {
+      "label": "6Médias avec L'Express (Orange Actu), entretien de R. Glucksmann au groupe EBRA (17/11)",
+      "year": 2026,
+      "url": "https://actu.orange.fr/politique/presidentielle-2027-jean-luc-melenchon-perdra-au-second-tour-affirme-raphael-glucksmann-l-express-via-6medias-CNT000002tNlSa.html"
      }
     ]
    },
@@ -20476,8 +20617,8 @@
       "old": false
      },
      {
-      "text": "Simplifier les taux de TVA",
-      "verifiable": false,
+      "text": "Fin des régimes spéciaux de retraite et mêmes règles pour le public et le privé, usure des métiers évaluée selon des critères communs",
+      "verifiable": true,
       "old": false
      }
     ],
@@ -20502,6 +20643,11 @@
       "label": "Nouvelle Énergie, « Quel candidat veut regrouper les aides sociales en une allocation unique ? » (meeting de Benfeld, 25/09)",
       "year": 2026,
       "url": "https://www.unenouvelleenergie.fr/questions/quel-candidat-veut-regrouper-les-aides-sociales-en-une-allocation-unique/"
+     },
+     {
+      "label": "Nouvelle Énergie, tribune de D. Lisnard sur les retraites parue dans Le Figaro (reprise le 17/11)",
+      "year": 2026,
+      "url": "https://www.unenouvelleenergie.fr/pour-une-reforme-des-retraites-qui-reconcilie-les-generations/"
      }
     ]
    },
@@ -21361,11 +21507,6 @@
       "old": false
      },
      {
-      "text": "Créer des centres de retour dans des pays tiers pour les étrangers en situation irrégulière, comme le permet le règlement européen sur le retour",
-      "verifiable": true,
-      "old": false
-     },
-     {
       "text": "Diviser par deux le flux d'étudiants étrangers ; droits d'inscription relevés",
       "verifiable": true,
       "old": false
@@ -21379,6 +21520,11 @@
       "text": "Doubler le prix du titre de séjour (350 € aujourd'hui), taxe de naturalisation portée à 1 000 € ; réexamens de demande d'asile payants",
       "verifiable": true,
       "old": false
+     },
+     {
+      "text": "Conseil juridique des étrangers en centre de rétention confié à l'OFII, à la place des associations",
+      "verifiable": true,
+      "old": false
      }
     ],
     "indicator": null,
@@ -21387,11 +21533,6 @@
       "label": "Les Républicains, entretien au JDD (2/08)",
       "year": 2026,
       "url": "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/"
-     },
-     {
-      "label": "Les Républicains, communiqué de B. Retailleau sur l'immigration en Europe (31/07)",
-      "year": 2026,
-      "url": "https://republicains.fr/wp-content/uploads/2026/08/CP_BR_31_07_26.pdf"
      },
      {
       "label": "avecretailleau.fr, mesure « Réduire l'immigration étudiante » (12/11)",
@@ -21407,6 +21548,11 @@
       "label": "avecretailleau.fr, mesure « Faire payer aux étrangers le coût de leur venue » (12/11)",
       "year": 2026,
       "url": "https://www.avecretailleau.fr/projet/mesure/faire-payer-aux-etrangers-les-couts-de-la-politique-d"
+     },
+     {
+      "label": "Sud Radio, entretien de B. Retailleau (18/11)",
+      "year": 2026,
+      "url": "https://www.sudradio.fr/sud-radio/bruno-retailleau-la-primaire-naura-pas-lieu-si-on-inclut-eric-zemmour"
      }
     ]
    }

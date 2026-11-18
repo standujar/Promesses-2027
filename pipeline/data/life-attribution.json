@@ -286,9 +286,6 @@
     "https://www.edouardphilippe.fr/programme/justice",
     "https://www.franceinfo.fr/elections/presidentielle-2027-la-possibilite-de-se-syndiquer-doit-etre-interdite-dans-la-magistrature-estime-edouard-philippe_8279816.html"
    ],
-   "Faire payer les dégâts aux casseurs : prélèvement sur leurs salaires ou prestations sociales": [
-    "https://www.capital.fr/economie-politique/prison-des-la-premiere-casse-et-salaire-ponctionne-le-plan-dedouard-philippe-contre-les-casseurs-1531388"
-   ],
    "Interdire à des casseurs de paraître dans certains lieux et les obliger à pointer au commissariat avant les manifestations": [
     "https://www.capital.fr/economie-politique/prison-des-la-premiere-casse-et-salaire-ponctionne-le-plan-dedouard-philippe-contre-les-casseurs-1531388",
     "https://actu.orange.fr/politique/presidentielle-2027-edouard-philippe-veut-diviser-l-immigration-legale-par-deux-face-a-l-echec-de-l-integration-l-express-via-6medias-CNT000002tpDKM.html"
@@ -296,6 +293,10 @@
    "Supprimer le juge d'application des peines": [
     "https://www.franceinfo.fr/elections/presidentielle-2027-la-possibilite-de-se-syndiquer-doit-etre-interdite-dans-la-magistrature-estime-edouard-philippe_8279816.html",
     "https://www.edouardphilippe.fr/programme/justice"
+   ],
+   "Contre les casseurs, les mêmes mesures de prévention que contre le terrorisme : fichier sur le modèle du FSPRT, visites domiciliaires, contrôle administratif, assignation à résidence lors des manifestations à risque": [
+    "https://www.edouardphilippe.fr/programme/securite",
+    "https://www.franceinfo.fr/politique/edouard-philippe/priorite-donnee-a-l-ecole-retablissement-des-comptes-publics-edouard-philippe-met-en-lumiere-plusieurs-mesures-de-son-programme-presidentiel_8287970.html"
    ]
   },
   "sante": {
@@ -383,14 +384,15 @@
    "Indemnisation chômage ramenée de 18 à 12 mois avant 50 ans": [
     "https://www.edouardphilippe.fr/programme/travail"
    ],
-   "Règle d'or budgétaire par référendum : déficit à 2 % du PIB en fin de quinquennat": [
-    "https://www.edouardphilippe.fr/programme/comptes-publics"
+   "Règle d'or budgétaire par référendum : déficit sous 2,5 % du PIB en fin de quinquennat": [
+    "https://www.edouardphilippe.fr/programme/comptes-publics",
+    "https://www.franceinfo.fr/politique/edouard-philippe/priorite-donnee-a-l-ecole-retablissement-des-comptes-publics-edouard-philippe-met-en-lumiere-plusieurs-mesures-de-son-programme-presidentiel_8287970.html"
    ],
    "Supprimer 50 Md€ d'impôts de production contre 50 Md€ d'aides aux entreprises en moins": [
     "https://www.edouardphilippe.fr/programme/entreprises"
    ],
-   "« Verrou Schengen » : aucun État européen ne régularise massivement seul au-delà d'un seuil commun, sans l'accord de ses partenaires": [
-    "https://www.edouardphilippe.fr/programme/immigration"
+   "Statut de fonctionnaire limité aux fonctions régaliennes et aux enseignants ; autres agents recrutés sous contrat de droit privé, au choix des collectivités": [
+    "https://www.franceinfo.fr/politique/edouard-philippe/priorite-donnee-a-l-ecole-retablissement-des-comptes-publics-edouard-philippe-met-en-lumiere-plusieurs-mesures-de-son-programme-presidentiel_8287970.html"
    ]
   },
   "rayonnement": {
@@ -511,10 +513,11 @@
    ]
   },
   "economie": {
-   "Régulariser environ 300 000 travailleurs sans papiers : titre de séjour après six mois de travail sur les deux dernières années": [
+   "Régulariser 250 000 à 300 000 travailleurs sans papiers : titre de séjour après six mois de travail sur les deux dernières années": [
     "https://www.rtl.fr/actu/politique/presidentielle-2027-raphael-glucksmann-promet-de-regulariser-300-000-sans-papiers-s-il-est-elu-le-ps-pousse-la-mesure-a-l-assemblee-7900690049",
     "https://www.franceinfo.fr/politique/raphael-glucksmann/on-est-obliges-de-faire-attention-comment-raphael-glucksmann-cherche-la-parade-face-a-l-hostilite-des-insoumis-sur-le-terrain_8257408.html",
-    "https://lcp.fr/actualites/il-faut-sortir-de-l-hypocrisie-les-deputes-ps-defendent-un-texte-pour-regulariser-300000"
+    "https://lcp.fr/actualites/il-faut-sortir-de-l-hypocrisie-les-deputes-ps-defendent-un-texte-pour-regulariser-300000",
+    "https://actu.orange.fr/politique/presidentielle-2027-jean-luc-melenchon-perdra-au-second-tour-affirme-raphael-glucksmann-l-express-via-6medias-CNT000002tNlSa.html"
    ],
    "Porter le SMIC à 1 700 € net": [
     "https://bsky.app/profile/placepublique.bsky.social/post/3myhxt47cic2k"
@@ -797,9 +800,6 @@
    "Schengen réservé aux Européens : visas limités au pays qui les délivre, comme règle de droit commun": [
     "https://republicains.fr/actualites/2026/08/02/lespace-schengen-doit-etre-reserve-aux-europeens/"
    ],
-   "Créer des centres de retour dans des pays tiers pour les étrangers en situation irrégulière, comme le permet le règlement européen sur le retour": [
-    "https://republicains.fr/wp-content/uploads/2026/08/CP_BR_31_07_26.pdf"
-   ],
    "Diviser par deux le flux d'étudiants étrangers ; droits d'inscription relevés": [
     "https://www.avecretailleau.fr/projet/mesure/n-accueillir-que-les-etudiants-dont-la-france-a-besoin"
    ],
@@ -808,6 +808,9 @@
    ],
    "Doubler le prix du titre de séjour (350 € aujourd'hui), taxe de naturalisation portée à 1 000 € ; réexamens de demande d'asile payants": [
     "https://www.avecretailleau.fr/projet/mesure/faire-payer-aux-etrangers-les-couts-de-la-politique-d"
+   ],
+   "Conseil juridique des étrangers en centre de rétention confié à l'OFII, à la place des associations": [
+    "https://www.sudradio.fr/sud-radio/bruno-retailleau-la-primaire-naura-pas-lieu-si-on-inclut-eric-zemmour"
    ]
   }
  },
@@ -918,11 +921,11 @@
    "Interdire de modifier un impôt à la hausse plus d'une fois par législature": [
     "https://www.unenouvelleenergie.fr/changer-de-logiciel-fiscal/"
    ],
-   "Simplifier les taux de TVA": [
-    "https://www.unenouvelleenergie.fr/changer-de-logiciel-fiscal/"
-   ],
    "Garantir qu'un salarié à temps plein gagne au moins 500 € de plus que le revenu d'assistance le plus élevé": [
     "https://www.unenouvelleenergie.fr/questions/quel-candidat-veut-regrouper-les-aides-sociales-en-une-allocation-unique/"
+   ],
+   "Fin des régimes spéciaux de retraite et mêmes règles pour le public et le privé, usure des métiers évaluée selon des critères communs": [
+    "https://www.unenouvelleenergie.fr/pour-une-reforme-des-retraites-qui-reconcilie-les-generations/"
    ]
   },
   "rayonnement": {
