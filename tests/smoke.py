@@ -302,17 +302,19 @@ with sync_playwright() as p:
       const out=[f(SQ.smic_net), f(1600), f(1690), f(2238), f(3000), f(6000)]; presetVal=null; return out; })()""")
     check(r == [[222, 0, False], [100, 0, False], [0, 88, False], [0, 109, False], [0, 119, False], [0, 119, False]],
           f'simulateur : barème de CSG publié (109 € au salaire médian, plafonné à 119 € au-delà du dernier seuil), SMIC « CSG comprise » sans addition des deux {r}')
-    # Attal (review 52) : suppression de la CSG sur les salaires publiée le 16/11/2026 (« La ligne sur la CSG, je vais la supprimer ») : la CSG de
-    # chaque salaire (9,2 % de 98,25 % du brut, brut ≈ net / 0,78 : 324,1 € au salaire moyen de 2 797 €), au prorata, sans plafond (aucun plafond
-    # publié par écrit) ; la baisse des cotisations du « droit au brut » (200 € au salaire médian, un seul point publié) ne s'y ajoute pas et, plus
-    # petite à chaque salaire, n'est plus calculée (valeur attendue changée par le paramètre publié : 200 → 259 € au salaire médian, rien → 348 € à 3 000 €)
+    # Attal (review 52, corrigé en review 54) : suppression de la CSG sur les salaires publiée le 16/11/2026 (« La ligne sur la CSG, je vais la
+    # supprimer ») : la CSG de chaque salaire (9,2 % de 98,25 % du brut, brut ≈ net / 0,78), au prorata, plafonnée à 270 € nets par mois (« jusqu'à
+    # 270 euros nets supplémentaires par mois », page écrite de sa campagne du 16/11, qui prime sur l'oral : plafond atteint vers 2 330 € nets) ; la
+    # baisse des cotisations du « droit au brut » (200 € au salaire médian, un seul point publié) ne s'y ajoute pas, la campagne présentant la
+    # suppression de la CSG comme son moyen (valeurs attendues changées par le plafond écrit : 259 € au salaire médian, inchangé ; 348 → 270 € à
+    # 3 000 €, 696 → 270 € à 6 000 €)
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; openSim.clear(); openSim.add('attal');
       const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); const t=document.querySelector('#simres .srow[data-c="attal"]').innerText.replace(/\\s+/g,' ');
         const row=[...document.querySelectorAll('#simres .srow[data-c="attal"] .rw')].find(x=>/^Revenu net/.test(x.textContent.trim())); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/);
         return [m?+m[1]:0, /montant non publié, pas de gain calculé/.test(t)]; };
       const out=[f(2238), f(1119), f(3000), f(6000)]; presetVal=null; return out; })()""")
-    exp = [round(v * 324.1 / 2797) for v in (2238, 1119, 3000, 6000)]
-    check(len(r) == 4 and all(abs(a[0] - b) <= 1 and not a[1] for a, b in zip(r, exp)), f'simulateur : suppression de la CSG sur les salaires d\'Attal, au prorata, sans plafond ni note « pas de gain calculé » ({exp} attendus) {r}')
+    exp = [round(min(v * 0.092 * 0.9825 / 0.78, 270)) for v in (2238, 1119, 3000, 6000)]
+    check(len(r) == 4 and all(abs(a[0] - b) <= 1 and not a[1] for a, b in zip(r, exp)) and exp[2] == exp[3] == 270, f'simulateur : suppression de la CSG sur les salaires d\'Attal, au prorata, plafonnée à 270 € par mois, sans note « pas de gain calculé » ({exp} attendus) {r}')
     # prime d'activité étudiante (Le Pen, review 52) : 20 % des revenus saisis dans la limite de 200 € par mois ; rien chez les autres candidats
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="etudiant"]').click(); S.kids=0; openSim.clear(); D.candidates.forEach(c=>openSim.add(c.id));
       const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); return D.candidates.map(c=>{ const row=[...document.querySelectorAll(`#simres .srow[data-c="${c.id}"] .rw`)].find(x=>/^Prime d'activité étudiante/.test(x.textContent.trim())); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/); return m?+m[1]:0; }); };
