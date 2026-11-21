@@ -8799,5 +8799,153 @@
 "u": "https://www.energie-info.fr/fiche_pratique/la-treve-hivernale/"
 }
 ]
+},
+"glucksmann.logement.3": {
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat_s": [
+1,
+2
+],
+"pour": "Construire davantage de logements augmente l'offre et freine la hausse des loyers.",
+"preuve_pour": "faible",
+"contre": "Les chantiers suivent surtout les taux d'intérêt : −31 % de 2022 à 2024, quand les taux ont monté.",
+"preuve_contre": "mitigé",
+"cas_pour": [],
+"cas_contre": [
+{
+"t": "Avec la remontée des taux d'intérêt, les mises en chantier ont chuté de 31 % entre 2022 et 2024 (Cour des comptes, France, 2026).",
+"s": [
+0
+]
+}
+],
+"etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent que plus de logements neufs modèrent les loyers. L'effet d'une loi de programmation sur le nombre de chantiers n'est pas mesuré en France.",
+"src": [
+{
+"l": "Cour des comptes, L'encadrement des loyers",
+"a": 2026,
+"u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
+},
+{
+"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+},
+{
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
+}
+]
+},
+"le-pen.logement.4": {
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat_s": [
+1,
+2
+],
+"pour": "Les normes renchérissent le neuf : le palier 2025 de la RE2020 ajoute 5 à 7,5 % au coût de construction.",
+"preuve_pour": "faible",
+"contre": "Les chantiers suivent surtout les taux d'intérêt : −31 % de 2022 à 2024, quand les taux ont monté.",
+"preuve_contre": "mitigé",
+"cas_pour": [],
+"cas_contre": [
+{
+"t": "Avec la remontée des taux d'intérêt, les mises en chantier ont chuté de 31 % entre 2022 et 2024 (Cour des comptes, France, 2026).",
+"s": [
+0
+]
+}
+],
+"etudes": "Aucune mesure en France de l'effet des normes sur le nombre de chantiers ; l'administration estime le surcoût de la RE2020 à 5 à 7,5 % au palier 2025, un rapport remis au Gouvernement à 11 % d'ici 2035. L'effet d'une limite de la sous-traitance n'est pas mesuré en France.",
+"src": [
+{
+"l": "Cour des comptes, L'encadrement des loyers",
+"a": 2026,
+"u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
+},
+{
+"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+},
+{
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
+},
+{
+"l": "Assemblée nationale, question écrite n° 3153 sur les surcoûts de la réglementation environnementale 2020, réponse du ministère du Logement",
+"a": 2023,
+"u": "https://www.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE3153"
+},
+{
+"l": "Banque des Territoires (Localtis), RE2020 : les pistes du rapport remis à la ministre du Logement (10/07/2025)",
+"a": 2025,
+"u": "https://www.banquedesterritoires.fr/re2020-les-pistes-du-rapport-rivaton-pour-maintenir-le-cap"
+}
+]
+},
+"philippe.logement.4": {
+"pour": "Les loyers seraient taxés comme l'épargne placée : un taux fixe au lieu du barème, et hors de l'IFI.",
+"preuve_pour": "pas d'étude",
+"contre": "La sortie de l'IFI ne vaut que pour 193 600 foyers, ceux dont le patrimoine immobilier dépasse 1,3 M€.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune évaluation française de l'effet de l'impôt sur les loyers ou de l'IFI sur le nombre de logements loués à l'année.",
+"src": [
+{
+"l": "M.-P. Daubresse et M. Cosson, Pour une relance durable de l'investissement locatif, rapport au Gouvernement (vie-publique.fr)",
+"a": 2025,
+"u": "https://www.vie-publique.fr/files/rapport/pdf/299996.pdf"
+},
+{
+"l": "DGFiP Statistiques, L'impôt sur la fortune immobilière en 2025",
+"a": 2026,
+"u": "https://www.impots.gouv.fr/dgfip-statistiques-limpot-sur-la-fortune-immobiliere-en-2025"
+}
+]
+},
+"philippe.logement.5": {
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat_s": [
+0,
+1
+],
+"pour": "Les normes renchérissent le neuf : le palier 2025 de la RE2020 ajoute 5 à 7,5 % au coût de construction.",
+"preuve_pour": "faible",
+"contre": "1,1 million de logements du parc locatif privé sont des passoires énergétiques : 13,8 % de ce parc.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune mesure en France de l'effet des normes sur le nombre de chantiers ; l'administration estime le surcoût de la RE2020 à 5 à 7,5 % au palier 2025, un rapport remis au Gouvernement à 11 % d'ici 2035. Aucune mesure de l'effet des interdictions de louer.",
+"src": [
+{
+"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+},
+{
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
+},
+{
+"l": "Assemblée nationale, question écrite n° 3153 sur les surcoûts de la réglementation environnementale 2020, réponse du ministère du Logement",
+"a": 2023,
+"u": "https://www.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE3153"
+},
+{
+"l": "Banque des Territoires (Localtis), RE2020 : les pistes du rapport remis à la ministre du Logement (10/07/2025)",
+"a": 2025,
+"u": "https://www.banquedesterritoires.fr/re2020-les-pistes-du-rapport-rivaton-pour-maintenir-le-cap"
+},
+{
+"l": "SDES, Le parc de logements par classe de performance énergétique au 1er janvier 2025",
+"a": 2025,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/le-parc-de-logements-par-classe-de-performance-energetique-au-1er-janvier-2025"
+}
+]
 }
 }
