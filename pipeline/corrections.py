@@ -3632,6 +3632,56 @@ MISS_ADD('lisnard', "fin des régimes spéciaux et convergence des règles de re
 #     départ de la proposition de Retailleau du même type à revoir au vote final (registre). SMIC : aucun décret au Journal officiel du 18/11.
 D['asof'] = '18 novembre 2026'
 
+# --- review 55 : barème de l'impôt sur le revenu de Mélenchon au simulateur (21/11/2026)
+# Constat du porteur du projet : le simulateur applique les réformes de l'impôt sur le revenu de Le Pen (part entière dès le 2e enfant), Lisnard
+# (quotient sans plafond, CSG déductible) et Philippe (jeunes parents), pas celle de Mélenchon. Sources ouvertes le 21/11/2026 :
+#   - programme du 6/11/2026 (chapitre « Partager les richesses ») : « Rendre l’impôt sur le revenu plus progressif avec un barème à 14 tranches
+#     contre 5 aujourd’hui » (mesure clé), « Mettre fin au quotient conjugal », « Créer un crédit d’impôt par enfant pour toutes les familles » ;
+#     chapitre « Mettre en sécurité sociale » 1 : cotisation sociale universelle fusionnant cotisations et CSG « avec une part progressive selon
+#     les revenus » ; aucun seuil, aucun taux, aucun montant de crédit ;
+#   - note budgétaire du 14/10/2026 (p. 14) : « Nous réformerons l’impôt sur le revenu au cours du mandat pour le rendre plus progressif avec
+#     l’instauration de 14 tranches » ; aucun rendement dans les 106,4 Md€ de recettes ;
+#   - amendement n° I-316 au projet de loi de finances pour 2027 (déposé le 7/10/2026 par É. Coquerel et le groupe LFI, dont M. Bompard,
+#     M. Panot ; rejeté le 15/10) : barème complet à 14 tranches (0 % jusqu'à 10 653 €, puis 5 ; 10 ; 15 ; 20 ; 25 ; 27,5 ; 32,5 ; 40 ; 45 ;
+#     50 ; 55 ; 65 ; 70 % au-delà de 400 000 € par part) et garantie : « Lorsque le salaire net mensuel d’un contribuable n’excède pas 4 000 €,
+#     l’impôt […] ne peut excéder celui qui aurait résulté de l’application du précédent barème en vigueur » ; exposé : « Nous portons cette
+#     réforme de fond avec l'Avenir en commun et son candidat Jean-Luc Mélenchon » ; recette : « plusieurs milliards d’euros », sans montant ;
+#   - simulateur du parti (impots.lafranceinsoumise.fr) : « en cours de mise à jour avec le programme L'Avenir en commun » (21/11), sans barème.
+# Décisions (règles communes) :
+# (1) Simulateur : un gain ou une perte publiés et confirmés en 2026 comptent, même hors total ; le barème complet est publié en 2026 par le
+#     groupe parlementaire du candidat, au nom du programme et du candidat (source qui parle pour lui), et le programme du 6/11 reprend les
+#     14 tranches : appliqué, avec le même calcul que les autres réformes de l'impôt (revenu imposable du simulateur, décote et quotient familial
+#     actuels, que l'amendement ne modifie pas ; actifs et retraités, seul ou en couple ; après la fin du quotient conjugal pour un couple sans
+#     enfant), pertes comptées comme les gains ; garantie des 4 000 € appliquée au revenu net saisi (salaire ; pour un indépendant ou un retraité,
+#     même seuil sur le revenu net, hypothèse écrite dans la note, l'exposé visant « celles et ceux qui touchent » moins de 4 000 € nets) ; en
+#     couple imposé ensemble, quand chacun des deux revenus est sous le seuil. Gains de salaire : impôt dû calculé au barème du candidat (règle
+#     « réforme de l'impôt du candidat comprise »). Crédit d'impôt par enfant (montant non publié) et part progressive de la cotisation sociale
+#     universelle (taux non publiés) : notes sans montant. Taux de 90 % au-delà de 400 000 € cité par des sites non officiels : non retenu.
+# (2) Fiche : la réforme est une recette (« plusieurs milliards d’euros », exposé) ; recette comptée seulement avec un chiffrage indépendant ou
+#     un paramètre publié et une base officielle permettant un calcul vérifiable ; aucun chiffrage indépendant de ce barème (le chiffrage de
+#     l'Institut Montaigne de 2022 porte sur un autre barème, que le candidat n'avait pas publié) ; le rendement d'un barème par part, avec
+#     quotient familial, décote et garantie selon le salaire, ne se calcule pas sur les tableaux publics par tranche de revenu fiscal de référence
+#     (microsimulation) : liste « non comptée », avec le paramètre, comme les autres recettes de LFI sans chiffrage (règle des recettes) ;
+#     réforme prévue « au cours du mandat » (note du 14/10). Total inchangé.
+IRM = 'https://www.assemblee-nationale.fr/dyn/17/amendements/AMANR5L17PO838901B3210P1D1N000316'
+sm = C['melenchon']['sim']
+sm['ir_bareme'] = {
+    'tranches': [[10653, 0.05], [15967, 0.10], [21294, 0.15], [28743, 0.20], [32968, 0.25], [36159, 0.275], [39652, 0.325], [45791, 0.40],
+                 [63893, 0.45], [104291, 0.50], [146015, 0.55], [261173, 0.65], [400000, 0.70]],
+    'garantie': 4000, 'url': IRM,
+    'court': "barème à 14 tranches du candidat",
+    'note': "Impôt sur le revenu à 14 tranches, de 0 à 70 % (programme du 6/11/2026 ; seuils et taux de l'amendement du groupe LFI au budget 2027, déposé le 7/10/2026 « avec l'Avenir en commun et son candidat »), décote et quotient familial actuels ; jusqu'à 4 000 € net par mois, pas plus d'impôt qu'aujourd'hui (garantie publiée, appliquée ici à tout revenu net, salaire, revenu d'indépendant ou pension)",
+    'garantie_txt': "garantie des 4 000 € appliquée : impôt ramené à celui d'aujourd'hui",
+    'enfants': "Crédit d'impôt par enfant pour toutes les familles (programme du 6/11/2026) : montant non publié, non calculé ici."}
+assert len(sm['ir_bareme']['tranches']) + 1 == 14
+a0 = "Impôt sur le revenu à 14 tranches : hausse annoncée pour les hauts revenus, seuils non publiés."; assert sm['extra'] == a0 and sm['extra_min'] == 4000
+sm['extra'] = "Cotisation sociale universelle fusionnant les cotisations et la CSG, « avec une part progressive selon les revenus » (programme du 6/11/2026) : taux non publiés, non calculé ici."
+del sm['extra_min']
+a0 = "Pas de mesure spécifique publiée ; concernés par le barème de l'impôt sur le revenu à 14 tranches."; assert sm['independants'] == a0
+sm['independants'] = "Pas de mesure spécifique publiée ; le barème de l'impôt sur le revenu à 14 tranches est appliqué à votre revenu (ligne « Impôt »)."
+MISS_ADD('melenchon', "impôt sur le revenu à 14 tranches, de 0 à 70 %, avec garantie jusqu'à 4 000 € net par mois (barème publié dans l'amendement du groupe LFI au budget 2027, 7/10/2026, appliqué au simulateur ; recette annoncée de « plusieurs milliards d'euros », sans montant ni chiffrage indépendant de ce barème, réforme prévue « au cours du mandat »)")
+D['asof'] = '21 novembre 2026'
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
