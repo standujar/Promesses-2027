@@ -1754,6 +1754,76 @@ _ps = _cur('lisnard', 'economie'); assert len(_ps) == 5 and [p['verifiable'] for
 _put('lisnard', 'economie', _ps[:4] + [_p("Fin des régimes spéciaux de retraite et mêmes règles pour le public et le privé, usure des métiers évaluée selon des critères communs")])
 _so('lisnard', 'economie', add=[NE_RET])
 
+# --- review 56 : revue du 21/11 (21/11/2026) ; registre S106, S331 et suivants
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; à égalité ou
+# à date inconnue, ordre affiché gardé ; une proposition nouvelle se place après les précises de 2026 déjà affichées ; au-delà de 5, sort celle
+# que la règle classe dernière, S106). Même test « précis » (changement de droit nommé, instrument nommé et ce qui y change, chiffre, durée,
+# âge, échéance ou niveau scolaire nommé). Sources ouvertes du 19 au 21/11 (veille vérifiée du 21/11).
+# Attal (L'Heure de vérité, France 2, 19/11 ; franceinfo, qui le cite) : formation à l'IA de « 30 millions d'actifs », toute la population
+#  active, avec les crédits du CPF et de France Travail : version de 2026 la plus récente de « Former 20 millions de Français à l'IA d'ici
+#  2030 », à sa place ; « un référendum par an, sur plusieurs sujets » : redit la journée référendaire annuelle (source ajoutée).
+# Philippe (page « Logement » du site de campagne, mise à jour le 20/11) : logement, 3 → 5 ; « frais de notaire » précisés (premier achat de la
+#  résidence principale des moins de 35 ans), texte corrigé à sa place (quiz aligné) ; nouvelles propositions précises du 20/11, dans l'ordre des
+#  questions de la page : prélèvement forfaitaire unique sur les revenus de la location longue durée et IFI supprimé sur ces logements
+#  (questions 6 et 7, une proposition), puis moratoire de cinq ans sur les normes de construction, paliers de la RE2020 et interdiction de louer
+#  les passoires thermiques suspendus pendant le quinquennat (questions 9 et 10, une proposition) ; au-delà de 5 (S106) : impayés de loyer
+#  (question 8, intention), zones d'accélération, TVA des logements neufs affectée aux maires, foncières, RLS supprimée (fiche chiffrée,
+#  corrections.py), accession des locataires du parc social, surloyers, expulsion des délinquants ; la donation pour un premier achat (question 5)
+#  précise les plafonds de donation déjà listés non comptés, non affichés en Vie quotidienne comme les donations d'Attal et de Retailleau.
+#  Handicap (page « Handicap », 20/11 : cumul de l'AAH et du salaire pendant un an, MDPH en deux puis trois mois, 15 jours de répit pour les
+#  aidants) : aucun thème de la Vie quotidienne pour le handicap ni pour la politique familiale (S331, même traitement que les familles
+#  monoparentales de Glucksmann et la « solidarité à la source » d'Attal) ; listés non comptés (corrections.py).
+# Mélenchon (plan « Comment nous allons garantir les droits des enfants », 19/11, site du candidat) : sécurité, recrutement de 10 000 personnels
+#  de la protection judiciaire de la jeunesse en cinq ans, 235 juges des enfants et 235 greffiers (précise : chiffres) ; 6e d'un thème de quatre
+#  précises et d'une intention : sort l'intention « Rétablir la police de proximité » (S106). Aide sociale à l'enfance jusqu'à 25 ans, ratio
+#  moyen de 5 enfants par adulte en crèche : aucun thème (S331) ; listés non comptés (corrections.py).
+# Le Pen : rayonnement, communiqué de la candidate du 19/11 (rencontre avec l'ambassadeur d'Ukraine) : plus d'aide financière française
+#  « dans les prochains mois », engagements déjà pris tenus (prêt de 90 Md€ de l'Union européenne), dons de matériel, aide humanitaire et
+#  diplomatie : version de 2026 la plus récente, à la place de « Maintenir l'aide financière à l'Ukraine six mois après l'élection, puis
+#  l'arrêter » ; logement, 3 → 4, Sommet de la construction de la FFB (19/11) : normes de construction abrogées par ordonnance après recensement
+#  par les filières (AFP, qui la cite ; précise : instrument nommé) et sous-traitance limitée à trois niveaux (zepros et batiweb, deux médias
+#  qui rapportent la même proposition ; précise : chiffre), une proposition ; critère de localisation dans les marchés publics : intention, sans
+#  mécanisme (S311), non affichée ; « 100 000 logements sociaux » : sources contradictoires, registre.
+# Glucksmann (même sommet, 19/11 ; AFP et zepros, qui le cite) : 420 000 logements par an et loi de programmation du logement sur cinq ans
+#  (précise : chiffre et durée) ; 4 → 5, après les deux précises de 2026, avant les deux intentions non reconfirmées.
+# Situation de départ (loi « rapports locatifs » adoptée définitivement le 19/11 : encadrement des loyers prolongé de deux ans) : textes de
+#  l'encadrement des loyers (Glucksmann) et de sa suppression (Retailleau) inchangés, le dispositif existant ; notes du simulateur
+#  (corrections.py).
+MEDIAS += ('zepros.fr', 'batiweb.com')
+FI_HV = _s("franceinfo, ce qu'il faut retenir de l'entretien de G. Attal dans L'Heure de vérité (19/11)", 'https://www.franceinfo.fr/politique/gabriel-attal/primaire-racisme-referendums-ia-ce-qu-il-faut-retenir-de-l-interview-de-gabriel-attal-dans-l-emission-l-heure-de-verite-sur-france-2_8290544.html')
+EP20 = _s("Site de campagne d'Édouard Philippe, programme « Logement » (20/11)", EPPL + 'logement')
+LFI_ENF = _s("Mélenchon 2027, plan « Comment nous allons garantir les droits des enfants » (19/11)", 'https://melenchon2027.fr/plans-thematiques/enfance/')
+RN_UKR = _s("Rassemblement national, communiqué de M. Le Pen, rencontre avec l'ambassadeur d'Ukraine (19/11)", 'https://rassemblementnational.fr/communiques/rencontre-avec-lambassadeur-dukraine-en-france')
+AFP_FFB = _s("AFP (La Gazette France), les candidats au Sommet de la construction de la FFB (19/11)", 'https://www.lagazettefrance.fr/article/crise-du-logement-les-candidats-a-la-presidentielle-au-chevet-de-la-construction')
+ZEP_FFB = _s("Zepros Bâti, sept candidats face au bâtiment, Sommet de la construction de la FFB (19/11)", 'https://bati.zepros.fr/actu-generale/sommet-construction-ffb-sept-candidats-presidentielle-face-batiment')
+BW_FFB = _s("Batiweb, propositions des candidats au Sommet de la construction (19/11)", 'https://www.batiweb.com/actualites/construction/presidentielle-2027-propositions-candidats-btp-copier-49646')
+# Attal
+_txt('attal', 'economie', "Former 20 millions de Français à l'IA d'ici 2030", "Former à l'IA toute la population active, 30 millions d'actifs, avec les crédits du CPF et de France Travail")
+_so('attal', 'economie', add=[FI_HV])
+_so('attal', 'libertes', add=[FI_HV])
+# Philippe
+_ps = _cur('philippe', 'logement'); assert len(_ps) == 3 and all(p['verifiable'] and not p['old'] for p in _ps), [p['text'] for p in _ps]
+_put('philippe', 'logement', _ps + [_p("Location longue durée : prélèvement forfaitaire unique sur les loyers, IFI supprimé sur ces logements"),
+                                    _p("Moratoire de cinq ans sur les normes de construction ; paliers de la RE2020 et interdiction de louer les passoires thermiques suspendus pendant le quinquennat")])
+_txt('philippe', 'logement', "Supprimer les « frais de notaire » (taxes perçues à l'achat d'un logement) pour les moins de 35 ans",
+     "Supprimer les « frais de notaire » (droits de mutation) pour le premier achat de leur résidence principale par les moins de 35 ans")
+_so('philippe', 'logement', add=[EP20])
+# Mélenchon
+_ps = _cur('melenchon', 'securite'); assert len(_ps) == 5 and _ps[0]['text'] == 'Rétablir la police de proximité' and not _ps[0]['verifiable'] and all(p['verifiable'] for p in _ps[1:]), [(p['text'], p['verifiable']) for p in _ps]
+_put('melenchon', 'securite', _ps[1:] + [_p("Recruter en cinq ans 10 000 personnels de la protection judiciaire de la jeunesse, 235 juges des enfants et 235 greffiers")])
+_so('melenchon', 'securite', add=[LFI_ENF])
+# Le Pen
+_txt('le-pen', 'rayonnement', "Maintenir l'aide financière à l'Ukraine six mois après l'élection, puis l'arrêter",
+     "Ukraine : pas d'aide financière française dans les prochains mois, engagements déjà pris tenus (prêt européen de 90 Md€) ; soutien par des dons de matériel, l'aide humanitaire et la diplomatie")
+_so('le-pen', 'rayonnement', add=[RN_UKR])
+_ps = _cur('le-pen', 'logement'); assert len(_ps) == 3 and all(p['verifiable'] and not p['old'] for p in _ps), [p['text'] for p in _ps]
+_put('le-pen', 'logement', _ps + [_p("Construction : normes abrogées par ordonnance après recensement par les filières ; sous-traitance limitée à trois niveaux")])
+_so('le-pen', 'logement', add=[AFP_FFB, ZEP_FFB, BW_FFB])
+# Glucksmann
+_ps = _cur('glucksmann', 'logement'); assert [p['old'] for p in _ps] == [False, False, True, True], [(p['text'], p['verifiable'], p['old']) for p in _ps]
+_put('glucksmann', 'logement', _ps[:2] + [_p("Construire 420 000 logements par an ; loi de programmation du logement sur cinq ans (normes, budget, accession, aides, financements)")] + _ps[2:])
+_so('glucksmann', 'logement', add=[AFP_FFB, ZEP_FFB])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.
