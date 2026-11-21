@@ -345,16 +345,19 @@ with sync_playwright() as p:
       const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); return ids.map(id=>[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].some(x=>/hausse du salaire imposable/.test(x.textContent))); };
       const out=[f(SQ.smic_net), f(2238)]; presetVal=null; return out; })()""")
     # review 43 : Lisnard, gain publié de 200 € au salaire médian (montant minimal de la fourchette), soit 132 € au SMIC au prorata : imposable au SMIC
-    check(r[0] == [False, True, True, True] and r[1] == [True, True, True, False],
+    # review 55 : Mélenchon, impôt sur la hausse du SMIC calculé à son barème à 14 tranches (règle « réforme de l'impôt du candidat comprise ») : un
+    # SMIC à 1 700 € reste sous le seuil d'imposition (0 €, contre 24,1 €/mois au barème actuel ; recalcul dans le bloc « review 55 » plus bas)
+    check(r[0] == [False, True, True, False] and r[1] == [True, True, True, False],
           f'simulateur : impôt sur la hausse du revenu imposable, même calcul pour tous (au SMIC, hausse du SMIC ou gain de 132 € de Lisnard ; rien pour un gain de 28 € ; une ligne au salaire médian) {r}')
     # montants recalculés hors de l'app avec le même barème (personne seule) : Retailleau 14,1 (gain de 41,7 × 2 797 / 2 238 = 52,1 €/mois, review 41 ;
     # 12,5 avant) et Lisnard 24,7 €/mois au salaire moyen (2 797 €),
-    # Glucksmann 15,6 au salaire médian (2 238 € ; barème de CSG du 4/11/2026, gain de 108,6 € entièrement imposable, review 45), Mélenchon 24,1 au SMIC (SMIC porté à 1 700 €)
+    # Glucksmann 15,6 au salaire médian (2 238 € ; barème de CSG du 4/11/2026, gain de 108,6 € entièrement imposable, review 45), Mélenchon 0 au SMIC (SMIC porté à
+    # 1 700 €, impôt à son barème à 14 tranches, review 55 ; 24,1 au barème actuel)
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; g('s-year').value=1990; openSim.clear(); ['retailleau','lisnard','glucksmann','melenchon'].forEach(i=>openSim.add(i));
       const f=(id,v)=>{ presetVal=v; g('s-salary').value=v; sim(); const row=[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].find(x=>/hausse du salaire imposable/.test(x.textContent)); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/); return m?+m[1]:0; };
       const out=[f('retailleau',2797), f('lisnard',2797), f('glucksmann',2238), f('melenchon',SQ.smic_net), f('lisnard',SQ.smic_net)]; presetVal=null; return out; })()""")
     # Lisnard au salaire moyen : baisse de la CSG seule au-delà du salaire médian (91,6 €), 24,7 € d'impôt ; au SMIC : 200 × 1 477,93 / 2 238 = 132,1 €, 2,3 € d'impôt
-    check(len(r) == 5 and all(abs(a - b) <= 1 for a, b in zip(r, [14.1, 24.7, 15.6, 24.1, 2.3])), f'simulateur : impôt sur la hausse du salaire égal au calcul de référence (14,1 ; 24,7 ; 15,6 ; 24,1 ; 2,3 €/mois, à 1 € près) {r}')
+    check(len(r) == 5 and all(abs(a - b) <= 1 for a, b in zip(r, [14.1, 24.7, 15.6, 0, 2.3])), f'simulateur : impôt sur la hausse du salaire égal au calcul de référence (14,1 ; 24,7 ; 15,6 ; 0 ; 2,3 €/mois, à 1 € près) {r}')
     # part fiscale entière dès le 2e enfant (Le Pen) : gain avec 2 enfants, rien avec 1, pas de double compte avec l'exonération des moins de 30 ans
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); g('s-salary').value=3500; openSim.clear(); openSim.add('le-pen');
       const f=(k,y)=>{ S.kids=k; g('s-year').value=y; sim(); return [...document.querySelectorAll('#simres .srow[data-c="le-pen"] .rw')].filter(x=>/^Impôt/.test(x.textContent.trim())).length; };
@@ -453,7 +456,7 @@ with sync_playwright() as p:
     # (1) couple marié ou pacsé : deux parts, revenu du conjoint, décote des couples ; impôt égal au calcul de référence ; réformes du quotient de chaque
     # candidat appliquées (Le Pen, part entière dès le 2e enfant ; Philippe, jeunes parents ; Mélenchon, fin du quotient conjugal sans enfant, note avec enfants)
     import json
-    IRS = json.load(open(os.path.join(ROOT, 'pipeline', 'promesses-2027-data.json')))['statu_quo']['ir']
+    IRS_D = json.load(open(os.path.join(ROOT, 'pipeline', 'promesses-2027-data.json'))); IRS = IRS_D['statu_quo']['ir']
     def bar(q):
         T = IRS['tranches']; return sum((min(q, T[i + 1][0] if i < len(T) - 1 else 1e18) - thr) * r for i, (thr, r) in enumerate(T) if q > thr)
     def irref(net, conj, kids, couple, part2=False):
@@ -506,6 +509,47 @@ with sync_playwright() as p:
     pg.evaluate(f"({PROF})({{st:'prive',sal:1800,aspa:true}})"); asp.append([pg.evaluate("document.getElementById('f-aspa').hidden")])
     check(asp == [[[293], [], [], [], []], [[293], [], [], [], [-544]], [[293], [-544], [-544], [-544], []], [[], [], [], [], []], [True], [True], [True, True], [True]],
           f'simulateur : minimum vieillesse (hausse de Mélenchon, pertes selon la condition des minima, hors UE déjà soumis à 10 ans, gel d\'Attal, couple) {asp}')
+    # --- review 55 (21/11/2026) : barème de l'impôt sur le revenu de Mélenchon (14 tranches, de 0 à 70 %, amendement n° I-316 du groupe LFI au budget
+    # 2027 ; garantie : jusqu'à 4 000 € net par mois, pas plus d'impôt qu'au barème actuel), recalculé ici hors de l'app : même revenu imposable, décote et
+    # quotient familial actuels, actifs et retraités, seul, parent isolé ou en couple (après la fin du quotient conjugal sans enfant) ; perte comptée comme
+    # le gain ; impôt sur un gain de salaire au barème du candidat ; notes sans montant (crédit d'impôt par enfant, cotisation sociale universelle)
+    IRM = [t for c in IRS_D['candidates'] if c['id'] == 'melenchon' for t in [c['sim']['ir_bareme']]][0]
+    check(len(IRM['tranches']) == 13 and IRM['tranches'][0] == [10653, 0.05] and IRM['tranches'][-1] == [400000, 0.7] and IRM['garantie'] == 4000,
+          f"simulateur : barème de Mélenchon tel que publié (0 % jusqu'à 10 653 €, 13 tranches de 5 à 70 %, garantie à 4 000 €) {IRM['tranches'][:1]} {IRM['tranches'][-1:]}")
+    def bar2(q, T): return sum((min(q, T[i + 1][0] if i < len(T) - 1 else 1e18) - thr) * r for i, (thr, r) in enumerate(T) if q > thr)
+    def irx(net, conj, kids, couple, T, pens=False, plus=0):
+        ni = IRS['net_imposable_pension'] if pens else IRS['net_imposable']; b = (net * ni + plus) * 12; bc = conj * ni * 12
+        ab = lambda x: min(x, max(IRS['abat_pension_min'], x * 0.1)) if x > 0 else 0
+        R = max(0, b + bc - min(IRS['abat_pension_max'], ab(b) + ab(bc))) if pens else 0.9 * (b + bc); nb = 2 if couple else 1
+        parts = nb + (kids >= 1) * (0.5 if couple else 1) + (kids >= 2) * 0.5 + max(0, kids - 2)
+        cap = (parts - 2) * 2 * IRS['plafond_demi_part'] if couple else (IRS['plafond_parent_isole'] + (parts - 2) * 2 * IRS['plafond_demi_part'] if kids >= 1 else 0)
+        t = max(bar2(R / parts, T) * parts, nb * bar2(R / nb, T) - cap); dec = (IRS['decote_couple'] if couple else IRS['decote_seul']) - IRS['decote_taux'] * t
+        return max(0, t - dec) if dec > 0 else t
+    def irm(net, conj, kids, couple, pens=False, plus=0):
+        n = irx(net, conj, kids, couple, IRM['tranches'], pens, plus)
+        return min(n, irx(net, conj, kids, couple, IRS['tranches'], pens, plus)) if net <= 4000 and (not couple or conj <= 4000) else n
+    def brow(): return rowt('melenchon', 'Impôt', '14 tranches, de 0')
+    got, exp = [], []
+    for p, ref in ((dict(st='prive', sal=2000), (2000, 0, 0, False, False)), (dict(st='prive', sal=3000), (3000, 0, 0, False, False)), (dict(st='prive', sal=6000), (6000, 0, 0, False, False)),
+                   (dict(st='independant', sal=5000), (5000, 0, 0, False, False)), (dict(st='retraite', sal=3000, year=1955), (3000, 0, 0, False, True)),
+                   (dict(st='retraite', sal=6000, year=1955), (6000, 0, 0, False, True)), (dict(st='prive', sal=4000, foyer='couple', conj=2000, kids=2), (4000, 2000, 2, True, False))):
+        pg.evaluate(f"({PROF})({json.dumps(p)})"); got.append(brow()); a = irx(*ref[:4], IRS['tranches'], ref[4]); exp.append([round((a - irm(*ref)) / 12)])
+    # couple sans enfant : fin du quotient conjugal au barème actuel (ligne inchangée), puis barème du candidat pour chacun, garantie pour chacun
+    pg.evaluate(f"({PROF})({{st:'prive',sal:3000,foyer:'couple',conj:1000}})"); got += [rowt('melenchon', 'Impôt', 'quotient conjugal'), brow()]
+    j = irx(3000, 1000, 0, True, IRS['tranches']); i0 = irx(3000, 0, 0, False, IRS['tranches']) + irx(1000, 0, 0, False, IRS['tranches'])
+    exp += [[-round((i0 - j) / 12)], [round((i0 - irm(3000, 0, 0, False) - irm(1000, 0, 0, False)) / 12)]]
+    check(got == exp and exp[0][0] > 0 and exp[2][0] < 0 and exp[5][0] < 0, f'simulateur : barème à 14 tranches de Mélenchon égal au calcul de référence (gains et pertes ; salarié, indépendant, retraité, couple) {got} {exp}')
+    # garantie des 4 000 € : à 2 600 € net, le barème du candidat donnerait plus d'impôt qu'aujourd'hui ; ramené à l'impôt actuel, une note, pas de ligne
+    g26 = [irx(2600, 0, 0, False, IRM['tranches']) > irx(2600, 0, 0, False, IRS['tranches']) + 1]
+    pg.evaluate(f"({PROF})({{st:'prive',sal:2600}})"); g26 += [brow(), 'garantie des 4 000 € appliquée' in txt('melenchon')]
+    # impôt sur un gain de salaire au barème du candidat (agent public à 3 500 €, point d'indice relevé) ; au SMIC porté à 1 700 €, rien
+    pt = pg.evaluate("D.candidates.find(c=>c.id==='melenchon').sim.point_indice_pct")
+    pg.evaluate(f"({PROF})({{st:'public',sal:3500}})"); gpl = 3500 * 0.8 * pt / 100 * IRS['net_imposable']
+    g26 += [rowt('melenchon', 'Impôt', 'hausse du salaire imposable.*14 tranches'), [-round((irm(3500, 0, 0, False, plus=gpl) - irm(3500, 0, 0, False)) / 12)]]
+    pg.evaluate(f"({PROF})({{st:'prive',sal:2500,kids:2}})"); g26 += ["Crédit d'impôt par enfant" in txt('melenchon')]
+    pg.evaluate(f"({PROF})({{st:'prive',sal:1800}})"); g26 += ['Cotisation sociale universelle' in txt('melenchon'), 'seuils non publiés' not in txt('melenchon')]
+    check(g26[:3] == [True, [], True] and g26[3] == g26[4] and g26[3][0] < 0 and all(g26[5:]),
+          f"simulateur : garantie des 4 000 € (note, pas de ligne), impôt sur le gain de salaire au barème du candidat, notes du crédit d'impôt par enfant et de la cotisation sociale universelle {g26}")
     # (5) pas de débordement à 360 px avec les nouveaux réglages ouverts
     vp = pg.viewport_size; pg.set_viewport_size({'width': 360, 'height': 800})
     pg.evaluate(f"({PROF})({{st:'retraite',year:1955,sal:500,aspa:true,foyer:'couple',conj:300,kids:2,cant:100}})"); w1 = pg.evaluate('document.documentElement.scrollWidth')

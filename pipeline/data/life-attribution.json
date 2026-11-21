@@ -81,6 +81,11 @@
    ],
    "Remplacer MaPrimeRénov' par un prêt à taux zéro « 100 % rénov »": [
     "https://www.sudradio.fr/societe/le-pen-veut-mettre-la-priorite-nationale-au-centre-dun-grand-chantier-sur-le-logement"
+   ],
+   "Construction : normes abrogées par ordonnance après recensement par les filières ; sous-traitance limitée à trois niveaux": [
+    "https://www.lagazettefrance.fr/article/crise-du-logement-les-candidats-a-la-presidentielle-au-chevet-de-la-construction",
+    "https://bati.zepros.fr/actu-generale/sommet-construction-ffb-sept-candidats-presidentielle-face-batiment",
+    "https://www.batiweb.com/actualites/construction/presidentielle-2027-propositions-candidats-btp-copier-49646"
    ]
   },
   "libertes": {
@@ -125,17 +130,13 @@
    "Sortir du commandement intégré de l'OTAN": [
     "https://www.thestar.com.my/news/world/2026/05/23/le-pen-says-france-should-quit-nato-command-structure"
    ],
-   "Maintenir l'aide financière à l'Ukraine six mois après l'élection, puis l'arrêter": [
-    "https://www.franceinfo.fr/politique/marine-le-pen/si-je-peux-le-rencontrer-a-bruxelles-je-le-dirai-a-l-ambassadeur-d-ukraine-marine-le-pen-se-dit-prete-a-echanger-avec-volodymyr-zelensky_8281529.html"
+   "Ukraine : pas d'aide financière française dans les prochains mois, engagements déjà pris tenus (prêt européen de 90 Md€) ; soutien par des dons de matériel, l'aide humanitaire et la diplomatie": [
+    "https://rassemblementnational.fr/communiques/rencontre-avec-lambassadeur-dukraine-en-france"
    ]
   }
  },
  "melenchon": {
   "securite": {
-   "Rétablir la police de proximité": [
-    "https://melenchon2027.fr/programme/synthese-des-contributions/chapitre-4-etendre-le-domaine-de-la-liberte/",
-    "https://melenchon2027.fr/programme/synthese-des-contributions/chapitre-7-la-force-de-lentraide-2/"
-   ],
    "Dissoudre la BRAV-M, interdire LBD et grenades, remplacer l'IGPN": [
     "https://melenchon2027.fr/programme/synthese-des-contributions/chapitre-4-etendre-le-domaine-de-la-liberte/",
     "https://www.lalibre.be/dernieres-depeches/2026/10/22/reformer-la-police-de-la-cave-au-grenier-les-relations-tumultueuses-entre-lfi-et-les-policiers-HOTBLDJ2PRHHBOMOELKHZ6C3FQ/"
@@ -148,6 +149,9 @@
    ],
    "Récépissé de contrôle d'identité remis par la police et la gendarmerie": [
     "https://melenchon2027.fr/programme/livre/mettre-en-securite-sociale/chapitre4"
+   ],
+   "Recruter en cinq ans 10 000 personnels de la protection judiciaire de la jeunesse, 235 juges des enfants et 235 greffiers": [
+    "https://melenchon2027.fr/plans-thematiques/enfance/"
    ]
   },
   "sante": {
@@ -354,8 +358,15 @@
    "Construire 4 millions de nouveaux logements en dix ans": [
     "https://www.franceinfo.fr/politique/edouard-philippe/presidentielle-2027-edouard-philippe-veut-batir-quatre-millions-de-logements-supplementaires-en-10-ans_8283821.html"
    ],
-   "Supprimer les « frais de notaire » (taxes perçues à l'achat d'un logement) pour les moins de 35 ans": [
-    "https://www.franceinfo.fr/politique/edouard-philippe/presidentielle-2027-edouard-philippe-veut-batir-quatre-millions-de-logements-supplementaires-en-10-ans_8283821.html"
+   "Supprimer les « frais de notaire » (droits de mutation) pour le premier achat de leur résidence principale par les moins de 35 ans": [
+    "https://www.franceinfo.fr/politique/edouard-philippe/presidentielle-2027-edouard-philippe-veut-batir-quatre-millions-de-logements-supplementaires-en-10-ans_8283821.html",
+    "https://www.edouardphilippe.fr/programme/logement"
+   ],
+   "Location longue durée : prélèvement forfaitaire unique sur les loyers, IFI supprimé sur ces logements": [
+    "https://www.edouardphilippe.fr/programme/logement"
+   ],
+   "Moratoire de cinq ans sur les normes de construction ; paliers de la RE2020 et interdiction de louer les passoires thermiques suspendus pendant le quinquennat": [
+    "https://www.edouardphilippe.fr/programme/logement"
    ]
   },
   "libertes": {
@@ -493,6 +504,10 @@
    ],
    "Loger en trois semaines les 3 000 enfants qui dorment dans la rue": [
     "https://lcp.fr/actualites/logement-associations-jeunesse-ce-qu-il-faut-retenir-du-debat-presidentiel-sur-lci"
+   ],
+   "Construire 420 000 logements par an ; loi de programmation du logement sur cinq ans (normes, budget, accession, aides, financements)": [
+    "https://www.lagazettefrance.fr/article/crise-du-logement-les-candidats-a-la-presidentielle-au-chevet-de-la-construction",
+    "https://bati.zepros.fr/actu-generale/sommet-construction-ffb-sept-candidats-presidentielle-face-batiment"
    ]
   },
   "libertes": {
@@ -639,7 +654,8 @@
     "https://attalpresident.fr/actualites/harcelement-scolaire-gabriel-attal-parole-huit-jeunes-victimes-engagement"
    ],
    "Journée référendaire annuelle sur les grands choix nationaux": [
-    "https://attalpresident.fr/actualites/dans-le-jdd-gabriel-attal-veut-proposer-la-plus-grande-reforme-institutionnelle-depuis-1958"
+    "https://attalpresident.fr/actualites/dans-le-jdd-gabriel-attal-veut-proposer-la-plus-grande-reforme-institutionnelle-depuis-1958",
+    "https://www.franceinfo.fr/politique/gabriel-attal/primaire-racisme-referendums-ia-ce-qu-il-faut-retenir-de-l-interview-de-gabriel-attal-dans-l-emission-l-heure-de-verite-sur-france-2_8290544.html"
    ],
    "Délai maximal de deux mois pour répondre aux porteurs de projets, inscrit dans la Constitution": [
     "https://attalpresident.fr/actualites/dans-le-jdd-gabriel-attal-veut-proposer-la-plus-grande-reforme-institutionnelle-depuis-1958"
@@ -655,8 +671,8 @@
    "Loi de stabilité fiscale et normative de dix ans votée dès l'été 2027 ; un quart de la charge administrative des entreprises supprimé": [
     "https://actu.orange.fr/politique/attal-veut-une-economie-quot-liberale-quot-mais-quot-planifiee-quot-pour-financer-un-quot-capitalisme-de-l-innovation-quot-CNT000002tqRW2.html"
    ],
-   "Former 20 millions de Français à l'IA d'ici 2030": [
-    "https://attalpresident.fr/actualites/gabriel-attal-debat-avec-les-francais-a-blois-et-a-bourges"
+   "Former à l'IA toute la population active, 30 millions d'actifs, avec les crédits du CPF et de France Travail": [
+    "https://www.franceinfo.fr/politique/gabriel-attal/primaire-racisme-referendums-ia-ce-qu-il-faut-retenir-de-l-interview-de-gabriel-attal-dans-l-emission-l-heure-de-verite-sur-france-2_8290544.html"
    ],
    "Prix agricoles : coûts de production établis et indexés par filière, vente en dessous interdite": [
     "https://attalpresident.fr/actualites/gabriel-attal-debat-avec-les-francais-a-blois-et-a-bourges"

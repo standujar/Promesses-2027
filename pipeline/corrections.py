@@ -3632,6 +3632,233 @@ MISS_ADD('lisnard', "fin des régimes spéciaux et convergence des règles de re
 #     départ de la proposition de Retailleau du même type à revoir au vote final (registre). SMIC : aucun décret au Journal officiel du 18/11.
 D['asof'] = '18 novembre 2026'
 
+# --- review 55 : barème de l'impôt sur le revenu de Mélenchon au simulateur (21/11/2026)
+# Constat du porteur du projet : le simulateur applique les réformes de l'impôt sur le revenu de Le Pen (part entière dès le 2e enfant), Lisnard
+# (quotient sans plafond, CSG déductible) et Philippe (jeunes parents), pas celle de Mélenchon. Sources ouvertes le 21/11/2026 :
+#   - programme du 6/11/2026 (chapitre « Partager les richesses ») : « Rendre l’impôt sur le revenu plus progressif avec un barème à 14 tranches
+#     contre 5 aujourd’hui » (mesure clé), « Mettre fin au quotient conjugal », « Créer un crédit d’impôt par enfant pour toutes les familles » ;
+#     chapitre « Mettre en sécurité sociale » 1 : cotisation sociale universelle fusionnant cotisations et CSG « avec une part progressive selon
+#     les revenus » ; aucun seuil, aucun taux, aucun montant de crédit ;
+#   - note budgétaire du 14/10/2026 (p. 14) : « Nous réformerons l’impôt sur le revenu au cours du mandat pour le rendre plus progressif avec
+#     l’instauration de 14 tranches » ; aucun rendement dans les 106,4 Md€ de recettes ;
+#   - amendement n° I-316 au projet de loi de finances pour 2027 (déposé le 7/10/2026 par É. Coquerel et le groupe LFI, dont M. Bompard,
+#     M. Panot ; rejeté le 15/10) : barème complet à 14 tranches (0 % jusqu'à 10 653 €, puis 5 ; 10 ; 15 ; 20 ; 25 ; 27,5 ; 32,5 ; 40 ; 45 ;
+#     50 ; 55 ; 65 ; 70 % au-delà de 400 000 € par part) et garantie : « Lorsque le salaire net mensuel d’un contribuable n’excède pas 4 000 €,
+#     l’impôt […] ne peut excéder celui qui aurait résulté de l’application du précédent barème en vigueur » ; exposé : « Nous portons cette
+#     réforme de fond avec l'Avenir en commun et son candidat Jean-Luc Mélenchon » ; recette : « plusieurs milliards d’euros », sans montant ;
+#   - simulateur du parti (impots.lafranceinsoumise.fr) : « en cours de mise à jour avec le programme L'Avenir en commun » (21/11), sans barème.
+# Décisions (règles communes) :
+# (1) Simulateur : un gain ou une perte publiés et confirmés en 2026 comptent, même hors total ; le barème complet est publié en 2026 par le
+#     groupe parlementaire du candidat, au nom du programme et du candidat (source qui parle pour lui), et le programme du 6/11 reprend les
+#     14 tranches : appliqué, avec le même calcul que les autres réformes de l'impôt (revenu imposable du simulateur, décote et quotient familial
+#     actuels, que l'amendement ne modifie pas ; actifs et retraités, seul ou en couple ; après la fin du quotient conjugal pour un couple sans
+#     enfant), pertes comptées comme les gains ; garantie des 4 000 € appliquée au revenu net saisi (salaire ; pour un indépendant ou un retraité,
+#     même seuil sur le revenu net, hypothèse écrite dans la note, l'exposé visant « celles et ceux qui touchent » moins de 4 000 € nets) ; en
+#     couple imposé ensemble, quand chacun des deux revenus est sous le seuil. Gains de salaire : impôt dû calculé au barème du candidat (règle
+#     « réforme de l'impôt du candidat comprise »). Crédit d'impôt par enfant (montant non publié) et part progressive de la cotisation sociale
+#     universelle (taux non publiés) : notes sans montant. Taux de 90 % au-delà de 400 000 € cité par des sites non officiels : non retenu.
+# (2) Fiche : la réforme est une recette (« plusieurs milliards d’euros », exposé) ; recette comptée seulement avec un chiffrage indépendant ou
+#     un paramètre publié et une base officielle permettant un calcul vérifiable ; aucun chiffrage indépendant de ce barème (le chiffrage de
+#     l'Institut Montaigne de 2022 porte sur un autre barème, que le candidat n'avait pas publié) ; le rendement d'un barème par part, avec
+#     quotient familial, décote et garantie selon le salaire, ne se calcule pas sur les tableaux publics par tranche de revenu fiscal de référence
+#     (microsimulation) : liste « non comptée », avec le paramètre, comme les autres recettes de LFI sans chiffrage (règle des recettes) ;
+#     réforme prévue « au cours du mandat » (note du 14/10). Total inchangé.
+IRM = 'https://www.assemblee-nationale.fr/dyn/17/amendements/AMANR5L17PO838901B3210P1D1N000316'
+sm = C['melenchon']['sim']
+sm['ir_bareme'] = {
+    'tranches': [[10653, 0.05], [15967, 0.10], [21294, 0.15], [28743, 0.20], [32968, 0.25], [36159, 0.275], [39652, 0.325], [45791, 0.40],
+                 [63893, 0.45], [104291, 0.50], [146015, 0.55], [261173, 0.65], [400000, 0.70]],
+    'garantie': 4000, 'url': IRM,
+    'court': "barème à 14 tranches du candidat",
+    'note': "Impôt sur le revenu à 14 tranches, de 0 à 70 % (programme du 6/11/2026 ; seuils et taux de l'amendement du groupe LFI au budget 2027, déposé le 7/10/2026 « avec l'Avenir en commun et son candidat »), décote et quotient familial actuels ; jusqu'à 4 000 € net par mois, pas plus d'impôt qu'aujourd'hui (garantie publiée, appliquée ici à tout revenu net, salaire, revenu d'indépendant ou pension)",
+    'garantie_txt': "garantie des 4 000 € appliquée : impôt ramené à celui d'aujourd'hui",
+    'enfants': "Crédit d'impôt par enfant pour toutes les familles (programme du 6/11/2026) : montant non publié, non calculé ici."}
+assert len(sm['ir_bareme']['tranches']) + 1 == 14
+a0 = "Impôt sur le revenu à 14 tranches : hausse annoncée pour les hauts revenus, seuils non publiés."; assert sm['extra'] == a0 and sm['extra_min'] == 4000
+sm['extra'] = "Cotisation sociale universelle fusionnant les cotisations et la CSG, « avec une part progressive selon les revenus » (programme du 6/11/2026) : taux non publiés, non calculé ici."
+del sm['extra_min']
+a0 = "Pas de mesure spécifique publiée ; concernés par le barème de l'impôt sur le revenu à 14 tranches."; assert sm['independants'] == a0
+sm['independants'] = "Pas de mesure spécifique publiée ; le barème de l'impôt sur le revenu à 14 tranches est appliqué à votre revenu (ligne « Impôt »)."
+MISS_ADD('melenchon', "impôt sur le revenu à 14 tranches, de 0 à 70 %, avec garantie jusqu'à 4 000 € net par mois (barème publié dans l'amendement du groupe LFI au budget 2027, 7/10/2026, appliqué au simulateur ; recette annoncée de « plusieurs milliards d'euros », sans montant ni chiffrage indépendant de ce barème, réforme prévue « au cours du mandat »)")
+D['asof'] = '21 novembre 2026'
+
+# --- review 56 : revue du 21/11 (21/11/2026) ; registre S202, S345 (résolus), S008, S106, S138, S205, S299, S312, S320, S331, S332, S337, S339 (mis à jour), S350 et suivants
+# Décisions du 21/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 18 au 21/11, sources ouvertes le 21/11).
+# (1) Sondages (data/sondages.json, règle de « review 19 ») : moyenne au 21/11 ; Toluna Harris Interactive (3-5/11) sort (plus de 15 jours) ;
+#     YouGov pour Le HuffPost (12-17/11, notice 10382, en ligne depuis le 19/11) entre à la place de sa vague du 12-15/10 : cinq hypothèses,
+#     chaque score relu sur la notice (colonne « Pondérés », celle de la notice YouGov précédente), y compris l'hypothèse avec D. de Villepin et
+#     T. Riner (même traitement qu'Ifop-Fiducial et OpinionWay) ; Ifop-Fiducial pour Sud Radio (2-4/11, notice 10392) : plus de 15 jours,
+#     antérieure à la vague Ifop retenue ; notices sans intentions de vote dans « exclus ». Cinq instituts ; ordre des candidats inchangé.
+# (2) Attal (L'Heure de vérité, France 2, 19/11 ; franceinfo, article du 19/11 et vidéo du 20/11) :
+#     - CSG (S345) : franceinfo, média reconnu, rapporte « une baisse de cotisations pour les salariés de 50 milliards d'euros », « un choc » de
+#       cotisations sociales : même ordre de grandeur que l'« autour de 50 milliards » du débat du 16/11 ; la campagne présente la suppression de
+#       la CSG comme le moyen du « droit au brut » : chiffre du camp de la fiche (−50) ; la valeur comptée reste notre calcul sur le texte écrit
+#       (CSG supprimée, plafond de 270 € par mois).
+#     - Année blanche : la source la plus récente la décrit comme un gel des dépenses de l'État la première année du mandat, Éducation nationale
+#       exceptée, 15 Md€ « selon ses calculs », et redit la non-revalorisation des pensions « hormis les toutes petites retraites ». Règles : une
+#       économie n'est comptée qu'avec un chiffrage indépendant ou un paramètre publié et une base officielle ; aucun chiffrage indépendant du gel
+#       des dépenses de l'État, dont l'économie dépend de la hausse évitée, qu'aucune base officielle ne donne pour 2028 (pas de loi de
+#       programmation au-delà de 2027), et qui recoupe des fiches déjà comptées sur ces dépenses (100 000 postes) : listé non compté avec le
+#       chiffre du camp. Pensions : seuil et durée non redits le 19/11 (paramètre non publié, dit dans l'obstacle) ; une source plus récente
+#       moins précise ne remplace pas une source précise qu'elle ne contredit pas (même règle que le gel des pensions de Lisnard le 18/11, seuil
+#       et un an gardés) : gel d'un an en 2028, prestations comprises, gardé ; valeur inchangée (+5,0). Simulateur : même gel, note complétée.
+#     - IA : « 30 millions d'actifs » formés, toute la population active, avec les crédits du CPF et de France Travail (au lieu de 20 millions de
+#       salariés) : proposition de la fiche « ia » (non chiffrable, inchangée) ; Vie quotidienne (life.py). Retraites : système universel aux
+#       mêmes règles pour tous, pilotage confié aux partenaires sociaux : note. Un référendum par an : Vie quotidienne (source).
+ATHV = 'https://www.franceinfo.fr/politique/gabriel-attal/primaire-racisme-referendums-ia-ce-qu-il-faut-retenir-de-l-interview-de-gabriel-attal-dans-l-emission-l-heure-de-verite-sur-france-2_8290544.html'
+ATHV_S = "franceinfo, ce qu'il faut retenir de l'entretien de G. Attal dans L'Heure de vérité, France 2 (19/11/2026)"
+ATHVV = 'https://www.franceinfo.fr/replay-magazine/france-2/l-heure-de-verite/video-gabriel-attal-interroge-par-neila-latrous-dans-l-heure-de-verite-comment-convaincre-les-jeunes_8290673.html'
+ATHVV_S = "franceinfo, vidéo de L'Heure de vérité, France 2 : G. Attal interrogé par N. Latrous (19/11/2026, publiée le 20/11)"
+CIT_A50 = "promettant \"un choc\" de cotisations sociales à hauteur de 50 milliards d'euros pour redonner du pouvoir d'achat aux Français"
+CIT_AB = "S'il est élu en 2027, le candidat promet une \"année blanche\" pour les dépenses de l'Etat : celles-ci n'augmenteraient pas durant la première année du mandat, dans l'objectif d'économiser 15 milliards d'euros, selon ses calculs. Seul le budget de l'Education nationale serait épargné, car \" [sa] priorité, c'est l'école\"."
+CIT_AP = "j'ai assumé de lui dire qu'hormis les toutes petites retraites, j'assumerais de ne pas revaloriser les retraites, ce qui permettra de financer ma mesure pour améliorer le salaire"
+m = M('attal', 'csg'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-68.1, -74.1, -61.6) and m['claimed_md'] is None
+m['claimed'] = ("50 Md€ de baisse de cotisations des salariés (« un choc » de 50 milliards d'euros, L'Heure de vérité, France 2, 19/11/2026, rapporté par "
+                "franceinfo) ; « jusqu'à 270 euros nets supplémentaires par mois » par salarié (site de campagne, 16/11/2026)")
+m['claimed_md'] = -50
+m['estimates'].append({"source": ATHV_S, "year": 2026, "value": "« " + CIT_A50 + " » ; « Gabriel Attal, qui plaide pour une baisse de cotisations pour les salariés de 50 milliards d’euros »", "low_md": -50, "high_md": -50, "url": ATHV})
+_n50 = "Coût d'« autour de 50 milliards » dit au débat selon une transcription automatique non officielle : non retenu (registre)."
+assert _nb(k['note']).count(_n50) == 1
+k['note'] = _nb(k['note']).replace(_n50, "Coût de 50 Md€ : chiffre du camp (« un choc » de cotisations sociales de 50 milliards d'euros, L'Heure de vérité, 19/11/2026, "
+  "rapporté par franceinfo ; même ordre de grandeur que l'« autour de 50 milliards » du débat du 16/11) ; notre calcul, sur le plafond écrit de 270 € par mois, "
+  "reste la valeur comptée.")
+m = M('attal', 'annee_blanche'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (5.0, 1.8, 6.0) and m['claimed_md'] is None
+m['proposal'] = ("« Année blanche » la première année du mandat (2028) : dépenses de l'État sans hausse, Éducation nationale exceptée ; toutes les prestations "
+                 "sociales gelées, sauf les « toutes petites retraites » (seuil non défini).")
+m['claimed'] = ("15 Md€ « selon ses calculs » pour l'année blanche des dépenses de l'État (L'Heure de vérité, France 2, 19/11/2026, rapporté par franceinfo) ; "
+                "inclus dans les 150 Md€ d'économies du quinquennat")
+m['obstacle'] = "Vote en loi de finances et de financement de la Sécurité sociale ; seuil des « toutes petites retraites » épargnées non publié."
+m['estimates'] += [{"source": ATHV_S, "year": 2026, "value": "« " + CIT_AB + " »", "low_md": None, "high_md": None, "url": ATHV},
+                   {"source": ATHVV_S, "year": 2026, "value": "« " + CIT_AP + " »", "low_md": None, "high_md": None, "url": ATHVV}]
+assert k['note'] == "Dépend de l'inflation en 2028 et du seuil des petites retraites"
+k['note'] = ("Dépend de l'inflation en 2028 et du seuil des petites retraites. L'Heure de vérité (19/11/2026) : « année blanche » pour les dépenses de l'État, "
+  "qui n'augmenteraient pas la première année du mandat, Éducation nationale exceptée, 15 Md€ « selon ses calculs » : listée à part, non comptée (aucun "
+  "chiffrage indépendant ; l'économie dépend de la hausse des dépenses évitée, qu'aucune base officielle ne donne pour 2028, et recoupe des fiches déjà "
+  "comptées sur ces dépenses) ; les 15 Md€ portent sur les dépenses de l'État et non sur les prestations comptées ici, d'où l'absence de chiffre du camp "
+  "comparable. Pensions non revalorisées « hormis les toutes petites retraites », sans seuil ni durée redits : le gel d'un an en 2028 et le seuil "
+  "inconnu sont gardés (une source moins précise qui ne contredit pas la précédente ne la remplace pas, même règle que le gel des pensions de Lisnard).")
+sa = C['attal']['sim']; assert sa['gel_note'].startswith("Pensions et prestations non revalorisées en 2028")
+sa['gel_note'] += " ; « hormis les toutes petites retraites » (19/11/2026)"
+m = M('attal', 'ia'); assert m['proposal'].endswith("; 20 millions de salariés formés.")
+m['proposal'] = m['proposal'].replace("; 20 millions de salariés formés.", "; 30 millions d'actifs formés, toute la population active, avec les crédits du CPF et de France Travail.")
+m['estimates'].append({"source": ATHV_S, "year": 2026, "value": "« Il veut s'inspirer de la Finlande en formant 30 millions d'actifs à l'IA. \"C'est possible. On a les moyens pour le faire\" , avec \"les crédits du CPF, France Travail\" »", "low_md": None, "high_md": None, "url": ATHV})
+m['claude']['note'] += " Formation de 30 millions d'actifs à l'IA (19/11/2026, au lieu de 20 millions de salariés) financée par les crédits du CPF et de France Travail : redéploiement de crédits existants, sans coût publié, non compté."
+m = M('attal', 'retraites')
+m['estimates'].append({"source": ATHV_S, "year": 2026, "value": "« Je propose qu’on crée un nouveau système universel avec les mêmes règles pour tout le monde » ; « L'élu des Hauts-de-Seine souhaite confier le pilotage de ce nouveau système aux partenaires sociaux. »", "low_md": None, "high_md": None, "url": ATHV})
+m['claude']['note'] += " L'Heure de vérité (19/11/2026) : « nouveau système universel avec les mêmes règles pour tout le monde », pilotage confié aux partenaires sociaux : paramètres toujours non publiés."
+MISS_ADD('attal', "« année blanche » des dépenses de l'État la première année du mandat, Éducation nationale exceptée (15 Md€ « selon ses calculs », L'Heure de vérité, "
+         "19/11/2026 : aucun chiffrage indépendant ; l'économie dépend de la hausse des dépenses évitée, qu'aucune base officielle ne donne pour 2028, et recoupe "
+         "des fiches comptées sur ces dépenses, dont les 100 000 postes)")
+# (3) Philippe (page « Logement » du site de campagne, mise à jour le 20/11 ; page « Handicap », 20/11) :
+#     - réduction de loyer de solidarité (RLS) supprimée « intégralement », « en contrepartie d'objectifs élevés de production à négocier avec les
+#       bailleurs » : la RLS baisse le loyer des allocataires du parc social et l'APL « à hauteur de 98 % de la réduction de loyer », les bailleurs
+#       sociaux en supportant le coût (PAP 2026, programme 109) ; la supprimer rend cette part de l'APL à la charge de l'État : dépense. Montant
+#       officiel : 0,9 Md€ en 2026, stabilisé dans le PLF 2027 (ministre du Logement au Sénat, 28/10/2026 ; Banque des Territoires, 29/10/2026 ;
+#       Maire-info, 2/10/2026) ; 1,3 Md€ de 2021 à 2024 et dans le PLF 2026 initial, 1,1 Md€ en 2025 (Sénat, rapport général sur le PLF 2026).
+#       Bailleurs sociaux hors des administrations publiques. Aucun chiffre du camp. Fiche de moins de 1 Md€ gardée (règle des fiches) :
+#       −0,9 × 98 % = −0,88 → −0,9 ; bornes −1,3 (RLS à son niveau de 2021-2024) et −0,8 (90 %, bas de la fourchette du Sénat). Aucune mesure
+#       du même type chez les 7 autres. Verdict : loi de finances, faisable (dépense non financée dans la mesure).
+#     - IFI supprimé sur les logements loués en longue durée et prélèvement forfaitaire unique sur les revenus de ces locations (30 % selon
+#       l'AFP, taux non écrit sur la page) : aucune base officielle ouverte ne donne la part de l'IFI assise sur les logements loués ni les
+#       revenus fonciers par taux marginal (même règle que la flat tax de Lisnard) : listés non comptés ; TVA des logements neufs affectée aux
+#       maires : redistribution entre administrations, montant non publié, listée ; moratoires (normes, RE2020, passoires) : règles, sans effet
+#       budgétaire publié (Vie quotidienne) ; « frais de notaire » précisés (premier achat de la résidence principale des moins de 35 ans ;
+#       plafond, compensation et coût non publiés, S320) ; donations pour un premier achat : ligne des plafonds de donation précisée.
+#     - Handicap : cumul intégral de l'AAH et des revenus du travail pendant un an (six mois aujourd'hui), MDPH en deux puis trois mois, 15 jours
+#       de répit par an pour les proches aidants les plus mobilisés, 100 000 logements adaptés d'ici 2035 : coûts non publiés, aucune base
+#       officielle ouverte des allocataires qui reprennent un emploi : listés non comptés.
+RLSP = 'https://www.edouardphilippe.fr/programme/logement'; RLSP_S = "Site de campagne d'Édouard Philippe, programme « Logement » (mis à jour le 20/11/2026)"
+HANP = 'https://www.edouardphilippe.fr/programme/handicap'
+PAP26 = 'https://www.assemblee-nationale.fr/dyn/dyn/contenu/visualisation/1087954/file/PAP2026_BG_Cohesion_territoires_VA.pdf'
+BDT = 'https://www.banquedesterritoires.fr/face-au-senat-vincent-jeanbrun-tente-de-defendre-un-budget-de-responsabilite-pour-le-logement'
+SEN26L = 'https://www.senat.fr/rap/l25-139-35-1/l25-139-35-11.pdf'
+CIT_RLS = "la création, en loi de finances initiale pour 2018, de la réduction de loyer de solidarité (RLS) dans le parc social en locatif ordinaire. Celle-ci a induit une baisse forfaitaire de loyer pour ses bénéficiaires, permettant une baisse corrélative du montant des aides personnalisées au logement, à hauteur de 98 % de la réduction de loyer."
+assert not any(m['id'] == 'rls' for m in C['philippe']['measures'])
+assert not any('RLS' in json.dumps(m, ensure_ascii=False) or 'loyer de solidarité' in json.dumps(m, ensure_ascii=False) for c0 in D['candidates'] for m in c0['measures'])
+_rc, _rl, _rh = round(-0.9 * 0.98, 1), round(-1.3 * 0.98, 1), round(-0.9 * 0.90, 1); assert (_rc, _rl, _rh) == (-0.9, -1.3, -0.8), (_rc, _rl, _rh)
+ADD('philippe', {'id': 'rls', 'theme': 'social', 'title': "Suppression de la réduction de loyer de solidarité",
+  'proposal': "Supprimer intégralement la réduction de loyer de solidarité (RLS) du parc social, en contrepartie d'objectifs de production de logements négociés avec les bailleurs sociaux.",
+  'claimed': "Non chiffré", 'claimed_md': None,
+  'estimates': [{"source": RLSP_S, "year": 2026, "value": "« Édouard Philippe va-t-il supprimer la réduction de loyer de solidarité (RLS) ? Oui, intégralement. »", "low_md": None, "high_md": None, "url": RLSP}],
+  'consensus': 'isolé', 'verdict': 'faisable', 'obstacle': "Par la loi de finances ; " + FNP + ".",
+  'claude': {'id': 'rls', 'central': _rc, 'low': _rl, 'high': _rh, 'method': 'ascendant',
+    'formula': ("RLS 2027 : 0,9 Md€, stabilisée au niveau de 2026 dans le projet de loi de finances (ministre du Logement au Sénat, 28/10/2026) ; la RLS réduit "
+                "l'APL des locataires concernés à hauteur de 98 % de la baisse de loyer, à la charge des bailleurs sociaux (PAP 2026, programme 109) ; la supprimer "
+                "rend cette part de l'APL à la charge de l'État : 0,9 × 98 % ≈ −0,9 Md€ ; borne basse −1,3 (RLS à son niveau de 2021 à 2024, 1,3 Md€) ; borne "
+                "haute −0,8 (part compensée de 90 %, bas de la fourchette du Sénat)"),
+    'inputs': [{"label": "RLS dans le projet de loi de finances 2027", "value": "« stabilisation à 900 millions d'euros de la réduction de loyer de solidarité (RLS) » ; « contre 1,1 milliard en 2025 et 1,3 milliard auparavant »", "source": "Banque des Territoires, audition du ministre du Logement au Sénat (29/10/2026)", "url": BDT},
+               {"label": "Effet sur l'APL", "value": "« " + CIT_RLS + " »", "source": "PLF 2026, projet annuel de performances de la mission « Cohésion des territoires », programme 109", "url": PAP26},
+               {"label": "Montants passés", "value": "« De 800 millions d’euros en 2018, la RLS est montée à 1,3 milliard d’euros en 2021 et s’y maintient, à l’exception de 2025 où elle a été réduite à 1,1 milliard d’euros. » ; bailleurs réduisant leur loyer « de 90 % à 98 % du montant de la RLS »", "source": "Sénat, rapport général n° 139 (2025-2026) sur le PLF 2026, tome III", "url": SEN26L}],
+    'note': ("Mesure publiée le 20/11/2026 (page « Logement » du site de campagne). Les bailleurs sociaux, hors des administrations publiques, retrouvent ce "
+             "montant ; la contrepartie (objectifs de production négociés) n'a pas d'effet chiffré. Montant de 2027 non projeté en 2030 (fixé en euros "
+             "courants chaque année).")}})
+_nf = "suppression des taxes perçues à l'achat d'un logement (« frais de notaire ») pour les moins de 35 ans (entretien au Parisien, 15/11/2026, cité par franceinfo : premier achat ou non, plafond de prix, compensation aux départements et coût non publiés)"
+MISS('philippe', _nf, "suppression des taxes perçues à l'achat d'un logement (« frais de notaire ») pour le premier achat de la résidence principale des moins de 35 ans "
+     "(entretien au Parisien, 15/11/2026, cité par franceinfo ; champ précisé sur le site le 20/11/2026 ; plafond de prix, compensation aux départements et coût non "
+     "publiés ; aucune série officielle ouverte des droits payés par les acheteurs de moins de 35 ans)")
+MISS('philippe', "plafonds de donation relevés pendant trois ans, ", "plafonds de donation relevés pendant trois ans et donations aux enfants et petits-enfants défiscalisées pour un premier achat (site, 20/11/2026 : plafonds non publiés), ")
+MISS_ADD('philippe', "IFI supprimé sur les logements loués en longue durée et prélèvement forfaitaire unique sur les revenus de ces locations (site, 20/11/2026 ; taux de 30 % selon "
+         "l'AFP, non écrit sur la page ; aucune base officielle ouverte de la part de l'IFI assise sur les logements loués ni des revenus fonciers par taux marginal, "
+         "même règle que la flat tax de Lisnard), TVA des logements neufs affectée aux maires (montant non publié), cumul intégral de l'AAH et des revenus du "
+         "travail pendant un an au lieu de six mois, première réponse de la MDPH sous deux mois et décision sous trois mois, 15 jours de répit par an pour les "
+         "proches aidants les plus mobilisés et 100 000 logements adaptés ou inclusifs d'ici 2035 (page « Handicap », 20/11/2026 : coûts non publiés)")
+# (4) Mélenchon, plan « Comment nous allons garantir les droits des enfants » (19/11, site du candidat) : 10 000 personnels de la protection
+#     judiciaire de la jeunesse recrutés en cinq ans (4 000 administratifs, 6 000 agents) : règle des recrutements publics (61,6 k€ par poste en
+#     coût complet, plan étalé : 70 % en 2030) → 10 000 × 61,6 k€ × 70 % ≈ 0,43 Md€ ; 235 juges des enfants et 235 greffiers : ≈ 0,02 Md€ ; sous
+#     1 Md€, listés non comptés avec leur montant (même traitement que les 3 000 magistrats et greffiers d'Attal) ; aide sociale à l'enfance
+#     jusqu'à 25 ans, ratio moyen de 5 enfants par adulte en crèche : coûts non publiés, listés ; loi de programmation contre les violences
+#     faites aux enfants redite sans montant : note de la fiche (2 Md€ du camp inchangés). Chiffrage complet toujours annoncé début 2027 (LCP, 21/11).
+_pjj, _jug = round(10000 * 61.6e3 * 0.7 / 1e9, 2), round(470 * 61.6e3 * 0.7 / 1e9, 2); assert (_pjj, _jug) == (0.43, 0.02), (_pjj, _jug)
+MISS_ADD('melenchon', "plan « enfance » (19/11/2026) : 10 000 personnels de la protection judiciaire de la jeunesse recrutés en cinq ans (règle des recrutements publics : "
+         "10 000 × 61,6 k€ × 70 % ≈ 0,43 Md€, sous 1 Md€), 235 juges des enfants et 235 greffiers (≈ 0,02 Md€), accompagnement des jeunes majeurs de l'aide sociale "
+         "à l'enfance jusqu'à 25 ans et ratio moyen de 5 enfants par adulte en crèche (coûts non publiés)")
+k = M('melenchon', 'violences-enfants')['claude']
+k['note'] = ((k.get('note') or '') + " Plan « enfance » du 19/11/2026 : loi de programmation pluriannuelle fondée sur les préconisations de la Ciivise, sans montant ; "
+             "recrutements de la protection judiciaire de la jeunesse listés à part (non comptés, sous 1 Md€).").strip()
+# (5) Le Pen : dépêche AFP du 20/11 (Sud Radio, France 24) : quatre trimestres de chômage validables au plus sur la carrière, 5,2 Md€ « selon le
+#     RN » ; décote de 2,5 % par trimestre manquant (« doubler la décote », 2,7 Md€) ; solde « positif de 4,7 milliards d'euros » en 2032,
+#     recettes comprises (Public Sénat, 17/11) : chiffres du camp pour 2032, sans chiffrage indépendant : liste non comptée et note ; décote :
+#     2,5 % aussi selon l'AFP (S339 mis à jour, toujours sans document écrit du RN).
+AFPR = 'https://www.sudradio.fr/societe/la-reforme-rn-des-retraites-un-net-durcissement-pour-les-carrieres-hachees'
+AFPR_S = "AFP (Sud Radio), « La réforme RN des retraites, un net durcissement pour les carrières hachées » (20/11/2026)"
+m = M('le-pen', 'retraites'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-25.8, -51.2, -11.8)
+m['estimates'].append({"source": AFPR_S, "year": 2026, "value": "« Un autre pilier de la réforme - 5,2 mds d'euros, selon le RN - est en effet de limiter à quatre le nombre de trimestres de chômage validables pour la retraite. » ; « La pension baisserait de 2,5 % par trimestre manquant, pour économiser 2,7 mds d'euros. »", "low_md": None, "high_md": None, "url": AFPR})
+k['note'] += (" AFP (20/11/2026) : quatre trimestres de chômage validables au plus sur la carrière, 5,2 Md€ d'économies « selon le RN » ; décote de 2,5 % par "
+              "trimestre manquant ; Public Sénat : solde « positif de 4,7 milliards d'euros » en 2032 selon le RN, recettes de l'Unédic et des allocations "
+              "comprises : chiffres du camp pour 2032, non comptés faute de chiffrage indépendant.")
+MISS('le-pen', "surcote : 2 Md€ de coût)", "surcote : 2 Md€ de coût ; quatre trimestres de chômage validables au plus sur la carrière : 5,2 Md€ d'économies selon le RN, AFP, "
+     "20/11/2026 ; solde « positif de 4,7 milliards d'euros » en 2032 selon le RN, recettes comprises)")
+# (6) Lisnard (TF1, 18/11 ; compte rendu de Nouvelle Énergie, 19/11) : plan retraites « dans les prochaines semaines », part de capitalisation
+#     obligatoire « plus importante », financée par des économies structurelles : note (S312). Retailleau (Capital, 19/11, podcast « Face à
+#     l'IA ») : 15 Md€ d'économies par an grâce à l'IA (150 000 départs non remplacés, 150 000 agents redéployés, achats, fonctions support,
+#     fraude) et exonération totale d'impôt sur le revenu pendant cinq ans pour les spécialistes de l'IA qui reviennent en France : précisions
+#     de la fiche « ia » (déjà dans les mesures « talents » chiffrées par le camp et la note des économies), valeur inchangée ; U2P (20/11) : une
+#     seule source, site faible : rien.
+NEL = 'https://www.unenouvelleenergie.fr/je-crois-a-la-competition-pas-a-la-compromission/'
+k = M('lisnard', 'retraites')['claude']
+k['note'] += (" TF1 (18/11/2026, compte rendu du parti) : projet de réforme des retraites « dans les prochaines semaines », avec une part de capitalisation "
+              "obligatoire « plus importante », financée par des économies structurelles : paramètres non publiés.")
+M('lisnard', 'retraites')['estimates'].append({"source": "Nouvelle Énergie, compte rendu de l'entretien de D. Lisnard sur TF1 (18/11/2026, publié le 19/11)", "year": 2026, "value": "« Celui-ci reposera notamment sur une part de capitalisation obligatoire plus importante, financée par des économies structurelles plutôt que par des transferts budgétaires entre politiques publiques. »", "low_md": None, "high_md": None, "url": NEL})
+k = M('retailleau', 'ia')['claude']
+k['note'] += (" Podcast « Face à l'IA » (Capital, 19/11/2026) : 15 Md€ d'économies par an, par le non-remplacement de 150 000 départs, le redéploiement de "
+              "150 000 agents, les achats, les fonctions support et la fraude (montant écrit par le média, non compté, mêmes raisons) ; exonération totale "
+              "d'impôt sur le revenu pendant cinq ans pour les spécialistes de l'IA qui reviennent en France, « une forme de continuité » de leur régime de "
+              "retraite : comprise dans les mesures « talents » chiffrées par le camp.")
+# (7) Situation de départ : loi « pour retrouver la confiance et l'équilibre dans les rapports locatifs » adoptée définitivement le 19/11 (148 voix
+#     contre 95) : l'encadrement des loyers, qui prenait fin le 24/11, est prolongé de deux ans. Même mention pour les trois propositions du même
+#     type au simulateur (profil locataire) : Retailleau (fin de l'encadrement), Mélenchon (gel puis encadrement partout), Glucksmann
+#     (encadrement en zones tendues, note ajoutée, comme ses deux voisines) ; constats du quiz (loyers, mises en chantier) inchangés. Loi logement :
+#     articles 7 à 9 adoptés le 20/11, vote solennel le 24/11 (S205) ; budget de l'État au Sénat, première partie en discussion (S138) ; SMIC :
+#     aucun décret aux Journaux officiels des 19, 20 et 21/11 (S299, valeur commune inchangée).
+_enc = " ; dispositif prolongé de deux ans par la loi adoptée définitivement le 19/11/2026"
+lr = C['retailleau']['sim']['logement']; assert lr[0]['t'] == "Fin de l'encadrement des loyers là où il s'applique (Paris, Lyon, Lille…) : effet sur votre loyer non chiffré."
+lr[0]['t'] = "Fin de l'encadrement des loyers là où il s'applique (Paris, Lyon, Lille…" + _enc + ") : effet sur votre loyer non chiffré."
+lm = C['melenchon']['sim']['logement']; assert lm[1]['t'] == "Loyers gelés, puis encadrés partout (à la baisse dans les grandes villes) : effet sur votre loyer non chiffré."
+lm[1]['t'] = "Loyers gelés, puis encadrés partout (à la baisse dans les grandes villes ; encadrement actuel" + _enc + ") : effet sur votre loyer non chiffré."
+assert not C['glucksmann']['sim'].get('logement')
+C['glucksmann']['sim']['logement'] = [{"when": ["loc"], "t": "Encadrement des loyers en zones tendues (encadrement actuel" + _enc + ") : effet sur votre loyer non chiffré."}]
+D['asof'] = '21 novembre 2026'
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
