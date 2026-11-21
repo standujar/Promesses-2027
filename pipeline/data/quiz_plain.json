@@ -848,5 +848,25 @@
 "Interdire toute l'année les coupures d'électricité et de gaz pour factures impayées",
 "Un foyer en impayé garderait toujours assez de courant pour se chauffer et avoir de l'eau chaude.",
 "Interdire les coupures d'énergie toute l'année, avec une puissance minimale garantie fixée par décret"
+],
+"glucksmann.logement.3": [
+"Construire 420 000 logements par an, avec une loi qui fixe pour cinq ans la politique du logement",
+"Normes, budget, aides à l'achat et financements du logement seraient fixés pour cinq ans par une loi.",
+"Construire 420 000 logements par an ; loi de programmation du logement sur cinq ans (normes, budget, accession, aides, financements)"
+],
+"le-pen.logement.4": [
+"Supprimer par ordonnance des normes de construction et limiter la sous-traitance sur les chantiers",
+"Les filières du bâtiment listeraient les normes à supprimer, que le Gouvernement abrogerait ; un chantier ne pourrait plus compter plus de trois niveaux de sous-traitants en cascade.",
+"Construction : normes abrogées par ordonnance après recensement par les filières ; sous-traitance limitée à trois niveaux"
+],
+"philippe.logement.4": [
+"Taxer les loyers des locations à l'année à un taux unique, et sortir ces logements de l'impôt sur la fortune immobilière",
+"Les loyers d'un logement loué à l'année seraient taxés à un taux fixe, comme l'épargne placée, et ce logement ne compterait plus dans l'impôt sur la fortune immobilière.",
+"Location longue durée : prélèvement forfaitaire unique sur les loyers, IFI supprimé sur ces logements"
+],
+"philippe.logement.5": [
+"Geler pendant cinq ans les normes de construction et suspendre l'interdiction de louer les logements mal isolés",
+"Pas de nouvelle norme de construction ni de nouveau palier des exigences d'énergie et de carbone des logements neufs ; un logement mal classé au diagnostic énergétique pourrait encore être loué.",
+"Moratoire de cinq ans sur les normes de construction ; paliers de la RE2020 et interdiction de louer les passoires thermiques suspendus pendant le quinquennat"
 ]
 }
