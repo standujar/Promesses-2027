@@ -5853,6 +5853,35 @@
    "cree": "2026-11-18",
    "maj": "2026-11-18",
    "resolution": "Décision du 18/11/2026 (règle commune : la source de 2026 la plus récente qui parle pour le candidat prime) : socle « autour de 1 200 € » dans la fiche « retraites » et le simulateur (règle, non calculé), liste non comptée (financement non publié). Valeur de la fiche inchangée."
+  },
+  {
+   "id": "S348",
+   "type": "a_ajouter",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": null,
+   "sujet": "Simulateur : barème de l'impôt sur le revenu à 14 tranches de Mélenchon non appliqué (constat du porteur du projet, 21/11/2026)",
+   "detail": "Le simulateur appliquait les réformes de l'impôt de Le Pen, Lisnard et Philippe, pas celle de Mélenchon (note « seuils non publiés »). Sources ouvertes le 21/11/2026 : programme du 6/11/2026 (https://melenchon2027.fr/programme/livre/une-economie-au-service-des-besoins/chapitre2) : « Rendre l’impôt sur le revenu plus progressif avec un barème à 14 tranches contre 5 aujourd’hui », « Mettre fin au quotient conjugal », « Créer un crédit d’impôt par enfant pour toutes les familles », sans seuil, taux ni montant ; note du 14/10/2026 (https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf, p. 14) : « Nous réformerons l’impôt sur le revenu au cours du mandat pour le rendre plus progressif avec l’instauration de 14 tranches », sans rendement ; amendement n° I-316 au PLF 2027 (https://www.assemblee-nationale.fr/dyn/17/amendements/AMANR5L17PO838901B3210P1D1N000316), déposé le 7/10/2026 par É. Coquerel et le groupe LFI, rejeté le 15/10 : barème complet (0 % jusqu'à 10 653 € par part ; 5, 10, 15, 20, 25, 27,5, 32,5, 40, 45, 50, 55, 65 % ; 70 % au-delà de 400 000 €) et garantie « Lorsque le salaire net mensuel d’un contribuable n’excède pas 4 000 €, l’impôt […] ne peut excéder celui qui aurait résulté de l’application du précédent barème en vigueur » ; exposé : « Nous portons cette réforme de fond avec l'Avenir en commun et son candidat Jean-Luc Mélenchon », recette de « plusieurs milliards d’euros » sans montant ; simulateur du parti (impots.lafranceinsoumise.fr) « en cours de mise à jour » le 21/11, sans barème. Le taux de 90 % cité par des sites non officiels n'est pas dans les sources de 2026.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-21",
+   "maj": "2026-11-21",
+   "resolution": "Décision du 21/11/2026 (bloc « review 55 » de corrections.py ; règles communes). Simulateur : un gain ou une perte publiés et confirmés en 2026 comptent, même hors total ; le barème complet est publié en 2026 par le groupe parlementaire du candidat, au nom du programme et du candidat, et le programme du 6/11 reprend les 14 tranches : appliqué avec le même calcul que les autres réformes de l'impôt (revenu imposable du simulateur, décote et quotient familial actuels, actifs et retraités, seul, parent isolé ou en couple, après la fin du quotient conjugal sans enfant), pertes comptées comme les gains ; garantie des 4 000 € appliquée au revenu net saisi (pour un indépendant ou un retraité, même seuil, hypothèse écrite dans la note), en couple imposé ensemble quand chacun des deux revenus est sous le seuil ; impôt sur les gains de salaire au barème du candidat (un SMIC à 1 700 € reste non imposable : 0 au lieu de 24,1 €/mois). Exemples (personne seule) : −27 €/mois d'impôt à 2 000 € net, −22 € à 3 000 €, aucun effet vers 2 500-2 730 € (garantie), +57 € à 5 000 €, +164 € à 6 000 € ; retraité à 3 000 € : −22 € ; couple 4 000 + 2 000 € avec deux enfants : −71 €. Crédit d'impôt par enfant (montant non publié) et part progressive de la cotisation sociale universelle (taux non publiés) : notes sans montant. Fiche : recette sans montant publié ni chiffrage indépendant de ce barème (l'Institut Montaigne 2022 chiffrait un autre barème, non publié par le candidat) ; rendement d'un barème par part avec quotient, décote et garantie non calculable sur les tableaux publics (microsimulation) : liste « non comptée » avec le paramètre (règle des recettes), comme les autres recettes de LFI sans chiffrage. Total inchangé. Contrôles dans tests/smoke.py (bloc « review 55 »). À revoir si le livre papier, le simulateur du parti ou le chiffrage annoncé début 2027 publient un autre barème ou un rendement."
+  },
+  {
+   "id": "S349",
+   "type": "a_verifier",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": null,
+   "sujet": "Mélenchon, impôt sur le revenu : barème à revoir à la mise à jour du simulateur du parti et au chiffrage complet annoncé début 2027",
+   "detail": "Barème appliqué depuis le 21/11/2026 : amendement n° I-316 au PLF 2027 (7/10/2026). Le simulateur du parti (impots.lafranceinsoumise.fr) est « en cours de mise à jour avec le programme L'Avenir en commun » ; le chiffrage complet du programme est annoncé début 2027 ; le livre papier (1 069 mesures) peut préciser le barème, le crédit d'impôt par enfant et la part progressive de la cotisation sociale universelle. Si un autre barème est publié, le plus récent qui parle pour le candidat remplace celui de l'amendement ; un rendement chiffré par une source indépendante permettrait une fiche.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-21",
+   "maj": "2026-11-21"
   }
  ]
 }
