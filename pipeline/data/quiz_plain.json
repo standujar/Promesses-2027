@@ -631,9 +631,9 @@
 "Au moins un internat disciplinaire par académie, affectation décidée par le rectorat après des exclusions répétées"
 ],
 "lisnard.ecole.1": [
-"Créer un chèque-éducation valable dans le public comme dans le privé, et recruter les nouveaux enseignants sous contrat",
-"L'école choisie par la famille reçoit le même argent public, publique ou privée ; les nouveaux professeurs ne sont plus fonctionnaires.",
-"Chèque-éducation progressif (même financement public, école publique ou privée) ; nouveaux enseignants recrutés comme contractuels"
+"Créer un chèque-éducation valable dans le public comme dans le privé, et recruter les nouveaux enseignants sous contrat, choisis par les chefs d'établissement",
+"L'école choisie par la famille reçoit le même argent public, publique ou privée ; les nouveaux professeurs, mieux payés, ne sont plus fonctionnaires, et ceux déjà en poste choisissent leur statut.",
+"Chèque-éducation progressif (même financement public, école publique ou privée) ; chefs d'établissement qui recrutent leurs équipes ; nouveaux enseignants recrutés comme contractuels mieux payés, choix du statut pour ceux en poste"
 ],
 "lisnard.prisons": [
 "Construire beaucoup plus de places de prison",
@@ -967,5 +967,9 @@
 "Supprimer plus de cent taxes",
 "Plus d'une centaine de taxes disparaîtraient.",
 "Supprimer plus de 120 taxes"
+],
+"philippe.prisons": [
+"Construire beaucoup plus de places de prison",
+"Plus de cellules pour les personnes condamnées à de la prison."
 ]
 }

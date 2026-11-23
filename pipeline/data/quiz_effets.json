@@ -9385,5 +9385,60 @@
 "cas_contre": [],
 "etudes": "Aucune évaluation française.",
 "src": []
+},
+"philippe.prisons": {
+"constat": "Détenus : 90 937 au 1er octobre 2026 (+7,2 % en un an) pour 63 452 places, soit 143 % d'occupation (Justice).",
+"constat_s": [
+2
+],
+"pour": "Écourter les peines fait récidiver : la grâce collective de 1996 a accru la récidive à cinq ans.",
+"preuve_pour": "mitigé",
+"contre": "Les places neuves se remplissent aussitôt, et purger sa peine sous bracelet fait moins récidiver.",
+"preuve_contre": "mitigé",
+"cas_pour": [
+{
+"t": "La grâce collective du 14 juillet 1996 a accru la récidive, cinq ans après leur sortie, des détenus libérés plus tôt grâce à elle (Maurin et Ouss, France, 2009).",
+"s": [
+3
+]
+}
+],
+"cas_contre": [
+{
+"t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+"s": [
+0
+]
+},
+{
+"t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+"s": [
+1
+]
+}
+],
+"etudes": "Une évaluation française (grâce collective de 1996) : écourter les peines accroît la récidive ; mais purger sa peine sous bracelet fait moins récidiver que la prison, et le nombre de détenus suit celui des places.",
+"src": [
+{
+"l": "Sénat, commission des finances, rapport d'information n° 37 (2023-2024), plan 15 000 places (synthèse)",
+"a": 2023,
+"u": "https://www.senat.fr/rap/r23-037/r23-0370.html"
+},
+{
+"l": "Henneguelle, Monnery et Kensey, Better at Home than in Prison? The Effects of Electronic Monitoring on Recidivism in France (Journal of Law and Economics)",
+"a": 2016,
+"u": "https://chicagounbound.uchicago.edu/jle/vol59/iss3/6/"
+},
+{
+"l": "Ministère de la Justice, Mesure de l'incarcération, indicateurs clés au 1er octobre 2026",
+"a": 2026,
+"u": "https://www.justice.gouv.fr/sites/default/files/2026-11/mesure_mensuelle_01102026.pdf"
+},
+{
+"l": "Maurin et Ouss, « Sentence Reductions and Recidivism: Lessons from the Bastille Day Quasi Experiment » (IZA DP n° 3990)",
+"a": 2009,
+"u": "https://www.iza.org/publications/dp/3990"
+}
+]
 }
 }

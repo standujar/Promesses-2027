@@ -4021,6 +4021,180 @@ m['claude']['note'] += (" Le Grand enjeu (22/11/2026, Entrevue) : projet de réf
                         "mieux prises en compte, « dispositifs encourageant la poursuite de l'activité », partenaires sociaux associés : paramètres non publiés.")
 D['asof'] = '23 novembre 2026'
 
+# --- review 58 : contrôle des manques du 15 au 23/11 (23/11/2026) ; registre S005, S350 (résolus), S057, S059, S063, S106, S161, S268, S271, S300, S312, S325, S359 (mis à jour), S367 et suivants
+# Décisions du 23/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille de contrôle des manques du 15 au 23/11,
+# sources ouvertes le 23/11).
+# (1) Le Pen, majoration des pères de trois enfants (S359) : Capital (E. Decelle, 22/11, republié par Yahoo Finance) cite la candidate à
+#     Franc-Jeu : « Oui, il y aura une perte » ; « Un couple y perdra » ; « Mais pas en euros courants. Cette baisse de 10% pour le père se fera
+#     de manière progressive par une non-indexation » ; « en euros constants. Hélas, on ne peut pas faire autrement ». Média reconnu qui cite :
+#     règle d'attribution remplie. Texte corrigé (fiche, liste non comptée, simulateur) : majoration des pères supprimée peu à peu par une
+#     non-revalorisation, montant inchangé en euros courants, en baisse en euros constants ; « toutes les pensions indexées » précisé (hors
+#     majoration des pères). Rien de chiffré (pas de chiffrage pour 2030). Cotisations supplémentaires sous le mi-temps : toujours sans média
+#     reconnu (Senioractu ; Echos Plus, 23/11) : registre. Subventions aux associations « politisées » (tribune au Figaro du 18/11, citée par
+#     franceinfo) : source ajoutée à la ligne non comptée existante (2,0 + 2,0 du contre-budget, S329), rien d'autre.
+# (2) Philippe, 30 000 places de prison pour les peines courtes, avec une loi d'accélération des prisons (page « Justice » du site, mise à jour le
+#     18/11 ; Public Sénat, 18/11) : fiche « prisons » par la même règle et la même formule que les places de Le Pen (30 000), Retailleau,
+#     Lisnard et Zemmour : valeur centrale au seul coût de fonctionnement (30 000 × 32 k€ ≈ −1,0, la même valeur que les 30 000 places de
+#     Le Pen), construction en borne basse (−2,7), moitié des places ouvertes en 2030 en borne haute (−0,5) ; verdict « sous conditions »
+#     (capacités à bâtir). Le calendrier non publié ne change pas la formule : les fiches de Lisnard et de Zemmour, sans calendrier non plus,
+#     comptent les places en entier en valeur centrale (le plan à 70 % n'est appliqué à aucune fiche prisons) ; même formule pour les cinq.
+#     Quiz : même texte et mêmes explications que les autres places de prison.
+# (3) Lisnard, Grand Oral BFMTV-Le Figaro du 22/11 (compte rendu du parti du 23/11, source qui parle pour le candidat) :
+#     - fonction : « environ 720 000 postes » retirés, « environ 300 000 agents » réaffectés, réduction nette de « 400 000 à 450 000 postes ».
+#       Fourchette publiée d'un objectif : milieu retenu (425 000), comme le milieu de la fourchette des objectifs en niveau ; même formule
+#       (61,6 k€, moitié rendue, 70 % du plan en 2030) ; bornes de la règle des plans de postes (basse : un départ à la retraite sur trois non
+#       remplacé sur 3,5 ans, plafonnée à la valeur centrale ; haute : plan entier en 2030 au haut de la fourchette, 450 000) ; agences 0,26
+#       inchangées. Aucune autre fiche de postes (Philippe, Attal, Retailleau, Zemmour) n'a de fourchette publiée.
+#     - retraites : 65 ans, 43,5 ans de cotisation, 3 points de cotisation sur 27 à 28 vers la capitalisation (24 en répartition) : l'écrit du
+#       parti remplace la paraphrase de Capital (« environ 40 % ») ; S312 réglé pour ces points (les 30 Md€ et le point de PIB d'Economie Matin
+#       restent non attribués). Capitalisation : champ et calendrier non publiés : non comptée, paramètre clé non publié, même traitement que
+#       Retailleau (la capitalisation de Le Pen est comptée : montant et date publiés) ; aucune base officielle ouverte du rendement d'un point
+#       de cotisation vieillesse relevée : pas de fourchette indicative (ni chez Lisnard ni chez Retailleau). 43,5 ans : au-delà du droit en
+#       vigueur (43 ans), aucun effet en 2030 (règle commune du recul au-delà de 64 ans) ; durée affichée au simulateur comme celles de Le Pen,
+#       Mélenchon et Philippe.
+#     - gel des pensions : revalorisation sous l'inflation au-delà d'un certain niveau « si les mesures principales ne suffisaient pas », sans
+#       baisse nominale : conditionnel, seuil non publié : note, fiche inchangée.
+#     - règle d'or : « pas besoin de règle d'or pour bien gérer les comptes publics » (AFP, 23/11), en réponse au projet du président de la
+#       République : pas un abandon de sa règle ; page de programme relue le 23/11 (règle toujours publiée) : fiche inchangée, registre.
+#     - Vie quotidienne (life.py).
+# (4) Glucksmann : Capital (19/11, entretien franceinfo) : la taxe Zucman « ne figure pas » dans son programme ; contribution de 5 % sur les
+#     patrimoines de plus de 100 M€ citée par le candidat (« contribution exceptionnelle », « plus de 100 millions d'euros », « pour
+#     l'investissement climatique à hauteur de 5% ») : S005 fermé (impôt plancher non repris, fiche « zucman » toujours hors total) ; source du
+#     candidat ajoutée à la ligne non comptée de la contribution (recette ponctuelle, inchangée).
+CAPLP = 'https://fr.finance.yahoo.com/actualites/p%C3%A8re-trois-enfants-serez-perdant-145251961.html'
+CAPLP_S = "Capital (repris par Yahoo Finance), M. Le Pen à Franc-Jeu (22/11/2026)"
+CIT_LPP = "Oui, il y aura une perte » ; « Un couple y perdra » ; « Mais pas en euros courants. Cette baisse de 10% pour le père se fera de manière progressive par une non-indexation » ; « en euros constants. Hélas, on ne peut pas faire autrement"
+# (1) Le Pen : majoration des pères
+m = M('le-pen', 'retraites'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-25.8, -51.2, -11.8)
+_a = "indexation de toutes les retraites pendant cinq ans"; assert m['proposal'].count(_a) == 1
+m['proposal'] = m['proposal'].replace(_a, _a + " (hors majoration des pères)")
+m['estimates'].append({"source": CAPLP_S, "year": 2026, "value": "« " + CIT_LPP + " » (majoration de 10 % des pères de trois enfants)", "low_md": None, "high_md": None, "url": CAPLP})
+k['inputs'].append({"label": "Majoration des pères de trois enfants (22/11/2026)", "value": "« " + CIT_LPP + " » (la candidate)", "source": CAPLP_S, "url": CAPLP})
+_a = "majoration pour trois enfants portée à 12 % pour les mères et supprimée peu à peu pour les pères"
+_n = ("majoration pour trois enfants portée à 12 % pour les mères et supprimée peu à peu pour les pères par une non-revalorisation (montant inchangé "
+      "en euros courants, en baisse en euros constants : « Oui, il y aura une perte », la candidate, 22/11/2026)")
+assert k['note'].count(_a) == 1; k['note'] = k['note'].replace(_a, _n)
+_a = "Indexation de toutes les retraites pendant cinq ans (droit en vigueur)."; assert k['note'].count(_a) == 1
+k['note'] = k['note'].replace(_a, "Indexation de toutes les retraites pendant cinq ans (droit en vigueur), hors majoration des pères.")
+MISS('le-pen', "enfants portée à 12 % pour les mères et supprimée peu à peu pour les pères, critères",
+     "enfants portée à 12 % pour les mères et supprimée peu à peu pour les pères par une non-revalorisation, montant inchangé en euros courants et en "
+     "baisse en euros constants, critères")
+sl = C['le-pen']['sim']
+_a = "Toutes les pensions indexées sur l'inflation pendant cinq ans (17/11/2026) ; petites retraites revalorisées ; majoration pour trois enfants portée de 10 à 12 % pour les mères dès 2028, celle des pères supprimée peu à peu sans baisse du montant versé : non calculé ici."
+assert sl['retraites_actuels'].count(_a) == 1
+sl['retraites_actuels'] = sl['retraites_actuels'].replace(_a, "Toutes les pensions indexées sur l'inflation pendant cinq ans (17/11/2026), hors majoration des pères ; petites retraites revalorisées ; majoration pour trois enfants portée de 10 à 12 % pour les mères dès 2028, celle des pères supprimée peu à peu par une non-revalorisation : montant inchangé en euros courants, en baisse en euros constants (« Oui, il y aura une perte », la candidate, 22/11/2026) : non calculé ici.")
+assert 'sans baisse du montant' not in json.dumps(C['le-pen'], ensure_ascii=False)
+# (1b) Le Pen : associations « politisées » (tribune du 18/11)
+MISS('le-pen', "subventions aux associations « ne relevant pas de l'intérêt général » de l'État 2,0 et des collectivités 2,0",
+     "subventions aux associations « ne relevant pas de l'intérêt général » de l'État 2,0 et des collectivités 2,0 (critère redit par la candidate : "
+     "« l'arrêt des subventions publiques aux associations politisées », tribune au Figaro du 18/11/2026 citée par franceinfo ; montant non redit)")
+# (2) Philippe : 30 000 places de prison
+PHJU = 'https://www.edouardphilippe.fr/programme/justice'; PHJU_S = "Site de campagne d'Édouard Philippe, programme « Justice » (mis à jour le 18/11/2026)"
+PSPH = 'https://www.publicsenat.fr/actualites/politique/capitalisation-suppression-de-250-000-postes-de-fonctionnaires-autonomie-des-ecoles-fin-des-35-heures-aides-pour-les-familles-edouard-philippe-presente-son-projet-massif-et'
+PSPH_S = "Public Sénat, programme d'É. Philippe (18/11/2026)"
+CIT_PHP = "Construire 30 000 places de prison pour les peines courtes, avec une loi d’accélération des prisons."
+_lp = M('le-pen', 'prisons')['claude']
+ADD('philippe', {'id': 'prisons', 'theme': 'securite', 'title': '30 000 places de prison',
+  'proposal': "Construire 30 000 places de prison pour les peines courtes, avec une loi d'accélération des prisons.",
+  'claimed': 'Non chiffré', 'claimed_md': None,
+  'estimates': [{"source": PHJU_S, "year": 2026, "value": "« " + CIT_PHP + " »", "low_md": None, "high_md": None, "url": PHJU},
+                {"source": PSPH_S, "year": 2026, "value": "« 30.000 places de prison supplémentaires »", "low_md": None, "high_md": None, "url": PSPH}],
+  'consensus': 'isolé', 'verdict': 'sous_conditions', 'obstacle': PRIS_OB + ' Calendrier non publié.',
+  'claude': {'id': 'prisons', 'central': -1.0, 'low': -2.7, 'high': -0.5, 'method': 'ascendant',
+    'formula': ("Même règle que Le Pen (30 000 places), Retailleau (40 000 places), Lisnard (20 000 places) et Zemmour (100 000 places), construction "
+                "exclue : 30 000 places × 32 k€ de coût annuel d'un détenu ≈ −0,96 ≈ −1,0 ; borne basse avec la construction : 370 k€ la place (Sénat, "
+                "cité par Montaigne) × 30 000 sur 5 ans ≈ 2,2 + moitié des places ouvertes ≈ 0,5 → −2,7 ; borne haute : moitié des places ouvertes en "
+                "2030 (−0,5)"),
+    'inputs': [i for i in _lp['inputs'] if i['label'] in ("Coût d'un détenu", "Coût de construction d'une place")]
+              + [{"label": "Proposition (18/11/2026)", "value": "« " + CIT_PHP + " »", "source": PHJU_S, "url": PHJU}] + PRIS_IN,
+    'note': ("Calendrier non publié. " + PRIS_NOTE.replace("quatre candidats", "cinq candidats") + " Loi d'accélération des prisons : contenu non "
+             "publié (voie juridique : loi ordinaire).")}})
+for cid in ('le-pen', 'lisnard', 'zemmour'):
+    k = M(cid, 'prisons')['claude']; assert k['note'].count("quatre candidats qui proposent des places") == 1, cid
+    k['note'] = k['note'].replace("quatre candidats qui proposent des places", "cinq candidats qui proposent des places")
+for cid, a, b in (('le-pen', "Même règle que les places de Retailleau, Lisnard et Zemmour", "Même règle que les places de Retailleau, Lisnard, Zemmour et Philippe"),
+                  ('lisnard', "Retailleau (10 000 places) et Zemmour (100 000 places)", "Retailleau (40 000 places), Zemmour (100 000 places) et Philippe (30 000 places)"),
+                  ('zemmour', "Retailleau (10 000 places) et Lisnard (20 000 places)", "Retailleau (40 000 places), Lisnard (20 000 places) et Philippe (30 000 places)"),
+                  ('retailleau', "Lisnard (20 000 places) et Zemmour (100 000 places)", "Lisnard (20 000 places), Zemmour (100 000 places) et Philippe (30 000 places)")):
+    k = M(cid, 'securite' if cid == 'retailleau' else 'prisons')['claude']; assert k['formula'].count(a) == 1, (cid, a); k['formula'] = k['formula'].replace(a, b)
+# (3a) Lisnard : postes publics
+NEGO = 'https://www.unenouvelleenergie.fr/david-lisnard-sur-bfmtv-le-figaro-je-veux-faire-le-menage-au-sommet-de-letat/'
+NEGO_S = "Nouvelle Énergie, Grand Oral BFMTV-Le Figaro de D. Lisnard (22/11/2026, compte rendu du 23/11)"
+CIT_LF = ("Il prévoit, sur un quinquennat, de retirer environ 720 000 postes des fonctions administratives et de support […]. Sur cet ensemble, "
+          "environ 300 000 agents seraient réaffectés à des missions de terrain, tandis que la réduction nette des effectifs publics atteindrait, "
+          "selon son objectif, 400 000 à 450 000 postes.")
+m = M('lisnard', 'fonction'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (8.9, 5.2, 13.4)
+_a = "Supprimer plus de 400 000 postes publics sur le mandat (≈ 700 000 postes réorganisés, soit ≈ 12 % des effectifs, dont 200 000 à 300 000 agents redéployés vers le terrain)"
+assert m['proposal'].startswith(_a)
+m['proposal'] = m['proposal'].replace(_a, "Supprimer en net 400 000 à 450 000 postes publics sur le quinquennat (environ 720 000 postes retirés des fonctions administratives et de support, dont environ 300 000 agents réaffectés au terrain)")
+assert m['claimed'].startswith("Plus de 400 000 suppressions de postes (scénario du 27/10/2026)")
+m['claimed'] = "400 000 à 450 000 postes en moins en net (Grand Oral BFMTV-Le Figaro, 22/11/2026 ; « plus de 400 000 » le 27/10/2026), économie non chiffrée ; ventilation annoncée pour décembre"
+_a = "plus de 400 000 postes sur le mandat"; assert m['obstacle'].count(_a) == 1; m['obstacle'] = m['obstacle'].replace(_a, "400 000 à 450 000 postes en net sur le mandat")
+m['estimates'].append({"source": NEGO_S, "year": 2026, "value": CIT_LF, "low_md": None, "high_md": None, "url": NEGO})
+_a = "400 000 postes × 70 % × 30,8 k€ = 8,62 (même calcul que les 400 000 postes de Retailleau)"; assert k['formula'].count(_a) == 1
+k['formula'] = k['formula'].replace(_a, "425 000 postes (milieu de la fourchette publiée, 400 000 à 450 000 en net) × 70 % × 30,8 k€ = 9,16 (même calcul que les 400 000 postes de Retailleau)")
+_a = "≈ +8,9 Md€"; assert k['formula'].count(_a) == 1; k['formula'] = k['formula'].replace(_a, "≈ +9,4 Md€")
+_a = "haute, plan entièrement réalisé en 2030 : 400 000 × 30,8 k€ ≈ +12,3, + agences 1,06 = 13,4"; assert k['formula'].count(_a) == 1
+k['formula'] = k['formula'].replace(_a, "haute, plan entièrement réalisé en 2030, au haut de la fourchette : 450 000 × 30,8 k€ ≈ +13,9, + agences 1,06 = 14,9")
+k.update(central=9.4, low=5.2, high=14.9)
+k['inputs'].append({"label": "Objectif redit (22/11/2026)", "value": CIT_LF, "source": NEGO_S, "url": NEGO})
+_a = "chiffrage selon la règle commune inchangé (400 000 postes publiés)."; assert k['note'].endswith(_a)
+k['note'] = k['note'][:-len(_a)] + ("chiffrage selon la règle commune. Grand Oral BFMTV-Le Figaro (22/11/2026, compte rendu du parti du 23/11) : environ 720 000 "
+             "postes retirés des fonctions administratives et de support, dont environ 300 000 agents réaffectés au terrain, réduction nette de 400 000 "
+             "à 450 000 postes : fourchette publiée d'un objectif, milieu retenu (425 000 ; même règle que le milieu de la fourchette des objectifs en "
+             "niveau), haut de la fourchette en borne haute ; aucune autre fiche de postes n'a de fourchette publiée.")
+# (3b) Lisnard : retraites
+m = M('lisnard', 'retraites'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (1.8, 1.8, 5.8)
+CIT_LR = ("Il propose de porter l'âge légal de départ à 65 ans, avec 43 années et demie de cotisation, et d'engager une transition progressive vers un "
+          "système mixte associant répartition et capitalisation. Dans le schéma évoqué, sur environ 27 à 28 points de cotisations retraite, 24 "
+          "resteraient consacrés à la répartition et 3 seraient orientés vers la capitalisation.")
+assert m['proposal'].startswith("Âge à 65 ans, socle par répartition")
+m['proposal'] = m['proposal'].replace("Âge à 65 ans, socle par répartition", "Âge à 65 ans et 43,5 ans de cotisation, socle par répartition")
+_a = "étage de capitalisation collective obligatoire"; assert m['proposal'].count(_a) == 1
+m['proposal'] = m['proposal'].replace(_a, _a + " (3 points de cotisation sur 27 à 28, 24 restant en répartition)")
+m['estimates'].append({"source": NEGO_S, "year": 2026, "value": CIT_LR, "low_md": None, "high_md": None, "url": NEGO})
+k['inputs'].append({"label": "Âge, durée et capitalisation (22/11/2026)", "value": CIT_LR, "source": NEGO_S, "url": NEGO})
+_a = ("Capitalisation obligatoire : environ 40 % des cotisations transférées vers des comptes individuels selon Capital (6/11/2026, paraphrase du "
+      "média, sans citation du candidat) : coût de transition non chiffré.")
+assert k['note'].count(_a) == 1
+k['note'] = k['note'].replace(_a, ("Capitalisation obligatoire : sur environ 27 à 28 points de cotisations retraite, 24 restent en répartition et 3 vont à la "
+     "capitalisation (Grand Oral BFMTV-Le Figaro, 22/11/2026, compte rendu du parti du 23/11 ; l'écrit du parti remplace la paraphrase de Capital du "
+     "6/11/2026, « environ 40 % » des cotisations) ; champ (générations et salariés concernés) et calendrier non publiés (« transition progressive », "
+     "détail annoncé « en décembre ou en janvier ») : non comptée, paramètre clé non publié, même traitement que la capitalisation de Retailleau "
+     "(celle de Le Pen est comptée : montant et date publiés) ; aucune base officielle ouverte du rendement d'un point de cotisation vieillesse "
+     "relevée : pas de fourchette indicative. 43,5 ans de cotisation (22/11/2026) : au-delà de la durée du droit en vigueur (43 ans), aucun effet "
+     "en 2030 (règle commune du recul au-delà de 64 ans)."))
+r = C['lisnard']['sim']['retraite']; assert 'duree' not in r and r['regle'].startswith("Âge légal 65 ans ;")
+r['duree'] = 43.5
+r['regle'] = r['regle'].replace("Âge légal 65 ans ;", "Âge légal 65 ans et 43,5 ans de cotisation (22/11/2026) ;").replace(
+    "étage de capitalisation collective obligatoire,", "étage de capitalisation collective obligatoire (3 points de cotisation sur 27 à 28),")
+assert '3 points' in r['regle']
+# (3c) Lisnard : gel des pensions (conditionnel)
+m = M('lisnard', 'gel_pensions'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (2.5, 1.2, 5.0)
+m['estimates'].append({"source": NEGO_S, "year": 2026, "value": "« Il a par ailleurs évoqué, si les mesures principales ne suffisaient pas à rétablir l'équilibre, la possibilité d'une revalorisation des pensions inférieure à l'inflation au-delà d'un certain niveau de retraite, sans diminution nominale des pensions. »", "low_md": None, "high_md": None, "url": NEGO})
+k['note'] += (" Grand Oral BFMTV-Le Figaro (22/11/2026) : revalorisation inférieure à l'inflation au-delà d'un certain niveau de retraite, sans baisse "
+              "nominale, « si les mesures principales ne suffisaient pas » : conditionnel, seuil non publié ; seuil de 2 200 € et un an de gel gardés.")
+# (3d) Lisnard : règle d'or (AFP, 23/11)
+AFPL = 'https://www.boursorama.com/actualite-economique/actualites/pour-lisnard-pas-besoin-de-regle-d-or-pour-bien-gerer-les-comptes-08295f0fe5a7ae2c92af12e6464264c4'
+m = M('lisnard', 'regle_or'); k = m['claude']
+m['estimates'].append({"source": "AFP (Boursorama), D. Lisnard sur Public Sénat (23/11/2026)", "year": 2026, "value": "« Pourquoi pas... mais il n'y a pas besoin de règle d'or pour bien gérer les comptes publics » (sur le projet de règle d'or constitutionnelle du président de la République)", "low_md": None, "high_md": None, "url": AFPL})
+k['note'] += (" AFP (23/11/2026) : « pas besoin de règle d'or pour bien gérer les comptes publics », en réponse au projet d'inscrire une règle d'or "
+              "dans la Constitution ; sa propre règle institutionnelle reste sur la page de programme (relue le 23/11/2026) : fiche inchangée.")
+# (4) Glucksmann : taxe Zucman non reprise, contribution de 5 % citée par le candidat
+CAPG = 'https://fr.finance.yahoo.com/actualites/rapha%C3%ABl-glucksmann-l%C3%A2che-taxe-zucman-111344845.html'
+CAPG_S = "Capital (repris par Yahoo Finance), entretien de R. Glucksmann à franceinfo (19/11/2026)"
+m = M('glucksmann', 'zucman'); k = m['claude']; assert m.get('a_confirmer')
+assert m['proposal'] == "Taxe Zucman (2 % au-delà de 100 M€) défendue en 2025 ; absente d'Acte I, statut 2027 incertain.", m['proposal']
+m['proposal'] = "Taxe Zucman (2 % au-delà de 100 M€) défendue en 2025 ; absente d'Acte I ; « ne figure pas » dans son programme de 2027 (Capital, 19/11/2026)."
+m['estimates'].append({"source": CAPG_S, "year": 2026, "value": "La taxe Zucman « ne figure pas dans son programme » ; à la place : « contribution exceptionnelle », « plus de 100 millions d'euros », « pour l'investissement climatique à hauteur de 5% » (le candidat)", "low_md": None, "high_md": None, "url": CAPG})
+_a = "Reprise dans le programme 2027 non confirmée."; assert k['note'].startswith(_a)
+k['note'] = k['note'].replace(_a, "Non reprise en 2027 : la taxe Zucman « ne figure pas » dans son programme (Capital, 19/11/2026, d'après un entretien à franceinfo).")
+_a = "(taux et seuil rapportés par Public Sénat et l'AFP ; 50 Md€ selon le camp)"; assert k['note'].count(_a) == 1
+k['note'] = k['note'].replace(_a, "(taux et seuil rapportés par Public Sénat et l'AFP, puis cités par le candidat, franceinfo, 19/11/2026 ; 50 Md€ selon le camp)")
+MISS('glucksmann', "(5 % des patrimoines de plus de 100 M€ selon Public Sénat et l'AFP, 50 Md€ selon le camp,",
+     "(5 % des patrimoines de plus de 100 M€ selon Public Sénat et l'AFP, puis le candidat : « contribution exceptionnelle », « plus de 100 millions d'euros », "
+     "« pour l'investissement climatique à hauteur de 5% », franceinfo, 19/11/2026, cité par Capital ; 50 Md€ selon le camp,")
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:

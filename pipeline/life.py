@@ -1866,6 +1866,22 @@ _ps = _cur('philippe', 'sante'); assert [p['verifiable'] for p in _ps] == [True,
 _put('philippe', 'sante', _ps[:1] + [_p("Mayotte : deuxième hôpital de plein exercice, à Combani (maternité, médecine, chirurgie)")] + _ps[1:])
 _so('philippe', 'sante', add=[EP_OM])
 
+# --- review 58 : contrôle des manques du 15 au 23/11 (23/11/2026) ; registre S106, S271
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; une proposition
+# nouvelle se place après les précises de 2026 déjà affichées ; au-delà de 5, sort celle que la règle classe dernière, S106). Même test
+# « précis ». Sources ouvertes le 23/11 (veille de contrôle des manques).
+# Lisnard, Grand Oral BFMTV-Le Figaro (22/11, compte rendu du parti du 23/11, source qui parle pour le candidat) :
+#  - école : recrutement des équipes par les chefs d'établissement, contrats mieux rémunérés pour les nouveaux enseignants, choix du statut
+#    pour les enseignants en poste : précision de la proposition affichée (contractuels), texte complété à sa place ; quiz mis à jour ;
+#  - économie : 1er-Mai « jour chômé, férié, payé mais en revanche, travaille qui veut » (BFMTV, via Orange) ; libertés : retour à l'anonymat
+#    des parrainages (précise : changement de droit nommé) : thèmes pleins de propositions précises de 2026, classées après elles : non
+#    affichées (S106, S271).
+# Glucksmann, « logement d'abord » (franceinfo, 18/11, sans citation ni paramètre) : rien (intention, thème plein).
+NE_GO = _s("Nouvelle Énergie, Grand Oral BFMTV-Le Figaro de D. Lisnard (22/11, compte rendu du 23/11)", 'https://www.unenouvelleenergie.fr/david-lisnard-sur-bfmtv-le-figaro-je-veux-faire-le-menage-au-sommet-de-letat/')
+_ps = _cur('lisnard', 'ecole'); assert _ps[0]['text'] == "Chèque-éducation progressif (même financement public, école publique ou privée) ; nouveaux enseignants recrutés comme contractuels" and _ps[0]['verifiable'], [p['text'] for p in _ps]
+_txt('lisnard', 'ecole', _ps[0]['text'], "Chèque-éducation progressif (même financement public, école publique ou privée) ; chefs d'établissement qui recrutent leurs équipes ; nouveaux enseignants recrutés comme contractuels mieux payés, choix du statut pour ceux en poste")
+_so('lisnard', 'ecole', add=[NE_GO])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.
