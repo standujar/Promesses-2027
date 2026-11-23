@@ -1009,8 +1009,8 @@ function sim(){
         if(s.retraite.carriere_longue) notes.push(s.retraite.carriere_longue);
         if(year<1970 && Math.abs(d)>=0.01) notes.push("Votre génération est proche du départ : la transition peut réduire l'effet."); }
       else if(s.retraite && s.retraite.regle){ ret='Retraite : règles nouvelles'; rows.push(['Retraite',esc(s.retraite.regle),'variable']); }
-      if(s.retraite && s.retraite.duree){ const R=SQ.retraite, dd=s.retraite.duree-R.duree, an=n=>`${n} an${n>1?'s':''}`;
-        rows.push(['Durée pour le taux plein',`${s.retraite.duree} ans de cotisation (aujourd'hui : ${R.duree} ans pour les personnes nées à partir de ${R.duree_des})`, year<R.duree_des?'selon votre génération':(dd===0?'inchangée':(dd>0?'+':'−')+an(Math.abs(dd)))]); }
+      if(s.retraite && s.retraite.duree){ const R=SQ.retraite, dd=s.retraite.duree-R.duree, nf=n=>n.toLocaleString('fr-FR'), an=n=>`${nf(n)} an${n>1?'s':''}`;
+        rows.push(['Durée pour le taux plein',`${nf(s.retraite.duree)} ans de cotisation (aujourd'hui : ${R.duree} ans pour les personnes nées à partir de ${R.duree_des})`, year<R.duree_des?'selon votre génération':(dd===0?'inchangée':(dd>0?'+':'−')+an(Math.abs(dd)))]); }
     }
     // SMIC et point d'indice (review 43) : le nouveau traitement d'un agent public est le plus élevé des deux, salaire relevé par le point
     // d'indice ou nouveau SMIC, jamais leur somme (le SMIC est un plancher) ; même règle pour tout candidat qui propose les deux

@@ -218,7 +218,7 @@ with sync_playwright() as p:
       D.candidates.forEach(c=>openSim.add(c.id)); sim(); const t=document.getElementById('simres').innerText.replace(/\\s+/g,' ');
       document.getElementById('s-ot').checked=false; return t; })()""")
     check('Heures sup' not in re.sub(r'Heures sup sans[^:]*:', '', rows) and 'pas de gain calculé' in rows, 'simulateur : heures sup sans gain fictif de CSG (Philippe, Retailleau)')
-    check(re.search(r'Durée pour le taux plein.{0,120}\+2 ans', rows) and re.search(r'Durée pour le taux plein.{0,120}−3 ans', rows), 'simulateur : durée de cotisation affichée (Philippe +2 ans, Mélenchon −3 ans)')
+    check(re.search(r'Durée pour le taux plein.{0,120}\+2 ans', rows) and re.search(r'Durée pour le taux plein.{0,120}−3 ans', rows) and re.search(r'Durée pour le taux plein \+0,5 an 43,5 ans de cotisation', rows) and not re.search(r'\d\.\d ans? de cotisation', rows), 'simulateur : durée de cotisation affichée (Philippe +2 ans, Mélenchon −3 ans, Lisnard 43,5 ans, +0,5 an, virgule décimale)')
     t = pg.evaluate("""(()=>{ document.querySelector('#s-status [data-v="minima"]').click(); S.kids=3; document.getElementById('s-salary').value=1300; sim();
       const r=[...document.querySelectorAll('#simres .srow')].find(x=>x.dataset.c==='melenchon'); return r.innerText.replace(/\\s+/g,' '); })()""")
     check('Ajustement du RSA' in t, 'simulateur : hausse des allocations reprise par le RSA (Mélenchon)')
