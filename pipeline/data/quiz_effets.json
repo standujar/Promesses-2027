@@ -660,6 +660,10 @@
 "a": 2026,
 "u": "https://www.cor-retraites.fr/sites/default/files/2026-07/RA_2026_def.pdf"
 }
+],
+"complement": "Le même candidat prévoit aussi des dispositifs pour encourager la poursuite de l'activité, sans en préciser le contenu.",
+"complement_ref": [
+"glucksmann.retraites"
 ]
 },
 "glucksmann.service_civique": {
@@ -782,10 +786,10 @@
 ]
 },
 "le-pen.ame": {
-"constat": "Bénéficiaires de l'aide médicale d'État : +47 % de 2017 à 2024, puis −1,5 % sur un an fin septembre 2025 (Sénat).",
+"constat": "Bénéficiaires de l'aide médicale d'État : +47 % de 2017 à 2024, −2,4 % en 2025 (454 111), −3,1 % sur un an fin mars 2026 (Sénat).",
 "constat_s": [
 1,
-2
+5
 ],
 "pour": "Couvrir seulement les soins urgents réduit l'intérêt de venir pour se faire soigner.",
 "preuve_pour": "faible",
@@ -826,6 +830,11 @@
 "l": "Cour des comptes, La politique de lutte contre l'immigration irrégulière",
 "a": 2024,
 "u": "https://www.ccomptes.fr/fr/publications/la-politique-de-lutte-contre-limmigration-irreguliere"
+},
+{
+"l": "Sénat, commission des finances, note de présentation de la mission « Santé » du projet de loi de finances pour 2027 (V. Delahaye)",
+"a": 2026,
+"u": "https://www.senat.fr/fileadmin/cru-1792598966/Commissions/Finances/2026-2027/PLF_2027/NP/Note_de_presentation_Sante_PLF_2027.pdf"
 }
 ]
 },
@@ -1328,10 +1337,10 @@
 ]
 },
 "lisnard.ame": {
-"constat": "Bénéficiaires de l'aide médicale d'État : +47 % de 2017 à 2024, puis −1,5 % sur un an fin septembre 2025 (Sénat).",
+"constat": "Bénéficiaires de l'aide médicale d'État : +47 % de 2017 à 2024, −2,4 % en 2025 (454 111), −3,1 % sur un an fin mars 2026 (Sénat).",
 "constat_s": [
 1,
-2
+5
 ],
 "pour": "Couvrir seulement les soins urgents réduit l'intérêt de venir pour se faire soigner.",
 "preuve_pour": "faible",
@@ -1372,6 +1381,11 @@
 "l": "Cour des comptes, La politique de lutte contre l'immigration irrégulière",
 "a": 2024,
 "u": "https://www.ccomptes.fr/fr/publications/la-politique-de-lutte-contre-limmigration-irreguliere"
+},
+{
+"l": "Sénat, commission des finances, note de présentation de la mission « Santé » du projet de loi de finances pour 2027 (V. Delahaye)",
+"a": 2026,
+"u": "https://www.senat.fr/fileadmin/cru-1792598966/Commissions/Finances/2026-2027/PLF_2027/NP/Note_de_presentation_Sante_PLF_2027.pdf"
 }
 ]
 },
@@ -2725,10 +2739,10 @@
 ]
 },
 "retailleau.ame": {
-"constat": "Bénéficiaires de l'aide médicale d'État : +47 % de 2017 à 2024, puis −1,5 % sur un an fin septembre 2025 (Sénat).",
+"constat": "Bénéficiaires de l'aide médicale d'État : +47 % de 2017 à 2024, −2,4 % en 2025 (454 111), −3,1 % sur un an fin mars 2026 (Sénat).",
 "constat_s": [
 1,
-2
+5
 ],
 "pour": "Couvrir seulement les soins urgents réduit l'intérêt de venir pour se faire soigner.",
 "preuve_pour": "faible",
@@ -2769,6 +2783,11 @@
 "l": "Cour des comptes, La politique de lutte contre l'immigration irrégulière",
 "a": 2024,
 "u": "https://www.ccomptes.fr/fr/publications/la-politique-de-lutte-contre-limmigration-irreguliere"
+},
+{
+"l": "Sénat, commission des finances, note de présentation de la mission « Santé » du projet de loi de finances pour 2027 (V. Delahaye)",
+"a": 2026,
+"u": "https://www.senat.fr/fileadmin/cru-1792598966/Commissions/Finances/2026-2027/PLF_2027/NP/Note_de_presentation_Sante_PLF_2027.pdf"
 }
 ]
 },
@@ -6759,10 +6778,10 @@
 ]
 },
 "zemmour.ame": {
-"constat": "Bénéficiaires de l'aide médicale d'État : +47 % de 2017 à 2024, puis −1,5 % sur un an fin septembre 2025 (Sénat).",
+"constat": "Bénéficiaires de l'aide médicale d'État : +47 % de 2017 à 2024, −2,4 % en 2025 (454 111), −3,1 % sur un an fin mars 2026 (Sénat).",
 "constat_s": [
 1,
-2
+5
 ],
 "pour": "Ne plus couvrir les soins réduit l'intérêt de venir pour se faire soigner.",
 "preuve_pour": "faible",
@@ -6803,6 +6822,11 @@
 "l": "Cour des comptes, La politique de lutte contre l'immigration irrégulière",
 "a": 2024,
 "u": "https://www.ccomptes.fr/fr/publications/la-politique-de-lutte-contre-limmigration-irreguliere"
+},
+{
+"l": "Sénat, commission des finances, note de présentation de la mission « Santé » du projet de loi de finances pour 2027 (V. Delahaye)",
+"a": 2026,
+"u": "https://www.senat.fr/fileadmin/cru-1792598966/Commissions/Finances/2026-2027/PLF_2027/NP/Note_de_presentation_Sante_PLF_2027.pdf"
 }
 ]
 },
@@ -8947,5 +8971,419 @@
 "u": "https://www.statistiques.developpement-durable.gouv.fr/le-parc-de-logements-par-classe-de-performance-energetique-au-1er-janvier-2025"
 }
 ]
+},
+"zemmour.production": {
+"constat": "Les impôts de production font 5 % de la valeur ajoutée des sociétés en 2024 (5,4 % en 2015 ; Allemagne 1,2 %).",
+"constat_s": [
+2,
+3
+],
+"pour": "Ces impôts sont dus même sans bénéfice ; après leur baisse de 2010, les entreprises allégées ont embauché.",
+"preuve_pour": "mitigé",
+"contre": "Les baisses récentes n'ont pas eu d'effet net mesuré, et profitent surtout aux grands groupes.",
+"preuve_contre": "mitigé",
+"cas_pour": [
+{
+"t": "Après la fin en 2010 de la taxe professionnelle sur les machines, les entreprises les plus allégées ont accru ventes, capital et emploi (Banque de France, France, 2021).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [
+{
+"t": "Après la baisse de moitié de plusieurs impôts de production en 2021, aucun effet robuste n'a été mesuré sur l'investissement (IPP, France, 2025).",
+"s": [
+1
+]
+},
+{
+"t": "La baisse de 2021 a surtout profité aux grandes entreprises et à celles qui ont beaucoup de machines et de bâtiments, dont l'industrie (IPP, France, 2025).",
+"s": [
+1
+]
+}
+],
+"etudes": "Effet positif mesuré pour la réforme de 2010, pas d'effet robuste pour celle de 2021 ; une étude préliminaire lie la fin de la taxe sur le chiffre d'affaires des petites entreprises à +1 % d'export.",
+"src": [
+{
+"l": "Banque de France, Bulletin n° 238/4, « Dix ans après la réforme de la taxe professionnelle » (Bergeaud, Jousselin, Malgouyres)",
+"a": 2021,
+"u": "https://www.banque-france.fr/system/files/2023-01/bulletin-banque-de-france_238-4_taxe_professionnelle.pdf"
+},
+{
+"l": "IPP, rapport n° 60, « La baisse des impôts de production : ciblage et évaluation » (pour France Stratégie)",
+"a": 2025,
+"u": "https://www.ipp.eu/wp-content/uploads/2025/10/FS_ImpotsProductions-9.pdf"
+},
+{
+"l": "Eurostat, comptes non financiers par secteur (nasa_10_nf_tr), calcul : impôts sur la production (D29) payés par les sociétés non financières / leur valeur ajoutée brute",
+"a": 2026,
+"u": "https://ec.europa.eu/eurostat/databrowser/view/nasa_10_nf_tr/default/table"
+},
+{
+"l": "CAE, note n° 53, « Les impôts sur (ou contre) la production » (Martin, Trannoy)",
+"a": 2019,
+"u": "https://cae-eco.fr/static/pdf/cae-note053.pdf"
+}
+]
+},
+"philippe.sante.2": {
+"pour": "Un second hôpital ajouterait à Mayotte des services de maternité, de médecine et de chirurgie.",
+"preuve_pour": "pas d'étude",
+"contre": "Ce second hôpital, à Combani, est déjà prévu par l'État : validation début 2027, ouverture annoncée en 2030.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune évaluation ; le projet de second hôpital à Combani est déjà engagé par l'État (validation prévue début 2027, ouverture annoncée en 2030).",
+"src": [
+{
+"l": "Mayotte Hebdo, ce qui est nouveau et ce qui est confirmé dans les annonces du Gouvernement à Mayotte (28/08/2026)",
+"a": 2026,
+"u": "https://www.mayottehebdo.com/actualite/politique/ce-qui-est-nouveau-ce-qui-est-confirme-dans-les-annonces-du-gouvernement-en-deplacement-a-mayotte/"
+}
+]
+},
+"philippe.economie.5": {
+"constat": "Contractuels : 24,0 % des agents publics fin 2024, +7,6 points en dix ans (Insee).",
+"constat_s": [
+0
+],
+"pour": "Les collectivités pourraient embaucher sous contrat de droit privé, plus simple à conclure et à adapter.",
+"preuve_pour": "pas d'étude",
+"contre": "Les nouveaux agents hors régalien et école n'auraient plus la garantie de l'emploi des fonctionnaires.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune évaluation française de l'effet du statut sur le recrutement ou la qualité du service ; la part des contractuels progresse depuis dix ans (Insee).",
+"src": [
+{
+"l": "Insee Première n° 2094, L'emploi dans la fonction publique en 2024",
+"a": 2026,
+"u": "https://www.insee.fr/fr/statistiques/8732435"
+}
+]
+},
+"lisnard.economie.5": {
+"pour": "Une seule règle pour tous : la retraite d'un agent public se calculerait comme celle d'un salarié du privé.",
+"preuve_pour": "pas d'étude",
+"contre": "Cinq régimes spéciaux, dont la RATP et les industries électriques et gazières, sont fermés depuis 2023.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune évaluation française de l'effet d'un alignement des règles du public et du privé ; cinq régimes spéciaux sont fermés aux nouveaux embauchés depuis la réforme de 2023 (Sénat).",
+"src": [
+{
+"l": "Sénat, avis n° 131 (2023-2024), tome III, « Régimes sociaux et de retraite » (P. Gruny)",
+"a": 2023,
+"u": "https://www.senat.fr/rap/a23-131-3/a23-131-3_mono.html"
+}
+]
+},
+"retailleau.economie.5": {
+"constat": "Le salaire net moyen réel du privé a reculé de 1,8 % en 2022-2023, puis gagné 0,9 % en 2024 (Insee).",
+"constat_s": [
+3
+],
+"pour": "Environ 500 € de plus par an pour plus de 9 millions de salariés lors de l'exonération de 2007-2012.",
+"preuve_pour": "solide",
+"contre": "Le temps de travail réel n'augmente guère : on déclare surtout autrement des heures déjà faites.",
+"preuve_contre": "solide",
+"cas_pour": [
+{
+"t": "L'exonération des heures sup de 2007 à 2012 a profité à plus de 9 millions de salariés, pour un gain moyen d'environ 500 € par an (Assemblée nationale, France, 2011).",
+"s": [
+0
+]
+},
+{
+"t": "L'exonération de cotisations sur les heures sup rétablie en 2019 a augmenté le revenu de 11,2 millions de ménages, de 140 € par an en moyenne (Insee, France, 2020).",
+"s": [
+1
+]
+}
+],
+"cas_contre": [
+{
+"t": "Après 2007, les heures réellement travaillées n'ont pas augmenté ; les salariés très qualifiés ont surtout déclaré plus d'heures sup (Cahuc-Carcillo, France, 2011).",
+"s": [
+2
+]
+},
+{
+"t": "La durée effective du travail n'a pas nettement augmenté ; des heures déjà faites mais non déclarées avant 2007 ont été exonérées (Assemblée nationale, France, 2011).",
+"s": [
+0
+]
+}
+],
+"etudes": "Les évaluations de 2007-2012 concordent : gain de revenu net pour les salariés concernés, pas de hausse mesurable du temps de travail ; pas d'évaluation trouvée sur ce point pour 2019.",
+"src": [
+{
+"l": "Assemblée nationale, Comité d'évaluation et de contrôle, rapport n° 3615 sur les heures supplémentaires (synthèse)",
+"a": 2011,
+"u": "https://www.assemblee-nationale.fr/13/controle/com_cec/cec-pdf/s3615.pdf"
+},
+{
+"l": "Insee, France portrait social 2020, dossier sur les mesures socio-fiscales de 2019",
+"a": 2020,
+"u": "https://insee.fr/fr/statistiques/fichier/4797668/FPS2020-D2.pdf"
+},
+{
+"l": "Cahuc et Carcillo, The Detaxation of Overtime Hours: Lessons from the French Experiment (IZA DP 5439 ; Journal of Labor Economics 2014)",
+"a": 2011,
+"u": "https://docs.iza.org/dp5439.pdf"
+},
+{
+"l": "Insee, note pour le Groupe d'experts sur le SMIC (annexe 1 du rapport 2025)",
+"a": 2025,
+"u": "https://www.vie-publique.fr/files/rapport/pdf/301429_0.pdf"
+}
+]
+},
+"attal.economie.1": {
+"pour": "Les accords d'entreprise ou de branche fixeraient plus de règles, au plus près de chaque entreprise.",
+"preuve_pour": "pas d'étude",
+"contre": "Les accords d'entreprise ont gagné de la place en 2017, sans effet mesuré sur l'emploi à ce jour.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Le comité d'évaluation des ordonnances de 2017, qui ont élargi la place des accords d'entreprise, n'a pas pu en mesurer l'effet sur l'emploi (France Stratégie, 2021) ; un code réduit à des principes n'est pas évalué.",
+"src": [
+{
+"l": "France Stratégie, comité d'évaluation des ordonnances travail, rapport 2021",
+"a": 2021,
+"u": "https://www.vie-publique.fr/files/rapport/pdf/283002.pdf"
+}
+]
+},
+"retailleau.economie.2": {
+"pour": "Les accords d'entreprise ou de branche fixeraient plus de règles, au plus près de chaque entreprise.",
+"preuve_pour": "pas d'étude",
+"contre": "Les accords d'entreprise ont gagné de la place en 2017, sans effet mesuré sur l'emploi à ce jour.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Le comité d'évaluation des ordonnances de 2017, qui ont élargi la place des accords d'entreprise, n'a pas pu en mesurer l'effet sur l'emploi (France Stratégie, 2021) ; un code réduit à des principes n'est pas évalué.",
+"src": [
+{
+"l": "France Stratégie, comité d'évaluation des ordonnances travail, rapport 2021",
+"a": 2021,
+"u": "https://www.vie-publique.fr/files/rapport/pdf/283002.pdf"
+}
+]
+},
+"attal.economie.4": {
+"pour": "Après les lois Egalim, la part agricole du prix payé en magasin a augmenté de 2021 à 2023.",
+"preuve_pour": "faible",
+"contre": "L'effet économique des lois Egalim reste difficile à établir, et leurs contrats écrits sont peu appliqués.",
+"preuve_contre": "faible",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "L'évaluation de l'Assemblée (2025) juge l'efficacité économique des lois Egalim difficile à établir et relève des contrats écrits peu appliqués ; la part agricole du prix au détail a augmenté de 2021 à 2023.",
+"src": [
+{
+"l": "Assemblée nationale, rapport d'information n° 1014 sur l'évaluation de la loi Egalim 2 (commission des affaires économiques)",
+"a": 2025,
+"u": "https://www.assemblee-nationale.fr/dyn/17/rapports/cion-eco/l17b1014_rapport-information.pdf"
+}
+]
+},
+"retailleau.economie.4": {
+"pour": "Après les lois Egalim, la part agricole du prix payé en magasin a augmenté de 2021 à 2023.",
+"preuve_pour": "faible",
+"contre": "L'effet économique des lois Egalim reste difficile à établir, et leurs contrats écrits sont peu appliqués.",
+"preuve_contre": "faible",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "L'évaluation de l'Assemblée (2025) juge l'efficacité économique des lois Egalim difficile à établir et relève des contrats écrits peu appliqués ; la part agricole du prix au détail a augmenté de 2021 à 2023.",
+"src": [
+{
+"l": "Assemblée nationale, rapport d'information n° 1014 sur l'évaluation de la loi Egalim 2 (commission des affaires économiques)",
+"a": 2025,
+"u": "https://www.assemblee-nationale.fr/dyn/17/rapports/cion-eco/l17b1014_rapport-information.pdf"
+}
+]
+},
+"attal.economie.2": {
+"pour": "Des règles fiscales stables permettent aux entreprises de prévoir leurs impôts sur plusieurs années.",
+"preuve_pour": "faible",
+"contre": "Les gouvernements suivants auraient moins de marge pour changer les impôts selon les besoins.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent que l'incertitude sur les politiques publiques va de pair avec moins d'investissement et d'emploi, sans preuve de causalité. Une règle de stabilité fiscale n'est pas évaluée.",
+"src": [
+{
+"l": "Baker, Bloom, Davis, Measuring Economic Policy Uncertainty (NBER w21633, QJE 2016)",
+"a": 2016,
+"u": "https://www.nber.org/papers/w21633"
+}
+]
+},
+"lisnard.economie.3": {
+"pour": "Des règles fiscales stables permettent aux entreprises de prévoir leurs impôts sur plusieurs années.",
+"preuve_pour": "faible",
+"contre": "Les gouvernements suivants auraient moins de marge pour changer les impôts selon les besoins.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent que l'incertitude sur les politiques publiques va de pair avec moins d'investissement et d'emploi, sans preuve de causalité. Une règle de stabilité fiscale n'est pas évaluée.",
+"src": [
+{
+"l": "Baker, Bloom, Davis, Measuring Economic Policy Uncertainty (NBER w21633, QJE 2016)",
+"a": 2016,
+"u": "https://www.nber.org/papers/w21633"
+}
+]
+},
+"attal.economie.5": {
+"pour": "Les entreprises sauraient qu'aucun nouveau contrôle ne commence pendant les deux mois d'été.",
+"preuve_pour": "pas d'étude",
+"contre": "Les nouveaux contrôles de l'année devraient tous être lancés sur dix mois au lieu de douze.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune évaluation française.",
+"src": []
+},
+"lisnard.economie.2": {
+"pour": "Un licenciement moins coûteux en début de contrat peut inciter à embaucher sur un contrat durable.",
+"preuve_pour": "faible",
+"contre": "Les CDD et leur prime de fin de contrat disparaîtraient pour les nouvelles embauches.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent qu'un licenciement moins coûteux augmente un peu les embauches en contrat durable. Un contrat unique n'est pas évalué.",
+"src": [
+{
+"l": "Sestito, Viviano, coût du licenciement et embauches (Economic Policy)",
+"a": 2018,
+"u": "https://ideas.repec.org/a/oup/ecpoli/v33y2018i93p101-130..html"
+}
+]
+},
+"glucksmann.economie.4": {
+"pour": "Un stagiaire à temps plein toucherait au moins 1 000 € par mois, contre environ 660 € au minimum aujourd'hui.",
+"preuve_pour": "pas d'étude",
+"contre": "Un stage de plus de deux mois coûterait à l'employeur environ 340 € de plus par mois au minimum.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune évaluation française de l'effet du montant de la gratification sur le nombre de stages ; le minimum est aujourd'hui de 4,50 € par heure de stage.",
+"src": [
+{
+"l": "Service-public.gouv.fr, gratification minimale d'un stagiaire",
+"a": 2026,
+"u": "https://www.service-public.gouv.fr/particuliers/vosdroits/F32131"
+}
+]
+},
+"melenchon.economie.3": {
+"pour": "L'effet des baisses de cotisations sur l'emploi décroît à mesure qu'on s'éloigne du SMIC.",
+"preuve_pour": "mitigé",
+"contre": "L'ampleur de leur effet sur l'emploi reste débattue : les supprimer peut aussi coûter des emplois.",
+"preuve_contre": "faible",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Consensus des économistes sur un effet des baisses de cotisations sur l'emploi au niveau du SMIC, qui décroît quand on s'en éloigne ; son ampleur selon le niveau de salaire reste débattue (Haut Conseil des rémunérations, 2024).",
+"src": [
+{
+"l": "Haut Conseil des rémunérations, de l'emploi et de la productivité, note d'orientation sur les exonérations de cotisations sociales (16/12/2024)",
+"a": 2024,
+"u": "https://www.strategie-plan.gouv.fr/files/2024-12/hcrep_2024_note_orientation_16_decembre.pdf"
+}
+]
+},
+"melenchon.economie.4": {
+"constat": "Le taux de chômage est de 8,2 % au 3e trimestre 2026, contre 7,1 % début 2023 et 8,4 % mi-2019 (Insee).",
+"constat_s": [
+1
+],
+"pour": "Dans les territoires zéro chômeur, la plupart des embauchés n'auraient sans doute pas eu d'emploi sans eux.",
+"preuve_pour": "mitigé",
+"contre": "Coût net de 11 300 à 13 700 € par emploi dans les territoires zéro chômeur, et on en sort peu.",
+"preuve_contre": "mitigé",
+"cas_pour": [
+{
+"t": "Mi-2025, 4 051 personnes durablement privées d'emploi étaient salariées de 92 entreprises à but d'emploi, dans 83 territoires (comité scientifique, France, 2025).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [
+{
+"t": "Le coût net pour la puissance publique est estimé entre 11 300 et 13 700 € par emploi à temps plein, « loin de la neutralité budgétaire » (comité scientifique, France, 2025).",
+"s": [
+0
+]
+}
+],
+"etudes": "L'expérimentation des territoires zéro chômeur a des effets favorables pour les personnes embauchées, pour un coût net de 11 300 à 13 700 € par emploi ; on sort peu de ses entreprises (comité scientifique, 2025).",
+"src": [
+{
+"l": "Banque des Territoires (Localtis), Territoires zéro chômeur de longue durée : le comité scientifique appelle à poursuivre (23/09/2025)",
+"a": 2025,
+"u": "https://www.banquedesterritoires.fr/territoires-zero-chomeur-de-longue-duree-le-comite-scientifique-appelle-poursuivre-malgre-un-cout"
+},
+{
+"l": "Insee, taux de chômage au sens du BIT, France hors Mayotte, données CVS (série 001688527)",
+"a": 2026,
+"u": "https://www.insee.fr/fr/statistiques/serie/001688527"
+}
+]
+},
+"melenchon.economie.5": {
+"pour": "Les heures sup seraient toujours payées 25 % puis 50 % de plus ; un accord peut aujourd'hui descendre à 10 %.",
+"preuve_pour": "pas d'étude",
+"contre": "Les entreprises au-delà du plafond de CDD et d'intérim devraient embaucher en CDI ou réduire ces contrats.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune évaluation française d'un plafond de contrats courts par entreprise ; les taux décrits sont ceux du Code du travail (25 % puis 50 % sans accord, 10 % au moins par accord).",
+"src": [
+{
+"l": "Service-public.gouv.fr, Heures supplémentaires d'un salarié du secteur privé (contingent annuel et contrepartie en repos)",
+"a": 2026,
+"u": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2391"
+}
+]
+},
+"le-pen.economie.5": {
+"pour": "La rupture d'un commun accord, qui peut ouvrir droit au chômage, ne servirait qu'une fois en dix ans.",
+"preuve_pour": "pas d'étude",
+"contre": "Dans les dix ans suivants, quitter un emploi ne serait plus possible que par démission ou licenciement.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune évaluation française d'une limite du nombre de ruptures conventionnelles.",
+"src": [
+{
+"l": "Service-public.gouv.fr, Rupture conventionnelle d'un salarié du secteur privé",
+"a": 2026,
+"u": "https://www.service-public.gouv.fr/particuliers/vosdroits/F19030"
+}
+]
+},
+"melenchon.economie.2": {
+"pour": "L'État orienterait lui-même une partie du crédit vers les investissements qu'il juge prioritaires.",
+"preuve_pour": "pas d'étude",
+"contre": "Les pertes sur ces prêts et investissements seraient à la charge de la puissance publique.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune évaluation française d'un pôle public bancaire de cette taille.",
+"src": []
+},
+"le-pen.economie.3": {
+"pour": "Moins de taxes à déclarer et à calculer pour les entreprises et les ménages qui les paient.",
+"preuve_pour": "pas d'étude",
+"contre": "Les organismes financés par ces taxes devraient trouver d'autres ressources ou réduire leurs missions.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Aucune évaluation française.",
+"src": []
 }
 }

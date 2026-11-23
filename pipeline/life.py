@@ -1824,6 +1824,48 @@ _ps = _cur('glucksmann', 'logement'); assert [p['old'] for p in _ps] == [False, 
 _put('glucksmann', 'logement', _ps[:2] + [_p("Construire 420 000 logements par an ; loi de programmation du logement sur cinq ans (normes, budget, accession, aides, financements)")] + _ps[2:])
 _so('glucksmann', 'logement', add=[AFP_FFB, ZEP_FFB])
 
+# --- review 57 : revue du 23/11 (23/11/2026) ; registre S106, S341, S359 et suivants
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; à égalité ou
+# à date inconnue, ordre affiché gardé ; une proposition nouvelle se place après les précises de 2026 déjà affichées ; au-delà de 5, sort celle
+# que la règle classe dernière, S106). Même test « précis » (changement de droit nommé, instrument nommé et ce qui y change, chiffre, durée,
+# âge, échéance ou niveau scolaire nommé). Sources ouvertes du 21 au 23/11 (veille vérifiée du 23/11).
+# Zemmour, discours de Toulon (21/11) :
+#  - libertés : suppression de l'Arcom (franceinfo avec l'AFP, qui le cite ; précise : instrument nommé et ce qui y change) : 5e, après les
+#    quatre précises de 2026 ; sort l'article 55 révisé (programme de 2022, non reconfirmé). Anonymat sur internet « préservé » et fin des
+#    « contraintes » de pluralisme des chaînes de télévision (même dépêche) : intentions de 2026, classées après les précises, au-delà de 5 (S106) ;
+#  - logement : « impitoyable » avec les squatteurs, fin de la « tolérance judiciaire » envers ceux qui violent le droit de propriété (Capital,
+#    qui le cite ; intention, aucune mesure nommée) : de 2026, avant l'abrogation de la loi SRU (programme de 2022) ; 1 → 2 ;
+#  - école : « trois filières dès la quatrième » : un seul média, sans citation (RCF) ; règle d'attribution non remplie : texte inchangé (registre).
+# Philippe, pages « Outre-mer », « Intelligence artificielle » et « Protection de l'enfance » (mises à jour le 18/11 ; date d'apparition non
+#  établie, même traitement que les pages « Sécurité » et « Finances publiques » le 18/11 : dans un thème plein de précises de 2026, classées
+#  après et non affichées) :
+#  - rayonnement (3 → 5, place libre) : moratoire total sur l'immigration à Mayotte pendant le quinquennat, immigration familiale comprise, et
+#    suspension totale du droit du sol à Mayotte pendant plusieurs années (précises : durée et changement de droit nommés), dans l'ordre de la
+#    page ; centre de retour en Afrique de l'Est, navires doublés aux Antilles : au-delà de 5 (S106) ;
+#  - santé (3 → 4) : deuxième hôpital de plein exercice à Mayotte, à Combani (maternité, médecine, chirurgie ; précise : établissement et lieu
+#    nommés), après la précise de 2026, avant les deux intentions ;
+#  - sécurité, école, économie (thèmes pleins de précises de 2026) : imprescriptibilité des crimes sur mineurs, éloignement de l'adulte dès la
+#    plainte, « droit de savoir », Inspection nationale de l'enfance, « zéro IA avant le collège », zones d'accélération de l'IA : non affichées
+#    (S106).
+FI_ZTLN = _s("franceinfo avec l'AFP, premier meeting d'É. Zemmour à Toulon (21/11)", 'https://www.franceinfo.fr/elections/je-serai-le-candidat-de-la-liberte-de-pensee-de-parler-de-dire-ce-que-vous-voyez-clame-eric-zemmour-lors-de-son-premier-meeting-de-campagne-presidentielle_8294024.html')
+CAP_ZTLN = _s("Capital, discours d'É. Zemmour à Toulon (21/11)", 'https://www.capital.fr/economie-politique/vos-enfants-heriteront-ils-sans-payer-un-euro-eric-zemmour-promet-de-supprimer-tous-les-droits-de-succession-1532060')
+EP_OM = _s("Site de campagne d'Édouard Philippe, programme « Outre-mer » (18/11)", EPPL + 'outre-mer')
+# Zemmour
+_ps = _cur('zemmour', 'libertes'); assert len(_ps) == 5 and [p['old'] for p in _ps] == [False] * 4 + [True] and _ps[4]['text'].startswith('Article 55 révisé'), [(p['text'], p['old']) for p in _ps]
+_put('zemmour', 'libertes', _ps[:4] + [_p("Supprimer l'Arcom, le régulateur de l'audiovisuel")])
+_so('zemmour', 'libertes', add=[FI_ZTLN])
+_ps = _cur('zemmour', 'logement'); assert len(_ps) == 1 and _ps[0]['old'], [(p['text'], p['old']) for p in _ps]
+_put('zemmour', 'logement', [_p("Être « impitoyable » avec les squatteurs : fin de la « tolérance judiciaire » envers ceux qui violent le droit de propriété", v=False)] + _ps)
+_so('zemmour', 'logement', add=[CAP_ZTLN])
+# Philippe
+_ps = _cur('philippe', 'rayonnement'); assert len(_ps) == 3 and all(p['verifiable'] and not p['old'] for p in _ps), [p['text'] for p in _ps]
+_put('philippe', 'rayonnement', _ps + [_p("Mayotte : moratoire total sur l'immigration pendant le quinquennat, immigration familiale comprise"),
+                                       _p("Mayotte : droit du sol totalement suspendu pendant plusieurs années")])
+_so('philippe', 'rayonnement', add=[EP_OM])
+_ps = _cur('philippe', 'sante'); assert [p['verifiable'] for p in _ps] == [True, False, False] and not any(p['old'] for p in _ps), [(p['text'], p['verifiable']) for p in _ps]
+_put('philippe', 'sante', _ps[:1] + [_p("Mayotte : deuxième hôpital de plein exercice, à Combani (maternité, médecine, chirurgie)")] + _ps[1:])
+_so('philippe', 'sante', add=[EP_OM])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.
