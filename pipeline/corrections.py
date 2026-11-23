@@ -3859,6 +3859,168 @@ assert not C['glucksmann']['sim'].get('logement')
 C['glucksmann']['sim']['logement'] = [{"when": ["loc"], "t": "Encadrement des loyers en zones tendues (encadrement actuel" + _enc + ") : effet sur votre loyer non chiffré."}]
 D['asof'] = '21 novembre 2026'
 
+# --- review 57 : revue du 23/11 (23/11/2026) ; registre S008, S281, S301 (résolus), S009, S059, S063, S106, S138, S205, S275, S299, S312, S341, S355, S358 (mis à jour), S359 et suivants
+# Décisions du 23/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 21 au 23/11, sources ouvertes le 23/11).
+# (1) Sondages (data/sondages.json, règle de « review 19 ») : moyenne au 23/11 ; Toluna Harris Interactive pour M6, RTL et L'Express (18-19/11,
+#     notice 10393) entre, trois hypothèses, chaque score relu sur le récapitulatif de la notice (p. 36), avec l'hypothèse comprenant T. Riner
+#     (même traitement que les autres instituts) ; sa vague du 3-5/11 (notice 10362) devient la vague antérieure de cet institut ; notice 10394
+#     (indices de popularité) dans « exclus ». Six instituts ; ordre des candidats inchangé.
+# (2) Zemmour, discours de Toulon (21/11 ; Capital, 21 et 22/11, citations directes ; franceinfo avec l'AFP ; RCF) et entretien au JDD du 15/11
+#     (Capital, citations directes ; le JDD refuse l'accès automatique) :
+#     - impôts de production : « verra disparaître les impôts de production » (Capital, citation du candidat) : reprise par le candidat en 2026
+#       (règle de reconfirmation : le candidat lui-même, cité par un média reconnu). La fiche quitte « à confirmer » et entre dans le total
+#       (S008 fermé). Chiffrage inchangé et conforme à la règle commune : liste non énumérée par le candidat, celle du livre de S. Knafo gardée
+#       (CFE, CVAE, C3S ; CVAE déjà supprimée par la loi : 0), même calcul que Le Pen, net de l'impôt sur les sociétés récupéré au taux commun
+#       (20 %, borne 17,5 %), le taux normal d'IS restant celui du droit en vigueur dans son programme. Simulateur : suppression de la CFE pour
+#       les indépendants, même réglage que Le Pen et Philippe ; quiz : même texte et mêmes explications que la suppression de Le Pen.
+#     - quotient familial : toujours non repris (S009), hors total.
+#     - CSG « pour tous les actifs de France » et fin des droits de succession redites : sources ajoutées, valeurs inchangées.
+#     - plan de 280 Md€ (« 140 milliards pour financer les baisses d'impôts, 140 milliards pour combler le déficit public », Toulon ; « par an
+#       dès 2032 », JDD) : chiffre du camp du total ; aucune ventilation publiée au-delà du plan de 140 Md€ de budget2027.fr : économies non
+#       comptées sans chiffrage indépendant (liste non comptée, S275).
+#     - prisons : 100 000 places (RCF, 21/11 ; site relu le 23/11) ; 200 000 non redit : S301 fermé, fiche inchangée.
+#     - carburants : « On veut réduire les taxes sur le carburant de 40 centimes par litre » (JDD, 15/11, cité par Capital) : unité confirmée,
+#       lecture du 11/11 inchangée (taxes TVA comprise, −14,5) ; S281 fermé.
+#     - chiffres du camp (JDD, 15/11) : aides réservées 20 Md€, RSA limité à trois ans 5 Md€, renouvelables « près de 8 milliards » : chiffre
+#       du camp des fiches ; valeurs comptées inchangées (chiffrages indépendants ou règle commune).
+#     - retraites : sortie du système par répartition par un « plan de transition » (JDD) : note, paramètres non publiés.
+#     - Vie quotidienne (life.py).
+# (3) Le Pen (Franc-Jeu, France 2 et France Inter, 22/11) : « Oui, il y aura une perte » pour les pères de trois enfants et cotisations
+#     supplémentaires sous le mi-temps : rapportés seulement par Senioractu (hors liste des médias reconnus) et un site non reconnu ; aucun
+#     média reconnu trouvé (franceinfo, article du 22/11 sur l'émission, sans mention) : registre, fiche et simulateur inchangés. J.-P. Delsol
+#     (IREF, Contrepoints, 22/11) : 23 à 33 Md€ par an en 2028 pour un départ à 60 ans de trois générations : estimation ajoutée avec son champ
+#     et son année, hors médiane et hors bornes (année 2028 et champ différents de la fiche : la réforme publiée module l'âge de 60 à 62 ans
+#     selon le premier emploi et monte en charge jusqu'en 2032).
+# (4) Philippe, pages « Outre-mer », « Intelligence artificielle » et « Protection de l'enfance » du programme (mises à jour le 18/11, lues le
+#     23/11) : aucune n'a de coût publié ; SMIC et retraites de Mayotte alignés sur l'Hexagone « de façon maîtrisée et financée », sans date :
+#     la loi du 11 août 2025 de programmation pour la refondation de Mayotte prévoit déjà l'alignement du SMIC « d'ici à 2031 » (ministère des
+#     Solidarités) ; l'écart avec le droit en vigueur dépend d'une échéance non publiée : non compté (règle des objectifs, paramètre non publié).
+#     Hôpital de Combani, piste de Grande-Terre, financement de l'eau de Mayotte jusqu'en 2032, navires doublés aux Antilles, Inspection
+#     nationale de l'enfance, plan « Horizon 2050 » (un euro public pour un euro privé), « Livret capital France » : coûts non publiés, listés.
+#     Vie quotidienne (life.py).
+# (5) Retailleau (TF1 Info, « Route nationale », 22/11) : aide à l'embauche d'un apprenti « par exemple » à 6 000 € (CAP, bac pro). Aide en
+#     vigueur (décret n° 2026-168 du 6 mars 2026, service-public.gouv.fr) : 5 000 € au plus pour un diplôme jusqu'au bac dans les entreprises de
+#     moins de 250 salariés, 2 000 € au-delà. Champ (taille d'entreprise, niveaux de diplôme : « par exemple ») non publié, et aucune série
+#     officielle ouverte des contrats par niveau et par taille d'entreprise (Dares, accès automatique refusé) : non compté, listé (même
+#     traitement que les chèques apprentissage de Le Pen, dispositif non défini). Plafond de 70 % du SMIC « par individu » et heures sans
+#     cotisations au-delà de 35 h redits : sources (S355 mis à jour).
+# (6) Glucksmann (Le Grand enjeu, 22/11, Entrevue) : projet de réforme des retraites en janvier, répartition gardée, carrières longues, pénibilité,
+#     « dispositifs encourageant la poursuite de l'activité », partenaires sociaux associés : note (fiche inchangée). Obligation locative en zone
+#     tendue (21News, Contrepoints : hors liste des médias reconnus) : registre. Lisnard (Economie Matin, site faible) : S312. Attal (pacte
+#     jeunesse revu, contenu non publié) : registre.
+# (7) Situation de départ : loi logement (vote solennel le 24/11, article 6 tel qu'adopté le 17/11), budget de la Sécurité sociale (CMP convoquée,
+#     date non publiée), SMIC (aucun décret aux JO des 22 et 23/11) : rien de définitif, registre (S205, S138, S299).
+CAP15 = 'https://www.capital.fr/economie-politique/carburant-a-40-centimes-de-moins-le-litre-eric-zemmour-promet-aussi-10-de-revenus-en-plus-pour-tous-1531862'
+CAP15_S = "Capital, entretien d'É. Zemmour au JDD (15/11/2026)"
+CAP21 = 'https://www.capital.fr/economie-politique/vos-enfants-heriteront-ils-sans-payer-un-euro-eric-zemmour-promet-de-supprimer-tous-les-droits-de-succession-1532060'
+CAP21_S = "Capital, discours d'É. Zemmour à Toulon (21/11/2026)"
+CAP22 = 'https://www.capital.fr/economie-politique/votre-salaire-augmente-de-10-sans-rien-couter-a-votre-patron-ce-qu-eric-zemmour-veut-supprimer-pour-y-arriver-1532061'
+CAP22_S = "Capital, discours d'É. Zemmour à Toulon (21/11/2026, article du 22/11)"
+FITLN = 'https://www.franceinfo.fr/elections/je-serai-le-candidat-de-la-liberte-de-pensee-de-parler-de-dire-ce-que-vous-voyez-clame-eric-zemmour-lors-de-son-premier-meeting-de-campagne-presidentielle_8294024.html'
+FITLN_S = "franceinfo avec l'AFP, premier meeting d'É. Zemmour à Toulon (21/11/2026)"
+RCFT = 'https://www.rcf.fr/articles/actualite/presidentielle-2027-eric-zemmour-commence-la-course-au-zenith-de-toulon'
+RCFT_S = "RCF Méditerranée, meeting d'É. Zemmour à Toulon (21/11/2026)"
+def ZE(src, url, val, lo=None, hi=None): return {"source": src, "year": 2026, "value": val, "low_md": lo, "high_md": hi, "url": url}
+CIT_ZPROD = "Qui, elle, verra disparaître les impôts de production qui l’assomment avant même qu’elle ait gagné son premier euro"
+CIT_Z280 = "mettre en œuvre un grand plan d’économies de 280 milliards d’euros : 140 milliards pour financer les baisses d’impôts, 140 milliards pour combler le déficit public"
+# (2a) impôts de production
+m = M('zemmour', 'production'); k = m['claude']; assert m.get('a_confirmer') and (k['central'], k['low'], k['high']) == (-11.0, -11.7, -10.7)
+m.pop('a_confirmer')
+assert m["proposal"] == "Supprimer CFE, CVAE et C3S ; proposé en 2026 par Sarah Knafo (livre), pas repris par le candidat ; en 2022, baisse de 30 Md€.", m["proposal"]
+m['proposal'] = ("Supprimer les impôts de production (« verra disparaître les impôts de production », discours de Toulon, 21/11/2026) : CFE, CVAE et C3S, "
+                 "liste du livre de Sarah Knafo (2026), le candidat n'énumérant pas les impôts visés ; en 2022, baisse de 30 Md€.")
+m['claimed'] = "Non chiffré en 2026 ; 30 Md€ en 2022, autofinancés selon le camp"
+m['estimates'].append(ZE(CAP22_S, CAP22, "« " + CIT_ZPROD + " »"))
+k['inputs'].append({"label": "Reprise par le candidat (discours de Toulon, 21/11/2026)", "value": "« " + CIT_ZPROD + " »", "source": CAP22_S, "url": CAP22})
+assert k['note'].startswith("Hors total. ")
+k['note'] = ("Reprise par le candidat le 21/11/2026 (discours de Toulon, cité par Capital) : comptée. Impôts visés non énumérés : liste du livre de "
+             "S. Knafo gardée (CFE, CVAE, C3S), même calcul que Le Pen. " + k['note'][len("Hors total. "):])
+sz = C['zemmour']['sim']; assert not sz.get('cfe_suppr')
+sz['cfe_suppr'] = True; sz['cfe_note'] = "Suppression de la CFE (impôts de production, discours du 21/11/2026)"
+assert sz['independants'].startswith("Concernés par la suppression de la CSG")
+sz['independants'] = "Concernés par la suppression de la CSG sur les revenus d'activité (calculée ci-dessus) et par celle des impôts de production, dont la CFE (calculée ci-dessus)."
+# (2b) CSG et successions redites
+M('zemmour', 'csg')['estimates'].append(ZE(CAP22_S, CAP22, "« supprimer la CSG pour tous les actifs de France » ; « chaque salarié, chaque fonctionnaire, chaque agriculteur, chaque indépendant verra son revenu mensuel augmenter de 10% »"))
+M('zemmour', 'succession')['estimates'] += [ZE(CAP21_S, CAP21, "« c’est pourquoi nous supprimerons les droits de succession »"),
+                                            ZE(FITLN_S, FITLN, "il a annoncé son souhait de supprimer « les droits de succession » et « la CSG pour tous les actifs de France »")]
+M('zemmour', 'csg')['estimates'].append(ZE(FITLN_S, FITLN, "il a annoncé son souhait de supprimer « les droits de succession » et « la CSG pour tous les actifs de France »"))
+# (2c) plan de 280 Md€ : chiffre du camp du total, économies non comptées
+t = C['zemmour']['total']; assert t['claimed'].startswith("140 Md€ d'économies par an")
+t['claimed'] = ("280 Md€ d'économies par an dès 2032 : « 140 milliards pour financer les baisses d’impôts, 140 milliards pour combler le déficit public » "
+                "(discours de Toulon, 21/11/2026, et entretien au JDD, 15/11/2026, cités par Capital) ; seul le plan de 140 Md€ publié sur budget2027.fr "
+                "(S. Knafo, repris par le candidat le 17/09/2026) est détaillé ligne à ligne")
+MISS('zemmour', "reste du plan de 140 Md€ (budget2027.fr, économies sans chiffrage indépendant :",
+     "plan de 280 Md€ d'économies par an dès 2032 annoncé à Toulon (21/11/2026 : aucune ventilation publiée au-delà du plan de 140 Md€, économies sans "
+     "chiffrage indépendant), reste du plan de 140 Md€ (budget2027.fr, économies sans chiffrage indépendant :")
+m = M('zemmour', 'fonctionnaires')
+m['estimates'].append(ZE(CAP22_S, CAP22, "« " + CIT_Z280 + " »"))
+m['claude']['note'] += (" Discours de Toulon (21/11/2026) : plan de 280 Md€ d'économies (140 Md€ pour les baisses d'impôts, 140 Md€ pour le déficit), "
+                        "800 000 postes et « une centaine d'agences publiques » (RCF) ; aucune ventilation nouvelle : chiffrage inchangé.")
+# (2d) prisons : 100 000 places (S301)
+m = M('zemmour', 'prisons'); assert (m['claude']['central'], m['claude']['low'], m['claude']['high']) == (-3.2, -9.0, -1.6)
+m['estimates'].append(ZE(RCFT_S, RCFT, "« Éric Zemmour annonce la construction de 100 000 places de prison supplémentaires et le rétablissement des peines planchers. »"))
+m['claude']['note'] = ((m['claude'].get('note') or '') + " Redit à Toulon le 21/11/2026 (100 000 places, RCF ; site relu le 23/11 : « 100 000 places de prison en "
+                       "24 mois ») ; le chiffre de 200 000 donné par des directs du 12/11 n'est pas redit : 100 000 gardés.").strip()
+# (2e) carburants : 40 c€ par litre (S281)
+m = M('zemmour', 'accise'); assert (m['claude']['central'], m['claude']['low'], m['claude']['high']) == (-14.5, -15.4, -12.7)
+assert m['proposal'].startswith("Baisser de 40 centimes les taxes sur les carburants (site du candidat ; lu par litre, TVA comprise)")
+m['proposal'] = m['proposal'].replace("Baisser de 40 centimes les taxes sur les carburants (site du candidat ; lu par litre, TVA comprise)",
+                                      "Baisser de 40 centimes par litre les taxes sur les carburants (site du candidat ; « 40 centimes par litre », JDD, 15/11/2026 ; lu TVA comprise)")
+m['estimates'].append(ZE(CAP15_S, CAP15, "« On veut réduire les taxes sur le carburant de 40 centimes par litre »"))
+_na = "l'unité n'est pas écrite, lue par litre et TVA comprise (« taxes »)"; assert m['claude']['note'].count(_na) == 1
+m['claude']['note'] = m['claude']['note'].replace(_na, "l'unité, d'abord non écrite, est confirmée par le candidat (« 40 centimes par litre », JDD, 15/11/2026, cité par Capital) ; lue TVA comprise (« taxes », liste non publiée)")
+# (2f) chiffres du camp du JDD
+CIT_JDD = "soutien public aux énergies intermittentes (près de 8 milliards), en finir avec l’assistanat en limitant le RSA à trois ans (5 milliards) et en réservant les aides sociales sans cotisation aux \"Français\" (20 milliards)"
+m = M('zemmour', 'aides'); assert m['claimed_md'] == 17.5
+m['claimed'] = "20 Md€ (entretien au JDD, 15/11/2026, cité par Capital ; 15 à 20 Md€/an auparavant)"; m['claimed_md'] = 20
+m['estimates'].append(ZE(CAP15_S, CAP15, "« " + CIT_JDD + " »", 20, 20))
+m = M('zemmour', 'rsa3'); assert m['claimed_md'] == 4.8
+m['claimed'] = "5 Md€ (entretien au JDD, 15/11/2026, cité par Capital ; 4,8 Md€/an sur budget2027.fr)"; m['claimed_md'] = 5.0
+m['estimates'].append(ZE(CAP15_S, CAP15, "« " + CIT_JDD + " »", 5, 5))
+m['claude']['note'] = m['claude']['note'].replace("Fourchette indicative 0 à +4,8.", "Fourchette indicative 0 à +4,8 (5 Md€ selon le candidat, JDD, 15/11/2026).")
+m = M('zemmour', 'enr'); assert m['claimed'] == "8 Md€ (plan de 140 Md€)"
+m['claimed'] = "« près de 8 milliards » (entretien au JDD, 15/11/2026, cité par Capital ; plan de 140 Md€)"
+m['estimates'].append(ZE(CAP15_S, CAP15, "« " + CIT_JDD + " »"))
+# (2g) retraites : « plan de transition »
+m = M('zemmour', 'retraites')
+m['estimates'].append(ZE(CAP15_S, CAP15, "« Ce système est condamné par la démographie. Et en réalité, ce système est une catastrophe. Une arnaque, un vol. Je propose un plan de transition pour en sortir. »"))
+m['claude']['note'] += (" Entretien au JDD (15/11/2026, cité par Capital) : sortie du système par répartition par un « plan de transition », sans âge, "
+                        "paramètre ni coût publiés : rien de plus compté.")
+# (3) Le Pen : chiffrage de J.-P. Delsol (champ et année différents)
+m = M('le-pen', 'retraites'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-25.8, -51.2, -11.8)
+DELSOL = 'https://contrepoints.org/retraite-a-60-ans-de-marine-le-pen-il-manque-plus-de-100-milliards-deuros/'
+m['estimates'].append({"source": "J.-P. Delsol (IREF), Contrepoints (22/11/2026)", "year": 2026,
+  "value": ("« Une dépense annuelle de 23 à 33 Md€ supplémentaires » : départ à 60 ans de trois générations (35 % ou 50 % de départs anticipés), "
+            "en 2028, pensions et cotisations non perçues comprises ; champ (départ à 60 ans, sans la modulation de 60 à 62 ans selon le premier emploi) "
+            "et année (2028) différents de la fiche : hors médiane et hors bornes"), "low_md": None, "high_md": None, "url": DELSOL})
+k['note'] += (" J.-P. Delsol (IREF, Contrepoints, 22/11/2026) : 23 à 33 Md€ par an en 2028 pour un départ à 60 ans de trois générations, cotisations "
+              "non perçues comprises : champ et année différents de la fiche, non retenu dans la médiane.")
+# (4) Philippe : pages Outre-mer, IA, Protection de l'enfance (18/11)
+MAYO = 'https://solidarites.gouv.fr/mise-en-oeuvre-de-la-convergence-sociale-mayotte'
+MISS_ADD('philippe', "SMIC et retraites de Mayotte alignés sur l'Hexagone « de façon maîtrisée et financée » (page « Outre-mer », 18/11/2026 : sans échéance ; "
+         "la loi du 11 août 2025 de programmation pour la refondation de Mayotte prévoit déjà l'alignement du SMIC d'ici à 2031, ministère des Solidarités : "
+         "écart avec le droit en vigueur non publié), deuxième hôpital à Combani, nouvelle piste d'aéroport sur Grande-Terre, financement de l'eau de "
+         "Mayotte garanti jusqu'en 2032, navires de la Marine doublés aux Antilles, loi de programmation économique des outre-mer, Inspection nationale "
+         "de l'enfance (contrôles au moins tous les trois ans), plan « Horizon 2050 » (un euro public pour un euro privé), « Livret capital France » et "
+         "zones d'accélération de l'IA (pages « Outre-mer », « Intelligence artificielle » et « Protection de l'enfance », 18/11/2026 : coûts non publiés)")
+# (5) Retailleau : aide à l'embauche d'un apprenti, plafond des aides, heures supplémentaires
+TF1R = 'https://www.tf1info.fr/politique/elections/presidentielle/un-policier-ce-n-est-pas-un-animateur-socio-culturel-bruno-retailleau-prend-la-route-avec-anne-claire-coudray-2477375.html'
+TF1R_S = "TF1 Info, « Route nationale », B. Retailleau (22/11/2026)"
+MISS_ADD('retailleau', "aide à l'embauche d'un apprenti portée « par exemple » à 6 000 € pour les CAP et bacs professionnels (TF1, 22/11/2026 ; aide en vigueur : "
+         "5 000 € au plus jusqu'au bac dans les entreprises de moins de 250 salariés, 2 000 € au-delà, décret n° 2026-168 ; champ des entreprises et des "
+         "diplômes non publié, aucune série officielle ouverte des contrats par niveau et par taille d'entreprise)")
+m = M('retailleau', 'travail')
+m['estimates'].append({"source": TF1R_S, "year": 2026, "value": "« ce que je propose, c'est de plafonner à 70% du SMIC la totalité des prestations sociales qu'un individu peut recevoir »", "low_md": None, "high_md": None, "url": TF1R})
+m['claude']['note'] += " TF1 (22/11/2026) : plafond de 70 % du SMIC pour « la totalité des prestations sociales qu'un individu peut recevoir » (par personne) ; modalités toujours non publiées."
+M('retailleau', 'seuil_zero_cotisation')['estimates'].append({"source": TF1R_S, "year": 2026, "value": "« À partir des premières heures supplémentaires, on annule les charges sociales. Jusqu'aux 35 heures, chacun paie son dû. Mais après, c'est tout bénéfice. »", "low_md": None, "high_md": None, "url": TF1R})
+# (6) Glucksmann : retraites
+ENTG = 'https://entrevue.fr/politique/presidentielle-2027-raphael-glucksmann-promet-jusqua-100-euros/'
+m = M('glucksmann', 'retraites')
+m['estimates'].append({"source": "Entrevue, Le Grand enjeu (ICI-franceinfo), R. Glucksmann (22/11/2026)", "year": 2026, "value": "« Il prévoit de présenter en janvier son projet de réforme du système. » ; « des dispositifs encourageant la poursuite de l’activité professionnelle » ; « associer les partenaires sociaux à l’élaboration de cette réforme »", "low_md": None, "high_md": None, "url": ENTG})
+m['claude']['note'] += (" Le Grand enjeu (22/11/2026, Entrevue) : projet de réforme présenté en janvier, répartition gardée, carrières longues et pénibilité "
+                        "mieux prises en compte, « dispositifs encourageant la poursuite de l'activité », partenaires sociaux associés : paramètres non publiés.")
+D['asof'] = '23 novembre 2026'
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
@@ -3914,7 +4076,7 @@ P={'le-pen':("Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baiss
 'retailleau':("Promet 197 Md€ d'économies par an en 2032, 51 Md€ de baisses d'impôts, un âge minimal de 63 ans et un référendum sur l'immigration.","la révision de la Constitution, pour le référendum sur l'immigration, les aides réservées après cinq ans, les peines planchers et la règle d'or."),
 'attal':("Promet la suppression de la CSG sur les salaires, jusqu'à 270 € nets par mois, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.","la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen."),
 'lisnard':("Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations.","la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats."),
-'zemmour':("Promet l'expulsion des étrangers au chômage depuis plus de six mois, des aides réservées aux Français, la suppression de la CSG sur les revenus d'activité, la fin des droits de succession et 800 000 postes publics en moins.","la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.")}
+'zemmour':("Promet 280 Md€ d'économies par an dès 2032, la suppression de la CSG sur les revenus d'activité et des impôts de production, la fin des droits de succession, des aides réservées aux Français et l'expulsion des étrangers au chômage depuis plus de six mois.","la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.")}
 MEN=D['statu_quo']['menages']
 def fr(x): return (('+' if x>0 else '−' if x<0 else '')+f"{abs(x):.1f}".replace('.',','))
 for c0 in D['candidates']:
