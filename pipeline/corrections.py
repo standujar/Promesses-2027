@@ -4195,6 +4195,152 @@ MISS('glucksmann', "(5 % des patrimoines de plus de 100 M€ selon Public Sénat
      "(5 % des patrimoines de plus de 100 M€ selon Public Sénat et l'AFP, puis le candidat : « contribution exceptionnelle », « plus de 100 millions d'euros », "
      "« pour l'investissement climatique à hauteur de 5% », franceinfo, 19/11/2026, cité par Capital ; 50 Md€ selon le camp,")
 
+# --- review 59 : issue n° 81, en-tête de Philippe, service national, jours de carence (24/11/2026)
+# Signalé par un lecteur (issue n° 81) ; décisions du 24/11 (délégation du porteur, règles communes appliquées aux faits vérifiés, sources
+# primaires ouvertes le 24/11). Registre S371 à S375.
+# (1) Philippe, en-tête : « déficit à 2 % du PIB en fin de mandat » périmé. Page « Finances publiques » (mise à jour le 18/11/2026) : « Ramener le
+#     déficit sous 2,5 % de la richesse nationale à la fin du quinquennat, soit près de 150 milliards d’économies. » ; plus aucune mention de 2 %.
+#     En-tête aligné sur la fiche « regle_or » (à jour depuis la review 54), même forme. Contrôle chez les 8 de l'en-tête (total.claimed,
+#     total.independent) face aux fiches plus récentes (objectif de déficit, montant d'économies) : Le Pen (« déficit < 3 % en 2030 » : objectif
+#     redit le 6/10, après la tribune du 1/10 qui fixe le plafond de la règle d'or à 3,9 % en 2030 ; deux niveaux distincts, déjà lus ainsi en
+#     Vie quotidienne, S107), Mélenchon (106 Md€ de recettes, note d'octobre, rien de plus récent), Glucksmann, Lisnard (80 puis 200 Md€, 20 %
+#     pour la dette = ~40 Md€, comme la fiche « Économies »), Attal (150 Md€, frein d'urgence de 20 Md€, distinct de l'année blanche de 15 Md€),
+#     Retailleau, Zemmour (en-tête du 23/11) : aucune autre contradiction.
+# (2) Philippe, service national : page « Défense » (mise à jour le 18/11/2026) : « Le rétablissement d’un service national obligatoire et
+#     universel, avec le choix entre une option militaire et plusieurs options civiles, et 250 000 réservistes. » ; « Chaque jeune pourra
+#     l’effectuer soit dans des fonctions civiles, soit dans des fonctions militaires » ; « … la prise en charge de chaque classe d’âge, soit
+#     600 000 jeunes par an. » Durée, rémunération et calendrier non publiés : reste non chiffrable. Fourchette indicative recalculée avec
+#     l'effectif publié (600 000) et la même formule par mois que l'engagement civique d'Attal et le service de Glucksmann (605 € : indemnité
+#     nette de l'État 504,98 € + tutorat 100 € ; ces fiches comptent 790 000 jeunes, une génération, faute d'effectif publié ; Lisnard n'a pas
+#     de fiche de service) : 600 000 × 605 € = 0,36 Md€ par mois, de −0,4 (un mois) à −3,6 (dix mois).
+# (3) Jours de carence de la fonction publique, valeur commune : IGF-IGAS, revue de dépenses relative à la réduction des absences dans la fonction
+#     publique (juillet 2024), tableau 12 (Direction du budget, données de 2022, hors CAS « Pensions », sans effet de comportement), en M€ :
+#     1 jour (situation actuelle) 113 (État et opérateurs) + 94 (territoriale) + 42 (hospitalière) = 249 ; passage à 2 jours 67 + 74 + 33 = 174 ;
+#     passage à 3 jours 112 + 122 + 54 = 289. Les trois versants sont dans les administrations publiques : +0,17 (2 jours), +0,29 (3 jours),
+#     −0,25 (suppression du jour actuel). Remplace 0,11 (216 − 108 M€, Public Sénat, État seul). Philippe (chomage) et Retailleau (etat) :
+#     0,11 → 0,29, bornes par la même formule. Mélenchon : « Garantir le droit à l'arrêt maladie par l'indemnisation à 100 % du salaire, la
+#     suppression des jours de carence et l'auto-déclaration pour les arrêts de courte durée » (programme du 6/11, « Construire la Sécurité
+#     sociale intégrale ») : mesure générale, qui n'exclut pas les agents publics : appliquée à eux (décision du 24/11, voir (3c)), fiche
+#     « carence » −0,25 − 0,9 ; partie privée
+#     non comptée. Zemmour : trois jours de carence du programme de 2022, non reconfirmés, inchangé. Aucune autre mesure de carence dans la
+#     fonction publique chez les 8. Simulateur inchangé ; aucun texte du quiz n'utilise 0,11.
+IGFAB = 'https://www.igas.gouv.fr/sites/igas/files/2024-09/Rapport%20Igas-IGF%20Absent%C3%A9isme%20fonction%20publique%20(revue%20de%20d%C3%A9penses).pdf'
+IGFAB_S = "IGF-IGAS, revue de dépenses relative à la réduction des absences dans la fonction publique (juillet 2024)"
+IN_CAR = {"label": "Jours de carence de la fonction publique (valeur commune)",
+          "value": ("Tableau 12 : passage de 1 à 3 jours : 112 M€ (État et opérateurs) + 122 M€ (territoriale) + 54 M€ (hospitalière) = 289 M€, soit +0,29 Md€ "
+                    "(Direction du budget, données de 2022, hors CAS « Pensions », sans effet de comportement ; passage à 2 jours : +0,17 ; jour actuel : 0,25)"),
+          "source": IGFAB_S, "url": IGFAB}
+PSCAR = 'https://www.publicsenat.fr/actualites/economie/arrets-maladie-les-senateurs-augmentent-a-trois-jours-le-delai-de-carence-dans-la-fonction-publique'
+# (1) Philippe : en-tête
+t = C['philippe']['total']; assert t['claimed'] == "retraites ≈ +30 Md€/an à terme, déficit à 2 % du PIB en fin de mandat", t['claimed']
+t['claimed'] = ("retraites ≈ +30 Md€/an à terme ; déficit sous 2,5 % du PIB en fin de quinquennat, « près de 150 milliards d'économies » "
+                "(site de campagne, 18/11/2026)")
+assert M('philippe', 'regle_or')['claimed'].startswith("Déficit sous 2,5 % du PIB en fin de quinquennat")
+for c0 in D['candidates']:
+    assert not re.search(r"déficit à 2 %|\b2 % du PIB", c0['total']['claimed'] + ' ' + (c0['total'].get('independent') or '')), c0['id']
+# (2) Philippe : service national
+PHDE = 'https://www.edouardphilippe.fr/programme/defense'; PHDE_S = "Site de campagne d'Édouard Philippe, programme « Défense » (mis à jour le 18/11/2026)"
+CIT_PHSN = ("Le rétablissement d’un service national obligatoire et universel, avec le choix entre une option militaire et plusieurs options civiles, "
+            "et 250 000 réservistes. » ; « Chaque jeune pourra l’effectuer soit dans des fonctions civiles, soit dans des fonctions militaires » ; "
+            "« … la prise en charge de chaque classe d’âge, soit 600 000 jeunes par an.")
+m = M('philippe', 'service_national'); k = m['claude']; assert k.get('nc') and (k['central'], k['low'], k['high']) == (0, 0, 0)
+assert m['proposal'] == "Rétablir un service national obligatoire pour les jeunes, avec un volet environnemental." and m['estimates'] == []
+m['proposal'] = ("Rétablir un service national obligatoire et universel pour chaque classe d'âge, avec le choix entre une option militaire et "
+                 "plusieurs options civiles (600 000 jeunes par an).")
+_ex = [i for i in k['inputs'] if i['label'] == 'Annonce']; assert len(_ex) == 1 and len(k['inputs']) == 2
+k['inputs'] = [{"label": "Proposition (18/11/2026)", "value": "« " + CIT_PHSN + " »", "source": PHDE_S, "url": PHDE}] + _ex
+m['estimates'] = [{"source": PHDE_S, "year": 2026, "value": "« " + CIT_PHSN + " »", "low_md": None, "high_md": None, "url": PHDE},
+                  {"source": "L'Express via Orange Actu", "year": 2026, "value": _ex[0]['value'], "low_md": None, "high_md": None, "url": _ex[0]['url']}]
+_a = "Par la loi ; capacités d'accueil et d'encadrement à bâtir pour environ 800 000 jeunes par an ; durée, forme et calendrier non publiés."
+assert m['obstacle'] == _a, m['obstacle']
+m['obstacle'] = "Par la loi ; capacités d'accueil et d'encadrement à bâtir pour 600 000 jeunes par an ; durée, rémunération et calendrier non publiés."
+assert k['formula'] == "Non chiffrable : durée et forme non publiées"
+k['formula'] = "Non chiffrable : durée et rémunération non publiées"
+assert k['note'] == "Indicatif : de −0,5 (un mois) à −4,8 Md€ (dix mois) par an, mêmes calculs que pour Attal et Glucksmann ; montée en charge non publiée."
+k['note'] = ("Indicatif : de −0,4 (un mois) à −3,6 Md€ (dix mois) par an : 600 000 jeunes par an (chiffre publié) × 605 € par mois (indemnité nette "
+             "de l'État 504,98 € + tutorat 100 €), même formule par mois que l'engagement civique d'Attal et le service de Glucksmann, qui comptent "
+             "790 000 jeunes (une génération) faute d'effectif publié ; montée en charge non publiée.")
+for cid, mid in (('attal', 'engagement_civique'), ('glucksmann', 'service_civique')):
+    assert "790 000 jeunes ×" in M(cid, mid)['claude']['formula'] and "605 €" in M(cid, mid)['claude']['formula'], cid
+sj = C['philippe']['sim']['service_jeunes']; assert sj == {"note": "Service national obligatoire : durée, forme et indemnité non publiées, non calculé ici."}
+sj['note'] = "Service national obligatoire et universel, militaire ou civil au choix (600 000 jeunes par an) : durée et indemnité non publiées, non calculé ici."
+# (3a) Philippe : jours de carence
+m = M('philippe', 'chomage'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (3.1, 1.1, 6.1)
+_a = ("Chômage : entre iFRAP (≈1) et Unédic (≈6), ajusté des réductions déjà votées ≈ +3 ; carence de 1 à 3 jours dans la fonction publique : "
+      "+0,1 (216 − 108 M€, même valeur que Retailleau) ≈ +3,1 Md€")
+assert k['formula'] == _a, k['formula']
+k['formula'] = ("Chômage : entre iFRAP (≈1) et Unédic (≈6), ajusté des réductions déjà votées ≈ +3 ; carence de 1 à 3 jours dans la fonction publique, "
+                "trois versants : +0,29 (valeur commune, revue de dépenses IGF-IGAS 2024, tableau 12 ; même valeur que Retailleau) ≈ +3,3 Md€ ; "
+                "bornes : iFRAP 1 + 0,29 ≈ 1,3 ; Unédic 6 + 0,29 ≈ 6,3")
+k.update(central=3.3, low=1.3, high=6.3)
+_i = [n for n, i in enumerate(k['inputs']) if i['url'] == PSCAR]; assert len(_i) == 1; k['inputs'][_i[0]] = IN_CAR
+# (3b) Retailleau : jours de carence
+m = M('retailleau', 'etat'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (9.0, 5.3, 13.5)
+_a = " + 3 jours de carence 0,11 ≈ +9,0 Md€."; assert k['formula'].count(_a) == 1
+k['formula'] = k['formula'].replace(_a, (" + 3 jours de carence dans la fonction publique, trois versants : 0,29 (valeur commune, revue de dépenses IGF-IGAS "
+                                         "2024, tableau 12 ; même valeur que Philippe) ≈ +9,2 Md€."))
+_a = "agences 0 à 1,06 ; d'où 5,3 à 13,5"; assert k['formula'].count(_a) == 1
+k['formula'] = k['formula'].replace(_a, "agences 0 à 1,06 ; carence 0,29 dans les deux bornes ; d'où 5,5 à 13,7")
+k.update(central=9.2, low=5.5, high=13.7)
+_i = [n for n, i in enumerate(k['inputs']) if i['url'] == PSCAR]; assert len(_i) == 1; k['inputs'][_i[0]] = IN_CAR
+_a = "carence : 3 Md€ annoncés, 0,11 Md€ comptés (216 − 108 M€, Public Sénat ; même valeur que Philippe)"; assert k['note'].count(_a) == 1
+k['note'] = k['note'].replace(_a, ("carence : 3 Md€ annoncés, 0,29 Md€ comptés (trois versants de la fonction publique, revue de dépenses IGF-IGAS 2024, "
+                                   "tableau 12 ; même valeur que Philippe)"))
+_s = json.dumps(D['candidates'], ensure_ascii=False); assert PSCAR not in _s and not re.search(r"carence[^.;]{0,40}0,11|0,11[^.;]{0,40}carence|216 − 108", _s)
+# (3c) Mélenchon : arrêts maladie payés à 100 % et fin des jours de carence (programme du 6/11). Décision du 24/11 (coordination de la revue,
+#      règle commune) : la mesure est générale et n'exclut pas les agents publics : elle s'applique à eux, même règle que les baisses de
+#      cotisations annoncées pour « les salariés » sans exclure le public (Attal, Retailleau : appliquées aux agents, hypothèse écrite dans la
+#      note). Fiche « carence » (thème travail, comme la fiche de Philippe) : fin du jour de carence des agents −0,25 (valeur commune, tableau
+#      12) + retour au plein traitement en congé de maladie ordinaire −0,9 (même revue, tableau 1 : 300 M€ par versant, FPE, FPT, FPH, données
+#      2022, hors CAS « Pensions », à absentéisme constant ; passage à 90 % en vigueur depuis le 1er mars 2025 : loi de finances pour 2025,
+#      art. 189, modifiant l'article L. 822-3 du code général de la fonction publique, et décrets n° 2025-197 et 2025-198 du 27/02/2025 pour les
+#      contractuels et les autres corps, réponse ministérielle publiée au JO le 27/05/2025). Bornes : ±0, comme les jours de carence de
+#      Philippe et de Retailleau (valeurs sans effet de comportement ; les scénarios d'absentéisme de ±10 à ±50 % des tableaux 14 à 16 ne sont
+#      pas des estimations). Verdict « faisable » (loi). Partie privée (indemnités journalières à 100 %, fin des trois jours de carence de la
+#      Sécurité sociale) : coût non publié, aucun chiffrage officiel ouvert, reste listée non comptée. Simulateur : note inchangée.
+LVCAR = 'https://melenchon2027.fr/programme/livre/mettre-en-securite-sociale/chapitre1'
+LVCAR_S = "La France insoumise, « L'Avenir en commun », programme publié le 6/11/2026, « Mettre en sécurité sociale », chapitre 1"
+CIT_LVCAR = "Garantir le droit à l'arrêt maladie par l'indemnisation à 100 % du salaire, la suppression des jours de carence et l'auto-déclaration pour les arrêts de courte durée"
+QE6283 = 'https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE6283'
+ADD('melenchon', {'id': 'carence', 'theme': 'travail', 'title': 'Arrêts maladie des agents publics payés à 100 %',
+  'proposal': ("Arrêts maladie indemnisés à 100 % du salaire, sans jour de carence, et auto-déclaration des arrêts de courte durée ; pour les "
+               "agents publics : fin du jour de carence et retour au plein traitement pendant le congé de maladie ordinaire (90 % aujourd'hui "
+               "les trois premiers mois)."),
+  'claimed': 'Non chiffré', 'claimed_md': None,
+  'estimates': [{"source": LVCAR_S, "year": 2026, "value": "« " + CIT_LVCAR + " »", "low_md": None, "high_md": None, "url": LVCAR},
+                {"source": IGFAB_S, "year": 2024,
+                 "value": "Tableaux 12 et 1 : jour de carence des agents : 249 M€ (113 État et opérateurs, 94 territoriale, 42 hospitalière) ; taux de remplacement à 90 % au lieu du plein traitement : 300 M€ par versant, 900 M€ (données de 2022, à absentéisme constant)",
+                 "low_md": None, "high_md": None, "url": IGFAB}],
+  'consensus': 'isolé', 'verdict': 'faisable',
+  'obstacle': ("Par la loi (code général de la fonction publique, art. L. 822-3 ; loi de finances pour 2018, art. 115, pour le jour de carence) "
+               "et par décret pour les contractuels ; " + FNP + "."),
+  'claude': {'id': 'carence', 'central': -1.15, 'low': -1.15, 'high': -1.15, 'method': 'ascendant',
+    'formula': ("Agents publics, trois versants : fin du jour de carence −0,25 (valeur commune : 249 M€, revue de dépenses IGF-IGAS 2024, "
+                "tableau 12) + retour au plein traitement en congé de maladie ordinaire −0,9 (valeur commune : 300 M€ par versant, même revue, "
+                "tableau 1) ≈ −1,15 Md€ ; bornes égales à la valeur centrale, comme les jours de carence de Philippe et de Retailleau "
+                "(chiffrages sans effet de comportement)"),
+    'inputs': [{"label": "Proposition (6/11/2026)", "value": "« " + CIT_LVCAR + " »", "source": LVCAR_S, "url": LVCAR},
+               {"label": "Jour de carence des agents (valeur commune)", "value": "Tableau 12 : 1 jour (situation actuelle) : 113 M€ (État et opérateurs) + 94 M€ (territoriale) + 42 M€ (hospitalière) = 249 M€, soit 0,25 Md€ (Direction du budget, données de 2022, hors CAS « Pensions »)", "source": IGFAB_S, "url": IGFAB},
+               {"label": "Plein traitement en congé de maladie (valeur commune)", "value": "Tableau 1 : « Mise en place d'un taux de remplacement à 90 % de la rémunération en arrêt maladie en lieu et place du plein traitement » : 300 M€ par versant (FPE, FPT, FPH), 900 M€ au total, à absentéisme constant, hors CAS « Pensions »", "source": IGFAB_S, "url": IGFAB},
+               {"label": "Droit en vigueur (90 % depuis le 1er mars 2025)", "value": "« l'article 189 de la loi n° 2025-127 du 14 février 2025 de finances pour 2025 a modifié l'article L. 822-3 du code général de la fonction publique pour y préciser que, désormais, les fonctionnaires en congé de maladie ordinaire perçoivent pendant trois mois, 90 % de leur traitement » ; contractuels et autres corps : décrets n° 2025-197 et 2025-198 du 27 février 2025 ; entrée en vigueur le 1er mars 2025", "source": "Assemblée nationale, réponse ministérielle à la question écrite n° 6283 (JO du 27/05/2025)", "url": QE6283}],
+    'note': ("Hypothèse : la mesure ne distingue pas le public du privé ; elle est appliquée aux agents publics (même règle que les baisses de "
+             "cotisations annoncées pour « les salariés » sans exclure le public, chez Attal et Retailleau). Partie privée (indemnités journalières "
+             "de la Sécurité sociale à 100 % du salaire, fin des trois jours de carence du régime général) : coût non publié, aucun chiffrage "
+             "officiel ouvert, listée non comptée. Auto-déclaration des arrêts de courte durée : durée non publiée, non chiffrée. Les deux valeurs "
+             "sont calculées à absentéisme constant (données de 2022) ; la revue note que sa méthode « a tendance à surestimer l'impact "
+             "financier » du taux de 90 % et que l'économie budgétaire dépend de l'évolution de l'absentéisme.")}})
+t = C['melenchon']['claude_total']
+_a = "arrêts maladie payés à 100 %, fin des jours de carence et auto-déclaration des arrêts de courte durée (durée non publiée)"; assert t['missing'].count(_a) == 1
+t['missing'] = t['missing'].replace(_a, ("arrêts maladie payés à 100 % et fin des jours de carence dans le secteur privé (indemnités journalières à 100 % et fin "
+    "des trois jours de carence de la Sécurité sociale ; la partie agents publics est comptée dans la fiche « Arrêts maladie des agents publics "
+    "payés à 100 % ») et auto-déclaration des arrêts de courte durée (durée non publiée)"))
+k = M('melenchon', 'secu100')['claude']; _a = "Arrêts maladie payés à 100 % et fin des jours de carence : coût non publié, non comptés."
+assert k['note'].count(_a) == 1
+k['note'] = k['note'].replace(_a, ("Arrêts maladie payés à 100 % et fin des jours de carence : partie agents publics comptée dans la fiche « Arrêts maladie "
+                                   "des agents publics payés à 100 % » ; partie privée : coût non publié, non comptée."))
+assert C['melenchon']['sim']['carence_note'].startswith("Arrêts maladie payés à 100 % et fin des jours de carence")
+D['asof'] = '24 novembre 2026'
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
