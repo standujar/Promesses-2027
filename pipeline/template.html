@@ -1086,7 +1086,7 @@ function sim(){
       if(kids>0 && !(HH.couple && s.quotient_conjugal) && b.enfants) notes.push(b.enfants); }
     if(s.alloc_familiales && s.alloc_familiales.unique && kids>0){ const af=s.alloc_familiales, k=Math.max(0,Math.min(1,(sal-af.degress_above)/1000)), f=1-(1-af.degress_factor)*k, nu=af.unique*(af.par_enfant?kids:1)*f; let a=Math.max(nu,sqAlloc); const d=a-sqAlloc; if(d>0.5) addAF('Allocations',esc(af.note)+(k>0&&k<1?' ; réduction progressive entre 3 000 et 4 000 € (hypothèse)':''),d); else notes.push(af.note+'.'); if(sqAlloc>nu) notes.push('Vos allocations actuelles sont plus élevées que l\'allocation unique : on suppose qu\'elles sont maintenues (le camp ne l\'a pas précisé).'); }
     else if(s.alloc_familiales && kids>0){ const a=allocOf(s.alloc_familiales,kids,SQ.alloc_familiales), d=a-sqAlloc; if(Math.abs(d)>0.5) addAF('Allocations',esc(s.alloc_familiales.note||''),d); else if(s.alloc_familiales.note) notes.push(s.alloc_familiales.note+'.'); }
-    const etr=s.etr, hit=r=>r==='nonfr'?nat!=='fr':r==='hors'?nat==='hors':r==='lt5'?lt5:r==='lt5w'?lt5w:false, cond={nonfr:'réservées aux foyers dont au moins un parent est français',hors:'réservées aux Français et aux Européens',lt5:'réservées aux étrangers installés depuis au moins 5 ans',lt5w:'réservées aux étrangers ayant au moins 5 ans de travail en France'}, condA={...cond,nonfr:'réservées aux Français'}, rev=nat==='ue'?'(si la révision de la Constitution passe et si le droit de l\'UE change)':'(si la révision de la Constitution passe)';
+    const etr=s.etr, hit=r=>(r==='nonfr'||r==='fr')?nat!=='fr':r==='hors'?nat==='hors':r==='lt5'?lt5:r==='lt5w'?lt5w:false, cond={nonfr:'réservées aux foyers dont au moins un parent est français',fr:'réservées aux Français',hors:'réservées aux Français et aux Européens',lt5:'réservées aux étrangers installés depuis au moins 5 ans',lt5w:'réservées aux étrangers ayant au moins 5 ans de travail en France'}, condA={...cond,nonfr:'réservées aux Français'}, rev=nat==='ue'?'(si la révision de la Constitution passe et si le droit de l\'UE change)':'(si la révision de la Constitution passe)';
     const minLost = etr && st==='minima' && sal>0 && hit(etr.minima);
     if(etr && hit(etr.af) && sqAlloc>0) addAF('Allocations familiales',`${cond[etr.af][0].toUpperCase()+cond[etr.af].slice(1)} ${rev}`,-sqAlloc);
     // AAH (review 43) : allocation différentielle (montant maximal moins les autres ressources) : un montant maximal relevé l'augmente d'autant pour
@@ -1097,10 +1097,13 @@ function sim(){
     if(st==='aah' && s.aah_nc) notes.push(s.aah_nc);
     // minimum vieillesse (review 47) : perte selon la même condition que les minima ; hausse publiée du montant maximal (allocation différentielle :
     // nouveau montant − ancien, à ressources égales) ; gel nommé (gel_status 'aspa'), petites retraites épargnées sous le même seuil que les pensions
-    if(aspaV>0 && etr && hit(etr.minima)) add('Minimum vieillesse',`Minimum vieillesse ${cond[etr.minima].replace('réservées','réservé')} ${rev}`,-aspaV);
+    // condition propre au minimum vieillesse quand le candidat la publie (etr.aspa, review 60 : Retailleau garde les dix ans de titre de séjour
+    // déjà exigés hors UE), sinon celle des minima
+    const aspaCond = etr ? ('aspa' in etr ? etr.aspa : etr.minima) : null;
+    if(aspaV>0 && etr && hit(aspaCond)) add('Minimum vieillesse',`Minimum vieillesse ${cond[aspaCond].replace('réservées','réservé')} ${rev}`,-aspaV);
     else if(aspaOn && !aspaNo){
       if(s.aspa_hausse){ if(HH.couple) notes.push(s.aspa_hausse.couple); else { const v=Math.max(0,s.aspa_hausse.montant-sal)-Math.max(0,SQ.aspa-sal); if(v>0.5) add('Minimum vieillesse',`${esc(s.aspa_hausse.note)} (aujourd'hui : ${eur2(SQ.aspa)}) ; il complète vos autres ressources jusqu'à ce montant`,v); } }
-      if(aspaV>0 && s.gel_pct && gelS.includes('aspa')){ if(s.gel_min && sal+aspaV<s.gel_min) notes.push(s.gel_note+' : votre minimum vieillesse serait épargné.'); else add('Revalorisation',`Minimum vieillesse : ${esc(s.gel_note)}`,-aspaV*s.gel_pct/100); } }
+      if(aspaV>0 && s.gel_pct && gelS.includes('aspa')){ if(s.gel_min && (HH.couple?(sal+HH.conj+aspaV)/2:sal+aspaV)<s.gel_min) notes.push(s.gel_note+' : votre minimum vieillesse serait épargné.'); else add('Revalorisation',`Minimum vieillesse : ${esc(s.gel_note)}`,-aspaV*s.gel_pct/100); } }
     // droits d'inscription des étudiants étrangers (review 47) : écart publié pour un étudiant aujourd'hui exonéré, « jusqu'à », non ajouté au total ;
     // montant non publié : une note
     const di=s.droits_inscription;

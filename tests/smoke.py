@@ -411,7 +411,8 @@ with sync_playwright() as p:
     pg.evaluate(f"({PROF})({{st:'aah',sal:SQ.aah}})"); a = [row('melenchon', 'AAH'), row('attal', 'Revalorisation'), row('le-pen', 'AAH')]
     pg.evaluate(f"({PROF})({{st:'aah',sal:800}})"); a.append(row('melenchon', 'AAH'))
     pg.evaluate(f"({PROF})({{st:'aah',sal:800,nat:'hors',lt5:true}})"); a += [row('le-pen', 'AAH'), row('zemmour', 'AAH'), row('lisnard', 'AAH'), row('retailleau', 'AAH')]
-    check(a == [[658], [-19], [], [658], [-800], [-800], [-800], [-800]] and pg.evaluate("SQ.aah===1041.59"),
+    # gel d'Attal : 1 041,59 × 1,7 % = −18 (inflation commune du projet de loi de finances pour 2027, review 60 ; −19 avec 1,8 % auparavant)
+    check(a == [[658], [-18], [], [658], [-800], [-800], [-800], [-800]] and pg.evaluate("SQ.aah===1041.59"),
           f'simulateur : AAH (Mélenchon +658 € pour tout allocataire, gel d\'Attal, perte selon la même condition que les minima chez les 4 candidats concernés) {a}')
     # (6) impôt des retraités, même barème que les actifs avec l'abattement de 10 % des pensions : fin de l'abattement chez Lisnard pour un retraité
     # imposable (2 300 € : −36,9 €/mois, calcul de référence), rien sous le seuil (1 200 €) ; part fiscale de Le Pen dès le 2e enfant aussi pour un retraité
@@ -505,9 +506,12 @@ with sync_playwright() as p:
     asp.append(['pas de minimum vieillesse' in pg.evaluate("document.getElementById('sim-base').textContent")])
     pg.evaluate(f"({PROF})({{st:'retraite',year:1955,sal:500,aspa:true}})"); asp.append(['minimum vieillesse serait épargné' in txt('attal')])
     pg.evaluate(f"({PROF})({{st:'retraite',year:1955,sal:500,aspa:true,foyer:'couple',conj:300}})")
-    asp.append(['montant pour un couple non publié' in txt('melenchon'), 'minimum vieillesse 820 €/mois' in re.sub(r'\s+', ' ', pg.evaluate("document.getElementById('sim-base').textContent"))])
+    # couple (review 60) : gel d'Attal jugé par personne (820 + 500 + 300 = 1 620 € pour deux, 810 € chacun, sous le seuil de 1 200 €) : épargné
+    asp.append(['montant pour un couple non publié' in txt('melenchon'), 'minimum vieillesse 820 €/mois' in re.sub(r'\s+', ' ', pg.evaluate("document.getElementById('sim-base').textContent")), 'minimum vieillesse serait épargné' in txt('attal')])
     pg.evaluate(f"({PROF})({{st:'prive',sal:1800,aspa:true}})"); asp.append([pg.evaluate("document.getElementById('f-aspa').hidden")])
-    check(asp == [[[293], [], [], [], []], [[293], [], [], [], [-544]], [[293], [-544], [-544], [-544], []], [[], [], [], [], []], [True], [True], [True, True], [True]],
+    # review 60 : Zemmour, aides réservées « aux Français » (Européens compris : perte aussi pour un Européen) ; Retailleau, minimum vieillesse hors de la
+    # condition de 5 ans (livret du 12/11/2026 : « maintien du délai de dix ans pour le minimum vieillesse ») : aucune perte pour un Européen
+    check(asp == [[[293], [], [], [], []], [[293], [], [], [], [-544]], [[293], [-544], [-544], [], [-544]], [[], [], [], [], []], [True], [True], [True, True, True], [True]],
           f'simulateur : minimum vieillesse (hausse de Mélenchon, pertes selon la condition des minima, hors UE déjà soumis à 10 ans, gel d\'Attal, couple) {asp}')
     # --- review 55 (21/11/2026) : barème de l'impôt sur le revenu de Mélenchon (14 tranches, de 0 à 70 %, amendement n° I-316 du groupe LFI au budget
     # 2027 ; garantie : jusqu'à 4 000 € net par mois, pas plus d'impôt qu'au barème actuel), recalculé ici hors de l'app : même revenu imposable, décote et
