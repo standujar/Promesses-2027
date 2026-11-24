@@ -36,7 +36,7 @@
    "name": "Marine Le Pen",
    "party": "RN",
    "poll": "32,1 %",
-   "summary": "Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite entre 60 et 62 ans et la TVA à 5,5 % sur l'énergie. Notre chiffrage : −88,3 Md€ par an en 2030, soit −2 857 € par ménage. Principal obstacle : la révision de la Constitution, pour la priorité nationale, le prêt réservé aux jeunes ménages français et la règle d'or.",
+   "summary": "Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite entre 60 et 62 ans et la TVA à 5,5 % sur l'énergie. Notre chiffrage : −88,5 Md€ par an en 2030, soit −2 863 € par ménage. Principal obstacle : la révision de la Constitution, pour la priorité nationale, le prêt réservé aux jeunes ménages français et la règle d'or.",
    "measures": [
     {
      "id": "retraites",
@@ -405,8 +405,8 @@
       ],
       "note": "Même règle que pour Zemmour : comptée si elle passe ; bloquée en l'état du droit (voir le total « si les révisions sont bloquées ») APL réservées aux Français et aux étrangers ayant travaillé cinq ans en équivalent temps plein (LCP, 15/11/2026) : même condition que l'étude comptée (Institut Montaigne 2024), qui comprend les aides au logement ; chiffrage inchangé."
      },
-     "quiz_text": "Réserver les allocations familiales et le RSA aux Français, ou aux étrangers après 5 ans de travail",
-     "quiz_concret": "Un étranger arrivé récemment n'aurait plus droit à ces allocations.",
+     "quiz_text": "Réserver les allocations familiales aux foyers dont un parent est français, et le RSA aux Français ou aux étrangers après 5 ans de travail",
+     "quiz_concret": "Une famille sans parent français n'aurait plus d'allocations familiales ; un étranger arrivé récemment n'aurait plus droit au RSA.",
      "quiz_plus": "Des aides plus difficiles à obtenir rendent le pays moins attirant pour une partie des candidats à l'arrivée.",
      "quiz_moins": "Moins d'aides pèse aussi sur les enfants des familles touchées, élevés ici, et sur leur scolarité.",
      "quiz_preuve_pour": "faible",
@@ -2483,8 +2483,8 @@
     {
      "id": "prisons",
      "theme": "securite",
-     "title": "30 000 places de prison",
-     "proposal": "Construire 30 000 places de prison.",
+     "title": "30 000 places de prison, peines minimales",
+     "proposal": "Construire 30 000 places de prison ; peines minimales et comparution immédiate des interpellés.",
      "claimed": "1,0 Md€ en 2027 (contre-budget 2027 du groupe RN)",
      "claimed_md": -1.0,
      "estimates": [
@@ -2495,6 +2495,14 @@
        "low_md": null,
        "high_md": null,
        "url": "https://back.deputes-rn.fr/wp-content/uploads/2026/10/GRN-CONTRE-BUDGET-2027-DOSSIER.pdf"
+      },
+      {
+       "source": "Rassemblement national, pétition « Face au chaos, la France en ordre » (octobre 2026)",
+       "year": 2026,
+       "value": "« Un sursaut pénal : des peines minimales et la comparution immédiate des interpellés »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://rassemblementnational.fr/petition/face-au-chaos-la-france-en-ordre"
       }
      ],
      "consensus": "isolé",
@@ -2502,16 +2510,22 @@
      "obstacle": "Capacités à bâtir (places et surveillants) : le programme de 15 000 places lancé en 2018 en a livré 7 684 brutes (5 711 nettes) ; 63 303 places opérationnelles pour 90 173 détenus au 10/09/2026.",
      "claude": {
       "id": "prisons",
-      "central": -1.0,
-      "low": -2.7,
-      "high": -0.5,
+      "central": -1.2,
+      "low": -3.4,
+      "high": -0.9,
       "method": "ascendant",
-      "formula": "Même règle que les places de Retailleau, Lisnard, Zemmour et Philippe (construction exclue) : 30 000 places × 32 k€ de coût annuel d'un détenu ≈ −0,96 ≈ −1,0 (le camp inscrit 1,0 en 2027) ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 30 000 sur 5 ans ≈ 2,2 + moitié des places ouvertes ≈ 0,5 → −2,7 ; borne haute : moitié des places ouvertes en 2030",
+      "formula": "Règle commune des places de prison (Le Pen, Philippe, Lisnard, Retailleau, Zemmour), construction exclue : coût annuel d'un détenu 47,2 k€ (ministère de la Justice : 129,33 € par jour en 2024, fonctionnement) ; plan sans calendrier publié : 70 % des places ouvertes en 2030, 30 000 × 47,2 k€ × 70 % ≈ 0,99 ; peines planchers : 4 000 années de détention de plus par an (loi de 2007, Infostat Justice) × 47,2 k€ ≈ 0,19 → −1,2 ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 30 000 sur 5 ans ≈ 2,22 de plus → −3,4 ; borne haute : moitié des places ouvertes en 2030 (0,71 + peines planchers 0,19) → −0,9",
       "inputs": [
        {
-        "label": "Coût d'un détenu",
-        "value": "≈ 32 000 €/an",
-        "source": "Terra Nova (CNAPE)",
+        "label": "Coût d'un détenu (valeur commune)",
+        "value": "« En 2024, le coût moyen d'une journée de détention s'élevait à 129,33 euros, dont 95,48 euros de dépenses de personnel et 33,86 euros de dépenses d'exploitation » : 129,33 € × 365 ≈ 47 200 € par an (fonctionnement, hors investissement)",
+        "source": "Ministère de la Justice, réponse à la question écrite n° 13927 (JO du 26/05/2026)",
+        "url": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE13927.pdf"
+       },
+       {
+        "label": "Peines planchers de 2007 (valeur commune)",
+        "value": "« L'accroissement du niveau moyen d'emprisonnement ferme aurait provoqué une augmentation de près de 4% du total des années prononcées sur cette période de 3 ans, soit 12000 années d'emprisonnement ferme (4000 années supplémentaires par an) » (Infostat Justice n° 118, octobre 2012) : 4 000 × 47,2 k€ ≈ 0,19 Md€ par an",
+        "source": "Terra Nova, « Pour en finir avec les peines plancher » (document hébergé par la CNAPE)",
         "url": "https://www.cnape.fr/documents/pour-en-finir-avec-les-peines-plancher"
        },
        {
@@ -2537,47 +2551,75 @@
         "value": "« Le calendrier initial est désormais largement hors d'atteinte »",
         "source": "Sénat, avis n° 145 (2025-2026), administration pénitentiaire",
         "url": "https://www.senat.fr/rap/a25-145-6/a25-145-6_mono.html"
+       },
+       {
+        "label": "Peines minimales (octobre 2026)",
+        "value": "« Un sursaut pénal : des peines minimales et la comparution immédiate des interpellés »",
+        "source": "Rassemblement national, pétition « Face au chaos, la France en ordre » (octobre 2026)",
+        "url": "https://rassemblementnational.fr/petition/face-au-chaos-la-france-en-ordre"
        }
       ],
-      "note": "Valeur centrale au seul coût de fonctionnement (construction exclue), même règle pour les cinq candidats qui proposent des places (arbitrage du 27/10/2026) ; construction en borne basse. Verdict « sous conditions » pour toutes les fiches prisons (capacités à bâtir)."
+      "note": "Calendrier non publié (le camp inscrit 1,0 Md€ en 2027). Valeur centrale au seul coût de fonctionnement (coût annuel d'un détenu, ministère de la Justice, 2024), construction en borne basse ; plan sans calendrier publié : 70 % des places ouvertes en 2030, plan daté : selon son calendrier (même règle que les plans de recrutement et les places d'accueil du jeune enfant), la même pour les cinq candidats qui proposent des places. Verdict « sous conditions » pour toutes les fiches prisons (capacités à bâtir). Peines minimales : même valeur que les peines planchers de Retailleau, Lisnard et Zemmour (loi de 2007) ; par la loi (dispositif de 2007 jugé conforme, le juge pouvant y déroger)."
      },
-     "quiz_text": "Construire beaucoup plus de places de prison",
-     "quiz_concret": "Plus de cellules pour les personnes condamnées à de la prison.",
-     "quiz_plus": "Écourter les peines fait récidiver : la grâce collective de 1996 a accru la récidive à cinq ans.",
-     "quiz_moins": "Les places neuves se remplissent aussitôt, et purger sa peine sous bracelet fait moins récidiver.",
+     "quiz_text": "Construire beaucoup plus de places de prison et rétablir des peines minimales",
+     "quiz_concret": "Plus de cellules pour les condamnés, et des peines minimales fixées par la loi pour certains délits.",
+     "quiz_plus": "Une peine minimale connue d'avance dissuade la récidive et écarte plus longtemps les récidivistes.",
+     "quiz_moins": "L'effet dissuasif observé est faible, alors que les places de prison se construisent lentement.",
      "quiz_preuve_pour": "mitigé",
-     "quiz_preuve_contre": "mitigé",
+     "quiz_preuve_contre": "solide",
      "quiz_cas_pour": [
       {
-       "t": "La grâce collective du 14 juillet 1996 a accru la récidive, cinq ans après leur sortie, des détenus libérés plus tôt grâce à elle (Maurin et Ouss, France, 2009).",
-       "s": [
-        3
-       ]
-      }
-     ],
-     "quiz_cas_contre": [
-      {
-       "t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+       "t": "Après la loi de 2007 sur les peines planchers, les récidivistes ont commis 13 % de délits visés en moins dans les quatre ans suivant leur sortie (IPP, France, 2024).",
        "s": [
         0
        ]
       },
       {
-       "t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+       "t": "Les peines planchers de 2007 n'étaient prononcées que dans 38 % des cas possibles en 2010, les juges pouvant y déroger (ministère de la Justice, France, 2012).",
        "s": [
         1
        ]
       }
      ],
-     "quiz_etudes": "Une évaluation française (grâce collective de 1996) : écourter les peines accroît la récidive ; mais purger sa peine sous bracelet fait moins récidiver que la prison, et le nombre de détenus suit celui des places.",
+     "quiz_cas_contre": [
+      {
+       "t": "Avec les peines planchers, la peine des récidivistes a presque doublé (230 à 430 jours), sans dissuasion à court terme ni baisse des autres délits (IPP, France, 2024).",
+       "s": [
+        0
+       ]
+      },
+      {
+       "t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+       "s": [
+        2
+       ]
+      },
+      {
+       "t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+       "s": [
+        3
+       ]
+      }
+     ],
+     "quiz_etudes": "Une évaluation française rigoureuse (IPP, 2024) : moins de récidive ciblée à quatre ans, pas de dissuasion à court terme, nettement plus d'incarcération.",
      "quiz_src": [
+      {
+       "l": "IPP, note n° 105 « Les peines planchers sont-elles un outil efficace pour éviter la récidive ? »",
+       "a": 2024,
+       "u": "https://www.ipp.eu/wp-content/uploads/2024/03/Note_IPP_105_peines_planchers.pdf"
+      },
+      {
+       "l": "Ministère de la Justice, Infostat Justice n° 118 « Peines planchers : application et impact de la loi du 10 août 2007 »",
+       "a": 2012,
+       "u": "https://www.justice.gouv.fr/sites/default/files/migrations/portail/art_pix/stat_infostat_118_20121017.pdf"
+      },
       {
        "l": "Sénat, commission des finances, rapport d'information n° 37 (2023-2024), plan 15 000 places (synthèse)",
        "a": 2023,
        "u": "https://www.senat.fr/rap/r23-037/r23-0370.html"
       },
       {
-       "l": "Henneguelle, Monnery et Kensey, Better at Home than in Prison? The Effects of Electronic Monitoring on Recidivism in France (Journal of Law and Economics)",
+       "l": "Henneguelle, Monnery et Kensey, Journal of Law and Economics",
        "a": 2016,
        "u": "https://chicagounbound.uchicago.edu/jle/vol59/iss3/6/"
       },
@@ -2585,20 +2627,15 @@
        "l": "Ministère de la Justice, Mesure de l'incarcération, indicateurs clés au 1er octobre 2026",
        "a": 2026,
        "u": "https://www.justice.gouv.fr/sites/default/files/2026-11/mesure_mensuelle_01102026.pdf"
-      },
-      {
-       "l": "Maurin et Ouss, « Sentence Reductions and Recidivism: Lessons from the Bastille Day Quasi Experiment » (IZA DP n° 3990)",
-       "a": 2009,
-       "u": "https://www.iza.org/publications/dp/3990"
       }
      ],
      "quiz_constat": {
       "t": "Détenus : 90 937 au 1er octobre 2026 (+7,2 % en un an) pour 63 452 places, soit 143 % d'occupation (Justice).",
       "s": [
-       2
+       4
       ]
      },
-     "quiz_fam": "le-pen.prisons"
+     "quiz_fam": "philippe.prisons"
     },
     {
      "id": "mesures-sectorielles",
@@ -3281,13 +3318,13 @@
     "high_md": 50
    },
    "claude_total": {
-    "sum": -88.3,
-    "p10": -116.0,
-    "p90": -70.2,
-    "realsum": -91.5,
+    "sum": -88.5,
+    "p10": -116.4,
+    "p90": -70.6,
+    "realsum": -91.7,
     "missing": "économies de la réforme des retraites sans chiffrage pour 2030 (décote portée à 2,5 % par trimestre manquant dans la limite de 50 %, 160 trimestres au minimum pour liquider, trimestre validé à partir d'un mi-temps, 4 trimestres de chômage non cotisé au plus sur la carrière, majoration pour trois enfants portée à 12 % pour les mères et supprimée peu à peu pour les pères par une non-revalorisation, montant inchangé en euros courants et en baisse en euros constants, critères de pénibilité supprimés : 8,5 Md€ d'économies en 2032 selon le camp : plancher 5,8, décote 2,7), mesures de la réforme des retraites chiffrées par le camp pour 2032 sans chiffrage indépendant ni base officielle ouverte (majoration pour trois enfants réservée aux mères : 5 Md€ d'économies ; moitié des excédents de l'Unédic affectée aux retraites : 1,2 Md€ ; APA et ASPA suspendues au-delà de 3 000 € de pension : 9,7 Md€ avec l'Unédic selon Public Sénat ; surcote : 2 Md€ de coût ; quatre trimestres de chômage validables au plus sur la carrière : 5,2 Md€ d'économies selon le RN, AFP, 20/11/2026 ; solde « positif de 4,7 milliards d'euros » en 2032 selon le RN, recettes comprises), exonération de cotisations retraite et chômage pour qui continue de travailler avec tous ses droits et cumul emploi-retraite libéralisé (sans chiffrage, même lecture que Retailleau), réforme des politiques financées aujourd'hui par les prélèvements réaffectés à la capitalisation (aides au logement, Action Logement, formation professionnelle : paramètres non publiés), sortie du marché européen de l'électricité, taxe sur les rachats d'actions, coût du prêt à taux zéro « 100 % Rénov' » qui remplace MaPrimeRénov' (montant et conditions non publiés), recettes et économies du contre-budget sans chiffrage indépendant (chiffres du camp pour 2027) : impôt sur les sociétés assis sur le chiffre d'affaires 3,75, Autorité de la concurrence 1,2, dividendes d'EDF sur les exportations 3,7, économies sur le TURPE 2, économies sur la Sécurité sociale ≈ 20, droits de douane rendus 2,2, rationalisation de l'aide publique au développement et de l'action extérieure de l'État 2,1 (sans niveau publié), rebudgétisation des certificats d'économies d'énergie 8 (mécanisme non publié : sans effet sur le solde si les programmes passent au budget avec une recette équivalente, perte de TVA d'environ 0,9 Md€ si la charge disparaît des factures, même lecture que Retailleau et Zemmour) ; dépenses de moins de 1 Md€ (AAH au-dessus du seuil de pauvreté, permis gratuit pour les jeunes sans casier judiciaire : 0,7 Md€ par an selon le RN, Euronews, 17/11/2026), prime d'activité étudiante (débat TF1-LCI, 16/11/2026 : 20 % du salaire dans la limite de 200 € par mois, 30 % et 300 € pour les boursiers ; nombre d'étudiants salariés et répartition de leurs salaires sans source officielle ouverte, non chiffrée), dispense d'impôt sur le revenu pour les entrepreneurs (public et durée non publiés), fonds souverain (opération financière), abrogation de la loi Hulot, lignes immigration du contre-budget sans chiffrage indépendant ni paramètre suffisant (chiffres du camp pour 2027) : suppression du visa pour soins 1, effets indirects sur la sécurité 0,5, départ des étrangers sans emploi 0,1, timbre sur les visas touristiques 0,1 ; taxe de 1 000 € par an à l'embauche d'un salarié extra-européen 1 et taxe de 14 % sur les transferts d'argent vers les pays tiers 1,9 (à l'étude), gel des tarifs et minima de l'accise sur le tabac et fin de leur indexation (lettre aux buralistes du 7/09/2026 ; paramètre précisé par l'amendement I-CF1011 du groupe RN au projet de budget 2027, 4/10/2026) : ≈ −0,1 Md€ en 2030 (jusqu'à −0,5 si toute l'accise suivait l'indexation), sous le seuil de 1 Md€, recentralisation de l'aide sociale à l'enfance par l'État, rebaptisée « aide sociale à la famille », et ministère de plein exercice (transfert entre administrations, sans dépense nouvelle publiée : sans effet sur le solde public), fin ou baisse de l'aide à l'Ukraine (« nous n'avons plus les moyens » d'une aide qui « nous a coûté, en engagement, 6 milliards d'euros par an » selon la candidate, 15/10/2026 ; aide financière maintenue six mois après l'élection puis arrêtée, rappelle franceinfo le 13/11/2026 ; niveau non publié, même lecture que la hausse de l'aide de Glucksmann, non chiffrable ; matériels livrés : 0,94 Md€ en 2025 selon le ministère des Armées), trains gratuits pour les 18-25 ans sur les places invendues de la SNCF (paramètres non publiés), postes publics non remplacés (nombre non publié par la candidate ; ≈ 201 000 d'ici 2032 selon un seul site citant un député RN : fourchette indicative dans la fiche), agences et opérateurs au-delà de la valeur commune (3,4 Md€ en 2027, chiffre du camp), imposition des « surprofits » des multinationales tirés des crises (message de la candidate du 29/10/2026 : ni taux, ni assiette, ni rendement publiés), fin des régularisations d'étrangers en situation irrégulière (« zéro régularisation », porte-parole de campagne, 28/10/2026 : effet sur les cotisations non chiffré, paramètres non publiés), fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée, lignes du contre-budget 2027 sans chiffrage indépendant ni base officielle permettant le calcul (chiffres du camp pour 2027) : aides au logement plafonnées à 90 % du loyer 1,0 (répartition officielle des allocataires selon la part du loyer couverte non publiée), chèques apprentissage réservés aux étudiants avant la licence 1,6 (dispositif non défini par le document), gestion des bons du Trésor à taux fixe 4,2, logement social, dont la fin de l'exonération de taxe foncière des bailleurs sociaux, 3,2, subventions aux associations « ne relevant pas de l'intérêt général » de l'État 2,0 et des collectivités 2,0 (critère redit par la candidate : « l'arrêt des subventions publiques aux associations politisées », tribune au Figaro du 18/11/2026 citée par franceinfo ; montant non redit), coût de la dette 1,3, parc immobilier de l'État 1,0 ; sans effet sur le solde public : écrêtement puis rebudgétisation de la TVA transférée aux collectivités 3,4 et hausse de la cotisation employeur de la fonction publique territoriale 1,0 (transferts entre administrations, même règle que la fraction de TVA aux communes de Retailleau), « retour de TVA lié à la baisse des dépenses contraintes » 2,6 (effet de bouclage, exclu par la méthode) ; plus-values immobilières exonérées après quinze ans de détention (lettre de la candidate aux professionnels de l'immobilier, 21/09/2026 : coût non publié, répartition officielle des plus-values par durée de détention non ouverte), priorité nationale dans la commande publique (franceinfo, 13/11/2026 : « La commande publique, c'est 200 milliards d'euros par an » selon la candidate ; mécanisme, seuil et part réservée non publiés ; même lecture que le « Buy European Act » de Glucksmann, achats publics encadrés par le droit de l'Union européenne), climatisation de toutes les écoles, des Ehpad et des hôpitaux (LCP, 15/11/2026 : calendrier et coût non publiés ; même lecture que la climatisation des lieux accueillant des personnes fragiles de Philippe)",
     "n": 29,
-    "cost": -103.7,
+    "cost": -103.8,
     "gain": 15.4,
     "confirm": []
    },
@@ -3403,7 +3440,7 @@
    "name": "Jean-Luc Mélenchon",
    "party": "LFI",
    "poll": "18,3 %",
-   "summary": "Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines. Notre chiffrage : −249,3 Md€ par an en 2030, soit −8 066 € par ménage. Principal obstacle : la modification des traités européens à l'unanimité des 27, pour l'annulation de la dette, et la révision de la Constitution, pour la VIe République.",
+   "summary": "Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines. Notre chiffrage : −254,1 Md€ par an en 2030, soit −8 221 € par ménage. Principal obstacle : la modification des traités européens à l'unanimité des 27, pour l'annulation de la dette, et la révision de la Constitution, pour la VIe République.",
    "measures": [
     {
      "id": "retraites",
@@ -4323,11 +4360,11 @@
      "obstacle": "Un décret suffit ; financement non précisé dans la mesure.",
      "claude": {
       "id": "point_indice",
-      "central": -33.3,
-      "low": -33.3,
-      "high": -22.0,
+      "central": -38.0,
+      "low": -38.0,
+      "high": -21.5,
       "method": "ascendant",
-      "formula": "+1 % de la valeur du point = 2,4 Md€ par an (Gouvernement, juillet 2026) ; +10 % (publié, immédiat) ≈ −24,0 Md€ ; indexation sur l'inflation ensuite (programme du 6/11/2026), par rapport au droit en vigueur (point non indexé) : 2,4 × 1,1 par point d'inflation cumulée, prévisions de la Banque de France (15/09/2026 : 1,9 % en 2027, 1,6 % en 2028) appliquées en 2028 et 2029, soit +3,5 % : ≈ −9,3 ; l'indexation de 2030 n'est pas comptée (pas de prévision officielle ouverte pour 2029) ; total ≈ −33,3 Md€ ; borne haute : chiffre du camp pour les +10 % (17) et une seule année d'indexation (1,9 % : −5,0), soit −22,0 ; repères plus anciens : Montaigne 2024 (20), OFCE 2024 (23), Cour des comptes 2022 (20,7)",
+      "formula": "+1 % de la valeur du point = 2,4 Md€ par an (Gouvernement, juillet 2026) ; +10 % (publié, immédiat) ≈ −24,0 Md€ ; indexation sur l'inflation ensuite (programme du 6/11/2026), par rapport au droit en vigueur (point non indexé) : 2,4 × 1,1 par point d'inflation cumulée, inflation commune (projet de loi de finances pour 2027, prix hors tabac : 1,7 % en 2027, 1,75 % en 2028 et en 2029) appliquée en 2028, 2029 et 2030, soit +5,29 % : ≈ −14,0 ; total ≈ −38,0 Md€ ; borne haute : chiffre du camp pour les +10 % (17) et une seule année d'indexation (1,7 % : −4,5), soit −21,5 ; repères plus anciens : Montaigne 2024 (20), OFCE 2024 (23), Cour des comptes 2022 (20,7)",
       "inputs": [
        {
         "label": "Coût de +1 % du point",
@@ -4354,10 +4391,10 @@
         "url": "https://melenchon2027.fr/programme/livre/une-economie-au-service-des-besoins/chapitre2"
        },
        {
-        "label": "Prévisions d'inflation (IPCH)",
-        "value": "« l'inflation totale atteindrait 2,3 % en 2026, avant de refluer sous la cible de 2 %, pour s'établir à 1,9 % en 2027, puis à 1,6 % en 2028 »",
-        "source": "Banque de France, projections macroéconomiques intermédiaires (15/09/2026)",
-        "url": "https://www.banque-france.fr/system/files/2026-09/Projections_macroeconomiques_Septembre_2026.pdf"
+        "label": "Inflation prévue (valeur commune)",
+        "value": "Prix à la consommation hors tabac : +2,1 % en 2026, +1,7 % en 2027, +1,75 % par an de 2028 à 2030 (tableau « Principaux indicateurs du scénario macroéconomique 2025-2030 »)",
+        "source": "Projet de loi de finances pour 2027, rapport économique, social et financier (6/10/2026)",
+        "url": "https://www.tresor.economie.gouv.fr/Articles/03454e04-445d-4ce6-832b-cff601a11485/files/56839f98-37fc-48d8-b502-81cac5a48cad"
        }
       ],
       "note": "Coût brut pour les employeurs publics, comme les hausses des enseignants des autres candidats. Le camp chiffre +10 % à 17 Md€, soit ≈ +7 % au coût de 2026. Enseignants : la note budgétaire du candidat (14/10/2026, +10 % pour tous les fonctionnaires) prévaut sur le plan d'urgence du groupe LFI pour l'éducation (1/09/2026, +20 % pour les enseignants dès la première année). Programme du 6/11/2026 : +10 % reconfirmé ; le chapitre sur l'éducation ajoute « Rattraper le gel du point d’indice depuis 2010 », sans paramètre : non compté au-delà de 10 %. Indexation : compensation aux collectivités territoriales = transfert entre administrations, sans effet sur le solde public ; même règle, dans l'autre sens, que les gels de pensions et de prestations comptés chez Attal et Lisnard."
@@ -4500,8 +4537,8 @@
       "note": "Paramètre publié pour une partie : fin des exonérations de cotisations au-dessus de 2 SMIC (note LFI du 14/10/2026) ; aucun chiffrage indépendant trouvé : reste non chiffrable. Indicatif : les trois niches fiscales visées pèsent ≈ 20 Md€. Si elle était chiffrée, la fin des exonérations de cotisations patronales serait comptée nette de l'impôt sur les sociétés perdu (règle commune des prélèvements déductibles, dans les deux sens). Programme du 6/11/2026 : le crédit d'impôt recherche est supprimé « au profit de dotations récurrentes » (effet net non publié) ; le pacte Dutreil et le crédit d'impôt emploi à domicile n'y sont pas cités : reste non chiffrable.",
       "nc": true
      },
-     "quiz_text": "Supprimer une partie des avantages fiscaux, dont celui pour l'emploi à domicile",
-     "quiz_concret": "Ceux qui emploient une aide à domicile ou transmettent une entreprise paient plus.",
+     "quiz_text": "Supprimer le crédit d'impôt recherche et raboter d'autres avantages fiscaux, dont celui pour l'emploi à domicile",
+     "quiz_concret": "Les entreprises perdent le crédit d'impôt recherche, remplacé par des crédits aux universités ; employer une aide à domicile ou transmettre une entreprise coûte plus.",
      "quiz_plus": "Ces avantages fiscaux ont peu d'effet mesuré pour leurs plus grands bénéficiaires.",
      "quiz_moins": "Certaines niches marchent : le crédit recherche fait chercher les PME, moins d'entreprises transmises ferment.",
      "quiz_preuve_pour": "solide",
@@ -5204,78 +5241,68 @@
       ],
       "note": "Investissements du pôle public bancaire et des autres acteurs (hors administrations publiques) non comptés. Le plan d'urgence climat de la note du 14/10 (bâtiments publics, équipements anti-incendie, SDIS, adaptation agricole) n'a pas de montant par ligne : les parties absentes des plans d'investissement ne sont pas ajoutées. Trois plans d'investissement sont publiés au 14/11/2026 : BTP et logement, automobile, textile (page « Les plans d'investissement productif »). Plan textile : colonne « pôle public bancaire, redéploiements de la PAC et autres acteurs » (450 M€ par an) non comptée, comme le pôle public bancaire des autres plans ; critères environnementaux de la commande publique d'habillement et bonus-malus sur les vêtements : paramètres non publiés, non comptés."
      },
-     "quiz_text": "Un plan d'urgence pour adapter le pays au climat",
-     "quiz_concret": "Écoles et hôpitaux rénovés, plus de moyens pour les pompiers et pour l'agriculture face aux sécheresses.",
-     "quiz_plus": "Après le plan créé en 2003, la canicule de 2006 a fait environ 4 400 morts de moins que prévu.",
-     "quiz_moins": "Ce type d'enveloppe se rabote : le fonds vert des communes a été divisé par trois en deux ans.",
-     "quiz_preuve_pour": "mitigé",
-     "quiz_preuve_contre": "mitigé",
+     "quiz_text": "Investir chaque année dans des logements publics, l'isolation des logements et les filières automobile et textile",
+     "quiz_concret": "L'État financerait la construction de logements publics, l'isolation de logements, le changement de chaudières et des investissements dans l'automobile et le textile.",
+     "quiz_plus": "Après isolation aidée, les maisons au gaz les plus énergivores consomment 12,7 % de moins.",
+     "quiz_moins": "Les économies mesurées après isolation n'atteignent qu'environ 42 % de celles calculées sur plan.",
+     "quiz_preuve_pour": "solide",
+     "quiz_preuve_contre": "solide",
      "quiz_cas_pour": [
-      {
-       "t": "Après les alertes et mesures de prévention créées à la suite de 2003, la canicule de 2006 a causé environ 4 400 décès de moins que prévu (Fouillet et al., France, 2008).",
-       "s": [
-        0
-       ]
-      },
       {
        "t": "Après des travaux d'isolation aidés, les maisons chauffées au gaz ont consommé 6,6 % de moins, et 12,7 % de moins pour les plus énergivores (Insee-SDES, France, 2026).",
        "s": [
-        4
+        0
        ]
       }
      ],
      "quiz_cas_contre": [
       {
-       "t": "Le Fonds vert des collectivités, qui finance aussi l'adaptation, a été divisé par trois de 2024 à 2026, raboté à chaque étape budgétaire (I4CE, France, 2026).",
+       "t": "644 000 dossiers aidés en 2021, au-delà de l'objectif ; début 2023, 73 % finançaient un seul geste et 1,7 % une rénovation complète (France Stratégie, France, 2024).",
        "s": [
         1
        ]
       },
       {
-       "t": "Les communes de montagne subventionnent surtout la neige de culture, protection « relative et transitoire » de moins en moins efficace (Cour des comptes, France, 2024).",
-       "s": [
-        2
-       ]
-      },
-      {
        "t": "Les économies d'énergie mesurées après isolation n'atteignent qu'environ 42 % de celles calculées sur plan (Insee-SDES, France, 2026).",
        "s": [
-        4
+        0
        ]
       }
      ],
-     "quiz_etudes": "La prévention des canicules a un effet mesuré en France ; aucune évaluation d'un plan d'adaptation d'ensemble ; les rénovations économisent de l'énergie, mais moins que prévu (environ 42 %).",
+     "quiz_etudes": "Isolation : les mesures françaises sur compteurs concordent, la consommation baisse, mais bien moins que les calculs (environ 42 %). Logements publics : pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent que plus de logements neufs modèrent les loyers, mais que des logements publics en plus remplacent en partie des constructions privées.",
      "quiz_src": [
-      {
-       "l": "Fouillet et al., International Journal of Epidemiology",
-       "a": 2008,
-       "u": "https://doi.org/10.1093/ije/dym253"
-      },
-      {
-       "l": "I4CE, « Qu'attendre (vraiment) du Fonds vert ? »",
-       "a": 2026,
-       "u": "https://www.i4ce.org/adaptation-changement-climatique-attendre-fonds-vert/"
-      },
-      {
-       "l": "Cour des comptes, synthèses du rapport public annuel 2024, « Les stations de montagne face au changement climatique »",
-       "a": 2024,
-       "u": "https://www.ccomptes.fr/sites/default/files/2024-03/20240312-syntheses-RPA-2024.pdf"
-      },
-      {
-       "l": "Cour des comptes, rapport public annuel 2024 (vol. 1), « L'adaptation des logements au changement climatique »",
-       "a": 2024,
-       "u": "https://www.ccomptes.fr/sites/default/files/2024-03/RPA-2024-volume-1-reduit.pdf"
-      },
       {
        "l": "Insee-SDES, document de travail 2025-16, isolation et consommation réelle d'énergie",
        "a": 2026,
        "u": "https://www.insee.fr/fr/statistiques/fichier/version-html/8607754/DT2025-16.pdf"
+      },
+      {
+       "l": "France Stratégie, Comité d'évaluation de France Relance, MaPrimeRénov'",
+       "a": 2024,
+       "u": "https://www.strategie-plan.gouv.fr/files/files/Publications/Rapport/fs-2024-rapport-france_relance_vol_ii_6_maprimerenov.pdf"
+      },
+      {
+       "l": "SDES, Le parc de logements par classe de performance énergétique au 1er janvier 2025",
+       "a": 2025,
+       "u": "https://www.statistiques.developpement-durable.gouv.fr/le-parc-de-logements-par-classe-de-performance-energetique-au-1er-janvier-2025"
+      },
+      {
+       "l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+       "a": 2026,
+       "u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+      },
+      {
+       "l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+       "a": 2026,
+       "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
       }
      ],
      "quiz_constat": {
-      "t": "Dégâts aux maisons dus à la sécheresse des sols : record en 2022, 2,4 à 2,9 Md€ (Cour des comptes).",
+      "t": "Mises en chantier : 262 000 logements en 2025, −29 % depuis 2016 ; passoires : 12,7 % des résidences principales en 2025 (SDES).",
       "s": [
-       3
+       3,
+       4,
+       2
       ]
      },
      "quiz_fam": "melenchon.planification"
@@ -6088,7 +6115,37 @@
       ],
       "note": "Logistique d'accueil de 800 000 jeunes en sus. Abrogation du service militaire volontaire : économie non chiffrée (petit montant)."
      },
-     "quiz_text": "Service citoyen obligatoire de neuf mois avant 25 ans, rémunéré au SMIC revalorisé ; service militaire volontaire abrogé."
+     "quiz_text": "Un service citoyen obligatoire de neuf mois pour tous les jeunes, payé au salaire minimum",
+     "quiz_concret": "Chaque jeune donne neuf mois avant 25 ans à une mission d'intérêt général, payée au SMIC.",
+     "quiz_plus": "Au volontariat, le séjour de cohésion a peu mêlé les milieux : 5 % de jeunes des quartiers, 9 % attendus.",
+     "quiz_moins": "Les structures prêtes à accueillir des jeunes en mission manquent déjà, et aucun effet durable n'est mesuré.",
+     "quiz_preuve_pour": "faible",
+     "quiz_preuve_contre": "faible",
+     "quiz_cas_pour": [
+      {
+       "t": "Laissé au volontariat, le séjour de cohésion a peu mélangé les milieux : 5 % de jeunes des quartiers prioritaires, contre 9 % dans la population (Cour des comptes, France, 2024).",
+       "s": [
+        0
+       ]
+      }
+     ],
+     "quiz_cas_contre": [
+      {
+       "t": "Pour leur mission d'intérêt général, les jeunes du service national universel ont eu du mal à trouver des structures d'accueil, déjà très sollicitées (Cour des comptes, France, 2024).",
+       "s": [
+        0
+       ]
+      }
+     ],
+     "quiz_etudes": "Pas d'évaluation française d'un service obligatoire ; le séjour volontaire actuel a peu mélangé les milieux et manqué de structures d'accueil (Cour des comptes, 2024). Des évaluations à l'étranger, dans des contextes différents, trouvent plus de confiance entre jeunes d'origines différentes après un service commun, sans gain de salaire.",
+     "quiz_src": [
+      {
+       "l": "Cour des comptes, Le Service national universel : un premier bilan, cinq années après son lancement",
+       "a": 2024,
+       "u": "https://www.vie-publique.fr/files/rapport/pdf/295374.pdf"
+      }
+     ],
+     "quiz_fam": "melenchon.service_citoyen"
     },
     {
      "id": "aah",
@@ -6369,13 +6426,13 @@
     "high_md": null
    },
    "claude_total": {
-    "sum": -249.3,
-    "p10": -278.6,
-    "p90": -204.5,
-    "realsum": -249.3,
+    "sum": -254.1,
+    "p10": -282.3,
+    "p90": -206.8,
+    "realsum": -254.1,
     "missing": "IS progressif, 10 000 enseignants (règle des recrutements publics : 10 000 × 61,6 k€ = 0,62 Md€, 70 % en 2030 : 0,4 Md€, sous 1 Md€), pension minimale au niveau du SMIC, indexation des pensions sur les salaires, minimum vieillesse au seuil de pauvreté, recettes annoncées sans paramètre publié (chiffres du camp) : CVAE des grandes entreprises 3, taxe sur les multinationales 5, taxe Gafam 3,9, superprofits 5, rachats d'actions 2,5, crypto-actifs 1, bac professionnel en quatre ans (coût non publié), suppression de Parcoursup, livret A relevé à 30 000 € et rémunéré au moins à l'inflation, « Livret B » défiscalisé (coûts non publiés), plan d'urgence du groupe LFI pour l'éducation (1/09/2026) : AESH fonctionnaires de catégorie B (coût non publié), régularisation des travailleurs, étudiants et parents d'enfants scolarisés sans papiers (nombre non publié ; effet sur les cotisations non chiffré), programme du 6/11/2026, coût non publié : suppression de la décote des pensions, arrêts maladie payés à 100 % et fin des jours de carence dans le secteur privé (indemnités journalières à 100 % et fin des trois jours de carence de la Sécurité sociale ; la partie agents publics est comptée dans la fiche « Arrêts maladie des agents publics payés à 100 % ») et auto-déclaration des arrêts de courte durée (durée non publiée), 35 heures et sixième semaine de congés payés (effet sur la fonction publique), cannabis légalisé sous monopole d'État (recette sans taux publié), crédit d'impôt par enfant et fin du quotient conjugal (paramètres non publiés), garantie d'autonomie pour chaque personne (plan « pauvreté » du 16/11/2026 : complément jusqu'au seuil de pauvreté selon la composition du foyer, 1 337 € pour une personne seule, RSA remplacé, versement automatique ; extension au-delà des jeunes sans calendrier publié ; aucun calcul officiel du même champ, déficit de revenu des ménages pauvres de 26 Md€ en 2023 selon l'OFCE, « plancher théorique », indicatif), exonération de droits de succession des héritages inférieurs à 150 000 €, 10 000 places d'EHPAD publics par an pendant cinq ans (coût public de fonctionnement par place : pas de source officielle ouverte), garantie d'emploi au SMIC revalorisé pour les chômeurs de longue durée volontaires (nombre de bénéficiaires et employeur non publiés), nationalisations et retours sur privatisations (autoroutes « en revenant sur les hausses de prix passées », aéroports, Française des jeux, ArcelorMittal France, Engie… : rachats = opérations financières ; baisse des péages et indemnités de fin de concession sans paramètre publié), dotation globale de fonctionnement des communes indexée sur l'inflation (transfert entre administrations, sans effet sur le solde public, même règle que la fraction de TVA aux communes de Retailleau), contrats d'études au SMIC dans toutes les formations paramédicales et garantie d'autonomie de 1 337 € pour les étudiants en médecine (plan santé : effectifs concernés et rémunérations déjà versées sans source officielle ouverte), niches nommées par le programme sans coût officiel isolé à ce jour (avantages fiscaux de l'épargne retraite par capitalisation, du mécénat culturel, des LBO, des meublés touristiques et du kérosène : à chiffrer sur les dépenses fiscales officielles), assurance chômage dès le premier jour de travail et indemnisation dès la fin du contrat, abrogation de la loi « France Travail » (coût non publié), permis de conduire gratuit dans le service citoyen (coût moyen officiel d'un permis non ouvert), Sécurité sociale funéraire, statut d'aidant familial rémunéré, maintien à domicile pris en charge par la Sécurité sociale, allocation de soutien familial déconjugalisée et revalorisée, pensions alimentaires défiscalisées, emploi jeune de cinq ans, titularisation des contractuels (montants non publiés), taxe d'habitation progressive (80 % des ménages exonérés), taxe foncière progressive, contribution audiovisuelle progressive et cotisation sociale universelle (barèmes non publiés), rémunération au-dessus du seuil de pauvreté pour tous les élèves de l'enseignement professionnel dès 16 ans (franceinfo, 12/11/2026 ; garantie d'autonomie accessible dès 16 ans dans l'enseignement professionnel selon le plan « pauvreté » du 16/11/2026 : effectifs et articulation avec les aides existantes non publiés), plan « pauvreté » du 16/11/2026, paramètres et coûts non publiés : blocage des loyers, y compris commerciaux, et gel temporaire des remboursements de crédit dans l'« état d'urgence sociale », échelle mobile des salaires temporaire, coupures d'énergie interdites toute l'année (puissance minimale fixée par décret) et coupures d'accès aux réseaux vitaux interdites pour impayés, frais bancaires d'incident plafonnés (niveau non publié), stocks tampons alimentaires, expérimentation d'une Sécurité sociale de l'alimentation, guichets physiques à moins de 15 minutes et versement automatique des prestations, abrogation des dispositions de la loi pour le plein emploi qui conditionnent le RSA à une durée minimale d'activité et renforcent les sanctions, impôt sur le revenu à 14 tranches, de 0 à 70 %, avec garantie jusqu'à 4 000 € net par mois (barème publié dans l'amendement du groupe LFI au budget 2027, 7/10/2026, appliqué au simulateur ; recette annoncée de « plusieurs milliards d'euros », sans montant ni chiffrage indépendant de ce barème, réforme prévue « au cours du mandat »), plan « enfance » (19/11/2026) : 10 000 personnels de la protection judiciaire de la jeunesse recrutés en cinq ans (règle des recrutements publics : 10 000 × 61,6 k€ × 70 % ≈ 0,43 Md€, sous 1 Md€), 235 juges des enfants et 235 greffiers (≈ 0,02 Md€), accompagnement des jeunes majeurs de l'aide sociale à l'enfance jusqu'à 25 ans et ratio moyen de 5 enfants par adulte en crèche (coûts non publiés)",
     "n": 29,
-    "cost": -275.2,
+    "cost": -279.9,
     "gain": 25.9,
     "confirm": []
    },
@@ -7647,7 +7704,7 @@
        3
       ]
      },
-     "quiz_fam": "melenchon.planification"
+     "quiz_fam": "philippe.fonds_climat"
     },
     {
      "id": "jeunes_parents",
@@ -7904,8 +7961,8 @@
       ],
       "note": "Coût unitaire des volontaires bas : hébergement, alimentation et encadrement non comptés (le dispositif actuel est évalué à ≈ 1 Md€ d'ici 2030, infrastructures comprises). L'objectif de 50 000 volontaires est aussi celui du gouvernement pour 2035 : s'il vise 2035, le surcoût des volontaires est nul (borne haute). Échéance non publiée : règle commune par défaut (fin du quinquennat, 70 % en 2030)."
      },
-     "quiz_text": "Augmenter fortement le nombre de réservistes et de jeunes volontaires dans l'armée",
-     "quiz_concret": "Beaucoup plus de civils formés pour renforcer les armées, et un service militaire volontaire bien plus large.",
+     "quiz_text": "Augmenter fortement le nombre de réservistes de l'armée",
+     "quiz_concret": "Beaucoup plus de civils formés et mobilisables pour renforcer les armées en cas de crise, tout en gardant leur métier.",
      "quiz_plus": "Les réservistes apportent déjà aux armées l'équivalent de 4 000 militaires à plein temps chaque jour.",
      "quiz_moins": "Un réserviste sert 37 jours par an en moyenne, et des démarches lourdes freinent l'engagement et le maintien.",
      "quiz_preuve_pour": "pas d'étude",
@@ -7918,11 +7975,17 @@
        "l": "Sénat, rapport d'information n° 443 (2022-2023), Transformer les ressources humaines des armées",
        "a": 2023,
        "u": "https://www.senat.fr/rap/r22-443/r22-4434.html"
+      },
+      {
+       "l": "Ministère des Armées, dossier de presse du service national (chiffres clés 2025)",
+       "a": 2025,
+       "u": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Dossier%20de%20presse_Service%20national.pdf"
       }
      ],
      "quiz_constat": {
-      "t": "Réservistes opérationnels des armées : 39 474 fin 2021 ; objectif fixé : 80 000 en 2030 (Sénat).",
+      "t": "Réservistes opérationnels : 44 400 en 2025, +12 % depuis fin 2021 ; objectif : 80 000 en 2030 (ministère des Armées, Sénat).",
       "s": [
+       1,
        0
       ]
      },
@@ -8046,7 +8109,37 @@
       "note": "Indicatif : de −0,4 (un mois) à −3,6 Md€ (dix mois) par an : 600 000 jeunes par an (chiffre publié) × 605 € par mois (indemnité nette de l'État 504,98 € + tutorat 100 €), même formule par mois que l'engagement civique d'Attal et le service de Glucksmann, qui comptent 790 000 jeunes (une génération) faute d'effectif publié ; montée en charge non publiée.",
       "nc": true
      },
-     "quiz_text": "Rétablir un service national obligatoire et universel pour chaque classe d'âge, avec le choix entre une option militaire et plusieurs options civiles."
+     "quiz_text": "Rétablir un service national obligatoire pour tous les jeunes, militaire ou civil au choix",
+     "quiz_concret": "Chaque jeune d'une classe d'âge fait un service, en choisissant une option militaire ou une option civile.",
+     "quiz_plus": "Au volontariat, le séjour de cohésion a peu mêlé les milieux : 5 % de jeunes des quartiers, 9 % attendus.",
+     "quiz_moins": "Les structures prêtes à accueillir des jeunes en mission manquent déjà, et aucun effet durable n'est mesuré.",
+     "quiz_preuve_pour": "faible",
+     "quiz_preuve_contre": "faible",
+     "quiz_cas_pour": [
+      {
+       "t": "Laissé au volontariat, le séjour de cohésion a peu mélangé les milieux : 5 % de jeunes des quartiers prioritaires, contre 9 % dans la population (Cour des comptes, France, 2024).",
+       "s": [
+        0
+       ]
+      }
+     ],
+     "quiz_cas_contre": [
+      {
+       "t": "Pour leur mission d'intérêt général, les jeunes du service national universel ont eu du mal à trouver des structures d'accueil, déjà très sollicitées (Cour des comptes, France, 2024).",
+       "s": [
+        0
+       ]
+      }
+     ],
+     "quiz_etudes": "Pas d'évaluation française d'un service obligatoire ; le séjour volontaire actuel a peu mélangé les milieux et manqué de structures d'accueil (Cour des comptes, 2024). Des évaluations à l'étranger, dans des contextes différents, trouvent plus de confiance entre jeunes d'origines différentes après un service commun, sans gain de salaire.",
+     "quiz_src": [
+      {
+       "l": "Cour des comptes, Le Service national universel : un premier bilan, cinq années après son lancement",
+       "a": 2024,
+       "u": "https://www.vie-publique.fr/files/rapport/pdf/295374.pdf"
+      }
+     ],
+     "quiz_fam": "melenchon.service_citoyen"
     },
     {
      "id": "regle_or",
@@ -8281,16 +8374,16 @@
      "claude": {
       "id": "prisons",
       "central": -1.0,
-      "low": -2.7,
-      "high": -0.5,
+      "low": -3.2,
+      "high": -0.7,
       "method": "ascendant",
-      "formula": "Même règle que Le Pen (30 000 places), Retailleau (40 000 places), Lisnard (20 000 places) et Zemmour (100 000 places), construction exclue : 30 000 places × 32 k€ de coût annuel d'un détenu ≈ −0,96 ≈ −1,0 ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 30 000 sur 5 ans ≈ 2,2 + moitié des places ouvertes ≈ 0,5 → −2,7 ; borne haute : moitié des places ouvertes en 2030 (−0,5)",
+      "formula": "Règle commune des places de prison (Le Pen, Philippe, Lisnard, Retailleau, Zemmour), construction exclue : coût annuel d'un détenu 47,2 k€ (ministère de la Justice : 129,33 € par jour en 2024, fonctionnement) ; plan sans calendrier publié : 70 % des places ouvertes en 2030, 30 000 × 47,2 k€ × 70 % ≈ 0,99 → −1,0 ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 30 000 sur 5 ans ≈ 2,22 de plus → −3,2 ; borne haute : moitié des places ouvertes en 2030 (0,71) → −0,7",
       "inputs": [
        {
-        "label": "Coût d'un détenu",
-        "value": "≈ 32 000 €/an",
-        "source": "Terra Nova (CNAPE)",
-        "url": "https://www.cnape.fr/documents/pour-en-finir-avec-les-peines-plancher"
+        "label": "Coût d'un détenu (valeur commune)",
+        "value": "« En 2024, le coût moyen d'une journée de détention s'élevait à 129,33 euros, dont 95,48 euros de dépenses de personnel et 33,86 euros de dépenses d'exploitation » : 129,33 € × 365 ≈ 47 200 € par an (fonctionnement, hors investissement)",
+        "source": "Ministère de la Justice, réponse à la question écrite n° 13927 (JO du 26/05/2026)",
+        "url": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE13927.pdf"
        },
        {
         "label": "Coût de construction d'une place",
@@ -8317,7 +8410,7 @@
         "url": "https://www.senat.fr/rap/a25-145-6/a25-145-6_mono.html"
        }
       ],
-      "note": "Calendrier non publié. Valeur centrale au seul coût de fonctionnement (construction exclue), même règle pour les cinq candidats qui proposent des places (arbitrage du 27/10/2026) ; construction en borne basse. Verdict « sous conditions » pour toutes les fiches prisons (capacités à bâtir). Loi d'accélération des prisons : contenu non publié (voie juridique : loi ordinaire)."
+      "note": "Calendrier non publié. Valeur centrale au seul coût de fonctionnement (coût annuel d'un détenu, ministère de la Justice, 2024), construction en borne basse ; plan sans calendrier publié : 70 % des places ouvertes en 2030, plan daté : selon son calendrier (même règle que les plans de recrutement et les places d'accueil du jeune enfant), la même pour les cinq candidats qui proposent des places. Verdict « sous conditions » pour toutes les fiches prisons (capacités à bâtir). Loi d'accélération des prisons : contenu non publié (voie juridique : loi ordinaire). Peines planchers pour les violences contre les dépositaires de l'autorité publique et les professeurs : champ plus étroit que la loi de 2007 (base de la valeur commune des peines planchers), non comptées."
      },
      "quiz_text": "Construire beaucoup plus de places de prison",
      "quiz_concret": "Plus de cellules pour les personnes condamnées à de la prison.",
@@ -8376,7 +8469,7 @@
        2
       ]
      },
-     "quiz_fam": "le-pen.prisons"
+     "quiz_fam": "philippe.prisons"
     }
    ],
    "total": {
@@ -8387,10 +8480,10 @@
    },
    "claude_total": {
     "sum": -1.9,
-    "p10": -26.6,
-    "p90": 3.1,
+    "p10": -26.8,
+    "p90": 3.0,
     "realsum": -1.9,
-    "missing": "défense hors réservistes et volontaires (dont un plan munitions pour passer de 100 000 à 700 000 obus par an : aucun coût unitaire officiel ouvert, objectif de production sans part de l'État publiée), capitalisation collective obligatoire (classement du fonds non publié), effectifs réduits en maternelle et en primaire, soutien scolaire universel et gratuit, prêt à taux zéro à chaque naissance, plafonds de donation relevés pendant trois ans et donations aux enfants et petits-enfants défiscalisées pour un premier achat (site, 20/11/2026 : plafonds non publiés), temps partiel parental payé deux mois, aides sociales des étrangers alignées sur la moyenne européenne, capacité de calcul IA doublée, climatisation des lieux accueillant des personnes fragiles, 8 EPR supplémentaires, livret capital France (fiscalité non publiée), durée du RSA limitée pour inciter à la reprise du travail (programme du 12/11/2026 : durée non publiée ; même base que le RSA limité à trois ans de Zemmour dès qu'une durée est publiée), 30 % d'allocataires du RSA en moins (site, 18/11/2026 : suivi individuel, métiers en tension, contrôle ; économie sans chiffrage indépendant ni calendrier), RSA suspendu automatiquement pour les délinquants condamnés sauf décision du maire (site, 18/11/2026 : nombre de bénéficiaires concernés sans source officielle ouverte), suppression des taxes perçues à l'achat d'un logement (« frais de notaire ») pour le premier achat de la résidence principale des moins de 35 ans (entretien au Parisien, 15/11/2026, cité par franceinfo ; champ précisé sur le site le 20/11/2026 ; plafond de prix, compensation aux départements et coût non publiés ; aucune série officielle ouverte des droits payés par les acheteurs de moins de 35 ans), « près de 150 milliards d'économies » pour un déficit sous 2,5 % du PIB en fin de quinquennat (site, 18/11/2026 : non ventilées au-delà des fiches), une trentaine d'agences et d'opérateurs fusionnés, supprimés ou privatisés (liste non publiée ; France Travail privatisé : missions reprises, 0), suppression du CESE (inscrit dans la Constitution : exige une révision ; budget officiel de 34 M€, programme 126, PLF 2027), IFI supprimé sur les logements loués en longue durée et prélèvement forfaitaire unique sur les revenus de ces locations (site, 20/11/2026 ; taux de 30 % selon l'AFP, non écrit sur la page ; aucune base officielle ouverte de la part de l'IFI assise sur les logements loués ni des revenus fonciers par taux marginal, même règle que la flat tax de Lisnard), TVA des logements neufs affectée aux maires (montant non publié), cumul intégral de l'AAH et des revenus du travail pendant un an au lieu de six mois, première réponse de la MDPH sous deux mois et décision sous trois mois, 15 jours de répit par an pour les proches aidants les plus mobilisés et 100 000 logements adaptés ou inclusifs d'ici 2035 (page « Handicap », 20/11/2026 : coûts non publiés), SMIC et retraites de Mayotte alignés sur l'Hexagone « de façon maîtrisée et financée » (page « Outre-mer », 18/11/2026 : sans échéance ; la loi du 11 août 2025 de programmation pour la refondation de Mayotte prévoit déjà l'alignement du SMIC d'ici à 2031, ministère des Solidarités : écart avec le droit en vigueur non publié), deuxième hôpital à Combani, nouvelle piste d'aéroport sur Grande-Terre, financement de l'eau de Mayotte garanti jusqu'en 2032, navires de la Marine doublés aux Antilles, loi de programmation économique des outre-mer, Inspection nationale de l'enfance (contrôles au moins tous les trois ans), plan « Horizon 2050 » (un euro public pour un euro privé), « Livret capital France » et zones d'accélération de l'IA (pages « Outre-mer », « Intelligence artificielle » et « Protection de l'enfance », 18/11/2026 : coûts non publiés)",
+    "missing": "défense hors réservistes et volontaires (dont un plan munitions pour passer de 100 000 à 700 000 obus par an : aucun coût unitaire officiel ouvert, objectif de production sans part de l'État publiée), capitalisation collective obligatoire (classement du fonds non publié), effectifs réduits en maternelle et en primaire, soutien scolaire universel et gratuit, prêt à taux zéro à chaque naissance, plafonds de donation relevés pendant trois ans et donations aux enfants et petits-enfants défiscalisées pour un premier achat (site, 20/11/2026 : plafonds non publiés), temps partiel parental payé deux mois, aides sociales des étrangers alignées sur la moyenne européenne, capacité de calcul IA doublée, climatisation des lieux accueillant des personnes fragiles, 8 EPR supplémentaires, livret capital France (fiscalité non publiée), durée du RSA limitée pour inciter à la reprise du travail (programme du 12/11/2026 : durée non publiée ; même base que le RSA limité à trois ans de Zemmour dès qu'une durée est publiée), 30 % d'allocataires du RSA en moins (site, 18/11/2026 : suivi individuel, métiers en tension, contrôle ; économie sans chiffrage indépendant ni calendrier), RSA suspendu automatiquement pour les délinquants condamnés sauf décision du maire (site, 18/11/2026 : nombre de bénéficiaires concernés sans source officielle ouverte), suppression des taxes perçues à l'achat d'un logement (« frais de notaire ») pour le premier achat de la résidence principale des moins de 35 ans (entretien au Parisien, 15/11/2026, cité par franceinfo ; champ précisé sur le site le 20/11/2026 ; plafond de prix, compensation aux départements et coût non publiés ; aucune série officielle ouverte des droits payés par les acheteurs de moins de 35 ans), « près de 150 milliards d'économies » pour un déficit sous 2,5 % du PIB en fin de quinquennat (site, 18/11/2026 : non ventilées au-delà des fiches), une trentaine d'agences et d'opérateurs fusionnés, supprimés ou privatisés (liste non publiée ; France Travail privatisé : missions reprises, 0), suppression du CESE (inscrit dans la Constitution : exige une révision ; budget officiel de 34 M€, programme 126, PLF 2027), IFI supprimé sur les logements loués en longue durée et prélèvement forfaitaire unique sur les revenus de ces locations (site, 20/11/2026 ; taux de 30 % selon l'AFP, non écrit sur la page ; aucune base officielle ouverte de la part de l'IFI assise sur les logements loués ni des revenus fonciers par taux marginal, même règle que la flat tax de Lisnard), TVA des logements neufs affectée aux maires (montant non publié), cumul intégral de l'AAH et des revenus du travail pendant un an au lieu de six mois, première réponse de la MDPH sous deux mois et décision sous trois mois, 15 jours de répit par an pour les proches aidants les plus mobilisés et 100 000 logements adaptés ou inclusifs d'ici 2035 (page « Handicap », 20/11/2026 : coûts non publiés), SMIC et retraites de Mayotte alignés sur l'Hexagone « de façon maîtrisée et financée » (page « Outre-mer », 18/11/2026 : sans échéance ; la loi du 11 août 2025 de programmation pour la refondation de Mayotte prévoit déjà l'alignement du SMIC d'ici à 2031, ministère des Solidarités : écart avec le droit en vigueur non publié), deuxième hôpital à Combani, nouvelle piste d'aéroport sur Grande-Terre, financement de l'eau de Mayotte garanti jusqu'en 2032, navires de la Marine doublés aux Antilles, loi de programmation économique des outre-mer, Inspection nationale de l'enfance (contrôles au moins tous les trois ans), plan « Horizon 2050 » (un euro public pour un euro privé), « Livret capital France » et zones d'accélération de l'IA (pages « Outre-mer », « Intelligence artificielle » et « Protection de l'enfance », 18/11/2026 : coûts non publiés), peines planchers pour les violences contre les dépositaires de l'autorité publique et les professeurs (champ plus étroit que la loi de 2007, base de la valeur commune des peines planchers de Le Pen, Lisnard, Retailleau et Zemmour : aucune base officielle ouverte de ce champ)",
     "n": 12,
     "cost": -12.5,
     "gain": 10.6,
@@ -9480,7 +9573,7 @@
        "u": "https://www.vie-publique.fr/files/rapport/pdf/295374.pdf"
       }
      ],
-     "quiz_fam": "glucksmann.service_civique"
+     "quiz_fam": "melenchon.service_citoyen"
     },
     {
      "id": "ukraine",
@@ -10025,7 +10118,7 @@
    "name": "David Lisnard",
    "party": "Nouvelle Énergie",
    "poll": "9,8 %",
-   "summary": "Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations. Notre chiffrage : −40,9 Md€ par an en 2030, soit −1 323 € par ménage. Principal obstacle : la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats.",
+   "summary": "Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations. Notre chiffrage : −42,0 Md€ par an en 2030, soit −1 359 € par ménage. Principal obstacle : la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats.",
    "measures": [
     {
      "id": "depense",
@@ -10337,8 +10430,8 @@
       ],
       "note": "Calendrier du candidat non publié : même lecture que Philippe et Zemmour. Coût de transition vers la capitalisation exclu. Capitalisation obligatoire : sur environ 27 à 28 points de cotisations retraite, 24 restent en répartition et 3 vont à la capitalisation (Grand Oral BFMTV-Le Figaro, 22/11/2026, compte rendu du parti du 23/11 ; l'écrit du parti remplace la paraphrase de Capital du 6/11/2026, « environ 40 % » des cotisations) ; champ (générations et salariés concernés) et calendrier non publiés (« transition progressive », détail annoncé « en décembre ou en janvier ») : non comptée, paramètre clé non publié, même traitement que la capitalisation de Retailleau (celle de Le Pen est comptée : montant et date publiés) ; aucune base officielle ouverte du rendement d'un point de cotisation vieillesse relevée : pas de fourchette indicative. 43,5 ans de cotisation (22/11/2026) : au-delà de la durée du droit en vigueur (43 ans), aucun effet en 2030 (règle commune du recul au-delà de 64 ans). Fonds souverain pour les épargnants qui ne veulent pas confier leur épargne retraite à des acteurs privés (Nouvelle Énergie, compte rendu du 13/11/2026 des Rencontres de l'Avenir du 6/11) : opération financière, sans effet direct sur le solde. Échelon obligatoire de retraite par capitalisation, « complémentaire au système actuel », et plan de réforme des retraites annoncé « avant la fin de l’année » (Nouvelle Énergie, compte rendu du 13/11/2026 du DLive du 10/11) : taux et financement non publiés, coût de transition non chiffré. Tribune du 17/11/2026 : étage de capitalisation collective obligatoire, en plus d'une « répartition réformée » et d'une capitalisation libre, transition « bientôt » détaillée (taux et coût non publiés) ; fin des régimes spéciaux et convergence des règles du public et du privé (sans paramètre, non comptée). Socle : « autour de 1 200 euros » de pension mensuelle (page du parti mise à jour le 16/10/2026), au lieu de 1 000 € dans une source antérieure : la source de 2026 la plus récente est gardée ; sans paramètre de financement, non compté. TF1 (18/11/2026, compte rendu du parti) : projet de réforme des retraites « dans les prochaines semaines », avec une part de capitalisation obligatoire « plus importante », financée par des économies structurelles : paramètres non publiés."
      },
-     "quiz_text": "Repousser la retraite à 65 ans et développer l'épargne retraite individuelle",
-     "quiz_concret": "Vous partez plus tard ; une partie de votre retraite dépend de votre épargne.",
+     "quiz_text": "Repousser la retraite à 65 ans et placer une part des cotisations dans une épargne retraite collective obligatoire",
+     "quiz_concret": "Vous partez plus tard ; une petite partie de vos cotisations est placée.",
      "quiz_plus": "Plus de seniors au travail et une épargne placée, souvent plus rentable, financent les pensions.",
      "quiz_moins": "Reculer l'âge allonge l'attente de ceux qui ne peuvent plus travailler, au chômage ou malades.",
      "quiz_preuve_pour": "solide",
@@ -11368,7 +11461,7 @@
      "quiz_text": "Supprimer le plafond de la réduction d'impôt liée aux enfants",
      "quiz_concret": "Les familles aux revenus élevés, aujourd'hui plafonnées, paient moins d'impôt.",
      "quiz_plus": "Rendre l'enfant moins coûteux accroît un peu les naissances, surtout au 1er et au 3e enfant.",
-     "quiz_moins": "Seuls les foyers aisés y gagnent : 86 % des foyers touchés par le plafond sont parmi les 20 % les plus aisés.",
+     "quiz_moins": "Le gain va surtout aux plus aisés : 86 % des foyers touchés par le plafond sont parmi les 20 % les plus aisés.",
      "quiz_preuve_pour": "mitigé",
      "quiz_preuve_contre": "solide",
      "quiz_cas_pour": [
@@ -11644,8 +11737,8 @@
       ],
       "note": "Taux confirmé par le candidat le 27/10/2026 (Europe 1), après la tribune du 16/04 et l'entretien du 29/08. Baisse d'impôt sans calendrier : comptée entière en 2030 (règle commune), sans déduire le financement annoncé, comme la baisse de cotisations de Retailleau. Base 2025 non projetée en 2030."
      },
-     "quiz_text": "Baisser la CSG prélevée sur les salaires, grâce aux économies de l'État",
-     "quiz_concret": "Votre salaire net augmente ; l'État doit trouver des économies en face.",
+     "quiz_text": "Baisser la CSG prélevée sur les salaires et les revenus des indépendants",
+     "quiz_concret": "Votre revenu net du travail augmente ; la Sécurité sociale perd une partie de cette recette.",
      "quiz_plus": "Lors de la dernière baisse de ce type, en 2018, le net moyen a crû de 2,2 %, contre 1,7 % pour le brut.",
      "quiz_moins": "Lors de la baisse de 2018, les 10 % les plus modestes n'ont gagné que 19 € par an, contre 60 à 90 € au-dessus.",
      "quiz_preuve_pour": "solide",
@@ -11729,11 +11822,11 @@
      "obstacle": "Loi de financement de la Sécurité sociale ; durée du gel non publiée.",
      "claude": {
       "id": "gel_pensions",
-      "central": 2.5,
-      "low": 1.2,
-      "high": 5.0,
+      "central": 1.7,
+      "low": 0.8,
+      "high": 3.4,
       "method": "médiane",
-      "formula": "IPP (28/09/2026) : désindexation pour un an des pensions au-delà de 2 000 € brut ≈ 2,8 Md€ ; au-delà de 3 000 € ≈ 1,2 ; seuil de 2 200 € par interpolation ≈ +2,5 (un an de gel, effet durable sur le niveau des pensions en 2030, même lecture que l'année blanche d'Attal) ; borne haute +5,0 (gel renouvelé une 2e année) ; borne basse +1,2 (seuil net ou gel limité à la part au-delà du seuil)",
+      "formula": "IPP (note n° 129, 28/09/2026) : désindexation pour un an des pensions de base des retraités dont la retraite brute totale dépasse 2 000 € ≈ 2,8 Md€ ; au-delà de 3 000 € ≈ 1,2 ; seuil de 2 200 € brut par interpolation ≈ 2,48, pour une revalorisation évitée de 2,5 % (hypothèse de l'IPP au 1/01/2027) ; ramené à l'inflation commune (1,7 %, projet de loi de finances pour 2027) : × 1,7/2,5 ≈ +1,7 (un an de gel, effet durable sur le niveau des pensions en 2030, même lecture que l'année blanche d'Attal) ; borne haute : gel renouvelé une 2e année (+1,75 %) ≈ +3,4 ; borne basse : seuil de 3 000 € (seuil net ou gel limité à la part au-delà du seuil) ≈ +0,8",
       "inputs": [
        {
         "label": "Désindexation au-delà de 2 000 € / 3 000 €",
@@ -11758,6 +11851,18 @@
         "value": "« Ne pas revaloriser, à titre d'exemple, les pensions de retraite supérieures à 2 200 euros » (sans montant)",
         "source": "Nouvelle Énergie (28/10/2026)",
         "url": "https://www.unenouvelleenergie.fr/david-lisnard-sur-cnews-et-europe-1-je-ne-suis-pas-candidat-pour-un-poste-je-viens-pour-redresser-le-pays/"
+       },
+       {
+        "label": "Inflation prévue (valeur commune)",
+        "value": "Prix à la consommation hors tabac : +2,1 % en 2026, +1,7 % en 2027, +1,75 % par an de 2028 à 2030 (tableau « Principaux indicateurs du scénario macroéconomique 2025-2030 »)",
+        "source": "Projet de loi de finances pour 2027, rapport économique, social et financier (6/10/2026)",
+        "url": "https://www.tresor.economie.gouv.fr/Articles/03454e04-445d-4ce6-832b-cff601a11485/files/56839f98-37fc-48d8-b502-81cac5a48cad"
+       },
+       {
+        "label": "Hypothèse d'inflation de l'IPP",
+        "value": "« revalorisés comme l'inflation prévue (+2,5 % au 1er janvier 2027) » ; seuil : retraités « dont la retraite brute totale (tous régimes) » dépasse 2 000 ou 3 000 €",
+        "source": "IPP, note n° 129 (septembre 2026)",
+        "url": "https://www.ipp.eu/wp-content/uploads/2026/09/Note_contribution_retraites_129.pdf"
        }
       ],
       "note": "Durée du gel non publiée (un an retenu). Le camp affecte ces économies à la transition vers la capitalisation, dont le coût n'est pas compté. Le projet de loi de financement de la Sécurité sociale pour 2027 prévoit déjà une désindexation au-delà de 1 260 € : s'il est voté, la situation de départ change pour tous. Tribune du 17/11/2026 : « certaines années désindexer les pensions les plus élevées » (sans seuil ni durée) : seuil de 2 200 € et un an de gel gardés. Grand Oral BFMTV-Le Figaro (22/11/2026) : revalorisation inférieure à l'inflation au-delà d'un certain niveau de retraite, sans baisse nominale, « si les mesures principales ne suffisaient pas » : conditionnel, seuil non publié ; seuil de 2 200 € et un an de gel gardés."
@@ -11814,26 +11919,41 @@
     {
      "id": "prisons",
      "theme": "securite",
-     "title": "20 000 places de prison",
-     "proposal": "Construire 20 000 places de prison supplémentaires.",
+     "title": "20 000 places de prison, peines planchers",
+     "proposal": "Construire 20 000 places de prison supplémentaires ; rétablir les peines planchers pour les récidivistes.",
      "claimed": "Non chiffré",
      "claimed_md": null,
-     "estimates": [],
+     "estimates": [
+      {
+       "source": "Nouvelle Énergie, programme « Sécurité »",
+       "year": 2026,
+       "value": "« rétablir les peines planchers pour les récidivistes »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.unenouvelleenergie.fr/notre-programme/securite/"
+      }
+     ],
      "consensus": "isolé",
      "verdict": "sous_conditions",
      "obstacle": "Capacités à bâtir (places et surveillants) : le programme de 15 000 places lancé en 2018 en a livré 7 684 brutes (5 711 nettes) ; 63 303 places opérationnelles pour 90 173 détenus au 10/09/2026. Calendrier non publié.",
      "claude": {
       "id": "prisons",
-      "central": -0.6,
-      "low": -1.8,
-      "high": -0.3,
+      "central": -0.9,
+      "low": -2.3,
+      "high": -0.7,
       "method": "ascendant",
-      "formula": "Même règle que Le Pen (30 000 places), Retailleau (40 000 places), Zemmour (100 000 places) et Philippe (30 000 places), construction exclue : 20 000 places × 32 k€ de coût annuel d'un détenu ≈ −0,64 ≈ −0,6 ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 20 000 sur 5 ans ≈ 1,5 + moitié des places ouvertes ≈ 0,3 → −1,8 ; borne haute : moitié des places ouvertes en 2030 (−0,3)",
+      "formula": "Règle commune des places de prison (Le Pen, Philippe, Lisnard, Retailleau, Zemmour), construction exclue : coût annuel d'un détenu 47,2 k€ (ministère de la Justice : 129,33 € par jour en 2024, fonctionnement) ; plan sans calendrier publié : 70 % des places ouvertes en 2030, 20 000 × 47,2 k€ × 70 % ≈ 0,66 ; peines planchers : 4 000 années de détention de plus par an (loi de 2007, Infostat Justice) × 47,2 k€ ≈ 0,19 → −0,9 ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 20 000 sur 5 ans ≈ 1,48 de plus → −2,3 ; borne haute : moitié des places ouvertes en 2030 (0,47 + peines planchers 0,19) → −0,7",
       "inputs": [
        {
-        "label": "Coût d'un détenu",
-        "value": "≈ 32 000 €/an",
-        "source": "Terra Nova (CNAPE)",
+        "label": "Coût d'un détenu (valeur commune)",
+        "value": "« En 2024, le coût moyen d'une journée de détention s'élevait à 129,33 euros, dont 95,48 euros de dépenses de personnel et 33,86 euros de dépenses d'exploitation » : 129,33 € × 365 ≈ 47 200 € par an (fonctionnement, hors investissement)",
+        "source": "Ministère de la Justice, réponse à la question écrite n° 13927 (JO du 26/05/2026)",
+        "url": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE13927.pdf"
+       },
+       {
+        "label": "Peines planchers de 2007 (valeur commune)",
+        "value": "« L'accroissement du niveau moyen d'emprisonnement ferme aurait provoqué une augmentation de près de 4% du total des années prononcées sur cette période de 3 ans, soit 12000 années d'emprisonnement ferme (4000 années supplémentaires par an) » (Infostat Justice n° 118, octobre 2012) : 4 000 × 47,2 k€ ≈ 0,19 Md€ par an",
+        "source": "Terra Nova, « Pour en finir avec les peines plancher » (document hébergé par la CNAPE)",
         "url": "https://www.cnape.fr/documents/pour-en-finir-avec-les-peines-plancher"
        },
        {
@@ -11859,47 +11979,75 @@
         "value": "« Le calendrier initial est désormais largement hors d'atteinte »",
         "source": "Sénat, avis n° 145 (2025-2026), administration pénitentiaire",
         "url": "https://www.senat.fr/rap/a25-145-6/a25-145-6_mono.html"
+       },
+       {
+        "label": "Peines planchers (programme)",
+        "value": "« rétablir les peines planchers pour les récidivistes »",
+        "source": "Nouvelle Énergie, programme « Sécurité »",
+        "url": "https://www.unenouvelleenergie.fr/notre-programme/securite/"
        }
       ],
-      "note": "Calendrier non publié. Valeur centrale au seul coût de fonctionnement (construction exclue), même règle pour les cinq candidats qui proposent des places (arbitrage du 27/10/2026) ; construction en borne basse. Verdict « sous conditions » pour toutes les fiches prisons (capacités à bâtir)."
+      "note": "Calendrier non publié. Valeur centrale au seul coût de fonctionnement (coût annuel d'un détenu, ministère de la Justice, 2024), construction en borne basse ; plan sans calendrier publié : 70 % des places ouvertes en 2030, plan daté : selon son calendrier (même règle que les plans de recrutement et les places d'accueil du jeune enfant), la même pour les cinq candidats qui proposent des places. Verdict « sous conditions » pour toutes les fiches prisons (capacités à bâtir). Peines planchers des récidivistes : même champ que la loi de 2007, même valeur que Le Pen, Retailleau et Zemmour ; par la loi."
      },
-     "quiz_text": "Construire beaucoup plus de places de prison",
-     "quiz_concret": "Plus de cellules pour les personnes condamnées à de la prison.",
-     "quiz_plus": "Écourter les peines fait récidiver : la grâce collective de 1996 a accru la récidive à cinq ans.",
-     "quiz_moins": "Les places neuves se remplissent aussitôt, et purger sa peine sous bracelet fait moins récidiver.",
+     "quiz_text": "Construire beaucoup plus de places de prison et rétablir des peines minimales pour les récidivistes",
+     "quiz_concret": "Plus de cellules pour les condamnés, et des peines minimales fixées par la loi pour les récidivistes.",
+     "quiz_plus": "Une peine minimale connue d'avance dissuade la récidive et écarte plus longtemps les récidivistes.",
+     "quiz_moins": "L'effet dissuasif observé est faible, alors que les places de prison se construisent lentement.",
      "quiz_preuve_pour": "mitigé",
-     "quiz_preuve_contre": "mitigé",
+     "quiz_preuve_contre": "solide",
      "quiz_cas_pour": [
       {
-       "t": "La grâce collective du 14 juillet 1996 a accru la récidive, cinq ans après leur sortie, des détenus libérés plus tôt grâce à elle (Maurin et Ouss, France, 2009).",
-       "s": [
-        3
-       ]
-      }
-     ],
-     "quiz_cas_contre": [
-      {
-       "t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+       "t": "Après la loi de 2007 sur les peines planchers, les récidivistes ont commis 13 % de délits visés en moins dans les quatre ans suivant leur sortie (IPP, France, 2024).",
        "s": [
         0
        ]
       },
       {
-       "t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+       "t": "Les peines planchers de 2007 n'étaient prononcées que dans 38 % des cas possibles en 2010, les juges pouvant y déroger (ministère de la Justice, France, 2012).",
        "s": [
         1
        ]
       }
      ],
-     "quiz_etudes": "Une évaluation française (grâce collective de 1996) : écourter les peines accroît la récidive ; mais purger sa peine sous bracelet fait moins récidiver que la prison, et le nombre de détenus suit celui des places.",
+     "quiz_cas_contre": [
+      {
+       "t": "Avec les peines planchers, la peine des récidivistes a presque doublé (230 à 430 jours), sans dissuasion à court terme ni baisse des autres délits (IPP, France, 2024).",
+       "s": [
+        0
+       ]
+      },
+      {
+       "t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+       "s": [
+        2
+       ]
+      },
+      {
+       "t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+       "s": [
+        3
+       ]
+      }
+     ],
+     "quiz_etudes": "Une évaluation française rigoureuse (IPP, 2024) : moins de récidive ciblée à quatre ans, pas de dissuasion à court terme, nettement plus d'incarcération.",
      "quiz_src": [
+      {
+       "l": "IPP, note n° 105 « Les peines planchers sont-elles un outil efficace pour éviter la récidive ? »",
+       "a": 2024,
+       "u": "https://www.ipp.eu/wp-content/uploads/2024/03/Note_IPP_105_peines_planchers.pdf"
+      },
+      {
+       "l": "Ministère de la Justice, Infostat Justice n° 118 « Peines planchers : application et impact de la loi du 10 août 2007 »",
+       "a": 2012,
+       "u": "https://www.justice.gouv.fr/sites/default/files/migrations/portail/art_pix/stat_infostat_118_20121017.pdf"
+      },
       {
        "l": "Sénat, commission des finances, rapport d'information n° 37 (2023-2024), plan 15 000 places (synthèse)",
        "a": 2023,
        "u": "https://www.senat.fr/rap/r23-037/r23-0370.html"
       },
       {
-       "l": "Henneguelle, Monnery et Kensey, Better at Home than in Prison? The Effects of Electronic Monitoring on Recidivism in France (Journal of Law and Economics)",
+       "l": "Henneguelle, Monnery et Kensey, Journal of Law and Economics",
        "a": 2016,
        "u": "https://chicagounbound.uchicago.edu/jle/vol59/iss3/6/"
       },
@@ -11907,20 +12055,15 @@
        "l": "Ministère de la Justice, Mesure de l'incarcération, indicateurs clés au 1er octobre 2026",
        "a": 2026,
        "u": "https://www.justice.gouv.fr/sites/default/files/2026-11/mesure_mensuelle_01102026.pdf"
-      },
-      {
-       "l": "Maurin et Ouss, « Sentence Reductions and Recidivism: Lessons from the Bastille Day Quasi Experiment » (IZA DP n° 3990)",
-       "a": 2009,
-       "u": "https://www.iza.org/publications/dp/3990"
       }
      ],
      "quiz_constat": {
       "t": "Détenus : 90 937 au 1er octobre 2026 (+7,2 % en un an) pour 63 452 places, soit 143 % d'occupation (Justice).",
       "s": [
-       2
+       4
       ]
      },
-     "quiz_fam": "le-pen.prisons"
+     "quiz_fam": "philippe.prisons"
     },
     {
      "id": "abattement_pensions",
@@ -12116,14 +12259,14 @@
     "high_md": null
    },
    "claude_total": {
-    "sum": -40.9,
-    "p10": -51.4,
-    "p90": -33.8,
-    "realsum": -44.4,
+    "sum": -42.0,
+    "p10": -52.6,
+    "p90": -35.2,
+    "realsum": -45.5,
     "missing": "reste du plan de 200 Md€ non ventilé, transition vers la capitalisation, décentralisation, défense (hausse du budget des armées, sans montant ni date), « flat tax universelle » sur tous les revenus du capital, revenus fonciers compris (taux de 25 % rapporté par Le Figaro le 7/11/2026, sans citation du candidat ni document du parti qui le donne ; niches supprimées en contrepartie non publiées), plan de remise à niveau de la police sur dix ans et budget de la justice porté à la moyenne européenne (montants non publiés), nouveaux centres de rétention (places non publiées), impôt résidentiel universel payé par tous les habitants (taux, assiette et baisses en contrepartie non publiés), réforme de l'assurance chômage pour réduire les dépenses (non détaillée), budgets revus « à partir de zéro » (montant non publié), simplification des taux de TVA (tribune du 16/04/2026 : taux non publiés), fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée, à confirmer en 2026 : charges supprimées pour les employeurs à domicile au niveau du SMIC et charges patronales négatives pour l'embauche d'allocataires du RSA depuis plus de deux ans (page de programme sans date de rédaction), privatisation de France 2 et réorganisation de l'audiovisuel public (cession : opération financière ; effet annuel non publié, même lecture que l'audiovisuel de Retailleau et de Zemmour), projets d'énergies renouvelables ramenés au droit commun (effet sur les charges de service public de l'énergie non publié), fin des régimes spéciaux et convergence des règles de retraite du public et du privé (tribune du 17/11/2026 : paramètres non publiés), socle de pension autour de 1 200 € par mois (page du parti, 16/10/2026 : financement non publié)",
     "n": 15,
-    "cost": -63.7,
-    "gain": 22.8,
+    "cost": -64.0,
+    "gain": 22.0,
     "confirm": []
    },
    "short": "Lisnard",
@@ -12186,12 +12329,12 @@
      "ni_pension": 1.003
     },
     "tous": [],
-    "gel_pct": 1.8,
-    "gel_min": 2200,
+    "gel_pct": 1.7,
+    "gel_min": 2000,
     "gel_status": [
      "retraite"
     ],
-    "gel_note": "Pensions au-dessus de 2 200 € par mois non revalorisées pendant un an (inflation prévue 1,8 % ; durée non publiée, seuil supposé en net)",
+    "gel_note": "Pensions au-dessus de 2 200 € brut par mois (≈ 2 000 € net au taux normal de CSG, seuil lu en brut comme dans la fiche) non revalorisées pendant un an (inflation prévue pour 2027 : 1,7 %, projet de loi de finances pour 2027 ; durée non publiée)",
     "abattement_pensions": "Abattement de 10 % sur les pensions supprimé : impôt sur le revenu en hausse"
    },
    "promise": "Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations.",
@@ -12202,7 +12345,7 @@
    "name": "Gabriel Attal",
    "party": "Renaissance",
    "poll": "5,8 %",
-   "summary": "Promet la suppression de la CSG sur les salaires, jusqu'à 270 € nets par mois, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037. Notre chiffrage : −61,1 Md€ par an en 2030, soit −1 977 € par ménage. Principal obstacle : la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen.",
+   "summary": "Promet la suppression de la CSG sur les salaires, jusqu'à 270 € nets par mois, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037. Notre chiffrage : −60,9 Md€ par an en 2030, soit −1 970 € par ménage. Principal obstacle : la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen.",
    "measures": [
     {
      "id": "retraites",
@@ -12497,11 +12640,11 @@
      "verdict": "faisable",
      "obstacle": "Vote en loi de finances et de financement de la Sécurité sociale ; seuil des « toutes petites retraites » épargnées non publié.",
      "claude": {
-      "central": 5.0,
-      "low": 1.8,
-      "high": 6.0,
+      "central": 5.2,
+      "low": 1.7,
+      "high": 5.6,
       "method": "médiane",
-      "formula": "Chiffrages 2026 (3,6 et 4,3 Md€ pour ≈1,3 % d'inflation) rapportés à 1,8 % d'inflation ≈ +5 Md€ ; 1,8 si la plupart des pensions sont exemptées",
+      "formula": "Chiffrages 2026 (3,6 et 4,3 Md€ pour ≈ 1,3 % d'inflation) rapportés à l'inflation de 2027 qui fixe les revalorisations de 2028, 1,7 % (valeur commune, projet de loi de finances pour 2027) : 4,71 et 5,62, médiane ≈ +5,2 Md€ ; borne haute 5,6 ; borne basse : prestations hors pensions seules (1,3 × 1,7/1,3 = 1,7), si la plupart des pensions sont exemptées",
       "inputs": [
        {
         "label": "Gel des prestations hors pensions",
@@ -12514,9 +12657,15 @@
         "value": "3 Md€",
         "source": "IPP",
         "url": "https://www.journaldeleconomie.fr/budget-une-annee-blanche-permettrait-57-milliards-deuros-deconomies-en-2026/"
+       },
+       {
+        "label": "Inflation prévue (valeur commune)",
+        "value": "Prix à la consommation hors tabac : +2,1 % en 2026, +1,7 % en 2027, +1,75 % par an de 2028 à 2030 (tableau « Principaux indicateurs du scénario macroéconomique 2025-2030 »)",
+        "source": "Projet de loi de finances pour 2027, rapport économique, social et financier (6/10/2026)",
+        "url": "https://www.tresor.economie.gouv.fr/Articles/03454e04-445d-4ce6-832b-cff601a11485/files/56839f98-37fc-48d8-b502-81cac5a48cad"
        }
       ],
-      "note": "Dépend de l'inflation en 2028 et du seuil des petites retraites. L'Heure de vérité (19/11/2026) : « année blanche » pour les dépenses de l'État, qui n'augmenteraient pas la première année du mandat, Éducation nationale exceptée, 15 Md€ « selon ses calculs » : listée à part, non comptée (aucun chiffrage indépendant ; l'économie dépend de la hausse des dépenses évitée, qu'aucune base officielle ne donne pour 2028, et recoupe des fiches déjà comptées sur ces dépenses) ; les 15 Md€ portent sur les dépenses de l'État et non sur les prestations comptées ici, d'où l'absence de chiffre du camp comparable. Pensions non revalorisées « hormis les toutes petites retraites », sans seuil ni durée redits : le gel d'un an en 2028 et le seuil inconnu sont gardés (une source moins précise qui ne contredit pas la précédente ne la remplace pas, même règle que le gel des pensions de Lisnard)."
+      "note": "Dépend de l'inflation de 2027 (1,7 % prévus) et du seuil des petites retraites. L'Heure de vérité (19/11/2026) : « année blanche » pour les dépenses de l'État, qui n'augmenteraient pas la première année du mandat, Éducation nationale exceptée, 15 Md€ « selon ses calculs » : listée à part, non comptée (aucun chiffrage indépendant ; l'économie dépend de la hausse des dépenses évitée, qu'aucune base officielle ne donne pour 2028, et recoupe des fiches déjà comptées sur ces dépenses) ; les 15 Md€ portent sur les dépenses de l'État et non sur les prestations comptées ici, d'où l'absence de chiffre du camp comparable. Pensions non revalorisées « hormis les toutes petites retraites », sans seuil ni durée redits : le gel d'un an en 2028 et le seuil inconnu sont gardés (une source moins précise qui ne contredit pas la précédente ne la remplace pas, même règle que le gel des pensions de Lisnard)."
      },
      "quiz_text": "Geler toutes les aides sociales pendant un an, sauf les petites retraites",
      "quiz_concret": "Vos allocations ne suivraient pas les prix pendant un an.",
@@ -13209,7 +13358,7 @@
        "u": "https://www.vie-publique.fr/files/rapport/pdf/295374.pdf"
       }
      ],
-     "quiz_fam": "glucksmann.service_civique"
+     "quiz_fam": "melenchon.service_citoyen"
     },
     {
      "id": "ia",
@@ -13652,8 +13801,8 @@
     "etrangers": "Regroupement familial plus restrictif ; quotas et système à points pour l'immigration de travail.",
     "patrimoine": [],
     "heritage": [],
-    "gel_pct": 1.8,
-    "gel_note": "Pensions et prestations non revalorisées en 2028 (inflation prévue 1,8 %) ; petites retraites épargnées, seuil supposé à 1 200 € (non publié) ; « hormis les toutes petites retraites » (19/11/2026)",
+    "gel_pct": 1.7,
+    "gel_note": "Pensions et prestations non revalorisées en 2028 (inflation prévue pour 2027 : 1,7 %, projet de loi de finances pour 2027) ; petites retraites épargnées, seuil supposé à 1 200 € (non publié) ; « hormis les toutes petites retraites » (19/11/2026)",
     "gel_min": 1200,
     "gel_status": [
      "retraite",
@@ -13681,14 +13830,14 @@
     }
    },
    "claude_total": {
-    "sum": -61.1,
-    "p10": -70.2,
-    "p90": -55.8,
-    "realsum": -61.1,
+    "sum": -60.9,
+    "p10": -70.3,
+    "p90": -55.9,
+    "realsum": -60.9,
     "missing": "classes de moins de 20 élèves, baisse des cotisations salariales (« droit au brut » : 250 € nets de plus par mois au salaire médian dès 2027 selon son site, « autour de 200-250 euros » le 12/11/2026, financés par des économies sur l'assurance chômage, dont 5 Md€ par la durée d'indemnisation, et sur les indemnités journalières ; barème, coût et économies non publiés ; la campagne présente la suppression de la CSG sur les salaires, comptée dans sa fiche, comme le moyen du « droit au brut » (site, 16/11/2026) : rien de plus n'est compté), arrêts maladie, défense, reste du plan de 150 Md€ non ventilé, dont le frein d'urgence de 20 Md€ (contenu non publié), annulation des 1 588 suppressions nettes de postes d'enseignants du projet de budget 2027 (règle des recrutements publics : 1 588 × 61,6 k€ ≈ 0,1 Md€, sous 1 Md€), crédit d'impôt « productivité » (montant non publié), leasing social étendu aux voitures électriques d'occasion (paramètres non publiés), livret d'épargne « garde d'enfant » pour financer des places en crèche et 200 000 professionnels de la petite enfance formés d'ici 2030 (paramètres non publiés), barème kilométrique revalorisé, prime carburant exonérée portée à 1 000 €, moitié du boîtier E85 financée, aides aux gros rouleurs élargies et bonus électrique étendu aux véhicules d'occasion (paramètres non publiés), donations facilitées aux petits-enfants (fiscalité des donations des grands-parents alignée sur celle des parents aux enfants, entretien à Sud Ouest du 11/11/2026), petits-neveux et petites-nièces et transmission des exploitations agricoles (abattements et coût non publiés), garantie Visale étendue à tous les locataires (entretien à Sud Ouest, 11/11/2026) et nouvelles résidences universitaires pour les étudiants et les jeunes actifs (paramètres non publiés), prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11/2026 : assiette non publiée, aucune base officielle ni chiffrage indépendant, non compté), pensions alimentaires reçues pour les enfants sorties du revenu imposable (redit au débat TF1-LCI du 16/11/2026 ; plafond et coût non publiés), 3 000 magistrats et greffiers de plus (règle des recrutements publics : 3 000 × 61,6 k€ × 70 % ≈ 0,13 Md€, sous 1 Md€), suppression d'un échelon de collectivité territoriale (échelon et économie non publiés ; comptée par le camp avec les 100 000 postes), banque nationale d'investissement dans le logement qui financerait jusqu'à la moitié du prix d'une première résidence des jeunes et des classes moyennes, aux côtés de l'acquéreur, sa part étant rachetée ou remboursée à la revente (franceinfo, 12/11/2026 ; entretien à Sud Ouest, 11/11/2026 : prise de participation, opération financière, « aucun coût pour les finances publiques » selon le candidat ; dotation non publiée par le candidat, l'amorçage de 5 Md€ venant de son entourage selon l'AFP ; plafond et conditions non publiés), suspension pendant deux ans de l'imposition des plus-values de cession des résidences secondaires (porte-parole de campagne, RCF, 12/11/2026 : mesure temporaire, dates non publiées ; achevée avant 2030 si elle commence avec la première loi de finances du mandat, sans effet sur le solde de 2030), statut du bailleur privé, amortissement fiscal élargi contre un engagement de location (entretien à Sud Ouest, 11/11/2026 : taux, durée et coût non publiés), plan d'investissement de 160 M€ par an dans la géothermie (entretien à Sud Ouest, 11/11/2026 : 0,16 Md€, sous 1 Md€), revalorisation des « toutes petites retraites » (débat TF1-LCI, 16/11/2026 : seuil et montant non publiés ; même lecture que les petites retraites de Glucksmann), « année blanche » des dépenses de l'État la première année du mandat, Éducation nationale exceptée (15 Md€ « selon ses calculs », L'Heure de vérité, 19/11/2026 : aucun chiffrage indépendant ; l'économie dépend de la hausse des dépenses évitée, qu'aucune base officielle ne donne pour 2028, et recoupe des fiches comptées sur ces dépenses, dont les 100 000 postes)",
     "n": 7,
     "cost": -71.1,
-    "gain": 10.0,
+    "gain": 10.2,
     "confirm": []
    },
    "short": "Attal",
@@ -13700,7 +13849,7 @@
    "name": "Bruno Retailleau",
    "party": "LR",
    "poll": "5,4 %",
-   "summary": "Promet 197 Md€ d'économies par an en 2032, 51 Md€ de baisses d'impôts, un âge minimal de 63 ans et un référendum sur l'immigration. Notre chiffrage : −21,5 Md€ par an en 2030, soit −696 € par ménage. Principal obstacle : la révision de la Constitution, pour le référendum sur l'immigration, les aides réservées après cinq ans, les peines planchers et la règle d'or.",
+   "summary": "Promet 197 Md€ d'économies par an en 2032, 51 Md€ de baisses d'impôts, un âge minimal de 63 ans et un référendum sur l'immigration. Notre chiffrage : −27,2 Md€ par an en 2030, soit −880 € par ménage. Principal obstacle : la révision de la Constitution, pour le référendum sur l'immigration, les aides réservées après cinq ans, les peines planchers et la règle d'or.",
    "measures": [
     {
      "id": "etat",
@@ -14122,7 +14271,7 @@
      "id": "travail",
      "theme": "travail",
      "title": "Aides plafonnées, RIA",
-     "proposal": "RSA, prime d'activité et ASS fusionnés avec 15 h d'activité ; aides plafonnées à 70 % du SMIC.",
+     "proposal": "RSA, prime d'activité et ASS fusionnés dans un revenu d'incitation à l'activité (300 € par mois, 550 € dès 15 heures d'activité, puis complément diminué de 30 % du salaire, nul au-delà de 1 833 €) ; aides plafonnées à 70 % du SMIC.",
      "claimed": "30 Md€ (chômage et prestations)",
      "claimed_md": null,
      "estimates": [
@@ -14148,11 +14297,11 @@
      "obstacle": "Par la loi ; RSA versé par les départements (compensation de leurs charges) ; modalités du plafond à 70 % du SMIC non publiées.",
      "claude": {
       "id": "travail",
-      "central": 5.5,
-      "low": 3.6,
-      "high": 7.4,
-      "method": "ascendant",
-      "formula": "−30 % sur le RSA (12 Md€) = 3,6 ; sur RSA + prime d'activité + ASS (24,7 Md€) = 7,4",
+      "central": 0,
+      "low": 0,
+      "high": 0,
+      "method": "nc",
+      "formula": "Non chiffrable : barème écrit du revenu d'incitation à l'activité (300 € par mois, 550 € dès 15 heures d'activité, complément diminué de 30 % du salaire, nul au-delà de 1 833 €) sans distribution officielle ouverte des allocataires du RSA, de la prime d'activité et de l'ASS par revenu d'activité et par foyer ; plafond à 70 % du SMIC : modalités non publiées ; même règle que les allocations uniques d'Attal et de Lisnard",
       "inputs": [
        {
         "label": "RSA / prime d'activité 2024",
@@ -14167,16 +14316,16 @@
         "url": "https://www.senat.fr/rap/a25-142-6/a25-142-6-syn.pdf"
        },
        {
-        "label": "Allocation fusionnée",
+        "label": "Allocation fusionnée (paraphrase de presse)",
         "value": "−30 %",
         "source": "Public Sénat, présentation du plan (7/01/2026)",
         "url": "https://www.publicsenat.fr/actualites/politique/la-fete-est-finie-bruno-retailleau-veut-supprimer-les-35-heures-inciter-a-la-reprise-dactivite-et-plafonner-les-aides-sociales-pour-relancer-lemploi"
        },
        {
         "label": "Objectif du camp, chômage et prestations",
-        "value": "30 Md€ sur cinq ans",
-        "source": "Public Sénat, plan de 197 Md€ (12/10/2026)",
-        "url": "https://www.publicsenat.fr/actualites/economie/presidentielle-2027-bruno-retailleau-sengage-sur-un-plan-deconomies-de-pres-de-200-milliards-deuros-sil-est-elu"
+        "value": "30 Md€ par an en 2032 (fiche 8 : assurance chômage 14, compte social unique 10, impôt sur les sociétés 4, revenu d'incitation à l'activité 2)",
+        "source": "Fiches presse du camp (12/10/2026), fiche 8",
+        "url": "https://www.avecretailleau.fr/api/media/file/20261011_Fiches_presse_comptes_publics_mise_en_page%20(1).pdf"
        },
        {
         "label": "Barème du revenu d'incitation à l'activité",
@@ -14185,7 +14334,8 @@
         "url": "https://www.avecretailleau.fr/projet/mesure/faire-gagner-plus-a-ceux-qui-reprennent-un-emploi"
        }
       ],
-      "note": "Plafond à 70 % du SMIC non compté : son seul chiffrage (iFRAP, 12 à 34 Md€ selon le plafond) porte sur un autre dispositif, une allocation unique versée en crédit d'impôt qui s'éteint au 8e décile. Objectif du camp : 30 Md€ par an en 2032 pour le chômage et les prestations (chômage 14, compte social unique 10, IS 4, RIA 2), soit 21 Md€ en 2030 à 70 % ; seule la part chiffrable indépendamment est comptée (assurance chômage : fiche à part) TF1 (22/11/2026) : plafond de 70 % du SMIC pour « la totalité des prestations sociales qu'un individu peut recevoir » (par personne) ; modalités toujours non publiées."
+      "note": "Indicatif : jusqu'à +7,4 Md€ si la dépense de RSA, de prime d'activité et d'ASS (24,7 Md€) baissait de 30 % (+3,6 sur le seul RSA), lecture de Public Sénat (7/01/2026) qui ne correspond pas au barème écrit : les 30 % y sont un taux de dégressivité sur le salaire, pas une baisse uniforme (l'exemple du même article, de 1 486 à 1 153 € pour une mère seule, fait −22 %) ; le camp chiffre le revenu d'incitation à l'activité à 2 Md€ en 2032 (fiche 8 du plan). Le simulateur applique le barème écrit. Plafond à 70 % du SMIC non compté : son seul chiffrage (iFRAP, 12 à 34 Md€ selon le plafond) porte sur un autre dispositif, une allocation unique versée en crédit d'impôt qui s'éteint au 8e décile. Objectif du camp : 30 Md€ par an en 2032 pour le chômage et les prestations (chômage 14, compte social unique 10, IS 4, RIA 2), soit 21 Md€ en 2030 à 70 % ; seule la part chiffrable indépendamment est comptée (assurance chômage : fiche à part). TF1 (22/11/2026) : plafond de 70 % du SMIC pour « la totalité des prestations sociales qu'un individu peut recevoir » (par personne) ; modalités toujours non publiées.",
+      "nc": true
      },
      "quiz_text": "Fusionner les aides sociales et demander 15 heures d'activité par semaine en échange",
      "quiz_concret": "Toucher le RSA impliquerait de travailler ou se former 15 heures par semaine.",
@@ -14400,7 +14550,7 @@
      "theme": "energie",
      "title": "Fin du soutien aux ENR",
      "proposal": "Abroger le volet électricité de la PPE, stopper solaire et éolien en mer, 8 EPR2, abroger ZFE et ZAN.",
-     "claimed": "Inclus dans un bloc de ~23 Md€",
+     "claimed": "4 Md€ par an en 2032 (« Énergies intermittentes subventionnées », plan du 12/10/2026, fiche 4)",
      "claimed_md": null,
      "estimates": [
       {
@@ -14583,16 +14733,22 @@
      "obstacle": "Chemin : inscrire des peines minimales dans un « pacte constitutionnel » suppose une révision de la Constitution (individualisation des peines).",
      "claude": {
       "id": "securite",
-      "central": -1.4,
-      "low": -3.7,
-      "high": -0.8,
+      "central": -1.5,
+      "low": -4.5,
+      "high": -1.1,
       "method": "ascendant",
-      "formula": "Même règle que Le Pen (30 000 places), Lisnard (20 000 places), Zemmour (100 000 places) et Philippe (30 000 places), construction exclue : 40 000 places × 32 k€ de coût annuel d'un détenu ≈ 1,28 + 4 000 années de détention des peines planchers × 32 k€ ≈ 0,13 → −1,4 ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 40 000 sur 5 ans ≈ 2,96 + moitié des places ouvertes ≈ 0,64 + 0,13 → −3,7 ; borne haute : moitié des places ouvertes en 2030 et peines planchers (−0,8)",
+      "formula": "Règle commune des places de prison (Le Pen, Philippe, Lisnard, Retailleau, Zemmour), construction exclue : coût annuel d'un détenu 47,2 k€ (ministère de la Justice : 129,33 € par jour en 2024, fonctionnement) ; plan sans calendrier publié : 70 % des places ouvertes en 2030, 40 000 × 47,2 k€ × 70 % ≈ 1,32 ; peines planchers : 4 000 années de détention de plus par an (loi de 2007, Infostat Justice) × 47,2 k€ ≈ 0,19 → −1,5 ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 40 000 sur 5 ans ≈ 2,96 de plus → −4,5 ; borne haute : moitié des places ouvertes en 2030 (0,94 + peines planchers 0,19) → −1,1",
       "inputs": [
        {
-        "label": "Coût d'un détenu",
-        "value": "≈32 000 €/an",
-        "source": "Terra Nova (CNAPE)",
+        "label": "Coût d'un détenu (valeur commune)",
+        "value": "« En 2024, le coût moyen d'une journée de détention s'élevait à 129,33 euros, dont 95,48 euros de dépenses de personnel et 33,86 euros de dépenses d'exploitation » : 129,33 € × 365 ≈ 47 200 € par an (fonctionnement, hors investissement)",
+        "source": "Ministère de la Justice, réponse à la question écrite n° 13927 (JO du 26/05/2026)",
+        "url": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE13927.pdf"
+       },
+       {
+        "label": "Peines planchers de 2007 (valeur commune)",
+        "value": "« L'accroissement du niveau moyen d'emprisonnement ferme aurait provoqué une augmentation de près de 4% du total des années prononcées sur cette période de 3 ans, soit 12000 années d'emprisonnement ferme (4000 années supplémentaires par an) » (Infostat Justice n° 118, octobre 2012) : 4 000 × 47,2 k€ ≈ 0,19 Md€ par an",
+        "source": "Terra Nova, « Pour en finir avec les peines plancher » (document hébergé par la CNAPE)",
         "url": "https://www.cnape.fr/documents/pour-en-finir-avec-les-peines-plancher"
        },
        {
@@ -14614,7 +14770,7 @@
         "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-bruno-retailleau-veut-economiser-300-000-postes-dans-la-fonction-publique-grace-a-l-intelligence-artificielle_8279522.html"
        }
       ],
-      "note": "Construction exclue de la valeur centrale, comptée en borne basse comme dans les autres fiches prisons. 40 000 places depuis le 12/11/2026 (franceinfo et BFMTV ; 10 000 dans le plan du 12/10). Places de prison : capacités à bâtir, comme dans les autres fiches prisons : le programme de 15 000 places lancé en 2018 en a livré 7 684 brutes (5 711 nettes) ; 63 303 places opérationnelles pour 90 173 détenus au 10/09/2026. Cette partie relève de « sous conditions » ; le verdict de la fiche suit l'obstacle le plus fort, le pacte constitutionnel."
+      "note": "Calendrier non publié. Valeur centrale au seul coût de fonctionnement (coût annuel d'un détenu, ministère de la Justice, 2024), construction en borne basse ; plan sans calendrier publié : 70 % des places ouvertes en 2030, plan daté : selon son calendrier (même règle que les plans de recrutement et les places d'accueil du jeune enfant), la même pour les cinq candidats qui proposent des places. Verdict « sous conditions » pour toutes les fiches prisons (capacités à bâtir). 40 000 places depuis le 12/11/2026 (franceinfo et BFMTV ; 10 000 dans le plan du 12/10). Places de prison : capacités à bâtir, comme dans les autres fiches prisons : le programme de 15 000 places lancé en 2018 en a livré 7 684 brutes (5 711 nettes) ; 63 303 places opérationnelles pour 90 173 détenus au 10/09/2026. Cette partie relève de « sous conditions » ; le verdict de la fiche suit l'obstacle le plus fort, le pacte constitutionnel. Peines minimales : même valeur que Le Pen, Lisnard et Zemmour (loi de 2007)."
      },
      "quiz_text": "Des peines de prison minimales obligatoires, inscrites dans la Constitution",
      "quiz_concret": "Le juge ne pourrait plus descendre sous un seuil pour certains délits.",
@@ -14696,21 +14852,21 @@
       ]
      },
      "quiz_complement": {
-      "t": "Le même programme prévoit aussi des places de prison et des centres pour courtes peines, sans chiffre.",
+      "t": "Le même programme prévoit aussi des places de prison en plus et des centres pour courtes peines.",
       "ref": [
        "retailleau.securite",
-       "retailleau.securite.2"
+       "retailleau.securite.4"
       ]
      },
-     "quiz_fam": "retailleau.securite"
+     "quiz_fam": "philippe.prisons"
     },
     {
      "id": "fin_maprimerenov",
      "theme": "depense",
      "title": "Fin de MaPrimeRénov'",
-     "proposal": "Supprimer MaPrimeRénov', dans un bloc d'≈23 Md€ avec l'aide au développement et l'audiovisuel public.",
-     "claimed": "Bloc d'≈23 Md€ cumulés, non isolé",
-     "claimed_md": null,
+     "proposal": "Supprimer MaPrimeRénov' (« Transition : MaPrimeRénov' » : 2 Md€ en 2032 dans le plan du 12/10/2026), avec un relais dont la forme n'est pas publiée.",
+     "claimed": "2 Md€ par an en 2032 (plan du 12/10/2026, fiche 4)",
+     "claimed_md": 2.0,
      "estimates": [
       {
        "source": "LCP (Anah)",
@@ -14775,14 +14931,20 @@
         "value": "« Les États membres veillent à ce que la consommation moyenne d’énergie primaire en kWh/(m2.an) pour l’ensemble du parc immobilier résidentiel: a) diminue d’au moins 16 % par rapport à 2020 d’ici à 2030 » (art. 9) ; « Les États membres prévoient un financement approprié, des mesures de soutien et d’autres instruments » (art. 17)",
         "source": "Directive (UE) 2024/1275 sur la performance énergétique des bâtiments, Journal officiel de l'UE",
         "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202401275"
+       },
+       {
+        "label": "Ligne du plan (fiche 4)",
+        "value": "« Transition : MaPrimeRénov' 2,0 » (Md€ 2032)",
+        "source": "Fiches presse du camp (12/10/2026), fiche 4",
+        "url": "https://www.avecretailleau.fr/api/media/file/20261011_Fiches_presse_comptes_publics_mise_en_page%20(1).pdf"
        }
       ],
-      "note": "Le chiffre du camp (2 Md€) coïncide avec la part publique annuelle : il se lit comme un montant annuel, pas comme un cumul (voir le point sur le plan de 197 Md€). Quotas carbone : plafond de 600 M€ affectés à l'Anah (projet de loi de finances pour 2027, article 42)."
+      "note": "Le chiffre du camp (2 Md€) coïncide avec la part publique annuelle : il se lit comme un montant annuel, pas comme un cumul (voir le point sur le plan de 197 Md€). Quotas carbone : plafond de 600 M€ affectés à l'Anah (projet de loi de finances pour 2027, article 42). Le même plan finance un « relais de MaPrimeRénov' » (fiche 14, avec la TVA sur les certificats : 3 Md€), compté dans la fiche « Baisses d'impôts des ménages » (−2,1) ; forme du relais non publiée."
      },
-     "quiz_text": "Supprimer l'aide publique à la rénovation énergétique des logements",
-     "quiz_concret": "Fin de l'aide de l'État pour isoler ou changer de chauffage.",
+     "quiz_text": "Supprimer la prime publique à la rénovation énergétique des logements, remplacée par un relais non précisé",
+     "quiz_concret": "La prime actuelle pour isoler ou changer de chauffage disparaît ; un autre soutien, dont la forme n'est pas publiée, prend le relais.",
      "quiz_plus": "Une part des travaux aidés se ferait sans aide, et les économies réelles restent modestes.",
-     "quiz_moins": "Sans aide, moins de ménages isoleraient leur logement, et leur consommation resterait haute.",
+     "quiz_moins": "Le relais n'est pas décrit ; or l'aide actuelle fait réaliser plus de travaux d'isolation.",
      "quiz_preuve_pour": "mitigé",
      "quiz_preuve_contre": "mitigé",
      "quiz_cas_pour": [
@@ -14855,7 +15017,7 @@
      "theme": "immigration",
      "title": "AME remplacée par une aide d'urgence",
      "proposal": "Remplacer l'aide médicale d'État par une aide médicale d'urgence.",
-     "claimed": "Inclus dans le volet immigration",
+     "claimed": "0,7 Md€ par an en 2032 (« AME réduite aux soins essentiels et aux mineurs », plan du 12/10/2026, fiche 9)",
      "claimed_md": null,
      "estimates": [
       {
@@ -15337,7 +15499,7 @@
      "theme": "fiscalite",
      "title": "Baisses d'impôts des ménages",
      "proposal": "Baisser les cotisations salariales dès le premier euro (15 Md€) et financer un relais de MaPrimeRénov' après la fin des certificats d'économies d'énergie (avec la TVA perdue : 3 Md€).",
-     "claimed": "21 Md€ (plan du 12/10/2026, annuels ou cumulés non précisés)",
+     "claimed": "21 Md€ par an en 2032 (plan du 12/10/2026, fiche 14)",
      "claimed_md": null,
      "estimates": [
       {
@@ -15532,11 +15694,11 @@
      "obstacle": "Par la loi de finances ; financement non précisé dans la mesure.",
      "claude": {
       "id": "ia",
-      "central": -2.9,
-      "low": -4.4,
+      "central": -3.0,
+      "low": -4.5,
       "high": -1.5,
       "method": "camp",
-      "formula": "Investissement nouveau 11,6 Md€ (tableau du camp) − 0,8 de fonds propres BPI « récupérables » (opération financière, sans effet sur le solde) = 10,8 Md€ cumulés → 3,5/15 en 2030 (règle commune) ≈ −2,5 ; + mesures fiscales « talents » (PFU à 30 % sur les gains d'acquisition, BSPCE, fin de la contribution patronale sur les actions gratuites, exonération d'IR « retour au pays ») : 2 Md€ sur le quinquennat selon le camp, qui les dit autofinancées par l'arrivée de talents (effet de comportement non compté) → 0,4/an ; total ≈ −2,9 ; bornes ±50 % (seul chiffrage : celui du camp)",
+      "formula": "Investissement nouveau 11,6 Md€ (tableau du camp) − 0,8 de fonds propres BPI « récupérables » (opération financière, sans effet sur le solde) = 10,8 Md€ cumulés → 3,5/15 en 2030 (règle commune) ≈ −2,5 ; + mesures fiscales « talents » (PFU à 30 % sur les gains d'acquisition, BSPCE, fin de la contribution patronale sur les actions gratuites, exonération d'IR « retour au pays ») : 2 Md€ sur le quinquennat selon le camp, qui les dit autofinancées par l'arrivée de talents (effet de comportement non compté) → 3,5/15 en 2030 (même règle) ≈ 0,47 ; total ≈ −3,0 ; bornes ±50 % (seul chiffrage : celui du camp)",
       "inputs": [
        {
         "label": "Tableau « Approche budgétaire »",
@@ -15698,7 +15860,7 @@
      "theme": "fiscalite",
      "title": "Transmission d'entreprise sans droits tant qu'elle n'est pas vendue",
      "proposal": "Droits de succession et de donation sur les entreprises à activité réelle calculés à la transmission mais exigibles seulement en cas de cession.",
-     "claimed": "Non chiffré",
+     "claimed": "Non isolé : ligne « Familles et transmission d'entreprises » de 3 Md€ en 2032 (plan du 12/10/2026, fiche 14)",
      "claimed_md": null,
      "estimates": [],
      "consensus": "isolé",
@@ -15805,10 +15967,10 @@
      "claude": {
       "id": "seuil_zero_cotisation",
       "central": -3.4,
-      "low": -5.4,
-      "high": -1.8,
+      "low": -5.3,
+      "high": -1.7,
       "method": "camp",
-      "formula": "Coût statique annoncé par le camp sur les heures supplémentaires existantes (« restituer 4,3 milliards d'euros aux entreprises » : cotisations patronales, déductibles du bénéfice ; côté salarié, les cotisations sont déjà en grande partie exonérées), moins l'impôt sur les sociétés récupéré (20 %, règle commune) = −3,4 ; autofinancement par les heures nouvelles non compté (effet de comportement non documenté) ; ±50 %, nets de l'impôt récupéré (17,5 % et 20 %) : −5,4 et −1,8",
+      "formula": "Coût statique annoncé par le camp sur les heures supplémentaires existantes (« restituer 4,3 milliards d'euros aux entreprises » : cotisations patronales, déductibles du bénéfice ; côté salarié, les cotisations sont déjà en grande partie exonérées), moins l'impôt sur les sociétés récupéré (20 %, règle commune) = −3,4 ; autofinancement par les heures nouvelles non compté (effet de comportement non documenté) ; ±50 %, nets de l'impôt récupéré (17,5 % et 20 %) : 4,3 × 1,5 × 0,825 ≈ −5,3 et 4,3 × 0,5 × 0,8 ≈ −1,7",
       "inputs": [
        {
         "label": "Coût statique",
@@ -16015,7 +16177,7 @@
         "url": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE14453.pdf"
        }
       ],
-      "note": "Le plan compte l'« effet net » de la fin des certificats (4 Md€ rendus aux ménages) comme autofinancé, et la TVA perdue dans la ligne « relais de MaPrimeRénov' et TVA sur les certificats » (3 Md€) : cette TVA est comptée ici et retirée de la fiche « Baisses d'impôts des ménages » (−18 → −17,1, total inchangé). Projet « Électricité » (sortir l'électricité du périmètre des certificats) : compris dans cette fiche. Coût moyen officiel sur 2022-2025 : 7 c€ TTC par litre de carburant (réponse du Gouvernement publiée au JO le 30/06/2026) ; plus élevé en 2026 (obligation relevée), sans chiffre officiel par litre (15 à 17 c€ selon l'Ufip, chiffre professionnel). Simulateur : −7 c€ par litre, la même hypothèse chez Retailleau et Zemmour."
+      "note": "Le plan compte l'« effet net » de la fin des certificats (4 Md€ rendus aux ménages) comme autofinancé, et la TVA perdue dans la ligne « relais de MaPrimeRénov' et TVA sur les certificats » (3 Md€) : cette TVA est comptée ici et retirée de la fiche « Baisses d'impôts des ménages » (ligne de 3 Md€ ramenée à 2,1 pour le relais de MaPrimeRénov'). Projet « Électricité » (sortir l'électricité du périmètre des certificats) : compris dans cette fiche. Coût moyen officiel sur 2022-2025 : 7 c€ TTC par litre de carburant (réponse du Gouvernement publiée au JO le 30/06/2026) ; plus élevé en 2026 (obligation relevée), sans chiffre officiel par litre (15 à 17 c€ selon l'Ufip, chiffre professionnel). Simulateur : −7 c€ par litre, la même hypothèse chez Retailleau et Zemmour."
      },
      "quiz_text": "Supprimer les certificats d'économies d'énergie, dont le coût est ajouté aux factures d'énergie",
      "quiz_concret": "Les fournisseurs d'énergie n'ont plus à financer des travaux d'isolation ou de chauffage ; ce coût sort des factures.",
@@ -16282,14 +16444,14 @@
     "high_md": null
    },
    "claude_total": {
-    "sum": -21.5,
-    "p10": -29.1,
-    "p90": -9.0,
-    "realsum": -24.0,
-    "missing": "capitalisation, audiovisuel public, aide au développement (« Coopération » : 3,5 Md€ en 2032 selon le camp, sans niveau publié), et des postes du plan non vérifiés : collectivités 10, budget base zéro 11,5, santé 4, formation professionnelle 6 Md€ (niveaux annuels en 2032), réduction d'impôt sur les intérêts d'emprunt de la résidence principale (50 à 100 % des intérêts selon le nombre d'enfants, plafonnée à 400 € plus 400 € par enfant ; nombre de ménages accédants concernés et intérêts versés : pas de source officielle ouverte), prêt à taux zéro pour tous les primo-accédants (neuf et ancien, sans zonage), baisse des droits de succession « au maximum du possible », donations de 150 000 € par parent aux moins de 30 ans pendant trois ans, cumul emploi-retraite exonéré, Fonds France Production (0,6 Md€/an), suramortissement IA et robotique, arrêt de subventions à des associations (3 Md€ en 2032, sans chiffrage indépendant), autres lignes immigration du plan, reprises de l'Observatoire de l'immigration et de la démographie et que les données officielles ne permettent pas de refaire sans ses hypothèses (niveaux 2032) : immigration familiale 1,5, étudiants au-delà des droits différenciés (preuve de ressources) 1,4, titres au coût complet 0,5, hébergement d'urgence fermé aux personnes sous OQTF 0,5, mineurs non accompagnés, soins des demandeurs d'asile et contentieux 0,8, statut du bailleur privé (amortissement du bâti à 4 % par an, option pour le prélèvement forfaitaire à 30 % ; coût statique non publié, le « gain net » de 1,9 Md€ annoncé repose sur des recettes induites), barème kilométrique réévalué (ampleur non publiée), agences et opérateurs au-delà de la valeur commune (contrats non renouvelés et départs volontaires 5, structures 4, concours recentrés 3,5 ; niveaux 2032, chiffres du camp), recentrage des aides versées aux moins de 25 ans (5 Md€ selon le camp, financement du pré-apprentissage), apprentissage : fin des aides et des prises en charge dans le supérieur tertiaire (4 Md€ dont 2,6 réaffectés) et financement selon les résultats (2 à 3 Md€), capitalisation (cotisation de 1 % du salaire sous le plafond de la Sécurité sociale, 6 Md€ en 2032 selon le camp, gérée par les partenaires sociaux ; cotisation additionnelle de la fonction publique sur les primes doublée), épargne retraite (déduction portée à 50 000 € par an, crédit d'impôt de 30 % pour les non-imposables, rente défiscalisée à 25 %), lignes de moins de 1 Md€ du logement social (exonération d'impôt sur les sociétés des bailleurs sociaux supprimée, 350 M€ redistribués ; APL des étudiants étrangers hors UE non boursiers 200 M€ et des étudiants des familles aisées 200 à 300 M€), garde d'enfants (plafond du crédit d'impôt famille supprimé, exonération de l'aide de l'employeur portée à 7 000 € : 0,8 Md€ selon le camp, sous 1 Md€), recrutement de procureurs, juges d'instruction et greffiers (« un peu moins de 2 milliards », franceinfo, 12/11/2026 : horizon et nombre de postes non publiés), titre de séjour doublé (350 → 700 €) et taxe de naturalisation portée à 1 000 € (livret du 12/11/2026 : recettes sous 1 Md€ ; ligne du camp de 0,5 Md€ en 2032 déjà listée), baisse de la facture d'électricité de « deux mois de facture » par an (Sud Radio, 18/11/2026 : montant et calcul non publiés), conseil juridique des étrangers en centre de rétention confié à l'OFII au lieu des associations (Sud Radio, 18/11/2026 : coût non publié), aide à l'embauche d'un apprenti portée « par exemple » à 6 000 € pour les CAP et bacs professionnels (TF1, 22/11/2026 ; aide en vigueur : 5 000 € au plus jusqu'au bac dans les entreprises de moins de 250 salariés, 2 000 € au-delà, décret n° 2026-168 ; champ des entreprises et des diplômes non publié, aucune série officielle ouverte des contrats par niveau et par taille d'entreprise)",
-    "n": 23,
-    "cost": -52.8,
-    "gain": 31.3,
+    "sum": -27.2,
+    "p10": -34.8,
+    "p90": -14.9,
+    "realsum": -29.6,
+    "missing": "capitalisation, audiovisuel public, aide au développement (« Coopération » : 3,5 Md€ en 2032 selon le camp, sans niveau publié), et des postes du plan non vérifiés : collectivités 10, budget base zéro 11,5, santé 4, formation professionnelle 6 Md€ (niveaux annuels en 2032), réduction d'impôt sur les intérêts d'emprunt de la résidence principale (50 à 100 % des intérêts selon le nombre d'enfants, plafonnée à 400 € plus 400 € par enfant ; nombre de ménages accédants concernés et intérêts versés : pas de source officielle ouverte), prêt à taux zéro pour tous les primo-accédants (neuf et ancien, sans zonage), baisse des droits de succession « au maximum du possible », donations de 150 000 € par parent aux moins de 30 ans pendant trois ans, cumul emploi-retraite exonéré, Fonds France Production (0,6 Md€/an), suramortissement IA et robotique, arrêt de subventions à des associations (3 Md€ en 2032, sans chiffrage indépendant), autres lignes immigration du plan, reprises de l'Observatoire de l'immigration et de la démographie et que les données officielles ne permettent pas de refaire sans ses hypothèses (niveaux 2032) : immigration familiale 1,5, étudiants au-delà des droits différenciés (preuve de ressources) 1,4, titres au coût complet 0,5, hébergement d'urgence fermé aux personnes sous OQTF 0,5, mineurs non accompagnés, soins des demandeurs d'asile et contentieux 0,8, statut du bailleur privé (amortissement du bâti à 4 % par an, option pour le prélèvement forfaitaire à 30 % ; coût statique non publié, le « gain net » de 1,9 Md€ annoncé repose sur des recettes induites), barème kilométrique réévalué (ampleur non publiée), agences et opérateurs au-delà de la valeur commune (contrats non renouvelés et départs volontaires 5, structures 4, concours recentrés 3,5 ; niveaux 2032, chiffres du camp), recentrage des aides versées aux moins de 25 ans (5 Md€ selon le camp, financement du pré-apprentissage), apprentissage : fin des aides et des prises en charge dans le supérieur tertiaire (4 Md€ dont 2,6 réaffectés) et financement selon les résultats (2 à 3 Md€), capitalisation (cotisation de 1 % du salaire sous le plafond de la Sécurité sociale, 6 Md€ en 2032 selon le camp, gérée par les partenaires sociaux ; cotisation additionnelle de la fonction publique sur les primes doublée), épargne retraite (déduction portée à 50 000 € par an, crédit d'impôt de 30 % pour les non-imposables, rente défiscalisée à 25 %), lignes de moins de 1 Md€ du logement social (exonération d'impôt sur les sociétés des bailleurs sociaux supprimée, 350 M€ redistribués ; APL des étudiants étrangers hors UE non boursiers 200 M€ et des étudiants des familles aisées 200 à 300 M€), garde d'enfants (plafond du crédit d'impôt famille supprimé, exonération de l'aide de l'employeur portée à 7 000 € : 0,8 Md€ selon le camp, sous 1 Md€), recrutement de procureurs, juges d'instruction et greffiers (« un peu moins de 2 milliards », franceinfo, 12/11/2026 : horizon et nombre de postes non publiés), titre de séjour doublé (350 → 700 €) et taxe de naturalisation portée à 1 000 € (livret du 12/11/2026 : recettes sous 1 Md€ ; ligne du camp de 0,5 Md€ en 2032 déjà listée), baisse de la facture d'électricité de « deux mois de facture » par an (Sud Radio, 18/11/2026 : montant et calcul non publiés), conseil juridique des étrangers en centre de rétention confié à l'OFII au lieu des associations (Sud Radio, 18/11/2026 : coût non publié), aide à l'embauche d'un apprenti portée « par exemple » à 6 000 € pour les CAP et bacs professionnels (TF1, 22/11/2026 ; aide en vigueur : 5 000 € au plus jusqu'au bac dans les entreprises de moins de 250 salariés, 2 000 € au-delà, décret n° 2026-168 ; champ des entreprises et des diplômes non publié, aucune série officielle ouverte des contrats par niveau et par taille d'entreprise), revenu d'incitation à l'activité (barème écrit : 300 € par mois, 550 € dès 15 heures d'activité, complément diminué de 30 % du salaire, nul au-delà de 1 833 € ; 2 Md€ en 2032 selon le camp ; aucune distribution officielle ouverte des allocataires par revenu d'activité et par foyer) et plafond des aides à 70 % du SMIC (10 Md€ en 2032 selon le camp ; modalités non publiées)",
+    "n": 22,
+    "cost": -53.0,
+    "gain": 25.8,
     "confirm": []
    },
    "short": "Retailleau",
@@ -16405,7 +16567,7 @@
    "name": "Éric Zemmour",
    "party": "Reconquête",
    "poll": "3,1 %",
-   "summary": "Promet 280 Md€ d'économies par an dès 2032, la suppression de la CSG sur les revenus d'activité et des impôts de production, la fin des droits de succession, des aides réservées aux Français et l'expulsion des étrangers au chômage depuis plus de six mois. Notre chiffrage : −116,6 Md€ par an en 2030, soit −3 773 € par ménage. Principal obstacle : la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.",
+   "summary": "Promet 280 Md€ d'économies par an dès 2032, la suppression de la CSG sur les revenus d'activité et des impôts de production, la fin des droits de succession, des aides réservées aux Français et l'expulsion des étrangers au chômage depuis plus de six mois. Notre chiffrage : −118,3 Md€ par an en 2030, soit −3 828 € par ménage. Principal obstacle : la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.",
    "measures": [
     {
      "id": "remigration",
@@ -17988,7 +18150,7 @@
        3
       ]
      },
-     "quiz_fam": "retailleau.fin_maprimerenov"
+     "quiz_fam": "zemmour.anah"
     },
     {
      "id": "ue",
@@ -18128,11 +18290,19 @@
     {
      "id": "prisons",
      "theme": "securite",
-     "title": "100 000 places de prison",
-     "proposal": "Recruter 40 000 gardiens de prison et construire très rapidement 100 000 places de prison supplémentaires, en préfabriqué.",
+     "title": "100 000 places de prison, peines planchers",
+     "proposal": "Recruter 40 000 gardiens de prison et construire 100 000 places de prison supplémentaires en 24 mois, en préfabriqué ; rétablir les peines planchers.",
      "claimed": "Non chiffré",
      "claimed_md": null,
      "estimates": [
+      {
+       "source": "Site de campagne d'É. Zemmour, « Nos priorités pour les Français » (relu le 24/11/2026)",
+       "year": 2026,
+       "value": "« Prélèvements des amendes sur les salaires et les aides sociales, construction de 100 000 places de prison en 24 mois. » ; « Peines plancher et loi anti-casseurs. »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.ericzemmour.fr/priorites"
+      },
       {
        "source": "franceinfo, « Nos services publics », entretien d'É. Zemmour (12/11/2026)",
        "year": 2026,
@@ -18152,19 +18322,31 @@
      ],
      "consensus": "isolé",
      "verdict": "sous_conditions",
-     "obstacle": "Capacités à bâtir (places et surveillants) : le programme de 15 000 places lancé en 2018 en a livré 7 684 brutes (5 711 nettes) ; 63 303 places opérationnelles pour 90 173 détenus au 10/09/2026. Calendrier non publié.",
+     "obstacle": "Capacités à bâtir (places et surveillants) : 100 000 places annoncées en 24 mois, quand le programme de 15 000 places lancé en 2018 en a livré 7 684 brutes (5 711 nettes) ; 63 303 places opérationnelles pour 90 173 détenus au 10/09/2026.",
      "claude": {
       "id": "prisons",
-      "central": -3.2,
-      "low": -9.0,
-      "high": -1.6,
+      "central": -4.9,
+      "low": -12.3,
+      "high": -2.6,
       "method": "ascendant",
-      "formula": "Même règle que Le Pen (30 000 places), Retailleau (40 000 places), Lisnard (20 000 places) et Philippe (30 000 places), construction exclue : 100 000 places × 32 k€ de coût annuel d'un détenu ≈ −3,2 ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 100 000 sur 5 ans ≈ 7,4 + moitié des places ouvertes ≈ 1,6 → −9,0 ; borne haute : moitié des places ouvertes en 2030 (−1,6)",
+      "formula": "Règle commune des places de prison (Le Pen, Philippe, Lisnard, Retailleau, Zemmour), construction exclue : coût annuel d'un détenu 47,2 k€ (ministère de la Justice : 129,33 € par jour en 2024, fonctionnement) ; plan daté (« en 24 mois ») : places ouvertes en entier en 2030, 100 000 × 47,2 k€ ≈ 4,72 ; peines planchers : 4 000 années de détention de plus par an (loi de 2007, Infostat Justice) × 47,2 k€ ≈ 0,19 → −4,9 ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × 100 000 sur 5 ans ≈ 7,40 de plus → −12,3 ; borne haute : moitié des places ouvertes en 2030 (2,36 + peines planchers 0,19) → −2,6",
       "inputs": [
        {
-        "label": "Coût d'un détenu",
-        "value": "≈ 32 000 €/an",
-        "source": "Terra Nova (CNAPE)",
+        "label": "Proposition (site de campagne)",
+        "value": "« Prélèvements des amendes sur les salaires et les aides sociales, construction de 100 000 places de prison en 24 mois. » ; « Peines plancher et loi anti-casseurs. »",
+        "source": "Site de campagne d'É. Zemmour, « Nos priorités pour les Français » (relu le 24/11/2026)",
+        "url": "https://www.ericzemmour.fr/priorites"
+       },
+       {
+        "label": "Coût d'un détenu (valeur commune)",
+        "value": "« En 2024, le coût moyen d'une journée de détention s'élevait à 129,33 euros, dont 95,48 euros de dépenses de personnel et 33,86 euros de dépenses d'exploitation » : 129,33 € × 365 ≈ 47 200 € par an (fonctionnement, hors investissement)",
+        "source": "Ministère de la Justice, réponse à la question écrite n° 13927 (JO du 26/05/2026)",
+        "url": "https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE13927.pdf"
+       },
+       {
+        "label": "Peines planchers de 2007 (valeur commune)",
+        "value": "« L'accroissement du niveau moyen d'emprisonnement ferme aurait provoqué une augmentation de près de 4% du total des années prononcées sur cette période de 3 ans, soit 12000 années d'emprisonnement ferme (4000 années supplémentaires par an) » (Infostat Justice n° 118, octobre 2012) : 4 000 × 47,2 k€ ≈ 0,19 Md€ par an",
+        "source": "Terra Nova, « Pour en finir avec les peines plancher » (document hébergé par la CNAPE)",
         "url": "https://www.cnape.fr/documents/pour-en-finir-avec-les-peines-plancher"
        },
        {
@@ -18204,45 +18386,67 @@
         "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-eric-zemmour-souhaite-supprimer-800-000-postes-dans-la-fonction-publique_8279303.html"
        }
       ],
-      "note": "Calendrier non publié. Valeur centrale au seul coût de fonctionnement (construction exclue), même règle pour les cinq candidats qui proposent des places (arbitrage du 27/10/2026) ; construction en borne basse. Verdict « sous conditions » pour toutes les fiches prisons (capacités à bâtir). 40 000 gardiens de prison (franceinfo, 12/11/2026) : ils servent les places du même plan ; le coût annuel d'un détenu (32 000 €, la même valeur pour les quatre candidats) comprend le personnel : au barème des recrutements publics, 40 000 × 61,6 k€ × 70 % ≈ 1,7 Md€, compris dans les 3,2 Md€ comptés pour 100 000 places, sans ajout (pas de double compte). Redit à Toulon le 21/11/2026 (100 000 places, RCF ; site relu le 23/11 : « 100 000 places de prison en 24 mois ») ; le chiffre de 200 000 donné par des directs du 12/11 n'est pas redit : 100 000 gardés."
+      "note": "Valeur centrale au seul coût de fonctionnement (coût annuel d'un détenu, ministère de la Justice, 2024), construction en borne basse ; plan sans calendrier publié : 70 % des places ouvertes en 2030, plan daté : selon son calendrier (même règle que les plans de recrutement et les places d'accueil du jeune enfant), la même pour les cinq candidats qui proposent des places. Verdict « sous conditions » pour toutes les fiches prisons (capacités à bâtir). Calendrier publié : 100 000 places « en 24 mois » (site de campagne, relu le 24/11/2026) : places ouvertes en entier en 2030 ; borne basse : construction étalée sur le mandat si le calendrier glisse. 40 000 gardiens de prison (franceinfo, 12/11/2026) : ils servent les places du même plan ; le coût annuel d'un détenu (47,2 k€, la même valeur pour les cinq candidats) comprend le personnel : au barème des recrutements publics, 40 000 × 61,6 k€ ≈ 2,5 Md€, compris dans les 4,7 Md€ comptés pour 100 000 places, sans ajout (pas de double compte). Redit à Toulon le 21/11/2026 (100 000 places et « le rétablissement des peines planchers », RCF) ; le chiffre de 200 000 donné par des directs du 12/11 n'est pas redit : 100 000 gardés. Peines planchers : même valeur que Le Pen, Lisnard et Retailleau (loi de 2007) ; par la loi."
      },
-     "quiz_text": "Construire beaucoup plus de places de prison",
-     "quiz_concret": "Plus de cellules pour les personnes condamnées à de la prison.",
-     "quiz_plus": "Écourter les peines fait récidiver : la grâce collective de 1996 a accru la récidive à cinq ans.",
-     "quiz_moins": "Les places neuves se remplissent aussitôt, et purger sa peine sous bracelet fait moins récidiver.",
+     "quiz_text": "Construire beaucoup plus de places de prison et rétablir des peines minimales",
+     "quiz_concret": "Plus de cellules pour les condamnés, et des peines minimales fixées par la loi pour certains délits.",
+     "quiz_plus": "Une peine minimale connue d'avance dissuade la récidive et écarte plus longtemps les récidivistes.",
+     "quiz_moins": "L'effet dissuasif observé est faible, alors que les places de prison se construisent lentement.",
      "quiz_preuve_pour": "mitigé",
-     "quiz_preuve_contre": "mitigé",
+     "quiz_preuve_contre": "solide",
      "quiz_cas_pour": [
       {
-       "t": "La grâce collective du 14 juillet 1996 a accru la récidive, cinq ans après leur sortie, des détenus libérés plus tôt grâce à elle (Maurin et Ouss, France, 2009).",
-       "s": [
-        3
-       ]
-      }
-     ],
-     "quiz_cas_contre": [
-      {
-       "t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+       "t": "Après la loi de 2007 sur les peines planchers, les récidivistes ont commis 13 % de délits visés en moins dans les quatre ans suivant leur sortie (IPP, France, 2024).",
        "s": [
         0
        ]
       },
       {
-       "t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+       "t": "Les peines planchers de 2007 n'étaient prononcées que dans 38 % des cas possibles en 2010, les juges pouvant y déroger (ministère de la Justice, France, 2012).",
        "s": [
         1
        ]
       }
      ],
-     "quiz_etudes": "Une évaluation française (grâce collective de 1996) : écourter les peines accroît la récidive ; mais purger sa peine sous bracelet fait moins récidiver que la prison, et le nombre de détenus suit celui des places.",
+     "quiz_cas_contre": [
+      {
+       "t": "Avec les peines planchers, la peine des récidivistes a presque doublé (230 à 430 jours), sans dissuasion à court terme ni baisse des autres délits (IPP, France, 2024).",
+       "s": [
+        0
+       ]
+      },
+      {
+       "t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+       "s": [
+        2
+       ]
+      },
+      {
+       "t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+       "s": [
+        3
+       ]
+      }
+     ],
+     "quiz_etudes": "Une évaluation française rigoureuse (IPP, 2024) : moins de récidive ciblée à quatre ans, pas de dissuasion à court terme, nettement plus d'incarcération.",
      "quiz_src": [
+      {
+       "l": "IPP, note n° 105 « Les peines planchers sont-elles un outil efficace pour éviter la récidive ? »",
+       "a": 2024,
+       "u": "https://www.ipp.eu/wp-content/uploads/2024/03/Note_IPP_105_peines_planchers.pdf"
+      },
+      {
+       "l": "Ministère de la Justice, Infostat Justice n° 118 « Peines planchers : application et impact de la loi du 10 août 2007 »",
+       "a": 2012,
+       "u": "https://www.justice.gouv.fr/sites/default/files/migrations/portail/art_pix/stat_infostat_118_20121017.pdf"
+      },
       {
        "l": "Sénat, commission des finances, rapport d'information n° 37 (2023-2024), plan 15 000 places (synthèse)",
        "a": 2023,
        "u": "https://www.senat.fr/rap/r23-037/r23-0370.html"
       },
       {
-       "l": "Henneguelle, Monnery et Kensey, Better at Home than in Prison? The Effects of Electronic Monitoring on Recidivism in France (Journal of Law and Economics)",
+       "l": "Henneguelle, Monnery et Kensey, Journal of Law and Economics",
        "a": 2016,
        "u": "https://chicagounbound.uchicago.edu/jle/vol59/iss3/6/"
       },
@@ -18250,20 +18454,15 @@
        "l": "Ministère de la Justice, Mesure de l'incarcération, indicateurs clés au 1er octobre 2026",
        "a": 2026,
        "u": "https://www.justice.gouv.fr/sites/default/files/2026-11/mesure_mensuelle_01102026.pdf"
-      },
-      {
-       "l": "Maurin et Ouss, « Sentence Reductions and Recidivism: Lessons from the Bastille Day Quasi Experiment » (IZA DP n° 3990)",
-       "a": 2009,
-       "u": "https://www.iza.org/publications/dp/3990"
       }
      ],
      "quiz_constat": {
       "t": "Détenus : 90 937 au 1er octobre 2026 (+7,2 % en un an) pour 63 452 places, soit 143 % d'occupation (Justice).",
       "s": [
-       2
+       4
       ]
      },
-     "quiz_fam": "le-pen.prisons"
+     "quiz_fam": "philippe.prisons"
     },
     {
      "id": "aide_developpement",
@@ -18749,13 +18948,13 @@
     "cfe_note": "Suppression de la CFE (impôts de production, discours du 21/11/2026)"
    },
    "claude_total": {
-    "sum": -116.6,
-    "p10": -133.9,
-    "p90": -87.5,
-    "realsum": -123.9,
+    "sum": -118.3,
+    "p10": -136.2,
+    "p90": -89.4,
+    "realsum": -125.6,
     "missing": "ministère de la Remigration, objectif de « deux millions d'immigrés en moins à la fin du quinquennat » (10/11/2026, non chiffré), capitalisation, renforcement des armées (sans montant), réforme des allocations chômage (non détaillée), plan de 280 Md€ d'économies par an dès 2032 annoncé à Toulon (21/11/2026 : aucune ventilation publiée au-delà du plan de 140 Md€, économies sans chiffrage indépendant), reste du plan de 140 Md€ (budget2027.fr, économies sans chiffrage indépendant : intelligence artificielle 5, politique de la ville 8, France Travail 4, audiovisuel 4, fraude 2 à 3 (champ non publié : leviers du CAE impossibles à rapporter à la mesure), associations 1 à 2, presse 0,2, syndicats 0,1, CESE et Ceser 0,07, le CESE étant inscrit dans la Constitution : exige une révision), ARS 1 et autres agences nommées 1 du même plan (Arcom, Conseil national du bruit, Haut Conseil à l'égalité, Observatoire de la laïcité, Haut Comité pour le logement…) : agences nommées, hors valeur commune des agences, qui vise la suppression ou la fusion de la plupart d'entre elles ; missions reprises, valeur propre 0, comme les ARS, DREAL et DDTM de Lisnard et l'Office français de la biodiversité de Retailleau (ARS : missions de santé que le plan ne supprime pas ; Arcom : missions imposées par le droit de l'UE ; autres instances : budgets non isolés, liste ouverte), lignes immigration de moins de 1 Md€ : visas plus chers 0,7, hébergement d'urgence fermé aux étrangers en situation irrégulière 0,7, aide juridictionnelle réservée aux Français 0,1, fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée (programme de 2022, non reconfirmée), 1 000 médecins salariés par l'État dans les déserts médicaux (programme de 2022, non reconfirmé ; règle des recrutements publics : 1 000 × 61,6 k€ ≈ 0,06 Md€), revenu des médecins retraités qui reprennent une activité dispensé d'impôt sur le revenu (franceinfo, 12/11/2026 : revenu visé, plafond et durée non publiés)",
     "n": 17,
-    "cost": -149.7,
+    "cost": -151.4,
     "gain": 33.1,
     "confirm": [
      "Quotient familial doublé"
@@ -18767,13 +18966,13 @@
   }
  ],
  "method": [
-  "<b>Notre chiffrage.</b> 175 mesures analysées, dont 142 chiffrées avec la même règle pour tous : effet sur le solde public en Md€ par an, en année pleine à l'horizon 2030, en euros de 2026. Quand plusieurs chiffrages publiés existent, on retient leur médiane ajustée aux paramètres de 2027 ; sinon, un calcul ascendant à partir de données publiques. Chaque calcul et chaque donnée d'entrée sont affichés dans la fiche.",
+  "<b>Notre chiffrage.</b> 175 mesures analysées, dont 141 chiffrées avec la même règle pour tous : effet sur le solde public en Md€ par an, en année pleine à l'horizon 2030, en euros de 2026. Quand plusieurs chiffrages publiés existent, on retient leur médiane ajustée aux paramètres de 2027 ; sinon, un calcul ascendant à partir de données publiques. Chaque calcul et chaque donnée d'entrée sont affichés dans la fiche.",
   "<b>Règles communes.</b> Une même mesure vaut le même montant chez tous les candidats : retour à 62 ans 11,8 Md€ en 2030 (rendement de la réforme 2023, moins la part déjà perdue par la suspension) ; salaires des enseignants 3,9 Md€ par tranche de +10 % (chiffrage de l'Institut Montaigne remis aux salaires de 2024) ; AME remplacée par une aide d'urgence +0,9 Md€ (même méthode, appliquée à la dépense réelle de 2025) ; jours de carence de la fonction publique, sur ses trois versants (État et opérateurs, collectivités, hôpitaux : tous dans les administrations publiques) : passage de un à deux jours +0,17 Md€, à trois jours +0,29 Md€, suppression du jour actuel −0,25 Md€ (revue de dépenses de l'IGF et de l'IGAS de juillet 2024, tableau 12 : estimations de la Direction du budget sur les données de 2022, sans effet de comportement) ; retour au plein traitement des agents publics en congé de maladie ordinaire, payés à 90 % pendant les trois premiers mois depuis le 1er mars 2025 (loi de finances pour 2025), −0,9 Md€ (même revue, tableau 1 : 300 M€ par versant, à absentéisme constant) ; une mesure générale sur les arrêts maladie qui n'exclut pas le public s'applique aux agents, hypothèse écrite dans la fiche ; un recul de l'âge de départ au-delà de 64 ans, au rythme prévu par la réforme de 2023, n'a pas d'effet avant 2032 : seule compte en 2030 la fin de la suspension de cette réforme (+1,8 Md€) ; taxe Zucman +5 Md€ ; poste public supprimé 61,6 k€, dont la moitié rendue aux agents, avec 70 % du plan réalisé en 2030 (mêmes bornes pour tous les plans de postes : un départ à la retraite sur trois non remplacé sur 3,5 ans dans les secteurs visés, sans dépasser la valeur centrale, et le plan entièrement réalisé en 2030 ; leur faisabilité se juge sur toutes les sorties de la fonction publique, hors secteurs épargnés) ; poste public créé (plan de recrutement) 61,6 k€ en coût complet, sans la moitié rendue aux agents, qui ne vaut que pour les suppressions, avec 70 % du plan en 2030 quand il est étalé sur le mandat ou sans date (bornes : le plan entièrement réalisé en 2030 et, s'il existe, le chiffre du camp) ; pour les emplois du médico-social et des EHPAD, seule la part publique de leur financement est comptée (79,2 % : part des administrations publiques dans le financement des soins de longue durée en 2025, DREES) ; chaque mesure est comptée à son état prévu en 2030 (montée en charge comprise) ; un montant cumulé sur le quinquennat est converti en flux de 2030 (3,5/15 du cumul, soit 70 % du rythme final) ; la CVAE, déjà supprimée par la loi d'ici 2030, n'est comptée chez personne ; l'argent public (budget de l'État ou prélèvements obligatoires) versé sur des comptes de retraite individuels est une dépense (comptes à la naissance, au premier emploi, capitalisation obligatoire financée par des prélèvements réaffectés), et une capitalisation sans argent public publié ne compte pas en 2030 ; un prélèvement payé par les entreprises et déductible de leur bénéfice imposable (impôts de production comme la C3S ou la CFE, cotisations patronales, forfait social, part d'une accise payée par les entreprises) est compté net de l'impôt sur les sociétés qu'il fait varier, dans les deux sens (une baisse fait remonter cet impôt, une hausse le fait baisser) : 20 % de l'écart (taux retenu par le Gouvernement, l'Institut Montaigne et le Conseil d'analyse économique ; 17,5 %, taux de la Cour des comptes, en borne), en entier en 2030, sauf si le chiffrage retenu est déjà net ; quand le programme du candidat change le taux normal de l'impôt sur les sociétés et que ce changement est compté, ces taux sont ajustés dans la même proportion (20 % × 20/25 = 16 % pour un taux normal ramené de 25 % à 20 %) ; la part d'une taxe sur l'énergie payée par les entreprises est celle publiée par le service statistique du ministère de la Transition écologique (37 % des taxes sur l'énergie en 2023, répartition stable depuis 2018 ; aucune part propre aux carburants n'est publiée), pour l'impôt sur les sociétés comme pour la TVA, que les entreprises récupèrent ; pas pour l'impôt sur les sociétés lui-même ni pour un impôt que les entreprises ne déduisent pas (la TVA, qu'elles récupèrent) ; de même, un prélèvement payé par les ménages et déductible de leur revenu imposable (CSG déductible sur les revenus d'activité, de remplacement ou du capital, cotisations salariales et des indépendants) est compté net de l'impôt sur le revenu qu'il fait varier, dans les deux sens : 11,0 % de la part déductible (médiane des chiffrages publiés du même mécanisme : iFRAP 2023, 11,0 % ; Institut Montaigne 2022, 11 % ; évaluation préalable du projet de loi de finances pour 2018, 17,1 % pour les salariés du privé avec le barème de 2018, retenu pour la borne où l'impôt récupéré est le plus fort), appliqué à la base officielle la plus récente (CSG sur les revenus d'activité de 2025 : 12,0 Md€ par point), en entier en 2030, sauf si le chiffrage retenu est déjà net ; quand la mesure ne dit pas quelle part de la CSG baisse, la part déductible est celle du taux actuel (6,8 points sur 9,2) ; rien pour la part non déductible de la CSG ni pour la CRDS ; la suppression ou la fusion de la plupart des agences et opérateurs de l'État, missions reprises, vaut 0,26 Md€ chez tous les candidats qui la proposent (part hors personnel de l'économie chiffrée par la commission d'enquête du Sénat en 2025 sur les fonctions support des opérateurs, 0,54 Md€ : la part de personnel est déjà dans les postes supprimés), le montant annoncé par un camp n'étant pas compté au-delà ; un plan qui ne vise que des agences nommées n'entre pas dans cette valeur, et chaque fiche dit si elle y entre ; une agence nommée dont les missions sont reprises (par l'État, par une autre structure, ou parce que le droit les impose) ne vaut rien en propre ; une agence dont la mission disparaît vaut la part publique de son budget officiel, sans la part payée hors budget, sans les dispositifs que la mesure exclut elle-même ou déjà comptés dans une autre fiche, et sans les aides déjà accordées, qui restent à payer ; la ligne d'au moins 1 Md€ d'un budget publié qui la supprime donne une fiche, comptée sur ce budget officiel et non sur le montant annoncé ; le prix de référence des carburants et du fioul est la moyenne des 52 dernières semaines publiées par le ministère (gazole 1,98 €/l, SP95 1,94 €/l au 23/10/2026), et non le dernier relevé hebdomadaire, dans les fiches comme dans le simulateur ; de même, le prix de référence de l'électricité et du gaz est la moyenne des 12 derniers mois des séries officielles de la Commission de régulation de l'énergie (tarif réglementé option Base 6 kVA : 0,196 €/kWh TTC ; prix repère de vente du gaz : 151,7 €/MWh TTC, de novembre 2025 à octobre 2026), deux repères officiels, le tarif réglementé ne valant que pour les clients qui l'ont gardé et le prix repère du gaz étant indicatif ; le SMIC de référence est celui de juin 2026. Une mesure se juge reconfirmée mesure par mesure, quel que soit le document d'origine. Quand un candidat publie un budget ligne à ligne (RN, LFI, Retailleau, Zemmour), toute ligne d'au moins 1 Md€ qu'aucune fiche ne couvre est ajoutée : une dépense ou une baisse d'impôt vaut la médiane des chiffrages indépendants, à défaut le chiffre du camp (signalé, fourchette de ±50 %), une enveloppe vaut son montant ; une recette ou une économie n'est comptée qu'avec un chiffrage indépendant ou un paramètre publié (taux, assiette), sinon elle est listée « non comptée ». La lutte contre la fraude est comptée avec les leviers chiffrés par le Conseil d'analyse économique qui correspondent au champ de chaque mesure, dans la limite du chiffre du camp. Une baisse d'impôt annoncée sans calendrier est comptée en entier en 2030 ; une suppression d'aide compte pour sa seule part publique (pas la part payée hors budget, comme les certificats d'économies d'énergie ; la TVA perçue sur cette part des factures est en revanche une recette publique, perdue si elle est supprimée) ; un transfert entre administrations (de l'État vers les communes, par exemple) sans dépense définie par la mesure est neutre pour le solde public : compté 0, avec en borne basse le montant si le bénéficiaire le dépense en entier ; des aides réservées selon la nationalité ou la durée de séjour sont chiffrées avec l'étude qui correspond à la condition de chaque candidat. Une mesure de moins de 1 Md€ garde sa fiche, chez chaque candidat qui la propose, avec la même méthode (droits d'inscription des étudiants étrangers : +0,07 Md€ chez Retailleau et Philippe, droits en vigueur appliqués sans exonération ; non chiffrables chez Le Pen et Zemmour, dont le montant des droits n'est pas publié) ; seule la règle des budgets ligne à ligne fixe un seuil, pour les lignes à ajouter. Un plan de places d'accueil est compté pour son coût public de fonctionnement par place (crèches et assistantes maternelles : coût public annuel moyen d'une place d'accueil formel, Cour des comptes, 13 000 €), 70 % du plan en 2030 s'il est sans date, la construction en borne, comme les places de prison.",
   "<b>Objectifs en niveau.</b> Un objectif de dépense publié sous la forme d'un niveau à une date (en part du PIB ou en euros) est compté pour l'écart, en 2030, entre ce niveau et la trajectoire du droit en vigueur (loi de programmation militaire ou de la recherche ; à défaut, part du PIB constante) ; un objectif sans date ou fixé à la fin du mandat compte pour 70 % de cet écart. Le PIB de 2030 est celui du scénario du Gouvernement (projet de loi de finances 2027), ramené en euros de 2026. Quand la définition est ambiguë (dépense exécutée ou financée, périmètre), le milieu de la fourchette est retenu. La même règle vaut dans les deux sens : un niveau publié à la baisse (suppression comprise) compte comme une économie. Une prise de position au Parlement sur un texte déjà voté ne vaut pas programme, sauf si le candidat la reprend dans sa campagne.",
   "<b>Ce qui n'est pas compté.</b> Les mesures non reconfirmées en 2026, ou connues par une seule reprise de presse qui ne cite pas le candidat (marquées « À confirmer »), et les mesures dont un paramètre clé n'est pas publié (ampleur, taux, plafond) : elles sont « non chiffrables », avec une fourchette indicative dans la fiche. Une mesure qui exige une révision est comptée « si elle passe », chez tous les candidats. Pas d'effets macroéconomiques de bouclage ; effets de comportement seulement quand ils sont documentés. Un chiffrage qu'un candidat reprend comme le sien (d'un institut, d'une association ou d'un parti) compte comme chiffre de son camp, quel que soit son auteur. Le reprendre comme le sien, c'est publier ce chiffre comme son propre chiffre ; citer une étude comme une base parmi d'autres n'en fait pas un chiffre du camp. Une économie qui repose sur une baisse de flux ou un comportement supposés par une seule note n'est pas comptée, sauf si une évaluation ou une donnée officielle les établit. Un document d'un parti publié avant la désignation de son candidat (un projet de parti, par exemple) ne vaut programme que si le candidat le reprend ; un document officiel publié depuis (le contre-budget d'un groupe parlementaire, par exemple) compte. Une demande adressée au Gouvernement en place d'utiliser un outil qui existe déjà (état d'urgence, couvre-feux, drones, militaires en garde statique) n'est pas une proposition de programme. Le tableau « Qu'est-ce qui peut passer ? » et la répartition des verdicts d'un candidat portent sur les mêmes mesures que les totaux et le quiz : hors mesures non confirmées et doublons (les mesures non chiffrables y sont).",
   "<b>Fourchette probable.</b> Chaque mesure a une valeur basse et une valeur haute ; le total en tire une fourchette à 80 % par simulation (20 000 tirages, propres à chaque candidat).",
   "<b>Verdicts.</b> Le verdict porte sur la voie juridique et pratique de la mesure, ni sur son coût ni sur l'écart entre le chiffre annoncé par le camp et notre chiffrage, que le chiffrage montre déjà, pour tous. Faisable : par décret ou par une loi ordinaire (lois de finances et de financement de la Sécurité sociale comprises), sans autre condition hors de cette décision, avec la majorité à l'Assemblée que suppose tout programme ; « faisable » ne dit rien du coût (c'est le chiffrage) ni de l'effet de la mesure ; une dépense ou une baisse d'impôt ou de cotisations non financée reste faisable, et l'obstacle le dit (« financement non précisé dans la mesure »). Sous conditions : la mesure dépend d'une condition identifiée hors de cette décision (accord de tiers : collectivités, partenaires sociaux, autre État ou institution ; contrats en cours ; obligation européenne à remplir par d'autres moyens ; capacités à bâtir : recrutements, places, constructions, moyens de contrôle ; rendement ou contenu d'une autre mesure ; risque de censure sur un point précis). Un paramètre, un contenu ou une échéance non publiés ne changent pas le verdict : l'obstacle les dit (« … non publié »), et la mesure est non chiffrable ou comptée selon la règle des objectifs. Assurance chômage : ses règles sont fixées par une convention des partenaires sociaux agréée par le Gouvernement, par décret faute d'accord, ou par la loi : la décision reste publique, la mesure est faisable. Très difficile : accord extérieur nécessaire, à l'unanimité des États de l'UE ou d'autres États, ou censure probable au vu de décisions ou d'avis sur des dispositifs proches. Exige une révision : impossible en l'état du droit sans réviser la Constitution ou les traités ; la fiche indique le chemin et qui doit dire oui. Une même situation juridique reçoit le même verdict chez tous les candidats ; une fiche qui réunit plusieurs mesures prend le verdict de la plus contraignante.",
-  "<b>Sources.</b> 454 sources distinctes pour les chiffrages des fiches, sans compter celles du quiz, des repères et du volet « Vie quotidienne ». L'année des chiffrages publiés est affichée ; « base 2022 » signale une estimation antérieure au programme 2027, « agrégateur » un site de synthèse à confirmer par une source primaire (repéré par son nom de domaine exact, et signalé partout où il est cité : estimations, données d'entrée, Vie quotidienne). Une source a une seule année, celle de sa publication, et un seul titre (son auteur et sa date), partout où elle est citée ; dans les repères « où en est la France », l'année indiquée est celle du chiffre (« données 2025 »).",
+  "<b>Sources.</b> 457 sources distinctes pour les chiffrages des fiches, sans compter celles du quiz, des repères et du volet « Vie quotidienne ». L'année des chiffrages publiés est affichée ; « base 2022 » signale une estimation antérieure au programme 2027, « agrégateur » un site de synthèse à confirmer par une source primaire (repéré par son nom de domaine exact, et signalé partout où il est cité : estimations, données d'entrée, Vie quotidienne). Une source a une seule année, celle de sa publication, et un seul titre (son auteur et sa date), partout où elle est citée ; dans les repères « où en est la France », l'année indiquée est celle du chiffre (« données 2025 »).",
   "<b>Résumés.</b> Même gabarit pour tous : ce que le candidat promet, notre chiffrage, le principal obstacle. Celui-ci est la condition juridique ou pratique des mesures retenues qui ont le verdict le plus contraignant (« exige une révision » d'abord, puis « très difficile »), jamais un coût, un rendement ou un paramètre non publié.",
   "<b>Vie quotidienne.</b> Pour huit thèmes (sécurité, santé, école, environnement, logement, libertés, économie, rayonnement), on liste 1 à 5 propositions publiées par candidat. Une proposition est « vérifiable » (précise) si elle donne un chiffre, une échéance ou un moyen juridique précis, c'est-à-dire un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou accord nommé et ce qui y change) ; sinon c'est une « intention » (un objectif, une orientation, ou une création sans paramètre : plan, pôle, fonds). La même règle s'applique à tous. Chaque proposition affichée est attribuée au candidat par au moins une source qui parle pour lui : le candidat lui-même (discours, entretien, tribune, réseau officiel) ou son site de campagne ; un document officiel de son parti ou de son groupe publié après sa désignation, ou repris par lui ; une personne au rôle officiel dans sa campagne ; un média reconnu qui le cite ou rapporte précisément ses propos, datés, ou deux médias reconnus indépendants qui rapportent la même proposition ; pour une proposition de 2022, une analyse d'une institution reconnue ou d'un média reconnu qui décrit son programme officiel. Un agrégateur, un site non officiel, une seule reprise de presse sans citation ou une étude ne suffisent pas : sans autre source, la proposition n'est pas affichée (le contrôle est automatique, proposition par proposition), et une source qui parle pour le candidat remplace l'agrégateur ou le site non officiel qui portait la même proposition. Une proposition est de 2026 si une telle source la porte en 2026 (site de campagne, document du parti publié depuis la désignation, entretien) ; sinon elle est signalée « non reconfirmée », chez tous ; une page sans date ne reconfirme pas, sauf sur le site de campagne du candidat, ouvert pour cette élection, et quand une partie seulement d'une proposition est redite en 2026, les deux parties sont affichées séparément. Quand un thème compte plus de cinq propositions, on affiche, dans le même ordre pour tous : d'abord celles de 2026 (les non reconfirmées passent après), parmi elles les précises avant les intentions, puis les plus récentes ; à égalité ou à date inconnue, l'ordre déjà affiché est gardé (une page de programme mise à jour n'est pas une nouvelle annonce) ; une proposition remplacée par sa version précise n'est pas gardée en double, et une même proposition n'est affichée que dans un thème, le plus précis (l'énergie et le nucléaire dans « environnement »). Les propositions hors affichage restent notées dans le registre de suivi du projet (dépôt public). Le site n'affiche pas d'avis d'études sur ces propositions : seules les sources qui les attribuent au candidat sont données. Les repères « où en est la France » sont les mêmes pour tous les candidats : pour chaque thème, 7 à 14 chiffres officiels (SSMSI, Insee, DREES, DEPP, Dares, COR, Ofpra, Ancols, Eurostat, OCDE, OTAN, RTE, SDES, Citepa, Banque de France, Cour des comptes, Sénat, etc. ; seul le classement de la liberté de la presse vient d'une ONG, RSF, et il est signalé comme tel), choisis parmi ceux que les bilans officiels mettent en avant, problèmes comme progrès, y compris les faits sensibles (violences sexuelles, part des étrangers parmi les mis en cause) avec leur définition exacte. Chacun donne le dernier chiffre publié, de préférence son évolution sur au moins cinq ans (jamais depuis une année choisie pour son creux ou son pic), et la précaution de lecture donnée par la source (par exemple : délinquance enregistrée, pas commise ; « mis en cause » n'est pas « condamné »). Quatre sont affichés, les autres se déplient. Le site de campagne d'un candidat n'est jamais utilisé comme source sur un autre.",
   "<b>Simulateur.</b> Il applique à votre situation tout gain ou toute perte que le candidat a publiés et confirmés en 2026, qu'ils soient comptés ou non dans notre total, à terme, sans les mesures de financement ; aucun gain n'est compté pour une mesure non confirmée ou sans montant publié (si un paramètre clé manque, une note le dit, sans montant). Droit actuel : retraite comparée au droit actuel après la suspension de la réforme 2023 ; SMIC 1 477,93 € net (juin 2026) ; AAH 1 041,59 € par mois au maximum ; barème 2026 de l'impôt sur le revenu avec décote, sur le net imposable, pour une personne seule (parent isolé si elle a des enfants) ou un couple marié ou pacsé (deux parts, revenu du conjoint de même nature que le vôtre, décote des couples, plafond du quotient au-delà de deux parts ; impôt calculé pour les actifs et les retraités), le même pour les actifs et les retraités (pour une pension : abattement de 10 %, au moins 454 € par pensionné et au plus 4 439 € par foyer, et CSG au taux normal) ; allocations familiales 2026 avant modulation ; minimum vieillesse (ASPA) 1 043,59 € par mois au plus pour une personne seule, 1 620,18 € pour un couple, moins les autres ressources. Les pertes sont comptées comme les gains : aides réservées selon la nationalité ou la durée de séjour (même calcul pour les quatre candidats qui en proposent, chacun avec sa condition, « si la révision de la Constitution passe », et pour un ressortissant de l'UE « si le droit de l'UE change » ; l'AAH et le minimum vieillesse suivent la condition des minima sociaux chez ces quatre candidats, leur mesure visant toutes les prestations non contributives ou les nommant ; hors Union européenne, le minimum vieillesse exige déjà dix ans de titre de séjour permettant de travailler), gel des prestations, baisse des minima ; le logement compte aussi (APL réservées selon la nationalité, relevées de 10 % ou gelées, à partir du montant que vous indiquez ; les mesures sans paramètre publié, comme les prêts à taux zéro, sont signalées en note ; une réduction d'impôt sur les intérêts d'emprunt dont le plafond est publié est affichée « jusqu'à » ce plafond, dans la limite de votre impôt, sans être ajoutée, car elle dépend de vos intérêts) ; les jours de carence et la durée du chômage sont affichés à part, dans les deux sens (une durée allongée comme une durée raccourcie), car ils ne jouent qu'en cas d'arrêt ou de chômage long ; un service obligatoire des jeunes est affiché à part pour les 17-25 ans, avec la rémunération publiée ou retenue dans la fiche, ou une note si elle n'est pas publiée. Le SMIC est un plancher : pour un agent public, le nouveau traitement est le plus élevé des deux, salaire relevé par le point d'indice ou nouveau SMIC, jamais leur somme. Une AAH ou un minimum vieillesse relevés augmentent d'autant l'allocation de tout allocataire (elle complète ses autres ressources jusqu'au montant maximal). Les réformes du quotient familial ou conjugal de chaque candidat s'appliquent au couple (part fiscale, plafond, impôt des jeunes parents ; fin du quotient conjugal : chacun imposé sur son revenu, au même barème, calculée pour un couple sans enfant, une note avec enfants tant que leur répartition n'est pas publiée). Un barème de l'impôt sur le revenu publié en entier (seuils et taux de chaque tranche) remplace le barème actuel, avec la décote et le quotient familial actuels et la garantie publiée avec lui, pour les actifs comme pour les retraités, seul ou en couple (après la fin du quotient conjugal quand le candidat la propose) ; une hausse d'impôt est comptée comme une baisse ; sans seuils ni taux publiés (un nombre de tranches seul, par exemple), une note sans montant. Une cantine gratuite rapporte les frais de cantine que vous indiquez. Des droits d'inscription relevés pour les étudiants étrangers sont affichés « jusqu'à » l'écart publié pour un étudiant aujourd'hui exonéré, sans être ajoutés, ou en note si le montant n'est pas publié. Le report de l'âge de la retraite est exprimé en années, avec la durée de cotisation pour le taux plein quand elle est publiée. Un avantage déjà acquis aujourd'hui n'est pas compté comme un gain (heures sup : impôt et cotisations du salarié déjà exonérés). La fin des certificats d'économies d'énergie compte −7 c€ par litre de carburant, TTC (coût moyen officiel de 2022 à 2025), la même hypothèse pour tous les candidats qui la proposent. Une hausse publiée en fourchette (« jusqu'à ») compte pour son montant minimal, l'autre borne étant donnée en note (salaires des enseignants, la même règle pour tous les candidats qui en proposent) ; un gel ne s'applique qu'aux prestations que le programme nomme. Un gain publié pour quelques niveaux de salaire seulement (au SMIC et au salaire médian, par exemple) est appliqué entre ces niveaux par interpolation (notre calcul), au prorata du salaire en dessous du premier, et rien n'est calculé au-dessus du dernier tant que le barème n'est pas publié (une note le dit), sauf quand le mécanisme publié vaut pour tous les salaires (par exemple des cotisations en moins « dès le premier euro ») : le gain est alors au prorata du salaire au-dessus du dernier niveau aussi. Un barème publié par écrit (taux par tranche de salaire) prime sur des montants donnés à l'oral pour quelques niveaux : il est appliqué à chaque salaire, y compris au-delà du dernier seuil, où le gain reste plafonné. Un gain publié qui comprend ou remplace une baisse déjà calculée (une baisse de la CSG, par exemple) ne s'y ajoute jamais : le plus grand des deux est retenu jusqu'au dernier niveau publié, la baisse déjà calculée seule au-delà ; de même, un SMIC visé « baisse de la CSG comprise » ne s'ajoute pas à cette baisse (le plus grand des deux). Un minimum social remplacé par un barème publié (montant sans activité, avec activité, puis dégressif avec le salaire) est calculé sur ce barème. Une baisse de cotisations annoncée pour les « salariés », sans exclure le public, est appliquée aussi aux agents publics (hypothèse écrite dans la note, la même pour tous). Les gains de salaire (hausse du SMIC, du point d'indice ou des salaires des enseignants, baisse de la CSG ou des cotisations) sont comptés après l'impôt sur le revenu qu'ils font payer, avec le même barème pour tous, après la réforme de l'impôt du candidat s'il en propose une : le revenu imposable augmente de la hausse de salaire (rapportée au net imposable) ou de la part déductible du prélèvement baissé (entière pour des cotisations, 6,8 points sur 9,2 pour une baisse de CSG dont la part n'est pas précisée) ; l'impôt dû apparaît sur une ligne à part, et il est nul pour qui reste sous le seuil d'imposition. Pour un retraité, la même règle vaut pour une variation de la pension (un gel fait baisser un peu l'impôt), et la réforme de l'impôt du candidat qui vaut pour tous les contribuables est appliquée (part fiscale, quotient familial, fin de l'abattement de 10 % sur les pensions). Ce sont des ordres de grandeur.",
@@ -20039,7 +20238,7 @@
       "old": false
      }
     ],
-    "indicator": "−65 % d'émissions de gaz à effet de serre en 2030",
+    "indicator": "−65 % d'émissions de gaz à effet de serre d'ici 2033",
     "sources": [
      {
       "label": "La France insoumise, « L'Avenir en commun » (6/11/2026), « Pour une bifurcation écologique et sociale », chapitre 1",
@@ -20861,7 +21060,7 @@
       "old": true
      }
     ],
-    "indicator": "1 million de ménages modestes équipés, coût estimé à 6 Md€",
+    "indicator": "1 million de voitures électriques en leasing social sur cinq ans, coût annoncé de 6 Md€",
     "sources": [
      {
       "label": "AFP/La Gazette, Glucksmann à Cléon",
@@ -21446,7 +21645,7 @@
       "old": false
      }
     ],
-    "indicator": "250 à 400 €/mois net selon les interventions (250 € pour 2 500 € de revenu), estimation du camp",
+    "indicator": "200 à 400 €/mois net pour un salaire de 2 200 € net (4/11), estimation du camp",
     "sources": [
      {
       "label": "Nouvelle Énergie, programme « Réussir une nouvelle ambition française »",
@@ -22066,7 +22265,7 @@
       "old": false
      }
     ],
-    "indicator": "Salaires enseignants rapprochés de la moyenne européenne (non chiffré)",
+    "indicator": "+135 € net par mois en début de carrière, environ +300 € au cœur de carrière ; plus de 3 Md€ par an selon son camp",
     "sources": [
      {
       "label": "Public Sénat – refonder l'école",
@@ -22283,7 +22482,7 @@
     "theme": "economie",
     "proposals": [
      {
-      "text": "Supprimer les impôts de production, dans 30 Md€ de baisses pour les entreprises",
+      "text": "Supprimer la C3S, refondre le forfait social et exonérer la part industrielle de la CFE, dans 30 Md€ de baisses pour les entreprises",
       "verifiable": true,
       "old": false
      },
@@ -22329,6 +22528,11 @@
       "label": "Livret « Le travail gagnant »",
       "year": 2026,
       "url": "https://www.avecretailleau.fr/api/media/file/Livret_Travail.pdf"
+     },
+     {
+      "label": "Site de Bruno Retailleau, mesure n° 34 « Réduire de 60 % le handicap fiscal de nos entreprises » (mise à jour du 11/09)",
+      "year": 2026,
+      "url": "https://www.avecretailleau.fr/projet/mesure/reduire-de-60-le-handicap-fiscal-de-nos-entreprises-par"
      }
     ]
    },
@@ -22464,17 +22668,17 @@
       "old": false
      },
      {
+      "text": "Supprimer l'aide médicale d'État (AME)",
+      "verifiable": true,
+      "old": false
+     },
+     {
       "text": "Recruter 1 000 médecins salariés par l'État dans les déserts",
       "verifiable": true,
       "old": true
      },
      {
       "text": "Rétablir l'obligation de garde des médecins",
-      "verifiable": true,
-      "old": true
-     },
-     {
-      "text": "Supprimer l'AME, hors aide médicale d'urgence",
       "verifiable": true,
       "old": true
      }
@@ -22500,6 +22704,11 @@
       "label": "RTL, direct du « grand oral » des candidats sur les services publics (12/11)",
       "year": 2026,
       "url": "https://www.rtl.fr/actu/politique/en-direct-presidentielle-2027-suivez-le-grand-oral-de-huit-candidats-sur-leurs-propositions-pour-les-services-publics-7900695336"
+     },
+     {
+      "label": "Site de campagne d'Éric Zemmour, « Nos priorités pour les Français » (2026)",
+      "year": 2026,
+      "url": "https://www.ericzemmour.fr/priorites"
      }
     ]
    },
@@ -22699,6 +22908,11 @@
     "theme": "economie",
     "proposals": [
      {
+      "text": "Supprimer les impôts de production",
+      "verifiable": true,
+      "old": false
+     },
+     {
       "text": "Former à l'IA dès l'école ; faire de la France la troisième puissance mondiale de l'IA",
       "verifiable": false,
       "old": false
@@ -22707,11 +22921,6 @@
       "text": "Remplacer par des robots et l'IA des emplois occupés par des immigrés, aide aux personnes âgées comprise",
       "verifiable": false,
       "old": false
-     },
-     {
-      "text": "Baisser de 30 Md€ supplémentaires les impôts de production",
-      "verifiable": true,
-      "old": true
      },
      {
       "text": "Prime « zéro charge » jusqu'à trois mois de salaire",
@@ -22745,6 +22954,11 @@
       "label": "CNews, « des robots à la place des immigrés » (18/09)",
       "year": 2026,
       "url": "https://www.cnews.fr/france/2026-09-18/des-robots-la-place-des-immigres-la-proposition-choc-deric-zemmour-pour-reduire"
+     },
+     {
+      "label": "Capital, discours d'É. Zemmour à Toulon : CSG et impôts de production (21/11)",
+      "year": 2026,
+      "url": "https://www.capital.fr/economie-politique/votre-salaire-augmente-de-10-sans-rien-couter-a-votre-patron-ce-qu-eric-zemmour-veut-supprimer-pour-y-arriver-1532061"
      }
     ]
    },
@@ -22767,7 +22981,7 @@
       "old": true
      }
     ],
-    "indicator": "Environ 3 % du PIB consacrés à la défense en 2030",
+    "indicator": "Défense à 70 Md€ en 2030, environ 2,1 % du PIB (programme 2022)",
     "sources": [
      {
       "label": "Institut Montaigne, propositions du candidat (présidentielle 2022)",
@@ -24266,7 +24480,7 @@
      2
     ]
    },
-   "quiz_fam": "melenchon.logement.1"
+   "quiz_fam": "melenchon.planification"
   },
   {
    "c": "philippe",
@@ -24386,7 +24600,7 @@
      2
     ]
    },
-   "quiz_fam": "retailleau.logement.1"
+   "quiz_fam": "melenchon.planification"
   },
   {
    "c": "philippe",
@@ -24489,7 +24703,7 @@
      "retailleau.logement.2"
     ]
    },
-   "quiz_fam": "retailleau.logement.1"
+   "quiz_fam": "melenchon.planification"
   },
   {
    "c": "retailleau",
@@ -26978,7 +27192,7 @@
      1
     ]
    },
-   "quiz_fam": "retailleau.logement.1"
+   "quiz_fam": "melenchon.planification"
   },
   {
    "c": "melenchon",
@@ -27380,7 +27594,7 @@
      2
     ]
    },
-   "quiz_fam": "retailleau.logement.1"
+   "quiz_fam": "melenchon.planification"
   },
   {
    "c": "le-pen",

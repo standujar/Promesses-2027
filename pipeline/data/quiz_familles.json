@@ -10,7 +10,7 @@
   "Lutte contre la fraude": ["le-pen.fraude", "melenchon.fraude", "retailleau.fraude"],
   "Impôts de production en baisse": ["le-pen.production", "retailleau.production", "lisnard.impots", "philippe.production", "zemmour.production"],
   "Former plus de médecins": ["attal.sante.1", "lisnard.sante.1", "zemmour.sante.1"],
-  "Service ou engagement obligatoire des jeunes": ["glucksmann.service_civique", "attal.engagement_civique"],
+  "Service ou engagement obligatoire des jeunes": ["glucksmann.service_civique", "attal.engagement_civique", "melenchon.service_citoyen", "philippe.service_national"],
   "Fusion des aides sociales": ["lisnard.allocation", "retailleau.travail", "attal.allocation"],
   "Suppression de Parcoursup": ["melenchon.ecole.1", "glucksmann.ecole.3", "le-pen.ecole.2"],
   "Fin du collège unique": ["retailleau.ecole.2", "zemmour.ecole.3"],
@@ -27,6 +27,8 @@
   "Heures au-delà de 35 h exonérées de cotisations": ["philippe.heures_sup", "retailleau.economie.5"],
   "Code du travail réduit à des principes": ["attal.economie.1", "retailleau.economie.2"],
   "Prix agricoles protégés dans les négociations": ["attal.economie.4", "retailleau.economie.4"],
-  "Impôts stables": ["attal.economie.2", "lisnard.economie.3"]
+  "Impôts stables": ["attal.economie.2", "lisnard.economie.3"],
+  "Plus de places de prison": ["philippe.prisons", "le-pen.prisons", "lisnard.prisons", "zemmour.prisons", "retailleau.securite"],
+  "Plan public de logement et de rénovation énergétique": ["melenchon.planification", "melenchon.logement.1", "melenchon.logement.2"]
  }
 }

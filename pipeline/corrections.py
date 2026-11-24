@@ -4341,6 +4341,249 @@ k['note'] = k['note'].replace(_a, ("Arrêts maladie payés à 100 % et fin des j
 assert C['melenchon']['sim']['carence_note'].startswith("Arrêts maladie payés à 100 % et fin des jours de carence")
 D['asof'] = '24 novembre 2026'
 
+# --- review 60 : audit du 24/11 (24/11/2026)
+# Audit indépendant des 8 candidats du 24/11 (cinq relevés, chaque erreur avec sa preuve, revérifiée avant correction : calculs refaits, sources
+# rouvertes le 24/11). Décisions du 24/11 (délégation du porteur, règles communes appliquées aux faits vérifiés), registre S377 et suivants ;
+# une erreur non confirmée va au registre (« a_verifier ») sans correction. Chaque correction vaut pour toutes les fiches du même type chez les 8.
+# (1) Prisons (Le Pen, Philippe, Lisnard, Retailleau, Zemmour) : coût annuel d'un détenu = chiffre officiel le plus récent du ministère de la
+#     Justice (réponse à la question écrite n° 13927, JO du 26/05/2026 : « En 2024, le coût moyen d'une journée de détention s'élevait à 129,33
+#     euros, dont 95,48 euros de dépenses de personnel et 33,86 euros de dépenses d'exploitation » ; 129,33 × 365 ≈ 47,2 k€, fonctionnement,
+#     hors investissement : même champ que la valeur centrale « construction exclue ») au lieu de 32 k€ (Terra Nova, conférence de consensus,
+#     source secondaire et ancienne). Montée en charge : la règle écrite de la méthode (« 70 % du plan en 2030 s'il est sans date, la
+#     construction en borne, comme les places de prison ») s'applique aux places de prison (la review 58 les comptait en entier) : plan sans
+#     calendrier = 70 % en 2030 ; plan daté (Zemmour, « 100 000 places de prison en 24 mois », site de campagne) = places ouvertes en entier en
+#     2030. Bornes par la même formule que les places d'accueil du jeune enfant : basse = valeur centrale + construction (370 k€ la place sur
+#     5 ans) ; haute = moitié des places ouvertes en 2030.
+# (2) Peines planchers : la base des 0,13 de Retailleau est la loi de 2007 (peines minimales des récidivistes) : ≈ 4 000 années
+#     d'emprisonnement ferme de plus par an (Infostat Justice n° 118, octobre 2012, cité par Terra Nova), × coût d'un détenu = 0,19. Même valeur
+#     pour chaque candidat qui propose de rétablir des peines minimales générales, reconfirmées en 2026 : Le Pen (« des peines minimales et la
+#     comparution immédiate des interpellés », pétition du RN, octobre 2026), Lisnard (« rétablir les peines planchers pour les récidivistes »,
+#     programme « Sécurité »), Zemmour (« Peines plancher », site de campagne, relu le 24/11 ; RCF, 21/11), Retailleau. Philippe vise les seules
+#     violences contre les dépositaires de l'autorité publique et les professeurs : la base, propre à la loi de 2007, ne s'y applique pas ;
+#     listée non comptée.
+QE13927 = 'https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE13927.pdf'
+QE13927_S = "Ministère de la Justice, réponse à la question écrite n° 13927 (JO du 26/05/2026)"
+CNAPE_TN = 'https://www.cnape.fr/documents/pour-en-finir-avec-les-peines-plancher'
+DET = 47.205  # k€ par détenu et par an (129,33 € × 365)
+IN_DET = {"label": "Coût d'un détenu (valeur commune)",
+          "value": ("« En 2024, le coût moyen d'une journée de détention s'élevait à 129,33 euros, dont 95,48 euros de dépenses de personnel et "
+                    "33,86 euros de dépenses d'exploitation » : 129,33 € × 365 ≈ 47 200 € par an (fonctionnement, hors investissement)"),
+          "source": QE13927_S, "url": QE13927}
+IN_PP = {"label": "Peines planchers de 2007 (valeur commune)",
+         "value": ("« L'accroissement du niveau moyen d'emprisonnement ferme aurait provoqué une augmentation de près de 4% du total des années "
+                   "prononcées sur cette période de 3 ans, soit 12000 années d'emprisonnement ferme (4000 années supplémentaires par an) » "
+                   "(Infostat Justice n° 118, octobre 2012) : 4 000 × 47,2 k€ ≈ 0,19 Md€ par an"),
+         "source": "Terra Nova, « Pour en finir avec les peines plancher » (document hébergé par la CNAPE)", "url": CNAPE_TN}
+PP_VAL = round(4000 * DET / 1e6, 2)  # 0,19
+def _fr(x, d=1): return f"{x:.{d}f}".replace('.', ',')
+PRIS_OB0 = ("Capacités à bâtir (places et surveillants) : le programme de 15 000 places lancé en 2018 en a livré 7 684 brutes (5 711 nettes) ; "
+            "63 303 places opérationnelles pour 90 173 détenus au 10/09/2026.")
+PRIS_N = ("Valeur centrale au seul coût de fonctionnement (coût annuel d'un détenu, ministère de la Justice, 2024), construction en borne basse ; "
+          "plan sans calendrier publié : 70 % des places ouvertes en 2030, plan daté : selon son calendrier (même règle que les plans de "
+          "recrutement et les places d'accueil du jeune enfant), la même pour les cinq candidats qui proposent des places. Verdict « sous "
+          "conditions » pour toutes les fiches prisons (capacités à bâtir).")
+def _prison(cid, mid, n, pp, daté, extra_f=''):
+    m = M(cid, mid); k = m['claude']
+    part = 1.0 if daté else 0.7
+    pl = n * DET * part / 1e6; half = n * DET * 0.5 / 1e6; cons = n * 370 / 5 / 1e6
+    c = round(pl + (PP_VAL if pp else 0), 1); lo = round(pl + cons + (PP_VAL if pp else 0), 1); hi = round(half + (PP_VAL if pp else 0), 1)
+    ns = f"{n:,}".replace(',', ' ')
+    f = ("Règle commune des places de prison (Le Pen, Philippe, Lisnard, Retailleau, Zemmour), construction exclue : coût annuel d'un détenu "
+         "47,2 k€ (ministère de la Justice : 129,33 € par jour en 2024, fonctionnement) ; "
+         + ("plan daté (« en 24 mois ») : places ouvertes en entier en 2030, " if daté else "plan sans calendrier publié : 70 % des places ouvertes en 2030, ")
+         + f"{ns} × 47,2 k€" + ("" if daté else " × 70 %") + f" ≈ {_fr(pl, 2)}"
+         + (f" ; peines planchers : 4 000 années de détention de plus par an (loi de 2007, Infostat Justice) × 47,2 k€ ≈ {_fr(PP_VAL, 2)}" if pp else "")
+         + extra_f + f" → −{_fr(c)} ; borne basse avec la construction : 370 k€ la place (Sénat, cité par Montaigne) × {ns} sur 5 ans ≈ {_fr(cons, 2)} "
+         f"de plus → −{_fr(lo)} ; borne haute : moitié des places ouvertes en 2030 ({_fr(half, 2)}"
+         + (f" + peines planchers {_fr(PP_VAL, 2)}" if pp else "") + f") → −{_fr(hi)}")
+    k.update(central=-c, low=-lo, high=-hi, formula=f)
+    _i = [n0 for n0, i in enumerate(k['inputs']) if i['label'] in ("Coût d'un détenu",)]; assert len(_i) == 1, (cid, mid)
+    k['inputs'][_i[0]] = IN_DET
+    if pp and not any(i['label'] == IN_PP['label'] for i in k['inputs']): k['inputs'].insert(_i[0] + 1, IN_PP)
+    assert 'CNAPE' not in json.dumps([i for i in k['inputs'] if i['label'] != IN_PP['label']], ensure_ascii=False), (cid, mid)
+    return m, k
+_old = {(c0, m0): M(c0, m0)['claude']['central'] for c0, m0 in (('le-pen', 'prisons'), ('philippe', 'prisons'), ('lisnard', 'prisons'), ('retailleau', 'securite'), ('zemmour', 'prisons'))}
+assert _old == {('le-pen', 'prisons'): -1.0, ('philippe', 'prisons'): -1.0, ('lisnard', 'prisons'): -0.6, ('retailleau', 'securite'): -1.4, ('zemmour', 'prisons'): -3.2}, _old
+# Le Pen : 30 000 places et peines minimales
+RNPET = 'https://rassemblementnational.fr/petition/face-au-chaos-la-france-en-ordre'
+RNPET_S = "Rassemblement national, pétition « Face au chaos, la France en ordre » (octobre 2026)"
+m, k = _prison('le-pen', 'prisons', 30000, True, False)
+assert m['proposal'] == "Construire 30 000 places de prison."
+m['proposal'] = "Construire 30 000 places de prison ; peines minimales et comparution immédiate des interpellés."
+m['title'] = "30 000 places de prison, peines minimales"
+m['estimates'].append({"source": RNPET_S, "year": 2026, "value": "« Un sursaut pénal : des peines minimales et la comparution immédiate des interpellés »", "low_md": None, "high_md": None, "url": RNPET})
+k['inputs'].append({"label": "Peines minimales (octobre 2026)", "value": "« Un sursaut pénal : des peines minimales et la comparution immédiate des interpellés »", "source": RNPET_S, "url": RNPET})
+k['note'] = ("Calendrier non publié (le camp inscrit 1,0 Md€ en 2027). " + PRIS_N + " Peines minimales : même valeur que les peines planchers de "
+             "Retailleau, Lisnard et Zemmour (loi de 2007) ; par la loi (dispositif de 2007 jugé conforme, le juge pouvant y déroger).")
+# Philippe : 30 000 places (peines planchers ciblées non comptées)
+m, k = _prison('philippe', 'prisons', 30000, False, False)
+k['note'] = ("Calendrier non publié. " + PRIS_N + " Loi d'accélération des prisons : contenu non publié (voie juridique : loi ordinaire). Peines "
+             "planchers pour les violences contre les dépositaires de l'autorité publique et les professeurs : champ plus étroit que la loi de 2007 "
+             "(base de la valeur commune des peines planchers), non comptées.")
+MISS_ADD('philippe', "peines planchers pour les violences contre les dépositaires de l'autorité publique et les professeurs (champ plus étroit que la "
+         "loi de 2007, base de la valeur commune des peines planchers de Le Pen, Lisnard, Retailleau et Zemmour : aucune base officielle ouverte de ce champ)")
+# Lisnard : 20 000 places et peines planchers des récidivistes
+NESEC = 'https://www.unenouvelleenergie.fr/notre-programme/securite/'; NESEC_S = "Nouvelle Énergie, programme « Sécurité »"
+m, k = _prison('lisnard', 'prisons', 20000, True, False)
+assert m['proposal'] == "Construire 20 000 places de prison supplémentaires."
+m['proposal'] = "Construire 20 000 places de prison supplémentaires ; rétablir les peines planchers pour les récidivistes."
+m['title'] = "20 000 places de prison, peines planchers"
+m['estimates'].append({"source": NESEC_S, "year": 2026, "value": "« rétablir les peines planchers pour les récidivistes »", "low_md": None, "high_md": None, "url": NESEC})
+k['inputs'].append({"label": "Peines planchers (programme)", "value": "« rétablir les peines planchers pour les récidivistes »", "source": NESEC_S, "url": NESEC})
+k['note'] = ("Calendrier non publié. " + PRIS_N + " Peines planchers des récidivistes : même champ que la loi de 2007, même valeur que Le Pen, "
+             "Retailleau et Zemmour ; par la loi.")
+# Retailleau : 40 000 places et peines minimales (pacte constitutionnel)
+m, k = _prison('retailleau', 'securite', 40000, True, False)
+k['note'] = ("Calendrier non publié. " + PRIS_N + " 40 000 places depuis le 12/11/2026 (franceinfo et BFMTV ; 10 000 dans le plan du 12/10). "
+             "Places de prison : capacités à bâtir, comme dans les autres fiches prisons : " + PRIS_OB0[len("Capacités à bâtir (places et surveillants) : "):-1]
+             + ". Cette partie relève de « sous conditions » ; le verdict de la fiche suit l'obstacle le plus fort, le pacte constitutionnel. "
+             "Peines minimales : même valeur que Le Pen, Lisnard et Zemmour (loi de 2007).")
+_t = [e for e in m['estimates'] if e['source'] == "Terra Nova (via CNAPE)"]; assert len(_t) == 1
+# Zemmour : 100 000 places en 24 mois et peines planchers
+PRIO_Z = 'https://www.ericzemmour.fr/priorites'; PRIO_ZS = "Site de campagne d'É. Zemmour, « Nos priorités pour les Français » (relu le 24/11/2026)"
+CIT_ZPR = "Prélèvements des amendes sur les salaires et les aides sociales, construction de 100 000 places de prison en 24 mois."
+m, k = _prison('zemmour', 'prisons', 100000, True, True)
+assert m['proposal'].startswith("Recruter 40 000 gardiens de prison et construire très rapidement 100 000 places de prison supplémentaires, en préfabriqué.")
+m['proposal'] = ("Recruter 40 000 gardiens de prison et construire 100 000 places de prison supplémentaires en 24 mois, en préfabriqué ; rétablir "
+                 "les peines planchers.")
+m['title'] = "100 000 places de prison, peines planchers"
+m['estimates'].insert(0, {"source": PRIO_ZS, "year": 2026, "value": "« " + CIT_ZPR + " » ; « Peines plancher et loi anti-casseurs. »", "low_md": None, "high_md": None, "url": PRIO_Z})
+k['inputs'].insert(0, {"label": "Proposition (site de campagne)", "value": "« " + CIT_ZPR + " » ; « Peines plancher et loi anti-casseurs. »", "source": PRIO_ZS, "url": PRIO_Z})
+m['obstacle'] = ("Capacités à bâtir (places et surveillants) : 100 000 places annoncées en 24 mois, quand le programme de 15 000 places lancé en "
+                 "2018 en a livré 7 684 brutes (5 711 nettes) ; 63 303 places opérationnelles pour 90 173 détenus au 10/09/2026.")
+k['note'] = (PRIS_N + " Calendrier publié : 100 000 places « en 24 mois » (site de campagne, relu le 24/11/2026) : places ouvertes en entier "
+             "en 2030 ; borne basse : construction étalée sur le mandat si le calendrier glisse. 40 000 gardiens de prison (franceinfo, 12/11/2026) : "
+             "ils servent les places du même plan ; le coût annuel d'un détenu (47,2 k€, la même valeur pour les cinq candidats) comprend le "
+             "personnel : au barème des recrutements publics, 40 000 × 61,6 k€ ≈ 2,5 Md€, compris dans les 4,7 Md€ comptés pour 100 000 places, "
+             "sans ajout (pas de double compte). Redit à Toulon le 21/11/2026 (100 000 places et « le rétablissement des peines planchers », RCF) ; "
+             "le chiffre de 200 000 donné par des directs du 12/11 n'est pas redit : 100 000 gardés. Peines planchers : même valeur que Le Pen, "
+             "Lisnard et Retailleau (loi de 2007) ; par la loi.")
+for cid, mid in (('le-pen', 'prisons'), ('philippe', 'prisons'), ('lisnard', 'prisons'), ('retailleau', 'securite'), ('zemmour', 'prisons')):
+    assert not re.search(r"32 000|32 k€|quatre candidats", json.dumps(M(cid, mid)['claude'], ensure_ascii=False)), (cid, mid)
+    if cid != 'retailleau': assert M(cid, mid)['verdict'] == 'sous_conditions'
+# (3) Inflation commune : une seule prévision officielle pour toutes les mesures qui en dépendent (gels, années blanches, désindexations,
+#     indexations ; fiches et simulateur) : la plus récente, celle du projet de loi de finances pour 2027 (rapport économique, social et
+#     financier, publié le 6/10/2026, après les projections de la Banque de France du 15/09/2026) : prix à la consommation hors tabac (indice
+#     des revalorisations) +2,1 % en 2026, +1,7 % en 2027, +1,75 % par an de 2028 à 2030 (tableau « Principaux indicateurs du scénario
+#     macroéconomique 2025-2030 »). Attal (année blanche de 2028, revalorisations calculées sur 2027 : 1,7 % ; médiane des chiffrages ramenés
+#     à cette inflation), Lisnard (gel d'un an, IPP calculé pour +2,5 % au 1/01/2027 : ramené à 1,7 %), Mélenchon (point d'indice indexé :
+#     2028, 2029 et désormais 2030, la prévision de 2029 étant publiée), simulateur (1,7 % au lieu de 1,8 %).
+RESF = 'https://www.tresor.economie.gouv.fr/Articles/03454e04-445d-4ce6-832b-cff601a11485/files/56839f98-37fc-48d8-b502-81cac5a48cad'
+RESF_S = "Projet de loi de finances pour 2027, rapport économique, social et financier (6/10/2026)"
+IN_INF = {"label": "Inflation prévue (valeur commune)",
+          "value": ("Prix à la consommation hors tabac : +2,1 % en 2026, +1,7 % en 2027, +1,75 % par an de 2028 à 2030 (tableau « Principaux "
+                    "indicateurs du scénario macroéconomique 2025-2030 »)"),
+          "source": RESF_S, "url": RESF}
+INF27 = 1.7
+# Attal : année blanche de 2028
+m = M('attal', 'annee_blanche'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (5.0, 1.8, 6.0)
+assert k['formula'].startswith("Chiffrages 2026 (3,6 et 4,3 Md€ pour ≈1,3 % d'inflation) rapportés à 1,8 % d'inflation")
+_a, _b = 3.6 * INF27 / 1.3, 4.3 * INF27 / 1.3
+k['formula'] = ("Chiffrages 2026 (3,6 et 4,3 Md€ pour ≈ 1,3 % d'inflation) rapportés à l'inflation de 2027 qui fixe les revalorisations de 2028, "
+                f"1,7 % (valeur commune, projet de loi de finances pour 2027) : {_fr(_a, 2)} et {_fr(_b, 2)}, médiane ≈ +{_fr((_a + _b) / 2)} Md€ ; borne haute "
+                f"{_fr(_b)} ; borne basse : prestations hors pensions seules (1,3 × 1,7/1,3 = 1,7), si la plupart des pensions sont exemptées")
+k.update(central=round((_a + _b) / 2, 1), low=1.7, high=round(_b, 1))
+assert k['central'] == 5.2 and k['high'] == 5.6
+k['inputs'].append(IN_INF)
+k['note'] = k['note'].replace("Dépend de l'inflation en 2028 et du seuil des petites retraites.", "Dépend de l'inflation de 2027 (1,7 % prévus) et du seuil des petites retraites.")
+s = C['attal']['sim']; assert s['gel_pct'] == 1.8; s['gel_pct'] = INF27
+assert s['gel_note'].count("(inflation prévue 1,8 %)") == 1
+s['gel_note'] = s['gel_note'].replace("(inflation prévue 1,8 %)", "(inflation prévue pour 2027 : 1,7 %, projet de loi de finances pour 2027)")
+# Lisnard : gel d'un an des pensions au-delà de 2 200 €
+m = M('lisnard', 'gel_pensions'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (2.5, 1.2, 5.0)
+_r = INF27 / 2.5; _c = (2.8 - 0.2 * 1.6) * _r
+k['formula'] = ("IPP (note n° 129, 28/09/2026) : désindexation pour un an des pensions de base des retraités dont la retraite brute totale dépasse "
+                "2 000 € ≈ 2,8 Md€ ; au-delà de 3 000 € ≈ 1,2 ; seuil de 2 200 € brut par interpolation ≈ 2,48, pour une revalorisation évitée de "
+                f"2,5 % (hypothèse de l'IPP au 1/01/2027) ; ramené à l'inflation commune (1,7 %, projet de loi de finances pour 2027) : × 1,7/2,5 ≈ +{_fr(_c)} "
+                "(un an de gel, effet durable sur le niveau des pensions en 2030, même lecture que l'année blanche d'Attal) ; borne haute : gel "
+                f"renouvelé une 2e année (+1,75 %) ≈ +{_fr(2.48 * (1.7 + 1.75) / 2.5)} ; borne basse : seuil de 3 000 € (seuil net ou gel limité à la part au-delà "
+                f"du seuil) ≈ +{_fr(1.2 * _r)}")
+k.update(central=round(_c, 1), low=round(1.2 * _r, 1), high=round(2.48 * (1.7 + 1.75) / 2.5, 1))
+assert (k['central'], k['low'], k['high']) == (1.7, 0.8, 3.4), (k['central'], k['low'], k['high'])
+k['inputs'].append(IN_INF)
+IPP129 = 'https://www.ipp.eu/wp-content/uploads/2026/09/Note_contribution_retraites_129.pdf'
+k['inputs'].append({"label": "Hypothèse d'inflation de l'IPP", "value": "« revalorisés comme l'inflation prévue (+2,5 % au 1er janvier 2027) » ; seuil : retraités « dont la retraite brute totale (tous régimes) » dépasse 2 000 ou 3 000 €", "source": "IPP, note n° 129 (septembre 2026)", "url": IPP129})
+s = C['lisnard']['sim']; assert s['gel_pct'] == 1.8 and s['gel_min'] == 2200
+s['gel_pct'] = INF27
+s['gel_min'] = 2000
+s['gel_note'] = ("Pensions au-dessus de 2 200 € brut par mois (≈ 2 000 € net au taux normal de CSG, seuil lu en brut comme dans la fiche) non "
+                 "revalorisées pendant un an (inflation prévue pour 2027 : 1,7 %, projet de loi de finances pour 2027 ; durée non publiée)")
+# Mélenchon : point d'indice indexé (2028, 2029, 2030)
+m = M('melenchon', 'point_indice'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-33.3, -33.3, -22.0)
+_cum = (1.017 * 1.0175 * 1.0175 - 1) * 100; _ix = 2.4 * 1.1 * _cum
+k['formula'] = ("+1 % de la valeur du point = 2,4 Md€ par an (Gouvernement, juillet 2026) ; +10 % (publié, immédiat) ≈ −24,0 Md€ ; indexation sur "
+                "l'inflation ensuite (programme du 6/11/2026), par rapport au droit en vigueur (point non indexé) : 2,4 × 1,1 par point d'inflation "
+                "cumulée, inflation commune (projet de loi de finances pour 2027, prix hors tabac : 1,7 % en 2027, 1,75 % en 2028 et en 2029) "
+                f"appliquée en 2028, 2029 et 2030, soit +{_fr(_cum, 2)} % : ≈ −{_fr(_ix)} ; total ≈ −{_fr(24.0 + _ix)} Md€ ; borne haute : chiffre du camp pour "
+                f"les +10 % (17) et une seule année d'indexation (1,7 % : −{_fr(2.64 * 1.7)}), soit −{_fr(17 + 2.64 * 1.7)} ; repères plus anciens : Montaigne "
+                "2024 (20), OFCE 2024 (23), Cour des comptes 2022 (20,7)")
+k.update(central=-round(24.0 + _ix, 1), low=-round(24.0 + _ix, 1), high=-round(17 + 2.64 * 1.7, 1))
+assert (k['central'], k['high']) == (-38.0, -21.5), (k['central'], k['high'])
+k['inputs'] = [IN_INF if i['label'] == "Prévisions d'inflation (IPCH)" else i for i in k['inputs']]
+assert IN_INF in k['inputs']
+# (4) Retailleau, revenu d'incitation à l'activité (fiche « travail ») : le barème écrit du candidat (avecretailleau.fr, mesure 03.03 : « Sans
+#     activité ni revenu : 300 euros par mois, complétés par 250 euros dès quinze heures […] Dès la reprise d'un emploi, l'allocation devient un
+#     complément diminué de 30 % du salaire. […] L'allocation s'annule au-delà de 1 833 euros ») prime sur la paraphrase de Public Sénat (« Il
+#     réduit au passage l'allocation de 30 % »), comme au simulateur (S255). Le chiffrage d'une baisse uniforme de 30 % de la dépense (+5,5) ne
+#     correspond pas à ce barème ; aucune base officielle ouverte ne donne la distribution des allocataires du RSA, de la prime d'activité et de
+#     l'ASS par revenu d'activité et par foyer qui permettrait un calcul ascendant : non chiffrable, fourchette indicative en note, même règle que
+#     les allocations uniques d'Attal et de Lisnard (même type). Textes du plan du 12/10 (fiches presse, PDF rouvert) : niveaux annuels de 2032
+#     (colonne « Md€ 2032 ») repris dans les « claimed » et entrées d'avant cette lecture.
+_RFP_S = "Fiches presse du camp (12/10/2026)"
+m = M('retailleau', 'travail'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (5.5, 3.6, 7.4)
+assert m['proposal'] == "RSA, prime d'activité et ASS fusionnés avec 15 h d'activité ; aides plafonnées à 70 % du SMIC."
+m['proposal'] = ("RSA, prime d'activité et ASS fusionnés dans un revenu d'incitation à l'activité (300 € par mois, 550 € dès 15 heures d'activité, "
+                 "puis complément diminué de 30 % du salaire, nul au-delà de 1 833 €) ; aides plafonnées à 70 % du SMIC.")
+k.update(central=0, low=0, high=0, nc=True, method='nc',
+         formula=("Non chiffrable : barème écrit du revenu d'incitation à l'activité (300 € par mois, 550 € dès 15 heures d'activité, complément "
+                  "diminué de 30 % du salaire, nul au-delà de 1 833 €) sans distribution officielle ouverte des allocataires du RSA, de la prime "
+                  "d'activité et de l'ASS par revenu d'activité et par foyer ; plafond à 70 % du SMIC : modalités non publiées ; même règle que les "
+                  "allocations uniques d'Attal et de Lisnard"))
+_i = [i for i in k['inputs'] if i['label'] == "Objectif du camp, chômage et prestations"]; assert len(_i) == 1
+_i[0].update(value="30 Md€ par an en 2032 (fiche 8 : assurance chômage 14, compte social unique 10, impôt sur les sociétés 4, revenu d'incitation à l'activité 2)",
+             source=_RFP_S + ", fiche 8", url=RFP)
+_i = [i for i in k['inputs'] if i['label'] == "Allocation fusionnée"]; assert len(_i) == 1
+_i[0]['label'] = "Allocation fusionnée (paraphrase de presse)"
+assert k['note'].startswith("Plafond à 70 % du SMIC non compté")
+k['note'] = ("Indicatif : jusqu'à +7,4 Md€ si la dépense de RSA, de prime d'activité et d'ASS (24,7 Md€) baissait de 30 % (+3,6 sur le seul RSA), "
+             "lecture de Public Sénat (7/01/2026) qui ne correspond pas au barème écrit : les 30 % y sont un taux de dégressivité sur le salaire, pas "
+             "une baisse uniforme (l'exemple du même article, de 1 486 à 1 153 € pour une mère seule, fait −22 %) ; le camp chiffre le revenu "
+             "d'incitation à l'activité à 2 Md€ en 2032 (fiche 8 du plan). Le simulateur applique le barème écrit. " + k['note'].replace(
+             "seule la part chiffrable indépendamment est comptée (assurance chômage : fiche à part) TF1", "seule la part chiffrable indépendamment est comptée (assurance chômage : fiche à part). TF1"))
+MISS_ADD('retailleau', "revenu d'incitation à l'activité (barème écrit : 300 € par mois, 550 € dès 15 heures d'activité, complément diminué de 30 % "
+         "du salaire, nul au-delà de 1 833 € ; 2 Md€ en 2032 selon le camp ; aucune distribution officielle ouverte des allocataires par revenu "
+         "d'activité et par foyer) et plafond des aides à 70 % du SMIC (10 Md€ en 2032 selon le camp ; modalités non publiées)")
+# claimed et textes du plan du 12/10 (niveaux annuels de 2032)
+m = M('retailleau', 'fin_maprimerenov')
+assert m['claimed'] == "Bloc d'≈23 Md€ cumulés, non isolé" and m['proposal'].endswith(", dans un bloc d'≈23 Md€ avec l'aide au développement et l'audiovisuel public.")
+m['claimed'] = "2 Md€ par an en 2032 (plan du 12/10/2026, fiche 4)"; m['claimed_md'] = 2.0
+m['proposal'] = "Supprimer MaPrimeRénov' (« Transition : MaPrimeRénov' » : 2 Md€ en 2032 dans le plan du 12/10/2026), avec un relais dont la forme n'est pas publiée."
+k = m['claude']; k['inputs'].append({"label": "Ligne du plan (fiche 4)", "value": "« Transition : MaPrimeRénov' 2,0 » (Md€ 2032)", "source": _RFP_S + ", fiche 4", "url": RFP})
+k['note'] = (k.get('note') or '') + (" Le même plan finance un « relais de MaPrimeRénov' » (fiche 14, avec la TVA sur les certificats : 3 Md€), compté "
+             "dans la fiche « Baisses d'impôts des ménages » (−2,1) ; forme du relais non publiée.")
+m = M('retailleau', 'energie'); assert m['claimed'] == "Inclus dans un bloc de ~23 Md€"
+m['claimed'] = "4 Md€ par an en 2032 (« Énergies intermittentes subventionnées », plan du 12/10/2026, fiche 4)"
+m = M('retailleau', 'ame'); assert m['claimed'] == "Inclus dans le volet immigration"
+m['claimed'] = "0,7 Md€ par an en 2032 (« AME réduite aux soins essentiels et aux mineurs », plan du 12/10/2026, fiche 9)"
+m = M('retailleau', 'menages'); assert m['claimed'] == "21 Md€ (plan du 12/10/2026, annuels ou cumulés non précisés)"
+m['claimed'] = "21 Md€ par an en 2032 (plan du 12/10/2026, fiche 14)"
+m = M('retailleau', 'transmission'); assert m['claimed'] == "Non chiffré"
+m['claimed'] = "Non isolé : ligne « Familles et transmission d'entreprises » de 3 Md€ en 2032 (plan du 12/10/2026, fiche 14)"
+k = M('retailleau', 'cee')['claude']; _a = "retirée de la fiche « Baisses d'impôts des ménages » (−18 → −17,1, total inchangé)"; assert k['note'].count(_a) == 1
+k['note'] = k['note'].replace(_a, "retirée de la fiche « Baisses d'impôts des ménages » (ligne de 3 Md€ ramenée à 2,1 pour le relais de MaPrimeRénov')")
+# seuil « zéro cotisation » : bornes sur les valeurs non arrondies (4,3 × 1,5 × 0,825 ; 4,3 × 0,5 × 0,8)
+k = M('retailleau', 'seuil_zero_cotisation')['claude']; assert (k['low'], k['high']) == (-5.4, -1.8)
+_a = "±50 %, nets de l'impôt récupéré (17,5 % et 20 %) : −5,4 et −1,8"; assert k['formula'].endswith(_a)
+k['formula'] = k['formula'][:-len(_a)] + "±50 %, nets de l'impôt récupéré (17,5 % et 20 %) : 4,3 × 1,5 × 0,825 ≈ −5,3 et 4,3 × 0,5 × 0,8 ≈ −1,7"
+k.update(low=-5.3, high=-1.7)
+# plan IA : les deux montants cumulés convertis par la même règle (3,5/15)
+k = M('retailleau', 'ia')['claude']; assert (k['central'], k['low'], k['high']) == (-2.9, -4.4, -1.5)
+_a = "2 Md€ sur le quinquennat selon le camp, qui les dit autofinancées par l'arrivée de talents (effet de comportement non compté) → 0,4/an ; total ≈ −2,9"
+assert k['formula'].count(_a) == 1
+k['formula'] = k['formula'].replace(_a, ("2 Md€ sur le quinquennat selon le camp, qui les dit autofinancées par l'arrivée de talents (effet de comportement non "
+                                         "compté) → 3,5/15 en 2030 (même règle) ≈ 0,47 ; total ≈ −3,0"))
+k.update(central=-3.0, low=-4.5, high=-1.5)
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
