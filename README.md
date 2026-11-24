@@ -5,12 +5,12 @@ Les programmes des candidats à la présidentielle française de 2027 (1er tour 
 **Site : [p2027.org](https://p2027.org)**
 
 <!-- totaux:debut (généré par pipeline/run.py, ne pas modifier à la main) -->
-Données à jour au 24 novembre 2026 : 8 candidats, 174 mesures.
+Données à jour au 24 novembre 2026 : 8 candidats, 175 mesures.
 
 | Candidat | Parti | Mesures chiffrées | Effet sur le déficit en 2030 (Md€/an) | Fourchette à 80 % |
 | --- | --- | --- | --- | --- |
 | Marine Le Pen | RN | 29 | −88,3 | −116,0 à −70,2 |
-| Jean-Luc Mélenchon | LFI | 28 | −248,2 | −277,4 à −203,4 |
+| Jean-Luc Mélenchon | LFI | 29 | −249,3 | −278,6 à −204,5 |
 | Édouard Philippe | Horizons | 12 | −1,9 | −26,6 à +3,1 |
 | Raphaël Glucksmann | PS-Place publique | 10 | −92,9 | −121,9 à −71,1 |
 | David Lisnard | Nouvelle Énergie | 15 | −40,9 | −51,4 à −33,8 |
