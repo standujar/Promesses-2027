@@ -10,13 +10,13 @@ Données à jour au 24 novembre 2026 : 8 candidats, 177 mesures.
 | Candidat | Parti | Mesures chiffrées | Effet sur le déficit en 2030 (Md€/an) | Fourchette à 80 % |
 | --- | --- | --- | --- | --- |
 | Marine Le Pen | RN | 29 | −88,4 | −116,3 à −69,1 |
-| Jean-Luc Mélenchon | LFI | 30 | −258,1 | −288,7 à −214,6 |
-| Édouard Philippe | Horizons | 12 | −1,7 | −27,9 à +1,8 |
+| Jean-Luc Mélenchon | LFI | 30 | −257,4 | −288,0 à −214,1 |
+| Édouard Philippe | Horizons | 12 | −2,0 | −28,2 à +1,4 |
 | Raphaël Glucksmann | PS-Place publique | 9 | −88,5 | −117,3 à −67,3 |
-| David Lisnard | Nouvelle Énergie | 15 | −41,0 | −54,8 à −35,7 |
-| Gabriel Attal | Renaissance | 7 | −60,9 | −71,2 à −56,3 |
-| Bruno Retailleau | LR | 22 | −27,2 | −34,6 à −14,8 |
-| Éric Zemmour | Reconquête | 18 | −117,5 | −135,4 à −88,9 |
+| David Lisnard | Nouvelle Énergie | 15 | −41,4 | −55,1 à −36,2 |
+| Gabriel Attal | Renaissance | 7 | −61,0 | −71,3 à −56,5 |
+| Bruno Retailleau | LR | 22 | −27,6 | −34,9 à −15,2 |
+| Éric Zemmour | Reconquête | 18 | −118,3 | −135,7 à −89,7 |
 <!-- totaux:fin -->
 
 Un montant négatif creuse le déficit. Ces totaux supposent que toutes les mesures passent, y compris celles qui exigent une révision de la Constitution ou des traités. Les mesures non reconfirmées en 2026 et celles dont un paramètre clé n'est pas publié sont hors total.
