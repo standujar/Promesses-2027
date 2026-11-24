@@ -2952,7 +2952,7 @@
 "retailleau.fin_maprimerenov": {
 "pour": "Une part des travaux aidés se ferait sans aide, et les économies réelles restent modestes.",
 "preuve_pour": "mitigé",
-"contre": "Sans aide, moins de ménages isoleraient leur logement, et leur consommation resterait haute.",
+"contre": "Le relais n'est pas décrit ; or l'aide actuelle fait réaliser plus de travaux d'isolation.",
 "preuve_contre": "mitigé",
 "cas_pour": [
 {
@@ -3156,10 +3156,10 @@
 ]
 },
 "retailleau.securite": {
-"complement": "Le même programme prévoit aussi des places de prison et des centres pour courtes peines, sans chiffre.",
+"complement": "Le même programme prévoit aussi des places de prison en plus et des centres pour courtes peines.",
 "complement_ref": [
 "retailleau.securite",
-"retailleau.securite.2"
+"retailleau.securite.4"
 ],
 "constat": "Violences physiques hors famille +32 %, viols et tentatives +239 % de 2016 à 2025 ; vols violents −46 % (SSMSI).",
 "constat_s": [
@@ -5190,7 +5190,7 @@
 ],
 "pour": "Rendre l'enfant moins coûteux accroît un peu les naissances, surtout au 1er et au 3e enfant.",
 "preuve_pour": "mitigé",
-"contre": "Seuls les foyers aisés y gagnent : 86 % des foyers touchés par le plafond sont parmi les 20 % les plus aisés.",
+"contre": "Le gain va surtout aux plus aisés : 86 % des foyers touchés par le plafond sont parmi les 20 % les plus aisés.",
 "preuve_contre": "solide",
 "cas_pour": [
 {
@@ -5915,43 +5915,65 @@
 "le-pen.prisons": {
 "constat": "Détenus : 90 937 au 1er octobre 2026 (+7,2 % en un an) pour 63 452 places, soit 143 % d'occupation (Justice).",
 "constat_s": [
-2
+4
 ],
-"pour": "Écourter les peines fait récidiver : la grâce collective de 1996 a accru la récidive à cinq ans.",
+"pour": "Une peine minimale connue d'avance dissuade la récidive et écarte plus longtemps les récidivistes.",
 "preuve_pour": "mitigé",
-"contre": "Les places neuves se remplissent aussitôt, et purger sa peine sous bracelet fait moins récidiver.",
-"preuve_contre": "mitigé",
+"contre": "L'effet dissuasif observé est faible, alors que les places de prison se construisent lentement.",
+"preuve_contre": "solide",
 "cas_pour": [
 {
-"t": "La grâce collective du 14 juillet 1996 a accru la récidive, cinq ans après leur sortie, des détenus libérés plus tôt grâce à elle (Maurin et Ouss, France, 2009).",
-"s": [
-3
-]
-}
-],
-"cas_contre": [
-{
-"t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+"t": "Après la loi de 2007 sur les peines planchers, les récidivistes ont commis 13 % de délits visés en moins dans les quatre ans suivant leur sortie (IPP, France, 2024).",
 "s": [
 0
 ]
 },
 {
-"t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+"t": "Les peines planchers de 2007 n'étaient prononcées que dans 38 % des cas possibles en 2010, les juges pouvant y déroger (ministère de la Justice, France, 2012).",
 "s": [
 1
 ]
 }
 ],
-"etudes": "Une évaluation française (grâce collective de 1996) : écourter les peines accroît la récidive ; mais purger sa peine sous bracelet fait moins récidiver que la prison, et le nombre de détenus suit celui des places.",
+"cas_contre": [
+{
+"t": "Avec les peines planchers, la peine des récidivistes a presque doublé (230 à 430 jours), sans dissuasion à court terme ni baisse des autres délits (IPP, France, 2024).",
+"s": [
+0
+]
+},
+{
+"t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+"s": [
+2
+]
+},
+{
+"t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+"s": [
+3
+]
+}
+],
+"etudes": "Une évaluation française rigoureuse (IPP, 2024) : moins de récidive ciblée à quatre ans, pas de dissuasion à court terme, nettement plus d'incarcération.",
 "src": [
+{
+"l": "IPP, note n° 105 « Les peines planchers sont-elles un outil efficace pour éviter la récidive ? »",
+"a": 2024,
+"u": "https://www.ipp.eu/wp-content/uploads/2024/03/Note_IPP_105_peines_planchers.pdf"
+},
+{
+"l": "Ministère de la Justice, Infostat Justice n° 118 « Peines planchers : application et impact de la loi du 10 août 2007 »",
+"a": 2012,
+"u": "https://www.justice.gouv.fr/sites/default/files/migrations/portail/art_pix/stat_infostat_118_20121017.pdf"
+},
 {
 "l": "Sénat, commission des finances, rapport d'information n° 37 (2023-2024), plan 15 000 places (synthèse)",
 "a": 2023,
 "u": "https://www.senat.fr/rap/r23-037/r23-0370.html"
 },
 {
-"l": "Henneguelle, Monnery et Kensey, Better at Home than in Prison? The Effects of Electronic Monitoring on Recidivism in France (Journal of Law and Economics)",
+"l": "Henneguelle, Monnery et Kensey, Journal of Law and Economics",
 "a": 2016,
 "u": "https://chicagounbound.uchicago.edu/jle/vol59/iss3/6/"
 },
@@ -5959,11 +5981,6 @@
 "l": "Ministère de la Justice, Mesure de l'incarcération, indicateurs clés au 1er octobre 2026",
 "a": 2026,
 "u": "https://www.justice.gouv.fr/sites/default/files/2026-11/mesure_mensuelle_01102026.pdf"
-},
-{
-"l": "Maurin et Ouss, « Sentence Reductions and Recidivism: Lessons from the Bastille Day Quasi Experiment » (IZA DP n° 3990)",
-"a": 2009,
-"u": "https://www.iza.org/publications/dp/3990"
 }
 ]
 },
@@ -6220,74 +6237,64 @@
 ]
 },
 "melenchon.planification": {
-"constat": "Dégâts aux maisons dus à la sécheresse des sols : record en 2022, 2,4 à 2,9 Md€ (Cour des comptes).",
+"constat": "Mises en chantier : 262 000 logements en 2025, −29 % depuis 2016 ; passoires : 12,7 % des résidences principales en 2025 (SDES).",
 "constat_s": [
-3
+3,
+4,
+2
 ],
-"pour": "Après le plan créé en 2003, la canicule de 2006 a fait environ 4 400 morts de moins que prévu.",
-"preuve_pour": "mitigé",
-"contre": "Ce type d'enveloppe se rabote : le fonds vert des communes a été divisé par trois en deux ans.",
-"preuve_contre": "mitigé",
+"pour": "Après isolation aidée, les maisons au gaz les plus énergivores consomment 12,7 % de moins.",
+"preuve_pour": "solide",
+"contre": "Les économies mesurées après isolation n'atteignent qu'environ 42 % de celles calculées sur plan.",
+"preuve_contre": "solide",
 "cas_pour": [
-{
-"t": "Après les alertes et mesures de prévention créées à la suite de 2003, la canicule de 2006 a causé environ 4 400 décès de moins que prévu (Fouillet et al., France, 2008).",
-"s": [
-0
-]
-},
 {
 "t": "Après des travaux d'isolation aidés, les maisons chauffées au gaz ont consommé 6,6 % de moins, et 12,7 % de moins pour les plus énergivores (Insee-SDES, France, 2026).",
 "s": [
-4
+0
 ]
 }
 ],
 "cas_contre": [
 {
-"t": "Le Fonds vert des collectivités, qui finance aussi l'adaptation, a été divisé par trois de 2024 à 2026, raboté à chaque étape budgétaire (I4CE, France, 2026).",
+"t": "644 000 dossiers aidés en 2021, au-delà de l'objectif ; début 2023, 73 % finançaient un seul geste et 1,7 % une rénovation complète (France Stratégie, France, 2024).",
 "s": [
 1
 ]
 },
 {
-"t": "Les communes de montagne subventionnent surtout la neige de culture, protection « relative et transitoire » de moins en moins efficace (Cour des comptes, France, 2024).",
-"s": [
-2
-]
-},
-{
 "t": "Les économies d'énergie mesurées après isolation n'atteignent qu'environ 42 % de celles calculées sur plan (Insee-SDES, France, 2026).",
 "s": [
-4
+0
 ]
 }
 ],
-"etudes": "La prévention des canicules a un effet mesuré en France ; aucune évaluation d'un plan d'adaptation d'ensemble ; les rénovations économisent de l'énergie, mais moins que prévu (environ 42 %).",
+"etudes": "Isolation : les mesures françaises sur compteurs concordent, la consommation baisse, mais bien moins que les calculs (environ 42 %). Logements publics : pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent que plus de logements neufs modèrent les loyers, mais que des logements publics en plus remplacent en partie des constructions privées.",
 "src": [
-{
-"l": "Fouillet et al., International Journal of Epidemiology",
-"a": 2008,
-"u": "https://doi.org/10.1093/ije/dym253"
-},
-{
-"l": "I4CE, « Qu'attendre (vraiment) du Fonds vert ? »",
-"a": 2026,
-"u": "https://www.i4ce.org/adaptation-changement-climatique-attendre-fonds-vert/"
-},
-{
-"l": "Cour des comptes, synthèses du rapport public annuel 2024, « Les stations de montagne face au changement climatique »",
-"a": 2024,
-"u": "https://www.ccomptes.fr/sites/default/files/2024-03/20240312-syntheses-RPA-2024.pdf"
-},
-{
-"l": "Cour des comptes, rapport public annuel 2024 (vol. 1), « L'adaptation des logements au changement climatique »",
-"a": 2024,
-"u": "https://www.ccomptes.fr/sites/default/files/2024-03/RPA-2024-volume-1-reduit.pdf"
-},
 {
 "l": "Insee-SDES, document de travail 2025-16, isolation et consommation réelle d'énergie",
 "a": 2026,
 "u": "https://www.insee.fr/fr/statistiques/fichier/version-html/8607754/DT2025-16.pdf"
+},
+{
+"l": "France Stratégie, Comité d'évaluation de France Relance, MaPrimeRénov'",
+"a": 2024,
+"u": "https://www.strategie-plan.gouv.fr/files/files/Publications/Rapport/fs-2024-rapport-france_relance_vol_ii_6_maprimerenov.pdf"
+},
+{
+"l": "SDES, Le parc de logements par classe de performance énergétique au 1er janvier 2025",
+"a": 2025,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/le-parc-de-logements-par-classe-de-performance-energetique-au-1er-janvier-2025"
+},
+{
+"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+},
+{
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
 ]
 },
@@ -6441,8 +6448,9 @@
 ]
 },
 "philippe.armees": {
-"constat": "Réservistes opérationnels des armées : 39 474 fin 2021 ; objectif fixé : 80 000 en 2030 (Sénat).",
+"constat": "Réservistes opérationnels : 44 400 en 2025, +12 % depuis fin 2021 ; objectif : 80 000 en 2030 (ministère des Armées, Sénat).",
 "constat_s": [
+1,
 0
 ],
 "pour": "Les réservistes apportent déjà aux armées l'équivalent de 4 000 militaires à plein temps chaque jour.",
@@ -6457,6 +6465,11 @@
 "l": "Sénat, rapport d'information n° 443 (2022-2023), Transformer les ressources humaines des armées",
 "a": 2023,
 "u": "https://www.senat.fr/rap/r22-443/r22-4434.html"
+},
+{
+"l": "Ministère des Armées, dossier de presse du service national (chiffres clés 2025)",
+"a": 2025,
+"u": "https://www.defense.gouv.fr/sites/default/files/ministere-armees/Dossier%20de%20presse_Service%20national.pdf"
 }
 ]
 },
@@ -7116,43 +7129,65 @@
 "lisnard.prisons": {
 "constat": "Détenus : 90 937 au 1er octobre 2026 (+7,2 % en un an) pour 63 452 places, soit 143 % d'occupation (Justice).",
 "constat_s": [
-2
+4
 ],
-"pour": "Écourter les peines fait récidiver : la grâce collective de 1996 a accru la récidive à cinq ans.",
+"pour": "Une peine minimale connue d'avance dissuade la récidive et écarte plus longtemps les récidivistes.",
 "preuve_pour": "mitigé",
-"contre": "Les places neuves se remplissent aussitôt, et purger sa peine sous bracelet fait moins récidiver.",
-"preuve_contre": "mitigé",
+"contre": "L'effet dissuasif observé est faible, alors que les places de prison se construisent lentement.",
+"preuve_contre": "solide",
 "cas_pour": [
 {
-"t": "La grâce collective du 14 juillet 1996 a accru la récidive, cinq ans après leur sortie, des détenus libérés plus tôt grâce à elle (Maurin et Ouss, France, 2009).",
-"s": [
-3
-]
-}
-],
-"cas_contre": [
-{
-"t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+"t": "Après la loi de 2007 sur les peines planchers, les récidivistes ont commis 13 % de délits visés en moins dans les quatre ans suivant leur sortie (IPP, France, 2024).",
 "s": [
 0
 ]
 },
 {
-"t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+"t": "Les peines planchers de 2007 n'étaient prononcées que dans 38 % des cas possibles en 2010, les juges pouvant y déroger (ministère de la Justice, France, 2012).",
 "s": [
 1
 ]
 }
 ],
-"etudes": "Une évaluation française (grâce collective de 1996) : écourter les peines accroît la récidive ; mais purger sa peine sous bracelet fait moins récidiver que la prison, et le nombre de détenus suit celui des places.",
+"cas_contre": [
+{
+"t": "Avec les peines planchers, la peine des récidivistes a presque doublé (230 à 430 jours), sans dissuasion à court terme ni baisse des autres délits (IPP, France, 2024).",
+"s": [
+0
+]
+},
+{
+"t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+"s": [
+2
+]
+},
+{
+"t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+"s": [
+3
+]
+}
+],
+"etudes": "Une évaluation française rigoureuse (IPP, 2024) : moins de récidive ciblée à quatre ans, pas de dissuasion à court terme, nettement plus d'incarcération.",
 "src": [
+{
+"l": "IPP, note n° 105 « Les peines planchers sont-elles un outil efficace pour éviter la récidive ? »",
+"a": 2024,
+"u": "https://www.ipp.eu/wp-content/uploads/2024/03/Note_IPP_105_peines_planchers.pdf"
+},
+{
+"l": "Ministère de la Justice, Infostat Justice n° 118 « Peines planchers : application et impact de la loi du 10 août 2007 »",
+"a": 2012,
+"u": "https://www.justice.gouv.fr/sites/default/files/migrations/portail/art_pix/stat_infostat_118_20121017.pdf"
+},
 {
 "l": "Sénat, commission des finances, rapport d'information n° 37 (2023-2024), plan 15 000 places (synthèse)",
 "a": 2023,
 "u": "https://www.senat.fr/rap/r23-037/r23-0370.html"
 },
 {
-"l": "Henneguelle, Monnery et Kensey, Better at Home than in Prison? The Effects of Electronic Monitoring on Recidivism in France (Journal of Law and Economics)",
+"l": "Henneguelle, Monnery et Kensey, Journal of Law and Economics",
 "a": 2016,
 "u": "https://chicagounbound.uchicago.edu/jle/vol59/iss3/6/"
 },
@@ -7160,54 +7195,71 @@
 "l": "Ministère de la Justice, Mesure de l'incarcération, indicateurs clés au 1er octobre 2026",
 "a": 2026,
 "u": "https://www.justice.gouv.fr/sites/default/files/2026-11/mesure_mensuelle_01102026.pdf"
-},
-{
-"l": "Maurin et Ouss, « Sentence Reductions and Recidivism: Lessons from the Bastille Day Quasi Experiment » (IZA DP n° 3990)",
-"a": 2009,
-"u": "https://www.iza.org/publications/dp/3990"
 }
 ]
 },
 "zemmour.prisons": {
 "constat": "Détenus : 90 937 au 1er octobre 2026 (+7,2 % en un an) pour 63 452 places, soit 143 % d'occupation (Justice).",
 "constat_s": [
-2
+4
 ],
-"pour": "Écourter les peines fait récidiver : la grâce collective de 1996 a accru la récidive à cinq ans.",
+"pour": "Une peine minimale connue d'avance dissuade la récidive et écarte plus longtemps les récidivistes.",
 "preuve_pour": "mitigé",
-"contre": "Les places neuves se remplissent aussitôt, et purger sa peine sous bracelet fait moins récidiver.",
-"preuve_contre": "mitigé",
+"contre": "L'effet dissuasif observé est faible, alors que les places de prison se construisent lentement.",
+"preuve_contre": "solide",
 "cas_pour": [
 {
-"t": "La grâce collective du 14 juillet 1996 a accru la récidive, cinq ans après leur sortie, des détenus libérés plus tôt grâce à elle (Maurin et Ouss, France, 2009).",
-"s": [
-3
-]
-}
-],
-"cas_contre": [
-{
-"t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+"t": "Après la loi de 2007 sur les peines planchers, les récidivistes ont commis 13 % de délits visés en moins dans les quatre ans suivant leur sortie (IPP, France, 2024).",
 "s": [
 0
 ]
 },
 {
-"t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+"t": "Les peines planchers de 2007 n'étaient prononcées que dans 38 % des cas possibles en 2010, les juges pouvant y déroger (ministère de la Justice, France, 2012).",
 "s": [
 1
 ]
 }
 ],
-"etudes": "Une évaluation française (grâce collective de 1996) : écourter les peines accroît la récidive ; mais purger sa peine sous bracelet fait moins récidiver que la prison, et le nombre de détenus suit celui des places.",
+"cas_contre": [
+{
+"t": "Avec les peines planchers, la peine des récidivistes a presque doublé (230 à 430 jours), sans dissuasion à court terme ni baisse des autres délits (IPP, France, 2024).",
+"s": [
+0
+]
+},
+{
+"t": "Le plan de 15 000 places de prison n'en avait livré que 2 771 à mi-2023, et la population carcérale suit le rythme des places créées (Sénat, France, 2023).",
+"s": [
+2
+]
+},
+{
+"t": "Purger sa peine sous bracelet électronique plutôt qu'en prison réduit de 6 à 7 points le risque d'une nouvelle condamnation à cinq ans (Henneguelle et al., France, 2016).",
+"s": [
+3
+]
+}
+],
+"etudes": "Une évaluation française rigoureuse (IPP, 2024) : moins de récidive ciblée à quatre ans, pas de dissuasion à court terme, nettement plus d'incarcération.",
 "src": [
+{
+"l": "IPP, note n° 105 « Les peines planchers sont-elles un outil efficace pour éviter la récidive ? »",
+"a": 2024,
+"u": "https://www.ipp.eu/wp-content/uploads/2024/03/Note_IPP_105_peines_planchers.pdf"
+},
+{
+"l": "Ministère de la Justice, Infostat Justice n° 118 « Peines planchers : application et impact de la loi du 10 août 2007 »",
+"a": 2012,
+"u": "https://www.justice.gouv.fr/sites/default/files/migrations/portail/art_pix/stat_infostat_118_20121017.pdf"
+},
 {
 "l": "Sénat, commission des finances, rapport d'information n° 37 (2023-2024), plan 15 000 places (synthèse)",
 "a": 2023,
 "u": "https://www.senat.fr/rap/r23-037/r23-0370.html"
 },
 {
-"l": "Henneguelle, Monnery et Kensey, Better at Home than in Prison? The Effects of Electronic Monitoring on Recidivism in France (Journal of Law and Economics)",
+"l": "Henneguelle, Monnery et Kensey, Journal of Law and Economics",
 "a": 2016,
 "u": "https://chicagounbound.uchicago.edu/jle/vol59/iss3/6/"
 },
@@ -7215,11 +7267,6 @@
 "l": "Ministère de la Justice, Mesure de l'incarcération, indicateurs clés au 1er octobre 2026",
 "a": 2026,
 "u": "https://www.justice.gouv.fr/sites/default/files/2026-11/mesure_mensuelle_01102026.pdf"
-},
-{
-"l": "Maurin et Ouss, « Sentence Reductions and Recidivism: Lessons from the Bastille Day Quasi Experiment » (IZA DP n° 3990)",
-"a": 2009,
-"u": "https://www.iza.org/publications/dp/3990"
 }
 ]
 },
@@ -9438,6 +9485,66 @@
 "l": "Maurin et Ouss, « Sentence Reductions and Recidivism: Lessons from the Bastille Day Quasi Experiment » (IZA DP n° 3990)",
 "a": 2009,
 "u": "https://www.iza.org/publications/dp/3990"
+}
+]
+},
+"melenchon.service_citoyen": {
+"pour": "Au volontariat, le séjour de cohésion a peu mêlé les milieux : 5 % de jeunes des quartiers, 9 % attendus.",
+"preuve_pour": "faible",
+"contre": "Les structures prêtes à accueillir des jeunes en mission manquent déjà, et aucun effet durable n'est mesuré.",
+"preuve_contre": "faible",
+"cas_pour": [
+{
+"t": "Laissé au volontariat, le séjour de cohésion a peu mélangé les milieux : 5 % de jeunes des quartiers prioritaires, contre 9 % dans la population (Cour des comptes, France, 2024).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [
+{
+"t": "Pour leur mission d'intérêt général, les jeunes du service national universel ont eu du mal à trouver des structures d'accueil, déjà très sollicitées (Cour des comptes, France, 2024).",
+"s": [
+0
+]
+}
+],
+"etudes": "Pas d'évaluation française d'un service obligatoire ; le séjour volontaire actuel a peu mélangé les milieux et manqué de structures d'accueil (Cour des comptes, 2024). Des évaluations à l'étranger, dans des contextes différents, trouvent plus de confiance entre jeunes d'origines différentes après un service commun, sans gain de salaire.",
+"src": [
+{
+"l": "Cour des comptes, Le Service national universel : un premier bilan, cinq années après son lancement",
+"a": 2024,
+"u": "https://www.vie-publique.fr/files/rapport/pdf/295374.pdf"
+}
+]
+},
+"philippe.service_national": {
+"pour": "Au volontariat, le séjour de cohésion a peu mêlé les milieux : 5 % de jeunes des quartiers, 9 % attendus.",
+"preuve_pour": "faible",
+"contre": "Les structures prêtes à accueillir des jeunes en mission manquent déjà, et aucun effet durable n'est mesuré.",
+"preuve_contre": "faible",
+"cas_pour": [
+{
+"t": "Laissé au volontariat, le séjour de cohésion a peu mélangé les milieux : 5 % de jeunes des quartiers prioritaires, contre 9 % dans la population (Cour des comptes, France, 2024).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [
+{
+"t": "Pour leur mission d'intérêt général, les jeunes du service national universel ont eu du mal à trouver des structures d'accueil, déjà très sollicitées (Cour des comptes, France, 2024).",
+"s": [
+0
+]
+}
+],
+"etudes": "Pas d'évaluation française d'un service obligatoire ; le séjour volontaire actuel a peu mélangé les milieux et manqué de structures d'accueil (Cour des comptes, 2024). Des évaluations à l'étranger, dans des contextes différents, trouvent plus de confiance entre jeunes d'origines différentes après un service commun, sans gain de salaire.",
+"src": [
+{
+"l": "Cour des comptes, Le Service national universel : un premier bilan, cinq années après son lancement",
+"a": 2024,
+"u": "https://www.vie-publique.fr/files/rapport/pdf/295374.pdf"
 }
 ]
 }

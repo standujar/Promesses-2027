@@ -6274,10 +6274,10 @@
    "sujet": "Philippe : service militaire volontaire porté de 3 000 à 50 000 places, absent de la page « Défense » du 18/11",
    "detail": "La fiche « Réservistes et volontaires » compte les volontaires (≈ 0,23 Md€ sur −0,8) d'après la page « Défense » du 12/11 (« faire passer le service militaire volontaire de 3 000 à 50 000 places par an »). La page mise à jour le 18/11 (https://www.edouardphilippe.fr/programme/defense, relue le 24/11) ne cite plus que le service national obligatoire et universel (option militaire ou civile) et les 250 000 réservistes. Vérifier si la hausse du service militaire volontaire est abandonnée ou reprise dans l'option militaire du service national (règle de reconfirmation, mesure par mesure, même traitement que les autres mesures retirées d'un programme).",
    "echeance": null,
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-24",
    "maj": "2026-11-24",
-   "resolution": null
+   "resolution": "Résolu le 24/11 (audit, bloc « review 60 ») : page « Défense » du 18/11 relue : le service militaire volontaire de 3 000 à 50 000 places n'y figure plus (remplacé par le service national obligatoire et universel, fiche à part) ; règle des mesures non reconfirmées, jugée mesure par mesure : volontaires retirés de la fiche « Réservistes » (−0,8 → −0,54 ; bornes −0,85 et −0,54) ; quiz limité aux réservistes. Philippe −1,9 → −1,7."
   },
   {
    "id": "S375",
@@ -6290,10 +6290,10 @@
    "sujet": "En-têtes : total.independent de Glucksmann et de Lisnard tirés d'anciennes agrégations de travail",
    "detail": "Champs non affichés sur le site mais présents dans les données publiées (public/data/promesses-2027.json) : Glucksmann « ≈ −34 à −1 Md€/an selon les mesures connues (agrégation de travail) », Lisnard « postes vérifiables : +6 à +35 Md€/an, hors 120 Md€ de baisses de charges non chiffrées ». Ce ne sont pas des chiffrages indépendants publiés ; la même règle pour les 8 voudrait « aucun chiffrage global » quand aucun n'existe (comme Philippe, Attal, Retailleau). Relevé en contrôlant les en-têtes le 24/11 (issue n° 81) ; à trancher par la règle commune lors d'une prochaine revue.",
    "echeance": null,
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-24",
    "maj": "2026-11-24",
-   "resolution": null
+   "resolution": "Résolu le 24/11 (audit, bloc « review 60 ») : même règle pour les 8 : chiffrage global indépendant publié, sinon « aucun chiffrage global » (Glucksmann, Lisnard, Philippe) ; programmes antérieurs datés chez Mélenchon et Zemmour ; Le Pen (Institut de l'Entreprise) inchangé."
   },
   {
    "id": "S376",
@@ -6309,6 +6309,741 @@
    "cree": "2026-11-24",
    "maj": "2026-11-24",
    "resolution": "Tranché le 24/11 par la règle commune (bloc « review 59 », (3c)) : une mesure générale qui n'exclut pas le public s'applique aux agents, même règle que les baisses de cotisations annoncées pour « les salariés » chez Attal et Retailleau (appliquées aux agents, hypothèse écrite dans la note). Fiche « carence » (thème travail) : fin du jour de carence −0,25 (valeur commune) + retour au plein traitement en congé de maladie ordinaire −0,9 (nouvelle valeur commune, CLAUDE.md et méthode) = −1,15 ; bornes ±0, comme les jours de carence de Philippe et de Retailleau (chiffrages sans effet de comportement ; les scénarios d'absentéisme des tableaux 14 à 16 ne sont pas des estimations) ; verdict « faisable » (loi : CGFP art. L. 822-3, loi de finances pour 2018 art. 115 ; décret pour les contractuels), financement non précisé. Partie privée (indemnités journalières à 100 %, fin des trois jours de carence du régime général) : coût non publié, aucun chiffrage officiel ouvert, toujours listée non comptée ; auto-déclaration : durée non publiée. Simulateur : note sans montant inchangée (gain seulement en cas d'arrêt). Total de Mélenchon −248,2 → −249,3 Md€ ; résumé régénéré (obstacle principal inchangé). À signaler dans la PR."
+  },
+  {
+   "id": "S377",
+   "type": "a_corriger",
+   "candidats": [
+    "le-pen",
+    "philippe",
+    "lisnard",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": "prisons",
+   "sujet": "Prisons : coût d'un détenu de Terra Nova (32 k€) et places comptées en entier en 2030 sans calendrier (audit du 24/11)",
+   "detail": "Les 5 fiches prisons comptaient 32 k€ par détenu (Terra Nova, conférence de consensus, source secondaire ancienne) et 100 % des places en 2030 sans calendrier, alors que la méthode écrit « 70 % du plan en 2030 s'il est sans date, la construction en borne, comme les places de prison ».",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D1 : coût officiel le plus récent, ministère de la Justice, réponse à la question écrite n° 13927 (JO du 26/05/2026, https://questions.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE13927.pdf, ouverte) : « En 2024, le coût moyen d'une journée de détention s'élevait à 129,33 euros » → 47,2 k€ par an (fonctionnement). Règle écrite de la méthode appliquée : plan sans date 70 % en 2030 ; plan daté (Zemmour, « 100 000 places de prison en 24 mois », site relu le 24/11) selon son calendrier ; bornes par la formule des places d'accueil (basse : + construction 370 k€ la place sur 5 ans ; haute : moitié des places). Le Pen −1,0 → −1,2 (peines minimales comprises), Philippe −1,0 → −1,0, Lisnard −0,6 → −0,9, Retailleau (fiche sécurité) −1,4 → −1,5, Zemmour −3,2 → −4,9. Méthode et CLAUDE.md mis à jour ; quiz aligné par l'agent du quiz."
+  },
+  {
+   "id": "S378",
+   "type": "a_corriger",
+   "candidats": [
+    "le-pen",
+    "lisnard",
+    "retailleau",
+    "zemmour",
+    "philippe"
+   ],
+   "mesure": "prisons",
+   "sujet": "Peines planchers comptées chez Retailleau seulement (audit du 24/11)",
+   "detail": "Retailleau : 4 000 années de détention × coût d'un détenu ≈ 0,13 ; Le Pen, Lisnard et Zemmour proposent aussi des peines minimales, sans coût compté.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D4 : base des 0,13 = loi de 2007 (peines minimales des récidivistes), Infostat Justice n° 118 (oct. 2012) cité par Terra Nova (« 4000 années supplémentaires par an », PDF ouvert). Même valeur (4 000 × 47,2 k€ = 0,19) chez chaque candidat qui propose de rétablir des peines minimales générales, reconfirmées en 2026 : Le Pen (pétition du RN, octobre 2026 : « des peines minimales et la comparution immédiate des interpellés », page ouverte), Lisnard (programme « Sécurité » : « rétablir les peines planchers pour les récidivistes »), Zemmour (site de campagne : « Peines plancher et loi anti-casseurs », relu le 24/11), Retailleau. Philippe (violences contre dépositaires de l'autorité publique et professeurs) : champ plus étroit, base non applicable, listée non comptée."
+  },
+  {
+   "id": "S379",
+   "type": "a_corriger",
+   "candidats": [
+    "attal",
+    "lisnard",
+    "melenchon"
+   ],
+   "mesure": "annee_blanche",
+   "sujet": "Inflation : trois hypothèses différentes pour les gels et indexations (audit du 24/11)",
+   "detail": "Attal (année blanche) ramenait ses chiffrages à 1,8 % sans médiane réelle (5,0 au lieu de 5,5) ; Lisnard (gel des pensions) reprenait l'IPP calculé pour 2,5 % ; Mélenchon (point d'indice) prenait la Banque de France du 15/09 (1,9 % puis 1,6 %).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D2 : une seule prévision officielle, la plus récente : projet de loi de finances pour 2027, rapport économique, social et financier du 6/10/2026 (PDF ouvert) : prix hors tabac +2,1 % (2026), +1,7 % (2027), +1,75 % par an (2028-2030). Attal +5,0 → +5,2 (médiane de 4,71 et 5,62 ; bornes 1,7 et 5,6) ; Lisnard +2,5 → +1,7 (IPP note 129 : +2,5 % au 1/01/2027, vérifié ; bornes 0,8 et 3,4 ; seuil lu en brut, simulateur ≈ 2 000 € net) ; Mélenchon point d'indice −33,3 → −38,0 (indexations de 2028, 2029 et 2030, la prévision de 2029 étant publiée) ; simulateur 1,8 → 1,7 % (Attal, Lisnard ; test du gel d'Attal mis à jour : −18 au lieu de −19). Règle écrite dans CLAUDE.md et la méthode."
+  },
+  {
+   "id": "S380",
+   "type": "a_corriger",
+   "candidats": [
+    "retailleau"
+   ],
+   "mesure": "travail",
+   "sujet": "Retailleau, revenu d'incitation à l'activité compté comme une baisse uniforme de 30 % (audit du 24/11)",
+   "detail": "La fiche comptait +5,5 Md€ (−30 % sur RSA, prime d'activité, ASS) d'après une paraphrase de Public Sénat ; le barème écrit (avecretailleau.fr, mesure 03.03) fait des 30 % un taux de dégressivité sur le salaire.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D3 : l'écrit du candidat prime ; aucune distribution officielle ouverte des allocataires par revenu d'activité et par foyer : non chiffrable (fourchette indicative jusqu'à +7,4 en note ; le camp chiffre le RIA à 2 Md€ en 2032, fiche 8 du plan, PDF ouvert), comme les allocations uniques d'Attal et de Lisnard. Retailleau −21,5 → −27,2 (avec le plan IA, −2,9 → −3,0 : 3,5/15 appliqué aux deux montants cumulés). Entrée « 30 Md€ sur cinq ans » corrigée (« 30 Md€ par an en 2032 », fiche 8)."
+  },
+  {
+   "id": "S381",
+   "type": "a_corriger",
+   "candidats": [
+    "zemmour"
+   ],
+   "mesure": "fraude",
+   "sujet": "Zemmour, fraude sociale listée non comptée « champ non publié » (audit du 24/11)",
+   "detail": "La ligne 5 de budget2027.fr a un champ : « Lutte contre la fraude sociale et retrait des aides sociales pour les délinquants et criminels. 2 à 3 Md€ » (relue le 24/11).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D5 : règle commune (leviers du CAE selon le champ, plafonnés au chiffre du camp), même champ et même calcul que Retailleau : 0,36 + 0,25 + 0,23 = +0,84 (borne basse moitié) ; plafond 1,4 non atteint ; retrait des aides des délinquants non compté. Zemmour −116,6 → −117,5 (avec les prisons)."
+  },
+  {
+   "id": "S382",
+   "type": "a_corriger",
+   "candidats": [
+    "melenchon",
+    "glucksmann"
+   ],
+   "mesure": "aide_developpement",
+   "sujet": "Aide au développement : base 2023 (0,50 %) et verdicts différents (audit du 24/11)",
+   "detail": "OCDE, Development Co-operation Profiles, France (PDF ouvert) : « 0.42% of GNI » en 2025 (données préliminaires), déjà source du quiz de Zemmour ; Glucksmann « sous conditions », Mélenchon « faisable » pour la même mesure.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D6 : base 0,42 % (règle des objectifs en niveau, 70 % sans date) : −4,5 → −6,2 (bornes −8,9 plan entier, −4,5 retour à 0,50 %) ; verdict « faisable » pour les deux (S223). Mélenchon compté ; Glucksmann hors total (à confirmer)."
+  },
+  {
+   "id": "S383",
+   "type": "a_corriger",
+   "candidats": [
+    "philippe",
+    "lisnard",
+    "attal"
+   ],
+   "mesure": "fonction",
+   "sujet": "Plans de postes : borne basse hors secteurs visés (Philippe, Lisnard) et obstacle d'Attal sur le stock (audit du 24/11)",
+   "detail": "Règle : un départ sur trois non remplacé sur 3,5 ans « dans les secteurs visés » ; Attal et Zemmour restreignent, Philippe et Lisnard non ; l'obstacle d'Attal parlait des agents et non des sorties.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D7 : Philippe et Lisnard, borne basse sur les agents hors secteurs épargnés (62,7 %, même part que Zemmour, faute de part publiée des « fonctions de bureau » ou « administratives et de support ») : +5,2 → +3,2 ; obstacles avec la part des sorties dans les secteurs épargnés ; Attal : sorties de la fonction publique civile, environ 48 % dans l'État hors ministères épargnés et les collectivités, sans les hôpitaux. Valeurs centrales inchangées."
+  },
+  {
+   "id": "S384",
+   "type": "a_corriger",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": null,
+   "sujet": "Mélenchon : chiffrages indépendants oubliés (cantine, petite enfance, 19 élèves par classe) et double compte SMIC / point d'indice (audit du 24/11)",
+   "detail": "Institut Montaigne 2024 (gratuité intégrale, 11,8 Md€ pour le public), 2022 (500 000 places en crèche ; 19 élèves par classe, 6,8 Md€), pages ouvertes ; l'étude du SMIC compte la masse salariale publique (−3,7, page ouverte).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D8, règle « médiane des chiffrages crédibles » : cantine −7,2 → −9,5 (médiane de 7,2 et 11,8) ; petite enfance −5,2 → −3,7 (Montaigne 2022 : 4,3 Md€ en 5e année avec participation des familles, 70 %, + gratuité des crèches publiques 0,69) ; nouvelle fiche « 19 élèves par classe » −4,8 (6,8 × 70 %, objectif « en un mandat » ; les 10 000 enseignants de la note du 14/10 y sont compris). SMIC : règle du plancher, part publique (3,7 × 15,0/13,2 = 4,2) couverte aux deux tiers par les +10 % du point : −21,6 → −18,8. Montants non projetés (même règle que les autres fiches Montaigne). Mélenchon −249,3 → −258,1 (avec point d'indice, APD, AAH, Zucman)."
+  },
+  {
+   "id": "S385",
+   "type": "a_corriger",
+   "candidats": [
+    "glucksmann"
+   ],
+   "mesure": "heritages",
+   "sujet": "Glucksmann : CSG progressive (baisse dégressive selon le salaire) jugée « faisable » (audit du 24/11)",
+   "detail": "Barème du 4/11/2026 (4,9 % à 9,2 % selon le salaire) ; décision n° 2000-437 DC (cons. 9, ouverte) : réduction dégressive de CSG censurée faute de tenir compte des autres revenus et des charges de famille ; S167 garde l'argument pour une baisse dégressive.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D9 : règle des verdicts (censure probable, décisions sur des dispositifs proches) : « très difficile », obstacle écrit ; résumé recomposé (« l'accord des autres pays européens, pour la saisie des avoirs russes, et le risque de censure, pour la CSG progressive »). Même contrôle chez les 8 : aucune autre baisse dégressive (Lisnard, Zemmour : uniformes ; Attal : suppression du taux sur les salaires, même taux pour tous). Formule : part non déductible écrite 2,4 points (droit actuel), la campagne écrivant 6,4 points déductibles."
+  },
+  {
+   "id": "S386",
+   "type": "a_confirmer",
+   "candidats": [
+    "glucksmann"
+   ],
+   "mesure": "defense",
+   "sujet": "Glucksmann, défense européenne de 500 Md€ : seule source le projet « Acte I » de 2025 (audit du 24/11)",
+   "detail": "Aucune source de 2026 du candidat (site, livret du 9/11, Public Sénat du 24/08/2026 sur ses propositions, newsletter du 31/03/2025 seulement) ; obstacles européens nommant des pays (défense, industrie).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D10 : règle des mesures non reconfirmées : « à confirmer », hors total, comme l'aide au développement tirée du même document. Glucksmann −92,9 → −88,5. Obstacles sans nom de pays, même forme que les autres (défense : unanimité du Conseil et ratification de la décision ressources propres ; industrie : compétence de l'UE à la majorité qualifiée, règles de l'OMC). À rouvrir si la mesure est reprise en 2026 (part française de 17,5 % à sourcer alors)."
+  },
+  {
+   "id": "S387",
+   "type": "source_faible",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "dette",
+   "sujet": "Mélenchon, annulation de la dette BCE : borne haute tirée de dettedelafrance.fr (audit du 24/11)",
+   "detail": "Domaine de weak_domains ; chez Le Pen, francebudget.fr ne sert plus de borne.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D11 : borne retirée (0 et 0 ; iFRAP : aucun gain réel) ; fiche chiffrée à 0 (clé « zero » : pas « non chiffrable »), comptée « si elle passe » comme avant."
+  },
+  {
+   "id": "S388",
+   "type": "a_corriger",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "glucksmann",
+    "philippe",
+    "lisnard",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": "retraites",
+   "sujet": "Valeurs communes : Zucman, AAH, retour à 62 ans, suspension (audit du 24/11)",
+   "detail": "Zucman : « médiane de 20, 5, 5,5, 1,25 » = 5,25 et non 5 ; AAH de Mélenchon au montant de 2025 (1 033,32 €) ; bornes de la composante 62 ans différentes (Glucksmann −12,3/−8,6 avec un chiffre de 2035 ; Le Pen et Mélenchon sans fourchette) ; 1,8 Md€ de suspension sans source.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D12 : Zucman 5,25 (médiane réelle ; Mélenchon +21,4 → +21,65 ; Glucksmann hors total) ; AAH sur 1 041,59 € (−9,5 → −9,3 ; dépense du PAP 2026, PAP 2027 du programme 157 non ouvert : point à part) ; composante 62 ans bornée de −12,3 à −10,0 chez les trois (chiffrages pour 2030 moins 1,8) ; suspension sourcée par le COR (rapport annuel 2026, synthèse, PDF ouvert : « coût de 1,8 milliard d'euros en moyenne en année pleine jusqu'en 2032 ») dans les 7 fiches retraites qui l'utilisent ; ASPA : montants à jour (1 043,59 €) chez Le Pen et Zemmour, et une seule règle d'actualisation des aides réservées (part des étrangers seule, montants inchangés) pour les 4 fiches (Zemmour : bornes 2,7 et 8,1, central inchangé)."
+  },
+  {
+   "id": "S389",
+   "type": "a_trancher",
+   "candidats": [
+    "le-pen",
+    "philippe",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour",
+    "melenchon"
+   ],
+   "mesure": null,
+   "sujet": "Poste public 61,6 k€ : numérateur et dénominateur de champs différents (note primaire de la Cour des comptes)",
+   "detail": "Note de la Cour des comptes du 21/09/2026 sur la masse salariale publique (https://www.ccomptes.fr/sites/default/files/2026-09/20260921-note-structurelle-Masse-salariale_0.pdf, ouverte le 24/11) : valeurs confirmées (362,1 Md€ en 2024 ; 5,88 millions d'agents). Champs : 362,1 Md€ = « masse salariale brute des administrations publiques » au sens de la comptabilité nationale (244,6 de salaires et traitements bruts + 117,6 de cotisations employeurs, y compris les employés des organismes de sécurité sociale et des ODAC hors fonction publique et les contrats aidés) ; 5,88 millions = agents des trois fonctions publiques au 31/12/2024, en personnes physiques (temps partiels comptés comme des personnes), hors contrats aidés (Insee Première n° 2094). Le ratio mêle donc deux champs ; le sens de l'écart n'est pas établi sans les effectifs des administrations publiques en équivalent temps plein.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Valeur non changée (consigne) ; source primaire citée à la place du Journal de l'économie dans toutes les fiches. À trancher : garder 61,6 k€ ou recalculer sur un même champ (masse salariale des trois fonctions publiques / agents, ou masse APU / emploi APU en équivalent temps plein)."
+  },
+  {
+   "id": "S390",
+   "type": "a_corriger",
+   "candidats": [
+    "lisnard"
+   ],
+   "mesure": null,
+   "sujet": "Lisnard : succession, CSG déductible, économies, gain des cotisations, quotient (audit du 24/11)",
+   "detail": "Ligne directe 65 % (100 − 35 de collatéraux, non-parents comptés à tort) ; revenus de remplacement non chiffrés alors que la base est dans le tableau DSS cité ; « sous conditions » sans condition extérieure ; « 250 à 400 € » périmé ; « plancher » sous lequel tombait la borne haute.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D13 : succession −10,4 → −8,5 (annexe 7 de la Cour des comptes, PDF déjà cité : enfants 7,1 sur 13,4 Md€) ; CSG et CRDS déductibles −3,8 → −4,7 (revenus de remplacement : CSG 28 089 M€, CRDS déduite de 8 302 M€, même tableau DSS, téléchargé ; ventilation par taux non publiée, estimée par le taux moyen ; bornes 20,9 % et CSG seule) ; « Économies » « faisable » (S223) ; cotisations « 200 à 400 € net par mois pour 2 200 € net » et −27,8 ; règle du simulateur écrite (sans renvoi à Attal) ; quotient : central = médiane du seul doublement ; en-tête « aucun chiffrage global ». Lisnard −40,9 → −41,0 (avec le gel des pensions et les prisons)."
+  },
+  {
+   "id": "S391",
+   "type": "a_corriger",
+   "candidats": [
+    "attal",
+    "retailleau",
+    "philippe",
+    "lisnard",
+    "glucksmann",
+    "melenchon"
+   ],
+   "mesure": "profs",
+   "sujet": "Hausses des enseignants et services civiques : bornes de règles différentes (audit du 24/11)",
+   "detail": "Attal (borne basse « ≈ 4 Md€ » sans règle), Retailleau (±50 %), Philippe et Lisnard (borne haute −2,7 sans règle) ; engagement civique d'Attal sans les 5 Md€ d'accueil collectif ajoutés chez Glucksmann et Mélenchon.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D14 : hausses en euros par mois (Attal, Retailleau) : bornes au barème commun, montant publié le plus bas et le plus haut appliqués à tous, 70 % (Attal −1,7/−4,3 ; Retailleau −1,2/−2,6) ; +20 % de Philippe et Lisnard : borne haute = part explicite (toute la hausse), égale au central (−5,5) ; Attal engagement civique borne basse −5,5. Coût d'Attal : la citation du Monde (« elle coûte entre 2,5 et 3 milliards d'euros ») est bien dans la page de Capital (ouverte le 24/11, article sur plusieurs candidats) : chiffre du camp inchangé (−1,9)."
+  },
+  {
+   "id": "S392",
+   "type": "a_corriger",
+   "candidats": [
+    "le-pen"
+   ],
+   "mesure": null,
+   "sujet": "Le Pen : immigration (deux millésimes Insee), note du fioul, « petites retraites revalorisées » sans source de 2026 (audit du 24/11)",
+   "detail": "Formule 13,7 % (tableau de 2026) / 11,7 % (version citée par Montaigne) ; note du simulateur annonçant 4,50 c€ sur le fioul, non calculé ; aucune source de 2026 sur les petites retraites (réforme du 17/11 relue).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D15 : même tableau Insee (06/07/2026) : 13,66 % / 11,55 % → prestations familiales 4,5, fiche +8,3 → +8,4 (si elle passe) ; note du fioul alignée sur le simulateur (non calculé) ; « petites retraites revalorisées » retiré du simulateur."
+  },
+  {
+   "id": "S393",
+   "type": "a_corriger",
+   "candidats": [
+    "zemmour",
+    "retailleau",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "melenchon"
+   ],
+   "mesure": null,
+   "sujet": "Simulateur : textes et paramètres périmés ou sans source (audit du 24/11)",
+   "detail": "Zemmour : aides « aux Français » codées « hors UE » ; Retailleau : ASPA retirée sous la condition de 5 ans alors que le livret du 12/11 maintient dix ans, hébergement d'urgence ; Philippe : CFE supprimée sans source de 2026 ; Glucksmann « plus tard pour les cadres » ; Lisnard « âge limite de l'apprentissage abaissé » ; Attal : minimum vieillesse gelé pour un couple sous le seuil ; Mélenchon : pensions indexées « sur les salaires ».",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D16 : Zemmour, nouvelle condition « réservées aux Français » (Européens compris), note de l'accise (« 40 centimes par litre », JDD) ; Retailleau, minimum vieillesse hors de la condition (clé etr.aspa), texte du livret, MaPrimeRénov' « supprimée, remplacée par un relais dont la forme n'est pas publiée » ; Philippe, page « Entreprises » du 18/11 relue (aucun impôt nommé) : gain de CFE retiré, note ; la fiche des 50 Md€ reste comptée (pacte reconfirmé), sans obstacle de compensation (aucun impôt local nommé) ; Glucksmann, textes de 2026 (17/11) et éléments d'Acte I marqués « 2025, non reconfirmés » ; Lisnard, ligne retirée (aucune source) ; Attal, gel du minimum vieillesse jugé par personne pour un couple (épargné sous 1 200 €) ; Mélenchon, pensions indexées sur l'inflation (note du 14/10) et liste non comptée. Tests mis à jour avec la raison (Zemmour : perte aussi pour un Européen ; Retailleau : aucune perte d'ASPA ; couple d'Attal épargné)."
+  },
+  {
+   "id": "S394",
+   "type": "a_corriger",
+   "candidats": [
+    "zemmour",
+    "retailleau",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "le-pen",
+    "melenchon",
+    "attal"
+   ],
+   "mesure": null,
+   "sujet": "Textes et sources : en-têtes, sources des candidats, citations coupées, textes périmés (audit du 24/11)",
+   "detail": "Zemmour prisons « Calendrier non publié » malgré « en 24 mois » ; sites des candidats absents des fiches qui en tirent la mesure ; « claimed » d'avant le plan du 12/10 chez Retailleau ; total.independent tirés d'agrégations de travail (S375) ; citations coupées en plein mot (données d'origine tronquées à 120, 160 ou 200 caractères).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Bloc « review 60 » de corrections.py ; audit du 24/11, preuve revérifiée le 24/11. Décision D17 : Zemmour (prisons, aides, AME), Philippe (immigration, réservistes), Glucksmann (service civique, Public Sénat 24/08/2026 ; bornes écrites ; le calcul retiré des estimations publiées) : source du candidat en premier ; Retailleau : claimed en niveaux annuels de 2032 (fiches 4, 9, 14 du plan), note des certificats, bornes du seuil « zéro cotisation » (−5,3/−1,7) ; Glucksmann : en-tête repris du livret du 9/11 (200 Md€, contribution de 50 Md€, dette stabilisée en 2032, PDF ouvert), chèque énergie daté ; Philippe : jeunes parents ±50 % (−1,5), coût d'une année à l'université (12 250 €, même référence que Mélenchon) ; total.independent : « aucun chiffrage global » sauf chiffrage indépendant publié (Glucksmann, Lisnard, Philippe ; Mélenchon et Zemmour : programmes antérieurs datés) ; 30 citations coupées à la fin du dernier mot (« […] »), titre du tableau du RN rétabli. Mélenchon, niches : source LCP du 14/10/2026 (demande de l'agent du quiz)."
+  },
+  {
+   "id": "S395",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen"
+   ],
+   "mesure": "tva",
+   "sujet": "Le Pen, TVA à 5,5 % : carburants et fioul hors de l'annexe III de la directive TVA ? (audit du 24/11, non confirmé)",
+   "detail": "L'obstacle dit que la directive 2022/542 interdit les taux réduits sur les énergies fossiles « à partir de 2030 » ; l'audit avance que les carburants ne figurent pas à l'annexe III (taux réduit impossible dès aujourd'hui). Non vérifié sur le texte consolidé de la directive le 24/11 : verdict inchangé (très difficile).",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S396",
+   "type": "a_verifier",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "planification",
+   "sujet": "Mélenchon, 200 000 logements publics par an : chiffrage Montaigne 2022 (2,1 Md€ par an) au lieu du chiffre du camp (3,1) ? (audit du 24/11)",
+   "detail": "Règle des budgets ligne à ligne : dépense = médiane indépendante. Champ de l'étude (coût pour l'État, aides à la pierre, années) à vérifier avant de remplacer la ligne.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S397",
+   "type": "a_verifier",
+   "candidats": [
+    "retailleau"
+   ],
+   "mesure": "immigration",
+   "sujet": "Retailleau, immigration : borne haute 7,6 comprend la ligne « étudiants » (1,5) qui a sa propre fiche ? (audit du 24/11)",
+   "detail": "Sans elle : 6,5. Recouvrement faible (la fiche étudiants ne compte que les droits ; la preuve de ressources est non comptée) : à trancher par la règle des doubles comptes.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S398",
+   "type": "a_verifier",
+   "candidats": [
+    "retailleau"
+   ],
+   "mesure": null,
+   "sujet": "Retailleau, arrêt de subventions aux associations (3 Md€) : la revue de dépenses IGF-IGÉSR (mai 2025, scénario 3) chiffre-t-elle les trois leviers ? (audit du 24/11)",
+   "detail": "Fiche 5 du plan (PDF ouvert le 24/11) : trois lignes de 1,0 Md€ « IGF-IGÉSR 2025, scénario 3 ». Si la revue chiffre ces leviers, c'est un chiffrage indépendant (règle des budgets publiés) ; revue non ouverte le 24/11.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S399",
+   "type": "a_verifier",
+   "candidats": [
+    "retailleau"
+   ],
+   "mesure": null,
+   "sujet": "Retailleau, simulateur : condition de 5 ans appliquée aux Européens ? (audit du 24/11)",
+   "detail": "Livret du 12/11/2026 : « aux étrangers non européens » (p. 50) mais « critères … identiques quelle que soit la nationalité » (p. 11). Contradiction de la source ; simulateur inchangé (toute nationalité non française).",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S400",
+   "type": "a_verifier",
+   "candidats": [
+    "lisnard",
+    "attal",
+    "zemmour",
+    "glucksmann"
+   ],
+   "mesure": null,
+   "sujet": "Base de la CSG (12,0 Md€ par point, prévision 2025 du PLFSS 2025) : valeur plus récente dans le PLFSS 2027 ? (audit du 24/11)",
+   "detail": "Vérifier l'annexe du PLFSS 2027 (réalisé 2025, prévision 2026) ; si elle diffère, mettre à jour la valeur commune (CLAUDE.md, méthode, fiches CSG des 4).",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S401",
+   "type": "a_verifier",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "aah",
+   "sujet": "Mélenchon, AAH : dépense du PAP 2027 (programme 157) non ouverte (24/11)",
+   "detail": "Fiche passée au montant maximal en vigueur (1 041,59 €) ; dépense toujours celle du PAP 2026 (14 681 M€) : reprendre la dépense du PAP 2027 dès qu'il est ouvert.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S402",
+   "type": "a_verifier",
+   "candidats": [
+    "attal"
+   ],
+   "mesure": "annee_blanche",
+   "sujet": "Attal : sources primaires des chiffrages de l'année blanche ; effet annoncé de la Vie quotidienne « 2,5 Md€ par son équipe » (24/11)",
+   "detail": "Chiffrages tirés de reprises de presse (IPP via le Journal de l'économie, PLFSS 2026 via Public Sénat) : citer la note de l'IPP et l'annexe du PLFSS. Vie quotidienne (école) : « Revalorisation chiffrée à 2,5 Md€ par son équipe » alors que la fiche cite le candidat au Monde (« entre 2,5 et 3 milliards », page de Capital ouverte le 24/11) : aligner le texte de la Vie quotidienne.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S403",
+   "type": "a_verifier",
+   "candidats": [
+    "glucksmann"
+   ],
+   "mesure": "retraites",
+   "sujet": "Glucksmann, retraites : émission « Le Grand enjeu » citée par Entrevue (statut de média reconnu, S198) (audit du 24/11)",
+   "detail": "Citer l'émission d'origine (ICI-franceinfo) plutôt que la reprise d'Entrevue.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S404",
+   "type": "a_verifier",
+   "candidats": [
+    "attal"
+   ],
+   "mesure": null,
+   "sujet": "Attal : « classes de moins de 20 élèves » listées non comptées sans source ni date (24/11)",
+   "detail": "Contrôle du même type que la nouvelle fiche « 19 élèves par classe » de Mélenchon (règle n° 1) : texte hérité de la base d'origine ; retrouver une source de 2026 (sinon retirer la mention) ou chiffrer par la même règle.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S405",
+   "type": "a_verifier",
+   "candidats": [
+    "lisnard"
+   ],
+   "mesure": "csg_deductible",
+   "sujet": "Lisnard, CSG déductible : ventilation de la CSG sur les revenus de remplacement par taux (24/11)",
+   "detail": "La part au taux de 8,3 % (≈ 51 %) est estimée par le taux moyen (6,1 % sur l'assiette de la CRDS) en supposant deux taux (8,3 et 3,8 %) ; une ventilation officielle (DSS, Drees) permettrait le calcul exact.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
+  },
+  {
+   "id": "S406",
+   "type": "a_verifier",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "planification",
+   "sujet": "Quiz : la proposition « plan d'urgence climat » ne décrit plus la fiche comptée (audit du 24/11)",
+   "detail": "Le quiz décrivait l'ancien plan d'urgence (écoles, hôpitaux, pompiers, sécheresses) alors que la fiche comptée (−13,5 Md€) est faite des plans d'investissement publiés (BTP et logement : 200 000 logements publics, 700 000 isolations, chaudières ; automobile ; textile), et sa note dit que le plan d'urgence n'est pas ajouté.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 (règle : le quiz décrit la fiche comptée) : texte « Investir chaque année dans des logements publics, l'isolation des logements et les filières automobile et textile » ; constat (mises en chantier et passoires, SDES), « Pour » et « Contre » sur les mêmes cas que les propositions « isolation » et « 200 000 logements publics » du même candidat (Insee-SDES 2026, France Stratégie 2024) ; famille « Plan public de logement et de rénovation énergétique » (planification, logement.1, logement.2) pour qu'elles ne reviennent pas dans la même partie."
+  },
+  {
+   "id": "S407",
+   "type": "a_verifier",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": null,
+   "sujet": "Vie quotidienne, environnement : effet annoncé « −65 % en 2030 » (audit du 24/11)",
+   "detail": "La proposition affichée et le programme (L'Avenir en commun, « Pour une bifurcation écologique et sociale », chap. 1, relu le 24/11) disent « d'ici 2033 ».",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 (life.py, review 60) : « −65 % d'émissions de gaz à effet de serre d'ici 2033 »."
+  },
+  {
+   "id": "S408",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen"
+   ],
+   "mesure": "immigration",
+   "sujet": "Quiz : allocations familiales « aux Français, ou aux étrangers après 5 ans de travail » (audit du 24/11)",
+   "detail": "Le contre-budget du groupe RN (p. 3, relu le 24/11) distingue « Prestations non-contributives soumises à 5 ans ETP travaillés 7,5 » et « Allocations familiales réservées aux foyers dont un parent est français 2,2 » ; la fiche compte l'étude Montaigne de cette condition.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 : « Réserver les allocations familiales aux foyers dont un parent est français, et le RSA aux Français ou aux étrangers après 5 ans de travail » ; concrètement ajusté."
+  },
+  {
+   "id": "S409",
+   "type": "a_verifier",
+   "candidats": [
+    "melenchon"
+   ],
+   "mesure": "niches",
+   "sujet": "Quiz : niches fiscales (emploi à domicile, Dutreil) et crédit d'impôt recherche (audit du 24/11)",
+   "detail": "Le quiz citait l'emploi à domicile sans le crédit d'impôt recherche, seule niche du programme écrit du 6/11. Vérifié le 24/11 : le crédit d'impôt recherche, le pacte Dutreil et le crédit d'impôt pour l'emploi à domicile sont cités par LCP (« Contre-budget : LFI propose 106,4 milliards d'euros de recettes supplémentaires… », 14/10/2026, https://lcp.fr/actualites/contre-budget-lfi-propose-1064-milliards-d-euros-de-recettes-supplementaires-et-817) ; la note LFI du 14/10 parle seulement de « rabotage et suppression des niches fiscales et sociales les plus injustes ».",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 : quiz « Supprimer le crédit d'impôt recherche et raboter d'autres avantages fiscaux, dont celui pour l'emploi à domicile » ; « Pour », « Contre » et cas inchangés (ils portent déjà sur ces trois niches). La mention « cités en octobre 2026 » de la fiche a donc une source (LCP, 14/10) à ajouter aux estimations de la fiche (corrections.py)."
+  },
+  {
+   "id": "S410",
+   "type": "a_verifier",
+   "candidats": [
+    "lisnard"
+   ],
+   "mesure": null,
+   "sujet": "Quiz de Lisnard : retraites, CSG des actifs, quotient familial (audit du 24/11)",
+   "detail": "(1) Retraites : « développer l'épargne retraite individuelle » contredit l'« étage de capitalisation collective obligatoire » (tribune du 17/11, Grand Oral du 22/11, compte rendu du parti relu). (2) CSG des actifs : seul texte du type à citer un financement (« grâce aux économies de l'État ») et limité aux salaires, alors que la mesure vise les revenus d'activité, indépendants compris, comme Zemmour. (3) Quotient : « Seuls les foyers aisés y gagnent » contredit le cas cité (86 %, IGAS-IGF 2021).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 (même gabarit pour le même type) : (1) « Repousser la retraite à 65 ans et placer une part des cotisations dans une épargne retraite collective obligatoire » ; (2) « Baisser la CSG prélevée sur les salaires et les revenus des indépendants » / « … la Sécurité sociale perd une partie de cette recette » ; (3) « Le gain va surtout aux plus aisés : 86 % … »."
+  },
+  {
+   "id": "S411",
+   "type": "a_verifier",
+   "candidats": [
+    "lisnard"
+   ],
+   "mesure": "cotisations",
+   "sujet": "Vie quotidienne, économie : effet annoncé « 250 à 400 €/mois » (audit du 24/11)",
+   "detail": "La source écrite la plus récente du parti (Nouvelle Énergie, compte rendu BFMTV du 4/11/2026, relu le 24/11) : « une augmentation de revenu net comprise entre 200 et 400 euros mensuels » pour un salarié à 2 200 € net.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 (life.py) : « 200 à 400 €/mois net pour un salaire de 2 200 € net (4/11), estimation du camp » (la proposition de la fiche est corrigée dans corrections.py)."
+  },
+  {
+   "id": "S412",
+   "type": "a_verifier",
+   "candidats": [
+    "philippe"
+   ],
+   "mesure": "armees",
+   "sujet": "Quiz : constat des réservistes (39 474 fin 2021) et service militaire volontaire (audit du 24/11 ; S374)",
+   "detail": "Dernier chiffre officiel : « 44 400 réservistes opérationnels sous contrat » en 2025 (ministère des Armées, dossier de presse du service national, relu le 24/11) ; Sénat (rapport n° 443, 2022-2023) : 39 474 au 31/12/2021, 80 000 visés en 2030. La page « Défense » du candidat (mise à jour le 18/11, relue le 24/11) ne cite plus le service militaire volontaire porté à 50 000 (seulement le service national obligatoire et 250 000 réservistes).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 : constat « Réservistes opérationnels : 44 400 en 2025, +12 % depuis fin 2021 ; objectif : 80 000 en 2030 (ministère des Armées, Sénat) » ; texte limité aux réservistes (règle des mesures non reconfirmées, mesure par mesure : la fiche suit S374)."
+  },
+  {
+   "id": "S413",
+   "type": "a_verifier",
+   "candidats": [
+    "glucksmann"
+   ],
+   "mesure": "leasing_social",
+   "sujet": "Vie quotidienne, environnement : « 1 million de ménages modestes équipés » (audit du 24/11)",
+   "detail": "Le livret « Révolution écologique » du 9/11 (relu le 24/11) : « 1 million de voitures électriques sur 5 ans, à 100 € par mois et sans apport, dont 100 000 […] auxiliaires de vie et professionnels du soin en zone rurale » ; aucune condition de ressources publiée ; coût de 6 Md€ annoncé par le candidat (AFP, 2/10).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 (life.py) : « 1 million de voitures électriques en leasing social sur cinq ans, coût annoncé de 6 Md€ »."
+  },
+  {
+   "id": "S414",
+   "type": "a_verifier",
+   "candidats": [
+    "zemmour"
+   ],
+   "mesure": null,
+   "sujet": "Vie quotidienne de Zemmour : AME, impôts de production, défense (audit du 24/11)",
+   "detail": "(1) Santé : « Supprimer l'AME, hors aide médicale d'urgence » marqué « 2022, non reconfirmée » alors que la fiche est comptée et que le site de 2026 dit « Supprimer l'AME qui soigne les clandestins avec votre argent » (page « Nos priorités », relue le 24/11). (2) Économie : baisse de 30 Md€ de 2022 affichée alors que la fiche compte la version de Toulon (« verra disparaître les impôts de production », Capital, article relu le 24/11). (3) Rayonnement : effet annoncé « environ 3 % du PIB » tiré d'un agrégateur ; le programme de 2022 (p. 17) dit 70 Md€ en 2030, soit 70 / 3 399 Md€ (PIB 2030 courant, scénario du PLF 2027) ≈ 2,1 %.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 (life.py et life-attribution.json) : (1) « Supprimer l'aide médicale d'État (AME) », 2026, précise, source : site de campagne ; (2) « Supprimer les impôts de production », 2026, précise, en tête du thème (règle d'ordre, S106), source : Capital ; (3) « Défense à 70 Md€ en 2030, environ 2,1 % du PIB (programme 2022) », même forme que Le Pen."
+  },
+  {
+   "id": "S415",
+   "type": "a_verifier",
+   "candidats": [
+    "retailleau"
+   ],
+   "mesure": null,
+   "sujet": "Vie quotidienne de Retailleau : école (effet annoncé) et économie (impôts de production) (audit du 24/11)",
+   "detail": "(1) École : « Salaires enseignants rapprochés de la moyenne européenne (non chiffré) » alors que LR (« Éducation », 31/08, PDF relu le 24/11) chiffre +135 € net en début de carrière, environ +300 € au cœur de carrière, plus de 3 Md€ par an en fin de quinquennat ; Attal : « chiffrée à 2,5 Md€ par son équipe ». (2) Économie : « Supprimer les impôts de production » reprend la ligne de la fiche 14 du plan (15 Md€) ; la mesure n° 34 du site (11/09, relue le 24/11) en donne le contenu : C3S supprimée, forfait social refondu, part industrielle de la CFE exonérée, CVAE (déjà supprimée par la loi).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 (life.py, life-attribution.json) : (1) « +135 € net par mois en début de carrière, environ +300 € au cœur de carrière ; plus de 3 Md€ par an selon son camp » ; (2) « Supprimer la C3S, refondre le forfait social et exonérer la part industrielle de la CFE, dans 30 Md€ de baisses pour les entreprises », sources : mesure n° 34 et fiches presse du 12/10."
+  },
+  {
+   "id": "S416",
+   "type": "a_verifier",
+   "candidats": [
+    "retailleau"
+   ],
+   "mesure": "fin_maprimerenov",
+   "sujet": "Quiz et simulateur : « fin de l'aide de l'État pour isoler » alors que le plan finance un relais de MaPrimeRénov' (audit du 24/11)",
+   "detail": "Fiche 14 des fiches presse du 12/10 (PDF relu) : « Relais de MaPrimeRénov' et TVA sur les certificats 3,0 », compté dans la fiche « Baisses d'impôts des ménages » (−2,1, relais de forme non publiée ; crédit d'impôt selon une source non reconnue, S369), et la fin de MaPrimeRénov' comptée (+2,0).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Tranché le 24/11 (règle : une seule lecture pour la fiche, le simulateur et le quiz ; la lecture des fiches est gardée) : quiz « Supprimer la prime publique à la rénovation énergétique des logements, remplacée par un relais non précisé » ; « Contre » : « Le relais n'est pas décrit ; or l'aide actuelle fait réaliser plus de travaux d'isolation. » Simulateur (corrections.py) : même lecture, « MaPrimeRénov' supprimée, remplacée par un relais dont la forme n'est pas publiée »."
+  },
+  {
+   "id": "S417",
+   "type": "a_verifier",
+   "candidats": [
+    "retailleau"
+   ],
+   "mesure": "securite",
+   "sujet": "Quiz : complément « places de prison … sans chiffre » et renvoi vers la mauvaise proposition (audit du 24/11)",
+   "detail": "La fiche compte 40 000 places depuis le 12/11 et les courtes peines de 15 jours sont la 4e proposition du thème « sécurité » (la 2e est la suppression du juge d'application des peines).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 : « Le même programme prévoit aussi des places de prison en plus et des centres pour courtes peines. », renvoi retailleau.securite et retailleau.securite.4 (sans chiffre : quiz à l'aveugle)."
+  },
+  {
+   "id": "S418",
+   "type": "a_trancher",
+   "candidats": [
+    "zemmour"
+   ],
+   "mesure": "accise",
+   "sujet": "Quiz : « environ 40 centimes de moins » dans le texte concret (audit du 24/11, à vérifier)",
+   "detail": "L'audit voit dans « 40 centimes » le slogan du site du candidat (règle de quiz_plain : pas de chiffre qui trahit le candidat). Le paramètre est publié et confirmé par le candidat (« 40 centimes par litre », JDD, 15/11), et le quiz garde les paramètres publiés des autres mesures (1 700 €, 63 ans, 420 000 logements, 200 000 logements publics, 15 heures…), Le Pen compris (« quelques centimes de moins », d'après les tarifs de 2017).",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Tranché le 24/11 (règle appliquée aux 8 : le texte concret dit l'ordre de grandeur publié de la mesure ; la règle « pas de chiffre qui trahit le candidat » vise les coûts et les chiffres propres à la campagne, pas les paramètres de la mesure) : texte inchangé, comme les autres paramètres publiés."
+  },
+  {
+   "id": "S419",
+   "type": "a_verifier",
+   "candidats": [
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "attal"
+   ],
+   "mesure": "service_citoyen",
+   "sujet": "Quiz : services obligatoires des jeunes de Mélenchon et de Philippe absents du quiz (contrôle du même type, 24/11)",
+   "detail": "Glucksmann (service civique de dix mois) et Attal (un mois d'engagement civique) sont au quiz ; Mélenchon (service citoyen de neuf mois au SMIC, compté) et Philippe (service national obligatoire, page « Défense » du 18/11) ne l'étaient pas.",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 (règle n° 1) : entrées ajoutées, mêmes « Pour », « Contre », cas et état des études que Glucksmann et Attal (Cour des comptes 2024), famille « Service ou engagement obligatoire des jeunes »."
+  },
+  {
+   "id": "S420",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen",
+    "lisnard",
+    "zemmour",
+    "philippe",
+    "retailleau"
+   ],
+   "mesure": "prisons",
+   "sujet": "Quiz : places de prison et peines minimales alignées sur les fiches (24/11)",
+   "detail": "Les fiches prisons de Le Pen, Lisnard et Zemmour comptent désormais aussi les peines minimales (review 60 de corrections.py) ; le quiz disait seulement « Construire beaucoup plus de places de prison ».",
+   "echeance": null,
+   "statut": "resolu",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": "Corrigé le 24/11 : texte « … et rétablir des peines minimales » (Lisnard : pour les récidivistes) ; mêmes « Pour », « Contre », cas et état des études que les peines minimales de Retailleau (IPP 2024, Infostat Justice 2012, Sénat 2023, bracelet 2016), constat des prisons gardé ; Philippe (places seules) inchangé ; famille « Plus de places de prison » (les cinq)."
+  },
+  {
+   "id": "S421",
+   "type": "a_verifier",
+   "candidats": [
+    "le-pen",
+    "melenchon",
+    "philippe",
+    "glucksmann",
+    "lisnard",
+    "attal",
+    "retailleau",
+    "zemmour"
+   ],
+   "mesure": null,
+   "sujet": "Quiz : mesures comptées sans entrée au quiz (contrôle du 24/11)",
+   "detail": "Mesures retenues au total sans entrée dans quiz_plain.json au 24/11 : Le Pen (octroi de mer, mesures sectorielles, hausses de salaire sans cotisations, demi-part des veufs, MaPrimeRénov' en prêt à taux zéro — la proposition « vie quotidienne » est au quiz —, étudiants étrangers) ; Mélenchon (coupes depuis 2026, recherche, culture, aide au développement, AAH, plan contre le racisme, congé d'accueil, petite enfance, carence) ; Philippe (étudiants étrangers, réduction de loyer de solidarité) ; Glucksmann (leasing social, sécurité civile, plan de 200 Md€) ; Lisnard (IFI et droits de mutation, abattement des pensions, asile, règle d'or) ; Attal (écoles rénovées) ; Retailleau (revenu familial, baisses d'impôts des ménages, seuil zéro cotisation, étudiants étrangers, TVA aux communes, pré-apprentissage, immigration irrégulière) ; Zemmour (UE, Ademe, IFI, étudiants étrangers). Vérifier, type par type, qu'une mesure du même type présente chez un candidat a son entrée chez les autres (règle n° 1) ; les services obligatoires ont été complétés le 24/11.",
+   "echeance": null,
+   "statut": "ouvert",
+   "cree": "2026-11-24",
+   "maj": "2026-11-24",
+   "resolution": null
   }
  ]
 }

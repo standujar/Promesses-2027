@@ -1882,6 +1882,50 @@ _ps = _cur('lisnard', 'ecole'); assert _ps[0]['text'] == "Chèque-éducation pro
 _txt('lisnard', 'ecole', _ps[0]['text'], "Chèque-éducation progressif (même financement public, école publique ou privée) ; chefs d'établissement qui recrutent leurs équipes ; nouveaux enseignants recrutés comme contractuels mieux payés, choix du statut pour ceux en poste")
 _so('lisnard', 'ecole', add=[NE_GO])
 
+# --- review 60 : audit du 24/11 (24/11/2026) ; registre (audit du 24/11)
+# Textes périmés ou non répercutés (règle : la source la plus récente du candidat prime et tous les textes la reprennent ; même forme pour
+# les 8 ; un texte d'une proposition comptée comme reconfirmée n'est pas affiché « non reconfirmé »). Chaque source relue le 24/11.
+#  - Mélenchon, environnement : effet annoncé aligné sur la proposition et le programme (« d'ici 2033 », L'Avenir en commun, chap. 1).
+#  - Glucksmann, environnement : livret du 9/11 : 1 million de voitures électriques sur cinq ans, sans condition de ressources publiée (« ménages
+#    modestes » retiré) ; coût de 6 Md€ annoncé par le candidat (AFP, 2/10), comme la fiche.
+#  - Lisnard, économie : « entre 200 et 400 euros mensuels » pour 2 200 € net (Nouvelle Énergie, compte rendu BFMTV du 4/11), comme la fiche.
+#  - Retailleau, école : effet annoncé chiffré par son camp (LR, « Éducation », 31/08 : +135 € net en début de carrière, environ +300 € au
+#    cœur de carrière, plus de 3 Md€ par an en fin de quinquennat), même forme qu'Attal (« chiffrée à 2,5 Md€ par son équipe »).
+#  - Zemmour, rayonnement : effet annoncé tiré d'un agrégateur (« environ 3 % du PIB ») remplacé par le programme de 2022 (p. 17 : 70 Md€ en
+#    2030 ; 70 / 3 399 Md€ de PIB 2030 courant, scénario du PLF 2027, ≈ 2,1 %), marqué « (programme 2022) » comme chez Le Pen.
+#  - Zemmour, santé : la suppression de l'AME est redite sur son site de 2026 (« Supprimer l'AME qui soigne les clandestins avec votre
+#    argent », page « Nos priorités ») et comptée dans le total : version de 2026, précise, après la précise de 2026 déjà affichée.
+#  - Zemmour, économie : impôts de production « verra disparaître les impôts de production » (discours de Toulon, 21/11, Capital, qui le
+#    cite ; fiche comptée depuis le 23/11) : version de 2026, précise (instrument nommé et ce qui y change), à la place de la baisse de 30 Md€
+#    de 2022 ; seule précise de 2026 du thème, placée en tête (règle d'ordre, S106).
+#  - Retailleau, économie : « impôts de production supprimés » (fiche 14 du plan du 12/10, 15 Md€) = mesure n° 34 de son site (11/09) : C3S
+#    supprimée, forfait social refondu, part industrielle de la CFE exonérée (la CVAE est déjà supprimée par la loi) ; texte aligné sur la fiche.
+def _ind(cid, th):
+    o = OVR.get((cid, th))
+    if o and 'indicator' in o: return o['indicator']
+    v = None
+    for f in ('life-a.json', 'life-b.json', 'life-eco.json'):
+        for t in J(f)['life'].get(cid, []):
+            if t['theme'] == th: v = t.get('indicator')
+    return html.unescape(v) if v else v
+def _setind(cid, th, old, new):
+    assert old in (_ind(cid, th) or ''), (cid, th, _ind(cid, th))
+    OVR.setdefault((cid, th), {})['indicator'] = new
+_setind('melenchon', 'environnement', "en 2030", "−65 % d'émissions de gaz à effet de serre d'ici 2033")
+_setind('glucksmann', 'environnement', "ménages modestes", "1 million de voitures électriques en leasing social sur cinq ans, coût annoncé de 6 Md€")
+_setind('lisnard', 'economie', "250 à 400", "200 à 400 €/mois net pour un salaire de 2 200 € net (4/11), estimation du camp")
+_setind('retailleau', 'ecole', "rapprochés de la moyenne européenne", "+135 € net par mois en début de carrière, environ +300 € au cœur de carrière ; plus de 3 Md€ par an selon son camp")
+_setind('zemmour', 'rayonnement', "3 % du PIB", "Défense à 70 Md€ en 2030, environ 2,1 % du PIB (programme 2022)")
+_ps = _cur('zemmour', 'sante'); assert [(p['text'], p['old']) for p in _ps][3] == ("Supprimer l'AME, hors aide médicale d'urgence", True) and not _ps[0]['old'], [(p['text'], p['old']) for p in _ps]
+_put('zemmour', 'sante', _ps[:1] + [_p("Supprimer l'aide médicale d'État (AME)")] + _ps[1:3])
+_so('zemmour', 'sante', add=[Z_PRIO])
+_ps = _cur('zemmour', 'economie'); assert [p['text'] for p in _ps][2] == "Baisser de 30 Md€ supplémentaires les impôts de production" and [(p['verifiable'], p['old']) for p in _ps] == [(False, False), (False, False), (True, True), (True, True), (True, True)], [(p['text'], p['verifiable'], p['old']) for p in _ps]
+_put('zemmour', 'economie', [_p("Supprimer les impôts de production")] + _ps[:2] + _ps[3:])
+_so('zemmour', 'economie', add=[_s("Capital, discours d'É. Zemmour à Toulon : CSG et impôts de production (21/11)", 'https://www.capital.fr/economie-politique/votre-salaire-augmente-de-10-sans-rien-couter-a-votre-patron-ce-qu-eric-zemmour-veut-supprimer-pour-y-arriver-1532061')])
+_txt('retailleau', 'economie', 'Supprimer les impôts de production, dans 30 Md€ de baisses pour les entreprises',
+     "Supprimer la C3S, refondre le forfait social et exonérer la part industrielle de la CFE, dans 30 Md€ de baisses pour les entreprises")
+_so('retailleau', 'economie', add=[_s("Site de Bruno Retailleau, mesure n° 34 « Réduire de 60 % le handicap fiscal de nos entreprises » (mise à jour du 11/09)", 'https://www.avecretailleau.fr/projet/mesure/reduire-de-60-le-handicap-fiscal-de-nos-entreprises-par')])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.
