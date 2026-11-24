@@ -4998,6 +4998,121 @@ for c0 in D['candidates']:
                         e[f] = _coupe(_nb(v)); _nc += 1
 assert _nc >= 10, _nc
 
+# --- review 61 : coût d'un poste public sur un même champ (24/11/2026)
+# Registre S389 (arbitrage du 24/11, délégation du porteur ; règle « numérateur et dénominateur du même champ, source officielle la plus
+# récente ») : la valeur commune du poste public, 61,6 k€ (362,1 Md€ de masse salariale des administrations publiques / 5,88 millions d'agents
+# des trois fonctions publiques en personnes physiques : deux champs différents), devient 58,7 k€ par emploi en équivalent temps plein :
+# rémunération des salariés des administrations publiques (S13, D1) en 2024, 363,038 Md€ (Insee, comptes nationaux annuels, base 2020,
+# campagne 2025 publiée en mai 2026, tableau 7.301) / emploi intérieur des administrations publiques en 2024, 6 189,8 milliers d'ETP (tableau
+# 1.109) ; fichiers ouverts le 24/11 (campagne 2024 pour comparaison : 362,149 / 6 197,9 = 58,4). Coût complet employeur (cotisations, y compris
+# imputées), comme avant. Recoupements : salaire brut moyen en EQTP de l'ensemble de la fonction publique en 2024, 3 382 € par mois (Insee
+# Première n° 2100, figure 1) × (1 + 47,8 % de cotisations employeurs des administrations publiques : D12/D11 du tableau 7.301) ≈ 60,0 k€ ;
+# État : 151,598 Md€ / 2 002,6 milliers d'ETP ≈ 75,7 k€ (tableaux 7.303 et 1.109), cohérent avec le « coût annuel moyen d'un fonctionnaire »
+# de 75 000 € du rapport d'information de l'Assemblée nationale n° 3066 (15/07/2026).
+# Les constantes POST, REC, IN_POST, IN_POST2 et les fiches des blocs précédents restent écrites à 61,6 k€ (leurs contrôles datés en dépendent) :
+# chaque fiche, note et liste « non comptée » qui les utilise est recalculée ici avec les mêmes règles (suppressions : moitié rendue aux
+# agents, 70 % du plan en 2030, bornes de la règle des plans de postes ; recrutements : coût complet, 70 % si plan étalé ou sans date, bornes
+# plan entier en 2030 et chiffre du camp) et les mêmes arrondis. Contrôle final : plus aucun texte publié ne cite 61,6 k€ ni 30,8 k€.
+POSTE = round(363.038e9 / 6189.8e3 / 1e3, 1); assert POSTE == 58.7  # k€ par emploi en équivalent temps plein
+DEMI = POSTE / 2  # 29,35 k€ : moitié rendue aux agents (suppressions)
+assert round(3382 * 12 * (1 + 117.452 / 245.586) / 1e3, 1) == 60.0 and round(151.598e9 / 2002.6e3 / 1e3, 1) == 75.7
+INSEE_D1 = 'https://www.insee.fr/fr/statistiques/8988833'
+INSEE_ETP = 'https://www.insee.fr/fr/statistiques/8988797'
+IN_POSTE = [{"label": "Rémunération des salariés des administrations publiques (2024)",
+             "value": ("363,038 Md€ (S13, D1) : salaires et traitements bruts 245,586 Md€, cotisations sociales à la charge des employeurs 117,452 Md€ "
+                       "(y compris imputées)"),
+             "source": "Insee, comptes nationaux annuels (base 2020), tableau 7.301, compte des administrations publiques (mai 2026)", "url": INSEE_D1},
+            {"label": "Emploi des administrations publiques en équivalent temps plein (2024)",
+             "value": ("6 189,8 milliers d'équivalents temps plein (emploi intérieur, S13) : 363,038 Md€ / 6 189 800 ≈ 58,7 k€ par emploi, coût complet "
+                       "employeur (valeur commune du poste public)"),
+             "source": "Insee, comptes nationaux annuels (base 2020), tableau 1.109, emploi intérieur par secteur institutionnel (mai 2026)", "url": INSEE_ETP}]
+POST61 = ("Règle commune : 58,7 k€ par poste en équivalent temps plein (rémunération des salariés des administrations publiques rapportée à leur "
+          "emploi en équivalent temps plein, Insee 2024), moitié rendue aux agents, 70 % du plan réalisé en 2030 (3,5 ans sur 5)")
+REC61 = ("Règle commune des recrutements publics : 58,7 k€ par poste en coût complet (rémunération des salariés des administrations publiques "
+         "rapportée à leur emploi en équivalent temps plein, Insee 2024 ; même valeur que les suppressions), sans la moitié rendue aux agents, qui ne "
+         "vaut que pour les suppressions ; 70 % du plan en 2030 quand il est étalé sur le mandat ou sans date")
+def _r61(cid, mid, field, pairs, k=None):
+    k = k if k is not None else M(cid, mid)['claude']; s = _nb(k[field])
+    for a, b in pairs:
+        assert s.count(a) == 1, (cid, mid, field, a); s = s.replace(a, b)
+    k[field] = s
+def _md(n, frac, unit=DEMI): return n * frac * unit * 1e3 / 1e9  # Md€
+# (1) Suppressions de postes : Philippe, Lisnard, Attal, Retailleau, Zemmour ; note indicative de Le Pen (nombre non publié, hors total)
+_bas = _md(105400, 1); assert round(_bas, 1) == 3.1  # un départ à la retraite sur trois non remplacé sur 3,5 ans, hors secteurs épargnés (62,7 %)
+k = M('philippe', 'fonction')['claude']; assert (k['central'], k['low'], k['high']) == (5.4, 3.2, 7.7)
+_c, _h = _md(250000, 0.7), _md(250000, 1)
+_r61('philippe', 'fonction', 'formula', [(POST, POST61), ("250 000 postes × 70 % × 30,8 k€ ≈ +5,4 Md€", f"250 000 postes × 70 % × 29,35 k€ ≈ +{_fr(_c)} Md€"),
+     ("105 400 postes × 30,8 k€ ≈ +3,2", f"105 400 postes × 29,35 k€ ≈ +{_fr(_bas)}"), ("250 000 × 30,8 k€ ≈ +7,7", f"250 000 × 29,35 k€ ≈ +{_fr(_h)}")])
+k.update(central=round(_c, 1), low=round(_bas, 1), high=round(_h, 1)); assert (k['central'], k['low'], k['high']) == (5.1, 3.1, 7.3)
+k = M('lisnard', 'fonction')['claude']; assert (k['central'], k['low'], k['high']) == (9.4, 3.2, 14.9)
+_p, _h = _md(425000, 0.7), _md(450000, 1)
+_r61('lisnard', 'fonction', 'formula', [(POST, POST61), ("× 70 % × 30,8 k€ = 9,16", f"× 70 % × 29,35 k€ = {_fr(_p, 2)}"),
+     ("≈ +9,4 Md€", f"≈ +{_fr(round(_p, 2) + 0.26)} Md€"), ("105 400 postes × 30,8 k€ ≈ +3,2, agences 0", f"105 400 postes × 29,35 k€ ≈ +{_fr(_bas)}, agences 0"),
+     ("450 000 × 30,8 k€ ≈ +13,9, + agences 1,06 = 14,9", f"450 000 × 29,35 k€ ≈ +{_fr(_h)}, + agences 1,06 = {_fr(_h + 1.06)}")])
+k.update(central=round(round(_p, 2) + 0.26, 1), low=round(_bas, 1), high=round(_h + 1.06, 1)); assert (k['central'], k['low'], k['high']) == (9.0, 3.1, 14.3)
+k = M('attal', 'fonctionnaires')['claude']; assert (k['central'], k['low'], k['high']) == (2.2, 2.2, 3.1)
+_c, _b, _h = _md(100000, 0.7), _md(81200, 1), _md(100000, 1)
+_r61('attal', 'fonctionnaires', 'formula', [(POST, POST61), ("100 000 postes × 70 % × 30,8 k€ ≈ +2,2 Md€", f"100 000 postes × 70 % × 29,35 k€ ≈ +{_fr(_c)} Md€"),
+     ("81 200 postes × 30,8 k€ ≈ +2,5, plafonné à la valeur centrale : +2,2", f"81 200 postes × 29,35 k€ ≈ +{_fr(_b)}, plafonné à la valeur centrale : +{_fr(_c)}"),
+     ("100 000 × 30,8 k€ ≈ +3,1", f"100 000 × 29,35 k€ ≈ +{_fr(_h)}")])
+k.update(central=round(_c, 1), low=min(round(_c, 1), round(_b, 1)), high=round(_h, 1)); assert (k['central'], k['low'], k['high']) == (2.1, 2.1, 2.9)
+k = M('retailleau', 'etat')['claude']; assert (k['central'], k['low'], k['high']) == (9.2, 5.5, 13.7)
+_p, _b, _h = _md(400000, 0.7), _md(168000, 1), _md(400000, 1)
+_r61('retailleau', 'etat', 'formula', [(POST, POST61), ("400 000 postes × 70 % × 30,8 k€ = 8,62", f"400 000 postes × 70 % × 29,35 k€ = {_fr(_p, 2)}"),
+     ("≈ +9,2 Md€", f"≈ +{_fr(round(_p, 2) + 0.26 + 0.29)} Md€"), ("sur 3,5 ans (5,17)", f"sur 3,5 ans ({_fr(_b, 2)})"),
+     ("réalisé en 2030 (12,3)", f"réalisé en 2030 ({_fr(_h)})"),
+     ("d'où 5,5 à 13,7", f"d'où {_fr(round(_b, 2) + 0.29)} à {_fr(_h + 1.06 + 0.29)}")])
+k.update(central=round(round(_p, 2) + 0.26 + 0.29, 1), low=round(round(_b, 2) + 0.29, 1), high=round(_h + 1.06 + 0.29, 1))
+assert (k['central'], k['low'], k['high']) == (8.8, 5.2, 13.1)
+k = M('zemmour', 'fonctionnaires')['claude']; assert (k['central'], k['low'], k['high']) == (17.2, 3.2, 24.6)
+_c, _h = _md(800000, 0.7), _md(800000, 1)
+_r61('zemmour', 'fonctionnaires', 'formula', [
+     ("Règle commune : 61,6 k€ par poste, moitié rendue aux agents, 70 % du plan en 2030 : 800 000 × 70 % × 30,8 k€ = +17,2 Md€",
+      f"Règle commune : 58,7 k€ par poste en équivalent temps plein (Insee 2024), moitié rendue aux agents, 70 % du plan en 2030 : 800 000 × 70 % × 29,35 k€ = +{_fr(_c)} Md€"),
+     ("105 400 postes × 30,8 k€ ≈ +3,2", f"105 400 postes × 29,35 k€ ≈ +{_fr(_bas)}"), ("800 000 × 30,8 k€ ≈ +24,6", f"800 000 × 29,35 k€ ≈ +{_fr(_h)}")])
+k.update(central=round(_c, 1), low=round(_bas, 1), high=round(_h, 1)); assert (k['central'], k['low'], k['high']) == (16.4, 3.1, 23.5)
+_c, _h = _md(200000, 0.7), _md(200000, 1)
+_r61('le-pen', 'etat', 'note', [("≈ +4,3 Md€ en 2030 (200 000 × 70 % × 30,8 k€), jusqu'à +6,2", f"≈ +{_fr(_c)} Md€ en 2030 (200 000 × 70 % × 29,35 k€), jusqu'à +{_fr(_h)}")])
+assert (_fr(_c), _fr(_h)) == ("4,1", "5,9")
+# (2) Recrutements publics : plan santé de Mélenchon (hôpital, médico-social et EHPAD à 79,2 % de part publique, psychologues)
+k = M('melenchon', 'hopitaux')['claude']; assert (k['central'], k['low'], k['high']) == (-14.7, -20.9, -3.0)
+hop, ms, psy = _md(100000, 1, POSTE), _md(300000, PUB, POSTE), _md(2500, 1, POSTE)
+_t = round(hop, 2) + round(ms, 2) + round(psy, 2)
+_r61('melenchon', 'hopitaux', 'formula', [(REC, REC61), ("hôpital : 100 000 × 61,6 k€ = 6,16 Md€", f"hôpital : 100 000 × 58,7 k€ = {_fr(hop, 2)} Md€"),
+     ("300 000 × 61,6 k€ × 79,2 %", "300 000 × 58,7 k€ × 79,2 %"), ("= 14,63 ; 2 500 psychologues : 0,15", f"= {_fr(ms, 2)} ; 2 500 psychologues : {_fr(psy, 2)}"),
+     ("(6,16 + 14,63 + 0,15) × 0,7 ≈ −14,7 Md€", f"({_fr(hop, 2)} + {_fr(ms, 2)} + {_fr(psy, 2)}) × 0,7 ≈ −{_fr(_t * 0.7)} Md€"),
+     ("plan entier en 2030 (−20,9,", f"plan entier en 2030 (−{_fr(_t)},")])
+k.update(central=-round(_t * 0.7, 1), low=-round(_t, 1)); assert (k['central'], k['low'], k['high']) == (-14.0, -20.0, -3.0)
+# (3) Mesures sous 1 Md€ listées « non comptées » et notes : même valeur
+for cid, a, b in (('melenchon', "10 000 × 61,6 k€ × 70 % ≈ 0,43 Md€", f"10 000 × 58,7 k€ × 70 % ≈ {_fr(_md(10000, 0.7, POSTE), 2)} Md€"),
+                  ('glucksmann', "1 588 × 61,6 k€ ≈ 0,1 Md€", f"1 588 × 58,7 k€ ≈ {_fr(_md(1588, 1, POSTE))} Md€"),
+                  ('attal', "1 588 × 61,6 k€ ≈ 0,1 Md€", f"1 588 × 58,7 k€ ≈ {_fr(_md(1588, 1, POSTE))} Md€"),
+                  ('attal', "3 000 × 61,6 k€ × 70 % ≈ 0,13 Md€", f"3 000 × 58,7 k€ × 70 % ≈ {_fr(_md(3000, 0.7, POSTE), 2)} Md€"),
+                  ('zemmour', "1 000 × 61,6 k€ ≈ 0,06 Md€", f"1 000 × 58,7 k€ ≈ {_fr(_md(1000, 1, POSTE), 2)} Md€")):
+    MISS(cid, a, b)
+assert round(_md(470, 0.7, POSTE), 2) == 0.02  # 235 juges des enfants et 235 greffiers de Mélenchon : ≈ 0,02 Md€, inchangé
+_r61('zemmour', 'prisons', 'note', [("40 000 × 61,6 k€ ≈ 2,5 Md€", f"40 000 × 58,7 k€ ≈ {_fr(_md(40000, 1, POSTE))} Md€")])
+# (4) Sources : les deux tableaux de l'Insee remplacent, dans les 7 fiches qui l'utilisent, l'entrée tirée de la note de la Cour des comptes
+#     (362,1 Md€ ; 5,88 millions d'agents) et son doublon « Effectifs » de Zemmour, même traitement pour toutes : les effectifs en personnes
+#     servant aux bornes ont déjà leur propre source (Attal : Insee, effectifs par versant, 5 878 200 ; Philippe, Lisnard, Zemmour : agents des
+#     secteurs épargnés, 2,2 M sur 5,9 M) ; la note de la Cour reste citée dans les chiffrages de la fiche de Zemmour.
+_n61 = 0
+for c0 in D['candidates']:
+    for m0 in c0['measures']:
+        k0 = m0.get('claude') or {}; ins = k0.get('inputs', [])
+        if any(i['label'] == "Masse salariale et effectifs publics" for i in ins):
+            out = []
+            for i in ins:
+                if i['label'] == "Masse salariale et effectifs publics": out += IN_POSTE
+                elif not (i['label'] == "Effectifs" and i.get('url') == CCMS): out.append(i)
+            k0['inputs'] = out; _n61 += 1
+assert _n61 == 7, _n61
+assert not any(i.get('url') == CCMS for c0 in D['candidates'] for m0 in c0['measures'] for i in (m0.get('claude') or {}).get('inputs', []))
+# Contrôle : plus aucune ancienne valeur dans les fiches, notes, obstacles ni listes publiées
+for c0 in D['candidates']:
+    _s = _nb(json.dumps([c0['measures'], c0['claude_total'], c0.get('total'), c0.get('sim')], ensure_ascii=False))
+    assert not re.search(r"61,6 k€|30,8 k€|362,1 Md€ / 5,88|61\.6e3|30\.8e3", _s), c0['id']
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
