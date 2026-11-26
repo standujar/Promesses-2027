@@ -9097,6 +9097,185 @@
 }
 ]
 },
+"philippe.sante.3": {
+"constat": "Sans médecin traitant en 2025 : 11,4 % des 16 ans et plus (11,5 % en 2022), 3,9 % des malades chroniques (6 %) (Sécurité sociale).",
+"constat_s": [
+3
+],
+"pour": "Fermer les zones déjà bien pourvues oriente les nouveaux médecins vers celles qui en manquent.",
+"preuve_pour": "mitigé",
+"contre": "Encadrer les installations ne crée pas de médecins : la pénurie se contourne ou se déplace.",
+"preuve_contre": "mitigé",
+"cas_pour": [
+{
+"t": "L'écart de densité d'infirmières libérales entre zones sur-dotées et très sous-dotées s'est réduit de moitié avec la limitation des installations (Irdes, France, 2022).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [
+{
+"t": "La limitation des installations d'infirmières a été en partie contournée par des remplacements et des installations en bordure des zones fermées (Irdes, France, 2022).",
+"s": [
+0
+]
+}
+],
+"etudes": "Une évaluation française, chez les infirmières : la limitation rapproche les densités mais est en partie contournée ; selon la DREES, ailleurs elle n'évite pas les pénuries. Une semaine obligatoire par an dans les zones qui manquent de médecins n'a pas d'évaluation.",
+"src": [
+{
+"l": "Irdes, Questions d'économie de la santé n° 270 (Duchaine, Chevillard, Mousquès), zonage des infirmières libérales",
+"a": 2022,
+"u": "https://www.irdes.fr/recherche/questions-d-economie-de-la-sante/270-inegalites-territoriales-de-repartition-des-infirmieres-liberales.pdf"
+},
+{
+"l": "Cour des comptes, Les aides à l'installation des médecins libéraux",
+"a": 2025,
+"u": "https://www.ccomptes.fr/sites/default/files/2025-11/20251112-Aides-installation-des-medecins-liberaux.pdf"
+},
+{
+"l": "Cour des comptes, L'organisation territoriale des soins de premier recours (synthèse)",
+"a": 2024,
+"u": "https://www.ccomptes.fr/sites/default/files/2024-05/20240513-synthese-Organisation-territoriale-soins-premier-recours.pdf"
+},
+{
+"l": "Sécurité sociale, rapport d'évaluation (REPSS Maladie), fiche 2.7.4 « Assurer l'accès à un médecin traitant »",
+"a": 2026,
+"u": "https://evaluation.securite-sociale.fr/home/maladie/2-7-4-assurer-l-acces-a-un-medecin-traitant.html"
+}
+]
+},
+"philippe.sante.4": {
+"complement": "Le même programme impose aussi à chaque médecin une semaine par an dans les zones qui manquent de soignants.",
+"complement_ref": [
+"philippe.sante.3"
+],
+"constat": "Sans médecin traitant en 2025 : 11,4 % des 16 ans et plus (11,5 % en 2022), 3,9 % des malades chroniques (6 %) (Sécurité sociale).",
+"constat_s": [
+3
+],
+"pour": "Former un médecin prend dix ans : ouvrir des places aujourd'hui prépare la relève de demain.",
+"preuve_pour": "solide",
+"contre": "Former plus n'envoie pas, à lui seul, les médecins là où ils manquent.",
+"preuve_contre": "solide",
+"cas_pour": [
+{
+"t": "Les places en médecine, tombées à 3 500 en 1993, remontent depuis 2000 ; les jeunes médecins issus de cette hausse arrivent en activité (Cour des comptes, France, 2025).",
+"s": [
+0,
+1
+]
+}
+],
+"cas_contre": [
+{
+"t": "Dans la région la moins dotée, l'arrivée de jeunes médecins issue de la hausse des places est moins marquée qu'ailleurs (Cour des comptes, Centre-Val de Loire, 2025).",
+"s": [
+1,
+0
+]
+}
+],
+"etudes": "Les travaux concordent (DREES, Cour des comptes) : former plus accroît l'offre de médecins après une dizaine d'années, sans corriger seule leur répartition.",
+"src": [
+{
+"l": "Cour des comptes, L'accès aux études de santé, quatre ans après la réforme",
+"a": 2024,
+"u": "https://www.ccomptes.fr/sites/default/files/2024-12/20241211-Lacces-aux-%C3%A9tudes-de-sante.pdf"
+},
+{
+"l": "Cour des comptes, Les aides à l'installation des médecins libéraux",
+"a": 2025,
+"u": "https://www.ccomptes.fr/sites/default/files/2025-11/20251112-Aides-installation-des-medecins-liberaux.pdf"
+},
+{
+"l": "Cour des comptes, L'organisation territoriale des soins de premier recours (synthèse)",
+"a": 2024,
+"u": "https://www.ccomptes.fr/sites/default/files/2024-05/20240513-synthese-Organisation-territoriale-soins-premier-recours.pdf"
+},
+{
+"l": "Sécurité sociale, rapport d'évaluation (REPSS Maladie), fiche 2.7.4 « Assurer l'accès à un médecin traitant »",
+"a": 2026,
+"u": "https://evaluation.securite-sociale.fr/home/maladie/2-7-4-assurer-l-acces-a-un-medecin-traitant.html"
+}
+]
+},
+"philippe.sante.5": {
+"constat": "Filles vaccinées contre les papillomavirus (2 doses à 16 ans) : 50,7 % en 2025, 44,7 % en 2023 (Santé publique France).",
+"constat_s": [
+0
+],
+"pour": "En 2018, l'obligation a fait passer les bébés vaccinés contre le méningocoque C de 39 % à plus de 75 %.",
+"preuve_pour": "mitigé",
+"contre": "Sans obligation, 46 % des garçons de 15 ans ont déjà une dose, contre 36,9 % un an plus tôt.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [
+{
+"t": "Un an après l'extension de l'obligation à 11 vaccins, plus de 75 % des nourrissons étaient vaccinés contre le méningocoque C, contre 39 % l'année précédente (Santé publique France, France, 2019).",
+"s": [
+1
+]
+}
+],
+"cas_contre": [
+{
+"t": "Sans obligation, la part des garçons de 15 ans ayant reçu une dose contre les papillomavirus est passée de 25,9 % en 2023 à 46,0 % en 2025 (Santé publique France, France, 2026).",
+"s": [
+0
+]
+}
+],
+"etudes": "Pas d'évaluation française d'une obligation vaccinale à l'adolescence. L'obligation des 11 vaccins du nourrisson, en 2018, a été suivie d'une forte hausse de la couverture, avec une campagne d'information (Santé publique France).",
+"src": [
+{
+"l": "Santé publique France, Vaccination des enfants, adolescents et jeunes adultes en France, bilan de la couverture vaccinale en 2025 (27/04/2026)",
+"a": 2026,
+"u": "https://www.santepubliquefrance.fr/sites/default/files/2026-04/bullnat_vaccination_20260427.pdf"
+},
+{
+"l": "Santé publique France, Bulletin de santé publique vaccination, avril 2019 (premiers effets de l'extension de l'obligation vaccinale)",
+"a": 2019,
+"u": "https://www.santepubliquefrance.fr/sites/default/files/rdd/document/161237_bsp-nat-vaccination-180419.pdf"
+}
+]
+},
+"attal.logement.4": {
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat_s": [
+0,
+1
+],
+"pour": "En 2018, un recours contre un permis de construire était jugé en 24 mois en moyenne en première instance.",
+"preuve_pour": "faible",
+"contre": "Le permis tacite existe déjà : sans réponse en 2 mois (maison) ou 3 mois (autres), le projet est accepté.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française de l'effet des délais d'instruction ou de recours sur le nombre de chantiers. Le silence vaut déjà accord pour la plupart des permis de construire, sauf exceptions (site classé, cœur de parc national).",
+"src": [
+{
+"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+},
+{
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
+},
+{
+"l": "DRIEAT Île-de-France (ministère de la Transition écologique), propositions du rapport Maugüé contre les recours abusifs dans l'urbanisme (2018)",
+"a": 2018,
+"u": "https://www.drieat.ile-de-france.developpement-durable.gouv.fr/propositions-de-mesures-pour-lutter-contre-les-a11610.html"
+},
+{
+"l": "Service-public.gouv.fr, Permis de construire (PC), vérifié le 13/02/2026",
+"a": 2026,
+"u": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1986"
+}
+]
+},
 "philippe.economie.5": {
 "constat": "Contractuels : 24,0 % des agents publics fin 2024, +7,6 points en dix ans (Insee).",
 "constat_s": [

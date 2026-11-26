@@ -5377,6 +5377,55 @@ k['formula'] = _nb(k['formula']).replace(_a, "borne haute au SMIC net actuel (1 
 _blob = _nb(json.dumps([[c0['measures'], c0['sim'], c0['claude_total']] for c0 in D['candidates']], ensure_ascii=False))
 assert not re.search(r"1 477,93|1477\.93|1 867,02|SMIC juin 2026|1er juin 2026|\b5912\b", _blob), re.search(r"1 477,93|1477\.93|1 867,02|SMIC juin 2026|1er juin 2026|\b5912\b", _blob)
 
+# --- review 64 : revue du 27/11 (27/11/2026) ; registre S426, S427, S429 (résolus), S279, S317, S422, S425, S428, S432 (mis à jour), S433 à S437
+# Décisions du 27/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 26/11 après-midi au 27/11, sources
+# ouvertes du 26 au 27/11). Aucun total ne change. Vie quotidienne et quiz : life.py (review 61).
+# (1) Sondages (data/sondages.json, règle de « review 19 ») : moyenne au 27/11 ; OpinionWay pour CNews (25-26/11, notice 10400, une seule
+#     hypothèse) remplace la vague du 10 au 12/11 (notice 10371) ; notice 10401 (Odoxa pour Backbone et Le Figaro, comparaison de deux
+#     personnalités, sans intentions de vote) dans « exclus ». Glucksmann et Philippe à égalité exacte (10,65) : l'ordre suit la liste de départ
+#     (tri stable), règle non écrite, point à trancher au registre (S433).
+# (2) Philippe, programme « Santé » (site de campagne, 26/11) : aucune ligne chiffrable d'au moins 1 Md€ avec un paramètre et une base
+#     officielle (même règle que les plans de Mélenchon du 16 et du 26/11) : liste non comptée ; obligation de solidarité et vaccinations :
+#     sans dépense publique publiée ; agences sanitaires divisées par deux : missions reprises, 0 (règle commune des agences) ; recettes d'autres
+#     branches réaffectées à l'Assurance maladie : transfert entre administrations, sans effet sur le solde public.
+# (3) Zemmour, « Objectif Élysée 2027 » (CNews et Europe 1, 26/11 ; compte rendu d'Europe 1, citations directes) :
+#     - retraites : 64 ans puis 65 ans à partir de 2032 (le texte « non tranché » est remplacé) ; capitalisation pour les personnes nées après
+#       1980, « en 20 ou 30 ans » : part des cotisations transférée et coût de transition non publiés, rien de plus compté (même règle que
+#       Lisnard) ; chiffrage inchangé (65 ans après 2030) ;
+#     - assurance chômage (12 mois au lieu de 18, 75 % puis 50 % du salaire, trois mois de travail pour un mois d'indemnisation, ruptures
+#       conventionnelles exclues ; « 30 milliards » selon le candidat) : nouvelle fiche à chiffrer avec les sources de l'Unédic, comme celles de
+#       Philippe et de Retailleau (S434) ; suppression des droits de « transmissions par voie directe » (« 8 milliards ») : champ plus étroit que la
+#       fiche « Fin des droits de succession » (16,0), à recalculer sur une base officielle de la ligne directe (S435) ; registre, prochaine passe.
+# (4) Attal (silence de l'administration valant accord, recours limités à 18 mois) : sans coût ; Vie quotidienne seulement.
+# (5) Le Pen, Mélenchon, Glucksmann, Lisnard, Retailleau : registre seulement (aucune mesure nouvelle chiffrable ; Lisnard, entretien au Figaro
+#     Magazine du 26/11 lu dans ses reprises, S436).
+MISS_ADD('philippe', "programme « Santé » (site de campagne, 26/11/2026), coûts non publiés : 14 000 médecins formés par an, 20 000 assistants médicaux "
+         "et 10 000 infirmiers en pratique avancée recrutés, bilans de santé mentale à l'école à six et à douze ans, centres d'intervention précoce "
+         "pour les adolescents dans chaque région, au moins un centre mobile de dépistage du cancer du sein par région et deux fois plus de maisons "
+         "des femmes, assistant médical fondé sur l'IA gratuit pour chaque Français, plan d'investissement hospitalier ; obligation de solidarité des "
+         "médecins et vaccinations obligatoires : sans dépense publique publiée ; agences et opérateurs sanitaires (19) divisés par deux : missions "
+         "reprises, 0 (règle commune des agences) ; recettes d'autres branches réaffectées à l'Assurance maladie : transfert entre administrations, "
+         "sans effet sur le solde public")
+E1Z = 'https://www.europe1.fr/politique/en-direct-primaire-pouvoir-dachat-fiscalite-ecole-ce-quil-faut-retenir-de-lemission-objectif-elysee-2027-avec-eric-zemmour-1245655'
+E1Z_S = "Europe 1, « Objectif Élysée 2027 » avec É. Zemmour (CNews et Europe 1, 26/11/2026)"
+CIT_ZR = ("Pour les gens nés avant 1980, ils ne passent jamais à la capitalisation, c'est trop tard. Ceux nés après 1980, on passe petit à petit à la "
+          "capitalisation. On a un plan de baisse des dépenses et c'est comme ça qu'on va le financer.")
+m = M('zemmour', 'retraites'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (1.8, 1.8, 5.8)
+_a = "Âge légal à 64 ou 65 ans (non tranché), développement progressif de la capitalisation."; assert _nb(m['proposal']) == _a, m['proposal']
+m['proposal'] = ("Âge légal à 64 ans, puis 65 ans à partir de 2032 ; passage progressif à la capitalisation, « en 20 ou 30 ans », pour les personnes nées "
+                 "après 1980 (26/11/2026).")
+_a = "âge retenu (64 ou 65 ans) non tranché ; "; assert _nb(m['obstacle']).count(_a) == 1, m['obstacle']
+m['obstacle'] = _nb(m['obstacle']).replace(_a, "")
+_a = "que l'âge retenu soit 64 ou 65 ans ; 65 ans après les 64 ans : effet à partir de 2032"; assert _nb(k['formula']).count(_a) == 1, k['formula']
+k['formula'] = _nb(k['formula']).replace(_a, "65 ans à partir de 2032 (annoncé le 26/11/2026) : effet après 2030")
+m['estimates'].append({"source": E1Z_S, "year": 2026, "value": "« il propose 64 ans puis 65 ans à partir de 2032 » (Europe 1) ; « " + CIT_ZR + " »",
+                       "low_md": None, "high_md": None, "url": E1Z})
+k['note'] += (" CNews et Europe 1 (26/11/2026) : 64 ans puis 65 ans à partir de 2032 ; passage « petit à petit » à la capitalisation pour les personnes nées "
+              "après 1980, « en 20 ou 30 ans », financé par « un plan de baisse des dépenses » : part des cotisations transférée, calendrier et coût de "
+              "transition non publiés, rien de plus compté (même règle que la capitalisation de Lisnard).")
+assert (k['central'], k['low'], k['high']) == (1.8, 1.8, 5.8)
+D['asof'] = '27 novembre 2026'
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
