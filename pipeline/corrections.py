@@ -5426,6 +5426,98 @@ k['note'] += (" CNews et Europe 1 (26/11/2026) : 64 ans puis 65 ans à partir de
 assert (k['central'], k['low'], k['high']) == (1.8, 1.8, 5.8)
 D['asof'] = '27 novembre 2026'
 
+# --- review 65 : égalité des sondages, assurance chômage et succession de Zemmour (27/11/2026) ; registre S433, S434, S435 (résolus)
+# (1) Sondages, départage d'une égalité exacte (décision du porteur du 27/11, S433) : l'ordre de la mise à jour précédente est gardé
+#     (data/sondages.json, « ordre_precedent » = ordre affiché avant le changement de vagues, à recopier à chaque mise à jour). Au 27/11 :
+#     Philippe et Glucksmann à 10,65, Philippe devant comme le 26/11.
+# (2) Zemmour, assurance chômage (« Objectif Élysée 2027 », CNews et Europe 1, 26/11, citation directe) : 12 mois au plus au lieu de 18 ; trois
+#     mois de travail pour un mois d'indemnisation ; 75 % du salaire au début, 50 % à la fin ; ruptures conventionnelles exclues ; « 30 milliards »
+#     selon le candidat (chiffre du camp, hors calcul). Aucun chiffrage indépendant de cet ensemble : calcul ascendant sur les estimations de
+#     l'Unédic, mêmes sources que Philippe et Retailleau :
+#     - durée : aujourd'hui 0,75 jour indemnisé par jour travaillé (décret du 26/01/2023), demain 1/3 : −55,6 % pour chaque droit ; la baisse de
+#       25 % de 2023 vaut 4,2 Md€ d'allocations par an en régime de croisière (Unédic, février 2023 ; les 0,3 Md€ de retraite complémentaire sont
+#       un transfert, non comptés, comme chez Retailleau et Attal) → 4,2 × 55,6/25 ≈ 9,3 (période de référence de 24 mois inchangée : 8 mois au
+#       plus) ; plancher : 18 → 12 mois seuls, ≈ 6 Md€ (Unédic, 2024, via Public Sénat, même source que Philippe) ; valeur centrale : milieu, 7,7,
+#       à défaut de répartition publiée des durées d'affiliation ; borne basse 6,0 ; droits de 12 mois au plus : régime de croisière atteint avant
+#       2030 pour une mise en œuvre en 2028 ;
+#     - ruptures conventionnelles : 9,1 Md€ de dépenses en 2029 (Unédic, février 2026), réduites comme le reste (× (1 − 9,3/36) ; 36 Md€
+#       d'allocations par an, 9 Md€ au 3e trimestre 2025, Unédic) ≈ 6,7, en borne haute seulement, avant tout report vers les licenciements (non
+#       documenté) : même règle que Retailleau (borne haute 9,3 + 6,7 = 16,0) ;
+#     - dégressivité (75 % puis 50 %, contre 57 %) : calendrier non publié, effet non compté ; ordre de grandeur en note.
+#     Verdict et obstacle des autres fiches d'assurance chômage (convention agréée, décret faute d'accord, ou loi) : faisable. Quiz : mêmes
+#     « Pour » et « Contre » que Philippe et Retailleau (même type). Simulateur : 12 mois au plus avant 53 ans, plus d'indemnisation après une
+#     rupture conventionnelle ; la règle des trois mois et la dégressivité en note.
+# (3) Zemmour, succession : « transmissions par voie directe » (Europe 1, 26/11) : même mesure que Lisnard, même calcul (Cour des comptes 2024,
+#     annexe 7 : ligne directe 53 % des droits) : 16,0 × 53 % ≈ −8,5 ; borne basse −16,0 (suppression de tous les droits de succession, version
+#     du site et du discours de Toulon) ; borne haute −8,5 ; donations en ligne directe : part non publiée, non comptées, comme chez Lisnard.
+# 1
+ORD = sorted(ORD, key=lambda i: (-round(MOY[i], 9), SG['ordre_precedent'].index(i)))
+assert sorted(SG['ordre_precedent']) == sorted(ORD)
+D['candidates'].sort(key=lambda c: ORD.index(c['id']))
+# 2
+CIT_ZCH = ("La réforme du chômage va rapporter 30 milliards. Au lieu de 18 mois d'indemnisation, on réduit à un an. Au lieu que ce soit 57% du salaire, "
+           "on commence à 75 pour finir à 50. Et au lieu d'un mois de travail pour un mois de chômage, il faudra trois mois de travail pour un mois de "
+           "chômage. Et enfin, nous supprimons la prise en compte par le chômage des ruptures conventionnelles.")
+UN23 = 'https://www.unedic.org/storage/uploads/2023/07/19/Effets-de-ladaptation-des-rgles-dassurance-chmage--la-conjoncture---synthse_uid_64b7e3c56ad39.pdf'
+UN23_S = "Unédic, « Effets de l'adaptation des règles d'assurance chômage à la conjoncture », synthèse (février 2023)"
+PS_UN = 'https://www.publicsenat.fr/actualites/emploi/assurance-chomage-la-reforme-pourrait-affecter-jusqua-un-tiers-des-allocataires-selon-lunedic'
+def _in(cid, mid, lab): return next(dict(x) for x in M(cid, mid)['claude']['inputs'] if x['label'] == lab)
+IN_DEP = _in('philippe', 'chomage', "Dépenses d'indemnisation"); IN_RC = _in('retailleau', 'chomage', "Dépenses après rupture conventionnelle")
+assert not any(m['id'] == 'chomage' for m in C['zemmour']['measures'])
+_red = round(1 - (1 / 3) / 0.75, 3); _hi = round(4.2 * _red / 0.25, 1); _lo = 6.0; _c = round((_hi + _lo) / 2, 1); _rc = round(9.1 * (1 - _hi / 36), 1)
+assert (_red, _hi, _c, _rc) == (0.556, 9.3, 7.7, 6.7), (_red, _hi, _c, _rc)
+_dg = round((36 - _c) * (62.5 / 57 - 1), 1); assert _dg == 2.7, _dg
+ADD('zemmour', {'id': 'chomage', 'theme': 'travail', 'title': 'Assurance chômage : un an au plus, trois mois de travail pour un mois',
+  'proposal': ("Indemnisation de 12 mois au plus (contre 18) ; trois mois de travail pour un mois d'indemnisation ; allocation à 75 % du salaire au début, "
+               "50 % à la fin (57 % aujourd'hui) ; plus d'indemnisation après une rupture conventionnelle (26/11/2026)."),
+  'claimed': "30 Md€ d'économies (candidat, CNews et Europe 1, 26/11/2026)", 'claimed_md': 30,
+  'estimates': [{"source": E1Z_S, "year": 2026, "value": "« " + CIT_ZCH + " Ça fait 30 milliards d'économies »", "low_md": 30, "high_md": 30, "url": E1Z},
+                {"source": UN23_S, "year": 2023, "value": "Durée des droits réduite de 25 % : 4,2 Md€ de moindres allocations par an en régime de croisière (4,5 avec la retraite complémentaire)", "low_md": 4.2, "high_md": 4.2, "url": UN23},
+                {"source": "Unédic (via Public Sénat)", "year": 2024, "value": "18 → 12 mois pour les moins de 53 ans : près de 6 Md€", "low_md": 6, "high_md": 6, "url": PS_UN}],
+  'consensus': 'divergent', 'verdict': 'faisable', 'obstacle': TCHO + ".",
+  'claude': {'id': 'chomage', 'central': _c, 'low': _lo, 'high': round(_hi + _rc, 1), 'method': 'ascendant',
+    'formula': ("Durée : 0,75 jour indemnisé par jour travaillé aujourd'hui (décret du 26/01/2023), 1/3 demain : −55,6 % pour chaque droit ; la baisse de 25 % "
+                "de 2023 vaut 4,2 Md€ par an en régime de croisière (Unédic) → 4,2 × 55,6/25 ≈ 9,3 (période de référence de 24 mois inchangée : 8 mois au "
+                "plus) ; plancher : le seul passage de 18 à 12 mois, ≈ 6,0 (Unédic 2024, même source que Philippe) ; valeur centrale : milieu, 7,7, faute de "
+                "répartition publiée des durées de travail des allocataires ; borne basse 6,0. Ruptures conventionnelles exclues : 9,1 Md€ en 2029 (Unédic), "
+                "réduits comme le reste (× (1 − 9,3/36), 36 Md€ d'allocations par an : 9 Md€ au 3e trimestre 2025) ≈ 6,7, en borne haute seulement, avant tout report vers les licenciements (non documenté), comme "
+                "chez Retailleau : 9,3 + 6,7 = 16,0. Dégressivité : non comptée (calendrier non publié)"),
+    'inputs': [{"label": "Proposition (26/11/2026)", "value": "« " + CIT_ZCH + " »", "source": E1Z_S, "url": E1Z},
+               {"label": "Durée des droits réduite de 25 % (2023)", "value": "« les moindres dépenses d’allocation atteindraient alors 4,2 Md€, auxquelles s’ajouteront les moindres versements de 0,3 Md€ aux caisses de retraite complémentaire, soit au total 4,5 Md€ »", "source": UN23_S, "url": UN23},
+               {"label": "18 → 12 mois", "value": "« une réduction à 12 mois de la durée d’indemnisation (qui est aujourd’hui de 18 mois pour les moins de 53 ans) […] des dépenses réduites de près de 6 milliards pour l’Unédic »", "source": "Public Sénat, d'après une note de l'Unédic (21/05/2024)", "url": PS_UN},
+               IN_DEP, IN_RC],
+    'note': ("Chiffre du camp (30 Md€) hors calcul. La règle des trois mois de travail pour un mois d'indemnisation réduit chaque droit plus que le plafond de "
+             "12 mois, qui ne joue que si la période de référence est allongée à 36 mois (non précisé). Plancher de 6 mois et période de référence : droit "
+             "en vigueur gardé. Dégressivité (75 % au début, 50 % à la fin, contre 57 % aujourd'hui) : calendrier non publié, effet non compté ; si la "
+             f"baisse était linéaire sur la durée du droit, le taux moyen (62,5 %) dépasserait le taux actuel et coûterait de l'ordre de {_fr(_dg)} Md€ par an "
+             "(ordre de grandeur, non compté). Effets sur l'emploi et report vers les minima sociaux non comptés (comme pour toutes les fiches d'assurance "
+             "chômage) ; retraite complémentaire : transfert entre administrations, non compté.")}})
+C['zemmour']['sim']['chomage_duree'] = {'mois': 12, 'avant': 53, 'rc': 0}
+_a = "Pas de mesure annoncée pour les chômeurs français ; un étranger au chômage depuis plus de six mois serait expulsé."; assert _nb(C['zemmour']['sim']['chomeurs']) == _a, C['zemmour']['sim']['chomeurs']
+C['zemmour']['sim']['chomeurs'] = ("Trois mois de travail pour un mois d'indemnisation ; allocation à 75 % du salaire au début, 50 % à la fin, calendrier non publié "
+                                   "(non calculé ici) ; un étranger au chômage depuis plus de six mois serait expulsé.")
+# 3
+m = M('zemmour', 'succession'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-16.0, -20.9, -16.0)
+CIT_ZSU = "il supprime l'impôt « sur les transmissions par voie directe », ce qui coûte 8 milliards d'euros"
+m['title'] = 'Fin des droits de succession en ligne directe'
+_a = "Abolir les droits de succession (« la fin des droits de succession », site du candidat) ; "; assert _nb(m['proposal']).startswith(_a), m['proposal']
+m['proposal'] = ("Supprimer les droits sur les transmissions en ligne directe (CNews et Europe 1, 26/11/2026 ; « la fin des droits de succession », sans "
+                 "précision, sur le site du candidat) ; " + _nb(m['proposal'])[len(_a):])
+m['claimed'], m['claimed_md'] = "8 Md€ (candidat, CNews et Europe 1, 26/11/2026)", -8
+m['estimates'].append({"source": E1Z_S, "year": 2026, "value": CIT_ZSU, "low_md": -8, "high_md": -8, "url": E1Z})
+k.update(central=-8.5, low=-16.0, high=-8.5)
+k['formula'] = ("Même mesure et même calcul que Lisnard : droits de succession 2024 exécutés : 16,0 Md€ (Voies et moyens) ; ligne directe : 53 % (Cour des "
+                "comptes 2024, annexe 7 : enfants 7,1 Md€ sur 13,4 Md€ de droits ; collatéraux 4,6 ; non-parents 1,4) → 16,0 × 53 % ≈ −8,5 ; borne basse "
+                "−16,0 (suppression de tous les droits de succession, version du site et du discours de Toulon) ; borne haute −8,5")
+k['inputs'].insert(1, _in('lisnard', 'succession', "Droits par lien de parenté (annexe 7)"))
+k['inputs'].append({"label": "Champ précisé (26/11/2026)", "value": CIT_ZSU, "source": E1Z_S, "url": E1Z})
+k['note'] = ("Version la plus récente du candidat (CNews et Europe 1, 26/11/2026) : transmissions en ligne directe, « 8 milliards » selon lui (chiffre du camp, "
+             "hors calcul) ; le site de campagne (« la fin des droits de succession ») et le discours de Toulon (21/11) ne précisaient pas le champ : borne "
+             "basse. Donations en ligne directe (« transmissions ») : part dans les 4,9 Md€ de donations non publiée, non comptées, comme chez Lisnard.")
+_h = C['zemmour']['sim']['heritage']; assert len(_h) == 1 and _nb(_h[0]['effet']).startswith("Abolition des droits de succession (site du candidat)")
+_h[0]['effet'] = ("Plus de droits de succession en ligne directe (CNews et Europe 1, 26/11/2026) ; la plupart des héritages en ligne directe sous 100 000 € "
+                  "par enfant ne sont déjà pas taxés.")
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
@@ -5481,7 +5573,7 @@ P={'le-pen':("Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baiss
 'retailleau':("Promet 197 Md€ d'économies par an en 2032, 51 Md€ de baisses d'impôts, un âge minimal de 63 ans et un référendum sur l'immigration.","la révision de la Constitution, pour le référendum sur l'immigration, les aides réservées après cinq ans, les peines planchers et la règle d'or."),
 'attal':("Promet la suppression de la CSG sur les salaires, jusqu'à 270 € nets par mois, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037.","la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen."),
 'lisnard':("Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations.","la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats."),
-'zemmour':("Promet 280 Md€ d'économies par an dès 2032, la suppression de la CSG sur les revenus d'activité et des impôts de production, la fin des droits de succession, des aides réservées aux Français et l'expulsion des étrangers au chômage depuis plus de six mois.","la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.")}
+'zemmour':("Promet 280 Md€ d'économies par an dès 2032, la suppression de la CSG sur les revenus d'activité et des impôts de production, la fin des droits de succession en ligne directe, une assurance chômage limitée à un an, des aides réservées aux Français et l'expulsion des étrangers au chômage depuis plus de six mois.","la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.")}
 MEN=D['statu_quo']['menages']
 def fr(x): return (('+' if x>0 else '−' if x<0 else '')+f"{abs(x):.1f}".replace('.',','))
 for c0 in D['candidates']:

@@ -236,8 +236,12 @@
 "Votre revenu net du travail augmente nettement ; la Sécurité sociale perd cette recette."
 ],
 "zemmour.succession": [
-"Supprimer les impôts sur l'héritage",
-"Les héritages ne sont plus taxés ; la plupart des petits ne l'étaient déjà pas."
+"Supprimer les droits de succession entre parents et enfants",
+"Les enfants ne paient plus d'impôt sur l'héritage de leurs parents ; la plupart des petits n'en payaient déjà pas."
+],
+"zemmour.chomage": [
+"Durcir l'assurance chômage : un an au plus, et un mois d'allocation pour trois mois travaillés",
+"Il faudrait trois mois de travail pour un mois d'indemnisation, douze mois au plus ; plus rien après une rupture conventionnelle ; l'allocation baisserait au fil des mois."
 ],
 "zemmour.fonctionnaires": [
 "Supprimer un très grand nombre de postes publics, sauf profs, soignants, policiers et militaires",

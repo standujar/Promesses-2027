@@ -7226,10 +7226,10 @@
    "sujet": "Sondages : égalité exacte de deux moyennes (Glucksmann et Philippe, 10,65 % au 27/11), départage non écrit",
    "detail": "Moyenne au 27/11 (cinq instituts, règle de « review 19 ») : 10,65 % pour R. Glucksmann comme pour É. Philippe, 10,7 % affichés pour chacun. Le tri du pipeline est stable : à égalité, l'ordre de la liste de départ (ORD, corrections.py : Glucksmann avant Philippe) décide ; cette règle n'est écrite ni dans la règle des sondages (« _regle ») ni dans la méthode. Options : écrire ce départage tel quel ; garder l'ordre affiché la veille (Philippe devant le 26/11) ; ordre alphabétique ; afficher les deux au même rang. Aucune règle commune ne tranche ; l'ordre affiché sert aussi de classement dans plusieurs vues du site.",
    "echeance": null,
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-27",
    "maj": "2026-11-27",
-   "resolution": null
+   "resolution": "Tranché par le porteur du projet le 27/11 : à égalité exacte, l'ordre de la mise à jour précédente est gardé. Règle écrite dans data/sondages.json (« _regle », champ « ordre_precedent » : l'ordre affiché avant le changement de vagues, à recopier à chaque mise à jour), dans la méthode (build.py) et dans CLAUDE.md et DEVELOPPER.md ; tri dans le bloc « review 65 » de corrections.py. Au 27/11, Philippe reste devant Glucksmann (10,65 chacun)."
   },
   {
    "id": "S434",
@@ -7241,10 +7241,10 @@
    "sujet": "Zemmour : réforme de l'assurance chômage annoncée le 26/11 (12 mois, 75 % puis 50 %, trois mois de travail pour un mois, ruptures conventionnelles exclues), fiche à chiffrer",
    "detail": "« Objectif Élysée 2027 » (CNews et Europe 1, 26/11), compte rendu d'Europe 1 (https://www.europe1.fr/politique/en-direct-primaire-pouvoir-dachat-fiscalite-ecole-ce-quil-faut-retenir-de-lemission-objectif-elysee-2027-avec-eric-zemmour-1245655, 22 h 00) : « La réforme du chômage va rapporter 30 milliards. Au lieu de 18 mois d'indemnisation, on réduit à un an. Au lieu que ce soit 57% du salaire, on commence à 75 pour finir à 50. Et au lieu d'un mois de travail pour un mois de chômage, il faudra trois mois de travail pour un mois de chômage. Et enfin, nous supprimons la prise en compte par le chômage des ruptures conventionnelles. » Mesure précise (paramètres publiés), absente du site (ericzemmour.fr/priorites) et des données. À faire : fiche avec les mêmes sources et la même méthode que Philippe (« Chômage limité à 12 mois » : Unédic et iFRAP) et Retailleau (« Assurance chômage durcie » : règles de 2024, ruptures conventionnelles, panorama de l'Unédic de février 2026) ; dégressivité (75 % au début, 50 % à la fin) et affiliation (trois mois de travail par mois d'indemnisation) sur les données de l'Unédic ; « 30 milliards » = chiffre du camp, hors médiane ; verdict comme les autres fiches d'assurance chômage (convention agréée, décret faute d'accord, ou loi).",
    "echeance": "2026-11-28",
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-27",
    "maj": "2026-11-27",
-   "resolution": null
+   "resolution": "Fait le 27/11 (bloc « review 65 », branche revue/2026-11-27-zemmour) : fiche « chomage » (travail), calcul ascendant faute de chiffrage indépendant de l'ensemble, sur les sources de l'Unédic déjà retenues chez Philippe et Retailleau. Durée : 1/3 de jour indemnisé par jour travaillé contre 0,75 aujourd'hui (−55,6 % par droit) ; baisse de 25 % de 2023 = 4,2 Md€ par an (Unédic, février 2023, https://www.unedic.org/storage/uploads/2023/07/19/Effets-de-ladaptation-des-rgles-dassurance-chmage--la-conjoncture---synthse_uid_64b7e3c56ad39.pdf) → 9,3 ; plancher 18 → 12 mois ≈ 6,0 (Unédic 2024, Public Sénat) ; central 7,7 (milieu) ; borne haute 16,0 avec les ruptures conventionnelles exclues (9,1 Md€ en 2029, réduits à 6,7), avant tout report vers les licenciements, même règle que Retailleau. Dégressivité (75 % puis 50 %) : calendrier non publié, non comptée (note : de l'ordre de 2,7 Md€ de coût si la baisse était linéaire). Chiffre du camp (30 Md€) hors calcul. Verdict « faisable » (convention, décret ou loi, comme les autres fiches d'assurance chômage). Quiz : mêmes « Pour » et « Contre » que Philippe et Retailleau. Simulateur : 12 mois au plus avant 53 ans, plus d'indemnisation après une rupture conventionnelle (template et contrôle de smoke.py), règle des trois mois et dégressivité en note. Total de Zemmour −118,3 → −103,1 Md€ (avec S435)."
   },
   {
    "id": "S435",
@@ -7256,10 +7256,10 @@
    "sujet": "Zemmour : suppression de l'impôt « sur les transmissions par voie directe » (« 8 milliards », 26/11), champ plus étroit que la fiche « Fin des droits de succession » (16,0 Md€)",
    "detail": "Europe 1 (26/11, 21 h 20) : « il supprime l'impôt « sur les transmissions par voie directe », ce qui coûte 8 milliards d'euros ». Le site de campagne (« la fin des droits de succession ») et le discours de Toulon (21/11, Capital : « nous supprimerons les droits de succession ») ne limitaient pas la mesure à la ligne directe ; la fiche compte tous les droits de succession exécutés en 2024 (16,0 Md€, Voies et moyens ; donations en borne basse). La version la plus récente du candidat prime : à recalculer sur une base officielle des droits en ligne directe (successions, et donations si « transmissions » les vise), sinon chiffre du camp ±50 % ; la Cour des comptes (droits de succession, septembre 2024) ne publie pas la répartition par lien de parenté dans les passages relus. À faire à la prochaine passe.",
    "echeance": "2026-11-28",
-   "statut": "ouvert",
+   "statut": "resolu",
    "cree": "2026-11-27",
    "maj": "2026-11-27",
-   "resolution": null
+   "resolution": "Fait le 27/11 (bloc « review 65 ») : même mesure que Lisnard (« Fin des droits de succession en ligne directe »), même calcul : part de la ligne directe lue sur l'annexe 7 du rapport de la Cour des comptes de 2024 (enfants 7,1 Md€ sur 13,4 Md€ de droits, 53 %), déjà retenue chez Lisnard le 24/11 → 16,0 × 53 % ≈ −8,5 (au lieu de −16,0) ; borne basse −16,0 (version précédente : tous les droits de succession) ; borne haute −8,5 ; donations en ligne directe non comptées (part non publiée), comme chez Lisnard ; chiffre du camp (8 Md€) hors calcul. Quiz : même texte que Lisnard ; simulateur : note des héritages mise à jour."
   },
   {
    "id": "S436",
