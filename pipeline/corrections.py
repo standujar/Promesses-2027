@@ -5316,6 +5316,67 @@ k['note'] += (" Horizon publié le 24/11/2026 (site de campagne, citation du can
               "à l'intelligence artificielle » ; toujours sans coût publié.")
 D['asof'] = '26 novembre 2026'
 
+# --- review 63 : SMIC au 1er décembre 2026, valeur commune (26/11/2026) ; registre S274, S299 (résolus)
+# Décret n° 2026-1082 du 25/11/2026 (service-public.gouv.fr, actualité du 26/11/2026, relue le 26/11) : +1,6 % au 1/12/2026 ; 12,51 € brut de l'heure
+# (12,31), 1 897,35 € brut par mois (1 867,02), 1 501,94 € net (1 477,93). Règle écrite au registre : la valeur commune change pour les 8 le même
+# jour, à la parution du décret. Tout ce qui en dépend est recalculé ici avec les mêmes formules (la valeur de data/statu_quo.json reste celle de
+# juin 2026 : les blocs précédents s'y réfèrent) :
+# (1) situation de départ et simulateur : SMIC net 1 501,94 € ; le SMIC porté à 1 700 € net (Mélenchon, Glucksmann) rapporte 198 € par mois au lieu
+#     de 222 ; plafond des aides à 70 % du SMIC (Retailleau) et calculs au prorata sous le SMIC : au nouveau montant, par le simulateur ;
+#     exonération des moins de 30 ans jusqu'à 4 SMIC (Le Pen) : 6 008 € par mois au lieu de 5 912 ; quiz : « environ +200 € par mois au niveau du
+#     SMIC » au lieu de « +220 € » (data/quiz_plain.json, même texte pour les deux candidats) ;
+# (2) Mélenchon, SMIC à 1 700 € net : +13,2 % au lieu de +15,0 % → 19 × 13,2/13,2 = −19,0 (bornes de l'étude, 17 à 21, dans la même proportion) ;
+#     masse salariale publique 3,7, dont 10/13,2 couverts par les +10 % du point d'indice (règle du plancher) : 2,8 retirés → −16,2 (−18,2 ; −14,3) ;
+# (3) Glucksmann, SMIC à 1 700 € net « CSG réformée comprise » (2 039,7 € brut, inchangé) : +7,50 % de brut au lieu de +9,25 % → 19 × 7,5/13,2 =
+#     −10,8 ; bornes dans les mêmes proportions que Mélenchon ;
+# (4) Mélenchon, bornes « au SMIC net actuel » : service citoyen −11,4 (−11,2), AAH −6,5 (−6,1) ; valeurs centrales inchangées (SMIC du programme).
+# Rien d'autre ne dépend du montant du SMIC dans les fiches (contrôle sur les données publiées : seuils « 2 SMIC », « 3 SMIC », « 75 % du SMIC »
+# cités sans montant).
+SMICD = 'https://www.service-public.gouv.fr/particuliers/actualites/A17008'
+SMICD_S = "Service-public.gouv.fr, « Quelle revalorisation pour le Smic à compter du 1er décembre ? » (26/11/2026)"
+SMIC_IN = {"label": "SMIC au 1er décembre 2026", "value": "12,51 € brut de l'heure ; 1 897,35 € brut et 1 501,94 € net par mois (décret n° 2026-1082 du 25 novembre 2026)",
+           "source": SMICD_S, "url": SMICD}
+assert SQ['smic_net'] == 1477.93
+SQ['smic_net'] = 1501.94; SQ['smic_url'] = SMICD
+SMIC_BRUT = 1897.35
+# (1) Le Pen, simulateur : exonération des moins de 30 ans jusqu'à 4 SMIC
+spl = C['le-pen']['sim']; assert spl['ir_exempt_max'] == 5912
+spl['ir_exempt_max'] = round(4 * SQ['smic_net']); assert spl['ir_exempt_max'] == 6008
+# (2) Mélenchon, SMIC à 1 700 € net
+m = M('melenchon', 'smic'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-18.8, -21.1, -16.6) and C['melenchon']['sim']['smic_net'] == 1700
+pm = round((1700 / SQ['smic_net'] - 1) * 100, 1); gm = round(-19 * pm / 13.2, 1); gl, gh = round(gm * 23.9 / 21.6, 1), round(gm * 19.4 / 21.6, 1)
+pub = round(3.7 * pm / 13.2, 1); cv = round(pub * 10 / pm, 1); assert (pm, gm, gl, gh, pub, cv) == (13.2, -19.0, -21.0, -17.1, 3.7, 2.8), (pm, gm, gl, gh, pub, cv)
+k.update(central=round(gm + cv, 1), low=round(gl + cv, 1), high=round(gh + cv, 1)); assert (k['central'], k['low'], k['high']) == (-16.2, -18.2, -14.3)
+k['formula'] = ("Base SMIC au 1/12/2026 (1 501,94 € net, décret du 25/11/2026) : 1 700 € = +13,2 % ; Montaigne ≈ 19 Md€ pour +13,2 % → 19 × 13,2/13,2 = "
+                "−19,0 Md€ ; dont masse salariale publique 3,7 (agents au SMIC ou juste au-dessus, tableau de l'étude), déjà couverte aux trois quarts par "
+                "les +10 % du point d'indice comptés dans leur propre fiche (règle du plancher : traitement d'un agent = le plus élevé du SMIC relevé et du "
+                "traitement relevé par le point, jamais la somme) : 3,7 × 10/13,2 ≈ 2,8 retirés → −16,2 ; bornes : fourchette de l'étude (17 à 21 Md€) dans "
+                "la même proportion, −21,0 et −17,1, décalées d'autant")
+_i = [i for i, e in enumerate(k['inputs']) if e['label'] == "SMIC au 1er juin 2026"]; assert len(_i) == 1; k['inputs'][_i[0]] = dict(SMIC_IN)
+# (3) Glucksmann, SMIC à 1 700 € net « CSG réformée comprise »
+m = M('glucksmann', 'smic'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-13.3, -14.7, -11.9) and C['glucksmann']['sim']['smic_net'] == 1700
+sb = round((2039.7 / SMIC_BRUT - 1) * 100, 2); sc = round(-19 * sb / 13.2, 1); assert (sb, sc) == (7.5, -10.8), (sb, sc)
+k.update(central=sc, low=round(sc * 23.9 / 21.6, 1), high=round(sc * 19.4 / 21.6, 1)); assert (k['low'], k['high']) in ((-11.9, -9.7), (-12.0, -9.7)), (k['low'], k['high'])
+_a = ("Base SMIC juin 2026 : 1 867,02 € brut (1 477,93 € net) ; 1 700 € net « CSG réformée comprise » = 2 039,7 € brut (formule de la campagne), soit "
+      "+9,25 % de salaire brut ; Montaigne ≈ 19 Md€ pour +13,2 % → 19 × 9,25/13,2 ≈ −13,3 Md€ (même calcul que Mélenchon, 1 700 € net sans baisse de "
+      "CSG : +15,0 %) ; bornes dans les mêmes proportions que Mélenchon"); assert _nb(k['formula']) == _a, k['formula']
+k['formula'] = ("Base SMIC au 1/12/2026 : 1 897,35 € brut (1 501,94 € net, décret du 25/11/2026) ; 1 700 € net « CSG réformée comprise » = 2 039,7 € brut "
+                "(formule de la campagne), soit +7,50 % de salaire brut ; Montaigne ≈ 19 Md€ pour +13,2 % → 19 × 7,50/13,2 ≈ −10,8 Md€ (même calcul que "
+                "Mélenchon, 1 700 € net sans baisse de CSG : +13,2 %) ; bornes dans les mêmes proportions que Mélenchon")
+_i = [i for i, e in enumerate(k['inputs']) if e['label'] == "SMIC au 1er juin 2026"]; assert len(_i) == 1; k['inputs'][_i[0]] = dict(SMIC_IN)
+# (4) Mélenchon, bornes « au SMIC net actuel » : service citoyen, AAH (valeurs centrales au SMIC du programme, inchangées)
+m = M('melenchon', 'service_citoyen'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-12.8, -17.8, -11.2)
+sh = round(-790000 * 9 * (SQ['smic_net'] + 100) / 1e9, 1); assert sh == -11.4, sh
+_a = "borne haute : SMIC net actuel (1 477,93 €) → −11,2"; assert _nb(k['formula']).count(_a) == 1
+k['formula'] = _nb(k['formula']).replace(_a, "borne haute : SMIC net actuel (1 501,94 € au 1/12/2026) → −11,4"); k['high'] = sh
+m = M('melenchon', 'aah'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-9.3, -9.3, -6.1)
+ap = round((SQ['smic_net'] / 1041.59 - 1) * 100, 1); ah = round(-14.681 * (SQ['smic_net'] / 1041.59 - 1), 1); assert (ap, ah) == (44.2, -6.5), (ap, ah)
+_a = "borne haute au SMIC net actuel (1 477,93 €, +41,9 %) : −6,1"; assert _nb(k['formula']).count(_a) == 1
+k['formula'] = _nb(k['formula']).replace(_a, "borne haute au SMIC net actuel (1 501,94 € au 1/12/2026, +44,2 %) : −6,5"); k['high'] = ah
+# contrôle : plus aucune fiche ni aucun réglage du simulateur ne cite l'ancien montant
+_blob = _nb(json.dumps([[c0['measures'], c0['sim'], c0['claude_total']] for c0 in D['candidates']], ensure_ascii=False))
+assert not re.search(r"1 477,93|1477\.93|1 867,02|SMIC juin 2026|1er juin 2026|\b5912\b", _blob), re.search(r"1 477,93|1477\.93|1 867,02|SMIC juin 2026|1er juin 2026|\b5912\b", _blob)
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:

@@ -293,14 +293,15 @@ with sync_playwright() as p:
           f'simulateur : fin des certificats d\'économies d\'énergie ≈ 11 € pour 300 €/mois d\'essence chez Retailleau et Zemmour, même hypothèse, rien ailleurs {r}')
     # review 45 : barème publié (Glucksmann, « CSG progressive » du 4/11/2026, sur le salaire brut annuel) : il prime sur les points donnés à l'oral ;
     # gain = CSG actuelle − CSG du barème (108,6 € au salaire médian ; plafonné à 118,6 € au-delà du dernier seuil, pour tous les salaires au-dessus) ;
-    # SMIC à 1 700 € « CSG comprise » : la hausse du SMIC et la baisse de la CSG ne s'additionnent pas (au SMIC : 222 € ; à 1 600 € : 100 € de SMIC,
+    # SMIC à 1 700 € « CSG comprise » : la hausse du SMIC et la baisse de la CSG ne s'additionnent pas (au SMIC : 198 € = 1 700 − 1 501,94, SMIC du
+    # 1/12/2026, décret du 25/11/2026, review 63 ; 222 € avec le SMIC de juin 2026, 1 477,93 € ; à 1 600 € : 100 € de SMIC,
     # baisse de CSG de 85 € comprise ; à 1 690 € : 88 € de baisse de CSG, plus grande que les 10 € de SMIC)
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; openSim.clear(); openSim.add('glucksmann');
       const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); const t=document.querySelector('#simres .srow[data-c="glucksmann"]').innerText.replace(/\\s+/g,' ');
         const val=lab=>{ const row=[...document.querySelectorAll('#simres .srow[data-c="glucksmann"] .rw')].find(x=>x.querySelector('b').textContent===lab); const m=row&&row.querySelector('.v').textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/); return m?+m[1]:0; };
         return [val('SMIC'), val('Revenu net'), /pas de gain calculé/.test(t)]; };
       const out=[f(SQ.smic_net), f(1600), f(1690), f(2238), f(3000), f(6000)]; presetVal=null; return out; })()""")
-    check(r == [[222, 0, False], [100, 0, False], [0, 88, False], [0, 109, False], [0, 119, False], [0, 119, False]],
+    check(r == [[198, 0, False], [100, 0, False], [0, 88, False], [0, 109, False], [0, 119, False], [0, 119, False]],
           f'simulateur : barème de CSG publié (109 € au salaire médian, plafonné à 119 € au-delà du dernier seuil), SMIC « CSG comprise » sans addition des deux {r}')
     # Attal (review 52, corrigé en review 54) : suppression de la CSG sur les salaires publiée le 16/11/2026 (« La ligne sur la CSG, je vais la
     # supprimer ») : la CSG de chaque salaire (9,2 % de 98,25 % du brut, brut ≈ net / 0,78), au prorata, plafonnée à 270 € nets par mois (« jusqu'à
@@ -344,11 +345,12 @@ with sync_playwright() as p:
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; g('s-year').value=1990; const ids=['retailleau','lisnard','glucksmann','melenchon']; openSim.clear(); ids.forEach(i=>openSim.add(i));
       const f=v=>{ presetVal=v; g('s-salary').value=v; sim(); return ids.map(id=>[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].some(x=>/hausse du salaire imposable/.test(x.textContent))); };
       const out=[f(SQ.smic_net), f(2238)]; presetVal=null; return out; })()""")
-    # review 43 : Lisnard, gain publié de 200 € au salaire médian (montant minimal de la fourchette), soit 132 € au SMIC au prorata : imposable au SMIC
+    # review 43 : Lisnard, gain publié de 200 € au salaire médian (montant minimal de la fourchette), soit 134 € au SMIC au prorata (132 € avant le
+    # SMIC du 1/12/2026, review 63) : imposable au SMIC
     # review 55 : Mélenchon, impôt sur la hausse du SMIC calculé à son barème à 14 tranches (règle « réforme de l'impôt du candidat comprise ») : un
     # SMIC à 1 700 € reste sous le seuil d'imposition (0 €, contre 24,1 €/mois au barème actuel ; recalcul dans le bloc « review 55 » plus bas)
     check(r[0] == [False, True, True, False] and r[1] == [True, True, True, False],
-          f'simulateur : impôt sur la hausse du revenu imposable, même calcul pour tous (au SMIC, hausse du SMIC ou gain de 132 € de Lisnard ; rien pour un gain de 28 € ; une ligne au salaire médian) {r}')
+          f'simulateur : impôt sur la hausse du revenu imposable, même calcul pour tous (au SMIC, hausse du SMIC ou gain de 134 € de Lisnard ; rien pour un gain de 28 € ; une ligne au salaire médian) {r}')
     # montants recalculés hors de l'app avec le même barème (personne seule) : Retailleau 14,1 (gain de 41,7 × 2 797 / 2 238 = 52,1 €/mois, review 41 ;
     # 12,5 avant) et Lisnard 24,7 €/mois au salaire moyen (2 797 €),
     # Glucksmann 15,6 au salaire médian (2 238 € ; barème de CSG du 4/11/2026, gain de 108,6 € entièrement imposable, review 45), Mélenchon 0 au SMIC (SMIC porté à
@@ -356,8 +358,11 @@ with sync_playwright() as p:
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); S.kids=0; g('s-year').value=1990; openSim.clear(); ['retailleau','lisnard','glucksmann','melenchon'].forEach(i=>openSim.add(i));
       const f=(id,v)=>{ presetVal=v; g('s-salary').value=v; sim(); const row=[...document.querySelectorAll(`#simres .srow[data-c="${id}"] .rw`)].find(x=>/hausse du salaire imposable/.test(x.textContent)); const m=row&&row.textContent.replace(/\\s+/g,' ').match(/([0-9]+) €\\/mois/); return m?+m[1]:0; };
       const out=[f('retailleau',2797), f('lisnard',2797), f('glucksmann',2238), f('melenchon',SQ.smic_net), f('lisnard',SQ.smic_net)]; presetVal=null; return out; })()""")
-    # Lisnard au salaire moyen : baisse de la CSG seule au-delà du salaire médian (91,6 €), 24,7 € d'impôt ; au SMIC : 200 × 1 477,93 / 2 238 = 132,1 €, 2,3 € d'impôt
-    check(len(r) == 5 and all(abs(a - b) <= 1 for a, b in zip(r, [14.1, 24.7, 15.6, 0, 2.3])), f'simulateur : impôt sur la hausse du salaire égal au calcul de référence (14,1 ; 24,7 ; 15,6 ; 0 ; 2,3 €/mois, à 1 € près) {r}')
+    # Lisnard au salaire moyen : baisse de la CSG seule au-delà du salaire médian (91,6 €), 24,7 € d'impôt ; au SMIC : 200 × 1 501,94 / 2 238 = 134,2 €,
+    # 6,1 € d'impôt. review 63 : SMIC du 1/12/2026 (décret du 25/11/2026), valeur recalculée hors de l'app : revenu imposable (1 501,94 + 134,22) × 12
+    # × 0,9 = 17 670,5 € (net imposable = net chez Lisnard, CSG et CRDS déductibles) ; impôt 667,8 − décote (897 − 0,4525 × 667,8 = 594,8) = 72,9 € par an,
+    # soit 6,1 € par mois, contre 0 avant le gain ; 2,3 € avec le SMIC de juin 2026 (1 477,93 € : 132,1 € de gain, 27,8 € d'impôt par an)
+    check(len(r) == 5 and all(abs(a - b) <= 1 for a, b in zip(r, [14.1, 24.7, 15.6, 0, 6.1])), f'simulateur : impôt sur la hausse du salaire égal au calcul de référence (14,1 ; 24,7 ; 15,6 ; 0 ; 6,1 €/mois, à 1 € près) {r}')
     # part fiscale entière dès le 2e enfant (Le Pen) : gain avec 2 enfants, rien avec 1, pas de double compte avec l'exonération des moins de 30 ans
     r = pg.evaluate("""(()=>{ const g=id=>document.getElementById(id); document.querySelector('#s-status [data-v="prive"]').click(); g('s-salary').value=3500; openSim.clear(); openSim.add('le-pen');
       const f=(k,y)=>{ S.kids=k; g('s-year').value=y; sim(); return [...document.querySelectorAll('#simres .srow[data-c="le-pen"] .rw')].filter(x=>/^Impôt/.test(x.textContent.trim())).length; };
@@ -386,10 +391,11 @@ with sync_playwright() as p:
     def row(c, lab): return pg.evaluate(f"(a)=>({ROW})(a[0],a[1])", [c, lab])
     def txt(c): return pg.evaluate(f"document.querySelector('#simres .srow[data-c=\"{c}\"]').innerText.replace(/\\s+/g,' ')")
     # (1) SMIC et point d'indice : le traitement d'un agent public est le plus élevé des deux, pas leur somme (Mélenchon, agent public au SMIC :
-    # 1 700 − 1 477,93 = 222 € avant impôt, la hausse du point de 118 € comprise) ; au-dessus, la seule hausse du point (2 200 € : 176 €)
+    # 1 700 − 1 501,94 = 198 € avant impôt, la hausse du point de 120 € comprise ; SMIC du 1/12/2026, décret du 25/11/2026, review 63 ; 222 € et 118 €
+    # avec le SMIC de juin 2026, 1 477,93 €) ; au-dessus, la seule hausse du point (2 200 € : 176 €)
     pg.evaluate(f"({PROF})({{st:'public',sal:SQ.smic_net}})"); a = [row('melenchon', 'SMIC'), row('melenchon', "Point d'indice")]
     pg.evaluate(f"({PROF})({{st:'public',sal:2200}})"); b2 = [row('melenchon', 'SMIC'), row('melenchon', "Point d'indice")]
-    check(a == [[222], []] and b2 == [[], [176]], f"simulateur : agent public, SMIC relevé et point d'indice non additionnés (222 € au SMIC, 176 € à 2 200 €) {a} {b2}")
+    check(a == [[198], []] and b2 == [[], [176]], f"simulateur : agent public, SMIC relevé et point d'indice non additionnés (198 € au SMIC, 176 € à 2 200 €) {a} {b2}")
     # (3) Lisnard, même règle qu'Attal : 200 € au salaire médian (montant minimal de « 200 à 400 € »), au prorata en dessous ; au-delà, la seule baisse
     # de la CSG (91,6 € au salaire moyen, au prorata), avec une note ; jamais les deux additionnés ; indépendants : la baisse de la CSG seule
     out = []
