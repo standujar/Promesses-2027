@@ -228,8 +228,8 @@
 "Un étranger installé ne pourrait plus faire venir sa famille."
 ],
 "zemmour.retraites": [
-"Retraite maintenue à 64 ans ou portée à 65 ans, et plus d'épargne retraite",
-"Vous partiriez au même âge ou un an plus tard."
+"Retraite à 64 ans puis à 65 ans, et passage progressif à la retraite par capitalisation pour les plus jeunes",
+"Vous partiriez à 64 ans, puis à 65 ans à partir de 2032 ; les personnes nées après 1980 passeraient peu à peu à une retraite placée."
 ],
 "zemmour.csg": [
 "Supprimer la CSG prélevée sur les salaires et les revenus des indépendants",
@@ -877,6 +877,26 @@
 "Construire un deuxième hôpital complet à Mayotte, avec maternité, médecine et chirurgie",
 "Mayotte aurait un second hôpital public, à Combani, avec maternité, médecine et chirurgie.",
 "Mayotte : deuxième hôpital de plein exercice, à Combani (maternité, médecine, chirurgie)"
+],
+"philippe.sante.3": [
+"Obliger chaque médecin à exercer une semaine par an là où les soignants manquent, puis encadrer les installations",
+"Chaque médecin passerait au moins une semaine par an dans un territoire qui manque de soignants ; sans accord en un an, s'installer là où les médecins sont nombreux ne serait possible qu'au départ d'un confrère.",
+"Obligation de solidarité : chaque médecin, au moins une semaine par an dans les zones qui manquent de soignants ; faute d'accord en un an, installation en zone dense conditionnée au départ d'un confrère"
+],
+"philippe.sante.4": [
+"Former beaucoup plus de médecins chaque année, et recruter des assistants médicaux et des infirmiers aux compétences élargies",
+"Plus d'étudiants en médecine chaque année, et 30 000 recrutements d'assistants médicaux et d'infirmiers en pratique avancée pour décharger les médecins.",
+"Former 14 000 médecins par an ; recruter 20 000 assistants médicaux et 10 000 infirmiers en pratique avancée"
+],
+"philippe.sante.5": [
+"Rendre obligatoire le vaccin contre les papillomavirus pour les ados, et celui contre la grippe pour les soignants",
+"Le vaccin contre les papillomavirus, fait entre 11 et 14 ans contre plusieurs cancers, deviendrait obligatoire pour les filles et les garçons ; celui contre la grippe aussi, pour les soignants et les résidents des maisons de retraite.",
+"Vaccination obligatoire contre les papillomavirus, pour les filles et les garçons, et contre la grippe pour les soignants et les résidents d'Ehpad"
+],
+"attal.logement.4": [
+"Accepter un projet de construction si l'administration ne répond pas en deux mois, et limiter les recours à 18 mois",
+"Sans réponse de l'administration dans les deux mois, le projet serait accepté ; les recours contre un projet ne pourraient pas durer plus de 18 mois au total.",
+"Construction : sans réponse de l'administration en deux mois, le projet est accepté ; recours contre un projet limités à 18 mois au total"
 ],
 "philippe.economie.5": [
 "Réserver le statut de fonctionnaire aux fonctions régaliennes et aux enseignants",

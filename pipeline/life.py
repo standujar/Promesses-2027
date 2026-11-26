@@ -1926,6 +1926,39 @@ _txt('retailleau', 'economie', 'Supprimer les impôts de production, dans 30 Md�
      "Supprimer la C3S, refondre le forfait social et exonérer la part industrielle de la CFE, dans 30 Md€ de baisses pour les entreprises")
 _so('retailleau', 'economie', add=[_s("Site de Bruno Retailleau, mesure n° 34 « Réduire de 60 % le handicap fiscal de nos entreprises » (mise à jour du 11/09)", 'https://www.avecretailleau.fr/projet/mesure/reduire-de-60-le-handicap-fiscal-de-nos-entreprises-par')])
 
+# --- review 61 : revue du 27/11 (27/11/2026) ; registre S426, S427 (résolus), S106, S428 (mis à jour), S437
+# Même règle d'ordre et d'attribution pour les 8 (5 au plus ; 2026 d'abord, précises avant intentions, puis les plus récentes ; une proposition
+# nouvelle se place après les précises de 2026 déjà affichées ; au-delà de 5, sort celle que la règle classe dernière, S106). Même test
+# « précis ». Sources ouvertes du 26 au 27/11 (veille vérifiée du 27/11).
+# Philippe, page « Santé » du site de campagne (mise en ligne le 26/11, présentée à l'Institut Curie) : santé, 4 → 5, dans l'ordre des
+#  questions de la page ; précises (durée, chiffre, obligation nommée) : obligation de solidarité d'une semaine par an et, faute d'accord en un
+#  an, installation conditionnée au départ d'un confrère dans les zones denses (questions 2 et 3, une proposition) ; 14 000 médecins formés
+#  par an, 20 000 assistants médicaux et 10 000 infirmiers en pratique avancée (question 4) ; vaccinations obligatoires contre les
+#  papillomavirus (filles et garçons) et contre la grippe (soignants, résidents d'Ehpad) (question 7, déjà annoncée le 24/11, S426). Après les
+#  deux précises de 2026 affichées ; sortent les deux intentions (« mieux dépenser », « investir dans la formation des médecins ») et, au-delà
+#  de 5 (S106) : bilans de santé mentale à six et douze ans, loi « Évin des écrans », Nutri-Score obligatoire, agences sanitaires divisées par
+#  deux, hôpital, Assurance maladie, dépassements d'honoraires (intention), autres questions.
+# Attal, audition par la Fédération française du bâtiment (19/11, compte rendu du site de campagne du 23/11) : logement, 4 → 5 ; silence de
+#  l'administration valant accord après deux mois, recours contre les projets limités à 18 mois au total (précise : durées) ; après les trois
+#  précises de 2026, avant l'intention. Pages de mesure du 2/08/2026 sur le même sujet (délai de deux mois « inscrit dans la Constitution »,
+#  « un seul recours possible » pour « tout projet ») : la version la plus récente du candidat, celle du 23/11 pour la construction, prime.
+# Zemmour, « Objectif Élysée 2027 » (CNews et Europe 1, 26/11) : suppression de la loi SRU et « 47 provinces » rapportées par Europe 1 sans
+#  citation : un seul média, sans citation, règle d'attribution non remplie (comme les filières de RCF le 23/11) : textes inchangés (registre) ;
+#  loi Pleven, associations, Arcom (libertés, thème plein de précises de 2026, l'Arcom déjà affichée) : non affichées (S106).
+EP_SANTE = _s("Site de campagne d'Édouard Philippe, programme « Santé » (26/11)", EPPL + 'sante')
+AT_FFB = _s("attalpresident.fr, audition par la Fédération française du bâtiment (23/11)", 'https://attalpresident.fr/actualites/gabriel-attal-federation-francaise-du-batiment-nation-de-proprietaires')
+# Philippe
+_ps = _cur('philippe', 'sante'); assert [(p['verifiable'], p['old']) for p in _ps] == [(True, False), (True, False), (False, False), (False, False)], [(p['text'], p['verifiable']) for p in _ps]
+_put('philippe', 'sante', _ps[:2] + [
+    _p("Obligation de solidarité : chaque médecin, au moins une semaine par an dans les zones qui manquent de soignants ; faute d'accord en un an, installation en zone dense conditionnée au départ d'un confrère"),
+    _p("Former 14 000 médecins par an ; recruter 20 000 assistants médicaux et 10 000 infirmiers en pratique avancée"),
+    _p("Vaccination obligatoire contre les papillomavirus, pour les filles et les garçons, et contre la grippe pour les soignants et les résidents d'Ehpad")])
+_so('philippe', 'sante', add=[EP_SANTE])
+# Attal
+_ps = _cur('attal', 'logement'); assert [p['verifiable'] for p in _ps] == [True, True, True, False] and not any(p['old'] for p in _ps), [(p['text'], p['verifiable']) for p in _ps]
+_put('attal', 'logement', _ps[:3] + [_p("Construction : sans réponse de l'administration en deux mois, le projet est accepté ; recours contre un projet limités à 18 mois au total")] + _ps[3:])
+_so('attal', 'logement', add=[AT_FFB])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.

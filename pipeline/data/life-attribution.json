@@ -304,17 +304,20 @@
    ]
   },
   "sante": {
-   "Mieux dépenser en santé, sans diminuer les dépenses, en misant sur la prévention": [
-    "https://www.edouardphilippe.fr/programme/comptes-publics"
-   ],
-   "Investir dans la formation des médecins, la prévention et l'IA": [
-    "https://www.lequotidiendumedecin.fr/sante-societe/politique-de-sante/la-prevention-le-grand-retard-francais-cingle-edouard-philippe-candidat-lelection-presidentielle"
-   ],
    "3 jours de carence pour tous les arrêts maladie, dans le privé comme dans le public": [
     "https://www.edouardphilippe.fr/programme/travail"
    ],
    "Mayotte : deuxième hôpital de plein exercice, à Combani (maternité, médecine, chirurgie)": [
     "https://www.edouardphilippe.fr/programme/outre-mer"
+   ],
+   "Obligation de solidarité : chaque médecin, au moins une semaine par an dans les zones qui manquent de soignants ; faute d'accord en un an, installation en zone dense conditionnée au départ d'un confrère": [
+    "https://www.edouardphilippe.fr/programme/sante"
+   ],
+   "Former 14 000 médecins par an ; recruter 20 000 assistants médicaux et 10 000 infirmiers en pratique avancée": [
+    "https://www.edouardphilippe.fr/programme/sante"
+   ],
+   "Vaccination obligatoire contre les papillomavirus, pour les filles et les garçons, et contre la grippe pour les soignants et les résidents d'Ehpad": [
+    "https://www.edouardphilippe.fr/programme/sante"
    ]
   },
   "ecole": {
@@ -656,6 +659,9 @@
    "Logement social : priorité aux personnes qui travaillent dans les critères d'attribution": [
     "https://lcp.fr/actualites/logement-associations-jeunesse-ce-qu-il-faut-retenir-du-debat-presidentiel-sur-lci",
     "https://actu.orange.fr/politique/impots-logement-smic-ce-qu-il-faut-retenir-du-debat-entre-candidats-a-la-presidentielle-CNT000002tKH6A.html"
+   ],
+   "Construction : sans réponse de l'administration en deux mois, le projet est accepté ; recours contre un projet limités à 18 mois au total": [
+    "https://attalpresident.fr/actualites/gabriel-attal-federation-francaise-du-batiment-nation-de-proprietaires"
    ]
   },
   "libertes": {
