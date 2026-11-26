@@ -1959,6 +1959,50 @@ _ps = _cur('attal', 'logement'); assert [p['verifiable'] for p in _ps] == [True,
 _put('attal', 'logement', _ps[:3] + [_p("Construction : sans réponse de l'administration en deux mois, le projet est accepté ; recours contre un projet limités à 18 mois au total")] + _ps[3:])
 _so('attal', 'logement', add=[AT_FFB])
 
+# --- review 62 : suite de la revue du 27/11 (27/11/2026) ; registre S437 (résolu), S106
+# Zemmour, « Objectif Élysée 2027 » (CNews et Europe 1, 26/11), écouté dans la vidéo publiée par le candidat sur sa chaîne officielle
+# (@EricZemmourOff, 26/11 ; même règle que ses comptes Instagram et le programme de 2022 : source du candidat, pour lui seul) :
+#  - logement : « Nous allons supprimer la loi SRU » (59 min) : l'abrogation de la loi SRU, affichée comme proposition de 2022, est reconfirmée
+#    en 2026 ; précise de 2026, placée avant l'intention de 2026 (règle d'ordre, S106) ; quiz : même texte et mêmes « Pour » et « Contre » que
+#    Lisnard (même mesure), famille « Objectif de zéro artificialisation et quotas de logements sociaux » ;
+#  - école : « il faut de la sélection partout à l'entrée de la 6e, à l'entrée de la […] 3e avec le brevet et au bac. Un vrai baccalauréat »
+#    (38 min) : le brevet passé en 3e conditionne l'entrée au lycée ; le texte affiché (« Examen d'entrée en sixième et en seconde ; « véritable
+#    baccalauréat » ») est cohérent : inchangé ;
+#  - « 47 provinces » (fusion des départements et des régions) : libertés, thème plein de précises de 2026 : non affiché (S106) ; économies non
+#    chiffrées : rien dans la liste non comptée, comme les provinces de Lisnard.
+OFFICIEL_U['zemmour'] += ('https://www.youtube.com/watch?v=zplSsiIX7mc',)  # vidéo publiée par le candidat (@EricZemmourOff)
+Z_CN26 = _s("Chaîne YouTube d'Éric Zemmour, « Éric Zemmour sur CNews » (Objectif Élysée 2027, 26/11)", 'https://www.youtube.com/watch?v=zplSsiIX7mc')
+_ps = _cur('zemmour', 'logement'); assert [(p['verifiable'], p['old']) for p in _ps] == [(False, False), (True, True)] and _ps[1]['text'].startswith('Abroger la loi SRU'), [(p['text'], p['old']) for p in _ps]
+_put('zemmour', 'logement', [dict(_ps[1], old=False), _ps[0]])
+_so('zemmour', 'logement', add=[Z_CN26])
+# Attal, catalogue du site de campagne (154 pages de mesures relues les 26 et 27/11 ; chaque page porte la date de l'annonce d'origine, S428) :
+#  même règle d'ordre que pour les 8 (une proposition nouvelle après les précises de 2026 déjà affichées, 5 au plus, S106) ; dans les thèmes
+#  pleins de précises de 2026 (sécurité, école, environnement, économie), rien n'entre ;
+#  - libertés : l'intention « Grande réforme institutionnelle soumise au vote des Français » a son contenu publié (JDD, 2/08/2026 : 350 députés
+#    au lieu de 577, 200 sénateurs au lieu de 348) : version précise, à sa place ; place libre : responsabilité budgétaire du gouvernement
+#    (Le Parisien, 3/07/2026 : démission si les comptes dérivent trois ans de suite ; précise : durée) ;
+#  - rayonnement (3 → 5), les plus récentes d'abord : Livre blanc de la défense dès 2027 avec revue des programmes d'équipement (Rencontres
+#    d'Aix, 3/07/2026 ; précise : document et échéance), dépendance extra-européenne des équipements militaires au moins divisée par deux
+#    (Eurosatory, 16/06/2026 ; précise : chiffre) ; au-delà de 5 (S106) : saisie des avoirs russes gelés (annonce du 5/03/2025), dôme de fer et
+#    DARPA européens, fonds d'investissement dans la défense (intentions) ;
+#  - logement : « loi de programmation pour le logement sur cinq ans, d'abord pour la rénovation énergétique » (Batimat, 28/09/2026 : construction,
+#    rénovation, formation des artisans ; « dès 2027 », FFB, 23/11/2026) : texte élargi à sa place (quiz aligné) ;
+#  - santé : dépistage des PFAS dans les captages d'eau potable : plan eau, thème environnement (plein) : non affiché.
+ATP = 'https://attalpresident.fr/programme/mesures/'
+_ps = _cur('attal', 'libertes'); assert [p['verifiable'] for p in _ps] == [True, True, True, False] and _ps[3]['text'] == "Grande réforme institutionnelle soumise au vote des Français", [(p['text'], p['verifiable']) for p in _ps]
+_put('attal', 'libertes', _ps[:3] + [_p("Réforme institutionnelle soumise au vote des Français : 350 députés au lieu de 577, 200 sénateurs au lieu de 348"),
+                                     _p("Responsabilité budgétaire : un ministre qui ne tient pas son budget quitte ses fonctions ; le gouvernement démissionne si les comptes dérivent trois ans de suite")])
+_so('attal', 'libertes', add=[_s("attalpresident.fr, mesure « 350 députés et 200 sénateurs » (JDD, 2/08)", ATP + 'trois-cent-cinquante-deputes'),
+                              _s("attalpresident.fr, mesure « Responsabilité budgétaire du gouvernement » (Le Parisien, 3/07)", ATP + 'responsabilite-budgetaire-gouvernement')])
+_ps = _cur('attal', 'rayonnement'); assert len(_ps) == 3 and all(p['verifiable'] and not p['old'] for p in _ps), [p['text'] for p in _ps]
+_put('attal', 'rayonnement', _ps + [_p("Nouveau Livre blanc de la défense dès 2027, avec une revue complète des programmes d'équipement"),
+                                    _p("Diviser au moins par deux la part des équipements militaires achetés en Europe qui dépendent de chaînes logistiques hors d'Europe (près de 10 %)")])
+_so('attal', 'rayonnement', add=[_s("attalpresident.fr, mesure « Livre blanc de la défense » (Rencontres d'Aix, 3/07)", ATP + 'livre-blanc-defense-2027'),
+                                 _s("attalpresident.fr, mesure « Diviser par deux la dépendance militaire » (Eurosatory, 16/06)", ATP + 'diviser-par-deux-dependance-militaire')])
+_txt('attal', 'logement', 'Loi de programmation sur cinq ans pour la rénovation énergétique',
+     "Loi de programmation du logement sur cinq ans dès 2027, d'abord pour la rénovation énergétique (construction, rénovation, formation des artisans)")
+_so('attal', 'logement', add=[_s("attalpresident.fr, mesure « Loi de programmation pour le logement » (Batimat, 28/09)", ATP + 'loi-programmation-logement')])
+
 # (30) Même test « précis » pour une même formulation, appliqué à toutes les propositions affichées (y compris celles réécrites plus haut) :
 # un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou
 # accord nommé et ce qui y change) est précis ; un objectif, une orientation ou une création sans paramètre (plan, pôle, fonds) reste une intention.

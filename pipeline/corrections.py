@@ -5518,6 +5518,54 @@ _h = C['zemmour']['sim']['heritage']; assert len(_h) == 1 and _nb(_h[0]['effet']
 _h[0]['effet'] = ("Plus de droits de succession en ligne directe (CNews et Europe 1, 26/11/2026) ; la plupart des héritages en ligne directe sous 100 000 € "
                   "par enfant ne sont déjà pas taxés.")
 
+# --- review 66 : suite de la revue du 27/11 (27/11/2026) ; registre S436, S437 (résolus), S428 (mis à jour)
+# (1) Lisnard, entretien au Figaro Magazine (26/11, accès payant ; lu dans la reprise d'actu.fr avec l'AFP, citation directe) : titres de séjour
+#     « en dessous de 100 000 par an », « green card à la française » : version la plus récente de l'objectif chiffré de la fiche « aides5 »
+#     (80 000 entrées légales par an le 27/10 ; « divisés par huit » dans le programme) ; la fiche n'est pas chiffrée sur ce nombre : texte et
+#     source seulement. Mineurs (excuse réduite à 20 %, majorité pénale à 16 ans) et peines planchers : déjà affichés ; « il manque 30 000 places
+#     de prison » : constat, la fiche « prisons » garde les 20 000 places du programme.
+# (2) Zemmour : loi SRU reconfirmée (vidéo de l'émission du 26/11 publiée par le candidat : « Nous allons supprimer la loi SRU ») : la ligne de la
+#     liste non comptée n'est plus « non reconfirmée » (même texte que Le Pen et Lisnard) ; Vie quotidienne et quiz : life.py (review 62).
+ACTU_L = 'https://actu.fr/politique/election-presidentielle/l-immigration-zero-n-est-ni-faisable-ni-souhaitable-c-est-quoi-le-systeme-de-carte-verte-voulu-par-david-lisnard_65107342.html'
+CIT_L100 = "L’enjeu aujourd’hui, c’est d’arriver à avoir des titres de séjour légaux en dessous de 100 000 par an."
+m = M('lisnard', 'aides5'); k = m['claude']; _k0 = (k['central'], k['low'], k['high'])
+_a = "Objectif de 80 000 entrées légales par an, visas étudiants compris (27/10/2026 ; programme : titres de séjour divisés par huit) ; "; assert _nb(m['proposal']).startswith(_a), m['proposal']
+m['proposal'] = ("Titres de séjour « en dessous de 100 000 par an », avec une « green card à la française » (Figaro Magazine, 26/11/2026 ; 80 000 entrées "
+                 "légales par an, visas étudiants compris, le 27/10/2026 ; programme : titres de séjour divisés par huit) ; " + _nb(m['proposal'])[len(_a):])
+m['estimates'].append({"source": "actu.fr avec l'AFP, entretien de D. Lisnard au Figaro Magazine (26/11/2026)", "year": 2026, "value": "« " + CIT_L100 + " »",
+                       "low_md": None, "high_md": None, "url": ACTU_L})
+assert (k['central'], k['low'], k['high']) == _k0
+MISS('zemmour', "fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée (programme de 2022, non reconfirmée)",
+     "fin des quotas de logements sociaux (article 55 de la loi SRU) : économie qui dépend d'une baisse supposée de la construction, non comptée (reconfirmée le 26/11/2026, CNews et Europe 1)")
+# (3) Attal, catalogue du site de campagne (154 pages relues les 26 et 27/11 ; S428) : aucune page n'annonce une dépense ou une recette d'au moins
+#     1 Md€ avec un paramètre ou un chiffrage : aucune fiche nouvelle, aucun total changé. Textes complétés avec les paramètres publiés (règle
+#     d'or : jalons de 2032 ; immigration : « préférence travail » dans la Constitution, quotas tous les deux ans, mêmes verdicts) ; liste non
+#     comptée complétée des mesures à effet budgétaire sans coût publié, même règle que les plans de Mélenchon et le programme « Santé » de
+#     Philippe ; géoénergie : 160 M€ par an atteints en doublant les subventions, sur des budgets « sous-consommés » selon le candidat. Vie
+#     quotidienne : life.py (review 62).
+m = M('attal', 'regle_or'); _a = "zéro déficit en 2037."; assert m['proposal'].endswith(_a), m['proposal']
+m['proposal'] = m['proposal'][:-len(_a)] + ("zéro déficit en 2037, après un déficit sous 3 % avant 2032 et l'équilibre de la Sécurité sociale en 2032 (site de campagne, "
+                                            "3/07/2026) ; loi de finances rectificative dès les premières semaines du mandat.")
+m = M('attal', 'immigration'); _a = "Quotas d'immigration de travail votés par le Parlement, système à points, "; assert m['proposal'].startswith(_a), m['proposal']
+m['proposal'] = ("« Préférence travail » inscrite dans la Constitution ; quotas d'immigration de travail votés tous les deux ans par le Parlement, système à "
+                 "points (offre d'emploi stable, logement, français, valeurs), " + m['proposal'][len(_a):])
+MISS('attal', "arrêts maladie, défense, reste du plan de 150 Md€ non ventilé, dont le frein d'urgence de 20 Md€ (contenu non publié)",
+     "arrêts maladie, défense (Livre blanc et revue des programmes d'armement dès 2027, dôme de fer européen, DARPA européenne, fonds d'investissement "
+     "dans la défense : budgets non publiés), reste du plan de 150 Md€ non ventilé, « aux deux tiers sur les dépenses sociales » (site de campagne, "
+     "3/07/2026), dont le frein d'urgence de 20 Md€ (contenu non publié)")
+MISS('attal', "plan d'investissement de 160 M€ par an dans la géothermie (entretien à Sud Ouest, 11/11/2026 : 0,16 Md€, sous 1 Md€)",
+     "subventions à la géoénergie doublées pour atteindre 160 M€ par an dès 2027, prises sur des budgets « sous-consommés » selon le candidat (site de "
+     "campagne, 25/06/2026 ; entretien à Sud Ouest, 11/11/2026 : 0,16 Md€, sous 1 Md€)")
+MISS('attal', "« année blanche » des dépenses de l'État la première année du mandat, Éducation nationale exceptée (",
+     "« année blanche » des dépenses de l'État la première année du mandat, Éducation nationale exceptée (le site exclut aussi de l'effort d'économies "
+     "les Armées, la Justice et l'Intérieur, 3/07/2026 ; ")
+MISS_ADD('attal', "catalogue du site de campagne (relu le 27/11/2026), mesures sans coût publié : Parlement ramené à 350 députés et 200 sénateurs "
+         "(« plusieurs centaines de millions d'euros » d'économies par an selon le candidat, sous 1 Md€), corps professionnel des AESH et revalorisation "
+         "poursuivie (montant non publié), carte « famille monoparentale » et « droit au répit » des parents seuls (contenu et coût non publiés), places de "
+         "prison construites par une loi d'exception en opération d'intérêt national (nombre non publié), plan eau « à euro constant » : bouclier "
+         "tarifaire sur l'eau, dépistage des PFAS dans les captages, ministère de l'Eau, 600 M€ de crédits existants redéployés selon le candidat "
+         "(400 M€ du Plan eau, 200 M€ du Fonds vert), sans dépense nouvelle publiée")
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:

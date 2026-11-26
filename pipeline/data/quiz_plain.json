@@ -337,9 +337,9 @@
 "Supprimer le ZAN et l'encadrement des loyers"
 ],
 "attal.logement.1": [
-"Voter une loi fixant pour cinq ans les aides à la rénovation énergétique",
-"Ménages et artisans connaissent à l'avance les aides à la rénovation des cinq années suivantes.",
-"Loi de programmation sur cinq ans pour la rénovation énergétique"
+"Voter une loi fixant pour cinq ans la politique du logement, d'abord les aides à la rénovation énergétique",
+"Ménages et artisans connaissent à l'avance les aides à la rénovation, et le cadre de la construction, des cinq années suivantes.",
+"Loi de programmation du logement sur cinq ans dès 2027, d'abord pour la rénovation énergétique (construction, rénovation, formation des artisans)"
 ],
 "lisnard.logement.1": [
 "Supprimer l'obligation pour les communes d'avoir un quota de logements sociaux",
@@ -819,6 +819,11 @@
 "Supprimer le numerus clausus en médecine : un examen à réussir plutôt qu'un concours",
 "Les étudiants en médecine seraient retenus sur un examen à réussir, et non plus classés dans un concours aux places limitées.",
 "Supprimer le numerus clausus : sélection des étudiants en médecine par un examen, non plus par un concours"
+],
+"zemmour.logement.1": [
+"Supprimer l'obligation pour les communes d'avoir un quota de logements sociaux",
+"Les maires ne sont plus tenus d'avoir 20 à 25 % de logements sociaux dans leur commune.",
+"Abroger la loi SRU, qui impose aux communes un quota de logements sociaux"
 ],
 "attal.ecole.5": [
 "Dès la 4e, consacrer un quart du temps scolaire à des options ou à la découverte des métiers",
