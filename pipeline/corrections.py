@@ -5113,6 +5113,209 @@ for c0 in D['candidates']:
     _s = _nb(json.dumps([c0['measures'], c0['claude_total'], c0.get('total'), c0.get('sim')], ensure_ascii=False))
     assert not re.search(r"61,6 k€|30,8 k€|362,1 Md€ / 5,88|61\.6e3|30\.8e3", _s), c0['id']
 
+# --- review 62 : revue du 26/11 (26/11/2026) ; registre S063, S106, S138, S159, S161, S205, S208, S214, S268, S270, S271, S274, S279, S285, S299, S300, S303, S307, S312, S315, S321, S331, S337, S361, S404 (mis à jour), S422 et suivants
+# Décisions du 26/11 (délégation du porteur, règles communes appliquées aux faits vérifiés ; veille du 23/11 au soir au 26/11, sources ouvertes
+# le 26/11). Aucun total ne change. Hors de ce bloc : la valeur commune du SMIC (décret n° 2026-1082 du 25/11/2026 paru : changement fait à
+# part, registre S274 et S299) et la Vie quotidienne (aucun ajout dans cette passe, life.py inchangé).
+# (1) Sondages (data/sondages.json, règle de « review 19 ») : moyenne au 26/11 ; la vague Cluster17 pour Politico (9-10/11, notice 10368) sort,
+#     son terrain s'étant achevé 16 jours avant le 26/11 ; cinq instituts (OpinionWay, Elabe, Ifop, YouGov, Toluna Harris Interactive), scores
+#     inchangés ; notices 10395 à 10399, sans intentions de vote au 1er tour, dans « exclus » ; liste des notices relue le 26/11 : aucune
+#     notice d'intentions de vote après la 10393. Ordre des candidats inchangé.
+# (2) Constats du quiz (data/quiz_effets.json) mis au dernier chiffre officiel, le même texte pour les propositions du même type : réussite en
+#     licence en 3 ou 4 ans (Attal : 42,4 % des bacheliers 2021, SIES, Note Flash n° 31) ; passage en 2e année (Mélenchon, Glucksmann,
+#     Retailleau, Le Pen : 50,6 % à la session 2025, contre 49,1 % à la session 2024, même champ : 2e année de licence ou de formation de
+#     santé) ; entrée en 6e (Retailleau, Attal, Lisnard, Zemmour : évaluations de septembre 2026, 28,7 % en français, 33,0 % en
+#     mathématiques) ; salariés concernés par la hausse du SMIC (Glucksmann, Mélenchon : 11,8 % au 1/01/2026, Dares). Les cas et les
+#     arguments qui citent la même série passent à la même note, le même texte pour toutes les entrées (bacheliers 2021 : 42,4 % ; 15,9 %
+#     des bacheliers technologiques, 7,9 % des professionnels ; 70,8 % avec mention très bien ; 10,1 % de réorientés et 13,8 % de
+#     non-réinscrits après la 1re année, soit 23,9 %) : Mélenchon (deux entrées), Glucksmann, Retailleau, Le Pen, Attal ; niveaux de
+#     preuve inchangés. La Note Flash n° 29 ne reste citée que pour les 46,9 % des bacheliers 2018 (constat d'Attal). Repères « Où en est
+#     la France » (data/baseline.json) alignés sur les mêmes chiffres : entrée en 6e (2026) et salariés concernés par la hausse du SMIC.
+# (3) Le Pen :
+#     - impôt sur les sociétés progressif à cinq tranches (LCI, 25/11, AFP citée par BFM Business) : taux et seuils non publiés : fiche non
+#       chiffrable, hors total (règle : paramètre clé non publié) ; chiffres du camp pour les très petites entreprises (−3,2 Md€) et les PME
+#       (−3,0 Md€), effet de la tranche supérieure et de la fin de la surtaxe non publié : ni total ni fourchette indicative. Le taux
+#       d'impôt sur les sociétés récupéré dans ses autres fiches reste 20 % (la règle ne l'ajuste que si le changement de taux du
+#       programme est compté). Pas d'entrée au quiz, rien au simulateur.
+#     - même type chez les autres (règle n° 1) : Mélenchon propose aussi un barème progressif de l'impôt sur les sociétés (programme du
+#       6/11/2026, « Partager les richesses »), sans taux ni seuils ; il était listé non compté depuis la base d'origine (« IS progressif »),
+#       sans source ni chiffre. Même forme pour les deux : fiche non chiffrable, hors total, avec les chiffres de chaque camp (Mélenchon :
+#       3 Md€ de recettes, budget de La France insoumise du 14/10/2026, p. 14, relu le 26/11) ; la ligne sort de sa liste non comptée.
+#       « Financement non précisé » seulement pour la baisse annoncée (Le Pen), pas pour la recette annoncée (Mélenchon) : règle commune.
+#       Lisnard (« is20 ») baisse le taux normal : chiffrable, inchangé. Aucun autre barème progressif chez les 8.
+#     - fiche « etat » : « fin des intercommunalités et métropoles », texte hérité de la base, remplacé par la réforme territoriale
+#       présentée par la candidate le 24/11 (La République du Centre avec l'AFP, citations directes) : la candidate elle-même, en 2026,
+#       citée par un média reconnu, prime sur le texte hérité. Verdict (« sous conditions ») et chiffrage inchangés.
+#     - registre seulement : exonération des hausses de salaire « pendant cinq ans » (une dépêche sans citation et un site non reconnu),
+#       abattement de 10 % des retraités (engagement conditionnel au vote du budget 2027), étude de Terra Nova du 24/11 sur les retraites
+#       (sans chiffre), condamnation pénale des employeurs de travailleurs en situation irrégulière (intention, thème plein).
+# (4) Mélenchon, plans « féminisme » (https://melenchon2027.fr/programme/plans-thematiques/feminisme, page sans date) et « mer »
+#     (https://melenchon2027.fr/programme/plans-thematiques/mer, présenté le 25/11), lus le 26/11 :
+#     - petite enfance : calendrier publié (« dans les cinq ans ») : cinq ans = fin du mandat, 70 % en 2030, comme le plan sans date :
+#       chiffrage inchangé ; violences sexistes et sexuelles (3 Md€ « dès la première année de mandat ») et violences faites aux enfants
+#       (2 Md€ redits) : notes ; congé d'accueil : prestation partagée d'éducation de l'enfant revalorisée, sans montant : note ;
+#     - le reste des deux plans, sans coût publié : liste non comptée, même règle que le plan « pauvreté » du 16/11 (fiche seulement avec
+#       un paramètre et une base officielle d'au moins 1 Md€) ; prime compensatoire : à la charge de l'employeur ; nationalisations :
+#       opérations financières.
+# (5) Philippe (LCI, 24/11, cité par TF1 Info) : un départ à la retraite sur trois non remplacé sur 750 000, 250 000 postes : reconfirmation,
+#     source et note, chiffrage inchangé. Vaccination contre les papillomavirus et programme « Santé » du 26/11 : registre (prochaine passe).
+# (6) Attal (comptes rendus du site de campagne des 23 et 24/11) : doublons entre collectivités estimés à 10 Md€ par an (chiffre du camp,
+#     non compté : économie sans chiffrage indépendant ni paramètre publié, comme la ligne « collectivités » de Retailleau) ; banque
+#     nationale d'investissement dans le logement : mécanisme précisé ; soutien à l'apprentissage « rétabli » : montant et champ non publiés
+#     (même lecture que l'aide de 6 000 € de Retailleau et les chèques apprentissage de Le Pen) ; formation à l'IA « dans les 3 ans » :
+#     note ; classes de moins de vingt élèves : source de 2026 (page de mesure du site, annonce du 25/08/2026), aucun recrutement publié.
+# (7) Glucksmann, Lisnard, Retailleau, Zemmour, situation de départ (loi logement, budgets, SMIC) : registre seulement.
+BFMIS = 'https://www.bfmtv.com/economie/entreprises/marine-le-pen-promet-un-ballon-d-oxygene-de-6-milliards-d-euros-aux-tres-petites-entreprises-la-candidate-du-rn-a-la-presidentielle-veut-reformer-l-impot-sur-les-societes-en-instaurant-un-bareme-progressif_AD-202611260195.html'
+BFMIS_S = "BFM Business avec l'AFP, M. Le Pen face aux petits patrons sur LCI (25/11/2026, article du 26/11)"
+CIT_IS5 = "Marine Le Pen a promis mercredi un impôt sur les sociétés progressif, à cinq tranches comme l'impôt sur le revenu"
+CIT_IS5N = "Mais elle n'a précisé ni les taux, ni les seuils des barèmes envisagés."
+LAREP = 'https://www.larep.fr/france-monde/actualites/face-au-millefeuille-territorial-a-la-fois-inefficace-et-couteux-marine-le-pen-presente-ses-solutions-pour-la-presidentielle_15090792/'
+LAREP_S = "La République du Centre avec l'AFP, réforme territoriale de M. Le Pen (24/11/2026)"
+CIT_LPT = ("nous rendrons aux maires la liberté d’y adhérer ou non et d’en sortir s’ils le souhaitent » ; « engager immédiatement le rapprochement » "
+           "des départements et des régions ; « le principe du conseiller territorial » ; « un scrutin proportionnel à un tour, assorti d’une prime "
+           "majoritaire » ; « Cette “première étape” pourrait donc être effective dès les élections locales de 2028 » ; « une grande loi-cadre sur la "
+           "démétropolisation au cours des premiers mois du mandat")
+PFEM = 'https://melenchon2027.fr/programme/plans-thematiques/feminisme'
+PFEM_S = "La France insoumise, plan thématique « Comment nous allons construire une société féministe et émancipatrice » (site de campagne, lu le 26/11/2026)"
+TF1PH = 'https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-crise-sociale-crise-lyceenne-de-nombreux-candidats-de-villepin-lisnard-riner-glucksmann-le-pen-melenchon-se-pressent-au-congres-des-maires-de-france-les-dernieres-informations-de-ce-mardi-24-novembre-2026-2477741.html'
+TF1PH_S = "TF1 Info, entretien d'É. Philippe sur LCI (24/11/2026)"
+ATHV = 'https://attalpresident.fr/actualites/gabriel-attal-heure-de-verite-temps-d-avance-france'
+ATHV_S = "attalpresident.fr, compte rendu de L'Heure de vérité du 19/11 (24/11/2026)"
+# (3a) Le Pen : impôt sur les sociétés à cinq tranches (non chiffrable, hors total)
+assert not any(m['id'] == 'is_progressif' for m in C['le-pen']['measures']) and M('le-pen', 'production')['theme'] == 'fiscalite'
+ADD('le-pen', {'id': 'is_progressif', 'theme': 'fiscalite', 'title': 'Impôt sur les sociétés à cinq tranches',
+  'proposal': ("Barème progressif de l'impôt sur les sociétés à cinq tranches, « comme l'impôt sur le revenu » ; pour les plus grandes entreprises, "
+               "une tranche supérieure au taux actuel, en échange de la suppression de leur surtaxe (LCI, 25/11/2026) ; taux et seuils non publiés."),
+  'claimed': "Impôt des très petites entreprises de 14 à 10,8 Md€, des PME de 19,2 à 16,2 Md€ (chiffres de la candidate, 25/11/2026)", 'claimed_md': None,
+  'estimates': [{"source": BFMIS_S, "year": 2026, "value": "« " + CIT_IS5 + " » ; « " + CIT_IS5N + " »", "low_md": None, "high_md": None, "url": BFMIS}],
+  'consensus': 'isolé', 'verdict': 'faisable', 'obstacle': "Par la loi de finances ; taux et seuils non publiés ; " + FNP + ".",
+  'claude': {'id': 'is_progressif', 'central': 0, 'low': 0, 'high': 0, 'method': 'nc', 'nc': True,
+    'formula': "Non chiffrable : taux et seuils des cinq tranches non publiés",
+    'inputs': [{"label": "Proposition (25/11/2026)", "value": "« " + CIT_IS5 + " » ; « " + CIT_IS5N + " »", "source": BFMIS_S, "url": BFMIS},
+               {"label": "Effets annoncés par la candidate", "value": "« l'impôt payé par les très petites entreprises passerait de 14 à 10,8 milliards d'euros, et celui des PME de 19,2 à 16,2 milliards »", "source": BFMIS_S, "url": BFMIS},
+               {"label": "Grandes entreprises", "value": "« elle a reconnu qu'elles auraient \"une tranche qui est supérieure à celle qui existe actuellement\". En échange, elle promet de supprimer la surtaxe d'impôt sur les sociétés des grands groupes »", "source": BFMIS_S, "url": BFMIS},
+               {"label": "Droit en vigueur", "value": "« Hors surtaxe, l'impôt sur les sociétés est pour l'heure de 25%, avec un taux réduit de 15% sur les 42.500 premiers euros de bénéfice des entreprises de moins de 10 millions d'euros de chiffre d'affaires. »", "source": BFMIS_S, "url": BFMIS}],
+    'note': ("Chiffres du camp : −3,2 Md€ pour les très petites entreprises (de 14 à 10,8 Md€) et −3,0 Md€ pour les PME (de 19,2 à 16,2 Md€) ; "
+             "l'effet de la tranche supérieure au taux actuel pour les plus grandes entreprises et celui de la fin de leur surtaxe ne sont pas publiés : "
+             "aucun total annoncé, donc aucune fourchette indicative. La suppression de la CFE, que la candidate ajoute à cette réforme pour annoncer "
+             "6 Md€ aux très petites entreprises, est comptée dans la fiche « Fin des impôts de production ».")}})
+# (3a, suite) Mélenchon : même type de mesure, même forme (fiche non chiffrable, hors total ; la ligne « IS progressif » sort de la liste)
+LFIB = 'https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf'
+LFIB_S = "La France insoumise, « Comment nous allons remettre de l'ordre dans les comptes publics » (note budgétaire pour 2027)"
+CIT_ISM = ("Refonder l’impôt sur les sociétés pour établir l’égalité devant l’impôt entre petites et moyennes entreprises (PME) et grands groupes ; "
+           "instaurer un barème progressif et moduler l’impôt selon l’usage des bénéfices afin d’encourager leur réinvestissement plutôt que la "
+           "distribution de dividendes")
+CIT_ISMT = "Le taux implicite d’imposition à l’impôt sur les sociétés est de près de 24 % pour les PME contre 14,7 % pour les grandes entreprises."
+CIT_ISMB = "Nous reviendrons sur cette injustice, et cette perte de recettes de l’État, via une réforme de l’impôt sur les sociétés (3 milliards)"
+assert not any(m['id'] == 'is_progressif' for m in C['melenchon']['measures']) and M('melenchon', 'niches')['theme'] == 'fiscalite'
+ADD('melenchon', {'id': 'is_progressif', 'theme': 'fiscalite', 'title': 'Impôt sur les sociétés progressif',
+  'proposal': ("Barème progressif de l'impôt sur les sociétés, pour « l'égalité devant l'impôt » entre PME et grands groupes ; impôt modulé selon "
+               "l'usage des bénéfices, pour encourager leur réinvestissement plutôt que la distribution de dividendes (programme du 6/11/2026) ; "
+               "taux et seuils non publiés."),
+  'claimed': "+3 Md€ (budget de La France insoumise, 14/10/2026)", 'claimed_md': 3,
+  'estimates': [{"source": SRC_LV, "year": 2026, "value": "« " + CIT_ISM + " »", "low_md": None, "high_md": None, "url": LV_ECO2},
+                {"source": LFIB_S, "year": 2026, "value": "« " + CIT_ISMB + " »", "low_md": None, "high_md": None, "url": LFIB}],
+  'consensus': 'isolé', 'verdict': 'faisable', 'obstacle': "Par la loi de finances ; taux et seuils non publiés.",
+  'claude': {'id': 'is_progressif', 'central': 0, 'low': 0, 'high': 0, 'method': 'nc', 'nc': True,
+    'formula': "Non chiffrable : taux et seuils du barème non publiés",
+    'inputs': [LVIN("Proposition (programme du 6/11/2026)", CIT_ISM, LV_ECO2),
+               {"label": "Constat du camp (14/10/2026)", "value": "« " + CIT_ISMT + " »", "source": LFIB_S, "url": LFIB},
+               {"label": "Recette annoncée par le camp (14/10/2026)", "value": "« " + CIT_ISMB + " »", "source": LFIB_S, "url": LFIB}],
+    'note': ("Chiffre du camp : +3 Md€ de recettes (budget du 14/10/2026) ; ni taux ni seuils publiés, dans ce budget comme dans le programme : "
+             "aucune fourchette indicative. Une recette n'est comptée qu'avec un chiffrage indépendant ou un paramètre publié (règle commune).")}})
+MISS('melenchon', "IS progressif, pension minimale au niveau du SMIC", "pension minimale au niveau du SMIC")
+assert not re.search(r"\bIS progressif\b", _nb(C['melenchon']['claude_total']['missing']))
+assert [(c, m['verdict'], m['claude']['nc'], m['claude']['formula'].startswith("Non chiffrable : taux et seuils")) for c in ('le-pen', 'melenchon')
+        for m in [M(c, 'is_progressif')]] == [('le-pen', 'faisable', True, True), ('melenchon', 'faisable', True, True)]
+# (3b) Le Pen : réforme territoriale (fiche « etat »)
+m = M('le-pen', 'etat'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (0.26, 0, 1.06) and m['verdict'] == 'sous_conditions'
+_a = "fin des intercommunalités et métropoles."; assert m['proposal'].endswith(", " + _a), m['proposal']
+m['proposal'] = m['proposal'][:-len(_a)] + ("intercommunalités au libre choix des maires (adhésion et sortie), conseiller territorial commun aux départements et "
+                                            "aux régions dès les élections locales de 2028, loi-cadre de « démétropolisation » (discours du 24/11/2026).")
+_a = "Fin des intercommunalités et des métropoles : libre administration des collectivités"; assert m['obstacle'].startswith(_a + " ; agences :"), m['obstacle']
+m['obstacle'] = m['obstacle'].replace(_a, "Intercommunalités au libre choix des maires et conseiller territorial : par la loi ; effectifs des collectivités : décidés par elles (libre administration)")
+m['estimates'].append({"source": LAREP_S, "year": 2026, "value": "« " + CIT_LPT + " »", "low_md": None, "high_md": None, "url": LAREP})
+k['inputs'].append({"label": "Réforme territoriale (24/11/2026)", "value": "« " + CIT_LPT + " »", "source": LAREP_S, "url": LAREP})
+k['note'] += (" Réforme territoriale présentée par la candidate le 24/11/2026 (discours devant des maires, cité par l'AFP) : les maires libres d'adhérer à "
+              "une intercommunalité ou d'en sortir, conseiller territorial commun aux départements et aux régions, élu au scrutin proportionnel à un tour "
+              "avec prime majoritaire, dès les élections locales de 2028, loi-cadre de « démétropolisation » dans les premiers mois du mandat ; aucun "
+              "montant publié : chiffrage inchangé.")
+assert not re.search(r"[Ff]in des intercommunalités|intercommunalités et métropoles", json.dumps([C['le-pen']['measures'], C['le-pen']['claude_total'], C['le-pen']['total'], C['le-pen']['sim']], ensure_ascii=False))
+assert (k['central'], k['low'], k['high']) == (0.26, 0, 1.06) and m['verdict'] == 'sous_conditions'
+# (4a) Mélenchon : petite enfance, calendrier publié
+CIT_PE5 = "Créer un service public unique d’accueil de la petite enfance et ouvrir 500 000 places en crèche et modes de garde adaptés dans les cinq ans"
+m = M('melenchon', 'petite_enfance'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-3.7, -7.2, -2.1)
+_a = "ouverture progressive de 500 000 places d'accueil"; assert m['proposal'].count(_a) == 1
+m['proposal'] = m['proposal'].replace(_a, "ouverture de 500 000 places d'accueil dans les cinq ans")
+_a = "plan progressif sans date → 70 % en 2030 : 3,0"; assert k['formula'].count(_a) == 1
+k['formula'] = k['formula'].replace(_a, ("plan « dans les cinq ans » (plan « féminisme », lu le 26/11/2026), soit la fin du mandat → 70 % en 2030, comme un plan "
+                                         "sans date (règle commune) : 3,0"))
+m['estimates'].append({"source": PFEM_S, "year": 2026, "value": "« " + CIT_PE5 + " »", "low_md": None, "high_md": None, "url": PFEM})
+k['inputs'].insert(2, {"label": "Calendrier publié (plan « féminisme »)", "value": "« " + CIT_PE5 + " »", "source": PFEM_S, "url": PFEM})
+assert (k['central'], k['low'], k['high']) == (-3.7, -7.2, -2.1) and 'sans date →' not in k['formula']
+# (4b) Mélenchon : violences sexistes et sexuelles, violences faites aux enfants (calendrier, montants inchangés)
+CIT_VSS = ("Dès la première année de mandat, dans le cadre du budget rectificatif, nous allouerons a minima les 3 milliards d’euros de budget demandés "
+           "par les associations.")
+CIT_VE = "Nous y allouerons les 2 milliards d’euros de budget complémentaires pour lutter contre les violences faites aux enfants."
+m = M('melenchon', 'vss'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-2.6, -2.6, -2.1) and not k.get('note')
+m['estimates'].append({"source": PFEM_S, "year": 2026, "value": "« " + CIT_VSS + " »", "low_md": None, "high_md": None, "url": PFEM})
+k['note'] = ("Plan « féminisme » (site de campagne, lu le 26/11/2026) : les 3 Md€ sont alloués « dès la première année de mandat, dans le cadre du budget "
+             "rectificatif », avec une loi de lutte contre le sexisme et les violences faites aux femmes et aux enfants ; montant et chiffrage inchangés.")
+m = M('melenchon', 'violences-enfants'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-2.0, -2.0, -2.0)
+m['estimates'].append({"source": PFEM_S, "year": 2026, "value": "« " + CIT_VE + " »", "low_md": None, "high_md": None, "url": PFEM})
+k['note'] += (" Plan « féminisme » (site de campagne, lu le 26/11/2026) : les 2 Md€ sont redits, dans la loi de lutte contre le sexisme et les violences "
+              "faites aux femmes et aux enfants ; montant et chiffrage inchangés.")
+# (4c) Mélenchon : congé d'accueil de l'enfant
+CIT_CA = ("Remplacer les congés paternité et congés maternité actuels par un congé d’accueil de l’enfant identique et obligatoire pour les deux parents, "
+          "d’une durée de 20 semaines par parent et revaloriser la Prestation partagée d’éducation de l’enfant (PreParE)")
+m = M('melenchon', 'conge_accueil'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (-4.0, -4.0, -4.0)
+m['estimates'].append({"source": PFEM_S, "year": 2026, "value": "« " + CIT_CA + " »", "low_md": None, "high_md": None, "url": PFEM})
+k['note'] += (" Plan « féminisme » (site de campagne, lu le 26/11/2026) : congé de 20 semaines par parent redit ; prestation partagée d'éducation de "
+              "l'enfant (PreParE) revalorisée, sans montant publié : non comptée.")
+# (4d) Mélenchon : le reste des plans « féminisme » et « mer », sans coût publié (même règle que le plan « pauvreté » du 16/11)
+_t = _nb(C['melenchon']['claude_total']['missing'])
+assert _t.count("allocation de soutien familial déconjugalisée et revalorisée, pensions alimentaires défiscalisées") == 1 and _t.count("nationalisations et retours sur privatisations") == 1
+MISS_ADD('melenchon', "plan « féminisme » (site de campagne, lu le 26/11/2026), coûts non publiés : aide financière d'urgence aux victimes de violences "
+         "conjugales portée à 1 337 € par mois au moins, IVG, contraception et protections périodiques gratuites, arrêt menstruel avec maintien du "
+         "salaire, majoration des allocations familiales rétablie à 14 ans, aide médicale d'État intégrée au régime général de la Sécurité sociale "
+         "(allocation de soutien familial et pensions alimentaires redites, déjà listées) ; prime compensatoire d'au moins 10 % du salaire brut "
+         "quand l'employeur ne prouve pas l'égalité salariale : à la charge de l'employeur, sans dépense publique publiée ; plan « mer » (25/11/2026), "
+         "coûts non publiés : électrification de tous les quais des ports d'ici 2030, flotte stratégique d'environ 1 million de tonnes (contrats "
+         "garantis de 15 ans, aides remboursables), fonds national « érosion côtière », au moins 150 M€ de recettes du marché carbone européen "
+         "réaffectés à la décarbonation du transport maritime dès 2027 (recette réaffectée, sous 1 Md€) ; nationalisations de l'atelier de "
+         "réparation navale de Brest et, « si nécessaire », d'activités de GE Vernova : opérations financières")
+# (5) Philippe : un départ à la retraite sur trois non remplacé, redit par le candidat
+CIT_PHF = ("Mon objectif est d’intervenir au niveau des 750.000 fonctionnaires qui vont partir à la retraite au cours du prochain quinquennat, afin de "
+           "ne recruter que deux fonctionnaire sur trois et donc faire disparaître un poste sur trois » ; « En enlevant 250.000 personnes dans la "
+           "fonction publique, on sera au niveau quasiment de 2018.")
+m = M('philippe', 'fonction'); k = m['claude']; assert (k['central'], k['low'], k['high']) == (5.1, 3.1, 7.3)
+m['estimates'].append({"source": TF1PH_S, "year": 2026, "value": "« " + CIT_PHF + " »", "low_md": None, "high_md": None, "url": TF1PH})
+k['inputs'].append({"label": "Objectif redit (24/11/2026)", "value": "« " + CIT_PHF + " »", "source": TF1PH_S, "url": TF1PH})
+k['note'] += (" LCI (24/11/2026, cité par TF1 Info) : un départ à la retraite sur trois non remplacé sur 750 000 départs au cours du quinquennat, soit "
+              "250 000 postes, pour revenir « au niveau quasiment de 2018 » : objectif redit par le candidat, chiffrage inchangé.")
+assert (k['central'], k['low'], k['high']) == (5.1, 3.1, 7.3)
+# (6) Attal : lignes non comptées précisées, formation à l'IA
+MISS('attal', "classes de moins de 20 élèves, ",
+     "classes de moins de vingt élèves en moyenne en primaire d'ici cinq ans, en commençant par l'éducation prioritaire et le CP-CE1-CE2, avec les "
+     "moyens libérés par la baisse du nombre d'élèves (site de campagne, mesure annoncée le 25/08/2026 : aucun recrutement publié, non compté), ")
+MISS('attal', "suppression d'un échelon de collectivité territoriale (échelon et économie non publiés ; comptée par le camp avec les 100 000 postes)",
+     "suppression d'un échelon de collectivité territoriale (échelon non nommé ; le candidat estime le coût des doublons entre collectivités à "
+     "10 Md€ par an, site de campagne, 24/11/2026 : chiffre du camp, économie sans chiffrage indépendant ni paramètre publié, non comptée, comme la "
+     "ligne « collectivités » du plan de Retailleau ; comptée par le camp avec les 100 000 postes)")
+MISS('attal', "aux côtés de l'acquéreur, sa part étant rachetée ou remboursée à la revente (franceinfo, 12/11/2026 ; entretien à Sud Ouest, 11/11/2026 :",
+     "aux côtés de l'acquéreur : la banque détient l'autre moitié du bien, que le propriétaire peut acquérir une fois son premier emprunt remboursé "
+     "(site de campagne, 23/11/2026 ; part rachetée ou remboursée à la revente selon l'entretien à Sud Ouest du 11/11/2026 ; franceinfo, 12/11/2026 :")
+MISS_ADD('attal', "soutien à l'apprentissage « rétabli » (site de campagne, 23/11/2026 : montant et champ non publiés ; même lecture que l'aide de 6 000 € "
+         "par apprenti de Retailleau et les chèques apprentissage de Le Pen)")
+assert "collectivités 10" in _nb(C['retailleau']['claude_total']['missing']) and "chèques apprentissage" in _nb(C['le-pen']['claude_total']['missing'])
+CIT_AIA = "Je veux qu’on se dise que dans les 3 ans qui viennent, on va former 30 millions de Français à l’intelligence artificielle."
+m = M('attal', 'ia'); k = m['claude']; assert k.get('nc') and (k['central'], k['low'], k['high']) == (0, 0, 0)
+m['estimates'].append({"source": ATHV_S, "year": 2026, "value": "« " + CIT_AIA + " »", "low_md": None, "high_md": None, "url": ATHV})
+_a = "sans coût publié, non compté."; assert k['note'].endswith(_a)
+k['note'] += (" Horizon publié le 24/11/2026 (site de campagne, citation du candidat) : « dans les 3 ans qui viennent, on va former 30 millions de Français "
+              "à l'intelligence artificielle » ; toujours sans coût publié.")
+D['asof'] = '26 novembre 2026'
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
