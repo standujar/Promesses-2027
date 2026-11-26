@@ -428,11 +428,12 @@ with sync_playwright() as p:
     pg.evaluate(f"({PROF})({{st:'retraite',sal:3500,year:1955,kids:2}})"); lp = row('le-pen', 'Impôt')
     check(ab == ['−37 €/mois'] and ab12 == [[], True] and len(lp) == 1 and lp[0] > 0 and 'impôt sur le revenu estimé 1' in base23.replace(' ', ' '),
           f'simulateur : impôt des retraités (fin de l\'abattement chez Lisnard à 2 300 €, rien sous le seuil, part fiscale de Le Pen, impôt actuel affiché) {ab} {ab12} {lp}')
-    # (7) gains symétriques des pertes : durée du chômage allongée (Mélenchon, 2023 annulée : 24 mois) comme les baisses (Philippe : 12 mois), même ligne ;
-    # fin des jours de carence (non comptée) : une note sans montant
-    pg.evaluate(f"({PROF})({{st:'chomage',sal:1100}})"); ch = [pg.evaluate(f"(()=>{{ const w=[...document.querySelectorAll('#simres .srow[data-c=\"{c}\"] .rw')].find(x=>x.querySelector('b').textContent==='Durée du chômage'); return w?w.querySelector('.v').textContent.replace(/\\s+/g,' '):null; }})()") for c in ('melenchon', 'philippe')]
+    # (7) gains symétriques des pertes : durée du chômage allongée (Mélenchon, 2023 annulée : 24 mois) comme les baisses (Philippe et Zemmour : 12 mois), même ligne ;
+    # ruptures conventionnelles exclues (Zemmour, rc = 0) dites en clair ; fin des jours de carence (non comptée) : une note sans montant
+    pg.evaluate(f"({PROF})({{st:'chomage',sal:1100}})"); ch = [pg.evaluate(f"(()=>{{ const w=[...document.querySelectorAll('#simres .srow[data-c=\"{c}\"] .rw')].find(x=>x.querySelector('b').textContent==='Durée du chômage'); return w?w.querySelector('.v').textContent.replace(/\\s+/g,' '):null; }})()") for c in ('melenchon', 'philippe', 'zemmour')]
+    rcz = "rupture conventionnelle : plus d'indemnisation" in txt('zemmour')
     pg.evaluate(f"({PROF})({{st:'public',sal:2200}})"); car = 'fin des jours de carence' in txt('melenchon') and not any(row('melenchon', 'Arrêt maladie'))
-    check(ch == ['jusqu\'à +6 600 €', 'jusqu\'à −6 600 €'] and car, f'simulateur : durée du chômage dans les deux sens, même ligne ; carence de Mélenchon en note {ch} {car}')
+    check(ch == ['jusqu\'à +6 600 €', 'jusqu\'à −6 600 €', 'jusqu\'à −6 600 €'] and rcz and car, f'simulateur : durée du chômage dans les deux sens, même ligne ; ruptures conventionnelles exclues (Zemmour) ; carence de Mélenchon en note {ch} {rcz} {car}')
     # (8) notes sans montant pour les mesures comptées non calculables, même forme pour tous ; (10) hypothèse « agents publics » écrite (Attal, Retailleau)
     pg.evaluate(f"({PROF})({{st:'public',sal:2200,w:300000,inh:100000}})")
     nt = [bool(re.search(p, txt(c))) for c, p in (('melenchon', '100 % Sécu.*non calculé ici'), ('melenchon', 'inférieurs à 150 000 € exonérés'), ('le-pen', 'Soins dentaires.*non calculé ici'),
@@ -602,13 +603,14 @@ with sync_playwright() as p:
       return [true, tops.size===1, !/\\d (?:Md€|€|%)/.test(JSON.stringify(D))]; })()""")
     check(r == [True, True, True], f'typographie : nombres et unités insécables (résumé de Glucksmann à 360 px) {r}')
     pg.set_viewport_size({'width': 390, 'height': 844})
-    # sondages : chiffre affiché = moyenne des milieux de fourchette par institut, candidats rangés selon cette moyenne
+    # sondages : chiffre affiché = moyenne des milieux de fourchette par institut, candidats rangés selon cette moyenne ; à égalité exacte, ordre de la
+    # mise à jour précédente (« ordre_precedent », décision du 27/11/2026)
     import json
     SG = json.load(open(os.path.join(ROOT, 'pipeline', 'data', 'sondages.json')))
     moy = {c: sum(sum(i['scores'][c]) / 2 for i in SG['instituts']) / len(SG['instituts']) for c in SG['instituts'][0]['scores']}
     r = pg.evaluate("D.candidates.map(c=>[c.id, c.poll])")
-    check([c for c, _ in r] == sorted(moy, key=lambda c: -moy[c]) and all(abs(float(v[:-2].replace(',', '.')) - moy[c]) <= 0.05 + 1e-9 for c, v in r),
-          f'sondages : moyenne des instituts affichée, candidats rangés selon elle {r}')
+    check([c for c, _ in r] == sorted(moy, key=lambda c: (-round(moy[c], 9), SG['ordre_precedent'].index(c))) and all(abs(float(v[:-2].replace(',', '.')) - moy[c]) <= 0.05 + 1e-9 for c, v in r),
+          f'sondages : moyenne des instituts affichée, candidats rangés selon elle (égalité : ordre précédent) {r}')
     # aperçu des liens partagés (WhatsApp, réseaux sociaux) et référencement de l'accueil
     import struct
     P = os.path.join(ROOT, 'public')

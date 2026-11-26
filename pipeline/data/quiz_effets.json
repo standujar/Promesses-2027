@@ -6587,6 +6587,50 @@
 }
 ]
 },
+"zemmour.chomage": {
+"constat": "Le taux de chômage est de 8,2 % au 3e trimestre 2026, contre 7,1 % début 2023 et 8,4 % mi-2019 (Insee).",
+"constat_s": [
+2
+],
+"pour": "Des droits plus courts font reprendre un emploi plus tôt, ce qui raccourcit le chômage.",
+"preuve_pour": "solide",
+"contre": "Plus de chômeurs arrivent en fin de droits sans emploi et passent aux minima sociaux.",
+"preuve_contre": "mitigé",
+"cas_pour": [
+{
+"t": "Passer la durée maximale d'indemnisation de 7 à 15 mois a allongé le chômage d'environ deux mois et demi, sans meilleur emploi retrouvé (IPP, France, 2013).",
+"s": [
+0
+]
+}
+],
+"cas_contre": [
+{
+"t": "Trois mois après la fin de leurs droits, 31 % des chômeurs étaient salariés, 18 % au RSA et 11 % à l'allocation spécifique de solidarité (Trésor, France, 2025).",
+"s": [
+1
+]
+}
+],
+"etudes": "Les évaluations concordent : des droits plus courts réduisent la durée du chômage ; en France, l'effet sur la qualité de l'emploi retrouvé est nul (IPP, 2013).",
+"src": [
+{
+"l": "IPP, note n° 5 (T. Le Barbanchon), impact de la générosité de l'assurance chômage",
+"a": 2013,
+"u": "https://www.ipp.eu/wp-content/uploads/2013/04/cp-22avril2013-ipp.pdf"
+},
+{
+"l": "Trésor-Éco n° 373, Comprendre les trajectoires après la fin de droit au régime de l'assurance chômage",
+"a": 2025,
+"u": "https://www.tresor.economie.gouv.fr/Articles/2025/10/30/comprendre-les-trajectoires-apres-la-fin-de-droit-au-regime-de-l-assurance-chomage"
+},
+{
+"l": "Insee, taux de chômage au sens du BIT, France hors Mayotte, données CVS (série 001688527)",
+"a": 2026,
+"u": "https://www.insee.fr/fr/statistiques/serie/001688527"
+}
+]
+},
 "retailleau.ia": {
 "constat": "Entreprises de 10 salariés ou plus utilisant l'IA : 18,2 % en 2025, contre 5,9 % en 2023 ; UE : 20 % (Eurostat).",
 "constat_s": [
