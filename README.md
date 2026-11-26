@@ -10,9 +10,9 @@ Données à jour au 26 novembre 2026 : 8 candidats, 179 mesures.
 | Candidat | Parti | Mesures chiffrées | Effet sur le déficit en 2030 (Md€/an) | Fourchette à 80 % |
 | --- | --- | --- | --- | --- |
 | Marine Le Pen | RN | 29 | −88,4 | −116,3 à −69,1 |
-| Jean-Luc Mélenchon | LFI | 30 | −257,4 | −288,0 à −214,1 |
+| Jean-Luc Mélenchon | LFI | 30 | −254,8 | −285,6 à −211,8 |
 | Édouard Philippe | Horizons | 12 | −2,0 | −28,2 à +1,4 |
-| Raphaël Glucksmann | PS-Place publique | 9 | −88,5 | −117,3 à −67,3 |
+| Raphaël Glucksmann | PS-Place publique | 9 | −86,0 | −114,8 à −64,8 |
 | David Lisnard | Nouvelle Énergie | 15 | −41,4 | −55,1 à −36,2 |
 | Gabriel Attal | Renaissance | 7 | −61,0 | −71,3 à −56,5 |
 | Bruno Retailleau | LR | 22 | −27,6 | −34,9 à −15,2 |
