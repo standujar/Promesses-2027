@@ -1,5 +1,5 @@
 {
- "asof": "24 novembre 2026",
+ "asof": "26 novembre 2026",
  "context": [
   {
    "v": "5,4 %",
@@ -35,7 +35,7 @@
    "id": "le-pen",
    "name": "Marine Le Pen",
    "party": "RN",
-   "poll": "32,1 %",
+   "poll": "32,7 %",
    "summary": "Promet 140 Md€ d'économies nettes d'ici 2032, 30 Md€ de baisses d'impôts, la retraite entre 60 et 62 ans et la TVA à 5,5 % sur l'énergie. Notre chiffrage : −88,4 Md€ par an en 2030, soit −2 860 € par ménage. Principal obstacle : la révision de la Constitution, pour la priorité nationale, le prêt réservé aux jeunes ménages français et la règle d'or.",
    "measures": [
     {
@@ -972,7 +972,7 @@
      "id": "etat",
      "theme": "depense",
      "title": "État, agences, collectivités",
-     "proposal": "Supprimer la plupart des agences et opérateurs de l'État, réduire les effectifs publics par le non-remplacement de départs (nombre de postes non publié par la candidate), fin des intercommunalités et métropoles.",
+     "proposal": "Supprimer la plupart des agences et opérateurs de l'État, réduire les effectifs publics par le non-remplacement de départs (nombre de postes non publié par la candidate), intercommunalités au libre choix des maires (adhésion et sortie), conseiller territorial commun aux départements et aux régions dès les élections locales de 2028, loi-cadre de « démétropolisation » (discours du 24/11/2026).",
      "claimed": "Agences et opérateurs : 3,4 Md€ en 2027 ; effectifs des collectivités : 0,8 Md€ en 2027 (contre-budget 2027 du groupe RN, sans nombre de postes)",
      "claimed_md": 4.2,
      "estimates": [
@@ -999,11 +999,19 @@
        "low_md": 13.5,
        "high_md": 13.5,
        "url": "https://francebudget.fr/scenarios/rn-2027"
+      },
+      {
+       "source": "La République du Centre avec l'AFP, réforme territoriale de M. Le Pen (24/11/2026)",
+       "year": 2026,
+       "value": "« nous rendrons aux maires la liberté d’y adhérer ou non et d’en sortir s’ils le souhaitent » ; « engager immédiatement le rapprochement » des départements et des régions ; « le principe du conseiller territorial » ; « un scrutin proportionnel à un tour, assorti d’une prime majoritaire » ; « Cette “première étape” pourrait donc être effective dès les élections locales de 2028 » ; « une grande loi-cadre sur la démétropolisation au cours des premiers mois du mandat »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.larep.fr/france-monde/actualites/face-au-millefeuille-territorial-a-la-fois-inefficace-et-couteux-marine-le-pen-presente-ses-solutions-pour-la-presidentielle_15090792/"
       }
      ],
      "consensus": "divergent",
      "verdict": "sous_conditions",
-     "obstacle": "Fin des intercommunalités et des métropoles : libre administration des collectivités ; agences : liste non publiée, missions à reprendre.",
+     "obstacle": "Intercommunalités au libre choix des maires et conseiller territorial : par la loi ; effectifs des collectivités : décidés par elles (libre administration) ; agences : liste non publiée, missions à reprendre.",
      "claude": {
       "id": "etat",
       "central": 0.26,
@@ -1053,9 +1061,15 @@
         "value": "« Jean-Philippe Tanguy chiffre à 85 000 le nombre de postes qui ne seraient pas renouvelés » dans les agences et organismes d'ici 2032 ; « Le parti estime pouvoir ne pas renouveler 116 000 postes dans les collectivités territoriales d'ici 2032 » ; seule source trouvée, ne cite pas la candidate",
         "source": "FranceTransactions (6/10/2026), compte rendu de la présentation du contre-budget",
         "url": "https://www.francetransactions.com/actus/actualites-socio-economiques/proposition-rn-budget-2027.html"
+       },
+       {
+        "label": "Réforme territoriale (24/11/2026)",
+        "value": "« nous rendrons aux maires la liberté d’y adhérer ou non et d’en sortir s’ils le souhaitent » ; « engager immédiatement le rapprochement » des départements et des régions ; « le principe du conseiller territorial » ; « un scrutin proportionnel à un tour, assorti d’une prime majoritaire » ; « Cette “première étape” pourrait donc être effective dès les élections locales de 2028 » ; « une grande loi-cadre sur la démétropolisation au cours des premiers mois du mandat »",
+        "source": "La République du Centre avec l'AFP, réforme territoriale de M. Le Pen (24/11/2026)",
+        "url": "https://www.larep.fr/france-monde/actualites/face-au-millefeuille-territorial-a-la-fois-inefficace-et-couteux-marine-le-pen-presente-ses-solutions-pour-la-presidentielle_15090792/"
        }
       ],
-      "note": "Postes, indicatif (hors total) : si les ≈ 201 000 postes non renouvelés d'ici 2032 (85 000 dans les agences et organismes, 116 000 dans les collectivités), rapportés par un seul site d'après le député J.-P. Tanguy lors de la présentation du contre-budget (6/10/2026), étaient repris par la candidate, la règle commune donnerait ≈ +4,1 Md€ en 2030 (200 000 × 70 % × 29,35 k€), jusqu'à +5,9 si le plan était entièrement réalisé. Agences : valeur commune de 0,26 Md€, la même chez Le Pen, Retailleau et Lisnard : part hors personnel (13,2 Md€ de fonctionnement sur 27,2 Md€ de charges) de l'économie chiffrée par la commission d'enquête du Sénat en 2025 (fonctions support des opérateurs réduites de 20 % : 0,54 Md€), la part de personnel étant déjà dans les postes supprimés ; borne basse 0 (réduction jugée « très volontariste » par le Sénat) ; borne haute 1,06 (−8 % des 13,2 Md€ de fonctionnement des opérateurs). Le montant annoncé par le camp est un chiffre de camp, non compté au-delà. Contre-budget du RN : « suppressions et réinternalisations d'agences et d'opérateurs » 3,4 Md€ en 2027, sans liste. Le simulateur francebudget.fr (13,5 Md€ en 2032) ne sert plus de borne (source faible)."
+      "note": "Postes, indicatif (hors total) : si les ≈ 201 000 postes non renouvelés d'ici 2032 (85 000 dans les agences et organismes, 116 000 dans les collectivités), rapportés par un seul site d'après le député J.-P. Tanguy lors de la présentation du contre-budget (6/10/2026), étaient repris par la candidate, la règle commune donnerait ≈ +4,1 Md€ en 2030 (200 000 × 70 % × 29,35 k€), jusqu'à +5,9 si le plan était entièrement réalisé. Agences : valeur commune de 0,26 Md€, la même chez Le Pen, Retailleau et Lisnard : part hors personnel (13,2 Md€ de fonctionnement sur 27,2 Md€ de charges) de l'économie chiffrée par la commission d'enquête du Sénat en 2025 (fonctions support des opérateurs réduites de 20 % : 0,54 Md€), la part de personnel étant déjà dans les postes supprimés ; borne basse 0 (réduction jugée « très volontariste » par le Sénat) ; borne haute 1,06 (−8 % des 13,2 Md€ de fonctionnement des opérateurs). Le montant annoncé par le camp est un chiffre de camp, non compté au-delà. Contre-budget du RN : « suppressions et réinternalisations d'agences et d'opérateurs » 3,4 Md€ en 2027, sans liste. Le simulateur francebudget.fr (13,5 Md€ en 2032) ne sert plus de borne (source faible). Réforme territoriale présentée par la candidate le 24/11/2026 (discours devant des maires, cité par l'AFP) : les maires libres d'adhérer à une intercommunalité ou d'en sortir, conseiller territorial commun aux départements et aux régions, élu au scrutin proportionnel à un tour avec prime majoritaire, dès les élections locales de 2028, loi-cadre de « démétropolisation » dans les premiers mois du mandat ; aucun montant publié : chiffrage inchangé."
      },
      "quiz_text": "Supprimer la plupart des agences de l'État et beaucoup de postes publics",
      "quiz_concret": "Moins de fonctionnaires et de structures publiques.",
@@ -3327,6 +3341,64 @@
       "note": "Indicatif, même base que Retailleau et Philippe : les droits différenciés en vigueur appliqués à tous les étudiants hors UE ≈ +0,07 Md€ ; chaque 1 000 € de droits en plus par an pour les 111 400 étudiants du périmètre ≈ +0,11 Md€, sans départs ; chiffre du camp 1,1."
      },
      "quiz_text": "Augmenter les frais de scolarité des étudiants étrangers, sauf conventions entre États."
+    },
+    {
+     "id": "is_progressif",
+     "theme": "fiscalite",
+     "title": "Impôt sur les sociétés à cinq tranches",
+     "proposal": "Barème progressif de l'impôt sur les sociétés à cinq tranches, « comme l'impôt sur le revenu » ; pour les plus grandes entreprises, une tranche supérieure au taux actuel, en échange de la suppression de leur surtaxe (LCI, 25/11/2026) ; taux et seuils non publiés.",
+     "claimed": "Impôt des très petites entreprises de 14 à 10,8 Md€, des PME de 19,2 à 16,2 Md€ (chiffres de la candidate, 25/11/2026)",
+     "claimed_md": null,
+     "estimates": [
+      {
+       "source": "BFM Business avec l'AFP, M. Le Pen face aux petits patrons sur LCI (25/11/2026, article du 26/11)",
+       "year": 2026,
+       "value": "« Marine Le Pen a promis mercredi un impôt sur les sociétés progressif, à cinq tranches comme l'impôt sur le revenu » ; « Mais elle n'a précisé ni les taux, ni les seuils des barèmes envisagés. »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.bfmtv.com/economie/entreprises/marine-le-pen-promet-un-ballon-d-oxygene-de-6-milliards-d-euros-aux-tres-petites-entreprises-la-candidate-du-rn-a-la-presidentielle-veut-reformer-l-impot-sur-les-societes-en-instaurant-un-bareme-progressif_AD-202611260195.html"
+      }
+     ],
+     "consensus": "isolé",
+     "verdict": "faisable",
+     "obstacle": "Par la loi de finances ; taux et seuils non publiés ; financement non précisé dans la mesure.",
+     "claude": {
+      "id": "is_progressif",
+      "central": 0,
+      "low": 0,
+      "high": 0,
+      "method": "nc",
+      "nc": true,
+      "formula": "Non chiffrable : taux et seuils des cinq tranches non publiés",
+      "inputs": [
+       {
+        "label": "Proposition (25/11/2026)",
+        "value": "« Marine Le Pen a promis mercredi un impôt sur les sociétés progressif, à cinq tranches comme l'impôt sur le revenu » ; « Mais elle n'a précisé ni les taux, ni les seuils des barèmes envisagés. »",
+        "source": "BFM Business avec l'AFP, M. Le Pen face aux petits patrons sur LCI (25/11/2026, article du 26/11)",
+        "url": "https://www.bfmtv.com/economie/entreprises/marine-le-pen-promet-un-ballon-d-oxygene-de-6-milliards-d-euros-aux-tres-petites-entreprises-la-candidate-du-rn-a-la-presidentielle-veut-reformer-l-impot-sur-les-societes-en-instaurant-un-bareme-progressif_AD-202611260195.html"
+       },
+       {
+        "label": "Effets annoncés par la candidate",
+        "value": "« l'impôt payé par les très petites entreprises passerait de 14 à 10,8 milliards d'euros, et celui des PME de 19,2 à 16,2 milliards »",
+        "source": "BFM Business avec l'AFP, M. Le Pen face aux petits patrons sur LCI (25/11/2026, article du 26/11)",
+        "url": "https://www.bfmtv.com/economie/entreprises/marine-le-pen-promet-un-ballon-d-oxygene-de-6-milliards-d-euros-aux-tres-petites-entreprises-la-candidate-du-rn-a-la-presidentielle-veut-reformer-l-impot-sur-les-societes-en-instaurant-un-bareme-progressif_AD-202611260195.html"
+       },
+       {
+        "label": "Grandes entreprises",
+        "value": "« elle a reconnu qu'elles auraient \"une tranche qui est supérieure à celle qui existe actuellement\". En échange, elle promet de supprimer la surtaxe d'impôt sur les sociétés des grands groupes »",
+        "source": "BFM Business avec l'AFP, M. Le Pen face aux petits patrons sur LCI (25/11/2026, article du 26/11)",
+        "url": "https://www.bfmtv.com/economie/entreprises/marine-le-pen-promet-un-ballon-d-oxygene-de-6-milliards-d-euros-aux-tres-petites-entreprises-la-candidate-du-rn-a-la-presidentielle-veut-reformer-l-impot-sur-les-societes-en-instaurant-un-bareme-progressif_AD-202611260195.html"
+       },
+       {
+        "label": "Droit en vigueur",
+        "value": "« Hors surtaxe, l'impôt sur les sociétés est pour l'heure de 25%, avec un taux réduit de 15% sur les 42.500 premiers euros de bénéfice des entreprises de moins de 10 millions d'euros de chiffre d'affaires. »",
+        "source": "BFM Business avec l'AFP, M. Le Pen face aux petits patrons sur LCI (25/11/2026, article du 26/11)",
+        "url": "https://www.bfmtv.com/economie/entreprises/marine-le-pen-promet-un-ballon-d-oxygene-de-6-milliards-d-euros-aux-tres-petites-entreprises-la-candidate-du-rn-a-la-presidentielle-veut-reformer-l-impot-sur-les-societes-en-instaurant-un-bareme-progressif_AD-202611260195.html"
+       }
+      ],
+      "note": "Chiffres du camp : −3,2 Md€ pour les très petites entreprises (de 14 à 10,8 Md€) et −3,0 Md€ pour les PME (de 19,2 à 16,2 Md€) ; l'effet de la tranche supérieure au taux actuel pour les plus grandes entreprises et celui de la fin de leur surtaxe ne sont pas publiés : aucun total annoncé, donc aucune fourchette indicative. La suppression de la CFE, que la candidate ajoute à cette réforme pour annoncer 6 Md€ aux très petites entreprises, est comptée dans la fiche « Fin des impôts de production »."
+     },
+     "quiz_text": "Barème progressif de l'impôt sur les sociétés à cinq tranches, « comme l'impôt sur le revenu » ; pour les plus grandes entreprises, une tranche supérieure au taux actuel, en échange de la suppression de leur surtaxe ; taux et seuils non publiés."
     }
    ],
    "total": {
@@ -3457,7 +3529,7 @@
    "id": "melenchon",
    "name": "Jean-Luc Mélenchon",
    "party": "LFI",
-   "poll": "18,3 %",
+   "poll": "18,0 %",
    "summary": "Promet la retraite à 60 ans, un SMIC à 1 700 € net et 106 Md€ de recettes nouvelles, surtout sur les hauts patrimoines. Notre chiffrage : −257,4 Md€ par an en 2030, soit −8 328 € par ménage. Principal obstacle : la modification des traités européens à l'unanimité des 27, pour l'annulation de la dette, et la révision de la Constitution, pour la VIe République.",
    "measures": [
     {
@@ -3719,13 +3791,13 @@
        "u": "https://www.insee.fr/fr/statistiques/8376870"
       },
       {
-       "l": "Groupe d'experts sur le SMIC, rapport du 25 novembre 2025 (données Dares, Acemo)",
-       "a": 2025,
-       "u": "https://www.tresor.economie.gouv.fr/Articles/284b121f-b187-4280-b327-05f18064c3fa/files/1d1d1848-48bb-40a9-a14f-585b8072e716"
+       "l": "Dares, La revalorisation du Smic au 1er janvier 2026",
+       "a": 2026,
+       "u": "https://dares.travail-emploi.gouv.fr/publication/la-revalorisation-du-smic-au-1er-janvier-2026"
       }
      ],
      "quiz_constat": {
-      "t": "La hausse du SMIC a concerné 12,4 % des salariés fin 2024, contre 10,5 % en 2016 et 17,3 % début 2023 (Dares).",
+      "t": "La hausse du SMIC a concerné 11,8 % des salariés début 2026, contre 10,5 % en 2016 et 17,3 % début 2023 (Dares).",
       "s": [
        3,
        2
@@ -4906,13 +4978,13 @@
      "quiz_text": "Créer un grand nombre de places supplémentaires à l'université",
      "quiz_concret": "Plus de places à l'université, pour que l'offre suive la demande des bacheliers.",
      "quiz_plus": "Plus de places et d'encadrement ouvrent la licence à des bacheliers aujourd'hui refusés.",
-     "quiz_moins": "Les moins préparés réussissent peu en licence : 6,5 % des bacheliers pro l'obtiennent en 3 ou 4 ans.",
+     "quiz_moins": "Les moins préparés réussissent peu en licence : 7,9 % des bacheliers pro l'obtiennent en 3 ou 4 ans.",
      "quiz_preuve_pour": "faible",
      "quiz_preuve_contre": "mitigé",
      "quiz_cas_pour": [],
      "quiz_cas_contre": [
       {
-       "t": "Parmi les bacheliers 2020 inscrits en licence, 40,3 % l'ont obtenue en 3 ou 4 ans : 14 % des bacheliers technologiques, 6,5 % des professionnels (SIES, France, 2025).",
+       "t": "Parmi les bacheliers 2021 inscrits en licence, 42,4 % l'ont obtenue en 3 ou 4 ans : 15,9 % des bacheliers technologiques, 7,9 % des professionnels (SIES, France, 2026).",
        "s": [
         1
        ]
@@ -4926,9 +4998,9 @@
        "u": "https://www.insee.fr/fr/statistiques/8612572"
       },
       {
-       "l": "SIES, Note Flash n° 29, Parcours et réussite en licence : les résultats de la session 2024",
-       "a": 2025,
-       "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf"
+       "l": "SIES, Note Flash n° 31, Parcours et réussite en licence : les résultats de la session 2025",
+       "a": 2026,
+       "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-11/NF%20SIES%202026-31%20Parcours%20et%20r%C3%A9ussite%20en%20licence.pdf"
       }
      ],
      "quiz_constat": {
@@ -5047,6 +5119,14 @@
        "low_md": null,
        "high_md": null,
        "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf"
+      },
+      {
+       "source": "La France insoumise, plan thématique « Comment nous allons construire une société féministe et émancipatrice » (site de campagne, lu le 26/11/2026)",
+       "year": 2026,
+       "value": "« Dès la première année de mandat, dans le cadre du budget rectificatif, nous allouerons a minima les 3 milliards d’euros de budget demandés par les associations. »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://melenchon2027.fr/programme/plans-thematiques/feminisme"
       }
      ],
      "consensus": "isolé",
@@ -5078,7 +5158,8 @@
         "source": "La France insoumise, « L'Avenir en commun », programme publié le 6/11/2026",
         "url": "https://melenchon2027.fr/programme/livre/mettre-en-securite-sociale/chapitre3"
        }
-      ]
+      ],
+      "note": "Plan « féminisme » (site de campagne, lu le 26/11/2026) : les 3 Md€ sont alloués « dès la première année de mandat, dans le cadre du budget rectificatif », avec une loi de lutte contre le sexisme et les violences faites aux femmes et aux enfants ; montant et chiffrage inchangés."
      },
      "quiz_text": "Multiplier les moyens contre les violences sexistes et sexuelles",
      "quiz_concret": "Beaucoup plus d'argent public contre les violences faites aux femmes et les violences sexuelles.",
@@ -5119,6 +5200,14 @@
        "low_md": null,
        "high_md": null,
        "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf"
+      },
+      {
+       "source": "La France insoumise, plan thématique « Comment nous allons construire une société féministe et émancipatrice » (site de campagne, lu le 26/11/2026)",
+       "year": 2026,
+       "value": "« Nous y allouerons les 2 milliards d’euros de budget complémentaires pour lutter contre les violences faites aux enfants. »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://melenchon2027.fr/programme/plans-thematiques/feminisme"
       }
      ],
      "consensus": "isolé",
@@ -5139,7 +5228,7 @@
         "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf"
        }
       ],
-      "note": "Plan « enfance » du 19/11/2026 : loi de programmation pluriannuelle fondée sur les préconisations de la Ciivise, sans montant ; recrutements de la protection judiciaire de la jeunesse listés à part (non comptés, sous 1 Md€)."
+      "note": "Plan « enfance » du 19/11/2026 : loi de programmation pluriannuelle fondée sur les préconisations de la Ciivise, sans montant ; recrutements de la protection judiciaire de la jeunesse listés à part (non comptés, sous 1 Md€). Plan « féminisme » (site de campagne, lu le 26/11/2026) : les 2 Md€ sont redits, dans la loi de lutte contre le sexisme et les violences faites aux femmes et aux enfants ; montant et chiffrage inchangés."
      },
      "quiz_text": "Consacrer beaucoup plus d'argent à la lutte contre les violences faites aux enfants",
      "quiz_concret": "Plus de moyens publics contre la maltraitance et les violences sur les enfants.",
@@ -6299,6 +6388,14 @@
        "low_md": null,
        "high_md": null,
        "url": "https://melenchon2027.fr/programme/livre/mettre-en-securite-sociale/chapitre3"
+      },
+      {
+       "source": "La France insoumise, plan thématique « Comment nous allons construire une société féministe et émancipatrice » (site de campagne, lu le 26/11/2026)",
+       "year": 2026,
+       "value": "« Remplacer les congés paternité et congés maternité actuels par un congé d’accueil de l’enfant identique et obligatoire pour les deux parents, d’une durée de 20 semaines par parent et revaloriser la Prestation partagée d’éducation de l’enfant (PreParE) »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://melenchon2027.fr/programme/plans-thematiques/feminisme"
       }
      ],
      "consensus": "isolé",
@@ -6325,7 +6422,7 @@
         "url": "https://melenchon2027.fr/programme/livre/mettre-en-securite-sociale/chapitre3"
        }
       ],
-      "note": "Hypothèses : même recours qu'aujourd'hui et même indemnité journalière moyenne ; un congé obligatoire pour les deux parents fait monter le recours des pères (sous-estimation), la maternité déjà plus longue à partir du 3e enfant (26 semaines) joue en sens contraire (surestimation). Congés des agents publics payés par leur employeur : non comptés à part. Aucun chiffrage indépendant publié."
+      "note": "Hypothèses : même recours qu'aujourd'hui et même indemnité journalière moyenne ; un congé obligatoire pour les deux parents fait monter le recours des pères (sous-estimation), la maternité déjà plus longue à partir du 3e enfant (26 semaines) joue en sens contraire (surestimation). Congés des agents publics payés par leur employeur : non comptés à part. Aucun chiffrage indépendant publié. Plan « féminisme » (site de campagne, lu le 26/11/2026) : congé de 20 semaines par parent redit ; prestation partagée d'éducation de l'enfant (PreParE) revalorisée, sans montant publié : non comptée."
      },
      "quiz_text": "Remplacer les congés de maternité et de paternité par un congé d'accueil de l'enfant identique et obligatoire de 20 semaines pour chaque parent."
     },
@@ -6333,7 +6430,7 @@
      "id": "petite_enfance",
      "theme": "social",
      "title": "Petite enfance : 500 000 places, crèches publiques gratuites",
-     "proposal": "Service public de la petite enfance : ouverture progressive de 500 000 places d'accueil (crèches publiques, associatives, assistantes maternelles, jardins d'enfants) et gratuité des crèches publiques.",
+     "proposal": "Service public de la petite enfance : ouverture de 500 000 places d'accueil dans les cinq ans (crèches publiques, associatives, assistantes maternelles, jardins d'enfants) et gratuité des crèches publiques.",
      "claimed": "Non chiffré",
      "claimed_md": null,
      "estimates": [
@@ -6360,6 +6457,14 @@
        "low_md": -7.7,
        "high_md": -2.1,
        "url": "https://www.institutmontaigne.org/presidentielle-2022/jean-luc-melenchon/creer-un-service-public-de-la-petite-enfance-et-ouvrir-500-000-places-en-creche/"
+      },
+      {
+       "source": "La France insoumise, plan thématique « Comment nous allons construire une société féministe et émancipatrice » (site de campagne, lu le 26/11/2026)",
+       "year": 2026,
+       "value": "« Créer un service public unique d’accueil de la petite enfance et ouvrir 500 000 places en crèche et modes de garde adaptés dans les cinq ans »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://melenchon2027.fr/programme/plans-thematiques/feminisme"
       }
      ],
      "consensus": "isolé",
@@ -6371,7 +6476,7 @@
       "low": -7.2,
       "high": -2.1,
       "method": "ascendant",
-      "formula": "Règle des dépenses : chiffrage indépendant de la même mesure, Institut Montaigne (présidentielle 2022, même candidat, 500 000 places) : coût public de fonctionnement en 5e année, plan complet, avec participation des familles (part publique ≈ 56 %), 4,3 Md€ ; plan progressif sans date → 70 % en 2030 : 3,0 ; + gratuité des crèches publiques existantes, hors du champ de l'étude : participations des familles aux crèches financées par la prestation de service unique 1,252 Md€ (2022) × 55 % des places gérées par les collectivités (2024) ≈ 0,69, en entier en 2030 ; total ≈ −3,7 Md€ (montants non projetés). Borne basse avec la construction, comme les places de prison : investissement de l'étude (17,5 Md€ sur le quinquennat, 3,5 par an) → −7,2 ; borne haute : coût net des économies sur le complément de libre choix du mode de garde chiffrées par l'étude (2,06 Md€ en 5e année, 70 %) + 0,69 → −2,1. Contrôle ascendant (500 000 places × 13 000 € de coût public annuel d'une place, Cour des comptes 2024, 70 %) : 4,55, au-dessus de l'étude",
+      "formula": "Règle des dépenses : chiffrage indépendant de la même mesure, Institut Montaigne (présidentielle 2022, même candidat, 500 000 places) : coût public de fonctionnement en 5e année, plan complet, avec participation des familles (part publique ≈ 56 %), 4,3 Md€ ; plan « dans les cinq ans » (plan « féminisme », lu le 26/11/2026), soit la fin du mandat → 70 % en 2030, comme un plan sans date (règle commune) : 3,0 ; + gratuité des crèches publiques existantes, hors du champ de l'étude : participations des familles aux crèches financées par la prestation de service unique 1,252 Md€ (2022) × 55 % des places gérées par les collectivités (2024) ≈ 0,69, en entier en 2030 ; total ≈ −3,7 Md€ (montants non projetés). Borne basse avec la construction, comme les places de prison : investissement de l'étude (17,5 Md€ sur le quinquennat, 3,5 par an) → −7,2 ; borne haute : coût net des économies sur le complément de libre choix du mode de garde chiffrées par l'étude (2,06 Md€ en 5e année, 70 %) + 0,69 → −2,1. Contrôle ascendant (500 000 places × 13 000 € de coût public annuel d'une place, Cour des comptes 2024, 70 %) : 4,55, au-dessus de l'étude",
       "inputs": [
        {
         "label": "Programme du 6/11/2026",
@@ -6384,6 +6489,12 @@
         "value": "« Garantir la gratuité des crèches publiques »",
         "source": "La France insoumise, « L'Avenir en commun », programme publié le 6/11/2026",
         "url": "https://melenchon2027.fr/programme/livre/mettre-en-securite-sociale/chapitre3"
+       },
+       {
+        "label": "Calendrier publié (plan « féminisme »)",
+        "value": "« Créer un service public unique d’accueil de la petite enfance et ouvrir 500 000 places en crèche et modes de garde adaptés dans les cinq ans »",
+        "source": "La France insoumise, plan thématique « Comment nous allons construire une société féministe et émancipatrice » (site de campagne, lu le 26/11/2026)",
+        "url": "https://melenchon2027.fr/programme/plans-thematiques/feminisme"
        },
        {
         "label": "Chiffrage de la même mesure (2022)",
@@ -6418,7 +6529,7 @@
       ],
       "note": "Non compté, faute de paramètre publié : hausse des salaires des professionnelles, norme d'encadrement de 5 enfants par adulte, gratuité des nouvelles places en crèche publique (part des 500 000 places non publiée ; à 19 050 € par place, la participation des familles pèse environ 17 % du fonctionnement). Ouvertures du secteur privé lucratif gelées et aides publiques à ces crèches interdites : effet non chiffré. Chiffrage indépendant : Institut Montaigne (2022), 28,5 Md€ sur le quinquennat (17 à 40), dont 17,5 d'investissement et 11 de fonctionnement ; 7,7 Md€ par an en 5e année avec la gratuité totale des places nouvelles (non retenue : le programme de 2026 garantit la gratuité des crèches publiques, part des 500 000 places non publiée)."
      },
-     "quiz_text": "Service public de la petite enfance : ouverture progressive de 500 000 places d'accueil et gratuité des crèches publiques."
+     "quiz_text": "Service public de la petite enfance : ouverture de 500 000 places d'accueil dans les cinq ans et gratuité des crèches publiques."
     },
     {
      "id": "carence",
@@ -6537,6 +6648,66 @@
       "note": "Les 10 000 enseignants de la note du 14/10/2026 (« pour l'année prochaine ») sont la première marche de cet objectif : compris ici, ils ne sont plus listés à part. Montant de 2022, non projeté (même règle que la gratuité de l'école)."
      },
      "quiz_text": "Réduire les effectifs à 19 élèves par classe au plus en un mandat, priorité aux maternelles et à l'éducation prioritaire."
+    },
+    {
+     "id": "is_progressif",
+     "theme": "fiscalite",
+     "title": "Impôt sur les sociétés progressif",
+     "proposal": "Barème progressif de l'impôt sur les sociétés, pour « l'égalité devant l'impôt » entre PME et grands groupes ; impôt modulé selon l'usage des bénéfices, pour encourager leur réinvestissement plutôt que la distribution de dividendes (programme du 6/11/2026) ; taux et seuils non publiés.",
+     "claimed": "+3 Md€ (budget de La France insoumise, 14/10/2026)",
+     "claimed_md": 3,
+     "estimates": [
+      {
+       "source": "La France insoumise, « L'Avenir en commun », programme publié le 6/11/2026",
+       "year": 2026,
+       "value": "« Refonder l’impôt sur les sociétés pour établir l’égalité devant l’impôt entre petites et moyennes entreprises (PME) et grands groupes ; instaurer un barème progressif et moduler l’impôt selon l’usage des bénéfices afin d’encourager leur réinvestissement plutôt que la distribution de dividendes »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://melenchon2027.fr/programme/livre/une-economie-au-service-des-besoins/chapitre2"
+      },
+      {
+       "source": "La France insoumise, « Comment nous allons remettre de l'ordre dans les comptes publics » (note budgétaire pour 2027)",
+       "year": 2026,
+       "value": "« Nous reviendrons sur cette injustice, et cette perte de recettes de l’État, via une réforme de l’impôt sur les sociétés (3 milliards) »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf"
+      }
+     ],
+     "consensus": "isolé",
+     "verdict": "faisable",
+     "obstacle": "Par la loi de finances ; taux et seuils non publiés.",
+     "claude": {
+      "id": "is_progressif",
+      "central": 0,
+      "low": 0,
+      "high": 0,
+      "method": "nc",
+      "nc": true,
+      "formula": "Non chiffrable : taux et seuils du barème non publiés",
+      "inputs": [
+       {
+        "label": "Proposition (programme du 6/11/2026)",
+        "value": "« Refonder l’impôt sur les sociétés pour établir l’égalité devant l’impôt entre petites et moyennes entreprises (PME) et grands groupes ; instaurer un barème progressif et moduler l’impôt selon l’usage des bénéfices afin d’encourager leur réinvestissement plutôt que la distribution de dividendes »",
+        "source": "La France insoumise, « L'Avenir en commun », programme publié le 6/11/2026",
+        "url": "https://melenchon2027.fr/programme/livre/une-economie-au-service-des-besoins/chapitre2"
+       },
+       {
+        "label": "Constat du camp (14/10/2026)",
+        "value": "« Le taux implicite d’imposition à l’impôt sur les sociétés est de près de 24 % pour les PME contre 14,7 % pour les grandes entreprises. »",
+        "source": "La France insoumise, « Comment nous allons remettre de l'ordre dans les comptes publics » (note budgétaire pour 2027)",
+        "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf"
+       },
+       {
+        "label": "Recette annoncée par le camp (14/10/2026)",
+        "value": "« Nous reviendrons sur cette injustice, et cette perte de recettes de l’État, via une réforme de l’impôt sur les sociétés (3 milliards) »",
+        "source": "La France insoumise, « Comment nous allons remettre de l'ordre dans les comptes publics » (note budgétaire pour 2027)",
+        "url": "https://melenchon2027.fr/wp-content/uploads/2026/10/Comment-nous-allons-remettre-de-l-ordre-dans-les-comptes-publics.pdf"
+       }
+      ],
+      "note": "Chiffre du camp : +3 Md€ de recettes (budget du 14/10/2026) ; ni taux ni seuils publiés, dans ce budget comme dans le programme : aucune fourchette indicative. Une recette n'est comptée qu'avec un chiffrage indépendant ou un paramètre publié (règle commune)."
+     },
+     "quiz_text": "Barème progressif de l'impôt sur les sociétés, pour « l'égalité devant l'impôt » entre PME et grands groupes ; impôt modulé selon l'usage des bénéfices, pour encourager leur réinvestissement plutôt que la distribution de dividendes ; taux et seuils non publiés."
     }
    ],
    "total": {
@@ -6550,7 +6721,7 @@
     "p10": -288.0,
     "p90": -214.1,
     "realsum": -257.4,
-    "missing": "IS progressif, pension minimale au niveau du SMIC, minimum vieillesse au seuil de pauvreté, recettes annoncées sans paramètre publié (chiffres du camp) : CVAE des grandes entreprises 3, taxe sur les multinationales 5, taxe Gafam 3,9, superprofits 5, rachats d'actions 2,5, crypto-actifs 1, bac professionnel en quatre ans (coût non publié), suppression de Parcoursup, livret A relevé à 30 000 € et rémunéré au moins à l'inflation, « Livret B » défiscalisé (coûts non publiés), plan d'urgence du groupe LFI pour l'éducation (1/09/2026) : AESH fonctionnaires de catégorie B (coût non publié), régularisation des travailleurs, étudiants et parents d'enfants scolarisés sans papiers (nombre non publié ; effet sur les cotisations non chiffré), programme du 6/11/2026, coût non publié : suppression de la décote des pensions, arrêts maladie payés à 100 % et fin des jours de carence dans le secteur privé (indemnités journalières à 100 % et fin des trois jours de carence de la Sécurité sociale ; la partie agents publics est comptée dans la fiche « Arrêts maladie des agents publics payés à 100 % ») et auto-déclaration des arrêts de courte durée (durée non publiée), 35 heures et sixième semaine de congés payés (effet sur la fonction publique), cannabis légalisé sous monopole d'État (recette sans taux publié), crédit d'impôt par enfant et fin du quotient conjugal (paramètres non publiés), garantie d'autonomie pour chaque personne (plan « pauvreté » du 16/11/2026 : complément jusqu'au seuil de pauvreté selon la composition du foyer, 1 337 € pour une personne seule, RSA remplacé, versement automatique ; extension au-delà des jeunes sans calendrier publié ; aucun calcul officiel du même champ, déficit de revenu des ménages pauvres de 26 Md€ en 2023 selon l'OFCE, « plancher théorique », indicatif), exonération de droits de succession des héritages inférieurs à 150 000 €, 10 000 places d'EHPAD publics par an pendant cinq ans (coût public de fonctionnement par place : pas de source officielle ouverte), garantie d'emploi au SMIC revalorisé pour les chômeurs de longue durée volontaires (nombre de bénéficiaires et employeur non publiés), nationalisations et retours sur privatisations (autoroutes « en revenant sur les hausses de prix passées », aéroports, Française des jeux, ArcelorMittal France, Engie… : rachats = opérations financières ; baisse des péages et indemnités de fin de concession sans paramètre publié), dotation globale de fonctionnement des communes indexée sur l'inflation (transfert entre administrations, sans effet sur le solde public, même règle que la fraction de TVA aux communes de Retailleau), contrats d'études au SMIC dans toutes les formations paramédicales et garantie d'autonomie de 1 337 € pour les étudiants en médecine (plan santé : effectifs concernés et rémunérations déjà versées sans source officielle ouverte), niches nommées par le programme sans coût officiel isolé à ce jour (avantages fiscaux de l'épargne retraite par capitalisation, du mécénat culturel, des LBO, des meublés touristiques et du kérosène : à chiffrer sur les dépenses fiscales officielles), assurance chômage dès le premier jour de travail et indemnisation dès la fin du contrat, abrogation de la loi « France Travail » (coût non publié), permis de conduire gratuit dans le service citoyen (coût moyen officiel d'un permis non ouvert), Sécurité sociale funéraire, statut d'aidant familial rémunéré, maintien à domicile pris en charge par la Sécurité sociale, allocation de soutien familial déconjugalisée et revalorisée, pensions alimentaires défiscalisées, emploi jeune de cinq ans, titularisation des contractuels (montants non publiés), taxe d'habitation progressive (80 % des ménages exonérés), taxe foncière progressive, contribution audiovisuelle progressive et cotisation sociale universelle (barèmes non publiés), rémunération au-dessus du seuil de pauvreté pour tous les élèves de l'enseignement professionnel dès 16 ans (franceinfo, 12/11/2026 ; garantie d'autonomie accessible dès 16 ans dans l'enseignement professionnel selon le plan « pauvreté » du 16/11/2026 : effectifs et articulation avec les aides existantes non publiés), plan « pauvreté » du 16/11/2026, paramètres et coûts non publiés : blocage des loyers, y compris commerciaux, et gel temporaire des remboursements de crédit dans l'« état d'urgence sociale », échelle mobile des salaires temporaire, coupures d'énergie interdites toute l'année (puissance minimale fixée par décret) et coupures d'accès aux réseaux vitaux interdites pour impayés, frais bancaires d'incident plafonnés (niveau non publié), stocks tampons alimentaires, expérimentation d'une Sécurité sociale de l'alimentation, guichets physiques à moins de 15 minutes et versement automatique des prestations, abrogation des dispositions de la loi pour le plein emploi qui conditionnent le RSA à une durée minimale d'activité et renforcent les sanctions, impôt sur le revenu à 14 tranches, de 0 à 70 %, avec garantie jusqu'à 4 000 € net par mois (barème publié dans l'amendement du groupe LFI au budget 2027, 7/10/2026, appliqué au simulateur ; recette annoncée de « plusieurs milliards d'euros », sans montant ni chiffrage indépendant de ce barème, réforme prévue « au cours du mandat »), plan « enfance » (19/11/2026) : 10 000 personnels de la protection judiciaire de la jeunesse recrutés en cinq ans (règle des recrutements publics : 10 000 × 58,7 k€ × 70 % ≈ 0,41 Md€, sous 1 Md€), 235 juges des enfants et 235 greffiers (≈ 0,02 Md€), accompagnement des jeunes majeurs de l'aide sociale à l'enfance jusqu'à 25 ans et ratio moyen de 5 enfants par adulte en crèche (coûts non publiés)",
+    "missing": "pension minimale au niveau du SMIC, minimum vieillesse au seuil de pauvreté, recettes annoncées sans paramètre publié (chiffres du camp) : CVAE des grandes entreprises 3, taxe sur les multinationales 5, taxe Gafam 3,9, superprofits 5, rachats d'actions 2,5, crypto-actifs 1, bac professionnel en quatre ans (coût non publié), suppression de Parcoursup, livret A relevé à 30 000 € et rémunéré au moins à l'inflation, « Livret B » défiscalisé (coûts non publiés), plan d'urgence du groupe LFI pour l'éducation (1/09/2026) : AESH fonctionnaires de catégorie B (coût non publié), régularisation des travailleurs, étudiants et parents d'enfants scolarisés sans papiers (nombre non publié ; effet sur les cotisations non chiffré), programme du 6/11/2026, coût non publié : suppression de la décote des pensions, arrêts maladie payés à 100 % et fin des jours de carence dans le secteur privé (indemnités journalières à 100 % et fin des trois jours de carence de la Sécurité sociale ; la partie agents publics est comptée dans la fiche « Arrêts maladie des agents publics payés à 100 % ») et auto-déclaration des arrêts de courte durée (durée non publiée), 35 heures et sixième semaine de congés payés (effet sur la fonction publique), cannabis légalisé sous monopole d'État (recette sans taux publié), crédit d'impôt par enfant et fin du quotient conjugal (paramètres non publiés), garantie d'autonomie pour chaque personne (plan « pauvreté » du 16/11/2026 : complément jusqu'au seuil de pauvreté selon la composition du foyer, 1 337 € pour une personne seule, RSA remplacé, versement automatique ; extension au-delà des jeunes sans calendrier publié ; aucun calcul officiel du même champ, déficit de revenu des ménages pauvres de 26 Md€ en 2023 selon l'OFCE, « plancher théorique », indicatif), exonération de droits de succession des héritages inférieurs à 150 000 €, 10 000 places d'EHPAD publics par an pendant cinq ans (coût public de fonctionnement par place : pas de source officielle ouverte), garantie d'emploi au SMIC revalorisé pour les chômeurs de longue durée volontaires (nombre de bénéficiaires et employeur non publiés), nationalisations et retours sur privatisations (autoroutes « en revenant sur les hausses de prix passées », aéroports, Française des jeux, ArcelorMittal France, Engie… : rachats = opérations financières ; baisse des péages et indemnités de fin de concession sans paramètre publié), dotation globale de fonctionnement des communes indexée sur l'inflation (transfert entre administrations, sans effet sur le solde public, même règle que la fraction de TVA aux communes de Retailleau), contrats d'études au SMIC dans toutes les formations paramédicales et garantie d'autonomie de 1 337 € pour les étudiants en médecine (plan santé : effectifs concernés et rémunérations déjà versées sans source officielle ouverte), niches nommées par le programme sans coût officiel isolé à ce jour (avantages fiscaux de l'épargne retraite par capitalisation, du mécénat culturel, des LBO, des meublés touristiques et du kérosène : à chiffrer sur les dépenses fiscales officielles), assurance chômage dès le premier jour de travail et indemnisation dès la fin du contrat, abrogation de la loi « France Travail » (coût non publié), permis de conduire gratuit dans le service citoyen (coût moyen officiel d'un permis non ouvert), Sécurité sociale funéraire, statut d'aidant familial rémunéré, maintien à domicile pris en charge par la Sécurité sociale, allocation de soutien familial déconjugalisée et revalorisée, pensions alimentaires défiscalisées, emploi jeune de cinq ans, titularisation des contractuels (montants non publiés), taxe d'habitation progressive (80 % des ménages exonérés), taxe foncière progressive, contribution audiovisuelle progressive et cotisation sociale universelle (barèmes non publiés), rémunération au-dessus du seuil de pauvreté pour tous les élèves de l'enseignement professionnel dès 16 ans (franceinfo, 12/11/2026 ; garantie d'autonomie accessible dès 16 ans dans l'enseignement professionnel selon le plan « pauvreté » du 16/11/2026 : effectifs et articulation avec les aides existantes non publiés), plan « pauvreté » du 16/11/2026, paramètres et coûts non publiés : blocage des loyers, y compris commerciaux, et gel temporaire des remboursements de crédit dans l'« état d'urgence sociale », échelle mobile des salaires temporaire, coupures d'énergie interdites toute l'année (puissance minimale fixée par décret) et coupures d'accès aux réseaux vitaux interdites pour impayés, frais bancaires d'incident plafonnés (niveau non publié), stocks tampons alimentaires, expérimentation d'une Sécurité sociale de l'alimentation, guichets physiques à moins de 15 minutes et versement automatique des prestations, abrogation des dispositions de la loi pour le plein emploi qui conditionnent le RSA à une durée minimale d'activité et renforcent les sanctions, impôt sur le revenu à 14 tranches, de 0 à 70 %, avec garantie jusqu'à 4 000 € net par mois (barème publié dans l'amendement du groupe LFI au budget 2027, 7/10/2026, appliqué au simulateur ; recette annoncée de « plusieurs milliards d'euros », sans montant ni chiffrage indépendant de ce barème, réforme prévue « au cours du mandat »), plan « enfance » (19/11/2026) : 10 000 personnels de la protection judiciaire de la jeunesse recrutés en cinq ans (règle des recrutements publics : 10 000 × 58,7 k€ × 70 % ≈ 0,41 Md€, sous 1 Md€), 235 juges des enfants et 235 greffiers (≈ 0,02 Md€), accompagnement des jeunes majeurs de l'aide sociale à l'enfance jusqu'à 25 ans et ratio moyen de 5 enfants par adulte en crèche (coûts non publiés), plan « féminisme » (site de campagne, lu le 26/11/2026), coûts non publiés : aide financière d'urgence aux victimes de violences conjugales portée à 1 337 € par mois au moins, IVG, contraception et protections périodiques gratuites, arrêt menstruel avec maintien du salaire, majoration des allocations familiales rétablie à 14 ans, aide médicale d'État intégrée au régime général de la Sécurité sociale (allocation de soutien familial et pensions alimentaires redites, déjà listées) ; prime compensatoire d'au moins 10 % du salaire brut quand l'employeur ne prouve pas l'égalité salariale : à la charge de l'employeur, sans dépense publique publiée ; plan « mer » (25/11/2026), coûts non publiés : électrification de tous les quais des ports d'ici 2030, flotte stratégique d'environ 1 million de tonnes (contrats garantis de 15 ans, aides remboursables), fonds national « érosion côtière », au moins 150 M€ de recettes du marché carbone européen réaffectés à la décarbonation du transport maritime dès 2027 (recette réaffectée, sous 1 Md€) ; nationalisations de l'atelier de réparation navale de Brest et, « si nécessaire », d'activités de GE Vernova : opérations financières",
     "n": 30,
     "cost": -283.6,
     "gain": 26.1,
@@ -6744,7 +6915,7 @@
    "id": "philippe",
    "name": "Édouard Philippe",
    "party": "Horizons",
-   "poll": "11,3 %",
+   "poll": "11,5 %",
    "summary": "Promet la retraite à 65 ans, un départ sur trois non remplacé dans la fonction publique, une allocation familiale dès le premier enfant et zéro impôt pour les jeunes parents. Notre chiffrage : −2,0 Md€ par an en 2030, soit −65 € par ménage. Principal obstacle : la révision de la Constitution, pour le moratoire sur le regroupement familial et la règle d'or.",
    "measures": [
     {
@@ -6914,6 +7085,14 @@
        "low_md": 0.1,
        "high_md": 0.1,
        "url": "https://www.ifrap.org/fonction-publique-et-administration/combien-rapporte-vraiment-le-non-remplacement-dun-fonctionnaire"
+      },
+      {
+       "source": "TF1 Info, entretien d'É. Philippe sur LCI (24/11/2026)",
+       "year": 2026,
+       "value": "« Mon objectif est d’intervenir au niveau des 750.000 fonctionnaires qui vont partir à la retraite au cours du prochain quinquennat, afin de ne recruter que deux fonctionnaire sur trois et donc faire disparaître un poste sur trois » ; « En enlevant 250.000 personnes dans la fonction publique, on sera au niveau quasiment de 2018. »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-crise-sociale-crise-lyceenne-de-nombreux-candidats-de-villepin-lisnard-riner-glucksmann-le-pen-melenchon-se-pressent-au-congres-des-maires-de-france-les-dernieres-informations-de-ce-mardi-24-novembre-2026-2477741.html"
       }
      ],
      "consensus": "concordant",
@@ -6968,9 +7147,15 @@
         "value": "« Édouard Philippe veut fusionner, supprimer ou privatiser une trentaine d’agences et d’opérateurs de l’État qui font doublon, avec par exemple la privatisation de France Travail et la suppression du CESE. »",
         "source": "Site de campagne d'Édouard Philippe, programme « Finances publiques » (18/11/2026)",
         "url": "https://www.edouardphilippe.fr/programme/comptes-publics"
+       },
+       {
+        "label": "Objectif redit (24/11/2026)",
+        "value": "« Mon objectif est d’intervenir au niveau des 750.000 fonctionnaires qui vont partir à la retraite au cours du prochain quinquennat, afin de ne recruter que deux fonctionnaire sur trois et donc faire disparaître un poste sur trois » ; « En enlevant 250.000 personnes dans la fonction publique, on sera au niveau quasiment de 2018. »",
+        "source": "TF1 Info, entretien d'É. Philippe sur LCI (24/11/2026)",
+        "url": "https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-crise-sociale-crise-lyceenne-de-nombreux-candidats-de-villepin-lisnard-riner-glucksmann-le-pen-melenchon-se-pressent-au-congres-des-maires-de-france-les-dernieres-informations-de-ce-mardi-24-novembre-2026-2477741.html"
        }
       ],
-      "note": "Collectivités et hôpitaux hors contrôle de l'État. Opérateurs et agences : « une trentaine » fusionnés, supprimés ou privatisés (site de campagne, 18/11/2026), liste non publiée hors deux exemples, périmètre plus étroit que la suppression de la plupart des agences (valeur commune de 0,26 Md€ chez Le Pen, Retailleau et Lisnard) : rien de compté, comme les agences nommées de Zemmour ; les privatisations sont des opérations financières, sans effet sur le solde. France Travail privatisé : missions reprises par une autre structure, 0 hors de la valeur commune (règle des agences nommées) ; suppression du CESE, inscrit dans la Constitution : listée à part, non comptée (révision de la Constitution ; budget officiel de 34 M€, même traitement que chez Zemmour). Statut de fonctionnaire limité aux fonctions régaliennes et aux enseignants (franceinfo, 18/11/2026) : sans effet chiffré."
+      "note": "Collectivités et hôpitaux hors contrôle de l'État. Opérateurs et agences : « une trentaine » fusionnés, supprimés ou privatisés (site de campagne, 18/11/2026), liste non publiée hors deux exemples, périmètre plus étroit que la suppression de la plupart des agences (valeur commune de 0,26 Md€ chez Le Pen, Retailleau et Lisnard) : rien de compté, comme les agences nommées de Zemmour ; les privatisations sont des opérations financières, sans effet sur le solde. France Travail privatisé : missions reprises par une autre structure, 0 hors de la valeur commune (règle des agences nommées) ; suppression du CESE, inscrit dans la Constitution : listée à part, non comptée (révision de la Constitution ; budget officiel de 34 M€, même traitement que chez Zemmour). Statut de fonctionnaire limité aux fonctions régaliennes et aux enseignants (franceinfo, 18/11/2026) : sans effet chiffré. LCI (24/11/2026, cité par TF1 Info) : un départ à la retraite sur trois non remplacé sur 750 000 départs au cours du quinquennat, soit 250 000 postes, pour revenir « au niveau quasiment de 2018 » : objectif redit par le candidat, chiffrage inchangé."
      },
      "quiz_text": "Ne pas remplacer un fonctionnaire sur trois partant à la retraite",
      "quiz_concret": "Moins de postes publics au fil des départs.",
@@ -8708,7 +8893,7 @@
    "id": "glucksmann",
    "name": "Raphaël Glucksmann",
    "party": "PS-Place publique",
-   "poll": "10,6 %",
+   "poll": "10,8 %",
    "summary": "Promet le retour à 62 ans, un SMIC à 1 700 € net, 200 Md€ d'investissement public écologique sur le quinquennat et une taxe sur les très gros héritages pour baisser la CSG sur les salaires. Notre chiffrage : −88,5 Md€ par an en 2030, soit −2 863 € par ménage. Principal obstacle : l'accord des autres pays européens, pour la saisie des avoirs russes, et le risque de censure, pour la CSG progressive.",
    "measures": [
     {
@@ -9280,13 +9465,13 @@
        "u": "https://www.insee.fr/fr/statistiques/8376870"
       },
       {
-       "l": "Groupe d'experts sur le SMIC, rapport du 25 novembre 2025 (données Dares, Acemo)",
-       "a": 2025,
-       "u": "https://www.tresor.economie.gouv.fr/Articles/284b121f-b187-4280-b327-05f18064c3fa/files/1d1d1848-48bb-40a9-a14f-585b8072e716"
+       "l": "Dares, La revalorisation du Smic au 1er janvier 2026",
+       "a": 2026,
+       "u": "https://dares.travail-emploi.gouv.fr/publication/la-revalorisation-du-smic-au-1er-janvier-2026"
       }
      ],
      "quiz_constat": {
-      "t": "La hausse du SMIC a concerné 12,4 % des salariés fin 2024, contre 10,5 % en 2016 et 17,3 % début 2023 (Dares).",
+      "t": "La hausse du SMIC a concerné 11,8 % des salariés début 2026, contre 10,5 % en 2016 et 17,3 % début 2023 (Dares).",
       "s": [
        3,
        2
@@ -10295,7 +10480,7 @@
    "id": "lisnard",
    "name": "David Lisnard",
    "party": "Nouvelle Énergie",
-   "poll": "9,8 %",
+   "poll": "10,0 %",
    "summary": "Promet 80 Md€ d'économies la première année puis 200 Md€ par an, dont 60 % rendus en baisses de cotisations. Notre chiffrage : −41,4 Md€ par an en 2030, soit −1 340 € par ménage. Principal obstacle : la révision de la Constitution, pour le référendum élargi, les aides réservées après cinq ans de résidence et les demandes d'asile dans les consulats.",
    "measures": [
     {
@@ -12545,7 +12730,7 @@
    "id": "attal",
    "name": "Gabriel Attal",
    "party": "Renaissance",
-   "poll": "5,8 %",
+   "poll": "5,6 %",
    "summary": "Promet la suppression de la CSG sur les salaires, jusqu'à 270 € nets par mois, la fin de l'âge légal de départ, 100 000 postes publics en moins, le gel des prestations en 2028 et l'équilibre budgétaire en 2037. Notre chiffrage : −61,0 Md€ par an en 2030, soit −1 974 € par ménage. Principal obstacle : la révision de la Constitution, pour la règle d'or, les quotas d'immigration et les États-Unis d'Europe, qui demandent aussi un nouveau traité européen.",
    "measures": [
     {
@@ -13590,6 +13775,14 @@
        "low_md": null,
        "high_md": null,
        "url": "https://www.franceinfo.fr/politique/gabriel-attal/primaire-racisme-referendums-ia-ce-qu-il-faut-retenir-de-l-interview-de-gabriel-attal-dans-l-emission-l-heure-de-verite-sur-france-2_8290544.html"
+      },
+      {
+       "source": "attalpresident.fr, compte rendu de L'Heure de vérité du 19/11 (24/11/2026)",
+       "year": 2026,
+       "value": "« Je veux qu’on se dise que dans les 3 ans qui viennent, on va former 30 millions de Français à l’intelligence artificielle. »",
+       "low_md": null,
+       "high_md": null,
+       "url": "https://attalpresident.fr/actualites/gabriel-attal-heure-de-verite-temps-d-avance-france"
       }
      ],
      "consensus": "isolé",
@@ -13628,7 +13821,7 @@
         "url": "https://attalpresident.fr/programme/mesures/plan-france-2040"
        }
       ],
-      "note": "Indicatif : de −1,7 à −10,0 Md€ en 2030 (100 Md€ publics d'ici 2040 selon l'AFP du 28/10/2026 : montée en charge linéaire sur 14 ans ≈ −3,3, flux moyen −7,1 ; « d'ici dix ans » selon la page de mesure du site, 19/06/2026 : ≈ −6,4 et −10,0) ; même règle que le plan IA de Retailleau, compté pour sa seule part nouvelle publiée. Formation de 30 millions d'actifs à l'IA (19/11/2026, au lieu de 20 millions de salariés) financée par les crédits du CPF et de France Travail : redéploiement de crédits existants, sans coût publié, non compté.",
+      "note": "Indicatif : de −1,7 à −10,0 Md€ en 2030 (100 Md€ publics d'ici 2040 selon l'AFP du 28/10/2026 : montée en charge linéaire sur 14 ans ≈ −3,3, flux moyen −7,1 ; « d'ici dix ans » selon la page de mesure du site, 19/06/2026 : ≈ −6,4 et −10,0) ; même règle que le plan IA de Retailleau, compté pour sa seule part nouvelle publiée. Formation de 30 millions d'actifs à l'IA (19/11/2026, au lieu de 20 millions de salariés) financée par les crédits du CPF et de France Travail : redéploiement de crédits existants, sans coût publié, non compté. Horizon publié le 24/11/2026 (site de campagne, citation du candidat) : « dans les 3 ans qui viennent, on va former 30 millions de Français à l'intelligence artificielle » ; toujours sans coût publié.",
       "nc": true
      },
      "quiz_text": "Investir massivement dans l'intelligence artificielle, avec un assistant IA pour chaque élève et chaque patient",
@@ -14041,7 +14234,7 @@
     "p10": -71.3,
     "p90": -56.5,
     "realsum": -61.0,
-    "missing": "classes de moins de 20 élèves, baisse des cotisations salariales (« droit au brut » : 250 € nets de plus par mois au salaire médian dès 2027 selon son site, « autour de 200-250 euros » le 12/11/2026, financés par des économies sur l'assurance chômage, dont 5 Md€ par la durée d'indemnisation, et sur les indemnités journalières ; barème, coût et économies non publiés ; la campagne présente la suppression de la CSG sur les salaires, comptée dans sa fiche, comme le moyen du « droit au brut » (site, 16/11/2026) : rien de plus n'est compté), arrêts maladie, défense, reste du plan de 150 Md€ non ventilé, dont le frein d'urgence de 20 Md€ (contenu non publié), annulation des 1 588 suppressions nettes de postes d'enseignants du projet de budget 2027 (règle des recrutements publics : 1 588 × 58,7 k€ ≈ 0,1 Md€, sous 1 Md€), crédit d'impôt « productivité » (montant non publié), leasing social étendu aux voitures électriques d'occasion (paramètres non publiés), livret d'épargne « garde d'enfant » pour financer des places en crèche et 200 000 professionnels de la petite enfance formés d'ici 2030 (paramètres non publiés), barème kilométrique revalorisé, prime carburant exonérée portée à 1 000 €, moitié du boîtier E85 financée, aides aux gros rouleurs élargies et bonus électrique étendu aux véhicules d'occasion (paramètres non publiés), donations facilitées aux petits-enfants (fiscalité des donations des grands-parents alignée sur celle des parents aux enfants, entretien à Sud Ouest du 11/11/2026), petits-neveux et petites-nièces et transmission des exploitations agricoles (abattements et coût non publiés), garantie Visale étendue à tous les locataires (entretien à Sud Ouest, 11/11/2026) et nouvelles résidences universitaires pour les étudiants et les jeunes actifs (paramètres non publiés), prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11/2026 : assiette non publiée, aucune base officielle ni chiffrage indépendant, non compté), pensions alimentaires reçues pour les enfants sorties du revenu imposable (redit au débat TF1-LCI du 16/11/2026 ; plafond et coût non publiés), 3 000 magistrats et greffiers de plus (règle des recrutements publics : 3 000 × 58,7 k€ × 70 % ≈ 0,12 Md€, sous 1 Md€), suppression d'un échelon de collectivité territoriale (échelon et économie non publiés ; comptée par le camp avec les 100 000 postes), banque nationale d'investissement dans le logement qui financerait jusqu'à la moitié du prix d'une première résidence des jeunes et des classes moyennes, aux côtés de l'acquéreur, sa part étant rachetée ou remboursée à la revente (franceinfo, 12/11/2026 ; entretien à Sud Ouest, 11/11/2026 : prise de participation, opération financière, « aucun coût pour les finances publiques » selon le candidat ; dotation non publiée par le candidat, l'amorçage de 5 Md€ venant de son entourage selon l'AFP ; plafond et conditions non publiés), suspension pendant deux ans de l'imposition des plus-values de cession des résidences secondaires (porte-parole de campagne, RCF, 12/11/2026 : mesure temporaire, dates non publiées ; achevée avant 2030 si elle commence avec la première loi de finances du mandat, sans effet sur le solde de 2030), statut du bailleur privé, amortissement fiscal élargi contre un engagement de location (entretien à Sud Ouest, 11/11/2026 : taux, durée et coût non publiés), plan d'investissement de 160 M€ par an dans la géothermie (entretien à Sud Ouest, 11/11/2026 : 0,16 Md€, sous 1 Md€), revalorisation des « toutes petites retraites » (débat TF1-LCI, 16/11/2026 : seuil et montant non publiés ; même lecture que les petites retraites de Glucksmann), « année blanche » des dépenses de l'État la première année du mandat, Éducation nationale exceptée (15 Md€ « selon ses calculs », L'Heure de vérité, 19/11/2026 : aucun chiffrage indépendant ; l'économie dépend de la hausse des dépenses évitée, qu'aucune base officielle ne donne pour 2028, et recoupe des fiches comptées sur ces dépenses, dont les 100 000 postes)",
+    "missing": "classes de moins de vingt élèves en moyenne en primaire d'ici cinq ans, en commençant par l'éducation prioritaire et le CP-CE1-CE2, avec les moyens libérés par la baisse du nombre d'élèves (site de campagne, mesure annoncée le 25/08/2026 : aucun recrutement publié, non compté), baisse des cotisations salariales (« droit au brut » : 250 € nets de plus par mois au salaire médian dès 2027 selon son site, « autour de 200-250 euros » le 12/11/2026, financés par des économies sur l'assurance chômage, dont 5 Md€ par la durée d'indemnisation, et sur les indemnités journalières ; barème, coût et économies non publiés ; la campagne présente la suppression de la CSG sur les salaires, comptée dans sa fiche, comme le moyen du « droit au brut » (site, 16/11/2026) : rien de plus n'est compté), arrêts maladie, défense, reste du plan de 150 Md€ non ventilé, dont le frein d'urgence de 20 Md€ (contenu non publié), annulation des 1 588 suppressions nettes de postes d'enseignants du projet de budget 2027 (règle des recrutements publics : 1 588 × 58,7 k€ ≈ 0,1 Md€, sous 1 Md€), crédit d'impôt « productivité » (montant non publié), leasing social étendu aux voitures électriques d'occasion (paramètres non publiés), livret d'épargne « garde d'enfant » pour financer des places en crèche et 200 000 professionnels de la petite enfance formés d'ici 2030 (paramètres non publiés), barème kilométrique revalorisé, prime carburant exonérée portée à 1 000 €, moitié du boîtier E85 financée, aides aux gros rouleurs élargies et bonus électrique étendu aux véhicules d'occasion (paramètres non publiés), donations facilitées aux petits-enfants (fiscalité des donations des grands-parents alignée sur celle des parents aux enfants, entretien à Sud Ouest du 11/11/2026), petits-neveux et petites-nièces et transmission des exploitations agricoles (abattements et coût non publiés), garantie Visale étendue à tous les locataires (entretien à Sud Ouest, 11/11/2026) et nouvelles résidences universitaires pour les étudiants et les jeunes actifs (paramètres non publiés), prélèvement de 2 % des revenus des réseaux sociaux en France pour la santé mentale des jeunes (site de campagne, 5/11/2026 : assiette non publiée, aucune base officielle ni chiffrage indépendant, non compté), pensions alimentaires reçues pour les enfants sorties du revenu imposable (redit au débat TF1-LCI du 16/11/2026 ; plafond et coût non publiés), 3 000 magistrats et greffiers de plus (règle des recrutements publics : 3 000 × 58,7 k€ × 70 % ≈ 0,12 Md€, sous 1 Md€), suppression d'un échelon de collectivité territoriale (échelon non nommé ; le candidat estime le coût des doublons entre collectivités à 10 Md€ par an, site de campagne, 24/11/2026 : chiffre du camp, économie sans chiffrage indépendant ni paramètre publié, non comptée, comme la ligne « collectivités » du plan de Retailleau ; comptée par le camp avec les 100 000 postes), banque nationale d'investissement dans le logement qui financerait jusqu'à la moitié du prix d'une première résidence des jeunes et des classes moyennes, aux côtés de l'acquéreur : la banque détient l'autre moitié du bien, que le propriétaire peut acquérir une fois son premier emprunt remboursé (site de campagne, 23/11/2026 ; part rachetée ou remboursée à la revente selon l'entretien à Sud Ouest du 11/11/2026 ; franceinfo, 12/11/2026 : prise de participation, opération financière, « aucun coût pour les finances publiques » selon le candidat ; dotation non publiée par le candidat, l'amorçage de 5 Md€ venant de son entourage selon l'AFP ; plafond et conditions non publiés), suspension pendant deux ans de l'imposition des plus-values de cession des résidences secondaires (porte-parole de campagne, RCF, 12/11/2026 : mesure temporaire, dates non publiées ; achevée avant 2030 si elle commence avec la première loi de finances du mandat, sans effet sur le solde de 2030), statut du bailleur privé, amortissement fiscal élargi contre un engagement de location (entretien à Sud Ouest, 11/11/2026 : taux, durée et coût non publiés), plan d'investissement de 160 M€ par an dans la géothermie (entretien à Sud Ouest, 11/11/2026 : 0,16 Md€, sous 1 Md€), revalorisation des « toutes petites retraites » (débat TF1-LCI, 16/11/2026 : seuil et montant non publiés ; même lecture que les petites retraites de Glucksmann), « année blanche » des dépenses de l'État la première année du mandat, Éducation nationale exceptée (15 Md€ « selon ses calculs », L'Heure de vérité, 19/11/2026 : aucun chiffrage indépendant ; l'économie dépend de la hausse des dépenses évitée, qu'aucune base officielle ne donne pour 2028, et recoupe des fiches comptées sur ces dépenses, dont les 100 000 postes), soutien à l'apprentissage « rétabli » (site de campagne, 23/11/2026 : montant et champ non publiés ; même lecture que l'aide de 6 000 € par apprenti de Retailleau et les chèques apprentissage de Le Pen)",
     "n": 7,
     "cost": -71.1,
     "gain": 10.1,
@@ -16798,7 +16991,7 @@
    "id": "zemmour",
    "name": "Éric Zemmour",
    "party": "Reconquête",
-   "poll": "3,1 %",
+   "poll": "3,3 %",
    "summary": "Promet 280 Md€ d'économies par an dès 2032, la suppression de la CSG sur les revenus d'activité et des impôts de production, la fin des droits de succession, des aides réservées aux Français et l'expulsion des étrangers au chômage depuis plus de six mois. Notre chiffrage : −118,3 Md€ par an en 2030, soit −3 828 € par ménage. Principal obstacle : la révision de la Constitution, pour les aides réservées aux Français et la fin du regroupement familial.",
    "measures": [
     {
@@ -19279,18 +19472,18 @@
   }
  ],
  "method": [
-  "<b>Notre chiffrage.</b> 177 mesures analysées, dont 142 chiffrées avec la même règle pour tous : effet sur le solde public en Md€ par an, en année pleine à l'horizon 2030, en euros de 2026. Quand plusieurs chiffrages publiés existent, on retient leur médiane ajustée aux paramètres de 2027 ; sinon, un calcul ascendant à partir de données publiques. Chaque calcul et chaque donnée d'entrée sont affichés dans la fiche.",
+  "<b>Notre chiffrage.</b> 179 mesures analysées, dont 142 chiffrées avec la même règle pour tous : effet sur le solde public en Md€ par an, en année pleine à l'horizon 2030, en euros de 2026. Quand plusieurs chiffrages publiés existent, on retient leur médiane ajustée aux paramètres de 2027 ; sinon, un calcul ascendant à partir de données publiques. Chaque calcul et chaque donnée d'entrée sont affichés dans la fiche.",
   "<b>Règles communes.</b> Une même mesure vaut le même montant chez tous les candidats : retour à 62 ans 11,8 Md€ en 2030 (rendement de la réforme 2023, moins la part déjà perdue par la suspension, 1,8 Md€ par an selon le Conseil d'orientation des retraites ; fourchette commune de 10,0 à 12,3 Md€, tirée des mêmes chiffrages) ; salaires des enseignants 3,9 Md€ par tranche de +10 % (chiffrage de l'Institut Montaigne remis aux salaires de 2024 ; une hausse publiée en euros par mois a pour bornes le montant le plus bas et le montant le plus haut publiés, appliqués à tous les enseignants au même barème, 70 % en 2030) ; AME remplacée par une aide d'urgence +0,9 Md€ (même méthode, appliquée à la dépense réelle de 2025) ; jours de carence de la fonction publique, sur ses trois versants (État et opérateurs, collectivités, hôpitaux : tous dans les administrations publiques) : passage de un à deux jours +0,17 Md€, à trois jours +0,29 Md€, suppression du jour actuel −0,25 Md€ (revue de dépenses de l'IGF et de l'IGAS de juillet 2024, tableau 12 : estimations de la Direction du budget sur les données de 2022, sans effet de comportement) ; retour au plein traitement des agents publics en congé de maladie ordinaire, payés à 90 % pendant les trois premiers mois depuis le 1er mars 2025 (loi de finances pour 2025), −0,9 Md€ (même revue, tableau 1 : 300 M€ par versant, à absentéisme constant) ; une mesure générale sur les arrêts maladie qui n'exclut pas le public s'applique aux agents, hypothèse écrite dans la fiche ; un recul de l'âge de départ au-delà de 64 ans, au rythme prévu par la réforme de 2023, n'a pas d'effet avant 2032 : seule compte en 2030 la fin de la suspension de cette réforme (+1,8 Md€) ; taxe Zucman +5,25 Md€ (médiane des chiffrages cités) ; poste public 58,7 k€ par emploi en équivalent temps plein, coût complet employeur, cotisations comprises (rémunération des salariés des administrations publiques rapportée à leur emploi en équivalent temps plein, même champ pour les deux : 363,0 Md€ pour 6,19 millions d'emplois en 2024, comptes nationaux de l'Insee publiés en mai 2026 ; recoupements : salaire brut moyen de la fonction publique en 2024, 3 382 € par mois selon l'Insee, avec 47,8 % de cotisations employeurs, ≈ 60,0 k€ ; 75,7 k€ pour l'État dans les comptes nationaux, cohérent avec le coût moyen d'un fonctionnaire de l'État de 75 000 € d'un rapport de l'Assemblée nationale de juillet 2026) ; poste supprimé : 58,7 k€, dont la moitié rendue aux agents, avec 70 % du plan réalisé en 2030 (mêmes bornes pour tous les plans de postes : un départ à la retraite sur trois non remplacé sur 3,5 ans dans les secteurs visés, sans dépasser la valeur centrale, et le plan entièrement réalisé en 2030 ; leur faisabilité se juge sur toutes les sorties de la fonction publique, hors secteurs épargnés) ; poste public créé (plan de recrutement) 58,7 k€ en coût complet, sans la moitié rendue aux agents, qui ne vaut que pour les suppressions, avec 70 % du plan en 2030 quand il est étalé sur le mandat ou sans date (bornes : le plan entièrement réalisé en 2030 et, s'il existe, le chiffre du camp) ; pour les emplois du médico-social et des EHPAD, seule la part publique de leur financement est comptée (79,2 % : part des administrations publiques dans le financement des soins de longue durée en 2025, DREES) ; chaque mesure est comptée à son état prévu en 2030 (montée en charge comprise) ; un montant cumulé sur le quinquennat est converti en flux de 2030 (3,5/15 du cumul, soit 70 % du rythme final) ; la CVAE, déjà supprimée par la loi d'ici 2030, n'est comptée chez personne ; l'argent public (budget de l'État ou prélèvements obligatoires) versé sur des comptes de retraite individuels est une dépense (comptes à la naissance, au premier emploi, capitalisation obligatoire financée par des prélèvements réaffectés), et une capitalisation sans argent public publié ne compte pas en 2030 ; un prélèvement payé par les entreprises et déductible de leur bénéfice imposable (impôts de production comme la C3S ou la CFE, cotisations patronales, forfait social, part d'une accise payée par les entreprises) est compté net de l'impôt sur les sociétés qu'il fait varier, dans les deux sens (une baisse fait remonter cet impôt, une hausse le fait baisser) : 20 % de l'écart (taux retenu par le Gouvernement, l'Institut Montaigne et le Conseil d'analyse économique ; 17,5 %, taux de la Cour des comptes, en borne), en entier en 2030, sauf si le chiffrage retenu est déjà net ; quand le programme du candidat change le taux normal de l'impôt sur les sociétés et que ce changement est compté, ces taux sont ajustés dans la même proportion (20 % × 20/25 = 16 % pour un taux normal ramené de 25 % à 20 %) ; la part d'une taxe sur l'énergie payée par les entreprises est celle publiée par le service statistique du ministère de la Transition écologique (37 % des taxes sur l'énergie en 2023, répartition stable depuis 2018 ; aucune part propre aux carburants n'est publiée), pour l'impôt sur les sociétés comme pour la TVA, que les entreprises récupèrent ; pas pour l'impôt sur les sociétés lui-même ni pour un impôt que les entreprises ne déduisent pas (la TVA, qu'elles récupèrent) ; de même, un prélèvement payé par les ménages et déductible de leur revenu imposable (CSG déductible sur les revenus d'activité, de remplacement ou du capital, cotisations salariales et des indépendants) est compté net de l'impôt sur le revenu qu'il fait varier, dans les deux sens : 11,0 % de la part déductible (médiane des chiffrages publiés du même mécanisme : iFRAP 2023, 11,0 % ; Institut Montaigne 2022, 11 % ; évaluation préalable du projet de loi de finances pour 2018, 17,1 % pour les salariés du privé avec le barème de 2018, retenu pour la borne où l'impôt récupéré est le plus fort), appliqué à la base officielle la plus récente (CSG sur les revenus d'activité de 2025 : 12,0 Md€ par point), en entier en 2030, sauf si le chiffrage retenu est déjà net ; quand la mesure ne dit pas quelle part de la CSG baisse, la part déductible est celle du taux actuel (6,8 points sur 9,2) ; rien pour la part non déductible de la CSG ni pour la CRDS ; la suppression ou la fusion de la plupart des agences et opérateurs de l'État, missions reprises, vaut 0,26 Md€ chez tous les candidats qui la proposent (part hors personnel de l'économie chiffrée par la commission d'enquête du Sénat en 2025 sur les fonctions support des opérateurs, 0,54 Md€ : la part de personnel est déjà dans les postes supprimés), le montant annoncé par un camp n'étant pas compté au-delà ; un plan qui ne vise que des agences nommées n'entre pas dans cette valeur, et chaque fiche dit si elle y entre ; une agence nommée dont les missions sont reprises (par l'État, par une autre structure, ou parce que le droit les impose) ne vaut rien en propre ; une agence dont la mission disparaît vaut la part publique de son budget officiel, sans la part payée hors budget, sans les dispositifs que la mesure exclut elle-même ou déjà comptés dans une autre fiche, et sans les aides déjà accordées, qui restent à payer ; la ligne d'au moins 1 Md€ d'un budget publié qui la supprime donne une fiche, comptée sur ce budget officiel et non sur le montant annoncé ; le prix de référence des carburants et du fioul est la moyenne des 52 dernières semaines publiées par le ministère (gazole 1,98 €/l, SP95 1,94 €/l au 23/10/2026), et non le dernier relevé hebdomadaire, dans les fiches comme dans le simulateur ; de même, le prix de référence de l'électricité et du gaz est la moyenne des 12 derniers mois des séries officielles de la Commission de régulation de l'énergie (tarif réglementé option Base 6 kVA : 0,196 €/kWh TTC ; prix repère de vente du gaz : 151,7 €/MWh TTC, de novembre 2025 à octobre 2026), deux repères officiels, le tarif réglementé ne valant que pour les clients qui l'ont gardé et le prix repère du gaz étant indicatif ; le SMIC de référence est celui de juin 2026 ; une seule prévision d'inflation vaut pour toutes les mesures qui en dépendent (gels, années blanches, indexations, dans les fiches comme dans le simulateur) : la plus récente publiée par la Banque de France ou le Gouvernement, aujourd'hui celle du projet de loi de finances pour 2027 (prix à la consommation hors tabac : +1,7 % en 2027, +1,75 % par an de 2028 à 2030). Une mesure se juge reconfirmée mesure par mesure, quel que soit le document d'origine. Quand un candidat publie un budget ligne à ligne (RN, LFI, Retailleau, Zemmour), toute ligne d'au moins 1 Md€ qu'aucune fiche ne couvre est ajoutée : une dépense ou une baisse d'impôt vaut la médiane des chiffrages indépendants, à défaut le chiffre du camp (signalé, fourchette de ±50 %), une enveloppe vaut son montant ; une recette ou une économie n'est comptée qu'avec un chiffrage indépendant ou un paramètre publié (taux, assiette), sinon elle est listée « non comptée ». La lutte contre la fraude est comptée avec les leviers chiffrés par le Conseil d'analyse économique qui correspondent au champ de chaque mesure, dans la limite du chiffre du camp. Une baisse d'impôt annoncée sans calendrier est comptée en entier en 2030 ; une suppression d'aide compte pour sa seule part publique (pas la part payée hors budget, comme les certificats d'économies d'énergie ; la TVA perçue sur cette part des factures est en revanche une recette publique, perdue si elle est supprimée) ; un transfert entre administrations (de l'État vers les communes, par exemple) sans dépense définie par la mesure est neutre pour le solde public : compté 0, avec en borne basse le montant si le bénéficiaire le dépense en entier ; des aides réservées selon la nationalité ou la durée de séjour sont chiffrées avec l'étude qui correspond à la condition de chaque candidat. Une mesure de moins de 1 Md€ garde sa fiche, chez chaque candidat qui la propose, avec la même méthode (droits d'inscription des étudiants étrangers : +0,07 Md€ chez Retailleau et Philippe, droits en vigueur appliqués sans exonération ; non chiffrables chez Le Pen et Zemmour, dont le montant des droits n'est pas publié) ; seule la règle des budgets ligne à ligne fixe un seuil, pour les lignes à ajouter. Un plan de places d'accueil est compté pour son coût public de fonctionnement par place (crèches et assistantes maternelles : coût public annuel moyen d'une place d'accueil formel, Cour des comptes, 13 000 €), 70 % du plan en 2030 s'il est sans date, la construction en borne, comme les places de prison. Une place de prison est comptée pour le coût annuel d'un détenu publié par le ministère de la Justice (129,33 € par jour en 2024, soit 47,2 k€ par an, fonctionnement seul), avec 70 % des places ouvertes en 2030 si le plan est sans date et selon son calendrier s'il est daté, la construction (370 k€ la place, sur cinq ans) en borne basse et la moitié des places ouvertes en borne haute ; le rétablissement de peines minimales générales vaut 4 000 années de détention de plus par an (effet de la loi de 2007, Infostat Justice), soit 0,19 Md€, chez chaque candidat qui le propose.",
   "<b>Objectifs en niveau.</b> Un objectif de dépense publié sous la forme d'un niveau à une date (en part du PIB ou en euros) est compté pour l'écart, en 2030, entre ce niveau et la trajectoire du droit en vigueur (loi de programmation militaire ou de la recherche ; à défaut, part du PIB constante) ; un objectif sans date ou fixé à la fin du mandat compte pour 70 % de cet écart. Le PIB de 2030 est celui du scénario du Gouvernement (projet de loi de finances 2027), ramené en euros de 2026. Quand la définition est ambiguë (dépense exécutée ou financée, périmètre), le milieu de la fourchette est retenu. La même règle vaut dans les deux sens : un niveau publié à la baisse (suppression comprise) compte comme une économie. Une prise de position au Parlement sur un texte déjà voté ne vaut pas programme, sauf si le candidat la reprend dans sa campagne.",
   "<b>Ce qui n'est pas compté.</b> Les mesures non reconfirmées en 2026, ou connues par une seule reprise de presse qui ne cite pas le candidat (marquées « À confirmer »), et les mesures dont un paramètre clé n'est pas publié (ampleur, taux, plafond) : elles sont « non chiffrables », avec une fourchette indicative dans la fiche. Une mesure qui exige une révision est comptée « si elle passe », chez tous les candidats. Pas d'effets macroéconomiques de bouclage ; effets de comportement seulement quand ils sont documentés. Un chiffrage qu'un candidat reprend comme le sien (d'un institut, d'une association ou d'un parti) compte comme chiffre de son camp, quel que soit son auteur. Le reprendre comme le sien, c'est publier ce chiffre comme son propre chiffre ; citer une étude comme une base parmi d'autres n'en fait pas un chiffre du camp. Une économie qui repose sur une baisse de flux ou un comportement supposés par une seule note n'est pas comptée, sauf si une évaluation ou une donnée officielle les établit. Un document d'un parti publié avant la désignation de son candidat (un projet de parti, par exemple) ne vaut programme que si le candidat le reprend ; un document officiel publié depuis (le contre-budget d'un groupe parlementaire, par exemple) compte. Une demande adressée au Gouvernement en place d'utiliser un outil qui existe déjà (état d'urgence, couvre-feux, drones, militaires en garde statique) n'est pas une proposition de programme. Le tableau « Qu'est-ce qui peut passer ? » et la répartition des verdicts d'un candidat portent sur les mêmes mesures que les totaux et le quiz : hors mesures non confirmées et doublons (les mesures non chiffrables y sont).",
   "<b>Fourchette probable.</b> Chaque mesure a une valeur basse et une valeur haute ; le total en tire une fourchette à 80 % par simulation (20 000 tirages, propres à chaque candidat).",
   "<b>Verdicts.</b> Le verdict porte sur la voie juridique et pratique de la mesure, ni sur son coût ni sur l'écart entre le chiffre annoncé par le camp et notre chiffrage, que le chiffrage montre déjà, pour tous. Faisable : par décret ou par une loi ordinaire (lois de finances et de financement de la Sécurité sociale comprises), sans autre condition hors de cette décision, avec la majorité à l'Assemblée que suppose tout programme ; « faisable » ne dit rien du coût (c'est le chiffrage) ni de l'effet de la mesure ; une dépense ou une baisse d'impôt ou de cotisations non financée reste faisable, et l'obstacle le dit (« financement non précisé dans la mesure »). Sous conditions : la mesure dépend d'une condition identifiée hors de cette décision (accord de tiers : collectivités, partenaires sociaux, autre État ou institution ; contrats en cours ; obligation européenne à remplir par d'autres moyens ; capacités à bâtir : recrutements, places, constructions, moyens de contrôle ; rendement ou contenu d'une autre mesure ; risque de censure sur un point précis). Un paramètre, un contenu ou une échéance non publiés ne changent pas le verdict : l'obstacle les dit (« … non publié »), et la mesure est non chiffrable ou comptée selon la règle des objectifs. Assurance chômage : ses règles sont fixées par une convention des partenaires sociaux agréée par le Gouvernement, par décret faute d'accord, ou par la loi : la décision reste publique, la mesure est faisable. Très difficile : accord extérieur nécessaire, à l'unanimité des États de l'UE ou d'autres États, ou censure probable au vu de décisions ou d'avis sur des dispositifs proches. Exige une révision : impossible en l'état du droit sans réviser la Constitution ou les traités ; la fiche indique le chemin et qui doit dire oui. Une même situation juridique reçoit le même verdict chez tous les candidats ; une fiche qui réunit plusieurs mesures prend le verdict de la plus contraignante.",
-  "<b>Sources.</b> 465 sources distinctes pour les chiffrages des fiches, sans compter celles du quiz, des repères et du volet « Vie quotidienne ». L'année des chiffrages publiés est affichée ; « base 2022 » signale une estimation antérieure au programme 2027, « agrégateur » un site de synthèse à confirmer par une source primaire (repéré par son nom de domaine exact, et signalé partout où il est cité : estimations, données d'entrée, Vie quotidienne). Une source a une seule année, celle de sa publication, et un seul titre (son auteur et sa date), partout où elle est citée ; dans les repères « où en est la France », l'année indiquée est celle du chiffre (« données 2025 »).",
+  "<b>Sources.</b> 470 sources distinctes pour les chiffrages des fiches, sans compter celles du quiz, des repères et du volet « Vie quotidienne ». L'année des chiffrages publiés est affichée ; « base 2022 » signale une estimation antérieure au programme 2027, « agrégateur » un site de synthèse à confirmer par une source primaire (repéré par son nom de domaine exact, et signalé partout où il est cité : estimations, données d'entrée, Vie quotidienne). Une source a une seule année, celle de sa publication, et un seul titre (son auteur et sa date), partout où elle est citée ; dans les repères « où en est la France », l'année indiquée est celle du chiffre (« données 2025 »).",
   "<b>Résumés.</b> Même gabarit pour tous : ce que le candidat promet, notre chiffrage, le principal obstacle. Celui-ci est la condition juridique ou pratique des mesures retenues qui ont le verdict le plus contraignant (« exige une révision » d'abord, puis « très difficile »), jamais un coût, un rendement ou un paramètre non publié.",
   "<b>Vie quotidienne.</b> Pour huit thèmes (sécurité, santé, école, environnement, logement, libertés, économie, rayonnement), on liste 1 à 5 propositions publiées par candidat. Une proposition est « vérifiable » (précise) si elle donne un chiffre, une échéance ou un moyen juridique précis, c'est-à-dire un changement de droit nommé (sortie du commandement intégré de l'OTAN, fin du droit de veto, mandat de l'ONU obligatoire, instrument ou accord nommé et ce qui y change) ; sinon c'est une « intention » (un objectif, une orientation, ou une création sans paramètre : plan, pôle, fonds). La même règle s'applique à tous. Chaque proposition affichée est attribuée au candidat par au moins une source qui parle pour lui : le candidat lui-même (discours, entretien, tribune, réseau officiel) ou son site de campagne ; un document officiel de son parti ou de son groupe publié après sa désignation, ou repris par lui ; une personne au rôle officiel dans sa campagne ; un média reconnu qui le cite ou rapporte précisément ses propos, datés, ou deux médias reconnus indépendants qui rapportent la même proposition ; pour une proposition de 2022, une analyse d'une institution reconnue ou d'un média reconnu qui décrit son programme officiel. Un agrégateur, un site non officiel, une seule reprise de presse sans citation ou une étude ne suffisent pas : sans autre source, la proposition n'est pas affichée (le contrôle est automatique, proposition par proposition), et une source qui parle pour le candidat remplace l'agrégateur ou le site non officiel qui portait la même proposition. Une proposition est de 2026 si une telle source la porte en 2026 (site de campagne, document du parti publié depuis la désignation, entretien) ; sinon elle est signalée « non reconfirmée », chez tous ; une page sans date ne reconfirme pas, sauf sur le site de campagne du candidat, ouvert pour cette élection, et quand une partie seulement d'une proposition est redite en 2026, les deux parties sont affichées séparément. Quand un thème compte plus de cinq propositions, on affiche, dans le même ordre pour tous : d'abord celles de 2026 (les non reconfirmées passent après), parmi elles les précises avant les intentions, puis les plus récentes ; à égalité ou à date inconnue, l'ordre déjà affiché est gardé (une page de programme mise à jour n'est pas une nouvelle annonce) ; une proposition remplacée par sa version précise n'est pas gardée en double, et une même proposition n'est affichée que dans un thème, le plus précis (l'énergie et le nucléaire dans « environnement »). Les propositions hors affichage restent notées dans le registre de suivi du projet (dépôt public). Le site n'affiche pas d'avis d'études sur ces propositions : seules les sources qui les attribuent au candidat sont données. Les repères « où en est la France » sont les mêmes pour tous les candidats : pour chaque thème, 7 à 14 chiffres officiels (SSMSI, Insee, DREES, DEPP, Dares, COR, Ofpra, Ancols, Eurostat, OCDE, OTAN, RTE, SDES, Citepa, Banque de France, Cour des comptes, Sénat, etc. ; seul le classement de la liberté de la presse vient d'une ONG, RSF, et il est signalé comme tel), choisis parmi ceux que les bilans officiels mettent en avant, problèmes comme progrès, y compris les faits sensibles (violences sexuelles, part des étrangers parmi les mis en cause) avec leur définition exacte. Chacun donne le dernier chiffre publié, de préférence son évolution sur au moins cinq ans (jamais depuis une année choisie pour son creux ou son pic), et la précaution de lecture donnée par la source (par exemple : délinquance enregistrée, pas commise ; « mis en cause » n'est pas « condamné »). Quatre sont affichés, les autres se déplient. Le site de campagne d'un candidat n'est jamais utilisé comme source sur un autre.",
   "<b>Simulateur.</b> Il applique à votre situation tout gain ou toute perte que le candidat a publiés et confirmés en 2026, qu'ils soient comptés ou non dans notre total, à terme, sans les mesures de financement ; aucun gain n'est compté pour une mesure non confirmée ou sans montant publié (si un paramètre clé manque, une note le dit, sans montant). Droit actuel : retraite comparée au droit actuel après la suspension de la réforme 2023 ; SMIC 1 477,93 € net (juin 2026) ; AAH 1 041,59 € par mois au maximum ; barème 2026 de l'impôt sur le revenu avec décote, sur le net imposable, pour une personne seule (parent isolé si elle a des enfants) ou un couple marié ou pacsé (deux parts, revenu du conjoint de même nature que le vôtre, décote des couples, plafond du quotient au-delà de deux parts ; impôt calculé pour les actifs et les retraités), le même pour les actifs et les retraités (pour une pension : abattement de 10 %, au moins 454 € par pensionné et au plus 4 439 € par foyer, et CSG au taux normal) ; allocations familiales 2026 avant modulation ; minimum vieillesse (ASPA) 1 043,59 € par mois au plus pour une personne seule, 1 620,18 € pour un couple, moins les autres ressources. Les pertes sont comptées comme les gains : aides réservées selon la nationalité ou la durée de séjour (même calcul pour les quatre candidats qui en proposent, chacun avec sa condition, « si la révision de la Constitution passe », et pour un ressortissant de l'UE « si le droit de l'UE change » ; l'AAH et le minimum vieillesse suivent la condition des minima sociaux chez ces quatre candidats, leur mesure visant toutes les prestations non contributives ou les nommant ; hors Union européenne, le minimum vieillesse exige déjà dix ans de titre de séjour permettant de travailler), gel des prestations, baisse des minima ; le logement compte aussi (APL réservées selon la nationalité, relevées de 10 % ou gelées, à partir du montant que vous indiquez ; les mesures sans paramètre publié, comme les prêts à taux zéro, sont signalées en note ; une réduction d'impôt sur les intérêts d'emprunt dont le plafond est publié est affichée « jusqu'à » ce plafond, dans la limite de votre impôt, sans être ajoutée, car elle dépend de vos intérêts) ; les jours de carence et la durée du chômage sont affichés à part, dans les deux sens (une durée allongée comme une durée raccourcie), car ils ne jouent qu'en cas d'arrêt ou de chômage long ; un service obligatoire des jeunes est affiché à part pour les 17-25 ans, avec la rémunération publiée ou retenue dans la fiche, ou une note si elle n'est pas publiée. Le SMIC est un plancher : pour un agent public, le nouveau traitement est le plus élevé des deux, salaire relevé par le point d'indice ou nouveau SMIC, jamais leur somme. Une AAH ou un minimum vieillesse relevés augmentent d'autant l'allocation de tout allocataire (elle complète ses autres ressources jusqu'au montant maximal). Les réformes du quotient familial ou conjugal de chaque candidat s'appliquent au couple (part fiscale, plafond, impôt des jeunes parents ; fin du quotient conjugal : chacun imposé sur son revenu, au même barème, calculée pour un couple sans enfant, une note avec enfants tant que leur répartition n'est pas publiée). Un barème de l'impôt sur le revenu publié en entier (seuils et taux de chaque tranche) remplace le barème actuel, avec la décote et le quotient familial actuels et la garantie publiée avec lui, pour les actifs comme pour les retraités, seul ou en couple (après la fin du quotient conjugal quand le candidat la propose) ; une hausse d'impôt est comptée comme une baisse ; sans seuils ni taux publiés (un nombre de tranches seul, par exemple), une note sans montant. Une cantine gratuite rapporte les frais de cantine que vous indiquez. Des droits d'inscription relevés pour les étudiants étrangers sont affichés « jusqu'à » l'écart publié pour un étudiant aujourd'hui exonéré, sans être ajoutés, ou en note si le montant n'est pas publié. Le report de l'âge de la retraite est exprimé en années, avec la durée de cotisation pour le taux plein quand elle est publiée. Un avantage déjà acquis aujourd'hui n'est pas compté comme un gain (heures sup : impôt et cotisations du salarié déjà exonérés). La fin des certificats d'économies d'énergie compte −7 c€ par litre de carburant, TTC (coût moyen officiel de 2022 à 2025), la même hypothèse pour tous les candidats qui la proposent. Une hausse publiée en fourchette (« jusqu'à ») compte pour son montant minimal, l'autre borne étant donnée en note (salaires des enseignants, la même règle pour tous les candidats qui en proposent) ; un gel ne s'applique qu'aux prestations que le programme nomme. Un gain publié pour quelques niveaux de salaire seulement (au SMIC et au salaire médian, par exemple) est appliqué entre ces niveaux par interpolation (notre calcul), au prorata du salaire en dessous du premier, et rien n'est calculé au-dessus du dernier tant que le barème n'est pas publié (une note le dit), sauf quand le mécanisme publié vaut pour tous les salaires (par exemple des cotisations en moins « dès le premier euro ») : le gain est alors au prorata du salaire au-dessus du dernier niveau aussi. Un barème publié par écrit (taux par tranche de salaire) prime sur des montants donnés à l'oral pour quelques niveaux : il est appliqué à chaque salaire, y compris au-delà du dernier seuil, où le gain reste plafonné. Un gain publié qui comprend ou remplace une baisse déjà calculée (une baisse de la CSG, par exemple) ne s'y ajoute jamais : le plus grand des deux est retenu jusqu'au dernier niveau publié, la baisse déjà calculée seule au-delà ; de même, un SMIC visé « baisse de la CSG comprise » ne s'ajoute pas à cette baisse (le plus grand des deux). Un minimum social remplacé par un barème publié (montant sans activité, avec activité, puis dégressif avec le salaire) est calculé sur ce barème. Une baisse de cotisations annoncée pour les « salariés », sans exclure le public, est appliquée aussi aux agents publics (hypothèse écrite dans la note, la même pour tous). Les gains de salaire (hausse du SMIC, du point d'indice ou des salaires des enseignants, baisse de la CSG ou des cotisations) sont comptés après l'impôt sur le revenu qu'ils font payer, avec le même barème pour tous, après la réforme de l'impôt du candidat s'il en propose une : le revenu imposable augmente de la hausse de salaire (rapportée au net imposable) ou de la part déductible du prélèvement baissé (entière pour des cotisations, 6,8 points sur 9,2 pour une baisse de CSG dont la part n'est pas précisée) ; l'impôt dû apparaît sur une ligne à part, et il est nul pour qui reste sous le seuil d'imposition. Pour un retraité, la même règle vaut pour une variation de la pension (un gel fait baisser un peu l'impôt), et la réforme de l'impôt du candidat qui vaut pour tous les contribuables est appliquée (part fiscale, quotient familial, fin de l'abattement de 10 % sur les pensions). Ce sont des ordres de grandeur.",
   "<b>Quiz.</b> 20 duels tirés au hasard entre deux candidats sur un même thème ; chaque candidat apparaît 5 fois et aucune paire ne se répète. Deux propositions de la même famille (même sens et même instrument : deux retours à 62 ans, deux plans de suppression de postes, deux hausses du salaire des enseignants…) ne s'affrontent jamais, et une famille ne revient qu'une fois par partie : sont de la même famille les propositions qui ont le même « Pour » et le même « Contre », et celles d'une liste publiée avec les données. Les duels portent sur les mesures des fiches (chiffrées ou non chiffrables) et sur les propositions précises et reconfirmées du volet « Vie quotidienne » (école, santé, logement, économie) ; un candidat sans proposition de ce type sur un thème n'y apparaît pas. À l'accueil, on peut choisir les thèmes qui comptent pour soi : ils reviennent plus souvent et comptent double dans le résultat. Chaque proposition est reformulée en langage courant. Dessous, un constat : la réalité française que la proposition veut traiter, avec le chiffre officiel (le dernier chiffre officiel et son évolution en %, même forme pour toutes ; les problèmes réels sont dits clairement, sans cause ni jugement) ; une mesure institutionnelle ou d'organisation (Constitution, référendum, organisation de l'État, des agences ou des établissements), ou une mesure dont aucune série officielle ne mesure ce qu'elle vise, n'a pas de constat, avec la même règle pour toutes. Puis « Pour » et « Contre » donnent en une ligne le meilleur argument réel de ceux qui la défendent et de ceux qui la critiquent : un fait que la proposition ne dit pas d'elle-même (ce qui s'est passé quand elle a été appliquée, un ordre de grandeur), jamais la proposition redite autrement ; avec la force des preuves de chacun (solides, mitigées, faibles, pas d'étude). Sous le duel, des cas réels sourcés (en France d'abord) et l'état des études. Même méthode pour toutes les mesures, sans fausse symétrie : on n'invente ni argument ni exemple pour équilibrer, et un exemple n'est retenu que s'il est pertinent, observé et de source reconnue ; on montre où penchent les faits et le lecteur juge ; les mesures du même type ont les mêmes cas et les mêmes niveaux de preuve. Le « Contre » tient compte du reste du programme : si une autre mesure du même candidat répond à la critique, elle est signalée. Pas de nom de candidat, pas de coût de la mesure, pas de faisabilité juridique, pas de jugement. Le résultat montre d'abord le ou les candidats les plus proches et ce qu'impliquent les propositions retenues (faisabilité, déficit ; « Les deux » compte la moyenne des deux effets), puis une pastille par proposition vue. La proximité est la part des propositions d'un candidat que vous avez retenues (choisie ou « Les deux ») ; une proposition d'un thème que vous marquez compte deux fois. Les égalités ne sont jamais départagées : les ex æquo sont signalés et affichés dans un ordre tiré au hasard. Suivent la tendance par thème, ce qui colle et ce qui colle moins chez les plus proches, et le détail des duels. Quiz : les exemples sont des cas observés en France (ou au niveau de l'Union quand la France y participe) ; quand des évaluations n'existent qu'à l'étranger, l'état des études le dit en une phrase, sans pays ni chiffre, et le niveau de preuve est au plus « faible ». Une proposition précise et reconfirmée entre au quiz même sans évaluation : le Pour et le Contre disent alors ce que la mesure change concrètement, sans affirmer d'effet, avec le niveau « pas d'étude ».",
-  "<b>Sondages et contexte.</b> Intentions de vote au 1er tour : moyenne de 6 instituts (Cluster17 pour Politico, du 09 au 10/11 ; OpinionWay pour CNews, du 10 au 12/11 ; Elabe pour BFMTV et La Tribune Dimanche, du 12 au 13/11 ; Ifop pour TF1-LCI, Le Figaro et Sud Radio (Ifop-Fiducial), du 13 au 16/11 ; YouGov pour Le HuffPost, du 12 au 17/11 ; Toluna Harris Interactive pour M6, RTL et L'Express, du 18 au 19/11), dernière vague de chacun dont le terrain s'est achevé dans les 15 jours précédant le 23/11/2026, 15e jour compris ; pour chaque institut, milieu de la fourchette des hypothèses où le candidat est testé, même poids pour chaque institut. L'ordre des candidats suit cette moyenne, et la date de la moyenne est affichée à côté des intentions de vote. Source : notices de la Commission des sondages ; sondages masqués la veille et le jour de chaque tour. PLF 2027, Insee, taux à 10 ans d'octobre 2026. Ménages : 30,9 millions (Insee). 1 point de PIB ≈ 30 Md€."
+  "<b>Sondages et contexte.</b> Intentions de vote au 1er tour : moyenne de 5 instituts (OpinionWay pour CNews, du 10 au 12/11 ; Elabe pour BFMTV et La Tribune Dimanche, du 12 au 13/11 ; Ifop pour TF1-LCI, Le Figaro et Sud Radio (Ifop-Fiducial), du 13 au 16/11 ; YouGov pour Le HuffPost, du 12 au 17/11 ; Toluna Harris Interactive pour M6, RTL et L'Express, du 18 au 19/11), dernière vague de chacun dont le terrain s'est achevé dans les 15 jours précédant le 26/11/2026, 15e jour compris ; pour chaque institut, milieu de la fourchette des hypothèses où le candidat est testé, même poids pour chaque institut. L'ordre des candidats suit cette moyenne, et la date de la moyenne est affichée à côté des intentions de vote. Source : notices de la Commission des sondages ; sondages masqués la veille et le jour de chaque tour. PLF 2027, Insee, taux à 10 ans d'octobre 2026. Ménages : 30,9 millions (Insee). 1 point de PIB ≈ 30 Md€."
  ],
  "statu_quo": {
   "retraite": {
@@ -19410,6 +19603,30 @@
   "2027-05-02"
  ],
  "changelog": [
+  {
+   "date": "26/11/2026",
+   "text": "Impôt sur les sociétés progressif : même fiche, non chiffrable, chez les deux candidats qui le proposent, les taux et les seuils n'étant pas publiés. Le Pen (LCI, 25/11) : cinq tranches ; elle annonce un impôt ramené de 14 à 10,8 Md€ pour les très petites entreprises et de 19,2 à 16,2 Md€ pour les PME, une tranche supérieure au taux actuel pour les plus grandes entreprises et la fin de leur surtaxe. Mélenchon (programme du 6/11) : barème progressif, modulé selon l'usage des bénéfices ; son camp annonce 3 Md€ de recettes (budget du 14/10) ; la mesure, jusqu'ici seulement listée parmi les mesures non comptées, reçoit sa fiche. Totaux inchangés (−88,4 et −257,4 Md€)."
+  },
+  {
+   "date": "26/11/2026",
+   "text": "Le Pen, collectivités : la fiche reprend sa réforme territoriale du 24/11 (maires libres d'adhérer à une intercommunalité ou d'en sortir, conseiller territorial commun aux départements et aux régions dès 2028, loi-cadre de « démétropolisation ») à la place de la « fin des intercommunalités et métropoles » ; verdict et chiffrage inchangés. Total inchangé (−88,4 Md€)."
+  },
+  {
+   "date": "26/11/2026",
+   "text": "Mélenchon, plans « féminisme » et « mer » de son site de campagne : les 500 000 places d'accueil du jeune enfant sont annoncées « dans les cinq ans » (même calcul : 70 % des places en 2030) ; 3 Md€ contre les violences sexistes et sexuelles dès la première année du mandat ; congé d'accueil de 20 semaines par parent redit. Listés non comptés, faute de coût publié : aide d'urgence aux victimes de violences conjugales portée à 1 337 € par mois, IVG, contraception et protections périodiques gratuites, arrêt menstruel, majoration des allocations familiales rétablie à 14 ans, électrification des quais des ports d'ici 2030, flotte stratégique, fonds « érosion côtière ». Total inchangé (−257,4 Md€)."
+  },
+  {
+   "date": "26/11/2026",
+   "text": "Attal (comptes rendus de son site des 23 et 24/11) : mesures non comptées précisées : doublons entre collectivités estimés à 10 Md€ par an par le candidat (chiffre du camp ; l'échelon à supprimer n'est pas nommé) ; banque nationale d'investissement dans le logement, qui détiendrait la moitié du bien, rachetable une fois le premier emprunt remboursé ; soutien à l'apprentissage « rétabli », sans montant ; classes de moins de vingt élèves en moyenne en primaire d'ici cinq ans, sans recrutement publié ; formation de 30 millions de Français à l'IA en trois ans (note de la fiche). Philippe : un départ à la retraite sur trois non remplacé, soit 250 000 postes, redit le 24/11 (source ajoutée). Totaux inchangés."
+  },
+  {
+   "date": "26/11/2026",
+   "text": "Quiz : constats mis au dernier chiffre officiel, le même texte pour les propositions du même type. Licence obtenue en 3 ou 4 ans : 42,4 % des bacheliers 2021 (40,3 % pour ceux de 2020) ; passage en 2e année de licence : 50,6 % (49,1 % un an plus tôt) ; entrée en 6e en 2026 : 29 % d'élèves en difficulté en français, 33 % en maths (28 % et 33 % en 2025) ; salariés concernés par la hausse du SMIC : 11,8 % début 2026 (12,4 % fin 2024). Les arguments et les cas tirés des mêmes notes passent aux mêmes chiffres chez les cinq candidats concernés (licence obtenue par 7,9 % des bacheliers professionnels, 6,5 % auparavant), et les repères « Où en est la France » sont alignés. Sources : SIES, ministère de l'Éducation nationale, Dares."
+  },
+  {
+   "date": "26/11/2026",
+   "text": "Sondages : moyenne au 26/11, sans la vague Cluster17 pour Politico (9-10/11), dont le terrain date de plus de 15 jours ; aucune nouvelle enquête d'intentions de vote n'a de notice à la Commission des sondages depuis le 23/11. Cinq instituts (OpinionWay, Elabe, Ifop, YouGov, Toluna Harris Interactive) : Le Pen 32,7 %, Mélenchon 18,0 %, Philippe 11,5 %, Glucksmann 10,8 %, Lisnard 10,0 %, Attal 5,6 %, Retailleau 5,4 %, Zemmour 3,3 % ; ordre des candidats inchangé."
+  },
   {
    "date": "24/11/2026",
    "text": "Coût d'un poste public : la valeur commune est recalculée sur un même champ, la rémunération des salariés des administrations publiques rapportée à leur emploi en équivalent temps plein (Insee, comptes nationaux 2024) : 58,7 k€ au lieu de 61,6 k€, qui rapportait la masse salariale de toutes les administrations publiques au nombre d'agents des trois fonctions publiques comptés en personnes. Même valeur chez les 8, pour les suppressions de postes (moitié rendue aux agents) comme pour les recrutements. Fiches : Philippe +5,4 → +5,1 Md€, Lisnard +9,4 → +9,0, Attal +2,2 → +2,1, Retailleau +9,2 → +8,8, Zemmour +17,2 → +16,4, plan santé de Mélenchon −14,7 → −14,0. Totaux : Mélenchon −258,1 → −257,4 Md€, Philippe −1,7 → −2,0, Lisnard −41,0 → −41,4, Attal −60,9 → −61,0, Retailleau −27,2 → −27,6, Zemmour −117,5 → −118,3 ; Le Pen (−88,4) et Glucksmann (−88,5) inchangés."
@@ -19918,15 +20135,9 @@
  ],
  "sondages": {
   "regle": "Intentions de vote au 1er tour. Dernière vague de chaque institut dont le terrain s'est achevé dans les 15 jours précédant la date ci-dessous, 15e jour compris ; pour chaque institut, fourchette [plus bas, plus haut] des scores publiés dans les hypothèses où le candidat est testé, et on retient le milieu ; le chiffre affiché est la moyenne de ces milieux entre instituts (même poids pour chacun). L'ordre des candidats suit cette moyenne. Source : notices de la Commission des sondages.",
-  "date": "23/11/2026",
-  "exclus": "Ifop pour LCI (27-29/10) : vague précédente de cet institut, remplacée par la vague Ifop-Fiducial pour TF1-LCI, Le Figaro et Sud Radio du 13 au 16/11 (notice 10384) ; OpinionWay pour Les Echos et Radio Classique (Présitrack, vague du 9 au 10/11, notice 10372) : vague antérieure à celle du 10 au 12/11 pour CNews retenue pour cet institut ; vague précédente d'OpinionWay pour CNews (21-22/10) remplacée par celle du 10 au 12/11 ; Ipsos BVA pour Le Parisien (21-22/10) : terrain achevé le 22/10, plus de 15 jours ; Elabe pour BFMTV et La Tribune Dimanche (14-16/10) et Odoxa (24/09-07/10) : plus de 15 jours ; vague précédente de YouGov pour Le HuffPost (12-15/10, notice 10323) remplacée par celle du 12 au 17/11 ; Toluna Harris Interactive pour M6 et RTL (3-5/11, notice 10362) : vague antérieure à celle du 18 au 19/11 pour M6, RTL et L'Express (notice 10393) retenue pour cet institut ; Ifop-Fiducial pour Sud Radio (2-4/11, notice 10392, parue le 20/11) : plus de 15 jours, vague antérieure à celle du 13 au 16/11 retenue pour cet institut ; vague précédente de Cluster17 (19-22/10) remplacée par celle du 9 au 10/11 ; vague de Toluna Harris Interactive pour M6 et RTL du 19 au 21/10 : plus de 15 jours ; notices de novembre sans intentions de vote au 1er tour (Ipsos BVA pour La Tribune Dimanche, baromètre politique, notice 10373 ; CSA pour CNews, Europe 1 et le JDD, balise d'opinion, notice 10376 ; Ipsos BVA pour Le Monde, « Fractures françaises », notice 10377 ; Toluna Harris Interactive pour CommStrat et L'Opinion, potentiel électoral ; Cluster17 pour Le Point, baromètre des personnalités ; Ifop, CSA et Odoxa sur une candidature de T. Riner ; Ifop-Fiducial pour Sud Radio, primaire de la droite et du centre ; Elabe pour BFMTV, « Les Français et les programmes présidentiels », notice 10386 ; Ifop pour la Fédération française du bâtiment, logement, notice 10383 ; Ifop pour Franc-Tireur, participation au 1er et au 2d tour, notice 10381 ; Ifop pour Paris Match, T. Riner, notice 10379 ; Ifop pour L'Humanité, mesures de pouvoir d'achat, notice 10380 ; Ifop, antisémitisme, notice 10378 ; Ifop pour Le Figaro, primaire de la droite et du centre, notice 10387 ; Ifop pour Valeurs actuelles, notice 10388 ; Ifop pour Le Club des 20, vieillissement, notice 10389 ; Ifop pour Break Poverty, égalité des chances, notice 10390 ; Odoxa pour Backbone et Le Figaro, mouvements lycéens et étudiants, notice 10391 ; CSA pour CNews, Europe 1 et le JDD, ordre public, notice 10385 ; Ifop/Endrix pour L'Opinion, indices de popularité, notice 10394 ; YouGov, Elabe, Verian) : non retenues.",
+  "date": "26/11/2026",
+  "exclus": "Ifop pour LCI (27-29/10) : vague précédente de cet institut, remplacée par la vague Ifop-Fiducial pour TF1-LCI, Le Figaro et Sud Radio du 13 au 16/11 (notice 10384) ; OpinionWay pour Les Echos et Radio Classique (Présitrack, vague du 9 au 10/11, notice 10372) : vague antérieure à celle du 10 au 12/11 pour CNews retenue pour cet institut ; vague précédente d'OpinionWay pour CNews (21-22/10) remplacée par celle du 10 au 12/11 ; Ipsos BVA pour Le Parisien (21-22/10) : terrain achevé le 22/10, plus de 15 jours ; Elabe pour BFMTV et La Tribune Dimanche (14-16/10) et Odoxa (24/09-07/10) : plus de 15 jours ; vague précédente de YouGov pour Le HuffPost (12-15/10, notice 10323) remplacée par celle du 12 au 17/11 ; Toluna Harris Interactive pour M6 et RTL (3-5/11, notice 10362) : vague antérieure à celle du 18 au 19/11 pour M6, RTL et L'Express (notice 10393) retenue pour cet institut ; Ifop-Fiducial pour Sud Radio (2-4/11, notice 10392, parue le 20/11) : plus de 15 jours, vague antérieure à celle du 13 au 16/11 retenue pour cet institut ; Cluster17 pour Politico (9-10/11, notice 10368) : terrain achevé le 10/11, plus de 15 jours, comme sa vague précédente (19-22/10) ; vague de Toluna Harris Interactive pour M6 et RTL du 19 au 21/10 : plus de 15 jours ; notices de novembre sans intentions de vote au 1er tour (Ipsos BVA pour La Tribune Dimanche, baromètre politique, notice 10373 ; CSA pour CNews, Europe 1 et le JDD, balise d'opinion, notice 10376 ; Ipsos BVA pour Le Monde, « Fractures françaises », notice 10377 ; Toluna Harris Interactive pour CommStrat et L'Opinion, potentiel électoral ; Cluster17 pour Le Point, baromètre des personnalités ; Ifop, CSA et Odoxa sur une candidature de T. Riner ; Ifop-Fiducial pour Sud Radio, primaire de la droite et du centre ; Elabe pour BFMTV, « Les Français et les programmes présidentiels », notice 10386 ; Ifop pour la Fédération française du bâtiment, logement, notice 10383 ; Ifop pour Franc-Tireur, participation au 1er et au 2d tour, notice 10381 ; Ifop pour Paris Match, T. Riner, notice 10379 ; Ifop pour L'Humanité, mesures de pouvoir d'achat, notice 10380 ; Ifop, antisémitisme, notice 10378 ; Ifop pour Le Figaro, primaire de la droite et du centre, notice 10387 ; Ifop pour Valeurs actuelles, notice 10388 ; Ifop pour Le Club des 20, vieillissement, notice 10389 ; Ifop pour Break Poverty, égalité des chances, notice 10390 ; Odoxa pour Backbone et Le Figaro, mouvements lycéens et étudiants, notice 10391 ; CSA pour CNews, Europe 1 et le JDD, ordre public, notice 10385 ; Ifop/Endrix pour L'Opinion, indices de popularité, notice 10394 ; Odoxa pour Mascaret, Public Sénat, la presse régionale et Le Nouvel Obs, baromètre politique, notice 10395 ; Ifop pour Femmes d'Influence, adhésion des femmes aux mesures politiques, notice 10396 ; Ifop-Fiducial pour Paris Match et Sud Radio, tableau de bord des personnalités, notice 10397 ; Elabe pour BFMTV, calendrier de la primaire de la droite et du centre, notice 10398 ; Ifop pour Razel-Bec Fayat et Régions Magazine, confiance dans les acteurs locaux, notice 10399 ; YouGov, Elabe, Verian) : non retenues.",
   "instituts": [
-   {
-    "institut": "Cluster17",
-    "pour": "Politico",
-    "terrain": "09-10/11/2026",
-    "url": "https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10368-pres-iv-cluster17-politico-11-novembre.pdf"
-   },
    {
     "institut": "OpinionWay",
     "pour": "CNews",
@@ -23578,12 +23789,12 @@
    },
    {
     "label": "Entrée en 6e : élèves des groupes les moins performants",
-    "value": "28 % en français, 32,5 % en maths",
-    "trend": "2017→2025 : −3,7 / +1,7 pt ; collèges les moins favorisés : 46,6 / 52,5 %",
-    "year": 2025,
-    "source": "DEPP (évaluations de début de 6e)",
-    "url": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-21evals-2dpdf-517319.pdf",
-    "note": "Ces évaluations « ne constituent pas un balayage exhaustif des programmes » (DEPP)."
+    "value": "28,7 % en français, 33 % en maths",
+    "trend": "2017→2026 : −3,0 / +2,2 pt ; en REP+ : 54,5 / 60,4 %",
+    "year": 2026,
+    "source": "Ministère de l'Éducation nationale (DEPP), évaluations nationales de septembre 2026",
+    "url": "https://www.education.gouv.fr/evaluations-nationales-de-septembre-2026-506811",
+    "note": "Part des élèves dans les groupes de performance les plus faibles ; en 2017 : 31,7 % en français, 30,8 % en maths ; en REP+ : 60,7 % et 61,2 % en 2017."
    },
    {
     "label": "18-24 ans sans diplôme au-delà du brevet ni formation",
@@ -24039,11 +24250,11 @@
    },
    {
     "label": "Salariés concernés par la hausse du Smic",
-    "value": "12,4 %",
-    "trend": "au 1er nov. 2024 ; 14,6 % au 1er janv. 2024 ; 17,3 % au 1er janv. 2023",
-    "year": 2024,
-    "source": "Groupe d'experts sur le Smic, rapport du 25 novembre 2025 (données Dares, Acemo)",
-    "url": "https://www.tresor.economie.gouv.fr/Articles/284b121f-b187-4280-b327-05f18064c3fa/files/1d1d1848-48bb-40a9-a14f-585b8072e716",
+    "value": "11,8 %",
+    "trend": "au 1er janv. 2026 ; 12,4 % au 1er nov. 2024 ; 14,6 % au 1er janv. 2024 ; 17,3 % au 1er janv. 2023",
+    "year": 2026,
+    "source": "Dares, La revalorisation du Smic au 1er janvier 2026",
+    "url": "https://dares.travail-emploi.gouv.fr/publication/la-revalorisation-du-smic-au-1er-janvier-2026",
     "note": "Ce pourcentage ne doit pas être lu comme le pourcentage des salariés effectivement rémunérés au niveau du Smic. Champ : secteur privé hors agriculture, hors apprentis, stagiaires et intérimaires."
    },
    {
@@ -25478,13 +25689,13 @@
      "u": "https://www.cnesco.fr/wp-content/uploads/2014/08/280814CNESCO_redoublement.pdf"
     },
     {
-     "l": "DEPP, Note d'information n° 26.21, évaluations de début de 6e, 5e et 4e 2025",
+     "l": "Ministère de l'Éducation nationale (DEPP), évaluations nationales de septembre 2026",
      "a": 2026,
-     "u": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-21evals-2dpdf-517319.pdf"
+     "u": "https://www.education.gouv.fr/evaluations-nationales-de-septembre-2026-506811"
     }
    ],
    "quiz_constat": {
-    "t": "Entrée en 6e en 2025 : 28 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
+    "t": "Entrée en 6e en 2026 : 29 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
     "s": [
      1
     ]
@@ -25526,13 +25737,13 @@
      "u": "https://www.cnesco.fr/wp-content/uploads/2014/08/280814CNESCO_redoublement.pdf"
     },
     {
-     "l": "DEPP, Note d'information n° 26.21, évaluations de début de 6e, 5e et 4e 2025",
+     "l": "Ministère de l'Éducation nationale (DEPP), évaluations nationales de septembre 2026",
      "a": 2026,
-     "u": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-21evals-2dpdf-517319.pdf"
+     "u": "https://www.education.gouv.fr/evaluations-nationales-de-septembre-2026-506811"
     }
    ],
    "quiz_constat": {
-    "t": "Entrée en 6e en 2025 : 28 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
+    "t": "Entrée en 6e en 2026 : 29 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
     "s": [
      1
     ]
@@ -25592,13 +25803,13 @@
      "u": "https://www.cnesco.fr/wp-content/uploads/2014/08/280814CNESCO_redoublement.pdf"
     },
     {
-     "l": "DEPP, Note d'information n° 26.21, évaluations de début de 6e, 5e et 4e 2025",
+     "l": "Ministère de l'Éducation nationale (DEPP), évaluations nationales de septembre 2026",
      "a": 2026,
-     "u": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-21evals-2dpdf-517319.pdf"
+     "u": "https://www.education.gouv.fr/evaluations-nationales-de-septembre-2026-506811"
     }
    ],
    "quiz_constat": {
-    "t": "Entrée en 6e en 2025 : 28 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
+    "t": "Entrée en 6e en 2026 : 29 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
     "s": [
      1
     ]
@@ -25640,13 +25851,13 @@
      "u": "https://www.cnesco.fr/wp-content/uploads/2014/08/280814CNESCO_redoublement.pdf"
     },
     {
-     "l": "DEPP, Note d'information n° 26.21, évaluations de début de 6e, 5e et 4e 2025",
+     "l": "Ministère de l'Éducation nationale (DEPP), évaluations nationales de septembre 2026",
      "a": 2026,
-     "u": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-21evals-2dpdf-517319.pdf"
+     "u": "https://www.education.gouv.fr/evaluations-nationales-de-septembre-2026-506811"
     }
    ],
    "quiz_constat": {
-    "t": "Entrée en 6e en 2025 : 28 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
+    "t": "Entrée en 6e en 2026 : 29 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
     "s": [
      1
     ]
@@ -26193,7 +26404,7 @@
    "quiz_text": "Supprimer Parcoursup et MonMaster, les plateformes d'admission après le bac et en master",
    "quiz_concret": "Les formations ne classent plus les candidats ; l'université ouvre des places pour accueillir ceux qui la demandent.",
    "quiz_plus": "Les classements restent opaques : jusqu'à une licence très demandée sur cinq tient compte du lycée d'origine.",
-   "quiz_moins": "Les moins préparés réussissent peu à l'université : 6,5 % des bacheliers pro y obtiennent leur licence.",
+   "quiz_moins": "Les moins préparés réussissent peu à l'université : 7,9 % des bacheliers pro y obtiennent leur licence.",
    "quiz_preuve_pour": "mitigé",
    "quiz_preuve_contre": "mitigé",
    "quiz_cas_pour": [
@@ -26218,7 +26429,7 @@
      ]
     },
     {
-     "t": "Parmi les bacheliers 2020 inscrits en licence, 40,3 % l'ont obtenue en 3 ou 4 ans : 14 % des bacheliers technologiques, 6,5 % des professionnels (SIES, France, 2025).",
+     "t": "Parmi les bacheliers 2021 inscrits en licence, 42,4 % l'ont obtenue en 3 ou 4 ans : 15,9 % des bacheliers technologiques, 7,9 % des professionnels (SIES, France, 2026).",
      "s": [
       2
      ]
@@ -26237,13 +26448,13 @@
      "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-10/NF2_Admission_Parcoursup_2026_def.pdf"
     },
     {
-     "l": "SIES, Note Flash n° 29, Parcours et réussite en licence : les résultats de la session 2024",
-     "a": 2025,
-     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf"
+     "l": "SIES, Note Flash n° 31, Parcours et réussite en licence : les résultats de la session 2025",
+     "a": 2026,
+     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-11/NF%20SIES%202026-31%20Parcours%20et%20r%C3%A9ussite%20en%20licence.pdf"
     }
    ],
    "quiz_constat": {
-    "t": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 49,1 % passent en 2e année de licence (SIES).",
+    "t": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 50,6 % passent en 2e année de licence (SIES).",
     "s": [
      1,
      2
@@ -26291,7 +26502,7 @@
      ]
     },
     {
-     "t": "Parmi les bacheliers 2020 inscrits en licence, 40,3 % l'ont obtenue en 3 ou 4 ans : 14 % des bacheliers technologiques, 6,5 % des professionnels (SIES, France, 2025).",
+     "t": "Parmi les bacheliers 2021 inscrits en licence, 42,4 % l'ont obtenue en 3 ou 4 ans : 15,9 % des bacheliers technologiques, 7,9 % des professionnels (SIES, France, 2026).",
      "s": [
       2
      ]
@@ -26310,13 +26521,13 @@
      "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-10/NF2_Admission_Parcoursup_2026_def.pdf"
     },
     {
-     "l": "SIES, Note Flash n° 29, Parcours et réussite en licence : les résultats de la session 2024",
-     "a": 2025,
-     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf"
+     "l": "SIES, Note Flash n° 31, Parcours et réussite en licence : les résultats de la session 2025",
+     "a": 2026,
+     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-11/NF%20SIES%202026-31%20Parcours%20et%20r%C3%A9ussite%20en%20licence.pdf"
     }
    ],
    "quiz_constat": {
-    "t": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 49,1 % passent en 2e année de licence (SIES).",
+    "t": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 50,6 % passent en 2e année de licence (SIES).",
     "s": [
      1,
      2
@@ -26332,7 +26543,7 @@
    "title": "Sélectionner les étudiants à l'entrée de l'université, avec une nouvelle plateforme fondée sur le mérite",
    "quiz_text": "Sélectionner les étudiants à l'entrée de l'université, avec une nouvelle plateforme fondée sur le mérite",
    "quiz_concret": "Parcoursup est remplacé ; chaque licence choisit ses étudiants d'après leurs résultats scolaires.",
-   "quiz_plus": "Les moins préparés réussissent peu à l'université : 6,5 % des bacheliers pro y obtiennent leur licence.",
+   "quiz_plus": "Les moins préparés réussissent peu à l'université : 7,9 % des bacheliers pro y obtiennent leur licence.",
    "quiz_moins": "Les classements restent opaques : jusqu'à une licence très demandée sur cinq tient compte du lycée d'origine.",
    "quiz_preuve_pour": "mitigé",
    "quiz_preuve_contre": "mitigé",
@@ -26344,7 +26555,7 @@
      ]
     },
     {
-     "t": "Parmi les bacheliers 2020 inscrits en licence, 40,3 % l'ont obtenue en 3 ou 4 ans : 14 % des bacheliers technologiques, 6,5 % des professionnels (SIES, France, 2025).",
+     "t": "Parmi les bacheliers 2021 inscrits en licence, 42,4 % l'ont obtenue en 3 ou 4 ans : 15,9 % des bacheliers technologiques, 7,9 % des professionnels (SIES, France, 2026).",
      "s": [
       2
      ]
@@ -26377,13 +26588,13 @@
      "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-10/NF2_Admission_Parcoursup_2026_def.pdf"
     },
     {
-     "l": "SIES, Note Flash n° 29, Parcours et réussite en licence : les résultats de la session 2024",
-     "a": 2025,
-     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf"
+     "l": "SIES, Note Flash n° 31, Parcours et réussite en licence : les résultats de la session 2025",
+     "a": 2026,
+     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-11/NF%20SIES%202026-31%20Parcours%20et%20r%C3%A9ussite%20en%20licence.pdf"
     }
    ],
    "quiz_constat": {
-    "t": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 49,1 % passent en 2e année de licence (SIES).",
+    "t": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 50,6 % passent en 2e année de licence (SIES).",
     "s": [
      1,
      2
@@ -26600,13 +26811,13 @@
      "u": "https://www.cnesco.fr/wp-content/uploads/2014/08/280814CNESCO_redoublement.pdf"
     },
     {
-     "l": "DEPP, Note d'information n° 26.21, évaluations de début de 6e, 5e et 4e 2025",
+     "l": "Ministère de l'Éducation nationale (DEPP), évaluations nationales de septembre 2026",
      "a": 2026,
-     "u": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-21evals-2dpdf-517319.pdf"
+     "u": "https://www.education.gouv.fr/evaluations-nationales-de-septembre-2026-506811"
     }
    ],
    "quiz_constat": {
-    "t": "Entrée en 6e en 2025 : 28 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
+    "t": "Entrée en 6e en 2026 : 29 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
     "s": [
      1
     ]
@@ -26857,8 +27068,8 @@
    "title": "Évaluer les licences et masters tous les trois ans et fermer les filières aux moins bons résultats",
    "quiz_text": "Évaluer les licences et masters tous les trois ans et fermer les filières aux moins bons résultats",
    "quiz_concret": "Les formations où beaucoup d'étudiants abandonnent ou trouvent mal un emploi seraient réorientées ou fermées.",
-   "quiz_plus": "Après la 1re année de licence, plus d'un néo-bachelier sur quatre change de formation ou quitte le supérieur.",
-   "quiz_moins": "La réussite dépend d'abord du profil d'entrée : 70 % avec mention très bien au bac, 7 % après un bac pro.",
+   "quiz_plus": "Après la 1re année de licence, près d'un néo-bachelier sur quatre change de formation ou ne se réinscrit pas.",
+   "quiz_moins": "La réussite dépend d'abord du profil d'entrée : 71 % avec mention très bien au bac, 8 % après un bac pro.",
    "quiz_preuve_pour": "pas d'étude",
    "quiz_preuve_contre": "solide",
    "quiz_cas_pour": [],
@@ -26869,11 +27080,17 @@
      "l": "SIES, Note Flash n° 29, Parcours et réussite en licence : les résultats de la session 2024",
      "a": 2025,
      "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf"
+    },
+    {
+     "l": "SIES, Note Flash n° 31, Parcours et réussite en licence : les résultats de la session 2025",
+     "a": 2026,
+     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-11/NF%20SIES%202026-31%20Parcours%20et%20r%C3%A9ussite%20en%20licence.pdf"
     }
    ],
    "quiz_constat": {
-    "t": "Licence obtenue en 3 ou 4 ans : 40,3 % des bacheliers 2020 inscrits en L1, −14 % en deux promotions (SIES).",
+    "t": "Licence obtenue en 3 ou 4 ans : 42,4 % des bacheliers 2021 inscrits en L1, +5 % en un an, −10 % en trois promotions (SIES).",
     "s": [
+     1,
      0
     ]
    },
@@ -27045,13 +27262,13 @@
    "quiz_etudes": "Pas d'évaluation trouvée de l'effet des notes chiffrées, d'évaluations communes en CM2 et en 3e ni de la philosophie au primaire ; les évaluations décrites sont celles de la DEPP.",
    "quiz_src": [
     {
-     "l": "DEPP, Note d'information n° 26.21, évaluations de début de 6e, 5e et 4e 2025",
+     "l": "Ministère de l'Éducation nationale (DEPP), évaluations nationales de septembre 2026",
      "a": 2026,
-     "u": "https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-21evals-2dpdf-517319.pdf"
+     "u": "https://www.education.gouv.fr/evaluations-nationales-de-septembre-2026-506811"
     }
    ],
    "quiz_constat": {
-    "t": "Entrée en 6e en 2025 : 28 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
+    "t": "Entrée en 6e en 2026 : 29 % d'élèves en difficulté en français (32 % en 2017), 33 % en maths (31 %) (DEPP).",
     "s": [
      0
     ]
@@ -27463,7 +27680,7 @@
    "quiz_text": "Supprimer Parcoursup : l'entrée dans le supérieur se ferait sur le seul bac, passé fin mai, sans contrôle continu",
    "quiz_concret": "Plus de dossier sur Parcoursup : le résultat au bac, avancé à la fin mai, déciderait de l'entrée dans les formations du supérieur.",
    "quiz_plus": "Les classements restent opaques : jusqu'à une licence très demandée sur cinq tient compte du lycée d'origine.",
-   "quiz_moins": "Les moins préparés réussissent peu à l'université : 6,5 % des bacheliers pro y obtiennent leur licence.",
+   "quiz_moins": "Les moins préparés réussissent peu à l'université : 7,9 % des bacheliers pro y obtiennent leur licence.",
    "quiz_preuve_pour": "mitigé",
    "quiz_preuve_contre": "mitigé",
    "quiz_cas_pour": [
@@ -27482,7 +27699,7 @@
    ],
    "quiz_cas_contre": [
     {
-     "t": "Parmi les bacheliers 2020 inscrits en licence, 40,3 % l'ont obtenue en 3 ou 4 ans : 14 % des bacheliers technologiques, 6,5 % des professionnels (SIES, France, 2025).",
+     "t": "Parmi les bacheliers 2021 inscrits en licence, 42,4 % l'ont obtenue en 3 ou 4 ans : 15,9 % des bacheliers technologiques, 7,9 % des professionnels (SIES, France, 2026).",
      "s": [
       2
      ]
@@ -27501,13 +27718,13 @@
      "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-10/NF2_Admission_Parcoursup_2026_def.pdf"
     },
     {
-     "l": "SIES, Note Flash n° 29, Parcours et réussite en licence : les résultats de la session 2024",
-     "a": 2025,
-     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-11/nf-sies-2025-29-38293.pdf"
+     "l": "SIES, Note Flash n° 31, Parcours et réussite en licence : les résultats de la session 2025",
+     "a": 2026,
+     "u": "https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2026-11/NF%20SIES%202026-31%20Parcours%20et%20r%C3%A9ussite%20en%20licence.pdf"
     }
    ],
    "quiz_constat": {
-    "t": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 49,1 % passent en 2e année de licence (SIES).",
+    "t": "Néo-bacheliers : 93,7 % avec une proposition Parcoursup en 2026 (93,5 % en 2025) ; 50,6 % passent en 2e année de licence (SIES).",
     "s": [
      1,
      2
