@@ -4090,6 +4090,78 @@
 }
 ]
 },
+"zemmour.logement.1": {
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat_s": [
+4,
+5
+],
+"pour": "Imposer un quota change peu la part de ménages modestes dans les communes visées.",
+"preuve_pour": "solide",
+"contre": "Sans obligation, les communes qui en ont peu construiraient moins de logements sociaux.",
+"preuve_contre": "solide",
+"cas_pour": [
+{
+"t": "Le quota a fait monter la part de logements sociaux des communes visées, mais à peine celle des ménages pauvres qui y vivent (Chapelle et al., France, 2025).",
+"s": [
+0
+]
+},
+{
+"t": "Les logements sociaux sont mieux répartis, mais les 20 % de ménages les plus modestes restent aussi concentrés par quartier depuis 2012 (France Stratégie, France, 2021).",
+"s": [
+1
+]
+}
+],
+"cas_contre": [
+{
+"t": "Le quota explique 61 % de la hausse du nombre de logements sociaux dans les communes visées entre 2000 et 2008 (Chapelle et al., France, 2025).",
+"s": [
+0
+]
+},
+{
+"t": "De 1999 à 2011, le parc social a crû de 12,7 % dans les communes en retard sur le quota, contre 6 % dans les communes non concernées (CGDD, France, 2014).",
+"s": [
+2
+]
+}
+],
+"etudes": "Les évaluations concordent : le quota a nettement accru le logement social dans les communes visées, mais a peu changé la place des ménages modestes.",
+"src": [
+{
+"l": "Chapelle, Gobillon, Vignolles, Building without income mixing: Public housing quotas in France (PSE, document de travail 2025-18)",
+"a": 2025,
+"u": "https://shs.hal.science/halshs-05039367/file/WP_2025-18_.pdf"
+},
+{
+"l": "France Stratégie, La meilleure répartition des logements sociaux a-t-elle fait progresser la mixité sociale ? (via Banque des Territoires)",
+"a": 2021,
+"u": "https://www.banquedesterritoires.fr/des-logements-sociaux-mieux-repartis-sur-le-territoire-mais-sans-effet-sur-la-mixite-sociale"
+},
+{
+"l": "CGDD, Le Point sur n° 195, les dynamiques locales du logement social 1999-2011 : l'effet de la loi SRU (via Banque des Territoires)",
+"a": 2014,
+"u": "https://www.banquedesterritoires.fr/la-loi-sru-ca-sert-creer-du-logement-social"
+},
+{
+"l": "Cour des comptes, L'encadrement des loyers",
+"a": 2026,
+"u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
+},
+{
+"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+},
+{
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"a": 2026,
+"u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
+}
+]
+},
 "lisnard.logement.2": {
 "constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
 "constat_s": [
