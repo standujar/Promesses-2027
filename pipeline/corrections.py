@@ -5566,6 +5566,47 @@ MISS_ADD('attal', "catalogue du site de campagne (relu le 27/11/2026), mesures s
          "tarifaire sur l'eau, dépistage des PFAS dans les captages, ministère de l'Eau, 600 M€ de crédits existants redéployés selon le candidat "
          "(400 M€ du Plan eau, 200 M€ du Fonds vert), sans dépense nouvelle publiée")
 
+# --- review 67 : stock du registre (27/11/2026) ; registre S351, S220 (résolus), S362, S370, S140, S335 (mis à jour)
+# (1) Zemmour, vidéo de l'émission du 26/11 publiée par le candidat (chaîne @EricZemmourOff) : « 2 millions d'étrangers en moins » sur un quinquennat
+#     (26 min) : objectif déjà dans la liste non comptée, source ajoutée (S351) ; pas de ministère de la Remigration (« contrairement à 2022 », la
+#     remigration irait au ministère de l'Intérieur, Europe 1) : texte de la fiche et de la liste mis à jour ; « réforme des allocations chômage (non
+#     détaillée) » retirée de la liste non comptée : chiffrée depuis le 27/11 (fiche « chomage », review 65). Trois filières au collège (S362) et
+#     audiovisuel public (S370) : absents de l'émission, points gardés ouverts.
+m = M('zemmour', 'remigration'); _a = " ; ministère de la Remigration."; assert m['proposal'].endswith(_a), m['proposal']
+m['proposal'] = m['proposal'][:-len(_a)] + (" ; remigration confiée au ministère de l'Intérieur, sans ministère dédié (26/11/2026) ; objectif de 2 millions "
+                                            "d'étrangers en moins sur le quinquennat.")
+MISS('zemmour', "ministère de la Remigration, objectif de « deux millions d'immigrés en moins à la fin du quinquennat » (10/11/2026, non chiffré), ",
+     "objectif de « deux millions d'immigrés en moins à la fin du quinquennat » (10/11/2026, redit le 26/11/2026 : « 2 millions d'étrangers en moins » ; "
+     "non chiffré ; remigration confiée au ministère de l'Intérieur), ")
+MISS('zemmour', "réforme des allocations chômage (non détaillée), ", "")
+# (2) Le Pen, retraites (S335) : texte de la réforme sur le site de la candidate (24/11/2026), qui tranche les écarts de presse : décote de 2,5 % par
+#     trimestre manquant, au plus 50 % ; « carrières longues » maintenu « lorsqu'il est plus favorable » ; quatre trimestres de chômage validés sans
+#     cotisation, plus deux entre 55 et 65 ans et deux entre 60 et 65 ans ; majoration des mères à 12 % « en 2028 », sans dire si elle vaut pour les
+#     pensions déjà servies. Bases officielles relevées le 27/11 (registre S335 : CNAV, DREES, Cour des comptes, PLFSS 2027), mais pas celles qu'il
+#     faut pour un calcul en 2030 : pension de base moyenne des partants avec décote (dernière donnée : 2017), répartition des durées validées sous
+#     160 trimestres, part des régimes de base dans les majorations des pères et des mères, nombre de trimestres de chômage non cotisés validés.
+#     Règle commune (une économie se compte avec un chiffrage indépendant ou un paramètre publié et une base officielle) : non comptées, chiffrage
+#     inchangé, note précisée.
+LPRS = 'https://marinelepen.com/actualites/marine-le-pen-presente-sa-reforme-pour-reparer-le-systeme-de-retraites'
+LPRS_S = "Site de campagne de M. Le Pen, « Marine Le Pen présente sa réforme pour réparer le système de retraites » (24/11/2026)"
+CIT_LPR = ("Un trimestre sera validé après un mi-temps sur trois mois, plus seulement avec 150 heures au SMIC. […] Durant les périodes de chômage, un "
+           "maximum de quatre trimestres pourra être validés sans cotisation. Les seniors pourront en valider deux de plus entre 55 et 65 ans, puis deux "
+           "autres entre 60 et 65 ans. […] Il faudra au moins 160 trimestres pour liquider sa retraite. La décote est de 2,5% par trimestre manquant, dans "
+           "la limite de 50%. […] La majoration pour trois enfants passera de 10% à 12% pour les mères 2028")
+m = M('le-pen', 'retraites'); k = m['claude']; _k0 = (k['central'], k['low'], k['high'])
+_a = ("Décote de 2,5 % (Le Figaro, iFRAP) ou de 5 % (franceinfo, Public Sénat) par trimestre manquant, et carrières longues gardées « lorsqu'il s'avère "
+      "plus avantageux » (Public Sénat) ou non (iFRAP) : sources contradictoires, sans effet sur le chiffrage.")
+assert _nb(k['note']).count(_a) == 1
+k['note'] = _nb(k['note']).replace(_a, ("Site de la candidate (24/11/2026) : décote de 2,5 % par trimestre manquant, au plus 50 % (et non 5 %, comme l'écrivaient "
+                                       "franceinfo et Public Sénat) ; « carrières longues » maintenu « lorsqu'il est plus favorable » ; majoration des mères à "
+                                       "12 % en 2028, sans dire si elle vaut pour les pensions déjà servies. Ces mesures restent non comptées : les bases "
+                                       "officielles qui permettraient un calcul en 2030 manquent (pension de base des partants avec décote, durées validées "
+                                       "sous 160 trimestres, part des régimes de base dans les majorations par sexe)."))
+_a = "4 trimestres de chômage non cotisé au plus, "; assert _nb(k['note']).count(_a) == 1
+k['note'] = _nb(k['note']).replace(_a, "4 trimestres de chômage validés sans cotisation au plus (deux de plus entre 55 et 65 ans, puis deux entre 60 et 65 ans), ")
+m['estimates'].append({"source": LPRS_S, "year": 2026, "value": "« " + CIT_LPR + " »", "low_md": None, "high_md": None, "url": LPRS})
+assert (k['central'], k['low'], k['high']) == _k0
+
 # --- quiz : texte en langage courant, appliqué après toutes les corrections (mesures ajoutées comprises)
 for c0 in D['candidates']:
     for m in c0['measures']:
