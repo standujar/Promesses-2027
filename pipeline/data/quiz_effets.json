@@ -8553,6 +8553,61 @@
 }
 ]
 },
+"melenchon.aah": {
+"constat": "Allocataires de l'AAH : 1,37 million en 2024, +4,9 % en un an, près de trois quarts de plus depuis 2002 (Sécurité sociale).",
+"constat_s": [
+0
+],
+"pour": "À taux plein, l'AAH (1 042 € par mois) reste sous le seuil de pauvreté, 1 337 € en 2024.",
+"preuve_pour": "pas d'étude",
+"contre": "Au niveau du SMIC, l'allocation égalerait un salaire à plein temps : travailler rapporterait moins.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française d'une AAH portée au niveau du SMIC. En 2024, 52 % des allocataires ont un taux d'incapacité d'au moins 80 % (Sécurité sociale).",
+"src": [
+{
+"l": "Sécurité sociale, rapport d'évaluation (REPSS Autonomie), fiche 1.7 « Allocation aux adultes handicapés »",
+"a": 2026,
+"u": "https://evaluation.securite-sociale.fr/home/autonomie/1-7-allocation-aux-adultes-handi.html"
+},
+{
+"l": "Insee Première n° 2117, Niveau de vie et pauvreté en 2024 (seuil de pauvreté à 60 % du niveau de vie médian)",
+"a": 2026,
+"u": "https://www.insee.fr/fr/statistiques/9019316"
+},
+{
+"l": "Service-public.gouv.fr, Allocation aux adultes handicapés (AAH) : montant maximal",
+"a": 2026,
+"u": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12242"
+}
+]
+},
+"melenchon.plan_racisme": {
+"constat": "Crimes et délits racistes enregistrés : 9 737 en 2025, +5 % en un an, +7 % par an depuis 2016 (SSMSI).",
+"constat_s": [
+0
+],
+"pour": "Seules 3,5 % des victimes d'une atteinte raciste portent plainte : la plupart des faits restent ignorés.",
+"preuve_pour": "pas d'étude",
+"contre": "Un plan national contre le racisme et l'antisémitisme existe déjà, de 2023 à 2026.",
+"preuve_contre": "pas d'étude",
+"cas_pour": [],
+"cas_contre": [],
+"etudes": "Pas d'évaluation française de l'effet d'un plan national contre le racisme. Selon l'enquête de victimation, 3,2 % des adultes déclarent une atteinte à caractère raciste en 2023 (SSMSI).",
+"src": [
+{
+"l": "SSMSI, Interstats Info rapide n° 61, Les atteintes à caractère raciste, xénophobe ou antireligieux en 2025 (mars 2026)",
+"a": 2026,
+"u": "https://www.dilcrah.gouv.fr/files/2026-03/IR61%20Les%20atteintes%20a%CC%80%20caracte%CC%80re%20raciste,%20xe%CC%81nophobe%20ou%20antireligieux%20en%202025.pdf"
+},
+{
+"l": "DILCRAH, Plan national de lutte contre le racisme, l'antisémitisme et les discriminations liées à l'origine 2023-2026 (janvier 2023)",
+"a": 2023,
+"u": "https://www.dilcrah.gouv.fr/files/2023-12/Plan-national-de-lutte-contre-le-racisme-lantisemmitisme-et-les-discriminations-liees-a-lorigine-2023-2026-Janvier-2023_1.pdf"
+}
+]
+},
 "melenchon.secu100": {
 "constat": "Renoncement au médecin jugé trop cher : 1,9 % des 16 ans et plus en 2025 (2,0 % en 2022) ; 3,9 % des plus modestes (Eurostat).",
 "constat_s": [
