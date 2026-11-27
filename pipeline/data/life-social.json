@@ -1,0 +1,152 @@
+{
+ "life": {
+  "le-pen": [
+   {
+    "theme": "social",
+    "proposals": [
+     {"text": "Prestations de solidarité réservées aux étrangers ayant travaillé cinq ans en France ; allocations familiales aux foyers dont un parent est français", "verifiable": true},
+     {"text": "Entretien systématique pour tous les primo-demandeurs d'AAH de niveau 2", "verifiable": true},
+     {"text": "Part fiscale entière dès le deuxième enfant", "verifiable": true},
+     {"text": "AAH toujours au-dessus du seuil de pauvreté", "verifiable": true},
+     {"text": "Protection de l'enfance : ministère de plein exercice, mêmes règles de prise en charge et de placement sur tout le territoire", "verifiable": true}
+    ],
+    "evidence": "",
+    "sources": [
+     {"label": "Contre-budget 2027 du groupe RN", "year": 2026, "url": "https://back.deputes-rn.fr/wp-content/uploads/2026/10/GRN-CONTRE-BUDGET-2027-DOSSIER.pdf"},
+     {"label": "La Croix, « Présidentielle 2027 : quatre questions sur la priorité nationale au cœur du projet du RN » (16/11)", "year": 2026, "url": "https://www.la-croix.com/politique/presidentielle-2027-quatre-questions-sur-la-priorite-nationale-au-cour-du-projet-du-rn-20261116"},
+     {"label": "Site de campagne de M. Le Pen, protection de l'enfance à Moissac (12/10)", "year": 2026, "url": "https://marinelepen.com/actualites/protection-de-lenfance-a-moissac-marine-le-pen-annonce-une-grande-cause-nationale"}
+    ]
+   }
+  ],
+  "melenchon": [
+   {
+    "theme": "social",
+    "proposals": [
+     {"text": "Crédit d'impôt par enfant pour toutes les familles ; fin du quotient conjugal", "verifiable": true},
+     {"text": "Congé d'accueil de l'enfant de 20 semaines pour chaque parent, à la place des congés de maternité et de paternité", "verifiable": true},
+     {"text": "500 000 places en crèche et modes de garde en cinq ans", "verifiable": true},
+     {"text": "Majoration des allocations familiales de nouveau dès 14 ans, au lieu de 18", "verifiable": true},
+     {"text": "Allocation de soutien familial déconjugalisée et revalorisée", "verifiable": true}
+    ],
+    "evidence": "",
+    "sources": [
+     {"label": "La France insoumise, plan thématique « Comment nous allons construire une société féministe et émancipatrice » (site de campagne, lu le 26/11/2026)", "year": 2026, "url": "https://melenchon2027.fr/programme/plans-thematiques/feminisme"}
+    ]
+   }
+  ],
+  "philippe": [
+   {
+    "theme": "social",
+    "proposals": [
+     {"text": "Cumul intégral de l'AAH et des revenus du travail pendant un an après la reprise d'un emploi", "verifiable": true},
+     {"text": "MDPH : première réponse sous deux mois, décision définitive sous trois mois", "verifiable": true},
+     {"text": "15 jours de répit par an garantis aux proches aidants les plus mobilisés", "verifiable": true},
+     {"text": "Allocation familiale unique de 350 € par mois dès le premier enfant, dégressive avec le revenu", "verifiable": true},
+     {"text": "Pas d'impôt sur le revenu pendant les trois premières années de l'enfant pour les foyers qui en paient moins de 3 000 € ; 3 000 € de réduction au-delà", "verifiable": true}
+    ],
+    "evidence": "",
+    "sources": [
+     {"label": "Site de campagne d'Édouard Philippe, programme « Handicap » (20/11)", "year": 2026, "url": "https://www.edouardphilippe.fr/programme/handicap"},
+     {"label": "Site de campagne d'Édouard Philippe, programme « Famille » (12/11)", "year": 2026, "url": "https://www.edouardphilippe.fr/programme/famille"},
+     {"label": "Site de campagne (L'Heure de vérité)", "year": 2026, "url": "https://www.edouardphilippe.fr/actualites/trois-principales-annonces-dedouard-philippe-a-lheure-de-verite"}
+    ]
+   }
+  ],
+  "glucksmann": [
+   {
+    "theme": "social",
+    "proposals": [
+     {"text": "Un statut et des droits pour les familles monoparentales : horaires de garde aménagés, places privilégiées en crèche", "verifiable": false},
+     {"text": "Démarchandiser les crèches et les Ehpad", "verifiable": false}
+    ],
+    "evidence": "",
+    "sources": [
+     {"label": "AFP (La Gazette France), « Impôts, logement, Smic : ce qu'il faut retenir du débat entre candidats à la présidentielle » (17/11)", "year": 2026, "url": "https://www.lagazettefrance.fr/article/impots-logement-smic-ce-qu-il-faut-retenir-du-debat-entre-candidats-a-la-presidentielle"},
+     {"label": "Place publique, lettre aux Français de R. Glucksmann (25/08)", "year": 2026, "url": "https://place-publique.eu/posts/2fgDdljEIy36rgxBjRyiQZ/raphael-glucksmann-sa-lettre-aux-francais"}
+    ]
+   }
+  ],
+  "lisnard": [
+   {
+    "theme": "social",
+    "proposals": [
+     {"text": "Prestations non contributives réservées aux étrangers résidant régulièrement en France depuis au moins cinq ans", "verifiable": true},
+     {"text": "Plus faible salaire à temps plein supérieur d'au moins 500 € au revenu d'assistance", "verifiable": true},
+     {"text": "Fin du versement des prestations non contributives à l'étranger", "verifiable": true},
+     {"text": "Quotient familial entièrement déplafonné", "verifiable": true},
+     {"text": "Minimum vieillesse de 1 000 € par mois, en complément d'un socle de pension dès 65 ans", "verifiable": true}
+    ],
+    "evidence": "",
+    "sources": [
+     {"label": "Nouvelle Énergie, programme « Immigration »", "year": 2026, "url": "https://www.unenouvelleenergie.fr/notre-programme/immigration/"},
+     {"label": "Nouvelle Énergie, compte rendu d'« Objectif Élysée 2027 » (28/10/2026)", "year": 2026, "url": "https://www.unenouvelleenergie.fr/david-lisnard-sur-cnews-et-europe-1-je-ne-suis-pas-candidat-pour-un-poste-je-viens-pour-redresser-le-pays/"},
+     {"label": "Nouvelle Énergie, « Quel candidat veut que le travail paie plus que l'assistanat ? » (meeting de Benfeld, 25/09)", "year": 2026, "url": "https://www.unenouvelleenergie.fr/questions/quel-candidat-veut-que-le-travail-paie-plus-que-l-assistanat/"},
+     {"label": "Nouvelle Énergie, « Quel candidat veut regrouper les aides sociales en une allocation unique ? » (meeting de Saint-Raphaël, 3/07)", "year": 2026, "url": "https://www.unenouvelleenergie.fr/questions/quel-candidat-veut-regrouper-les-aides-sociales-en-une-allocation-unique"},
+     {"label": "Nouvelle Énergie, « Changer de logiciel fiscal » (16/04)", "year": 2026, "url": "https://www.unenouvelleenergie.fr/changer-de-logiciel-fiscal/"},
+     {"label": "Nouvelle Énergie, programme « Réussir une nouvelle ambition française »", "year": 2026, "url": "https://www.unenouvelleenergie.fr/notre-programme/reussir-une-nouvelle-ambition-francaise/"}
+    ]
+   }
+  ],
+  "attal": [
+   {
+    "theme": "social",
+    "proposals": [
+     {"text": "Pensions alimentaires perçues pour les enfants non imposées, et versées automatiquement dès la séparation", "verifiable": true},
+     {"text": "Allocation sociale unique plafonnée à 75 % du SMIC", "verifiable": true},
+     {"text": "« Année blanche » en 2028 : prestations sociales gelées, petites retraites protégées", "verifiable": true},
+     {"text": "1 000 € placés par l'État sur un plan d'épargne retraite à chaque naissance", "verifiable": true},
+     {"text": "« Solidarité à la source » : aides sociales versées automatiquement à leurs bénéficiaires", "verifiable": false}
+    ],
+    "evidence": "",
+    "sources": [
+     {"label": "attalpresident.fr, ne plus imposer les pensions alimentaires (28/08)", "year": 2026, "url": "https://attalpresident.fr/programme/mesures/defiscaliser-pensions-alimentaires"},
+     {"label": "attalpresident.fr, verser automatiquement la pension alimentaire (28/08)", "year": 2026, "url": "https://attalpresident.fr/programme/mesures/versement-automatique-pensions"},
+     {"label": "AFP (La Gazette France), « Impôts, logement, Smic : ce qu'il faut retenir du débat entre candidats à la présidentielle » (17/11)", "year": 2026, "url": "https://www.lagazettefrance.fr/article/impots-logement-smic-ce-qu-il-faut-retenir-du-debat-entre-candidats-a-la-presidentielle"},
+     {"label": "TF1 Info, direct de l'émission de LCI avec l'U2P, « Gabriel Attal face aux petits patrons » (12/11/2026)", "year": 2026, "url": "https://www.tf1info.fr/politique/elections/presidentielle/direct-video-gabriel-attal-face-aux-petits-patrons-suivez-l-emission-sur-lci-en-collaboration-avec-l-u2p-2475506.html"},
+     {"label": "attalpresident.fr, « Dans Le Parisien, Gabriel Attal vise le zéro déficit en 2037 » (3/07)", "year": 2026, "url": "https://attalpresident.fr/actualites/dans-le-parisien-gabriel-attal-vise-le-zero-deficit-en-2037"},
+     {"label": "attalpresident.fr, 1 000 € par nouveau-né (30/05)", "year": 2026, "url": "https://attalpresident.fr/programme/mesures/mille-euros-par-nouveau-ne"},
+     {"label": "Site de campagne de G. Attal, « Gabriel Attal sur LCI : réinventer le modèle social pour mieux rémunérer le travail » (16/11/2026)", "year": 2026, "url": "https://attalpresident.fr/actualites/gabriel-attal-lci-restos-du-coeur-nouveau-modele-social"}
+    ]
+   }
+  ],
+  "retailleau": [
+   {
+    "theme": "social",
+    "proposals": [
+     {"text": "Total des aides non contributives plafonné à 70 % du SMIC net par adulte, hors handicap, dépendance et vieillesse", "verifiable": true},
+     {"text": "Revenu familial de 240 € par mois et par enfant dès le premier, 480 € pour le troisième, à la place de douze aides ; cinq ans de résidence et de travail exigés", "verifiable": true},
+     {"text": "Congé de naissance jusqu'aux six mois de l'enfant, indemnisé à 70 % du salaire", "verifiable": true},
+     {"text": "Micro-crèches alignées sur les maisons d'assistantes maternelles ; micro-crèche d'entreprise autorisée en moins de six mois", "verifiable": true},
+     {"text": "Crédit d'impôt famille sans plafond ; aide de l'employeur à la garde d'enfants exonérée jusqu'à 7 000 € par an", "verifiable": true}
+    ],
+    "evidence": "",
+    "sources": [
+     {"label": "TF1 Info, « Route nationale », B. Retailleau (22/11/2026)", "year": 2026, "url": "https://www.tf1info.fr/politique/elections/presidentielle/un-policier-ce-n-est-pas-un-animateur-socio-culturel-bruno-retailleau-prend-la-route-avec-anne-claire-coudray-2477375.html"},
+     {"label": "avecretailleau.fr, plafonner les aides sociales à 70 % du SMIC", "year": 2026, "url": "https://www.avecretailleau.fr/projet/mesure/plafonner-les-aides-sociales-a-70-du-smic"},
+     {"label": "AFP (La Gazette France), « Présidentielle : Retailleau promet de sortir la France de \"l'hiver démographique\" » (30/04)", "year": 2026, "url": "https://www.lagazettefrance.fr/article/presidentielle-retailleau-promet-de-sortir-la-france-de-l-hiver-demographique"},
+     {"label": "avecretailleau.fr, verser 240 euros par mois par enfant mineur", "year": 2026, "url": "https://www.avecretailleau.fr/projet/mesure/verser-240-euros-par-mois-par-enfant-mineur"},
+     {"label": "avecretailleau.fr, doubler le revenu familial pour le troisième enfant", "year": 2026, "url": "https://www.avecretailleau.fr/projet/mesure/doubler-le-revenu-familial-pour-le-troisieme-enfant"},
+     {"label": "avecretailleau.fr, prolonger le congé jusqu'aux six mois de l'enfant", "year": 2026, "url": "https://www.avecretailleau.fr/projet/mesure/prolonger-le-conge-jusqu-aux-six-mois-de-l-enfant"},
+     {"label": "avecretailleau.fr, créer plus de places de garde", "year": 2026, "url": "https://www.avecretailleau.fr/projet/mesure/creer-plus-de-places-de-garde"},
+     {"label": "avecretailleau.fr, faire de l'entreprise un acteur de la garde d'enfants", "year": 2026, "url": "https://www.avecretailleau.fr/projet/mesure/faire-de-l-entreprise-un-acteur-de-la-garde-d-enfants"}
+    ]
+   }
+  ],
+  "zemmour": [
+   {
+    "theme": "social",
+    "proposals": [
+     {"text": "Aides sociales non contributives et allocations familiales réservées aux Français", "verifiable": true},
+     {"text": "RSA limité à trois ans", "verifiable": true},
+     {"text": "Doubler le plafond du quotient familial, allocations familiales universelles (programme 2022)", "verifiable": true}
+    ],
+    "evidence": "",
+    "sources": [
+     {"label": "Site de campagne d'Éric Zemmour, « Nos priorités pour les Français »", "year": 2026, "url": "https://www.ericzemmour.fr/priorites"},
+     {"label": "Capital, entretien d'É. Zemmour au JDD (15/11/2026)", "year": 2026, "url": "https://www.capital.fr/economie-politique/carburant-a-40-centimes-de-moins-le-litre-eric-zemmour-promet-aussi-10-de-revenus-en-plus-pour-tous-1531862"},
+     {"label": "Institut Montaigne", "year": 2022, "url": "https://www.institutmontaigne.org/presidentielle-2022/eric-zemmour/doubler-le-quotient-familial"}
+    ]
+   }
+  ]
+ }
+}

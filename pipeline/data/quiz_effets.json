@@ -3596,7 +3596,7 @@
 ]
 },
 "le-pen.logement.2": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 4,
 5
@@ -3656,12 +3656,12 @@
 "u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
 },
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
@@ -3839,7 +3839,7 @@
 "complement_ref": [
 "retailleau.logement.2"
 ],
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 1,
 2
@@ -3865,12 +3865,12 @@
 "u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
 },
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
@@ -3926,7 +3926,7 @@
 "complement_ref": [
 "retailleau.logement.1"
 ],
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 2,
 3
@@ -3970,12 +3970,12 @@
 "u": "https://www.apur.org/sites/default/files/2025-06/rapport-impact_encadrement_loyers_paris.pdf"
 },
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
@@ -4019,7 +4019,7 @@
 ]
 },
 "lisnard.logement.1": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 4,
 5
@@ -4079,19 +4079,19 @@
 "u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
 },
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
 ]
 },
 "zemmour.logement.1": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 4,
 5
@@ -4151,19 +4151,19 @@
 "u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
 },
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
 ]
 },
 "lisnard.logement.2": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 1,
 2
@@ -4182,12 +4182,12 @@
 "u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
 },
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
@@ -6359,12 +6359,12 @@
 "u": "https://www.statistiques.developpement-durable.gouv.fr/le-parc-de-logements-par-classe-de-performance-energetique-au-1er-janvier-2025"
 },
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
@@ -8487,7 +8487,7 @@
 ]
 },
 "melenchon.logement.2": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 0,
 1
@@ -8501,12 +8501,12 @@
 "etudes": "Pas d'évaluation française ; des évaluations à l'étranger, dans des contextes différents, trouvent que plus de logements neufs modèrent les loyers, mais que des logements publics en plus remplacent en partie des constructions privées.",
 "src": [
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
@@ -8835,7 +8835,7 @@
 ]
 },
 "philippe.logement.2": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 1,
 2
@@ -8861,12 +8861,12 @@
 "u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
 },
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
@@ -9049,7 +9049,7 @@
 ]
 },
 "glucksmann.logement.3": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 1,
 2
@@ -9075,19 +9075,19 @@
 "u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
 },
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 }
 ]
 },
 "le-pen.logement.4": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 1,
 2
@@ -9113,12 +9113,12 @@
 "u": "https://www.ccomptes.fr/sites/default/files/2026-10/20261014-Encadrement-des-loyers.pdf"
 },
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 },
@@ -9156,7 +9156,7 @@
 ]
 },
 "philippe.logement.5": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 0,
 1
@@ -9170,12 +9170,12 @@
 "etudes": "Aucune mesure en France de l'effet des normes sur le nombre de chantiers ; l'administration estime le surcoût de la RE2020 à 5 à 7,5 % au palier 2025, un rapport remis au Gouvernement à 11 % d'ici 2035. Aucune mesure de l'effet des interdictions de louer.",
 "src": [
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 },
@@ -9412,7 +9412,7 @@
 ]
 },
 "attal.logement.4": {
-"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin septembre 2026 (SDES).",
+"constat": "Logements mis en chantier : 262 000 en 2025, −29 % depuis 2016 ; +25 % sur un an à fin octobre 2026 (SDES).",
 "constat_s": [
 0,
 1
@@ -9426,12 +9426,12 @@
 "etudes": "Pas d'évaluation française de l'effet des délais d'instruction ou de recours sur le nombre de chantiers. Le silence vaut déjà accord pour la plupart des permis de construire, sauf exceptions (site classé, cœur de parc national).",
 "src": [
 {
-"l": "SDES, Construction de logements : résultats à fin septembre 2026 (France entière)",
+"l": "SDES, Construction de logements : résultats à fin octobre 2026 (France entière)",
 "a": 2026,
-"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-septembre-2026-france-entiere"
+"u": "https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-octobre-2026-france-entiere"
 },
 {
-"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-10",
+"l": "SDES, DiDo, « Logements autorisés et commencés, nombre et surfaces, séries mensuelles (données estimées) », millésime 2026-11",
 "a": 2026,
 "u": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513eed03b05e5cd969c2710"
 },
