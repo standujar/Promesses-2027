@@ -1,12 +1,12 @@
 """Fusionne la dimension « vie quotidienne » dans D (D.life, D.baseline).
-Entrées : data/life-a.json, data/life-b.json, data/life-eco.json, data/baseline.json, data/evidence_levels.json,
+Entrées : data/life-a.json, data/life-b.json, data/life-eco.json, data/life-social.json, data/baseline.json, data/evidence_levels.json,
 data/life-attribution.json (pour chaque proposition affichée, les sources qui parlent pour le candidat : contrôle du bloc « review 34 »)
 Même test « vérifiable » appliqué à toutes les propositions, quel que soit le candidat."""
 import json, re, os
 H = os.path.dirname(os.path.abspath(__file__))
 J = lambda f: json.load(open(os.path.join(H, 'data', f)))
 VERIF = re.compile(r"\d|\b(loi|décret|référendum|ordonnance|article|révision constitutionnelle|proposition de loi|projet de loi|directive|règlement européen)\b", re.I)
-THEMES = ['securite', 'sante', 'ecole', 'environnement', 'logement', 'libertes', 'economie', 'rayonnement']
+THEMES = ['securite', 'sante', 'ecole', 'environnement', 'logement', 'libertes', 'economie', 'social', 'rayonnement']
 
 import html
 OLD = re.compile(r"\s*\((non reconfirm[ée]e?s? en 2026|programme 2022|2022)\)", re.I)
@@ -2105,10 +2105,25 @@ def niveau(ev, ou):
         i += len(k)
     return 'pas_d_etude' if not lv else lv[0] if len(set(lv)) == 1 else 'mitigee'
 
+# --- review 68 : thème « Solidarités » (27/11/2026) ; registre S331 (résolu)
+# Arbitrage (S331, délégation du porteur du 27/10 et demande du 27/11) : règle « une proposition dans un seul thème, le plus précis » (S117).
+# Aucun des huit thèmes n'était le plus précis pour la famille, l'enfance, le handicap, les aidants et les minima sociaux ; les repères « social »
+# (pauvreté, RSA, non-recours, fécondité : data/baseline.json) existaient déjà. Classer ces propositions en « économie » les aurait mises en
+# concurrence, par la règle d'ordre, avec des propositions sans rapport (SMIC, 35 heures) ; d'où un 9e thème, « social » (« Solidarités »), même
+# champ pour les 8 : famille et petite enfance, protection de l'enfance, handicap, proches aidants, minima sociaux et conditions d'accès aux
+# prestations. Restent dans leur thème : une mesure qui vise d'abord le logement (APL, logement social, prêts pour acheter), l'école (AESH), la
+# santé, une sanction (prestations retirées après une condamnation ou pour les parents de délinquants), les retraites (majoration pour enfants,
+# épargne retraite exceptée quand elle est versée à la naissance). Données : data/life-social.json ; sources ouvertes le 27/11 (citations au
+# registre). Règle d'ordre (S106) : 2026 d'abord, précises avant intentions, puis les plus récentes (date de la dernière annonce du candidat ;
+# une page dont seule la mise à jour est datée passe après les annonces datées, sauf si la veille l'a vue paraître, comme la page « Handicap »
+# de Philippe le 20/11, précédent de sa page « Logement ») ; à égalité, l'ordre de la source. Hors affichage : registre S331.
+OFFICIEL['le-pen'] += ('marinelepen.com',)  # site de campagne de la candidate
+MEDIAS += ('la-croix.com',)
+
 CAMP = {'melenchon': 'melenchon2027.fr', 'philippe': 'edouardphilippe.fr', 'attal': 'attalpresident.fr', 'lisnard': 'lisnard.cards'}
 
 def merge(D):
-    parts = [f for f in ('life-a.json', 'life-b.json', 'life-eco.json') if os.path.exists(os.path.join(H, 'data', f))]
+    parts = [f for f in ('life-a.json', 'life-b.json', 'life-eco.json', 'life-social.json') if os.path.exists(os.path.join(H, 'data', f))]
     if not parts: return D
     ev = J('evidence_levels.json') if os.path.exists(os.path.join(H, 'data', 'evidence_levels.json')) else {}
     WEAKD[:] = D.get('weak_domains', [])
